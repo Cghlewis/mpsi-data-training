@@ -1,0 +1,13 @@
+name: "mpsi-data-training"
+output_dir: "."
+navbar:
+  left:
+  - text: "MPSI Data Training"
+    href: index.html
+  - text: "Training 1"
+    href: training_1.html
+  - text: "Training 2"
+    href: training_2.html
+output:
+  html_document:
+    theme: flatly
