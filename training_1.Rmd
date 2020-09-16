@@ -1,7 +1,6 @@
 ---
 title: "Training 1: Setting up Data Systems"
 author: "Crystal Lewis"
-date: "Training Date: 9/25/2020"
 output: 
   html_document:
     toc: TRUE

@@ -1,7 +1,6 @@
 ---
 title: "Training 2: Reproducible Data Cleaning"
 author: "Crystal Lewis"
-date: "Training Date: 10/23/2020"
 output: 
   html_document:
     toc: TRUE
