@@ -14,13 +14,13 @@ While this specific training is for staff and others affiliated with the Missour
 
 **Tentative Training Outline** 
 
-| Training | Date     | Planned Content                                                   |
-|----------|----------|-------------------------------------------------------------------|
-|1         | 09/25/20 |Documentation, Tracking, Data Collection, File Setup, Data Storage |
-|2         | 10/23/20 |Intro to R and RStudio, Reading in and reviewing data              |
-|3         | 11/20/20 |Data wrangling basics                                              |
-|4         | 12/18/20 |Restructuring, Merging or Aggregating data                         |
-|5         | TBD      |Cleaning data start to finish, exporting data                      |
-|6         | TBD      |Advanced topics: TBD                                               |
-|7         | TBD      |Advanced topics: TBD                                               |
-|8         | TBD      |Sharing Data upon project completion                               |
+| Training | Date     | Planned Content                                                       |
+|----------|----------|-----------------------------------------------------------------------|
+|1         | 09/25/20 |Documentation, tracking, data collection, file structure, data storage |
+|2         | 10/23/20 |Intro to R and RStudio, reading in and reviewing data                  |
+|3         | 11/20/20 |Data wrangling basics                                                  |
+|4         | 12/18/20 |Restructuring, merging, or aggregating data                            |
+|5         | TBD      |Cleaning data start to finish, exporting data                          |
+|6         | TBD      |Advanced topics: TBD                                                   |
+|7         | TBD      |Advanced topics: TBD                                                   |
+|8         | TBD      |Sharing data upon project completion                                   |
