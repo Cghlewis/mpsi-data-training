@@ -1,0 +1,29 @@
+---
+title: "Training 1: Setting up Data Systems"
+author: "Crystal Lewis"
+date: "Training Date: 9/25/2020"
+output: 
+  html_document:
+    toc: TRUE
+    toc_float: TRUE
+---
+
+## Documentation
+
+The beginning of any research project should start with some form of documentation. All decisions made from day one should be documented.
+
+### Protocol
+
+Something about protocol
+
+### Data Dictionary
+
+Something about this
+
+### Codebook
+
+Something about this
+
+## Tracking
+
+You know what you want to do. Now you need to recruit participants.
