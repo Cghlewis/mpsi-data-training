@@ -1,19 +1,83 @@
 ---
 title: "Training 1: Setting up Data Systems"
-author: "Crystal Lewis"
+author: "Crystal Lewis  "  
 output: 
   html_document:
+    css: "css/custom.css"
     toc: TRUE
     toc_float: TRUE
 ---
 
+<br>
+
+:::download
+<br>
+You can download slides from this talk [here]. 
+:::
+  
+---
+
+## Data Management Plan
+
+---
+
+To increase transparency and to advance scientific inquiry in education research, the Institute of Education Science (IES) has a policy on providing access to your data at the conclusion of projects funded through their research centers (Exploration or Initial Efficacy and Follow-Up grants). The plan for sharing data must be laid out in a data management plan (DMP) which is included as an appendix in your grant application. Among other things, the DMP must include the following ([IES](https://ies.ed.gov/funding/datasharing_implementation.asp)):  
+
+✔️ Type of data to be shared  
+✔️ Procedures for managing and maintaining confidentiality  
+✔️ Roles and responsibilities of project staff in the management of research data  
+✔️ Expected schedule for data sharing (no later than the publication of findings and at least for 10 years)  
+✔️ Format of the final dataset  
+✔️ Documentation to be provided  
+✔️ Method of data sharing  
+✔️ Whether or not a data sharing agreement specifies the conditions under which the data will be shared  
+✔️ Any circumstances that prevent any data from being shared  
+
+This training will not cover the details of writing up a DMP, nor is this training specific to only to IES grants. However, much of what is included in the IES DMP is what this training series is about: DATA. How do we document it? How do we manage it? How do we keep it secure? How do we share it?
+
+Before we dive in, if you are someone who will be writing DMPs in the future or want to know more about them, here are some excellent resources:
+
+📑 [University of Virginia IES DMP Template](https://data.library.virginia.edu/files/IES-Data-Management-Plan-Template-2018.docx)  
+📑 [IES DMP Tool](https://dmptool.org/template_export/1895.pdf)
+
+---
+
 ## Documentation
 
-The beginning of any research project should start with some form of documentation. All decisions made from day one should be documented.
+---
+
+Data Documentation is not only required by funders including IES, it is essential for data management. 
+It also allows us to: 
+
+✔️ Track decisions/changes made throughout the life cycle of the project  
+✔️ Make our decisions/analyses replicable   
+✔️ Clean our data with fidelity  
+✔️ Ensure others use and interpret our data accurately  
+✔️ Discover errors in our data  
+✔️ Allows others to find our archived data through metadata  
+
+Documentation can take many forms. [IES](https://ies.ed.gov/funding/datasharing_implementation.asp) states that they expect documentation to "be a comprehensive and stand-alone document that includes all the information necessary to replicate the analysis performed by the original research team" and should include:  
+
+✔️ a summary of the purpose of the data collection  
+✔️ methodology and procedures used to collect the data  
+✔️ timing of the data collection  
+✔️ details of the data codes, definition of variables, variable field locations, and frequencies  
+
+However, a) IES provides no template for how documentation is laid out OR what tools to use to create/share this information and b) outside of IES required documentation for data sharing, there may be additional documentation your team may want to keep to help manage internal processes. 
+
+We will go over types of documentation you may want to consider keeping. Many of these documents have overlapping information and some terms may be used interchangeably in the field (ex: Data Dictionary and Codebook, or Metadata and ReadMe). Also, some of the documents are important to start day one of the project, while others are more important to create at the end of the project when you are ready to share data. The point of this next section isn't to implement all of these documents, but rather to consider which documents capture the information you need to have a successful project. It may just be a protocol and a data dictionary. Or it may be a protocol, a data dictionary and a readme for each data file. It depends on things such as the scale of your project and how you plan to share the data at the end of your project.
+
 
 ### Protocol
 
-Something about protocol
+A document to record all your decisions made, procedures, and project changes throughout the grant.
+
+At some point someone will ask you how or why you did something the way you did. This is the document that will save you because it is very likely that you will not remember. I highly recommend always adding protocol as part of any data documentation plan. Documentation does not have to be broken out in a separate document, it can be included in other documentation such as your Codebook or ReadMe. However, this may be best created as a standalone document.  Most likely your protocol will not be shared outside of your team, but the information in your protocol will be used to inform other future documentation such as Metadata or Codebooks. Your protocol can live in any format that works for you. A Word Document, an RMarkdown file, a Wiki, or a ReadMe file. It is a living document that will be continually updated so use a format that makes sense for you. 
+
+Protocol should cover procedures/decisions including:
+* Participant recruitment
+* Consent and assent procedure
+
 
 ### Data Dictionary
 

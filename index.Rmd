@@ -2,7 +2,9 @@
 title: "MPSI Data Management in Large-Scale Education Research Training Series"
 ---
 
-This is the site for the [Missouri Prevention Science Institute (MPSI)](http://moprevention.org/) training series on *data management in large-scale education research studies*. This series will cover best practices in data management procedures throughout the entire life cycle of research project implementation. 
+<br>  
+
+This is the site for the [Missouri Prevention Science Institute (MPSI)](http://moprevention.org/) training series on *data management in large-scale education research studies*. This series will cover best practices in data management procedures throughout the entire life cycle of research project implementation (from grant award to end of grant). This series will not cover research design, grant writing, project implementation (recruitment, sampling, data collection), or analyzing findings.
 
 In tandem with this training series, I am continuing to research best practices in data management and intend to make these tutorials into a larger manual. The training materials on this site may be updated as more information is obtained.
 
@@ -10,7 +12,7 @@ While this specific training is for staff and others affiliated with the Missour
 
 *Training materials were last updated on `r format(Sys.time(), '%m/%d/%Y')`*  
   
-  
+<br>  
 
 **Tentative Training Outline** 
 
