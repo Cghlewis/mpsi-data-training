@@ -1,0 +1,28 @@
+---
+title: "Training 3: Reproducible Data Cleaning"
+author: "Crystal Lewis"
+output: 
+  html_document:
+    toc: TRUE
+    toc_float: TRUE
+---
+
+## Getting to know R and RStudio
+
+The beginning of any research project should start with some form of documentation. All decisions made from day one should be documented.
+
+### Installing R and Rstudio
+
+Something about this
+
+### Packages and libraries
+
+Something about this
+
+## Reading in data
+
+Something about this
+
+## Additional resources for learning Intro R
+
+XXXX

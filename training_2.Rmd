@@ -1,5 +1,5 @@
 ---
-title: "Training 2: Reproducible Data Cleaning"
+title: "Training 2: Setting up Data Structures"
 author: "Crystal Lewis"
 output: 
   html_document:
@@ -7,22 +7,36 @@ output:
     toc_float: TRUE
 ---
 
-## Getting to know R and RStudio
+## Tracking
 
-The beginning of any research project should start with some form of documentation. All decisions made from day one should be documented.
+You know what you want to do. Now you need to recruit participants.
 
-### Installing R and Rstudio
+## Data Collection
 
-Something about this
+## Data Storage
 
-### Packages and libraries
+## Directory Structure
 
-Something about this
+```{r, echo=FALSE}
+library(data.tree)
 
-## Reading in data
+project <- Node$new("project")
+  documentation <- project$AddChild("documentation")
+  measures <- project$AddChild("measures")
+    student <- measures$AddChild("student_measures")
+    teacher <- measures$AddChild("teacher_measures")
+  data <- project$AddChild("data")
+    cohort <- data$AddChild("cohort")
+    time <- cohort$AddChild("time")
+    raw <- time$AddChild("raw")
+    syntax <- time$AddChild("syntax")
+    clean <- time$AddChild("clean")
 
-Something about this
+print(project)
 
-## Additional resources for learning Intro R
+```
 
-XXXX
+
+
+
+
