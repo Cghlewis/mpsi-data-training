@@ -9,8 +9,6 @@ output:
 
 ## Tracking
 
-You know what you want to do. Now you need to recruit participants.
-
 ## Data Collection
 
 ## Data Storage

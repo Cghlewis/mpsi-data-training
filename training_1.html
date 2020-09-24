@@ -394,15 +394,15 @@ div.tocify {
 ✔️ Expected schedule for data sharing (no later than the publication of findings and at least for 10 years)<br />
 ✔️ Format of the final dataset<br />
 ✔️ Documentation to be provided<br />
-✔️ Method of data sharing<br />
-+ You may take on the responsibility of data sharing yourself + Or, use a data archive ✔️ Whether or not a data sharing agreement specifies the conditions under which the data will be shared<br />
+✔️ Method of data sharing (Share the data yourself, use a data archive, combination of both)<br />
+✔️ Whether or not a data sharing agreement specifies the conditions under which the data will be shared<br />
 ✔️ Any circumstances that prevent any data from being shared<br />
 ✔️ Most recent rule: A plan for <a href="https://ies.ed.gov/seer/preregistration.asp">pre-registering</a> your study within the first year of the project</p>
 <p>This training is not specific only to IES grants. Almost all funders that education researchers may work with require a DMP that also includes a data sharing or archival plan (ex: <a href="https://nij.ojp.gov/funding/research-development-and-evaluation-grant-award-requirements#vj8jg">NIJ</a> and <a href="https://grants.nih.gov/grants/policy/data_sharing/data_sharing_guidance.htm#doc">NIH</a>). Furthermore, this training will not cover the details of writing up a DMP but rather how to implement a DMP. We will cover topics such as: How do we document data; How do we track it; How do we manage it; How do we keep it secure; and How do we share it. This specific training module will cover documentation.</p>
 <p>Before we dive in, as IES is the most prolific funder of RCTs in education, if you are someone who will be writing IES DMPs in the future or want to know more about them, here are some excellent resources:</p>
 <p>📑 <a href="https://data.library.virginia.edu/files/IES-Data-Management-Plan-Template-2018.docx">University of Virginia IES DMP template</a><br />
 📑 <a href="https://dmptool.org/template_export/1895.pdf">IES DMP tool</a><br />
-📑 <a href="https://ies.ed.gov/funding/pdf/2021_84305A.pdf">IES most recent Request for Applications</a></p>
+📑 <a href="https://ies.ed.gov/funding/pdf/2021_84305A.pdf">IES most recent Request for Applications</a> <a href="https://riojournal.com/article/56508/instance/5569679/">Foundational Practices of Research Data Management</a></p>
 <hr />
 </div>
 <div id="documentation" class="section level2">
@@ -434,33 +434,41 @@ div.tocify {
 </ul>
 <p>However, a) IES provides no template for how documentation is laid out OR what tools to use to create/share this information and b) outside of IES required documentation for data sharing, there may be additional documentation your team may want to keep to help manage internal processes.</p>
 <p>We will go over types of documentation you may want to consider keeping. Many of these documents have overlapping information and some terms may be used interchangeably in the field (ex: Data Dictionary and Codebook or README and metadata). Also, some of the documents are important to start day one of the project, while others are more important to create at the end of the project when you are ready to share data. The point of this next section isn’t to implement all of these documents, but rather to consider which documents capture the information you need to have a successful project. It may just be a protocol and a data dictionary. Or it may be a protocol, a data dictionary and a readme for each data file. Or it may be all of these documents! It depends on things such as the scale of your project and how you plan to share the data at the end of your project.</p>
+<p>Additional reading on the importance of data documentation can be found here:</p>
+<p><a href="https://www.helsinki.fi/en/research/guide-for-data-documentation">University of Helsinki</a></p>
 <p><br></p>
 <div id="protocol" class="section level3">
 <h3>📓 Protocol</h3>
 <p>A document/s to record all your procedures changes made to those procedures throughout the grant.</p>
-<p>At some point someone will ask you how or why you did something the way you did. This is the document that will save you because it is very likely that you will not remember. I highly recommend always adding protocol as part of any data documentation plan. Protocol does not have to be broken out in a separate document, it can be included in other documentation such as your Codebook or ReadMe. However, this may be best created as a standalone document. Most likely your protocol will not be shared outside of your team, but the information in your protocol can be used to inform other documentation such as READMEs or Codebooks. Your protocol can live in any format that works for you (ex: .docx, .md, .txt). It is a living document that will be continually updated so use a format that makes sense for you.</p>
+<p>At some point someone will ask you how or why you did something the way you did. This is the document that will save you because it is very likely that you will not remember. I highly recommend always adding protocol as part of any data documentation plan. You can make separate protocol documents per procedure or keep them all in one standalone document with a table of contents. Most likely your protocol will not be shared outside of your team, but the information in your protocol can be used to inform other documentation such as READMEs or Codebooks. Your protocol can live in any format that works for you (ex: .docx, .md, .txt). It is a living document that will be continually updated so use a format that makes sense for you.</p>
 <p>Protocol should cover procedures/decisions for the following:</p>
 <ul>
 <li>Participant recruitment</li>
 <li>Consent and assent</li>
 <li>Participant selection</li>
 <li>Randomization and blinding/unblinding</li>
-<li>Data collection (including correspondence to set up data collection)</li>
-<li>Staff training</li>
+<li>Data collection
+<ul>
+<li>How to create necessary materials</li>
+<li>Tools used</li>
+<li>Actual collection steps</li>
+<li>Correspondence and reminders</li>
+</ul></li>
+<li>Staff training (also temporary hiring)</li>
 <li>Data entry, data retrieval, data scoring</li>
 <li>Payments/Incentives</li>
+<li>Intervention implementation</li>
 </ul>
-<p>These procedures can be broken out into separate documents or in one larger document with a table of contents. Either way, each section of your protocol should have the following to track project changes:</p>
+<p>Each protocol should begin with the following to track project changes:</p>
 <ul>
-<li>Date the protocol was made<br />
-</li>
-<li>Who made the protocol<br />
-</li>
-<li>Any rationale behind the protocol<br />
-</li>
-<li>Any related documents or research behind this protocol<br />
-</li>
-<li>For any changes to the protocol after the project has begun add the following below the original protocol section:
+<li><p>Date the protocol was made<br />
+</p></li>
+<li><p>Who made the protocol<br />
+</p></li>
+<li><p>Any rationale behind the protocol<br />
+</p></li>
+<li><p>Any related documents or research behind this protocol</p></li>
+<li><p>For any changes to the protocol after the project has begun add the following below the original protocol section:</p>
 <ul>
 <li>Revision Date<br />
 </li>
@@ -478,18 +486,18 @@ div.tocify {
 <div id="wiki" class="section level3">
 <h3>📓 Wiki</h3>
 <p>I am including wiki in here, even though I think it is uncommon to hear about this in education research. However, to me, a wiki is similar to a protocol document in that is a project implementation tool, used by project staff. If you use certain tools such as Microsoft SharePoint, a wiki can be a great place to store high level project information that your team frequently refers to. SharePoint describes a wiki as “a site that is designed for groups of people to quickly capture and share ideas by creating simple pages and linking them together.” It is a page that anyone on your team can add/edit content and then can link to those documents for easy access (ex: provide information about and link to recruitment documents). You can also house important data management rules such as file naming conventions, file structure, versioning rules, and so forth here [<strong>note: If you do not have a wiki, I still recommend documenting these data management rules somewhere that is easily accessible for project staff, possibly a README housed in your main project folder</strong>].</p>
-<p>You can make wikis with many other tools, but you can read more about Sharepoint’s wiki <a href="https://support.microsoft.com/en-us/office/create-and-edit-a-wiki-dc64f9c2-d1a2-44b5-ac59-b9d535551a32">here</a>.</p>
-<p>There is a great episode of the <a href="https://www.buzzsprout.com/1074286/5185513-episode-5-organizing-shared-network-drives-tips-and-tricks">Education Data Chat</a> podcast where they discuss wikis as well.</p>
+<p>📑 You can make wikis with many other tools, but you can read more about Sharepoint’s wiki <a href="https://support.microsoft.com/en-us/office/create-and-edit-a-wiki-dc64f9c2-d1a2-44b5-ac59-b9d535551a32">here</a>.</p>
+<p>📑 There is a great episode of the <a href="https://www.buzzsprout.com/1074286/5185513-episode-5-organizing-shared-network-drives-tips-and-tricks">Education Data Chat</a> podcast where they discuss wikis as well.</p>
 <p><br></p>
 </div>
 <div id="data-dictionary" class="section level3">
 <h3>📓 Data Dictionary</h3>
 <p>A data dictionary is another essential document to keep and I highly suggest you start this before your ever collect a piece of data. This will help you set up successful back end coding as you create data collection tools as well as being a document you can refer back to as questions come up about the data. It is also a document that can be shared with others to better understand your data. This document is usually in rectangular form, for example an excel spreadsheet, google sheet or something similar that has rows and columns. It includes all information relevant to every variable in your data.</p>
-<p>Here is a nice <a href="https://media.screensteps.com/image_assets/assets/001/878/671/original/8fbcc565-602f-4ac6-b828-2eaaeb67578b.png">example</a> of a data dictionary.</p>
-<p>In order to start a data dictionary, you need to <strong>know</strong> the following:</p>
+<p>📑 Here is a nice <a href="https://media.screensteps.com/image_assets/assets/001/878/671/original/8fbcc565-602f-4ac6-b828-2eaaeb67578b.png">example</a> of a very simple data dictionary.</p>
+<p><strong>In order to start a data dictionary, you need to know the following</strong>:</p>
 <ul>
 <li>What data are we collecting? (Ex: Student Assessment, Teacher Observation, Teacher Survey, Principal Interview)</li>
-<li>What are the questions/measures included in the surveys?</li>
+<li>What are the questions/measures included?</li>
 <li>What is your variable naming protocol?
 <ul>
 <li>Have you used the question/measure before? If yes, keep the variable name the same across projects.</li>
@@ -501,16 +509,16 @@ div.tocify {
 </ul></li>
 </ul></li>
 <li>Be consistent with capitalization (ex: always using lowercase)</li>
+<li>No spaces or special characters in variable names</li>
 <li>Be consistent with delimiters (ex: use snakecase or camel case)
 <ul>
 <li>Camel case (TocaConcentration)</li>
 <li>Snake case (toca_concentration)</li>
 </ul></li>
-<li>No spaces or special characters in variable names</li>
 <li>Make sure all variable names are unique</li>
 <li>Names should be meaningful but concise (Ex: SPSS cannot handle variable names over 64 characters)</li>
 </ul></li>
-<li>Do our measures have pre-determined value coding rules or can we assign our own?</li>
+<li>Do your measures have pre-determined value coding rules or can we assign our own?</li>
 <li>Are we collecting data over time? What is our Cohort/Year/Time variable protocol?
 <ul>
 <li>If you plan to collect multiple time points of data and merge data in a wide format, you will need a time prefix or suffix on your variables (ex: toca1_T1 or toca1_Fall)</li>
@@ -518,7 +526,7 @@ div.tocify {
 <li>If you plan to merge data in long format, time can be their own variables (Ex: Time, Year, Cohort)</li>
 </ul></li>
 </ul>
-<p>Your Dictionary should capture information such as:</p>
+<p>Your dictionary <strong>should</strong> capture information such as:</p>
 <ul>
 <li>Variable Name<br />
 </li>
@@ -526,29 +534,32 @@ div.tocify {
 </li>
 <li>Exact question text<br />
 </li>
-<li>Value range or Value codes<br />
+<li>Value range or value codes<br />
 </li>
 <li>Measurement unit (Ex: numeric, string, date)<br />
 </li>
 <li>How is missing data coded<br />
 </li>
-<li>Variable universe (Who gets this question, Is it skipped for some people)<br />
-</li>
-<li>What time periods/years does this variable exist<br />
-</li>
+<li>Variable universe (Who gets this question?, Is it skipped for some people?)</li>
+<li>What time periods/years does this variable exist</li>
+<li>Calculations</li>
 <li>Notes (such as versions/changes to this variable)<br />
 </li>
 <li>Summary statistics</li>
-<li>Also consider grouping variables by measure</li>
+<li>Also consider grouping variables by measure and by form (Student Survey, Teacher Rating of Student)</li>
 </ul>
 <p>You may even consider having separate data dictionaries per expected final dataset. So for example, if you plan to have a final teacher dataset and a final student dataset, you may want to have a student dictionary and a teacher dictionary rather than stating teacher or student in the universe column.</p>
-<p>Last, as I mentioned before, it is important to start this document BEFORE ever collecting data. But that doesn’t mean that you will be able to fill in all the cells before collecting the data. Fill in what you can. You should be able to fill in the data you have control over. For example, if you are making and administering the survey, you should be able to know what variables will be in that data, how you want to name them, and how they should be coded. However, you may not know this information for other data until after data collection. For example, if you are administering a 3rd party assessment, you may not know what the downloaded data is going to look like until after you have collected the data and it has been scored. Also, other fields such as notes, time periods, and maybe even summary statistics are those that will be continually updated throughout the project.</p>
+<p>Last, as I mentioned before, it is important to start this document BEFORE ever collecting data. <strong>But that doesn’t mean that you will be able to fill in all the cells before collecting the data.</strong> Fill in what you can. You should be able to fill in the data you have control over. For example, if you are making and administering the survey, you should be able to know what variables will be in that data, how you want to name them, and how they should be coded. However, you may not know this information for other data until after data collection. For example, if you are administering a 3rd party assessment, you may not know what the downloaded data is going to look like until after you have collected the data and it has been scored. Also, other fields such as notes, time periods, and maybe even summary statistics are those that will be continually updated throughout the project.</p>
+<p>Additional reading on data dictionaries can be found here:</p>
+<p>📑 <a href="https://help.osf.io/hc/en-us/articles/360019739054-How-to-Make-a-Data-Dictionary">OSF</a><br />
+📑 <a href="https://data.nal.usda.gov/data-dictionary-purpose">USDA</a><br />
+📑 <a href="https://www.helsinki.fi/en/research/guide-for-data-documentation#section-72708">University of Helsinki</a></p>
 <p><br></p>
 </div>
 <div id="codebook" class="section level3">
 <h3>📓 Codebook</h3>
-<p>Like a data dictionary, a codebook also captures variable information, as well as project level information. It should capture all a user would need to know in order to understand and correctly interpret your data. It is typically part of the metadata that is added to a data archive, or is given to those who request your data after the project is complete. It usually takes the form of a plain text file (.txt), pdf (.pdf), or extensible markup language (.xml), rather than a proprietary form such as .docx. Several statistical programs (including R, SPSS, SAS and Stata) will export simple codebooks for your final datasets.</p>
-<p>Here is a nice example of a <a href="https://ddialliance.org/sites/default/files/06551.pdf">codebook</a>.</p>
+<p>Like a data dictionary, a codebook also captures variable information, as well as project level information. It should capture all a user would need to know in order to understand and correctly interpret your data. It is typically part of the metadata that is added to a data archive, or is given to those who request your data after the project is complete. It usually takes the form of a plain text file (.txt), pdf (.pdf), or extensible markup language (.xml), rather than a proprietary form such as .docx. If you embed metadata into your data, such as variable labels, value labels and missing values, several statistical programs (including R, SPSS, SAS and Stata) will export codebooks for your final datasets.</p>
+<p>📑 Here is a nice example of a <a href="https://ddialliance.org/sites/default/files/06551.pdf">codebook</a>.</p>
 <p>Your codebook should captures things such as:</p>
 <ul>
 <li>Study title<br />
@@ -581,8 +592,8 @@ div.tocify {
 </li>
 <li>If data is in text format, indicate position of each variable</li>
 </ul></li>
-<li>Computations for weights (if applicable)</li>
-<li>Imputation (if applicable)</li>
+<li>Computations</li>
+<li>Imputations</li>
 </ul>
 <p>Other optional content for a codebook:</p>
 <ul>
@@ -590,67 +601,56 @@ div.tocify {
 <li>Consent agreements</li>
 <li>Methodological details<br />
 </li>
-<li>Related publications<br />
-</li>
 <li>Flowchart of data collection instruments</li>
 </ul>
 <p><em>Last, I have found that sometimes the term data dictionary is synonymous with codebook. I don’t think the name matters, but for the sake of this training I am specifying a data dictionary as the document in tabular form with only variable level information and a codebook as a document usually in text format. You can keep either or both types of documentation. I think the data dictionary as laid out in this training is the easier document to update throughout the life of the project and assists with project implementation, while I view the codebook as a document to summarize the final datasets at the end of the project (and to be included with data archives/requests).</em></p>
+<p>Further information on codebooks can be found here:</p>
+<p>📑 <a href="https://www.icpsr.umich.edu/icpsrweb/content/shared/ICPSR/faqs/what-is-a-codebook.html">ICPSR</a><br />
+📑 <a href="https://www.datafiles.samhsa.gov/faq/what-codebook-nid3440">SAMHDA</a></p>
 <p><br></p>
 </div>
 <div id="readme" class="section level3">
 <h3>📓 README</h3>
-<p>A README is a plain text (.txt), markdown (.md), pdf (.pdf), or extensible markup language (.xml), standalone file that explains a project. These files are most known for their use in programming, but have become more prevalent in research. It is recommended to make one README file per dataset. This standalone document will accompany each dataset. It should be named so it is easily associated with the dataset and it should be housed in the same folder the data is in.</p>
-<p>A README can capture the following:</p>
+<p>A README is a plain text (.txt), markdown (.md), pdf (.pdf), or extensible markup language (.xml), standalone file that explains your files. README files are most known for their use in programming, but have become more prevalent in research. It is recommended to make one README file per dataset. This standalone document will accompany each dataset. It should be named so it is easily associated with the dataset and it should be housed in the same folder the data is in.</p>
+<p>A README should capture data such as:</p>
 <ul>
-<li>Project level information</li>
-<li>File information</li>
-<li>Access information</li>
-<li>Methodology</li>
-<li>Codebook (you can include your .txt codebook in this document for instance)</li>
+<li>General information (Title of dataset, contact information, key dates, funding)</li>
+<li>File information (Description, format, creation date, versions)</li>
+<li>Access information (Licenses, recommended citation, associated publications)</li>
+<li>Methodology (Data collection methods, data processing methods, software used, quality-assurance procedures)</li>
+<li>Optional: Your codebook can also be part of your README, rather than a separate document</li>
 </ul>
-<p>Because so much information can be included in these files and there is already great websites that describe README files in detail, I will not go into further detail.</p>
-<p>Excellent examples and further details can be found here:</p>
-<p><a href="https://cornell.app.box.com/v/ReadmeTemplate">README template</a> from Cornell is excellent and can be tailored to your needs.<br />
-<a href="https://guides.lib.uci.edu/datamanagement/readme">README recommended content: UCI</a><br />
-<a href="https://data.research.cornell.edu/content/readme">README recommended content: Cornell</a><br />
-<a href="https://libguides.graduateinstitute.ch/rdm/readme">README recommended content: IHEID</a></p>
+<p>Excellent templates and further details can be found here:</p>
+<p>📑 <a href="https://guides.library.oregonstate.edu/ld.php?content_id=45294345">README template: Oregon State</a><br />
+📑 <a href="https://cornell.app.box.com/v/ReadmeTemplate">README template: Cornell</a><br />
+📑 <a href="https://osf.io/sj8xv/">README template: OSF</a><br />
+📑 <a href="https://guides.lib.uci.edu/datamanagement/readme">README recommended content: UCI</a><br />
+📑 <a href="https://data.research.cornell.edu/content/readme">README recommended content: Cornell</a><br />
+📑 <a href="https://libguides.graduateinstitute.ch/rdm/readme">README recommended content: IHEID</a></p>
 <p><br></p>
 </div>
 <div id="metadata" class="section level3">
 <h3>📓 Metadata</h3>
-<p>You will hear the term metadata (data about data) used a lot, especially around archiving your data. Metadata “provide information about the dataset to help people find, understand, and use your data” (<a href="https://ies.ed.gov/funding/datasharing_faq.asp">IES</a>)". Metadata (in addition to a DOI number) aids in finding your data through internet searches. Within education, there are generally two types of metadata: Project-level and file-level.</p>
-<p>Project Metadata example fields:</p>
+<p>Metadata is <em>data about data</em>. They are structured data that “provide information about the dataset to help people find, understand, and use your data” (<a href="https://ies.ed.gov/funding/datasharing_faq.asp">IES</a>)“. Most of the time when you hear the term metadata, it will be referring to what I am going to call project-level metadata. Project-level metadata is a type of descriptive metadata that aids in finding your project through internet searches. It is like the”label of the dataset". At minimum the information captured should include who created the data, when the data were created, a title and description of the data, and a unique identifier for the data. This is the type of data we discussed earlier about capturing within the <em>General</em>, <em>File</em>, and <em>Access</em> portion of our README files.</p>
+<p>Common elements of project-level metadata include:</p>
+<p><img src="img/metadata.PNG" width="80%" style="display: block; margin: auto;" /> Source: <a href="https://libguides.up.edu/datamanagement/documentation">University of Portland</a></p>
+<p>Metadata can also also be categorized further into data-level and variable-level:</p>
 <ul>
-<li>Title</li>
-<li>Description</li>
-<li>Keywords</li>
-<li>Coverage (spatial and temporal)</li>
-<li>Contacts</li>
-<li>Funders</li>
-<li>Language</li>
-<li>DOI</li>
+<li><p>Data-level metadata is considered technical metadata. It focuses more on the details of each dataset such as instruments used to collect the data and software used to process the data. Lucikly, creating this metadata requires no extra effort because this is the exact information captured in sections like <em>Methodology</em> in your READMEs above.</p></li>
+<li><p>Variable-level metadata, is exactly as it sounds. It is data about the variables in your dataset. This can be both incorporated into your data, by adding things like variable and value labels, and it is also includes everything discussed earlier in your codebook and/or data dictionary. If your data is qualitative in nature (such as documents, photos, videos, or sound files), metadata such as date/time/location, tags/keywords, or measurement information can sometimes be embedded directly into your files.</p></li>
 </ul>
-<p>File Metadata example fields:</p>
-<ul>
-<li>File name</li>
-<li>File format</li>
-<li>Software used to create the files</li>
-<li>Date of creation/ update</li>
-<li>Relationships between files</li>
-</ul>
-<p>Many fields have their own metadata standards, for example social science often follows the Data Documentation Initiative (<a href="https://ddialliance.org/">DDI</a> standards. However, IES states that education has no standards. And with no standards in place, they recommend including metadata in other documents such as your README.</p>
-<p>If you do plan to archive your data, the data repository you plan to use may have standards in place that you will need to follow. Consult your repositories website for detailed information on what is required for archival. Many universities have archives that are available for use and IES also has recommended data repositories that can be found <a href="https://ies.ed.gov/funding/datasharing_faq.asp">here</a>.</p>
-<ul>
-<li>Additional Resources
-<ul>
-<li><a href="https://guides.lib.uci.edu/datamanagement/describe">Metadata: UCI</a><br />
-</li>
-<li><a href="https://data.research.cornell.edu/content/readme#recommendedcontent">Metadata: Cornell</a></li>
-<li><a href="https://guides.archaeologydataservice.ac.uk/g2gp/CreateData_1-2#ref-CreateData_1-2-9">Metadata: Archaeology</a></li>
-<li><a href="https://libguides.up.edu/datamanagement/documentation">Metadata: Portland</a></li>
-<li><a href="https://www.lib.ncsu.edu/do/data-management/metadata">Metadata: NC</a></li>
-</ul></li>
-</ul>
+<p>The most notable thing about metadata is that many fields follow metadata standards that aid in the “retrieving and indexing” of your data (<a href="https://data.library.arizona.edu/best-practices/data-documentation-readme-metadata">University of Arizona</a>. Standards include things such as agreed upon formats, vocabularies, and structure. For example social science often follows the Data Documentation Initiative (<a href="https://ddialliance.org/">DDI</a> standards. Another common standard used is the Dublic Core Metadata Initiative (<a href="https://dublincore.org/">DCMI</a>). However, (<a href="https://ies.ed.gov/funding/datasharing_faq.asp">IES</a>) states that education has no standards and that instead “researchers should document everything and strive to make notation as interpretable as possible”. Metadata can either be embedded within data or included in a separate file such as a README.txt or .pdf file.</p>
+<p>If you plan to archive your data, the data repository you plan to use may have standards in place that you will need to follow. Consult your repositories website for detailed information on what is required for archival. Many universities have archives that are available for use and IES also has recommended data repositories that can be found <a href="https://ies.ed.gov/funding/datasharing_faq.asp">here</a>.</p>
+<p>Additional metadata information can be found here:</p>
+<p>📑 <a href="https://guides.library.oregonstate.edu/research-data-services/data-management-metadata#:~:text=Project%2Dlevel%20metadata%20describes%20the,Dataset%20title">Metadata: Oregon State</a><br />
+📑 <a href="https://guides.lib.uci.edu/datamanagement/describe">Metadata: UCI</a><br />
+📑 <a href="https://www.lib.ncsu.edu/do/data-management/metadata">Metadata: NCSU</a><br />
+📑 <a href="https://libguides.graduateinstitute.ch/rdm/qualitative">Qualitative Metadata: IHEID</a><br />
+📑 <a href="https://www.icpsr.umich.edu/web/pages/datamanagement/dmp/plan.html">Metadata for archiving: ICPSR</a> 📑 <a href="https://ddialliance.org/training/getting-started/data-catalog">Project level metadata Example: DDI</a><br />
+📑 <a href="https://guides.archaeologydataservice.ac.uk/g2gp/CreateData_1-2#ref-CreateData_1-2-9">Types of Metadata: ADS</a><br />
+📑 <a href="https://pelagicpublishing.com/products/data-management-for-researchers-briney">Data Management for Researchers</a><br />
+📑 <a href="https://www.helsinki.fi/en/research/guide-for-data-documentation">University of Helsinki</a><br />
+📑 <a href="https://www.lse.ac.uk/library/research-support/research-data-management/metadata-and-documentation">London School of Economics and Political Science</a></p>
 <p><br></p>
 </div>
 <div id="miscellaneous" class="section level3">
@@ -658,35 +658,52 @@ div.tocify {
 <p>Last you should consider documenting <strong>all</strong> your data processes. This may fit into one of the above mentioned documents, or it may be a separate text or markdown files (such as a README), a syntax file, or even an excel file. Keep this document in the folder related to the content and name it accordingly, Ex:<code>README_Name-of-process.txt</code>. Consider tracking things such as:</p>
 <p>File origination information:</p>
 <ul>
-<li><p>You received 10 files from a school district (when did you receive these, why did you receive these)</p>
+<li><p>You received a demographics file from a school district</p>
 <ul>
-<li>That school district sent you an updated version of 3 of those files one week later (when did you receive these, why did you receive these–were there errors in the previous documents?)</li>
+<li>When did you receive this, Why did you receive this
+<ul>
+<li>That school district sends you an updated version of that file 3 weeks later
+<ul>
+<li>When did you receive this? Why did you receive this? Were there errors in the previous documents?</li>
+</ul></li>
+</ul></li>
 </ul></li>
 <li><p>This kind of information is easy to track if you use versioning software such as Git or you use software that includes versioning such as SharePoint or Box because it allows you to comment each time you commit or save new files.</p></li>
-<li><p>Processes used to clean/create data (inputs and outputs) such as:</p></li>
-<li><p>Syntax: <code>cleaning.R</code></p></li>
-<li><p>Input: <code>district-data_raw_2020_09_08.xlsx</code></p></li>
-<li><p>Output: <code>district-data_clean_2020_10_09.csv</code></p></li>
-<li><p>Processes to create tables and reports such as:</p></li>
-<li><p>To create this report you need to</p>
+<li><p>Processes used to clean/create data (inputs and outputs) such as:</p>
 <ul>
-<li>Step 1: Run the file <code>01_clean-the-data.R</code></li>
-<li>Step 2: Run the file <code>02_check-errors.R</code></li>
-<li>Step 3: Run the report <code>code 03_report.R</code></li>
+<li>Syntax: <code>cleaning.R</code><br />
+</li>
+<li>Input: <code>district-data_raw_2020_09_08.xlsx</code><br />
+</li>
+<li>Output: <code>district-data_clean_2020_10_09.csv</code><br />
+<br></li>
 </ul></li>
-<li><p>And last, as mentioned above, if your team does not use a wiki, consider documenting file naming, file structure, and versioning rules in a document such as a README that is placed in your main project folder. See <strong>File Struture</strong> in Training 2 for more information on these types of rules.</p></li>
+<li><p>Processes to create tables and reports such as:</p>
+<ul>
+<li>Step 1: Run the file <code>01_clean-the-data.R</code><br />
+</li>
+<li>Step 2: Run the file <code>02_check-errors.R</code><br />
+</li>
+<li>Step 3: Run the report <code>code 03_report.R</code><br />
+<br></li>
+</ul></li>
+<li><p>And last, as mentioned above, if your team does not use a wiki, consider creating a README <em>style guide</em> in your main project folder where you document:</p>
+<ul>
+<li>File naming conventions</li>
+<li>File structure conventions</li>
+<li>See <strong>File Structure</strong> in Training 2 for more information on these types of rules.</li>
+</ul></li>
 </ul>
 <p><br></p>
 </div>
-<div id="documentation-resources" class="section level3">
-<h3>📓 Documentation Resources</h3>
-<p>[Naming Files] [Naming Files] [Data Dictionary] [ReadME]</p>
-<p><a href="https://www.icpsr.umich.edu/icpsrweb/content/shared/ICPSR/faqs/what-is-a-codebook.html">ICPSR Codebook</a><br />
-<a href="https://coding2share.github.io/ReproducibilityToolkit/Mod4Document.html#readme">Coding2Share</a> <a href="https://researchdata.wisc.edu/dmp-3-data-documentation/">University of Wisconsin-Madison</a><br />
-<a href="https://www.icpsr.umich.edu/files/deposit/dataprep.pdf">ICPSR Archving Manual</a><br />
-<a href="https://riojournal.com/article/56508/">Foundational Practices of Research Data Management</a><br />
-<a href="https://ddialliance.org/sites/default/files/EnablingLongitudinalDataComparisonUsingDDI.pdf">Longitudinal Comparison Using DDI</a><br />
-<a href="https://pelagicpublishing.com/products/data-management-for-researchers-briney">Data Management for Researchers book</a></p>
+<div id="conclusion" class="section level3">
+<h3>📓 Conclusion</h3>
+<p>The main takeaway is that it is important to document everything. Not only is it required by funders and by data repositories, as well as necessary for those submitting data requests, but it is crucial to the integrity and reproducibility of your project. While you should try to standardize your documentation as much as possible, don’t get stuck in the details of the format or the structure. Instead focus on getting the content, rules, and procedures down before you forget.</p>
+<p>Although, <em>publishing data</em> will come in a later module, I did want to wrap up by saying that when it comes time to publish your data (whether in a repository or data sharing through a PI), plan to include the following documentation with your final datasets:</p>
+<ul>
+<li>README file (for each dataset) - including the project-level metadata</li>
+<li>Data dictionaries and/or codebooks</li>
+</ul>
 </div>
 </div>
 

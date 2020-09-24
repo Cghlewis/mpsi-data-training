@@ -9,7 +9,7 @@ output:
 
 ## Getting to know R and RStudio
 
-The beginning of any research project should start with some form of documentation. All decisions made from day one should be documented.
+Something
 
 ### Installing R and Rstudio
 
