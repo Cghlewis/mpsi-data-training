@@ -12,7 +12,7 @@ output:
 
 :::presentation
 <br>
-You can view slides from this talk [here].
+You can view slides from this talk [here](https://cghlewis.github.io/mpsi-training1/).
 :::
   
 ---
