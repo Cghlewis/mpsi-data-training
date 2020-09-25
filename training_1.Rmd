@@ -72,7 +72,8 @@ We will go over types of documentation you may want to consider keeping. Many of
 
 Additional reading on the importance of data documentation can be found here:
 
-  [University of Helsinki](https://www.helsinki.fi/en/research/guide-for-data-documentation)
+  📑 [University of Helsinki](https://www.helsinki.fi/en/research/guide-for-data-documentation)  
+  📑 [Washington University in St. Louis](https://libguides.wustl.edu/c.php?g=47355&p=303435)
   
 
 <br>
@@ -266,25 +267,25 @@ Metadata can also also be categorized further into data-level and variable-level
 
 * Data-level metadata is considered technical metadata. It focuses more on the details of each dataset such as instruments used to collect the data and software used to process the data. Lucikly, creating this metadata requires no extra effort because this is the exact information captured in sections like *Methodology* in your READMEs above.
 
-* Variable-level metadata, is exactly as it sounds. It is data about the variables in your dataset. This can be both incorporated into your data, by adding things like variable and value labels, and it is also includes everything discussed earlier in your codebook and/or data dictionary. If your data is qualitative in nature (such as documents, photos, videos, or sound files), metadata such as date/time/location, tags/keywords, or measurement information can sometimes be embedded directly into your files. 
+* Variable-level metadata, is exactly as it sounds. It is data about the variables in your dataset. This can be both incorporated into your data, by adding things like variable and value labels, and it is also includes everything discussed earlier in your codebook and/or data dictionary. If your data is qualitative in nature (such as documents, photos, videos, or sound files), metadata such as date/time/location, tags/keywords, or measurement information can sometimes be embedded directly into your files ([IHEID](https://libguides.graduateinstitute.ch/rdm/qualitative)). 
 
-The most notable thing about metadata is that many fields follow metadata standards that aid in the "retrieving and indexing" of your data ([University of Arizona](https://data.library.arizona.edu/best-practices/data-documentation-readme-metadata). Standards include things such as agreed upon formats, vocabularies, and structure. For example social science often follows the Data Documentation Initiative ([DDI](https://ddialliance.org/) standards. Another common standard used is the Dublic Core Metadata Initiative ([DCMI](https://dublincore.org/)). However, ([IES](https://ies.ed.gov/funding/datasharing_faq.asp)) states that education has no standards and that instead "researchers should document everything and strive to make notation as interpretable as possible". Metadata can either be embedded within data or included in a separate file such as a README.txt or .pdf file.
+The most notable thing about metadata is that many fields follow metadata standards that aid in the "retrieving and indexing" of your data ([University of Arizona](https://data.library.arizona.edu/best-practices/data-documentation-readme-metadata)). Standards include things such as agreed upon formats, vocabularies, and structure. For example social science often follows the Data Documentation Initiative ([DDI](https://ddialliance.org/)) standards. However, ([IES](https://ies.ed.gov/funding/datasharing_faq.asp)) states that education has no standards and that instead "researchers should document everything and strive to make notation as interpretable as possible". Metadata can either be embedded within data or included in a separate file such as a README.txt or .pdf file.
 
 If you plan to archive your data, the data repository you plan to use may have standards in place that you will need to follow. Consult your repositories website for detailed information on what is required for archival. Many universities have archives that are available for use and IES also has recommended data repositories that can be found [here](https://ies.ed.gov/funding/datasharing_faq.asp).
 
 
 Additional metadata information can be found here:  
 
-  📑 [Metadata: Oregon State](https://guides.library.oregonstate.edu/research-data-services/data-management-metadata#:~:text=Project%2Dlevel%20metadata%20describes%20the,Dataset%20title)  
-  📑 [Metadata: UCI](https://guides.lib.uci.edu/datamanagement/describe)    
-  📑 [Metadata: NCSU](https://www.lib.ncsu.edu/do/data-management/metadata)  
-  📑 [Qualitative Metadata: IHEID](https://libguides.graduateinstitute.ch/rdm/qualitative)  
-  📑 [Metadata for archiving: ICPSR](https://www.icpsr.umich.edu/web/pages/datamanagement/dmp/plan.html)   
-  📑 [Project level metadata Example: DDI](https://ddialliance.org/training/getting-started/data-catalog)  
-  📑 [Types of Metadata: ADS](https://guides.archaeologydataservice.ac.uk/g2gp/CreateData_1-2#ref-CreateData_1-2-9)  
-  📑 [Data Management for Researchers](https://pelagicpublishing.com/products/data-management-for-researchers-briney)  
+  📑 [Oregon State](https://guides.library.oregonstate.edu/research-data-services/data-management-metadata#:~:text=Project%2Dlevel%20metadata%20describes%20the,Dataset%20title)  
+  📑 [UCI](https://guides.lib.uci.edu/datamanagement/describe)    
+  📑 [NCSU](https://www.lib.ncsu.edu/do/data-management/metadata)  
+  📑 [ICPSR](https://www.icpsr.umich.edu/web/pages/datamanagement/dmp/plan.html)   
+  📑 [DDI](https://ddialliance.org/training/getting-started/data-catalog)  
+  📑 [ADS](https://guides.archaeologydataservice.ac.uk/g2gp/CreateData_1-2#ref-CreateData_1-2-9)  
   📑 [University of Helsinki](https://www.helsinki.fi/en/research/guide-for-data-documentation)  
   📑 [London School of Economics and Political Science](https://www.lse.ac.uk/library/research-support/research-data-management/metadata-and-documentation)  
+  📑 [Washington University in St. Louis](https://libguides.wustl.edu/c.php?g=47355&p=305263)  
+  📑 [Data Management for Researchers](https://pelagicpublishing.com/products/data-management-for-researchers-briney)  
 
 <br>
 
