@@ -68,7 +68,7 @@ Documentation can take many forms. [IES](https://ies.ed.gov/funding/datasharing_
 
 However, a) IES provides no template for how documentation is laid out OR what tools to use to create/share this information and b) outside of IES required documentation for data sharing, there may be additional documentation your team may want to keep to help manage internal processes. 
 
-We will go over types of documentation you may want to consider keeping. Many of these documents have overlapping information and some terms may be used interchangeably in the field (ex: Data Dictionary and Codebook or README and metadata). Also, some of the documents are important to start day one of the project, while others are more important to create at the end of the project when you are ready to share data. The point of this next section isn't to implement all of these documents, but rather to consider which documents capture the information you need to have a successful project. It may just be a protocol and a data dictionary. Or it may be a protocol, a data dictionary and a readme for each data file. Or it may be all of these documents! It depends on things such as the scale of your project and how you plan to share the data at the end of your project.
+We will go over types of documentation you may want to consider keeping. Many of these documents have overlapping information and some terms may be used interchangeably in the field (ex: Data Dictionary and Codebook or README and metadata). Also, some of the documents are important to start day one of the project, while others are more important to create at the end of the project when you are ready to share data. The point of this next section isn't to implement all of these documents, but rather to consider which documents capture the information you need to have a successful project. It may just be a protocol and a data dictionary. Or it may be a protocol, a data dictionary and a README for each data file. Or it may be all of these documents! It depends on things such as the scale of your project and how you plan to share the data at the end of your project.
 
 Additional reading on the importance of data documentation can be found here:
 
@@ -100,8 +100,9 @@ Protocol should cover procedures/decisions for the following:
 * Payments/Incentives
 * Intervention implementation
 
-Each protocol should begin with the following to track project changes:
+Each protocol should begin with the following:
 
+* Title 
 * Date the protocol was made    
 * Who made the protocol  
 * Any rationale behind the protocol  
@@ -121,7 +122,9 @@ It is also good practice to add a copy of your data collection instruments to yo
 
 ### 📓 Wiki
 
-I am including wiki in here, even though I think it is uncommon to hear about this in education research. However, to me, a wiki is similar to a protocol document in that is a project implementation tool, used by project staff. If you use certain tools such as Microsoft SharePoint, a wiki can be a great place to store high level project information that your team frequently refers to. SharePoint describes a wiki as "a site that is designed for groups of people to quickly capture and share ideas by creating simple pages and linking them together." It is a page that anyone on your team can add/edit content and then can link to those documents for easy access (ex: provide information about and link to recruitment documents). You can also house important data management rules such as file naming conventions, file structure, versioning rules, and so forth here [**note: If you do not have a wiki, I still recommend documenting these data management rules somewhere that is easily accessible for project staff, possibly a README housed in your main project folder**].
+I am including wiki in here, even though I think it is uncommon to hear about this in education research. However, to me, a wiki is similar to a protocol document in that is a project implementation tool, used by project staff. If you use certain tools such as Microsoft SharePoint, a wiki can be a great place to store high level project information that your team frequently refers to. SharePoint describes a wiki as "a site that is designed for groups of people to quickly capture and share ideas by creating simple pages and linking them together." It is a page that anyone on your team can add/edit content and then can link to those referenced documents for easy access. 
+
+Wikis can be made for specific research projects and are great for referring to frequently requested information (ex: Recruitment Information). You can also make a general research team wiki that links to information that either applies to your entire team (ex: Team meeting notes or employee manual) or information that is relevant across all projects (ex: Data management rules such as file naming conventions, file structure, or versioning rules).
 
   📑 You can make wikis with many other tools, but you can read more about Sharepoint's wiki [here](https://support.microsoft.com/en-us/office/create-and-edit-a-wiki-dc64f9c2-d1a2-44b5-ac59-b9d535551a32).
 
@@ -265,13 +268,13 @@ Source: [University of Portland](https://libguides.up.edu/datamanagement/documen
 
 Metadata can also also be categorized further into data-level and variable-level:
 
-* Data-level metadata is considered technical metadata. It focuses more on the details of each dataset such as instruments used to collect the data and software used to process the data. Lucikly, creating this metadata requires no extra effort because this is the exact information captured in sections like *Methodology* in your READMEs above.
+* Data-level metadata, which might be considered administrative metadata, focuses more on the details of each dataset such as instruments used to collect the data and software used to process the data. Lucikly, creating this metadata requires no extra effort because this is the exact information captured in sections like *Methodology* in your READMEs above.
 
-* Variable-level metadata, is exactly as it sounds. It is data about the variables in your dataset. This can be both incorporated into your data, by adding things like variable and value labels, and it is also includes everything discussed earlier in your codebook and/or data dictionary. If your data is qualitative in nature (such as documents, photos, videos, or sound files), metadata such as date/time/location, tags/keywords, or measurement information can sometimes be embedded directly into your files ([IHEID](https://libguides.graduateinstitute.ch/rdm/qualitative)). 
+* Variable-level metadata, which might be considered structural metadata, is data about the variables in your dataset. This can be both incorporated into your data, by adding attributes like variable and value labels, and it is also includes everything discussed earlier in your codebook and/or data dictionary. If your data is qualitative in nature (such as documents, photos, videos, or sound files), metadata such as date/time/location, tags/keywords, or measurement information can sometimes be embedded directly into your files ([IHEID](https://libguides.graduateinstitute.ch/rdm/qualitative)). 
 
 The most notable thing about metadata is that many fields follow metadata standards that aid in the "retrieving and indexing" of your data ([University of Arizona](https://data.library.arizona.edu/best-practices/data-documentation-readme-metadata)). Standards include things such as agreed upon formats, vocabularies, and structure. For example social science often follows the Data Documentation Initiative ([DDI](https://ddialliance.org/)) standards. However, ([IES](https://ies.ed.gov/funding/datasharing_faq.asp)) states that education has no standards and that instead "researchers should document everything and strive to make notation as interpretable as possible". Metadata can either be embedded within data or included in a separate file such as a README.txt or .pdf file.
 
-If you plan to archive your data, the data repository you plan to use may have standards in place that you will need to follow. Consult your repositories website for detailed information on what is required for archival. Many universities have archives that are available for use and IES also has recommended data repositories that can be found [here](https://ies.ed.gov/funding/datasharing_faq.asp).
+If you plan to archive your data, the data repository you plan to use may have standards in place that you will need to follow. Consult your repository's website for detailed information on what is required for archival. Many universities have archives that are available for use and IES also has recommended data repositories that can be found [here](https://ies.ed.gov/funding/datasharing_faq.asp).
 
 
 Additional metadata information can be found here:  
@@ -295,9 +298,10 @@ Last you should consider documenting **all** your data processes. This may fit i
 
 File origination information:
 
-* You received a demographics file from a school district
-  + When did you receive this, Why did you receive this
-    + That school district sends you an updated version of that file 3 weeks later
+* For Project A, you received demographics files every spring. 
+  + Every time you receive a file, document the name/location of the file, when it was received, and why
+  + This is especially important when for example: 
+    + That school district sends you a file, and then an updated version of that file 3 weeks later
       + When did you receive this? Why did you receive this? Were there errors in the previous documents?
 * This kind of information is easy to track if you use versioning software such as Git or you use software that includes versioning such as SharePoint or Box because it allows you to comment each time you commit or save new files.
 
