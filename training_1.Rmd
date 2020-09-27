@@ -82,7 +82,7 @@ Additional reading on the importance of data documentation can be found here:
 
 A document/s to record all your procedures changes made to those procedures throughout the grant.
 
-At some point someone will ask you how or why you did something the way you did. This is the document that will save you because it is very likely that you will not remember. I highly recommend always adding protocol as part of any data documentation plan. You can make separate protocol documents per procedure or keep them all in one standalone document with a table of contents. Most likely your protocol will not be shared outside of your team, but the information in your protocol can be used to inform other documentation such as READMEs or Codebooks. Your protocol can live in any format that works for you (ex: .docx, .md, .txt). It is a living document that will be continually updated so use a format that makes sense for you. 
+At some point someone will ask you how or why you did something the way you did. This is the document that will save you because it is very likely that you will not remember. I highly recommend always adding protocol as part of any data documentation plan. You can make separate protocol documents per procedure or keep them all in one standalone document with a table of contents. Most likely your protocol will not be shared outside of your team, but the information in your protocol can be used to inform other documentation such as READMEs or codebooks. Your protocol can live in any format that works for you (ex: .docx, .md, .txt). It is a living document that will be continually updated so use a format that makes sense for you. 
 
 Protocol should cover procedures/decisions for the following:
 
@@ -96,19 +96,20 @@ Protocol should cover procedures/decisions for the following:
 * Payments/Incentives
 * Intervention implementation
 
-Each protocol should begin with the following:
+Each protocol should *begin* with the following:
 
 * Title
 * Date the protocol was made
 * Who made the protocol
 * Any rationale behind the protocol
-* Any related documents or research behind this protocol
+* Any related documents or research behind the protocol
 
-* For any changes to the protocol after the project has begun add the following below the original protocol   section:  
-  + Revision Date  
-  + Who decided on the revision  
-  + Any rationale behind the revision  
-  + Any related documents or research behind the revision
+For any *changes* to the protocol after the project has begun, add the following below the original protocol   section: 
+
+* Revision Date  
+* Who decided on the revision  
+* Any rationale behind the revision  
+* Any related documents or research behind the revision
   
 It is also good practice to add a copy of your data collection instruments to your protocol (Surveys, Interview Questions, etc.), as well as changes/versions of those and explanations for the changes.
   
@@ -120,7 +121,7 @@ It is also good practice to add a copy of your data collection instruments to yo
 
 I am including a wiki in this list even though I think it is an unconventional documentation tool in education research. A wiki can help your team internally document, organize, and navigate frequently used information. If you use platforms such as Microsoft SharePoint, a wiki can be a great place to store high level information that your team frequently refers to. SharePoint describes a wiki as "a site that is designed for groups of people to quickly capture and share ideas by creating simple pages and linking them together." It is a page that anyone on your team can add/edit content and then can link to those referenced documents for easy access. 
 
-Wikis can be made for specific research projects and are great for referring to frequently requested information (ex: Recruitment information or participant payment details). You can also make a general research team wiki that links to information that either applies to your entire team (ex: Team meeting notes or employee manual) or information that is relevant across all projects (ex: Data management rules such as file naming conventions, file structure, or versioning rules).
+Wikis can be made for specific research projects and are great for referring to frequently requested information (ex: Recruitment information or participant payment details). You can also make a general research team wiki that links to information that either applies to your entire team (ex: Team meeting notes or employee manual) or information that is relevant across all projects (ex: Data management rules such as file naming conventions, file structure, or versioning rules). 
 
   📑 You can make wikis with many other tools, but you can read more about Sharepoint's wiki [here](https://support.microsoft.com/en-us/office/create-and-edit-a-wiki-dc64f9c2-d1a2-44b5-ac59-b9d535551a32).
 
