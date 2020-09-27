@@ -98,11 +98,11 @@ Protocol should cover procedures/decisions for the following:
 
 Each protocol should begin with the following:
 
-* Title 
-* Date the protocol was made    
-* Who made the protocol  
-* Any rationale behind the protocol  
-* Any related documents or research behind this protocol  
+* Title
+* Date the protocol was made
+* Who made the protocol
+* Any rationale behind the protocol
+* Any related documents or research behind this protocol
 
 * For any changes to the protocol after the project has begun add the following below the original protocol   section:  
   + Revision Date  
