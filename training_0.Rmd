@@ -1,0 +1,55 @@
+---
+title: "Project Management"
+output: 
+  html_document:
+    toc: TRUE
+    toc_float: TRUE
+---
+
+Before jumping into this training series, I think it is important to get a feel for the role of data management within the larger research team and how a research team functions cohesively. With that in mind, I wanted to briefly cover common research team roles as well as tools that help teams communicate and manage tasks. Sometimes a research team may be lucky enough to have all of these roles, other times, just one person, such as the Principal Investigator, may take on all or multiple of these roles. 
+
+---
+
+## Roles
+
+---
+
+
+### PI and Co-PI
+
+The Principal Investigator/s or PIs, as well as Co-PIs, are the individuals who prepare and submit the grant proposal and are responsible for the administration of that grant. PIs and Co-PIs have varying levels of involvement in research projects and are typically, not always, more hands off in the day to day administration. Even if some tasks are delegated to other research staff, PIs and Co-PIs are ultimately responsible for IRB submissions and for meeting IRB requirements, as well as for submitting MOUs, budgets, effort reporting, continuing review reports and any final technical finding reports.
+
+Source: [University of Pittsburgh](https://www.irb.pitt.edu/content/chapter-4-roles-and-responsibilities-investigators-and-research-staff) and [University of Massachusetts Amherst](https://www.umass.edu/research/policy/pi-and-co-pi-roles-and-responsibilities)
+
+
+### Project Coordinator
+
+The project coordinator is an essential member of the research team. As the name implies, this person typically coordinates all research activities. This can include things such as recruitment and consenting of participants, creation of data collection materials, creation of protocols, training data collectors, data collection scheduling, data tracking, and more. The project coordinator may also supervise many of the other research team roles, such as research assistants. This role may be split across more than one project coordinator as well.
+
+
+### Data Manager
+
+The data manager is also an essential member of the team. This person (or persons) is responsible for the organizing, cleaning, and dissemination of research project data. It is also advisable to include this person early on in the design of the research study as well as the design of data collection materials. They can often be helpful in problem solving and alleviating future potential problem areas with data collection. This role usually also has a heavy role in data documentation.
+
+### Research Assistant
+
+Although the term may not always be research assistant, I am referring to any staff hired to help implement a research project. Research assistants are typically out in the field, collecting the data, or they may also assist in other areas such as preparing data collection materials, or assisting with data management. Some advanced research assistants may also assist in implementing training or acting as data collection leads in the field.
+
+### Other roles
+
+Some teams may include additional roles such as postdocs, research associates/fellows, administrative professionals, outreach coordinators, coaches, or consultants, all who may assist in the research cycle in other ways. The size of a research team and the roles that exist are all dependent on factors such as funding, the type of research study/the intervention being studied, or the organization of your specific research institution.
+
+---
+
+## Project Management
+
+---
+
+There are several tools/software that teams can use to facilitate project coordination and communications.
+
+
+
+
+
+
+

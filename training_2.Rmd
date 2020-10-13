@@ -1,19 +1,68 @@
 ---
 title: "Training 2: Setting up Data Structures"
-author: "Crystal Lewis"
 output: 
   html_document:
     toc: TRUE
     toc_float: TRUE
 ---
 
-## Tracking
+<br>
+
+This training module continues thinking about how to set up systems for a successful project before you ever collect your data. Talk about IRB
+
+---
 
 ## Data Collection
 
+---
+
+When it comes to the intersection of data management and data collection, there is a lot to consider. If at all possible, take some planning time to create data collection instruments and procedures that keep your data secure, valid, and minimize future data cleaning headaches.
+
+### Electronic Data
+
+Research teams may be restricted in how they collect their data due to limited resources, grant requirements, or even the population being studied. However, if at all possible, I highly recommend collecting data electronically rather than manually. The reasons are:
+
+* Forms are easier to maintain/update
+* More efficient than manually entering or manually scoring data (including TeleForm)
+* It reduces errors from data entry/scoring
+* Quick turnaround of clean data
+* Removes the need to physically store paper data
+
+I will say one downside we have come across is, if your electronic data requires internet connection, this can cause issues when there is either no or poor service in your data collection area.
+
+Data that can be transferred to electronic includes things such as:
+
+  * Electronically collected consents/assents vs paper forms 
+  * Surveys using an online platform or mobile app as opposed to paper
+  * Electronically administered assessments as opposed to manually given assessments
+  * Observation data collected on a tablet rather than paper
+
+And obviously, some data is collected/accessed digitally automatically:
+
+  * User analytics data
+  * Publicly available data (such as your state Dept of Education)
+  
+Not all data is better collected digitally verses manually. For instance, using software to translate your interview data rather than transcribing by hand has its pros (efficiency) and cons (mis-translations that need to be fixed). As always, do what makes the most sense for your project and whatever is approved by your Institutional Review Board.
+  
+Last, I don't want to endorse any particular survey platform or assessment company for data collection. However, when choosing tools to use, you should a) make sure the system meets the needs of your project (ex: the assessment measures what you intend to measure) and b) to ensure security of your data, use software that is vetted and approved by your institution.
+
+---
+
+## Tracking
+
+---
+
+
+---
 ## Data Storage
 
+---
+
+---
+
 ## Directory Structure
+
+---
 
 ```{r, echo=FALSE}
 library(data.tree)

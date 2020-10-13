@@ -1,6 +1,5 @@
 ---
 title: "Training 1: Documentation"
-author: "Crystal Lewis  "  
 output: 
   html_document:
     css: "css/custom.css"
@@ -34,7 +33,7 @@ To increase transparency and to advance scientific inquiry in education research
 ✔️ Any circumstances that prevent any data from being shared  
 ✔️ Most recent rule: A plan for [pre-registering](https://ies.ed.gov/seer/preregistration.asp) your study within the first year of the project  
 
-This training is not specific only to IES grants. Almost all funders that education researchers may work with require a DMP that also includes a data sharing or archival plan (ex: [NIJ](https://nij.ojp.gov/funding/research-development-and-evaluation-grant-award-requirements#vj8jg) and [NIH](https://grants.nih.gov/grants/policy/data_sharing/data_sharing_guidance.htm#doc)). Furthermore, this training will not cover the details of writing up a DMP but rather how to implement a DMP. We will cover topics such as: How do we document data; How do we track it; How do we manage it; How do we keep it secure; and How do we share it. This specific training module will cover documentation.
+This training series is not specific only to IES grants. Almost all funders that education researchers may work with require a DMP that also includes a data sharing or archival plan (ex: [NIJ](https://nij.ojp.gov/funding/research-development-and-evaluation-grant-award-requirements#vj8jg) and [NIH](https://grants.nih.gov/grants/policy/data_sharing/data_sharing_guidance.htm#doc)). Furthermore, this training will not cover the details of writing up a DMP but rather how to implement a DMP. We will cover topics such as: How do we document data; How do we track it; How do we manage it; How do we keep it secure; and How do we share it. This specific training module will cover documentation.
 
 Before we dive in, as IES is the most prolific funder of RCTs in education, if you are someone who will be writing IES DMPs in the future or want to know more about them, here are some excellent resources:
 
@@ -82,7 +81,9 @@ Additional reading on the importance of data documentation can be found here:
 
 A document/s to record all your procedures changes made to those procedures throughout the grant.
 
-At some point someone will ask you how or why you did something the way you did. This is the document that will save you because it is very likely that you will not remember. I highly recommend always adding protocol as part of any data documentation plan. You can make separate protocol documents per procedure or keep them all in one standalone document with a table of contents. Most likely your protocol will not be shared outside of your team, but the information in your protocol can be used to inform other documentation such as READMEs or codebooks. Your protocol can live in any format that works for you (ex: .docx, .md, .txt). It is a living document that will be continually updated so use a format that makes sense for you. 
+At some point someone will ask you how or why you did something the way you did. This is the document that will save you because it is very likely that you will not remember. This document also helps standardize your procedures. You can and should refer back to this document during a longitudinal study to ensure you continue to implement procedures in the same way. 
+
+I highly recommend always adding protocol as part of any data documentation plan. You can make separate protocol documents per procedure or keep them all in one standalone document with a table of contents. Most likely your protocol will not be shared outside of your team, but the information in your protocol can be used to inform other documentation such as READMEs or codebooks. Your protocol can live in any format that works for you (ex: .docx, .md, .txt). It is a living document that will be continually updated so use a format that makes sense for you. 
 
 Protocol should cover procedures/decisions for the following:
 
