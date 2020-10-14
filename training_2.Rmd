@@ -42,7 +42,7 @@ And obviously, some data is collected/accessed digitally automatically:
   * User analytics data
   * Publicly available data (such as your state Dept of Education)
   
-Not all data is better collected digitally verses manually. For instance, using software to translate your interview data rather than transcribing by hand has its pros (efficiency) and cons (mis-translations that need to be fixed). As always, do what makes the most sense for your project and whatever is approved by your Institutional Review Board.
+Not all data is better collected digitally verses manually. For instance, using software to translate your interview data rather than transcribing by hand has its pros (efficiency) and cons (mistranslations that need to be fixed). As always, do what makes the most sense for your project and whatever is approved by your Institutional Review Board.
   
 Last, I don't want to endorse any particular survey platform or assessment company for data collection. However, when choosing tools to use, you should a) make sure the system meets the needs of your project (ex: the assessment measures what you intend to measure) and b) to ensure security of your data, use software that is vetted and approved by your institution.
 
