@@ -189,7 +189,7 @@ Additional reading on data dictionaries can be found here:
 
 ### 📓 Codebook
 
-Like a data dictionary, a codebook also captures variable information, as well as project level information. It should capture all a user would need to know in order to understand and correctly interpret your data. It is typically part of the metadata that is added to a data archive, or is given to those who request your data after the project is complete. It usually takes the form of a plain text file (.txt), pdf (.pdf), or extensible markup language (.xml), rather than a proprietary form such as .docx. If you embed metadata into your data, such as variable labels, value labels and missing values, several statistical programs (including R, SPSS, SAS and Stata) will export codebooks for your final datasets. 
+Like a data dictionary, a codebook also captures variable information, as well as project level information. It should capture all a user would need to know in order to understand and correctly interpret your data. It is typically part of the metadata that is added to a data archive, or is given to those who request your data after the project is complete. It usually takes the form of a plain text file (.txt), pdf (.pdf), or extensible markup language (.xml), rather than a proprietary form such as .docx. If you embed metadata into your data, such as variable labels, value labels and missing values, several statistical programs (including R, SPSS, SAS and Stata) will export codebooks for your final datasets. You can make one large codebook that includes all data for your project, or make separate codebooks by dataset (ex: Teacher level dataset codebook), or even by measure (ex: Student survey codebook). 
 
   📑 Here is a nice example of a [codebook](https://ddialliance.org/sites/default/files/06551.pdf).
 
@@ -215,6 +215,8 @@ Your codebook should captures things such as:
 
 Other optional content for a codebook: 
 
+* Citations for scales used
+* Question ordering
 * Data collection instruments 
 * Consent agreements
 * Methodological details  
@@ -255,7 +257,7 @@ Excellent templates and further details can be found here:
 
 ### 📓 Metadata
 
-Metadata is *data about data*. They are structured data that "provide information about the dataset to help people find, understand, and use your data" ([IES](https://ies.ed.gov/funding/datasharing_faq.asp))". Most of the time when you hear the term metadata, it will be referring to what I am going to call project-level metadata. Project-level metadata is a type of descriptive metadata that aids in finding your project through internet searches. It is like the "label of the dataset". At minimum the information captured should include who created the data, when the data were created, a title and description of the data, and a unique identifier for the data. This is the type of data we discussed earlier about capturing within the *General*, *File*, and *Access* portion of our README files. 
+Metadata is *data about data*. They are structured data that "provide information about the dataset to help people find, understand, and use your data" ([IES](https://ies.ed.gov/funding/datasharing_faq.asp))". Most of the time when you hear the term metadata, it will be referring to what I am going to call project-level metadata. Project-level metadata is a type of descriptive metadata that aids in finding your project through internet searches. It is like the "label of the dataset". At minimum the information captured should include who created the data, when the data were created, a title and description of the data, and a unique identifier for the data. This is the type of data we discussed capturing earlier within the *General*, *File*, and *Access* portion of our README files. 
 
 Common elements of project-level metadata include:
 

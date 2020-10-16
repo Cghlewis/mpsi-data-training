@@ -552,7 +552,7 @@ div.tocify {
 </div>
 <div id="codebook" class="section level3">
 <h3>📓 Codebook</h3>
-<p>Like a data dictionary, a codebook also captures variable information, as well as project level information. It should capture all a user would need to know in order to understand and correctly interpret your data. It is typically part of the metadata that is added to a data archive, or is given to those who request your data after the project is complete. It usually takes the form of a plain text file (.txt), pdf (.pdf), or extensible markup language (.xml), rather than a proprietary form such as .docx. If you embed metadata into your data, such as variable labels, value labels and missing values, several statistical programs (including R, SPSS, SAS and Stata) will export codebooks for your final datasets.</p>
+<p>Like a data dictionary, a codebook also captures variable information, as well as project level information. It should capture all a user would need to know in order to understand and correctly interpret your data. It is typically part of the metadata that is added to a data archive, or is given to those who request your data after the project is complete. It usually takes the form of a plain text file (.txt), pdf (.pdf), or extensible markup language (.xml), rather than a proprietary form such as .docx. If you embed metadata into your data, such as variable labels, value labels and missing values, several statistical programs (including R, SPSS, SAS and Stata) will export codebooks for your final datasets. You can make one large codebook that includes all data for your project, or make separate codebooks by dataset (ex: Teacher level dataset codebook), or even by measure (ex: Student survey codebook).</p>
 <p>📑 Here is a nice example of a <a href="https://ddialliance.org/sites/default/files/06551.pdf">codebook</a>.</p>
 <p>Your codebook should captures things such as:</p>
 <ul>
@@ -591,6 +591,8 @@ div.tocify {
 </ul>
 <p>Other optional content for a codebook:</p>
 <ul>
+<li>Citations for scales used</li>
+<li>Question ordering</li>
 <li>Data collection instruments</li>
 <li>Consent agreements</li>
 <li>Methodological details<br />
@@ -625,7 +627,7 @@ div.tocify {
 </div>
 <div id="metadata" class="section level3">
 <h3>📓 Metadata</h3>
-<p>Metadata is <em>data about data</em>. They are structured data that “provide information about the dataset to help people find, understand, and use your data” (<a href="https://ies.ed.gov/funding/datasharing_faq.asp">IES</a>)“. Most of the time when you hear the term metadata, it will be referring to what I am going to call project-level metadata. Project-level metadata is a type of descriptive metadata that aids in finding your project through internet searches. It is like the”label of the dataset". At minimum the information captured should include who created the data, when the data were created, a title and description of the data, and a unique identifier for the data. This is the type of data we discussed earlier about capturing within the <em>General</em>, <em>File</em>, and <em>Access</em> portion of our README files.</p>
+<p>Metadata is <em>data about data</em>. They are structured data that “provide information about the dataset to help people find, understand, and use your data” (<a href="https://ies.ed.gov/funding/datasharing_faq.asp">IES</a>)“. Most of the time when you hear the term metadata, it will be referring to what I am going to call project-level metadata. Project-level metadata is a type of descriptive metadata that aids in finding your project through internet searches. It is like the”label of the dataset". At minimum the information captured should include who created the data, when the data were created, a title and description of the data, and a unique identifier for the data. This is the type of data we discussed capturing earlier within the <em>General</em>, <em>File</em>, and <em>Access</em> portion of our README files.</p>
 <p>Common elements of project-level metadata include:</p>
 <p><img src="img/metadata.PNG" width="80%" style="display: block; margin: auto;" /> Source: <a href="https://libguides.up.edu/datamanagement/documentation">University of Portland</a></p>
 <p>Metadata can also also be categorized further into data-level and variable-level:</p>
