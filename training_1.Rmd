@@ -325,7 +325,7 @@ Additional metadata information can be found here:
 
 ### 📓 Miscellaneous
 
-Last you should consider documenting **all** your data processes and files to allow for reproducibility. This may fit into one of the above mentioned documents, or it may be a separate text or markdown files (such as a README), a syntax file, or even an excel file. Keep this document in the folder related to the content and name it accordingly. 
+Last you should consider documenting **all** your data processes to allow for reproducibility. This may fit into one of the above mentioned documents, or it may be a separate text or markdown files (such as a README), a syntax file, or even an excel file. Keep this document in the folder related to the content and name it accordingly. 
 Consider tracking things such as:
 
 * File origination information (Ex: `README_district-file-versions.txt`):

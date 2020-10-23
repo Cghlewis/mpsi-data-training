@@ -65,7 +65,7 @@ Additional reading on variable naming:
 :::question
 **Quick thought: Add variable naming to documentation**
 
-While it's great to have a style guide, you will need to have a specific variable naming protocol for each project. And that protocol will need to go into your final documentation so that others know how to understand what your variables mean. 
+At the end of any project, you will need to add project-specific style guide rules to your final documentation (your README or codebook) so that others know how to interpret your variable names. 
 
 *Example: All variable names will be made up of the following 4 components*:  
 1. measure (s=student survey, t=teacher survey, o=teacher observation)  
