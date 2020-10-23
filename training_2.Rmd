@@ -2,6 +2,7 @@
 title: "Training 2: Setting up Data Structures"
 output: 
   html_document:
+    css: "css/custom.css"
     toc: TRUE
     toc_float: TRUE
 ---
@@ -64,10 +65,17 @@ Additional reading on variable naming:
 :::question
 **Quick thought: Add variable naming to documentation**
 
-While it's great to have a style guide, you will need to have a specific variable naming protocol for each project. And that protocol will need to go into your final documentation so that others know how to understand what your variables mean. Example s1_scale_mean.
+While it's great to have a style guide, you will need to have a specific variable naming protocol for each project. And that protocol will need to go into your final documentation so that others know how to understand what your variables mean. 
 
+*Example: All variable names will be made up of the following 4 components*:  
+1. measure (s=student survey, t=teacher survey, o=teacher observation)  
+2. time period (1=fall, 2=winter, 3=spring)  
+3. variable/scale name    
+4. variable/scale #  
+Sample: *s2toca4* = student survey-winter-toca scale-item4
 :::
 
+<br>
 
 ## Value Coding
 
