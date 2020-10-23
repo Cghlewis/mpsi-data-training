@@ -128,9 +128,9 @@ It is also good practice to add a copy of your data collection instruments to yo
 
 ### 📓 Style Guide
 
-A [style guide](https://en.wikipedia.org/wiki/Style_guide) is a set of standards around data management rules. It improves consistency within and across files and projects. This document includes conventions for procedures such as variable naming, value coding, file naming, versioning, and file structure. Consider having a style guide specific to every project (for variable naming, value coding) as well as a general style guide that applies to all projects (for file structure and file naming). This guide can be be kept in any form such as .txt or .pdf and should be housed where it can easily be accessed by all team members (either a wiki or as a README in a relevant project or team folder). See [Training2] for best practices in style guides.
+A [style guide](https://en.wikipedia.org/wiki/Style_guide) is a set of standards around data management rules. It improves consistency within and across files and projects. This document includes conventions for procedures such as variable naming, value coding, file naming, versioning, and file structure. Consider having a style guide specific to every project (for variable naming, value coding) as well as a general style guide that applies to all projects (for file structure and file naming). This guide can be be kept in any form such as .txt or .pdf and should be housed where it can easily be accessed by all team members (Ex: a style guide that applies across projects may be kept on a wiki and a project-specific style guide may be kept as a protocol or README in a project folder). See [Training2] for best practices in style guides.
 
-Example [style guide](https://github.com/bartvandebiezen/file-name-conventions/blob/master/README.md) as a README.
+Example [style guide](https://github.com/bartvandebiezen/file-name-conventions/blob/master/README.md).
 
 <br>
 
@@ -158,16 +158,15 @@ Your dictionary **should** capture information such as:
 * Variable Label  
 * Exact question text  
 * Associated scale (if the item belongs to a scale)
-* Value range or value codes  
+* Value range or value codes ([1-99] or 0=No, 1=Yes)  
 * Measurement unit (numeric, string, date, etc.)  
 * Missing data codes
 * Variable universe (Who gets this question? Is it skipped for some people?) 
 * What time periods/years does this variable exist 
 * Reverse coding
-* Calculations/formulas
+* Calculations (composite variables, scores)
 * Notes (such as versions/changes to this variable)  
-* Summary statistics 
-* Group variables by measure (Student Survey, Teacher Rating of Student, etc.) and consider including the order number of the question on the measure
+* Group variables by measure (Student survey, teacher rating of student, etc.) and consider including the order number of the question on the measure
 
 You may consider having separate data dictionaries per expected final dataset. So for example, if you plan to have a final teacher dataset and a final student dataset, you may want to have a student dictionary and a teacher dictionary rather than having only one data dictionary and marking teacher or student in the universe column.
 
@@ -229,7 +228,8 @@ Your codebook should captures things such as:
   + Variable name  
   + Variable label  
   + Question text  
-  + Coded values (1,2,3,4)  
+  + Measurement unit
+  + Coded values or value range (1,2,3,4)  
   + Value labels (*excellent*, *good*, *fair*, *poor*)  
   + Summary statistics  
   + Missing data values  

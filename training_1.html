@@ -480,8 +480,8 @@ div.tocify {
 </div>
 <div id="style-guide" class="section level3">
 <h3>📓 Style Guide</h3>
-<p>A <a href="https://en.wikipedia.org/wiki/Style_guide">style guide</a> is a set of standards around data management rules. It improves consistency within and across files and projects. This document includes conventions for procedures such as variable naming, value coding, file naming, versioning, and file structure. Consider having a style guide specific to every project (for variable naming, value coding) as well as a general style guide that applies to all projects (for file structure and file naming). This guide can be be kept in any form such as .txt or .pdf and should be housed where it can easily be accessed by all team members (either a wiki or as a README in a relevant project or team folder). See [Training2] for best practices in style guides.</p>
-<p>Example <a href="https://github.com/bartvandebiezen/file-name-conventions/blob/master/README.md">style guide</a> as a README.</p>
+<p>A <a href="https://en.wikipedia.org/wiki/Style_guide">style guide</a> is a set of standards around data management rules. It improves consistency within and across files and projects. This document includes conventions for procedures such as variable naming, value coding, file naming, versioning, and file structure. Consider having a style guide specific to every project (for variable naming, value coding) as well as a general style guide that applies to all projects (for file structure and file naming). This guide can be be kept in any form such as .txt or .pdf and should be housed where it can easily be accessed by all team members (Ex: a style guide that applies across projects may be kept on a wiki and a project-specific style guide may be kept as a protocol or README in a project folder). See [Training2] for best practices in style guides.</p>
+<p>Example <a href="https://github.com/bartvandebiezen/file-name-conventions/blob/master/README.md">style guide</a>.</p>
 <p><br></p>
 </div>
 <div id="wiki" class="section level3">
@@ -505,7 +505,7 @@ div.tocify {
 <li>Exact question text<br />
 </li>
 <li>Associated scale (if the item belongs to a scale)</li>
-<li>Value range or value codes<br />
+<li>Value range or value codes ([1-99] or 0=No, 1=Yes)<br />
 </li>
 <li>Measurement unit (numeric, string, date, etc.)<br />
 </li>
@@ -513,11 +513,10 @@ div.tocify {
 <li>Variable universe (Who gets this question? Is it skipped for some people?)</li>
 <li>What time periods/years does this variable exist</li>
 <li>Reverse coding</li>
-<li>Calculations/formulas</li>
+<li>Calculations (composite variables, scores)</li>
 <li>Notes (such as versions/changes to this variable)<br />
 </li>
-<li>Summary statistics</li>
-<li>Group variables by measure (Student Survey, Teacher Rating of Student, etc.) and consider including the order number of the question on the measure</li>
+<li>Group variables by measure (Student survey, teacher rating of student, etc.) and consider including the order number of the question on the measure</li>
 </ul>
 <p>You may consider having separate data dictionaries per expected final dataset. So for example, if you plan to have a final teacher dataset and a final student dataset, you may want to have a student dictionary and a teacher dictionary rather than having only one data dictionary and marking teacher or student in the universe column.</p>
 <p>As I mentioned earlier, it is important to start a data dictionary <strong>before</strong> ever collecting data. You should be able to begin filling in information for the data you have control over. For example, if you are making and administering the survey, you should be able to know what variables will be in that data, how you want to name them, and how they should be coded. However, you may not know this information for other variables until after data collection. For example, if you are administering a 3rd party assessment, you may not know what the exported data is going to look like until after you have collected the data and it has been scored. Just remember, this is a living document that will updated continually throughout the life of the project.</p>
@@ -585,7 +584,8 @@ div.tocify {
 </li>
 <li>Question text<br />
 </li>
-<li>Coded values (1,2,3,4)<br />
+<li>Measurement unit</li>
+<li>Coded values or value range (1,2,3,4)<br />
 </li>
 <li>Value labels (<em>excellent</em>, <em>good</em>, <em>fair</em>, <em>poor</em>)<br />
 </li>
