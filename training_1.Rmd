@@ -128,7 +128,7 @@ It is also good practice to add a copy of your data collection instruments to yo
 
 ### 📓 Style Guide
 
-A [style guide](https://en.wikipedia.org/wiki/Style_guide) is a set of standards around data management rules and it improves consistency within and across files and projects. This document includes conventions for procedures such as variable naming, value coding, file naming, versioning, and file structure. A style guide can be specific to a project, or a general style guide that applies to all projects. This guide can be be kept in any form such as .txt or .pdf and should be housed where it can easily be accessed by all team members (either a wiki or as a README in a relevant project or team folder). See [Training2] for best practices in style guides.
+A [style guide](https://en.wikipedia.org/wiki/Style_guide) is a set of standards around data management rules. It improves consistency within and across files and projects. This document includes conventions for procedures such as variable naming, value coding, file naming, versioning, and file structure. Consider having a style guide specific to every project (for variable naming, value coding) as well as a general style guide that applies to all projects (for file structure and file naming). This guide can be be kept in any form such as .txt or .pdf and should be housed where it can easily be accessed by all team members (either a wiki or as a README in a relevant project or team folder). See [Training2] for best practices in style guides.
 
 Example [style guide](https://github.com/bartvandebiezen/file-name-conventions/blob/master/README.md) as a README.
 
@@ -194,11 +194,11 @@ It's good to also consider starting to document the variables you aren't collect
       + Ex: *scale_sum*, *scale_mean*, *math_ss* (for scaled score)
     
 :::question
-**Tricky Considerations: Accounting for Time**
+**Quick thought: Accounting for Time**
 
 When deciding how to account for time, consider how you plan to merge your data across time.
 
-   a) Merge wide (each case is one row and all associated time points are in that row), then append time to your variables (prefix or suffix) (Ex: *scale1_t1*, *scale1_t2*) <br>
+   a) Merge wide (each case is one row and all associated time points are in that row), then append time to your variables (prefix or suffix) (Ex: *t1_scale1*, *t2_scale1*) <br>
    b) Merge long (a case occurs in multiple rows for each time period collected), then time can be its own variable (Ex: *time* = 1 or 2)
 
 Additionally, depending on your study design, you may have multiple ways of indicating time (*cohort*, *year*, *time*, etc.). Plan out which of these will be unique variables and which, if any, will be appended to your variables.
@@ -325,28 +325,32 @@ Additional metadata information can be found here:
 
 ### 📓 Miscellaneous
 
-Last you should consider documenting **all** your data processes. This may fit into one of the above mentioned documents, or it may be a separate text or markdown files (such as a README), a syntax file, or even an excel file. Keep this document in the folder related to the content and name it accordingly, Ex:`README_name-of-process.txt`. 
+Last you should consider documenting **all** your data processes and files to allow for reproducibility. This may fit into one of the above mentioned documents, or it may be a separate text or markdown files (such as a README), a syntax file, or even an excel file. Keep this document in the folder related to the content and name it accordingly. 
 Consider tracking things such as:
 
-* File origination information:
+* File origination information (Ex: `README_district-file-versions.txt`):
   * If you use version control, this is easy to track through commit messages or commenting. However, if you do not use software that has version control, consider keeping a document that tracks differences between files.
     + `district-data_2020-10-02.xlsx`: File received from District A containing 2019-20 test scores
-    + `district-data_2020-10-03.xlsx`: File received from District A with 5 additional students added after the `district-data_2020-10-02.xlsx` was received
-    + `district-data_2020-10-04.xlsx`: File received form District A with test scores updated for 30 students because errors were found in `district-data_2020-10-03.xlsx` file
-    
+    + `district-data_2020-10-03.xlsx`: File received from District A with 5 additional students added after `district-data_2020-10-02.xlsx` was received
+    + `district-data_2020-10-04.xlsx`: File received form District A with test scores updated for 30 students because errors were found in `district-data_2020-10-03.xlsx`  
+<br>
+  
+* Data cleaning plan (Ex: `district_data-cleaning-plan.md`)
+
+  * This will be discussed more in later trainings, but a written analysis plan can be helpful to communicate across your team, as a reminder to your future self, and can also be added to your documentation or a technical appendix for a report. This plan can be in a standalone text file, markdown file, or as comments in a syntax file and should include, in *prose*, the steps you plan to take to take your data from raw form to final analysis/clean form. This allows anyone to follow your data cleaning process, even if they don't understand your actual code (ex: R or Stata code)  
+<br>
+  
+* Actual files used in data cleaning process (Ex: `README_district_data-cleaning-process.txt`). 
+  * Data cleaning plan: `district_cleaning-plan.md`
+  * Syntax: `district_cleaning-syntax.R`  
+  * Input: `district-data_raw_2020_09_08.xlsx`  
+  * Output: `district-data_clean_2020_10_09.csv`   
 <br>
 
-* Processes used to clean/create data (inputs and outputs) such as:
-  * Syntax: `cleaning.R`  
-  * Input: `district-data_raw_2020_09_08.xlsx`  
-  * Output: `district-data_clean_2020_10_09.csv`
-
-* Processes to create tables and reports such as:
+* A setup file for steps to create tables and reports (Ex: `00_setup.md`):
   * Step 1: Run the file `01_clean-the-data.R` to clean the data 
   * Step 2: Run the file `02_check-errors.R` to check for errors
-  * Step 3: Run the file `03_report.R` to create the report  
-  
-* Written analysis plan
+  * Step 3: Run the file `03_run-report.R` to create the report  
 
 
 <br>

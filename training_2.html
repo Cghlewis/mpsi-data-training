@@ -379,22 +379,141 @@ div.tocify {
 <p><br></p>
 <p>This training module continues thinking about how to set up systems for a successful project before you ever collect your data. Talk about IRB</p>
 <hr />
+<div id="style-guide" class="section level2">
+<h2>Style Guide</h2>
+<hr />
+<div id="variable-naming" class="section level3">
+<h3>Variable Naming</h3>
+<p>Variable naming protocol should be created early in the project. You will need this protocol in place to start creating your data dictionary.</p>
+<p>There are many best practices and considerations around variable naming.</p>
+<ul>
+<li>Have you used the question/scale before?
+<ul>
+<li>If yes, keep the variable name the same across projects</li>
+<li>If the variable name is <em>star_math_ss</em> in one project, name it the the same in your other projects</li>
+</ul></li>
+<li>Names should be meaningful but concise
+<ul>
+<li>Ex: SPSS cannot handle variable names over 64 characters</li>
+<li>Ex: <em>q1</em> is not a meaningful variable name</li>
+</ul></li>
+<li>If you are using scales in a survey, a typical variable naming convention is <em>AbbreviatedScaleName#</em>
+<ul>
+<li>Ex: <em>scale1</em>, <em>scale2</em>, <em>scale3</em></li>
+</ul></li>
+<li>Be consistent with capitalization across ALL variables
+<ul>
+<li>Ex: using only lowercase, or always capitalize in the same place</li>
+</ul></li>
+<li>Don’t use spaces or special characters (including periods) in variable names</li>
+<li>Be consistent with delimiters (Ex: use camel case or snake case)
+<ul>
+<li>Camel case (<em>ScaleSum</em>)</li>
+<li>Snake case (<em>scale_sum</em>)–preferred method</li>
+</ul></li>
+<li>Make sure all variable names are unique
+<ul>
+<li>If you are collecting the same information in more than one place, how will you differentiate?
+<ul>
+<li>Ex: Student gender collected from student survey vs. student gender collected from district records
+<ul>
+<li>Consider something like <em>s_gender</em> and <em>d_gender</em></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>If the wording or response options for an item substantively change during the project, after you have collected data, make a rule for versioning
+<ul>
+<li>Ex: Add “v#” on revised questions (Ex: revised <em>scale1</em> becomes <em>scale1_v2</em>)</li>
+</ul></li>
+<li>Other considerations
+<ul>
+<li>Some people like to include question ordering in the variable name
+<ul>
+<li>Ex: <em>q1_gender</em>, <em>q2_race</em></li>
+</ul></li>
+<li>Some people like to include an indication of the measure in the variable name
+<ul>
+<li>Ex: s = student self-report and t=teacher rating of student
+<ul>
+<li>Then variables might be <em>s_basc3</em> or <em>t_toca4</em></li>
+</ul></li>
+</ul></li>
+<li>As mentioned earlier, if your data is longitudinal, consider time in your variable naming conventions as well. If you are merging data in a wide format, there are several ways to add time. Just be consistent and make note of your naming conventions in your documentation. Possible conventions:
+<ul>
+<li><em>scale_sum_t1</em> (for time 1–<em>ex: data collection round 1, fall</em>)</li>
+<li><em>t2_scale_sum</em> (for time 2–<em>ex: data collection round 2, winter</em>)</li>
+<li><em>s1_scale_sum</em> (for student survey, time 1)</li>
+<li><em>y1_t1_scale_sum</em> (for year 1–<em>ex: 2018</em>, time 1)
+<ul>
+<li>You may have multiple indicators of time. For example if a cohort or individual is in the study for multiple years, you might have a standalone <em>cohort</em> variable, and then you may add year and time as a prefix to your variables.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Additional reading on variable naming:</p>
+<p>📑 <a href="https://www.poverty-action.org/sites/default/files/publications/IPA-Best-Practices-for-Data-and-Code-Management-Nov-2015.pdf">IPA: Best Practices</a><br />
+📑 <a href="http://adv-r.had.co.nz/Style.html">Advanced R</a><br />
+📑 <a href="http://kbroman.org/dataorg/pages/names.html">Karl Broman</a></p>
+<div class="question">
+<p><strong>Quick thought: Add variable naming to documentation</strong></p>
+<p>While it’s great to have a style guide, you will need to have a specific variable naming protocol for each project. And that protocol will need to go into your final documentation so that others know how to understand what your variables mean. Example s1_scale_mean.</p>
+</div>
+</div>
+</div>
+<div id="value-coding" class="section level2">
+<h2>Value Coding</h2>
+<p>Similar to variable naming, variable value protocol also needs to be documented early on. Here are some conventions to follow:</p>
+<ul>
+<li>Keep values consistent across the project. Examples:
+<ul>
+<li><strong>Do</strong>: Always use 1=yes; 0=no
+<ul>
+<li><strong>Don’t</strong>: For some variables use 2=yes; 1=no, for other variables 1=yes; 0=no</li>
+</ul></li>
+<li><strong>Do</strong>: Always use m=male, f=female, n=non-binary
+<ul>
+<li><strong>Don’t</strong>: Switch between ‘M’, ‘m’, and ‘male’ to denote male</li>
+</ul></li>
+</ul></li>
+<li>Make sure Likert-type scale response option ordering makes sense. Example:
+<ul>
+<li><strong>Do</strong>: Strongly Disagree = 1; Disagree = 2; Agree =3; Strongly Agree = 4
+<ul>
+<li><strong>Don’t</strong>: Strongly Disagree = 1; Strongly Agree = 2; Disagree = 3; Agree = 4</li>
+</ul></li>
+</ul></li>
+<li>Define missing values
+<ul>
+<li>I am personally okay with leaving missing values as NA or NULL</li>
+<li>However, you may care about the reason for missing data and need to consider defining missing values based on their properties</li>
+<li>The key is to use extreme values that do not actually occur in your data and to also not use character values in a numeric field</li>
+</ul></li>
+</ul>
+<p>Example of missing codes used by <a href="https://nces.ed.gov/pubs2015/2015074.pdf">NCES</a>:</p>
+<p><img src="img/missing.PNG" width="80%" style="display: block; margin: auto;" /></p>
+<p>Additional reading on value coding:</p>
+<p>📑 <a href="https://figshare.com/articles/Data_Management_and_Data_Management_Plans/7890827">Jessica Logan, Ph.D.</a><br />
+📑 <a href="https://old.dataone.org/best-practices/define-parameters">Data One</a><br />
+📑 <a href="https://kbroman.org/dataorg/pages/consistency.html">Karl Broman</a></p>
+<hr />
+</div>
 <div id="data-collection" class="section level2">
 <h2>Data Collection</h2>
 <hr />
-<p>When it comes to the intersection of data management and data collection, there is a lot to consider. If at all possible, take some planning time to create data collection instruments and procedures that keep your data secure, valid, and minimize future data cleaning headaches.</p>
+<p>When it comes to the intersection of data management and data collection, there is a lot to consider. If at all possible, take some planning time to create data collection instruments and procedures that keep your data secure, valid, minimize errors, and relieve future data cleaning headaches.</p>
 <div id="electronic-data" class="section level3">
 <h3>Electronic Data</h3>
-<p>Research teams may be restricted in how they collect their data due to limited resources, grant requirements, or even the population being studied. However, if at all possible, I highly recommend collecting data electronically rather than manually. The reasons are:</p>
+<p>Research teams may be restricted in how they collect their data due to limited resources, research design, or even the population being studied. However, if at all possible, I highly recommend collecting data electronically rather than manually. The reasons are:</p>
 <ul>
 <li>Forms are easier to maintain/update</li>
 <li>More efficient than manually entering or manually scoring data (including TeleForm)</li>
-<li>It reduces errors from data entry/scoring</li>
+<li>It reduces errors in both data collection as well as data entry/scoring</li>
+<li>Can reduce missing data</li>
 <li>Quick turnaround of clean data</li>
 <li>Removes the need to physically store paper data</li>
 </ul>
 <p>I will say one downside we have come across is, if your electronic data requires internet connection, this can cause issues when there is either no or poor service in your data collection area.</p>
-<p>Data that can be transferred to electronic includes things such as:</p>
+<p>Data that can be collected using technology includes things such as:</p>
 <ul>
 <li>Electronically collected consents/assents vs paper forms</li>
 <li>Surveys using an online platform or mobile app as opposed to paper</li>
@@ -408,6 +527,9 @@ div.tocify {
 </ul>
 <p>Not all data is better collected digitally verses manually. For instance, using software to translate your interview data rather than transcribing by hand has its pros (efficiency) and cons (mistranslations that need to be fixed). As always, do what makes the most sense for your project and whatever is approved by your Institutional Review Board.</p>
 <p>Last, I don’t want to endorse any particular survey platform or assessment company for data collection. However, when choosing tools to use, you should a) make sure the system meets the needs of your project (ex: the assessment measures what you intend to measure) and b) to ensure security of your data, use software that is vetted and approved by your institution.</p>
+</div>
+<div id="manually-collected-data" class="section level3">
+<h3>Manually collected data</h3>
 <hr />
 </div>
 </div>

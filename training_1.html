@@ -480,7 +480,7 @@ div.tocify {
 </div>
 <div id="style-guide" class="section level3">
 <h3>📓 Style Guide</h3>
-<p>A <a href="https://en.wikipedia.org/wiki/Style_guide">style guide</a> is a set of standards around data management rules and it improves consistency within and across files and projects. This document includes conventions for procedures such as variable naming, value coding, file naming, versioning, and file structure. A style guide can be specific to a project, or a general style guide that applies to all projects. This guide can be be kept in any form such as .txt or .pdf and should be housed where it can easily be accessed by all team members (either a wiki or as a README in a relevant project or team folder). See [Training2] for best practices in style guides.</p>
+<p>A <a href="https://en.wikipedia.org/wiki/Style_guide">style guide</a> is a set of standards around data management rules. It improves consistency within and across files and projects. This document includes conventions for procedures such as variable naming, value coding, file naming, versioning, and file structure. Consider having a style guide specific to every project (for variable naming, value coding) as well as a general style guide that applies to all projects (for file structure and file naming). This guide can be be kept in any form such as .txt or .pdf and should be housed where it can easily be accessed by all team members (either a wiki or as a README in a relevant project or team folder). See [Training2] for best practices in style guides.</p>
 <p>Example <a href="https://github.com/bartvandebiezen/file-name-conventions/blob/master/README.md">style guide</a> as a README.</p>
 <p><br></p>
 </div>
@@ -548,10 +548,10 @@ div.tocify {
 </ul></li>
 </ul>
 <div class="question">
-<p><strong>Tricky Considerations: Accounting for Time</strong></p>
+<p><strong>Quick thought: Accounting for Time</strong></p>
 <p>When deciding how to account for time, consider how you plan to merge your data across time.</p>
 <ol style="list-style-type: lower-alpha">
-<li>Merge wide (each case is one row and all associated time points are in that row), then append time to your variables (prefix or suffix) (Ex: <em>scale1_t1</em>, <em>scale1_t2</em>) <br></li>
+<li>Merge wide (each case is one row and all associated time points are in that row), then append time to your variables (prefix or suffix) (Ex: <em>t1_scale1</em>, <em>t2_scale1</em>) <br></li>
 <li>Merge long (a case occurs in multiple rows for each time period collected), then time can be its own variable (Ex: <em>time</em> = 1 or 2)</li>
 </ol>
 <p>Additionally, depending on your study design, you may have multiple ways of indicating time (<em>cohort</em>, <em>year</em>, <em>time</em>, etc.). Plan out which of these will be unique variables and which, if any, will be appended to your variables.</p>
@@ -668,29 +668,39 @@ div.tocify {
 </div>
 <div id="miscellaneous" class="section level3">
 <h3>📓 Miscellaneous</h3>
-<p>Last you should consider documenting <strong>all</strong> your data processes. This may fit into one of the above mentioned documents, or it may be a separate text or markdown files (such as a README), a syntax file, or even an excel file. Keep this document in the folder related to the content and name it accordingly, Ex:<code>README_name-of-process.txt</code>. Consider tracking things such as:</p>
+<p>Last you should consider documenting <strong>all</strong> your data processes and files to allow for reproducibility. This may fit into one of the above mentioned documents, or it may be a separate text or markdown files (such as a README), a syntax file, or even an excel file. Keep this document in the folder related to the content and name it accordingly. Consider tracking things such as:</p>
 <ul>
-<li>File origination information:
+<li><p>File origination information (Ex: <code>README_district-file-versions.txt</code>):</p>
 <ul>
-<li>If you use version control, this is easy to track through commits or commenting. However, if you do not use software that has version control, consider keeping a document that tracks differences between files.
+<li>If you use version control, this is easy to track through commit messages or commenting. However, if you do not use software that has version control, consider keeping a document that tracks differences between files.
 <ul>
 <li><code>district-data_2020-10-02.xlsx</code>: File received from District A containing 2019-20 test scores</li>
-<li><code>district-data_2020-10-03.xlsx</code>: File received from District A with 5 additional students added after the <code>district-data_2020-10-02.xlsx</code> was received</li>
-<li><code>district-data_2020-10-04.xlsx</code>: File received form District A with test scores updated for 30 students because errors were found in <code>district-data_2020-10-03.xlsx</code> file</li>
+<li><code>district-data_2020-10-03.xlsx</code>: File received from District A with 5 additional students added after <code>district-data_2020-10-02.xlsx</code> was received</li>
+<li><code>district-data_2020-10-04.xlsx</code>: File received form District A with test scores updated for 30 students because errors were found in <code>district-data_2020-10-03.xlsx</code><br />
+<br></li>
 </ul></li>
 </ul></li>
-</ul>
-<p><br> * Processes used to clean/create data (inputs and outputs) such as: * Syntax: <code>cleaning.R</code><br />
-* Input: <code>district-data_raw_2020_09_08.xlsx</code><br />
-* Output: <code>district-data_clean_2020_10_09.csv</code></p>
+<li><p>Data cleaning plan (Ex: <code>district_data-cleaning-plan.md</code>)</p>
 <ul>
-<li>Processes to create tables and reports such as:
+<li>This will be discussed more in later trainings, but a written analysis plan can be helpful to communicate across your team, as a reminder to your future self, and can also be added to your documentation or a technical appendix for a report. This plan can be in a standalone text file, markdown file, or as comments in a syntax file and should include, in <em>prose</em>, the steps you plan to take to take your data from raw form to final analysis/clean form. This allows anyone to follow your data cleaning process, even if they don’t understand your actual code (ex: R or Stata code)<br />
+<br></li>
+</ul></li>
+<li><p>Actual files used in data cleaning process (Ex: <code>README_district_data-cleaning-process.txt</code>).</p>
+<ul>
+<li>Data cleaning plan: <code>district_cleaning-plan.md</code></li>
+<li>Syntax: <code>district_cleaning-syntax.R</code><br />
+</li>
+<li>Input: <code>district-data_raw_2020_09_08.xlsx</code><br />
+</li>
+<li>Output: <code>district-data_clean_2020_10_09.csv</code><br />
+<br></li>
+</ul></li>
+<li><p>A setup file for steps to create tables and reports (Ex: <code>00_setup.md</code>):</p>
 <ul>
 <li>Step 1: Run the file <code>01_clean-the-data.R</code> to clean the data</li>
 <li>Step 2: Run the file <code>02_check-errors.R</code> to check for errors</li>
-<li>Step 3: Run the file <code>03_report.R</code> to create the report</li>
+<li>Step 3: Run the file <code>03_run-report.R</code> to create the report</li>
 </ul></li>
-<li>Written analysis plan</li>
 </ul>
 <p><br></p>
 </div>
