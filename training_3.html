@@ -9,10 +9,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Crystal Lewis" />
 
 
-<title>Training 3: Reproducible Data Cleaning</title>
+<title>Training 3: Style Guide</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -26,6 +25,15 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -72,6 +80,7 @@ h6 {
 }
 </style>
 
+<link rel="stylesheet" href="css/custom.css" type="text/css" />
 
 
 
@@ -360,6 +369,9 @@ div.tocify {
 <li>
   <a href="training_2.html">Training 2</a>
 </li>
+<li>
+  <a href="training_3.html">Training 3</a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -372,31 +384,146 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Training 3: Reproducible Data Cleaning</h1>
-<h4 class="author">Crystal Lewis</h4>
+<h1 class="title toc-ignore">Training 3: Style Guide</h1>
 
 </div>
 
 
-<div id="getting-to-know-r-and-rstudio" class="section level2">
-<h2>Getting to know R and RStudio</h2>
-<p>Something</p>
-<div id="installing-r-and-rstudio" class="section level3">
-<h3>Installing R and Rstudio</h3>
-<p>Something about this</p>
+<p><br></p>
+<p>A style guide is such an integral piece to data management, I am giving it its own section! We will cover best practices for variable naming, value coding, file structures, file naming and versioning.</p>
+<hr />
+<div id="variable-naming" class="section level2">
+<h2>Variable Naming</h2>
+<hr />
+<p>Variable naming protocol should be created early in the project. You will need this protocol in place to start creating your data dictionary.</p>
+<p>There are many best practices and considerations around variable naming.</p>
+<ul>
+<li>Have you used the question/scale before?
+<ul>
+<li>If yes, keep the variable name the same across projects</li>
+<li>If the variable name is <em>star_math_ss</em> in one project, name it the the same in your other projects</li>
+</ul></li>
+<li>Names should be meaningful but concise
+<ul>
+<li>Ex: SPSS cannot handle variable names over 64 characters</li>
+<li>Ex: <em>q1</em> is not a meaningful variable name</li>
+</ul></li>
+<li>If you are using scales in a survey, a typical variable naming convention is <em>AbbreviatedScaleName#</em>
+<ul>
+<li>Ex: <em>scale1</em>, <em>scale2</em>, <em>scale3</em></li>
+</ul></li>
+<li>Be consistent with capitalization across ALL variables
+<ul>
+<li>Ex: using only lowercase, or always capitalize in the same place</li>
+</ul></li>
+<li>Don’t use spaces or special characters (including periods) in variable names</li>
+<li>Be consistent with delimiters (Ex: use camel case or snake case)
+<ul>
+<li>Camel case (<em>ScaleSum</em>)</li>
+<li>Snake case (<em>scale_sum</em>)–preferred method</li>
+</ul></li>
+<li>Make sure all variable names are unique
+<ul>
+<li>If you are collecting the same information in more than one place, how will you differentiate?
+<ul>
+<li>Ex: Student gender collected from student survey vs. student gender collected from district records
+<ul>
+<li>Consider something like <em>s_gender</em> and <em>d_gender</em></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>If the wording or response options for an item substantively change during the project, after you have collected data, make a rule for versioning
+<ul>
+<li>Ex: Add “v#” on revised questions (Ex: revised <em>scale1</em> becomes <em>scale1_v2</em>)</li>
+</ul></li>
+<li>Other considerations
+<ul>
+<li>Some people like to include question ordering in the variable name
+<ul>
+<li>Ex: <em>q1_gender</em>, <em>q2_race</em></li>
+</ul></li>
+<li>Some people like to include an indication of the measure in the variable name
+<ul>
+<li>Ex: s = student self-report and t=teacher rating of student
+<ul>
+<li>Then variables might be <em>s_basc3</em> or <em>t_toca4</em></li>
+</ul></li>
+</ul></li>
+<li>As mentioned earlier, if your data is longitudinal, consider time in your variable naming conventions as well. If you are merging data in a wide format, there are several ways to add time. Just be consistent and make note of your naming conventions in your documentation. Possible conventions:
+<ul>
+<li><em>scale_sum_t1</em> (for time 1–<em>ex: data collection round 1, fall</em>)</li>
+<li><em>t2_scale_sum</em> (for time 2–<em>ex: data collection round 2, winter</em>)</li>
+<li><em>s1_scale_sum</em> (for student survey, time 1)</li>
+<li><em>y1_t1_scale_sum</em> (for year 1–<em>ex: 2018</em>, time 1)
+<ul>
+<li>You may have multiple indicators of time. For example if a cohort or individual is in the study for multiple years, you might have a standalone <em>cohort</em> variable, and then you may add year and time as a prefix to your variables.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Additional reading on variable naming:</p>
+<p>📑 <a href="https://www.poverty-action.org/sites/default/files/publications/IPA-Best-Practices-for-Data-and-Code-Management-Nov-2015.pdf">IPA: Best Practices</a><br />
+📑 <a href="http://adv-r.had.co.nz/Style.html">Advanced R</a><br />
+📑 <a href="http://kbroman.org/dataorg/pages/names.html">Karl Broman</a></p>
+<div class="question">
+<p><strong>Quick thought: Add variable naming to documentation</strong></p>
+<p>At the end of any project, you will need to add style guide rules to your final documentation (your README or codebook) so that others know how to interpret your variable names.</p>
+<p><em>Example: All variable names will be made up of the following 4 components</em>:<br />
+1. measure (s=student survey, t=teacher survey, o=teacher observation)<br />
+2. time period (1=fall, 2=winter, 3=spring)<br />
+3. variable/scale name<br />
+4. variable/scale #<br />
+Sample: <em>s2toca4</em> = student survey-winter-toca scale-item4</p>
 </div>
-<div id="packages-and-libraries" class="section level3">
-<h3>Packages and libraries</h3>
-<p>Something about this</p>
+<p><br></p>
+<hr />
 </div>
+<div id="value-coding" class="section level2">
+<h2>Value Coding</h2>
+<hr />
+<p>Similar to variable naming, variable value protocol also needs to be documented early on. Here are some conventions to follow:</p>
+<ul>
+<li>Keep values consistent across the project. Examples:
+<ul>
+<li><strong>Do</strong>: Always use 1=yes; 0=no
+<ul>
+<li><strong>Don’t</strong>: For some variables use 2=yes; 1=no, for other variables 1=yes; 0=no</li>
+</ul></li>
+<li><strong>Do</strong>: Always use m=male, f=female, n=non-binary
+<ul>
+<li><strong>Don’t</strong>: Switch between ‘M’, ‘m’, and ‘male’ to denote male</li>
+</ul></li>
+</ul></li>
+<li>Make sure Likert-type scale response option ordering makes sense. Example:
+<ul>
+<li><strong>Do</strong>: Strongly Disagree = 1; Disagree = 2; Agree =3; Strongly Agree = 4
+<ul>
+<li><strong>Don’t</strong>: Strongly Disagree = 1; Strongly Agree = 2; Disagree = 3; Agree = 4</li>
+</ul></li>
+</ul></li>
+<li>Define missing values
+<ul>
+<li>I am personally okay with leaving missing values as NA or NULL</li>
+<li>However, you may care about the reason for missing data and need to consider defining missing values based on their properties</li>
+<li>The key is to use extreme values that do not actually occur in your data and to also not use character values in a numeric field</li>
+</ul></li>
+</ul>
+<p>Example of missing codes used by <a href="https://nces.ed.gov/pubs2015/2015074.pdf">NCES</a>:</p>
+<p><img src="img/missing.PNG" width="80%" style="display: block; margin: auto;" /></p>
+<p>Additional reading on value coding:</p>
+<p>📑 <a href="https://figshare.com/articles/Data_Management_and_Data_Management_Plans/7890827">Jessica Logan, Ph.D.</a><br />
+📑 <a href="https://old.dataone.org/best-practices/define-parameters">Data One</a><br />
+📑 <a href="https://kbroman.org/dataorg/pages/consistency.html">Karl Broman</a></p>
+<hr />
 </div>
-<div id="reading-in-data" class="section level2">
-<h2>Reading in data</h2>
-<p>Something about this</p>
+<div id="file-naming" class="section level2">
+<h2>File naming</h2>
+<hr />
+<hr />
 </div>
-<div id="additional-resources-for-learning-intro-r" class="section level2">
-<h2>Additional resources for learning Intro R</h2>
-<p>XXXX</p>
+<div id="directory-structure" class="section level2">
+<h2>Directory Structure</h2>
+<hr />
 </div>
 
 
@@ -410,7 +537,7 @@ div.tocify {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();

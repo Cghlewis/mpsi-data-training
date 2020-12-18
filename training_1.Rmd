@@ -5,6 +5,7 @@ output:
     css: "css/custom.css"
     toc: TRUE
     toc_float: TRUE
+    anchor_sections: FALSE
 ---
 
 <br>
@@ -128,7 +129,7 @@ It is also good practice to add a copy of your data collection instruments to yo
 
 ### 📓 Style Guide
 
-A [style guide](https://en.wikipedia.org/wiki/Style_guide) is a set of standards around data management rules. It improves consistency within and across files and projects. This document includes conventions for procedures such as variable naming, value coding, file naming, versioning, and file structure. Consider having a style guide specific to every project (for variable naming, value coding) as well as a general style guide that applies to all projects (for file structure and file naming). This guide can be be kept in any form such as .txt or .pdf and should be housed where it can easily be accessed by all team members (Ex: a style guide that applies across projects may be kept on a wiki and a project-specific style guide may be kept as a protocol or README in a project folder). See [Training2] for best practices in style guides.
+A [style guide](https://en.wikipedia.org/wiki/Style_guide) is a set of standards around data management rules. It improves consistency within and across files and projects. This document includes conventions for procedures such as variable naming, value coding, file naming, versioning, and file structure. Consider having a style guide specific to every project (for variable naming, value coding) as well as a general style guide that applies to all projects (for file structure, versioning, and file naming). This guide can be be kept in any form such as .txt or .pdf and should be housed where it can easily be accessed by all team members (Ex: a style guide that applies across projects may be kept on a wiki and a project-specific style guide may be kept as a protocol or README in a project folder). See [Training3](https://cghlewis.github.io/mpsi-data-training/training_2.html#Style_Guide) for best practices in style guides.
 
 Example [style guide](https://github.com/bartvandebiezen/file-name-conventions/blob/master/README.md).
 
@@ -151,6 +152,7 @@ Wikis can be made for specific research projects and are great for referring to 
 A data dictionary is another essential data management document and I highly suggest you start this before your ever collect a piece of data. This will help you set up successful back-end coding as you create data collection tools and it will serve as a reference document you can use as questions come up about the data. It is also a document that can be shared with others to help them better understand your data. A data dictionary is usually in rectangular format, for example an excel spreadsheet, google sheet or something similar that has rows and columns. It includes all information relevant to every variable in your data. 
 
   📑 Here is a nice [example](https://media.screensteps.com/image_assets/assets/001/878/671/original/8fbcc565-602f-4ac6-b828-2eaaeb67578b.png) of a very simple data dictionary.
+
   
 Your dictionary **should** capture information such as:
 
@@ -161,15 +163,15 @@ Your dictionary **should** capture information such as:
 * Value range or value codes ([1-99] or 0=No, 1=Yes)  
 * Measurement unit (numeric, string, date, etc.)  
 * Missing data codes
-* Variable universe (Who gets this question? Is it skipped for some people?) 
-* What time periods/years does this variable exist 
+* Variable universe (Who gets this question? Is there skip logic?) 
+* What time periods does this variable exist 
 * Reverse coding
 * Calculations (composite variables, scores)
-* Notes (such as versions/changes to this variable)  
-* Group variables by measure (Student survey, teacher rating of student, etc.) and consider including the order number of the question on the measure
+* Notes (such as versions/changes to this variable)
+* Group variables by measure (Student survey, teacher rating of student, etc.) 
+* Question number (order number of the question on the measure)
 
 You may consider having separate data dictionaries per expected final dataset. So for example, if you plan to have a final teacher dataset and a final student dataset, you may want to have a student dictionary and a teacher dictionary rather than having only one data dictionary and marking teacher or student in the universe column.
-
 
 As I mentioned earlier, it is important to start a data dictionary **before** ever collecting data. You should be able to begin filling in information for the data you have control over. For example, if you are making and administering the survey, you should be able to know what variables will be in that data, how you want to name them, and how they should be coded. However, you may not know this information for other variables until after data collection. For example, if you are administering a 3rd party assessment, you may not know what the exported data is going to look like until after you have collected the data and it has been scored. Just remember, this is a living document that will updated continually throughout the life of the project. 
 
@@ -180,27 +182,29 @@ As I mentioned earlier, it is important to start a data dictionary **before** ev
 * What is your variable naming protocol? (See variable naming)
 * Do your items/scales have pre-determined value coding rules or can we assign our own? What is our value coding protocol? (See value coding)
     
-It's good to also consider starting to document the variables you aren't collecting but you are **assigning** or **calculating**. 
+It's good to also consider starting to document the variables you aren't collecting but you are **assigning** or **deriving**. 
 
 * Variables you are assigning:
     + To maintain anonymity and to track participants and merge data over time, you will be   assigning identifiers. 
-      + Participant ID (Ex: *studentid*)
-      + Location ID (Ex: *schoolid*, *districtid*)
-    + Additionally, if you are collecting longitudinal data, you most likely need to create   variables that indicate time. Consider both the cohort (if applicable) as well as the round of data collection. (Ex: *cohort*, *year*, *time*)   
+      + Participant/Unique ID (*stu_id*, *stu_uid*)
+      + Location/Site ID (*sch_id*, *dist_id*)
+    + Depending on your study design you may also need to account for the following:
+      + Treatment/condition/intervention group (Ex: *int*)
+      + Time/wave (*year*, *time*)
+      + Randomization blocks (*cohort*, *group*)
     
-* Variables you are calculating:
-    + If you are collecting survey, assessment, or observation data, you will likely have composite variables and/or calculated scores in your data. You can start to add these variables and their calculations to your data dictionary.
-      + Ex: *scale_sum*, *scale_mean*, *math_ss* (for scaled score)
+* Variables you derive:
+    + These include things such as composite scores, weights, or continuous variables grouped into categories. You can start to add these variables and their calculations/logic to your data dictionary.
+      + Ex: *scale_mean*, *sch_size_cat*
     
 :::question
 **Quick thought: Accounting for Time**
 
 When deciding how to account for time, consider how you plan to merge your data across time.
 
-   a) Merge wide (each case is one row and all associated time points are in that row), then append time to your variables (prefix or suffix) (Ex: *t1_scale1*, *t2_scale1*) <br>
-   b) Merge long (a case occurs in multiple rows for each time period collected), then time can be its own variable (Ex: *time* = 1 or 2)
-
-Additionally, depending on your study design, you may have multiple ways of indicating time (*cohort*, *year*, *time*, etc.). Plan out which of these will be unique variables and which, if any, will be appended to your variables.
+   a) Merge wide (each row is a unique participant and all associated time points are in that row), then append time to your variables (prefix or suffix)  <br>
+   b) Merge long (a unique participant occurs in multiple rows for each time period collected), then time can be its own variable/s 
+   
 :::
 
 Additional reading on data dictionaries can be found here:
@@ -208,7 +212,8 @@ Additional reading on data dictionaries can be found here:
   📑 [OSF](https://help.osf.io/hc/en-us/articles/360019739054-How-to-Make-a-Data-Dictionary)  
   📑 [USDA](https://data.nal.usda.gov/data-dictionary-purpose)  
   📑 [University of Helsinki](https://www.helsinki.fi/en/research/guide-for-data-documentation#section-72708)  
-  📑 [Karl Broman](http://kbroman.org/dataorg/pages/dictionary.html)
+  📑 [Karl Broman](http://kbroman.org/dataorg/pages/dictionary.html)  
+  📑 [Penn State](https://www.methodology.psu.edu/ra/most/redcap/)
 
 <br>
 
@@ -231,7 +236,7 @@ Your codebook should captures things such as:
   + Measurement unit
   + Coded values or value range (1,2,3,4)  
   + Value labels (*excellent*, *good*, *fair*, *poor*)  
-  + Summary statistics  
+  + Summary statistics 
   + Missing data values  
   + Skip patterns  
   + Notes  
@@ -241,8 +246,7 @@ Your codebook should captures things such as:
 
 Other optional content for a codebook: 
 
-* Citations for scales used
-* Question ordering
+* Citations for scales used and published reliability
 * Data collection instruments 
 * Consent agreements
 * Methodological details  

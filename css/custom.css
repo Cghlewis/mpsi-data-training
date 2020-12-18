@@ -29,7 +29,7 @@ div.toggle {
 
   div.question {
     padding: 1em;
-    margin: 1em 0;
+    */margin: 1em 0; */
     padding-left: 100px;
     background-size: 70px;
     background-repeat: no-repeat;
@@ -42,6 +42,6 @@ div.toggle {
   }
 
 
-div.question {
-  background-image: url("img/question.svg");
-}
+*/div.question { 
+  background-image: url("img/question.svg"); 
+} */

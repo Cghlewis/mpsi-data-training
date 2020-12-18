@@ -20,11 +20,12 @@ While this specific training is for staff and others affiliated with the MPSI, I
 | Training | Date     | Planned Content                                                       |
 |----------|----------|-----------------------------------------------------------------------|
 |1         | 09/25/20 |Documentation                                                          |
-|2         | 11/06/20 |Tracking, data collection, data storage, file structure                |
-|3         | 12/04/20 |Intro to R and RStudio, reading in and reviewing data                  |
-|4         | 12/18/20 |Data wrangling basics                                                  |
-|5         | TBD      |Restructuring, merging, or aggregating data                            |
-|6         | TBD      |Cleaning data start to finish, exporting data                          |
-|7         | TBD      |Advanced topics: TBD                                                   |
+|2         | 01/15/20 |Tracking, data collection, data storage, file structure                |
+|3         | 02/05/21 |Style Guide                                                            |
+|4         | 02/05/21 |Intro to R and RStudio, reading in and reviewing data                  |
+|5         | TBD      |Data wrangling basics                                                  |
+|6         | TBD      |Restructuring, merging, or aggregating data                            |
+|7         | TBD      |Cleaning data start to finish, exporting data                          |
 |8         | TBD      |Advanced topics: TBD                                                   |
-|9         | TBD      |Sharing data upon project completion                                   |
+|9         | TBD      |Advanced topics: TBD                                                   |
+|10        | TBD      |Sharing data upon project completion                                   |

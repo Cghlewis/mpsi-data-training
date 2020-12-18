@@ -26,6 +26,15 @@
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
   pre:not([class]) {
@@ -71,7 +80,7 @@ h6 {
 }
 </style>
 
-<link rel="stylesheet" href="css\custom.css" type="text/css" />
+<link rel="stylesheet" href="css/custom.css" type="text/css" />
 
 
 
@@ -360,6 +369,9 @@ div.tocify {
 <li>
   <a href="training_2.html">Training 2</a>
 </li>
+<li>
+  <a href="training_3.html">Training 3</a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -480,7 +492,7 @@ div.tocify {
 </div>
 <div id="style-guide" class="section level3">
 <h3>📓 Style Guide</h3>
-<p>A <a href="https://en.wikipedia.org/wiki/Style_guide">style guide</a> is a set of standards around data management rules. It improves consistency within and across files and projects. This document includes conventions for procedures such as variable naming, value coding, file naming, versioning, and file structure. Consider having a style guide specific to every project (for variable naming, value coding) as well as a general style guide that applies to all projects (for file structure and file naming). This guide can be be kept in any form such as .txt or .pdf and should be housed where it can easily be accessed by all team members (Ex: a style guide that applies across projects may be kept on a wiki and a project-specific style guide may be kept as a protocol or README in a project folder). See [Training2] for best practices in style guides.</p>
+<p>A <a href="https://en.wikipedia.org/wiki/Style_guide">style guide</a> is a set of standards around data management rules. It improves consistency within and across files and projects. This document includes conventions for procedures such as variable naming, value coding, file naming, versioning, and file structure. Consider having a style guide specific to every project (for variable naming, value coding) as well as a general style guide that applies to all projects (for file structure, versioning, and file naming). This guide can be be kept in any form such as .txt or .pdf and should be housed where it can easily be accessed by all team members (Ex: a style guide that applies across projects may be kept on a wiki and a project-specific style guide may be kept as a protocol or README in a project folder). See <a href="https://cghlewis.github.io/mpsi-data-training/training_2.html#Style_Guide">Training3</a> for best practices in style guides.</p>
 <p>Example <a href="https://github.com/bartvandebiezen/file-name-conventions/blob/master/README.md">style guide</a>.</p>
 <p><br></p>
 </div>
@@ -510,13 +522,13 @@ div.tocify {
 <li>Measurement unit (numeric, string, date, etc.)<br />
 </li>
 <li>Missing data codes</li>
-<li>Variable universe (Who gets this question? Is it skipped for some people?)</li>
-<li>What time periods/years does this variable exist</li>
+<li>Variable universe (Who gets this question? Is there skip logic?)</li>
+<li>What time periods does this variable exist</li>
 <li>Reverse coding</li>
 <li>Calculations (composite variables, scores)</li>
-<li>Notes (such as versions/changes to this variable)<br />
-</li>
-<li>Group variables by measure (Student survey, teacher rating of student, etc.) and consider including the order number of the question on the measure</li>
+<li>Notes (such as versions/changes to this variable)</li>
+<li>Group variables by measure (Student survey, teacher rating of student, etc.)</li>
+<li>Question number (order number of the question on the measure)</li>
 </ul>
 <p>You may consider having separate data dictionaries per expected final dataset. So for example, if you plan to have a final teacher dataset and a final student dataset, you may want to have a student dictionary and a teacher dictionary rather than having only one data dictionary and marking teacher or student in the universe column.</p>
 <p>As I mentioned earlier, it is important to start a data dictionary <strong>before</strong> ever collecting data. You should be able to begin filling in information for the data you have control over. For example, if you are making and administering the survey, you should be able to know what variables will be in that data, how you want to name them, and how they should be coded. However, you may not know this information for other variables until after data collection. For example, if you are administering a 3rd party assessment, you may not know what the exported data is going to look like until after you have collected the data and it has been scored. Just remember, this is a living document that will updated continually throughout the life of the project.</p>
@@ -527,22 +539,27 @@ div.tocify {
 <li>What is your variable naming protocol? (See variable naming)</li>
 <li>Do your items/scales have pre-determined value coding rules or can we assign our own? What is our value coding protocol? (See value coding)</li>
 </ul>
-<p>It’s good to also consider starting to document the variables you aren’t collecting but you are <strong>assigning</strong> or <strong>calculating</strong>.</p>
+<p>It’s good to also consider starting to document the variables you aren’t collecting but you are <strong>assigning</strong> or <strong>deriving</strong>.</p>
 <ul>
 <li>Variables you are assigning:
 <ul>
 <li>To maintain anonymity and to track participants and merge data over time, you will be assigning identifiers.
 <ul>
-<li>Participant ID (Ex: <em>studentid</em>)</li>
-<li>Location ID (Ex: <em>schoolid</em>, <em>districtid</em>)</li>
+<li>Participant/Unique ID (<em>stu_id</em>, <em>stu_uid</em>)</li>
+<li>Location/Site ID (<em>sch_id</em>, <em>dist_id</em>)</li>
 </ul></li>
-<li>Additionally, if you are collecting longitudinal data, you most likely need to create variables that indicate time. Consider both the cohort (if applicable) as well as the round of data collection. (Ex: <em>cohort</em>, <em>year</em>, <em>time</em>)</li>
+<li>Depending on your study design you may also need to account for the following:
+<ul>
+<li>Treatment/condition/intervention group (Ex: <em>int</em>)</li>
+<li>Time/wave (<em>year</em>, <em>time</em>)</li>
+<li>Randomization blocks (<em>cohort</em>, <em>group</em>)</li>
 </ul></li>
-<li>Variables you are calculating:
+</ul></li>
+<li>Variables you derive:
 <ul>
-<li>If you are collecting survey, assessment, or observation data, you will likely have composite variables and/or calculated scores in your data. You can start to add these variables and their calculations to your data dictionary.
+<li>These include things such as composite scores, weights, or continuous variables grouped into categories. You can start to add these variables and their calculations/logic to your data dictionary.
 <ul>
-<li>Ex: <em>scale_sum</em>, <em>scale_mean</em>, <em>math_ss</em> (for scaled score)</li>
+<li>Ex: <em>scale_mean</em>, <em>sch_size_cat</em></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -550,16 +567,16 @@ div.tocify {
 <p><strong>Quick thought: Accounting for Time</strong></p>
 <p>When deciding how to account for time, consider how you plan to merge your data across time.</p>
 <ol style="list-style-type: lower-alpha">
-<li>Merge wide (each case is one row and all associated time points are in that row), then append time to your variables (prefix or suffix) (Ex: <em>t1_scale1</em>, <em>t2_scale1</em>) <br></li>
-<li>Merge long (a case occurs in multiple rows for each time period collected), then time can be its own variable (Ex: <em>time</em> = 1 or 2)</li>
+<li>Merge wide (each row is a unique participant and all associated time points are in that row), then append time to your variables (prefix or suffix) <br></li>
+<li>Merge long (a unique participant occurs in multiple rows for each time period collected), then time can be its own variable/s</li>
 </ol>
-<p>Additionally, depending on your study design, you may have multiple ways of indicating time (<em>cohort</em>, <em>year</em>, <em>time</em>, etc.). Plan out which of these will be unique variables and which, if any, will be appended to your variables.</p>
 </div>
 <p>Additional reading on data dictionaries can be found here:</p>
 <p>📑 <a href="https://help.osf.io/hc/en-us/articles/360019739054-How-to-Make-a-Data-Dictionary">OSF</a><br />
 📑 <a href="https://data.nal.usda.gov/data-dictionary-purpose">USDA</a><br />
 📑 <a href="https://www.helsinki.fi/en/research/guide-for-data-documentation#section-72708">University of Helsinki</a><br />
-📑 <a href="http://kbroman.org/dataorg/pages/dictionary.html">Karl Broman</a></p>
+📑 <a href="http://kbroman.org/dataorg/pages/dictionary.html">Karl Broman</a><br />
+📑 <a href="https://www.methodology.psu.edu/ra/most/redcap/">Penn State</a></p>
 <p><br></p>
 </div>
 <div id="codebook" class="section level3">
@@ -589,8 +606,7 @@ div.tocify {
 </li>
 <li>Value labels (<em>excellent</em>, <em>good</em>, <em>fair</em>, <em>poor</em>)<br />
 </li>
-<li>Summary statistics<br />
-</li>
+<li>Summary statistics</li>
 <li>Missing data values<br />
 </li>
 <li>Skip patterns<br />
@@ -604,8 +620,7 @@ div.tocify {
 </ul>
 <p>Other optional content for a codebook:</p>
 <ul>
-<li>Citations for scales used</li>
-<li>Question ordering</li>
+<li>Citations for scales used and published reliability</li>
 <li>Data collection instruments</li>
 <li>Consent agreements</li>
 <li>Methodological details<br />
@@ -727,7 +742,7 @@ div.tocify {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();

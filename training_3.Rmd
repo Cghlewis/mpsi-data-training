@@ -1,28 +1,128 @@
 ---
-title: "Training 3: Reproducible Data Cleaning"
-author: "Crystal Lewis"
+title: "Training 3: Style Guide"
 output: 
   html_document:
+    css: "css/custom.css"
     toc: TRUE
     toc_float: TRUE
+    anchor_sections: FALSE
 ---
 
-## Getting to know R and RStudio
+<br>
 
-Something
+A style guide is such an integral piece to data management, I am giving it its own section! We will cover best practices for variable naming, value coding, file structures, file naming and versioning.
 
-### Installing R and Rstudio
+---
 
-Something about this
+## Variable Naming
 
-### Packages and libraries
+---
 
-Something about this
+Variable naming protocol should be created early in the project. You will need this protocol in place to start creating your data dictionary. 
 
-## Reading in data
+There are many best practices and considerations around variable naming. 
 
-Something about this
+* Have you used the question/scale before? 
+  + If yes, keep the variable name the same across projects
+  + If the variable name is *star_math_ss* in one project, name it the the same in your other projects
+* Names should be meaningful but concise
+  + Ex: SPSS cannot handle variable names over 64 characters 
+  + Ex: *q1* is not a meaningful variable name
+* If you are using scales in a survey, a typical variable naming convention is *AbbreviatedScaleName#*
+  + Ex: *scale1*, *scale2*, *scale3*
+* Be consistent with capitalization across ALL variables
+  + Ex: using only lowercase, or always capitalize in the same place
+* Don't use spaces or special characters (including periods) in variable names
+* Be consistent with delimiters (Ex: use camel case or snake case)
+  + Camel case (*ScaleSum*)
+  + Snake case (*scale_sum*)--preferred method
+* Make sure all variable names are unique
+  + If you are collecting the same information in more than one place, how will you differentiate?
+    + Ex: Student gender collected from student survey vs. student gender collected from district records
+       + Consider something like *s_gender* and *d_gender*
+* If the wording or response options for an item substantively change during the project, after you have collected data, make a rule for versioning
+  + Ex: Add “v#” on revised questions (Ex: revised *scale1* becomes *scale1_v2*)
+* Other considerations
+  + Some people like to include question ordering in the variable name
+      + Ex: *q1_gender*, *q2_race*
+  + Some people like to include an indication of the measure in the variable name
+      + Ex: s = student self-report and t=teacher rating of student
+        + Then variables might be *s_basc3* or *t_toca4*
+  + As mentioned earlier, if your data is longitudinal, consider time in your variable naming conventions as well. If you are merging data in a wide format, there are several ways to add time. Just be consistent and make note of your naming conventions in your documentation. Possible conventions:
+      + *scale_sum_t1* (for time 1--*ex: data collection round 1, fall*)
+      + *t2_scale_sum* (for time 2--*ex: data collection round 2, winter*)
+      + *s1_scale_sum* (for student survey, time 1)
+      + *y1_t1_scale_sum* (for year 1--*ex: 2018*, time 1)
+        + You may have multiple indicators of time. For example if a cohort or individual is in the study for multiple years, you might have a standalone *cohort* variable, and then you may add year and time as a prefix to your variables.  
 
-## Additional resources for learning Intro R
+Additional reading on variable naming:
 
-XXXX
+  📑 [IPA: Best Practices](https://www.poverty-action.org/sites/default/files/publications/IPA-Best-Practices-for-Data-and-Code-Management-Nov-2015.pdf)  
+  📑 [Advanced R](http://adv-r.had.co.nz/Style.html)  
+  📑 [Karl Broman](http://kbroman.org/dataorg/pages/names.html)  
+  
+:::question
+**Quick thought: Add variable naming to documentation**
+
+At the end of any project, you will need to add style guide rules to your final documentation (your README or codebook) so that others know how to interpret your variable names. 
+
+*Example: All variable names will be made up of the following 4 components*:  
+1. measure (s=student survey, t=teacher survey, o=teacher observation)  
+2. time period (1=fall, 2=winter, 3=spring)  
+3. variable/scale name    
+4. variable/scale #  
+Sample: *s2toca4* = student survey-winter-toca scale-item4
+:::
+
+<br>
+
+---
+
+## Value Coding
+
+---
+
+  
+Similar to variable naming, variable value protocol also needs to be documented early on. Here are some conventions to follow:
+
+* Keep values consistent across the project. Examples:
+  + **Do**: Always use 1=yes; 0=no
+    + **Don't**: For some variables use 2=yes; 1=no, for other variables 1=yes; 0=no
+  + **Do**: Always use m=male, f=female, n=non-binary
+    + **Don't**: Switch between 'M', 'm', and 'male' to denote male
+* Make sure Likert-type scale response option ordering makes sense. Example:
+  + **Do**: Strongly Disagree = 1; Disagree = 2; Agree =3; Strongly Agree = 4
+    + **Don't**: Strongly Disagree = 1; Strongly Agree = 2; Disagree = 3; Agree = 4
+* Define missing values
+  + I am personally okay with leaving missing values as NA or NULL
+  + However, you may care about the reason for missing data and need to consider defining missing values based on their properties
+  + The key is to use extreme values that do not actually occur in your data and to also not use character values in a numeric field
+
+Example of missing codes used by [NCES](https://nces.ed.gov/pubs2015/2015074.pdf):
+
+```{r, echo=FALSE, fig.align="center", out.width='80%'}
+
+knitr::include_graphics("img/missing.png")
+
+```
+
+
+Additional reading on value coding:
+
+  📑 [Jessica Logan, Ph.D.](https://figshare.com/articles/Data_Management_and_Data_Management_Plans/7890827)  
+  📑 [Data One](https://old.dataone.org/best-practices/define-parameters)  
+  📑 [Karl Broman](https://kbroman.org/dataorg/pages/consistency.html)  
+  
+
+---
+
+## File naming
+
+---
+
+
+---
+
+## Directory Structure
+
+---
