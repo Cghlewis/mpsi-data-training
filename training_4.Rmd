@@ -1,5 +1,5 @@
 ---
-title: "Training 3: Reproducible Data Cleaning"
+title: "Training 4: Reproducible Data Cleaning"
 author: "Crystal Lewis"
 output: 
   html_document:
