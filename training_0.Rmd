@@ -4,6 +4,7 @@ output:
   html_document:
     toc: TRUE
     toc_float: TRUE
+    anchor_sections: FALSE
 ---
 
 Before jumping into this training series, I think it is important to get a feel for the role of data management within the larger research team and how a research team functions cohesively. With that in mind, I wanted to briefly cover common research team roles as well as tools that help teams communicate and manage tasks. Sometimes a research team may be lucky enough to have all of these roles, other times, just one person, such as the Principal Investigator, may take on all or multiple of these roles. With that said, if your budget allows it, I highly recommend that PIs hire individuals to fill each of the roles mentioned below. Speaking from experience, having personally filled multiple of these roles on a single project in the past, it is very difficult to excel in any area when one person is coordinating a project, actively collecting data, and also trying to manage the data. The struggle is compounded if staff are on multiple studies occurring simultaneously. I recommend to hire staff with expertise in each of these roles below.
@@ -17,7 +18,7 @@ Before jumping into this training series, I think it is important to get a feel 
 
 ### PI and Co-PI
 
-The Principal Investigator/s or PIs, as well as Co-PIs, are the individuals who prepare and submit the grant proposal and are responsible for the administration of that grant. There are often more than on PI on a project including at least someone with content area knowledge as well as a methodologist. PIs and Co-PIs have varying levels of involvement in research projects and are typically, not always, more hands off in the day to day administration. Even if some tasks are delegated to other research staff, PIs and Co-PIs are ultimately responsible for IRB submissions and for meeting IRB requirements, as well as for submitting MOUs, budgets, effort reporting, continuing review reports, and any final technical finding reports.
+The Principal Investigator/s or PIs, as well as Co-PIs, are the individuals who prepare and submit the grant proposal and are responsible for the administration of that grant. There are often more than on PI on a project including at least someone with content area knowledge as well as a methodologist. PIs and Co-PIs have varying levels of involvement in research projects and are typically, not always, more hands off in the day to day administration. Even if some tasks are delegated to other research staff, PIs and Co-PIs are ultimately responsible for Institutional Review Board (IRB) submissions and for meeting IRB requirements, as well as for submitting MOUs, budgets, effort reporting, continuing review reports, and any final technical finding reports.
 
 Source: [University of Pittsburgh](https://www.irb.pitt.edu/content/chapter-4-roles-and-responsibilities-investigators-and-research-staff) and [University of Massachusetts Amherst](https://www.umass.edu/research/policy/pi-and-co-pi-roles-and-responsibilities)
 
@@ -37,7 +38,7 @@ Although the term may not always be research assistant, I am referring to any st
 
 ### Other roles
 
-Some teams may include additional roles such as postdocs, research associates/fellows, administrative professionals, hourly data collectors, outreach coordinators, coaches, or consultants, all who may assist in the research cycle in other ways. The size of a research team and the roles that exist are all dependent on factors such as funding, the type of research study/the intervention being studied, or the organization of your specific research institution.
+Some teams may include additional roles such as research director, lab manager, postdoc, research associate, administrative professional, hourly data collector, outreach coordinator, or coach, all who may assist in the research cycle in other ways. The size of a research team and the roles that exist are all dependent on factors such as funding, the type of research study/the intervention being studied, or the organization of your specific research institution.
 
 ---
 
@@ -63,19 +64,38 @@ While the data manager role may not be heavily involved in the implementation of
 
 When it comes to project management, there are tools that may help a team assign and track tasks, schedule meetings, or track project timelines. Without endorsing any particular product or software, some project/task management tools that I know education research teams have used include:
 
-* [Trello](https://trello.com/en-US) (list making/task assigning application)
+* [Trello](https://trello.com/en-US) (project management/task assigning application)
 * [Smartsheet](https://www.smartsheet.com/) (task and timeline management)
 * [Doodle](https://doodle.com/en/) (online scheduling tool)
+* [Todoist](https://todoist.com/) (task management tool)
 
-When it comes to communication tools (video and/or instant message functioning), the purpose of these tools can vary. Sometimes you need instant responses (especially when issues arise in the field during data collection), other times you need to have longer planning meetings, other times you may want to keep records of conversations. Different communication tools meet different needs. Again, without endorsing any particular form of communication, tools that teams often use include:
+When it comes to communication tools (email, video, and/or instant message functioning), the purpose of these tools can vary. Sometimes you need instant responses (especially when issues arise in the field during data collection), other times you need to have longer planning meetings, other times you may want to keep records of conversations. Different communication tools meet different needs. Again, without endorsing any particular form of communication, tools that teams often use include:
 
-* Email (best for record keeping and when response is not urgent)
-* Texting (for urgent responses)
-* [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-365/microsoft-teams/group-chat-software) (for quick questions or back and forth exchanges, as well as quick video chats and screensharing)
-* [Zoom](https://zoom.us/) (good for professional, planned meetings via video/audio, screensharing)
-* [GroupMe](https://groupme.com/en-US/) (text messaging for groups, easily accessed on phone)
-* [Slack](https://slack.com/) (instant messaging that also integrates well with many 3rd party services)
-* [Google Hangouts](https://hangouts.google.com/) (messaging platform that integrates with the google suite)
+* Email
+  + Best for record keeping and when response is not urgent  
+* Texting
+  + For urgent responses  
+* [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-365/microsoft-teams/group-chat-software)   
+  + For quick questions or back and forth exchanges, as well as quick video chats and screen sharing.
+  + Allows users to create groups to communicate with.  
+  + Integrates with Microsoft suite including OneDrive for document sharing.
+  + Also integrates well with many 3rd party apps such as Trello, ToDoist, or Zoom.
+* [Zoom](https://zoom.us/)
+  + Good for professional, planned meetings via video/audio, with screen sharing. 
+  + A limited free version is available as well as paid expanded versions.
+* [GroupMe](https://groupme.com/en-US/)
+  + Text messaging for groups, easily accessed as app on phone.
+* [Slack](https://slack.com/)
+  + Instant messaging and file sharing.
+  + Integrates well with many 3rd party services. 
+  + Allows users to create groups to communicate with.
+  + Free version as well as paid versions with increased storage capabilities.
+* [Flock](https://www.flock.com/)
+  + A Slack competitor that I recently heard of on a episode of the [Within & Between podcast](https://podcasts.apple.com/us/podcast/s205-lab-management-and-structure/id1517310439?i=1000502574047).  
+  + Free version as well as paid versions with increased storage capabilities.
+* [Google Hangouts](https://hangouts.google.com/) 
+  + Free messaging platform that integrates with the Google suite, including calls using Google Meet.   
+  + Allows users to create groups to communicate with.
 
 Education Data Chat has a great podcast [episode](https://www.buzzsprout.com/1074286/5427532-episode-6-effective-team-communication-using-modern-day-tools) on methods of communication that I highly recommend.
 

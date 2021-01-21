@@ -10,7 +10,147 @@ output:
 
 <br>
 
-A style guide is such an integral piece to data management, I am giving it its own section! We will cover best practices for variable naming, value coding, file structures, file naming and versioning.
+A style guide is such an integral piece to data management, I am giving it its own section! We will cover best practices for file structures, file naming and versioning, variable naming, and value coding. Whatever rules you put in place, make sure they are written down, stored somewhere that is accessible to the entire team (for example a team wiki or a README) and that all staff are trained to follow the style guide protocols.
+
+
+---
+
+## Directory Structure
+
+As I mentioned in training 2, how you set up your directory structure is based on your preferences. However, it is important to get that structure written out in a style guide so that everyone is following the same rules.
+
+In general though, some useful guidelines for setting up directory structure include:
+
+  + Strike a balance between deep and shallow
+    - Too shallow leads to too many files in one folder, difficult to sort through
+    - Too deep leads to too many clicks to get to one file, plus file paths can max out with too many characters (ex: SharePoint has a path limit of 260 characters)
+  + Create folders that are specific enough that you can limit access (ex: data folder that only houses data and you limit access to it)
+  + Make your folder names meaningful and easy to understand
+  + Make your folder names machine readable
+    - Don't use spaces or punctuation (".") in your folder names
+    - Similar to file names, consider using "_" to separate concepts and "-" to separate words
+  + Be consistent with folder names (ex: use all lower case for example)
+  + Decide if you want an archive folder to move old files into or do you want to leave previous versions in the same folder
+  
+**An example style guide for your directory structure might look like this:**
+
+1. All project directories should be organized in this manner
+  - Level 1: Name of project
+  - Level 2: Life cycle folders
+  - Level 3: Time period/Data collection wave folders (if relevant)
+  - Level 4: Specific content folder
+  - Level 5: Archive folders
+2. All folders should be named according to these rules
+  - Meaningful name but no longer than 20 characters
+  - No spaces or periods in folder names
+  - Only use lower case letters
+  - Use "_" to separate concepts and "-" to separate words
+3. All previous versions of files must be placed into their respective *archive* folder
+  
+
+**Here is an example of a directory structure that would be created based on that style guide:**
+
+```{r, echo=FALSE, comment=NA}
+library(data.tree)
+
+project <- Node$new("project-new")
+  intervention <- project$AddChild("intervention")
+    iY1 <- intervention$AddChild("year-1")
+    coach <- iY1$AddChild("coaching-materials")
+     coachobs <- coach$AddChild("y1_coaching-obs-form_v02.docx")
+     carchive <- coach$AddChild("archive")
+      coachobsarch <- carchive$AddChild("y1_coaching-obs-form_v01.docx")
+  projectmgmt <- project$AddChild("project-mgmt")
+    pY1 <- projectmgmt$AddChild("year-1")
+    sched <- pY1$AddChild("scheduling-materials")
+     sched1 <- sched$AddChild("sept_data-collection-sched_v01.xlsx")
+     scarchive <- sched$AddChild("archive")
+  documentation <- project$AddChild("documentation")
+   datadictionary <- documentation$AddChild("data-dictionary")
+    dictread <- datadictionary$AddChild("README_versioning.txt")
+    dict <- datadictionary$AddChild("project-new_data-dictionary_v05.xlsx")
+    darchive <- datadictionary$AddChild("archive")
+      dict2 <- darchive$AddChild("project-new_data-dictionary_v04.xlsx")
+    codebook <- documentation$AddChild("codebook")
+      coderead <- codebook$AddChild("README_versioning.txt")
+      code <- codebook$AddChild("project-new_codebook_v02.pdf")
+      coarchive <- codebook$AddChild("archive")
+        code2 <- coarchive$AddChild("project-new_codebook_v01.pdf")
+    mY1 <- documentation$AddChild("year-1")
+      student <- mY1$AddChild("student-measures")
+        studread <- student$AddChild("README_versioning.txt")
+        studsurv <- student$AddChild("y1_stud-survey_v01.docx")
+          sarchive <- student$AddChild("archive")
+      teacher <- mY1$AddChild("teacher-measures")
+        tread <- teacher$AddChild("README_versioning.txt")
+        tsurv <- teacher$AddChild("y1_teach-survey_v02.docx")
+          tarchive <- teacher$AddChild("archive")
+          tsurv2 <- tarchive$AddChild("y1_teach-survey_v01.docx")
+  data <- project$AddChild("data")
+    y1 <- data$AddChild("year-1")
+      raw <- y1$AddChild("raw")
+        rawread <- raw$AddChild("README_versioning.txt")
+        ssurveydown <- raw$AddChild("y1_student-survey-download_2020-11-05.csv")
+        rawarchive <- raw$AddChild("archive")
+          ssurveydown2 <- rawarchive$AddChild("y1_student-survey-download_2020-11-01.csv")
+      syntax <- y1$AddChild("syntax")
+        synread <- syntax$AddChild("README_steps.txt")
+        synread2 <- syntax$AddChild("README_versioning.txt")
+        step1 <- syntax$AddChild("01_y1_student-survey-cleaning_v01.R")
+        step2 <- syntax$AddChild("02_y1_student-survey-descriptives_v01.R")
+        syarchive <- syntax$AddChild("archive")
+      clean <- y1$AddChild("clean")
+        cleanread <- clean$AddChild("README_versioning.txt")
+        cleanstud <- clean$AddChild("y1_student-survey-clean_v01.csv")
+        clarchive <- clean$AddChild("archive")
+  track <- project$AddChild("tracking")
+    tY1 <- track$AddChild("year-1")
+      trackingdb <- tY1$AddChild("tracking-database")
+        trackingdb1 <- trackingdb$AddChild("y1_tracking_v01.sqlite")
+        trarchive <- trackingdb$AddChild("archive")
+      consent <- tY1$AddChild("parent-consents")
+        consent2 <- consent$AddChild("y1_parent-consents-compiled_2020-10-14.pdf")
+       conarchive <- consent$AddChild("archive")
+    
+print(project)
+
+```
+
+<br>
+
+:::question
+**Quick thought: Versioning**
+
+Some sort of versioning is absolutely necessary to track changes in your documents throughout the life cycle of your project. If you use software that has versioning (ex: Git, Sharepoint, Box), which I highly recommend, then you do not need to add the versioning README files to your folders or create archive folders. Through versioning software, you can save over previous versions of files, without having to add an extension such as v01, v02. And when you save over previous versions, the software allows you to comment on the changes made from your previous version and at any time, you can view previous versions of the document, review comments from those versions and even retrieve previous versions. If, however, your team does not use versioning software, adding extensions to file names and READMEs to file folders is a viable alternative.
+
+:::
+
+<br>
+
+A few important pieces of information before moving on:
+
+  1. In your *data* folder, **always** include a *raw* data folder. You always want to keep untouched, raw versions of every data file that you collect, receive, or download. You never know if or when you may need to go back to that raw data after you cleaned and manipulated it for analysis.
+  2. Always limit access to any project folder that holds PII information (your tracking folder) as well as your data folder for security purposes. 
+  3. One other thing you can do to protect files that you don't want others to accidentally edit, is *write-protect* them ([Karl Broman](http://kbroman.org/dataorg/pages/backups.html). 
+  To do this on a PC:
+      - Right-click on the file  
+      - Select "Properties"  
+      - In the "General" tab, at the bottom is a section called "Attributes"  
+      - Select the box "Read Only"  
+   4. Last, another school of thought is that you shouldn't use folders at all. For example, SharePoint advocates for the use metadata/tagging to organize and find files rather than using folders. I do not have experience with this so I won't elaborate further. But [here](https://enterprise-knowledge.com/folders-v-metadata-sharepoint-document-libraries/) is a resource if you would like more information.
+
+
+Resources: 
+
+  📑 [Sofware Carpentry](https://www.youtube.com/watch?v=3MEJ38BO6Mo&feature=emb_logo)  
+  📑 [CESSDA](https://www.cessda.eu/Training/Training-Resources/Library/Data-Management-Expert-Guide/2.-Organise-Document/File-naming-and-folder-structure)  
+  📑 [Helsinki University Library](https://zenodo.org/record/1914401#.YAh46ehKhPZ)  
+
+---
+
+## File Naming
+
+
 
 ---
 
@@ -121,8 +261,4 @@ Additional reading on value coding:
 ---
 
 
----
 
-## Directory Structure
-
----

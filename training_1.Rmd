@@ -26,7 +26,7 @@ To increase transparency and to advance scientific inquiry in education research
 ✔️ Type of data to be shared  
 ✔️ Procedures for managing and maintaining confidentiality  
 ✔️ Roles and responsibilities of project staff in the management of research data  
-✔️ Expected schedule for data sharing (no later than the publication of findings and at least for 10 years)  
+✔️ Expected schedule for data sharing (no later than the publication of findings and at least for 10 years) 
 ✔️ Format of the final dataset  
 ✔️ Documentation to be provided  
 ✔️ Method of data sharing (Share the data yourself, use a data archive, combination of both)  
@@ -34,7 +34,9 @@ To increase transparency and to advance scientific inquiry in education research
 ✔️ Any circumstances that prevent any data from being shared  
 ✔️ Most recent rule: A plan for [pre-registering](https://ies.ed.gov/seer/preregistration.asp) your study within the first year of the project  
 
-This training series is not specific only to IES grants. Almost all funders that education researchers may work with require a DMP that also includes a data sharing or archival plan (ex: [NIJ](https://nij.ojp.gov/funding/research-development-and-evaluation-grant-award-requirements#vj8jg) and [NIH](https://grants.nih.gov/grants/policy/data_sharing/data_sharing_guidance.htm#doc)). Furthermore, this training will not cover the details of writing up a DMP but rather how to implement a DMP. We will cover topics such as: How do you document data; How do you track it; How do you manage it; How do you keep it secure; and How do you share it. This specific training module will cover documentation.
+Pre-registration is just one part of the Department of Education's effort an effort to align research with the [SEER](https://ies.ed.gov/seer/index.asp) and [FAIR](https://www.go-fair.org/fair-principles/) data governance principles. 
+
+This training series is not specific only to IES grants. Almost all funders that education researchers may work with require a DMP that also includes a data sharing or archival plan (ex: [NIJ](https://nij.ojp.gov/funding/research-development-and-evaluation-grant-award-requirements#vj8jg), [NSF](https://www.nsf.gov/bfa/dias/policy/dmp.jsp), and [NIH](https://grants.nih.gov/grants/policy/data_sharing/data_sharing_guidance.htm#doc)). Furthermore, this training will not cover the details of writing up a DMP but rather how to implement a DMP. We will cover topics such as: How do you document data; How do you track it; How do you manage it; How do you keep it secure; and How do you share it. This specific training module will cover documentation.
 
 Before we dive in, as IES is the most prolific funder of RCTs in education, if you are someone who will be writing IES DMPs in the future or want to know more about them, here are some excellent resources:
 
@@ -207,6 +209,8 @@ When deciding how to account for time, consider how you plan to merge your data 
    
 :::
 
+<br>
+
 Additional reading on data dictionaries can be found here:
 
   📑 [OSF](https://help.osf.io/hc/en-us/articles/360019739054-How-to-Make-a-Data-Dictionary)  
@@ -324,6 +328,8 @@ Additional metadata information can be found here:
   📑 [London School of Economics and Political Science](https://www.lse.ac.uk/library/research-support/research-data-management/metadata-and-documentation)  
   📑 [Washington University in St. Louis](https://libguides.wustl.edu/c.php?g=47355&p=305263)  
   📑 [Data Management for Researchers](https://pelagicpublishing.com/products/data-management-for-researchers-briney)  
+  📑 [DMP Tool](https://dmptool.org/general_guidance)
+  📑 [CESSDA](https://www.cessda.eu/Training/Training-Resources/Library/Data-Management-Expert-Guide/2.-Organise-Document/Documentation-and-metadata)
 
 <br>
 
@@ -332,7 +338,7 @@ Additional metadata information can be found here:
 Last you should consider documenting **all** your data processes to allow for reproducibility. This may fit into one of the above mentioned documents, or it may be a separate text or markdown files (such as a README), a syntax file, or even an excel file. Keep this document in the folder related to the content and name it accordingly. 
 Consider tracking things such as:
 
-* File origination information (Ex: `README_district-file-versions.txt`):
+* Versioning (Ex: `README_district-file-versions.txt`):
   * If you use version control, this is easy to track through commit messages or commenting. However, if you do not use software that has version control, consider keeping a document that tracks differences between files.
     + `district-data_2020-10-02.xlsx`: File received from District A containing 2019-20 test scores
     + `district-data_2020-10-03.xlsx`: File received from District A with 5 additional students added after `district-data_2020-10-02.xlsx` was received

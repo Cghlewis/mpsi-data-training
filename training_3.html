@@ -390,8 +390,144 @@ div.tocify {
 
 
 <p><br></p>
-<p>A style guide is such an integral piece to data management, I am giving it its own section! We will cover best practices for variable naming, value coding, file structures, file naming and versioning.</p>
+<p>A style guide is such an integral piece to data management, I am giving it its own section! We will cover best practices for file structures, file naming and versioning, variable naming, and value coding. Whatever rules you put in place, make sure they are written down, stored somewhere that is accessible to the entire team (for example a team wiki or a README) and that all staff are trained to follow the style guide protocols.</p>
 <hr />
+<div id="directory-structure" class="section level2">
+<h2>Directory Structure</h2>
+<p>As I mentioned in training 2, how you set up your directory structure is based on your preferences. However, it is important to get that structure written out in a style guide so that everyone is following the same rules.</p>
+<p>In general though, some useful guidelines for setting up directory structure include:</p>
+<ul>
+<li>Strike a balance between deep and shallow
+<ul>
+<li>Too shallow leads to too many files in one folder, difficult to sort through</li>
+<li>Too deep leads to too many clicks to get to one file, plus file paths can max out with too many characters (ex: SharePoint has a path limit of 260 characters)</li>
+</ul></li>
+<li>Create folders that are specific enough that you can limit access (ex: data folder that only houses data and you limit access to it)</li>
+<li>Make your folder names meaningful and easy to understand</li>
+<li>Make your folder names machine readable
+<ul>
+<li>Don’t use spaces or punctuation (“.”) in your folder names</li>
+<li>Similar to file names, consider using "_" to separate concepts and “-” to separate words</li>
+</ul></li>
+<li>Be consistent with folder names (ex: use all lower case for example)</li>
+<li>Decide if you want an archive folder to move old files into or do you want to leave previous versions in the same folder</li>
+</ul>
+<p><strong>An example style guide for your directory structure might look like this:</strong></p>
+<ol style="list-style-type: decimal">
+<li>All project directories should be organized in this manner</li>
+</ol>
+<ul>
+<li>Level 1: Name of project</li>
+<li>Level 2: Life cycle folders</li>
+<li>Level 3: Time period/Data collection wave folders (if relevant)</li>
+<li>Level 4: Specific content folder</li>
+<li>Level 5: Archive folders</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>All folders should be named according to these rules</li>
+</ol>
+<ul>
+<li>Meaningful name but no longer than 20 characters</li>
+<li>No spaces or periods in folder names</li>
+<li>Only use lower case letters</li>
+<li>Use "_" to separate concepts and “-” to separate words</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>All previous versions of files must be placed into their respective <em>archive</em> folder</li>
+</ol>
+<p><strong>Here is an example of a directory structure that would be created based on that style guide:</strong></p>
+<pre><code>                                                       levelName
+1  project-new                                                  
+2   ¦--intervention                                             
+3   ¦   °--year-1                                               
+4   ¦       °--coaching-materials                               
+5   ¦           ¦--y1_coaching-obs-form_v02.docx                
+6   ¦           °--archive                                      
+7   ¦               °--y1_coaching-obs-form_v01.docx            
+8   ¦--project-mgmt                                             
+9   ¦   °--year-1                                               
+10  ¦       °--scheduling-materials                             
+11  ¦           ¦--sept_data-collection-sched_v01.xlsx          
+12  ¦           °--archive                                      
+13  ¦--documentation                                            
+14  ¦   ¦--data-dictionary                                      
+15  ¦   ¦   ¦--README_versioning.txt                            
+16  ¦   ¦   ¦--project-new_data-dictionary_v05.xlsx             
+17  ¦   ¦   °--archive                                          
+18  ¦   ¦       °--project-new_data-dictionary_v04.xlsx         
+19  ¦   ¦--codebook                                             
+20  ¦   ¦   ¦--README_versioning.txt                            
+21  ¦   ¦   ¦--project-new_codebook_v02.pdf                     
+22  ¦   ¦   °--archive                                          
+23  ¦   ¦       °--project-new_codebook_v01.pdf                 
+24  ¦   °--year-1                                               
+25  ¦       ¦--student-measures                                 
+26  ¦       ¦   ¦--README_versioning.txt                        
+27  ¦       ¦   ¦--y1_stud-survey_v01.docx                      
+28  ¦       ¦   °--archive                                      
+29  ¦       °--teacher-measures                                 
+30  ¦           ¦--README_versioning.txt                        
+31  ¦           ¦--y1_teach-survey_v02.docx                     
+32  ¦           °--archive                                      
+33  ¦               °--y1_teach-survey_v01.docx                 
+34  ¦--data                                                     
+35  ¦   °--year-1                                               
+36  ¦       ¦--raw                                              
+37  ¦       ¦   ¦--README_versioning.txt                        
+38  ¦       ¦   ¦--y1_student-survey-download_2020-11-05.csv    
+39  ¦       ¦   °--archive                                      
+40  ¦       ¦       °--y1_student-survey-download_2020-11-01.csv
+41  ¦       ¦--syntax                                           
+42  ¦       ¦   ¦--README_steps.txt                             
+43  ¦       ¦   ¦--README_versioning.txt                        
+44  ¦       ¦   ¦--01_y1_student-survey-cleaning_v01.R          
+45  ¦       ¦   ¦--02_y1_student-survey-descriptives_v01.R      
+46  ¦       ¦   °--archive                                      
+47  ¦       °--clean                                            
+48  ¦           ¦--README_versioning.txt                        
+49  ¦           ¦--y1_student-survey-clean_v01.csv              
+50  ¦           °--archive                                      
+51  °--tracking                                                 
+52      °--year-1                                               
+53          ¦--tracking-database                                
+54          ¦   ¦--y1_tracking_v01.sqlite                       
+55          ¦   °--archive                                      
+56          °--parent-consents                                  
+57              ¦--y1_parent-consents-compiled_2020-10-14.pdf   
+58              °--archive                                      </code></pre>
+<p><br></p>
+<div class="question">
+<p><strong>Quick thought: Versioning</strong></p>
+<p>Some sort of versioning is absolutely necessary to track changes in your documents throughout the life cycle of your project. If you use software that has versioning (ex: Git, Sharepoint, Box), which I highly recommend, then you do not need to add the versioning README files to your folders or create archive folders. Through versioning software, you can save over previous versions of files, without having to add an extension such as v01, v02. And when you save over previous versions, the software allows you to comment on the changes made from your previous version and at any time, you can view previous versions of the document, review comments from those versions and even retrieve previous versions. If, however, your team does not use versioning software, adding extensions to file names and READMEs to file folders is a viable alternative.</p>
+</div>
+<p><br></p>
+<p>A few important pieces of information before moving on:</p>
+<ol style="list-style-type: decimal">
+<li>In your <em>data</em> folder, <strong>always</strong> include a <em>raw</em> data folder. You always want to keep untouched, raw versions of every data file that you collect, receive, or download. You never know if or when you may need to go back to that raw data after you cleaned and manipulated it for analysis.</li>
+<li>Always limit access to any project folder that holds PII information (your tracking folder) as well as your data folder for security purposes.</li>
+<li>One other thing you can do to protect files that you don’t want others to accidentally edit, is <em>write-protect</em> them (<a href="http://kbroman.org/dataorg/pages/backups.html">Karl Broman</a>. To do this on a PC:
+<ul>
+<li>Right-click on the file<br />
+</li>
+<li>Select “Properties”<br />
+</li>
+<li>In the “General” tab, at the bottom is a section called “Attributes”<br />
+</li>
+<li>Select the box “Read Only”<br />
+</li>
+</ul></li>
+<li>Last, another school of thought is that you shouldn’t use folders at all. For example, SharePoint advocates for the use metadata/tagging to organize and find files rather than using folders. I do not have experience with this so I won’t elaborate further. But <a href="https://enterprise-knowledge.com/folders-v-metadata-sharepoint-document-libraries/">here</a> is a resource if you would like more information.</li>
+</ol>
+<p>Resources:</p>
+<p>📑 <a href="https://www.youtube.com/watch?v=3MEJ38BO6Mo&amp;feature=emb_logo">Sofware Carpentry</a><br />
+📑 <a href="https://www.cessda.eu/Training/Training-Resources/Library/Data-Management-Expert-Guide/2.-Organise-Document/File-naming-and-folder-structure">CESSDA</a><br />
+📑 <a href="https://zenodo.org/record/1914401#.YAh46ehKhPZ">Helsinki University Library</a></p>
+<hr />
+</div>
+<div id="file-naming" class="section level2">
+<h2>File Naming</h2>
+<hr />
+</div>
 <div id="variable-naming" class="section level2">
 <h2>Variable Naming</h2>
 <hr />
@@ -516,13 +652,8 @@ Sample: <em>s2toca4</em> = student survey-winter-toca scale-item4</p>
 📑 <a href="https://kbroman.org/dataorg/pages/consistency.html">Karl Broman</a></p>
 <hr />
 </div>
-<div id="file-naming" class="section level2">
+<div id="file-naming-1" class="section level2">
 <h2>File naming</h2>
-<hr />
-<hr />
-</div>
-<div id="directory-structure" class="section level2">
-<h2>Directory Structure</h2>
 <hr />
 </div>
 
