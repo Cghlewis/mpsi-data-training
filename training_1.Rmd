@@ -26,7 +26,7 @@ To increase transparency and to advance scientific inquiry in education research
 ✔️ Type of data to be shared  
 ✔️ Procedures for managing and maintaining confidentiality  
 ✔️ Roles and responsibilities of project staff in the management of research data  
-✔️ Expected schedule for data sharing (no later than the publication of findings and at least for 10 years) 
+✔️ Expected schedule for data sharing (no later than the publication of findings and at least for 10 years)  
 ✔️ Format of the final dataset  
 ✔️ Documentation to be provided  
 ✔️ Method of data sharing (Share the data yourself, use a data archive, combination of both)  
@@ -43,7 +43,7 @@ Before we dive in, as IES is the most prolific funder of RCTs in education, if y
   📑 [University of Virginia IES DMP   template](https://data.library.virginia.edu/files/IES-Data-Management-Plan-Template-2018.docx)  
   📑 [IES DMP tool](https://dmptool.org/template_export/1895.pdf)  
   📑 [IES most recent Request for Applications](https://ies.ed.gov/funding/pdf/2021_84305A.pdf)  
-  [Foundational Practices of Research Data Management](https://riojournal.com/article/56508/instance/5569679/)
+  📑 [Foundational Practices of Research Data Management](https://riojournal.com/article/56508/instance/5569679/)
 
 ---
 
@@ -88,7 +88,7 @@ Additional reading on the importance of data documentation can be found here:
 
 <br>
 
-### 📓 Protocol
+### Protocol
 
 A document/s to record all your procedures changes made to those procedures throughout the grant.
 
@@ -116,7 +116,7 @@ Each protocol should *begin* with the following:
 * Any rationale behind the protocol
 * Any related documents or research behind the protocol
 
-For any *changes* to the protocol after the project has begun, add the following below the original protocol   section: 
+For any *changes* to the protocol after the project has begun, add the following below the original protocol section: 
 
 * Revision Date  
 * Who decided on the revision  
@@ -129,15 +129,15 @@ It is also good practice to add a copy of your data collection instruments to yo
 
 <br>
 
-### 📓 Style Guide
+### Style Guide
 
-A [style guide](https://en.wikipedia.org/wiki/Style_guide) is a set of standards around data management rules. It improves consistency within and across files and projects. This document includes conventions for procedures such as variable naming, value coding, file naming, versioning, and file structure. Consider having a style guide specific to every project (for variable naming, value coding) as well as a general style guide that applies to all projects (for file structure, versioning, and file naming). This guide can be be kept in any form such as .txt or .pdf and should be housed where it can easily be accessed by all team members (Ex: a style guide that applies across projects may be kept on a wiki and a project-specific style guide may be kept as a protocol or README in a project folder). See [Training3](https://cghlewis.github.io/mpsi-data-training/training_2.html#Style_Guide) for best practices in style guides.
+A [style guide](https://en.wikipedia.org/wiki/Style_guide) is a set of standards around data management rules. It improves consistency within and across files and projects. This document includes conventions for procedures such as variable naming, value coding, file naming, versioning, and file structure. Consider having a style guide specific to every project (for variable naming, value coding) as well as a general style guide that applies to all projects (for file structure, versioning, and file naming). This guide can be be kept in any form such as .txt or .pdf and should be housed where it can easily be accessed by all team members (Ex: a style guide that applies across projects may be kept on a wiki and a project-specific style guide may be kept as a protocol or README in a project folder). See [Training3](https://cghlewis.github.io/mpsi-data-training/training_3.html) for best practices in style guides.
 
 Example [style guide](https://github.com/bartvandebiezen/file-name-conventions/blob/master/README.md).
 
 <br>
 
-### 📓 Wiki
+### Wiki
 
 I am including a wiki in this list even though I think it is an unconventional documentation tool in education research. A wiki can help your team internally document, organize, and navigate reference material. If you use platforms such as Microsoft SharePoint, a wiki can be a great place to store information that your team frequently refers to. SharePoint describes a wiki as "a site that is designed for groups of people to quickly capture and share ideas by creating simple pages and linking them together." It is a page that anyone on your team can add/edit content (a short blurb about the document) and then can link to those referenced documents for easy access. 
 
@@ -149,7 +149,7 @@ Wikis can be made for specific research projects and are great for referring to 
 
 <br>
 
-### 📓 Data Dictionary
+### Data Dictionary
 
 A data dictionary is another essential data management document and I highly suggest you start this before your ever collect a piece of data. This will help you set up successful back-end coding as you create data collection tools and it will serve as a reference document you can use as questions come up about the data. It is also a document that can be shared with others to help them better understand your data. A data dictionary is usually in rectangular format, for example an excel spreadsheet, google sheet or something similar that has rows and columns. It includes all information relevant to every variable in your data. 
 
@@ -221,7 +221,7 @@ Additional reading on data dictionaries can be found here:
 
 <br>
 
-### 📓 Codebook
+### Codebook
 
 Like a data dictionary, a codebook also captures variable information, as well as project level information. It should capture all a user would need to know in order to understand and correctly interpret your data. It is typically part of the metadata that is added to a data archive, or is given to those who request your data after the project is complete. It usually takes the form of a plain text file (.txt), pdf (.pdf), or extensible markup language (.xml), rather than a proprietary form such as .docx. If you embed metadata into your data, such as variable labels, value labels and missing values, several statistical programs (including R, SPSS, SAS and Stata) will export codebooks for your final datasets. You can make one large codebook that includes all data for your project, or make separate codebooks by dataset (ex: Teacher level dataset codebook), or even by measure (ex: Student survey codebook). 
 
@@ -267,7 +267,7 @@ Further information on codebooks can be found here:
 
 <br>
 
-### 📓 README
+### README
 
 A README is a plain text (.txt), markdown (.md), pdf (.pdf), or extensible markup language (.xml), standalone file that explains your files. README files are most known for their use in programming, but have become more prevalent in research. It is recommended to make one README file per dataset. This standalone document will accompany each dataset. It should be named so it is easily associated with the dataset and it should be housed in the same folder the data is in. 
 
@@ -292,7 +292,7 @@ Excellent examples, templates, and further details can be found here:
 
 <br>
 
-### 📓 Metadata
+### Metadata
 
 Metadata is *data about data*. They are structured data that "provide information about the dataset to help people find, understand, and use your data" ([IES](https://ies.ed.gov/funding/datasharing_faq.asp)). Most of the time when you hear the term metadata, it will be referring to what I am going to call project-level metadata. Project-level metadata is a type of descriptive metadata that aids in finding your project through internet searches. It is like the "label of the dataset". At minimum the information captured should include who created the data, when the data were created, a title and description of the data, and a unique identifier for the data. This is the type of data we discussed capturing earlier within the *General*, *File*, and *Access* portion of our README files. 
 
@@ -328,12 +328,12 @@ Additional metadata information can be found here:
   📑 [London School of Economics and Political Science](https://www.lse.ac.uk/library/research-support/research-data-management/metadata-and-documentation)  
   📑 [Washington University in St. Louis](https://libguides.wustl.edu/c.php?g=47355&p=305263)  
   📑 [Data Management for Researchers](https://pelagicpublishing.com/products/data-management-for-researchers-briney)  
-  📑 [DMP Tool](https://dmptool.org/general_guidance)
+  📑 [DMP Tool](https://dmptool.org/general_guidance)  
   📑 [CESSDA](https://www.cessda.eu/Training/Training-Resources/Library/Data-Management-Expert-Guide/2.-Organise-Document/Documentation-and-metadata)
 
 <br>
 
-### 📓 Miscellaneous
+### Miscellaneous
 
 Last you should consider documenting **all** your data processes to allow for reproducibility. This may fit into one of the above mentioned documents, or it may be a separate text or markdown files (such as a README), a syntax file, or even an excel file. Keep this document in the folder related to the content and name it accordingly. 
 Consider tracking things such as:
@@ -365,7 +365,7 @@ Consider tracking things such as:
 
 <br>
   
-### 📓  Conclusion
+### Conclusion
 
 The main takeaway is that it is important to document everything. Not only is it required by funders and by data repositories, as well as necessary for those submitting data requests, but it is crucial to the integrity and reproducibility of your project. While you should try to standardize your documentation as much as possible, don't get stuck in the details of the format or the structure. Instead focus on getting the content, rules, and procedures down before you forget.
 
@@ -374,4 +374,4 @@ Although, *publishing data* will come in a later module, I did want to wrap up b
 * README file (for each dataset) - including the project-level metadata
 * Data dictionaries and/or codebooks
 
-📑 If you want to see an amazingly thorough (and very long) example of data documentation, explore the [Early Childhood Longitudinal Study, Kindergarten Class of 2010-11 User's Manual](https://nces.ed.gov/pubs2015/2015074.pdf) from IES.
+  📑 If you want to see an amazingly thorough (and very long) example of data documentation, explore the [Early Childhood Longitudinal Study, Kindergarten Class of 2010-11 User's Manual](https://nces.ed.gov/pubs2015/2015074.pdf) from IES.

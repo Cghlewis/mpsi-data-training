@@ -406,33 +406,38 @@ div.tocify {
 <li>Make your folder names meaningful and easy to understand</li>
 <li>Make your folder names machine readable
 <ul>
-<li>Don’t use spaces or punctuation (“.”) in your folder names</li>
-<li>Similar to file names, consider using "_" to separate concepts and “-” to separate words</li>
+<li>Don’t use spaces or punctuation (<em>.</em>) in your folder names</li>
+<li>Similar to file names, consider using *_* to separate metadata pieces and <em>-</em> to separate words within the same piece of metadata</li>
 </ul></li>
 <li>Be consistent with folder names (ex: use all lower case for example)</li>
 <li>Decide if you want an archive folder to move old files into or do you want to leave previous versions in the same folder</li>
 </ul>
 <p><strong>An example style guide for your directory structure might look like this:</strong></p>
 <ol style="list-style-type: decimal">
-<li>All project directories should be organized in this manner</li>
-</ol>
+<li>All project directories should be organized in this manner
 <ul>
-<li>Level 1: Name of project</li>
-<li>Level 2: Life cycle folders</li>
-<li>Level 3: Time period/Data collection wave folders (if relevant)</li>
-<li>Level 4: Specific content folder</li>
-<li>Level 5: Archive folders</li>
-</ul>
-<ol start="2" style="list-style-type: decimal">
-<li>All folders should be named according to these rules</li>
-</ol>
+<li>Level 1: Name of project<br />
+</li>
+<li>Level 2: Life cycle folders<br />
+</li>
+<li>Level 3: Time period/Data collection wave folders (if relevant)<br />
+</li>
+<li>Level 4: Specific content folder<br />
+</li>
+<li>Level 5: Archive folders<br />
+</li>
+</ul></li>
+<li>All folders should be named according to these rules
 <ul>
-<li>Meaningful name but no longer than 20 characters</li>
-<li>No spaces or periods in folder names</li>
-<li>Only use lower case letters</li>
-<li>Use "_" to separate concepts and “-” to separate words</li>
-</ul>
-<ol start="3" style="list-style-type: decimal">
+<li>Meaningful name but no longer than 20 characters<br />
+</li>
+<li>No spaces or periods in folder names<br />
+</li>
+<li>Only use lower case letters<br />
+</li>
+<li>Use "_" to separate concepts and “-” to separate words<br />
+</li>
+</ul></li>
 <li>All previous versions of files must be placed into their respective <em>archive</em> folder</li>
 </ol>
 <p><strong>Here is an example of a directory structure that would be created based on that style guide:</strong></p>
@@ -498,7 +503,7 @@ div.tocify {
 <p><br></p>
 <div class="question">
 <p><strong>Quick thought: Versioning</strong></p>
-<p>Some sort of versioning is absolutely necessary to track changes in your documents throughout the life cycle of your project. If you use software that has versioning (ex: Git, Sharepoint, Box), which I highly recommend, then you do not need to add the versioning README files to your folders or create archive folders. Through versioning software, you can save over previous versions of files, without having to add an extension such as v01, v02. And when you save over previous versions, the software allows you to comment on the changes made from your previous version and at any time, you can view previous versions of the document, review comments from those versions and even retrieve previous versions. If, however, your team does not use versioning software, adding extensions to file names and READMEs to file folders is a viable alternative.</p>
+<p>Some sort of versioning is absolutely necessary to track changes in your documents throughout the life cycle of your project. If you use software that has versioning (ex: Git, Sharepoint, Box), which I highly recommend, then you do not need to add the versioning README files to your folders or create archive folders. Through versioning software, you can save over previous versions of files, without having to add an extension such as v01, v02. And when you save over previous versions, the software tracks the date, allows you to comment on the changes made from your previous version, and at any time, you can view previous versions of the document, review comments from those versions and even retrieve previous versions. If, however, your team does not use versioning software, adding extensions to file names and READMEs to file folders is a viable alternative.</p>
 </div>
 <p><br></p>
 <p>A few important pieces of information before moving on:</p>
@@ -526,6 +531,84 @@ div.tocify {
 </div>
 <div id="file-naming" class="section level2">
 <h2>File Naming</h2>
+<p>If you are like me, or most of humanity, you are guilty of giving files names like <code>research report final.docx</code> and <code>research report final-2.docx</code> and <code>research report-2-dan edits.docx</code>. It happens, but as you can see this can makes it very confusing to know any details about what these documents are? What is this research report on? What is the actual final version? When were the edits made on these documents? What are the differences between these documents?</p>
+<p>This is why a file naming style guide is so important. It sets the protocol for you and your entire team to use streamlined, descriptive, organized and ultimately human <strong>and</strong> machine-readable file names to remove any future confusion.</p>
+<p>General file naming conventions to follow include:</p>
+<ul>
+<li>Never use spaces between words. They can often break a URL when shared.</li>
+<li>Never use special characters. They can have meanings with programming languages and can cause problems.</li>
+<li>Never use periods. Again it can cause issues when using programming languages that look for the <code>.</code> before file extension</li>
+<li>Use <code>-</code> between similar elements and <code>_</code> between separate elements. This not only helps to make the name human readable but also allows your computer to read and search files easier.</li>
+<li>Choose to either only use lower case letters, or be specific where to use capital letters (ex: at the start of every new word)</li>
+<li>Make names descriptive (a user should be able to understand the contents of the file without opening it)</li>
+<li>Consider limiting the number of characters to prevent hitting your path limit</li>
+<li>Pick a certain order for file name metadata to follow and stick to it. Ex:
+<ul>
+<li>Order of use (if relevant–and always add a 0 before single digits)</li>
+<li>Project</li>
+<li>Time period (if relevant)</li>
+<li>Participant</li>
+<li>Measure</li>
+<li>Further description</li>
+<li>Version or Date</li>
+</ul></li>
+<li>Do not use  in dates. Format dates in one of two ways (pick one and add it to the style guide):
+<ul>
+<li>YYYY-MM-DD</li>
+<li>YYYYMMDD</li>
+</ul></li>
+<li>When adding versions, pick a format and add it to your style guide. Consider adding a 0 before single digit numbers to keep the file name the same length as it grows. Ex:
+<ul>
+<li>V01</li>
+<li>V02</li>
+</ul></li>
+<li>If your files need to be run in a sequential order, add the order number to the beginning of the file name, with leading zeros to ensure proper sorting</li>
+<li>Choose abbreviations to use for common names/phrases and add them to your style guide</li>
+</ul>
+<p>Example file naming style guide:</p>
+<ol style="list-style-type: decimal">
+<li>Never use spaces between words.</li>
+<li>Never use special characters.</li>
+<li>Never use periods.</li>
+<li>Use <code>-</code> between similar elements and <code>_</code> between separate elements</li>
+<li>Use the following metadata file naming order:
+<ul>
+<li>Order of use (if relevant–and always add a 0 before single digits)</li>
+<li>Project</li>
+<li>Time period (if relevant)</li>
+<li>Participant</li>
+<li>Measure</li>
+<li>Further description</li>
+<li>Date (always add)</li>
+<li>Version (if necessary)</li>
+</ul></li>
+<li>Format dates as YYYY-MM-DD</li>
+<li>If there are multiple versions of a document on the same date, version using v# with a leading 0.</li>
+<li>Only use lower case letters</li>
+<li>Keep names under 45 characters</li>
+<li>Choose abbreviations to use for common names/phrases and add them to your style guide</li>
+</ol>
+<ul>
+<li>Project A Year 1 (2018-19) = y1</li>
+<li>Project A = pa</li>
+<li>student = s</li>
+<li>teacher = t</li>
+<li>survey = svy</li>
+</ul>
+<ol start="7" style="list-style-type: decimal">
+<li>Examples of this format:
+<ul>
+<li><code>01_pa_y1_s_svy_cleaning-syntax_2021-01-22.R</code></li>
+<li><code>02_pa_y1_s_svy_cleaning-syntax_2021-01-21v01.R</code></li>
+<li><code>pa_s_svy_protocol_2020-10-01.docx</code></li>
+<li><code>pa_y1_t_svy_data_raw_2020-08-03.csv</code></li>
+</ul></li>
+</ol>
+<p>Resources:</p>
+<p>📑 <a href="file:///C:/Users/hamptoncg/Downloads/FileNamingHandout_v3%20(1).pdf">Stanford Libraries</a><br />
+📑 <a href="https://libguides.wustl.edu/c.php?g=47355&amp;p=303442">Washington University in St. Louis Libraries</a><br />
+📑 <a href="https://authors.library.caltech.edu/103626/1/FileNamingConventionWorksheet_Caltech.pdf">Caltech Library</a><br />
+📑 <a href="https://speakerdeck.com/jennybc/how-to-name-files?slide=5">Jenny Bryan</a></p>
 <hr />
 </div>
 <div id="variable-naming" class="section level2">
@@ -534,85 +617,149 @@ div.tocify {
 <p>Variable naming protocol should be created early in the project. You will need this protocol in place to start creating your data dictionary.</p>
 <p>There are many best practices and considerations around variable naming.</p>
 <ul>
-<li>Have you used the question/scale before?
+<li>Names should be meaningful
 <ul>
-<li>If yes, keep the variable name the same across projects</li>
-<li>If the variable name is <em>star_math_ss</em> in one project, name it the the same in your other projects</li>
+<li>Instead of <em>q1</em> use <em>gender</em></li>
 </ul></li>
-<li>Names should be meaningful but concise
+<li>If a variable is a part of a scale, consider naming is an abbreviation of that scale plus the scale item number
 <ul>
-<li>Ex: SPSS cannot handle variable names over 64 characters</li>
-<li>Ex: <em>q1</em> is not a meaningful variable name</li>
+<li><em>toca1</em></li>
 </ul></li>
-<li>If you are using scales in a survey, a typical variable naming convention is <em>AbbreviatedScaleName#</em>
+<li>Set a character limit
 <ul>
-<li>Ex: <em>scale1</em>, <em>scale2</em>, <em>scale3</em></li>
-</ul></li>
-<li>Be consistent with capitalization across ALL variables
+<li>Most statistical programs have a limit on variable name characters
 <ul>
-<li>Ex: using only lowercase, or always capitalize in the same place</li>
-</ul></li>
-<li>Don’t use spaces or special characters (including periods) in variable names</li>
-<li>Be consistent with delimiters (Ex: use camel case or snake case)
-<ul>
-<li>Camel case (<em>ScaleSum</em>)</li>
-<li>Snake case (<em>scale_sum</em>)–preferred method</li>
-</ul></li>
-<li>Make sure all variable names are unique
-<ul>
-<li>If you are collecting the same information in more than one place, how will you differentiate?
-<ul>
-<li>Ex: Student gender collected from student survey vs. student gender collected from district records
-<ul>
-<li>Consider something like <em>s_gender</em> and <em>d_gender</em></li>
+<li>SPSS is 64</li>
+<li>Stata is 32</li>
+<li>SAS is 32</li>
 </ul></li>
 </ul></li>
-</ul></li>
-<li>If the wording or response options for an item substantively change during the project, after you have collected data, make a rule for versioning
+<li>If you have used the question/scale before, consider keeping the variable name the same across projects</li>
+<li>Use the same variable name across time in a project
 <ul>
-<li>Ex: Add “v#” on revised questions (Ex: revised <em>scale1</em> becomes <em>scale1_v2</em>)</li>
+<li>If you asked “What is your anxiety level” in fall 2019 and you named it <em>anxiety1</em>, and you ask “What is your anxiety level” again in spring 2020, name it <em>anxiety1</em> again.</li>
 </ul></li>
-<li>Other considerations
+<li>Don’t use spaces or special characters (inluding <code>.</code>)</li>
+<li>Do not start a variable name with a number</li>
+<li>Be consistent with delimiters and capitalization
 <ul>
-<li>Some people like to include question ordering in the variable name
-<ul>
-<li>Ex: <em>q1_gender</em>, <em>q2_race</em></li>
+<li>Pascal case (<em>ScaleSum</em>)</li>
+<li>Snake case (<em>scale_sum</em>)–preferred method for variable names</li>
+<li>Camel case (<em>scaleSum</em>)</li>
+<li>Kebab case (<em>scale-sum</em>)</li>
+<li>Train case (<em>Scale-Sum</em>)</li>
 </ul></li>
-<li>Some people like to include an indication of the measure in the variable name
+<li>All variable names should be unique
 <ul>
-<li>Ex: s = student self-report and t=teacher rating of student
-<ul>
-<li>Then variables might be <em>s_basc3</em> or <em>t_toca4</em></li>
-</ul></li>
-</ul></li>
-<li>As mentioned earlier, if your data is longitudinal, consider time in your variable naming conventions as well. If you are merging data in a wide format, there are several ways to add time. Just be consistent and make note of your naming conventions in your documentation. Possible conventions:
-<ul>
-<li><em>scale_sum_t1</em> (for time 1–<em>ex: data collection round 1, fall</em>)</li>
-<li><em>t2_scale_sum</em> (for time 2–<em>ex: data collection round 2, winter</em>)</li>
-<li><em>s1_scale_sum</em> (for student survey, time 1)</li>
-<li><em>y1_t1_scale_sum</em> (for year 1–<em>ex: 2018</em>, time 1)
-<ul>
-<li>You may have multiple indicators of time. For example if a cohort or individual is in the study for multiple years, you might have a standalone <em>cohort</em> variable, and then you may add year and time as a prefix to your variables.</li>
-</ul></li>
-</ul></li>
+<li>If you collect student gender from a survey and from their school records, consider naming one <em>s_gender</em> and the other <em>d_gender</em></li>
 </ul></li>
 </ul>
+<p>In addition to best practices, here are just other practices that I’ve noticed others implement. You can pick and choose what works best with you. Just make sure whatever you choose, you put it in your style guide and follow those guidelines all throughout your project.</p>
+<ul>
+<li>Some people like to include question ordering in the variable name (personally I’d rather simply keep this information in my data dictionary and not in my actual variable name) + Ex: <em>q1_gender</em>, <em>q2_race</em></li>
+<li>Some people like to include an indication of the measure in the variable name so you always know what instrument the item came from
+<ul>
+<li>I think this is actually an excellent idea. Ultimately you may create a student level dataset that includes all data pertaining to a student, but without referring to documentation, you won’t know which questions were part of the student self-report and which questions were part of the teacher rating of a student. You can make this more clear by adding a prefix to indicate the measure.
+<ul>
+<li>Ex: s = student self-report and t=teacher rating of student</li>
+<li><em>s_anxiety1</em> and <em>t_toca1</em></li>
+</ul></li>
+</ul></li>
+<li>Last, time is probably the trickiest variable to account for and also the least uniform (in terms of consistency) that I’ve seen across teams/projects. I think people account for time in many different ways and call it many different things. My general note is, whatever you choose, just make sure it is documented very clearly for your team and outsiders to understand. With that said, I am going to give time it’s own section below.</li>
+</ul>
+<p><br></p>
+<div class="question">
+<p><strong>Quick thought: Versioning</strong></p>
+<p>We’ve discussed keeping tracks of different versions of documents. But what if the wording <strong>or</strong> response options for an item/variable substantively change during the project, after you have collected data? Make a rule for variable versioning.</p>
+<ul>
+<li>Example Rule: Add “_v#” on any revised items
+<ul>
+<li>Ex: revised <em>scale1</em> becomes <em>scale1_v2</em></li>
+</ul></li>
+</ul>
+</div>
+<p><br></p>
+<div id="time" class="section level3">
+<h3>Time</h3>
+<p>If your data is longitudinal, consider time in your variable naming conventions as well.</p>
+<p>Depending on how you plan to merge your data, there are two different ways to account for time.</p>
+<ol style="list-style-type: decimal">
+<li><p>Concatenate time to your variables. You do this if you plan to merge your data across time in wide format. Every participant/case occurs once in your data and all data collected for that participant is in that one row.</p></li>
+<li><p>Create time variables and add them to your data. You do this if you plan to append your data over time in long format. Every participant/case occurs multiple times in your data, once for each period/wave of data collection.</p></li>
+</ol>
+<p>You do not need to have this decided right at the beginning of your project. You really don’t even need to decide how to account for time until you are ready to start merging data across time. Until then, most likely you will know when each piece of data is collected by how you name that file and/or the name of the folder you placed it in.</p>
+<p>When it comes time to start merging your data (maybe you need the first year of data merged to analyze for a funding report), then you will need to make some decisions about how you want to merge your data. The great thing is, if you choose one method and then decide you need your data in the other format later on, it is very easy to switch back and forth through restructuring your data in a statistical program like R or Stata. We will cover this more in a later training.</p>
+<ol style="list-style-type: decimal">
+<li>If you decide to merge your data in wide format, you will need to concatenate time to your variable names in order to differentiate the difference between <em>toca1</em> collected in the fall and <em>toca1</em> collected in the spring. What this exactly looks like is all dependent on your longitudinal study design. But a few things to consider are:
+<ul>
+<li>How do you want to account for time?
+<ul>
+<li>Consider how your data is collected?
+<ul>
+<li>Is a a cohort study? How many waves of data collection are there per cohort?</li>
+<li>Or do you follow the same participants for the entire study</li>
+</ul></li>
+</ul></li>
+<li>Do you prefer a prefix or suffix on your variables for time?</li>
+<li>Do you want to use a number system or characters to indicate time?</li>
+<li>One example of adding time to variable names:
+<ul>
+<li><em>s1_scale_sum</em>
+<ul>
+<li>This would be student survey (s), wave 1, for the scale sum
+<ul>
+<li>Referring to my documentation I would know that wave 1 is the fall of 2019-20</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ol>
+<p>📑 The National Center for Education Statistics has a great example of creating time prefixes for variables in their <a href="https://nces.ed.gov/pubs2015/2015074.pdf">ECLS-K:2011 documentation</a> on page 7-3.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>If you decide to append data in long format over time then you no longer need to worry about having duplicate variables in a row. However, you will need to create time variables in order to capture the aspect of time. You will need to consider similar issues as we covered above:
+<ul>
+<li>How do you want to account for time?
+<ul>
+<li>Consider how your data is collected?
+<ul>
+<li>Is a a cohort study? How many waves of data collection are there per cohort?</li>
+<li>Or do you follow the same participants for the entire study</li>
+</ul></li>
+</ul></li>
+<li>Do you want your time variables to be numeric or character variables?</li>
+<li>One example of adding time variables:
+<ul>
+<li><em>cohort</em> (1,2)</li>
+<li><em>wave</em> (1,2,3,4), with the 6 waves of data collection repeating for every cohort
+<ul>
+<li>These variables would allow me to know the year and month every data collection period</li>
+<li>Documentation would tell me that 1=fall of recruitment year, 2=spring of recruitment year, 3=fall of follow-up year and 4=spring of follow-up year</li>
+<li>And, while cohort is my grouping/randomization variable, by referring to my documentation I would also know that cohort 1 was recruited fall 2019-20 and cohort 2 was recruited in 2021-22.</li>
+<li>With those two pieces of information (cohort and wave) I would know that cohort 1, wave 2 occurred in spring 2020.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ol>
+<p>My examples are by no means, the only way to account for time. You really can account for it however it makes sense for your project and team. As I mentioned early, just make sure to document it thoroughly so that future users know how to interpret time in your data. No matter what though, formatting for time variable names also needs to also go into your <em>style guide</em>. So if you decide to concatenate time to your variable names, in your style guide you will need to make a rule about this (ex: always add time as a prefix, always separate time by an underscore, etc.).</p>
 <p>Additional reading on variable naming:</p>
 <p>📑 <a href="https://www.poverty-action.org/sites/default/files/publications/IPA-Best-Practices-for-Data-and-Code-Management-Nov-2015.pdf">IPA: Best Practices</a><br />
 📑 <a href="http://adv-r.had.co.nz/Style.html">Advanced R</a><br />
 📑 <a href="http://kbroman.org/dataorg/pages/names.html">Karl Broman</a></p>
+<p><br></p>
 <div class="question">
 <p><strong>Quick thought: Add variable naming to documentation</strong></p>
-<p>At the end of any project, you will need to add style guide rules to your final documentation (your README or codebook) so that others know how to interpret your variable names.</p>
-<p><em>Example: All variable names will be made up of the following 4 components</em>:<br />
+<p>At the end of any project, you will need to add relevant style guide rules to your final documentation (ex: your codebook) so that when you share your data, others know how to interpret your variable names.</p>
+<p>Here is an example of how you would explain your variable naming in your documentation:</p>
+<p><em>All variable names are made up of the following 4 components</em>:<br />
 1. measure (s=student survey, t=teacher survey, o=teacher observation)<br />
 2. time period (1=fall, 2=winter, 3=spring)<br />
 3. variable/scale name<br />
-4. variable/scale #<br />
-Sample: <em>s2toca4</em> = student survey-winter-toca scale-item4</p>
+4. variable/scale #</p>
+<p>Sample: <em>s2_toca4</em> = student survey-winter-toca scale-item4</p>
 </div>
 <p><br></p>
 <hr />
+</div>
 </div>
 <div id="value-coding" class="section level2">
 <h2>Value Coding</h2>
@@ -649,12 +796,13 @@ Sample: <em>s2toca4</em> = student survey-winter-toca scale-item4</p>
 <p>Additional reading on value coding:</p>
 <p>📑 <a href="https://figshare.com/articles/Data_Management_and_Data_Management_Plans/7890827">Jessica Logan, Ph.D.</a><br />
 📑 <a href="https://old.dataone.org/best-practices/define-parameters">Data One</a><br />
-📑 <a href="https://kbroman.org/dataorg/pages/consistency.html">Karl Broman</a></p>
+📑 <a href="https://kbroman.org/dataorg/pages/consistency.html">Karl Broman</a> 📑 <a href="https://www.researchconnections.org/content/childcare/find/research-lifecycle.html">Research Connections</a></p>
 <hr />
 </div>
-<div id="file-naming-1" class="section level2">
-<h2>File naming</h2>
+<div id="last-thoughts" class="section level2">
+<h2>Last Thoughts</h2>
 <hr />
+<p>A style guide can include many other components besides just the four I covered here. For example, in this excellent example of a style guide, created and used by the <a href="https://hwpi.harvard.edu/files/sdp/files/sdp-toolkit-coding-style-guide.pdf">Harvard Strategic Data Project</a>, they cover folder structure, file naming, and variable naming, as well as rules for commenting code, general coding guidelines and commonly used and accepted abbreviations. You can include anything you want in your style guide that helps you streamline the look, usability, and searchability of your files and data.</p>
 </div>
 
 

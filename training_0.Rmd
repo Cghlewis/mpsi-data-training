@@ -36,13 +36,13 @@ The data manager is also an essential member of the team. This person (or person
 
 Although the term may not always be research assistant, I am referring to any staff hired to help implement a research project. Research assistants are typically out in the field, collecting the data, or they may also assist in other areas such as preparing data collection materials or assisting with data management. Some advanced research assistants may also assist in implementing training or acting as data collection leads in the field. In academic settings, research assistants may be graduate students or full time staff, while outside of academia these roles are typically entry-level or junior staff.
 
-### Other roles
+### Other Roles
 
 Some teams may include additional roles such as research director, lab manager, postdoc, research associate, administrative professional, hourly data collector, outreach coordinator, or coach, all who may assist in the research cycle in other ways. The size of a research team and the roles that exist are all dependent on factors such as funding, the type of research study/the intervention being studied, or the organization of your specific research institution.
 
 ---
 
-## Project Lifecycle
+## Project Life Cycle
 
 ---
 
@@ -97,7 +97,7 @@ When it comes to communication tools (email, video, and/or instant message funct
   + Free messaging platform that integrates with the Google suite, including calls using Google Meet.   
   + Allows users to create groups to communicate with.
 
-Education Data Chat has a great podcast [episode](https://www.buzzsprout.com/1074286/5427532-episode-6-effective-team-communication-using-modern-day-tools) on methods of communication that I highly recommend.
+   📑 Education Data Chat has a great podcast [episode](https://www.buzzsprout.com/1074286/5427532-episode-6-effective-team-communication-using-modern-day-tools) on methods of communication that I highly recommend.
 
 
 

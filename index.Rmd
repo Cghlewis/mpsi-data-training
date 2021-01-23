@@ -20,7 +20,7 @@ While this specific training is for staff and others affiliated with the MPSI, I
 | Training | Date     | Planned Content                                                       |
 |----------|----------|-----------------------------------------------------------------------|
 |1         | 09/25/20 |Documentation                                                          |
-|2         | 02/05/20 |Setting up data structures                                             |
+|2         | 02/12/21 |Setting up data structures                                             |
 |3         | 03/05/21 |Style Guide                                                            |
 |4         | 04/02/21 |Intro to R and RStudio, reading in and reviewing data                  |
 |5         | TBD      |Data wrangling basics                                                  |
