@@ -128,7 +128,7 @@ print(project)
 <br>
 
 :::question
-**Quick thought: Versioning**
+**Quick thought: Versioning Documents**
 
 Some sort of versioning is absolutely necessary to track changes in your documents throughout the life cycle of your project. If you use software that has versioning (ex: Git, Sharepoint, Box), which I highly recommend, then you do not need to add the versioning README files to your folders or create archive folders. Through versioning software, you can save over previous versions of files, without having to add an extension such as v01, v02. And when you save over previous versions, the software tracks the date, allows you to comment on the changes made from your previous version, and at any time, you can view previous versions of the document, review comments from those versions and even retrieve previous versions. If, however, your team does not use versioning software, adding extensions to file names and READMEs to file folders is a viable alternative.
 
@@ -281,7 +281,7 @@ In addition to best practices, here are other practices that I've noticed others
 <br>
 
 :::question
-**Quick thought: Versioning**
+**Quick thought: Versioning Variables**
 
 We've discussed keeping tracks of different versions of documents. But what if the wording **or** response options for an item/variable substantively change during the project, after you have collected data? Make a rule for variable versioning.
 
@@ -307,7 +307,7 @@ When it comes time to start merging your data (maybe you need the first year of 
 
 *Consider a hypothetical, longitudinal RCT.*
 
-You collect data on two cohorts of students and you follow each cohort. One cohort of students is recruited in 2018-19 and the second cohort of students is recruited 2020-21. You follow each cohort for 4 waves of data collection. Two waves occur in the fall and spring of the first year, and two waves of data collection occur in the fall and spring of the follow-up year.
+You collect data on two cohorts of students and you follow each cohort. Your first cohort of students is recruited in 2018-19 and the second cohort of students is recruited 2020-21. You follow each cohort for 4 waves of data collection. Two waves occur in the fall and spring of the first year, and two waves of data collection occur in the fall and spring of the follow-up year.
 
 1. If you decide to merge your data in wide format, you will need to concatenate time to your variable names in order to differentiate between the four *toca1* variables that occur in your data for each wave it was collected. What this exactly looks like is all dependent on your longitudinal study design and your preferences. One example of how you might do this for the hypothetical study is to concatenate time (as well as a form abbreviation) as a prefix to each variable. In addition, have a cohort variable in your data. With those two pieces of information I would know, by referring to documentation, that *t1_toca1* for student 30415, is teacher-report wave 1 (fall) and that since their *cohort* is 1, the year is 2018. Similarly for the same student, *w1_tch_id* is wave 1 (fall) teacher id and *cohort* 1 is 2018. If I looked at *t4_toca1* for student 30670, I would know, again through documentation, that the time is spring 2022.
 
@@ -320,7 +320,7 @@ knitr::include_graphics("img/merge.png")
   📑 The National Center for Education Statistics has a great example of creating time prefixes for variables in their [ECLS-K:2011 documentation](https://nces.ed.gov/pubs2015/2015074.pdf) on page 7-3.
 
 
-2. If you decide to append data in long format over time then you no longer need to worry about having duplicate variables in a row. However, you will need to create time variables in order to capture the aspect of time. Again, what this looks like is all dependent on your longitudinal study design and your preferences. One example of how you might do this for the hypothetical study is to create a *wave* variable as well as a *cohort* variable. With those two pieces of information I would know that cohort 1, wave 2, for example, occurred in spring 2020.
+2. If you decide to append data in long format over time then you no longer need to worry about having duplicate variables in a row. However, you will need to create time variables in order to capture the aspect of time. Again, what this looks like is all dependent on your longitudinal study design and your preferences. One example of how you might do this for the hypothetical study is to create a *wave* variable as well as a *cohort* variable. With those two pieces of information I would know that cohort 1, wave 2, for example, occurred in spring 2019.
 
 ```{r, echo=FALSE, fig.align="center", out.width='45%'}
 
