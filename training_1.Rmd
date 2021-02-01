@@ -44,6 +44,7 @@ Before we dive in, as IES is the most prolific funder of RCTs in education, if y
   📑 [IES DMP tool](https://dmptool.org/template_export/1895.pdf)  
   📑 [IES most recent Request for Applications](https://ies.ed.gov/funding/pdf/2021_84305A.pdf)  
   📑 [Foundational Practices of Research Data Management](https://riojournal.com/article/56508/instance/5569679/)
+  📑 [Sara Hart Template](https://figshare.com/articles/preprint/Example_of_a_Data_Management_Plan/13218743/1)
 
 ---
 

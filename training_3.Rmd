@@ -12,7 +12,7 @@ output:
 
 :::presentation
 <br>
-You can view slides from this talk [here]().
+You can view slides from this talk: In Progress.
 :::
 
 
@@ -263,7 +263,7 @@ There are many best practices and considerations around variable naming.
   + Camel case (*scaleSum*)
   + Kebab case (*scale-sum*)
   + Train case (*Scale-Sum*)
-- All variable names should be unique
+- All variable names should be **unique**
   + If you collect student gender from a survey and from their school records, consider naming one *s_gender* and the other *d_gender*
 - Consider denoting reverse coding in the variable name
   + scale1_r (to denote that you have reverse coded that question)
