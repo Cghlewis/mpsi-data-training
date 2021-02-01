@@ -38,7 +38,7 @@ Other helpful consent resources:
 
  📑 [Within & Between podcast](https://open.spotify.com/episode/7cP4u3gimblEo8S8Z37UZA)  
  📑 [University of Pittsburgh](https://www.hrpo.pitt.edu/data-security-guidance)  
- 📑 [University of Guelph](https://www.uoguelph.ca/research/support-document/i-need-create-master-list-link-participant-id-numberscodes-my-data-what-should-i))  
+ 📑 [University of Guelph](https://www.uoguelph.ca/research/support-document/i-need-create-master-list-link-participant-id-numberscodes-my-data-what-should-i) 
  📑 [ICPSR](https://www.icpsr.umich.edu/web/pages/datamanagement/confientiality/conf-language.html)   
  📑 [Shero and Hart: Working with your IRB](https://figshare.com/articles/preprint/Working_with_your_IRB_Obtaining_consent_for_open_data_sharing_through_consent_forms_and_data_use_agreements/13215305/1)
 
