@@ -67,14 +67,15 @@ Documentation also allows you to:
 * Clean our data with fidelity  
 * Ensure others use and interpret our data accurately  
 * Discover errors in our data  
-* Allows others to find our archived data through metadata
+* Allow others to find our archived data through metadata
+* Reduces [data rot](https://www.teaguehenry.com/strings-not-factors/2021/1/24/data-management-for-researchers-three-terrifying-tales), when good data is transformed over time and becomes unusable because no one tracks the transformation
 
 Documentation can take many forms. [IES](https://ies.ed.gov/funding/datasharing_implementation.asp) states that they expect documentation to "be a comprehensive and stand-alone document that includes all the information necessary to replicate the analysis performed by the original research team" and should include:  
 
 * a summary of the purpose of the data collection  
 * methodology and procedures used to collect the data  
 * timing of the data collection  
-* details of the data codes, definition of variables, variable field locations, and frequencies  
+* details of the data codes, definition of variables, transformations, variable field locations, and frequencies  
 
 However, a) IES provides no template for how documentation is laid out OR what tools to use to create/share this information and b) outside of IES required documentation for data sharing, there may be additional documentation your team may want to keep to help manage internal processes. 
 
@@ -294,7 +295,7 @@ Excellent examples, templates, and further details can be found here:
 
 ### Metadata
 
-Metadata is *data about data*. They are structured data that "provide information about the dataset to help people find, understand, and use your data" ([IES](https://ies.ed.gov/funding/datasharing_faq.asp)). Most of the time when you hear the term metadata, it will be referring to what I am going to call project-level metadata. Project-level metadata is a type of descriptive metadata that aids in finding your project through internet searches. It is like the "label of the dataset". At minimum the information captured should include who created the data, when the data were created, a title and description of the data, and a unique identifier for the data. This is the type of data we discussed capturing earlier within the *General*, *File*, and *Access* portion of our README files. 
+Metadata is *data about data*. They are structured data that "provide information about the dataset to help people find, understand, and use your data" ([IES](https://ies.ed.gov/funding/datasharing_faq.asp)). Most of the time when you hear the term metadata, it will be referring to what I am going to call project-level metadata. Project-level metadata is a type of descriptive metadata that aids in finding your project through internet searches. It is like the "label of the dataset". At minimum the information captured should include who created the data, when the data were created, a title and description of the data, and a unique identifier for the data. This is the type of data we discussed capturing earlier within the *General*, *File*, and *Access* portion of our *README* files. 
 
 Common elements of project-level metadata include:
 
@@ -307,9 +308,9 @@ Source: [University of Portland](https://libguides.up.edu/datamanagement/documen
 
 Metadata can also also be categorized further into data-level and variable-level:
 
-* Data-level metadata, which might be considered administrative metadata, focuses more on the details of each dataset such as instruments used to collect the data and software used to process the data. Lucikly, creating this metadata requires no extra effort because this is the exact information captured in sections like *Methodology* in your READMEs above.
+* Data-level metadata, which might be considered administrative metadata, focuses more on the details of each dataset such as instruments used to collect the data and software used to process the data. Lucikly, creating this metadata requires no extra effort because this is the exact information captured in sections like *Methodology* in your *README* files above.
 
-* Variable-level metadata, which might be considered structural metadata, is data about the variables in your dataset. This can be both incorporated into your data, by adding attributes like variable and value labels, as well as accounted for externally, and it is includes all the information discussed earlier in your codebook and/or data dictionary. If your data is qualitative in nature (such as documents, photos, videos, or sound files), metadata such as date/time/location, tags/keywords, or measurement information can sometimes be embedded directly into your files ([IHEID](https://libguides.graduateinstitute.ch/rdm/qualitative)). 
+* Variable-level metadata, which might be considered structural metadata, is data about the variables in your dataset. This can be both incorporated into your data, by adding attributes like variable and value labels, as well as accounted for externally, and it is includes all the information discussed earlier in your *codebook* and/or *data dictionary*. If your data is qualitative in nature (such as documents, photos, videos, or sound files), metadata such as date/time/location, tags/keywords, or measurement information can sometimes be embedded directly into your files ([IHEID](https://libguides.graduateinstitute.ch/rdm/qualitative)). 
 
 The most notable thing about metadata is that many fields follow metadata standards that aid in the "retrieving and indexing" of your data ([University of Arizona](https://data.library.arizona.edu/best-practices/data-documentation-readme-metadata)). Standards include things such as agreed upon formats, vocabularies, and structure. For example social science often follows the Data Documentation Initiative ([DDI](https://ddialliance.org/)) standards. However, ([IES](https://ies.ed.gov/funding/datasharing_faq.asp)) states that education has no standards and that instead "researchers should document everything and strive to make notation as interpretable as possible". Metadata can either be embedded within data or included in a separate file such as a README.txt or .pdf file.
 
@@ -347,7 +348,7 @@ Consider tracking things such as:
   
 * Data cleaning plan (Ex: `district_data-cleaning-plan.md`)
 
-  * This will be discussed more in later trainings, but a written analysis plan can be helpful to communicate across your team, as a reminder to your future self, and can also be added to your documentation or a technical appendix for a report. This plan can be in a standalone text file, markdown file, or as comments in a syntax file and should include, in *prose*, the steps you plan to take to take your data from raw form to final analysis/clean form. This allows anyone to follow your data cleaning process, even if they don't understand your actual code (ex: R or Stata code)  
+  * This will be discussed more in later trainings, but a written analysis plan can be helpful to communicate across your team, as a reminder to your future self, and can also be added to your documentation or a technical appendix for a report. This plan can be in a standalone text file, markdown file, or as comments in a syntax file and should include, in *prose*, the steps you plan to take to take your data from raw form to final analysis/clean form. Other people may refer to this as a ["Chain of Processing"](https://www.teaguehenry.com/strings-not-factors/2021/1/24/data-management-for-researchers-three-terrifying-tales). This allows anyone to follow your data cleaning process, even if they don't understand your actual code (ex: R or Stata code).  
 <br>
   
 * Actual files used in data cleaning process (Ex: `README_district_data-cleaning-process.txt`). 

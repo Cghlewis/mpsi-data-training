@@ -1,0 +1,49 @@
+------
+  title: "Data Management"
+output: 
+  html_document:
+  css: "css/custom.css"
+toc: TRUE
+toc_float: TRUE
+anchor_sections: FALSE
+---
+
+Data Management is the planning, organization, storage and dissemination of your research study data. Successful data management allows your research to be replicable, understandable, secure and useful data while poor data management can lead to erroneous conclusions, unusable data, and data security issues.
+
+
+## Project Life Cycle
+
+## FAIR and SEER (Open Science)
+
+## Types of data I am referring to
+
+## Data Mgmt practices to consider
+
+  
+## Data Management Plan
+  
+  ---
+  
+  To increase transparency and to advance scientific inquiry in education research, the Institute of Education Science ([IES](https://ies.ed.gov/funding/datasharing_implementation.asp)) has a policy on providing access to your data at the conclusion of projects funded through their research centers (*Exploration* or *Initial Efficacy and Follow-Up* grants). The plan for sharing data must be laid out in a data management plan (DMP) which is included as an appendix in your grant application. Among other things, the DMP must include the following:  
+  
+✔️ Type of data to be shared  
+✔️ Procedures for managing and maintaining confidentiality  
+✔️ Roles and responsibilities of project staff in the management of research data  
+✔️ Expected schedule for data sharing (no later than the publication of findings and at least for 10 years)  
+✔️ Format of the final dataset  
+✔️ Documentation to be provided  
+✔️ Method of data sharing (Share the data yourself, use a data archive, combination of both)  
+✔️ Whether or not a data sharing agreement specifies the conditions under which the data will be shared
+✔️ Any circumstances that prevent any data from being shared  
+✔️ Most recent rule: A plan for [pre-registering](https://ies.ed.gov/seer/preregistration.asp) your study within the first year of the project  
+
+Pre-registration is just one part of the Department of Education's effort an effort to align research with the [SEER](https://ies.ed.gov/seer/index.asp) and [FAIR](https://www.go-fair.org/fair-principles/) data governance principles. 
+
+This training series is not specific only to IES grants. Almost all funders that education researchers may work with require a DMP that also includes a data sharing or archival plan (ex: [NIJ](https://nij.ojp.gov/funding/research-development-and-evaluation-grant-award-requirements#vj8jg), [NSF](https://www.nsf.gov/bfa/dias/policy/dmp.jsp), and [NIH](https://grants.nih.gov/grants/policy/data_sharing/data_sharing_guidance.htm#doc)). Furthermore, this training will not cover the details of writing up a DMP but rather how to implement a DMP. We will cover topics such as: How do you document data; How do you track it; How do you manage it; How do you keep it secure; and How do you share it. This specific training module will cover documentation.
+
+Before we dive in, as IES is the most prolific funder of RCTs in education, if you are someone who will be writing IES DMPs in the future or want to know more about them, here are some excellent resources:
+
+  📑 [University of Virginia IES DMP   template](https://data.library.virginia.edu/files/IES-Data-Management-Plan-Template-2018.docx)  
+  📑 [IES DMP tool](https://dmptool.org/template_export/1895.pdf)  
+  📑 [IES most recent Request for Applications](https://ies.ed.gov/funding/pdf/2021_84305A.pdf)  
+  📑 [Foundational Practices of Research Data Management](https://riojournal.com/article/56508/instance/5569679/)

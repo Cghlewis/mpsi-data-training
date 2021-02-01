@@ -10,30 +10,36 @@ output:
 
 <br>
 
+:::presentation
+<br>
+You can view slides from this talk [here]().
+:::
+
+
 A style guide is such an integral piece to data management, I am giving it its own section! We will cover best practices for file structures, file naming and versioning, variable naming, and value coding. Whatever rules you put in place, make sure they are written down, stored somewhere that is accessible to the entire team (for example a team wiki or a README) and that all staff are trained to follow the style guide protocols.
 
 ---
 
 ## Directory Structure
 
-As I mentioned in training 2, how you set up your directory structure is based on your preferences. However, it is important to get that structure written out in a style guide so that everyone is following the same rules.
+As I mentioned in training 2, how you set up your directory structure is based on your preferences. However, it is important to get that structure written out in a style guide so that everyone is following the same rules within and across projects.
 
-In general though, some useful guidelines for setting up directory structure include:
+Useful guidelines for setting up directory structure include:
 
-  + Strike a balance between deep and shallow
+  + Strike a balance between a deep and shallow structure
     - Too shallow leads to too many files in one folder, difficult to sort through
     - Too deep leads to too many clicks to get to one file, plus file paths can max out with too many characters (ex: SharePoint has a path limit of 260 characters)
-  + Create folders that are specific enough that you can limit access (ex: data folder that only houses data and you limit access to it)
+  + Create folders that are specific enough that you can limit access (ex: tracking folder that only houses your tracking database and you limit access to it)
   + Make your folder names meaningful and easy to understand
   + Make your folder names machine readable
-    - Don't use spaces or punctuation (*.*) in your folder names
-    - Similar to file names, consider using *_* to separate metadata pieces and *-* to separate words within the same piece of metadata
-  + Be consistent with folder names (ex: use all lower case for example)
+    - Don't use spaces or punctuation in your folder names
+    - Consider using `_` or `-` to separate words within the same piece of metadata
+  + Be consistent with capitalization (ex: use all lower case for example)
   + Decide if you want an archive folder to move old files into or do you want to leave previous versions in the same folder
   
 **An example style guide for your directory structure might look like this:**
 
-  1. All project directories should be organized in this manner  
+  1. All project directories follow this hierarchical metadata structure  
       - Level 1: Name of project  
       - Level 2: Life cycle folders  
       - Level 3: Time period/Data collection wave folders (if relevant)  
@@ -43,7 +49,7 @@ In general though, some useful guidelines for setting up directory structure inc
       - Meaningful name but no longer than 20 characters  
       - No spaces or periods in folder names  
       - Only use lower case letters  
-      - Use "_" to separate concepts and "-" to separate words  
+      - Use `-` to separate words  
   3. All previous versions of files must be placed into their respective *archive* folder
   
 
@@ -53,16 +59,19 @@ In general though, some useful guidelines for setting up directory structure inc
 library(data.tree)
 
 project <- Node$new("project-new")
+  styleguide <- project$AddChild("README_style-guide.txt")
   intervention <- project$AddChild("intervention")
-    iY1 <- intervention$AddChild("year-1")
-    coach <- iY1$AddChild("coaching-materials")
-     coachobs <- coach$AddChild("y1_coaching-obs-form_v02.docx")
+    ic1 <- intervention$AddChild("cohort-1")
+    coach <- ic1$AddChild("coaching_materials")
+      coachread <- coach$AddChild("README_versioning.txt")
+     coachobs <- coach$AddChild("c1_coaching_obs-form_v02.docx")
      carchive <- coach$AddChild("archive")
-      coachobsarch <- carchive$AddChild("y1_coaching-obs-form_v01.docx")
+      coachobsarch <- carchive$AddChild("c1_coaching_obs-form_v01.docx")
   projectmgmt <- project$AddChild("project-mgmt")
-    pY1 <- projectmgmt$AddChild("year-1")
+    pY1 <- projectmgmt$AddChild("cohort-1")
     sched <- pY1$AddChild("scheduling-materials")
-     sched1 <- sched$AddChild("sept_data-collection-sched_v01.xlsx")
+      schedread <- sched$AddChild("README_versioning.txt")
+     sched1 <- sched$AddChild("c1_data-collection-sched_v01.xlsx")
      scarchive <- sched$AddChild("archive")
   documentation <- project$AddChild("documentation")
    datadictionary <- documentation$AddChild("data-dictionary")
@@ -75,40 +84,41 @@ project <- Node$new("project-new")
       code <- codebook$AddChild("project-new_codebook_v02.pdf")
       coarchive <- codebook$AddChild("archive")
         code2 <- coarchive$AddChild("project-new_codebook_v01.pdf")
-    mY1 <- documentation$AddChild("year-1")
-      student <- mY1$AddChild("student-measures")
+    mY1 <- documentation$AddChild("cohort-1")
+      student <- mY1$AddChild("student_measures")
         studread <- student$AddChild("README_versioning.txt")
-        studsurv <- student$AddChild("y1_stud-survey_v01.docx")
+        studsurv <- student$AddChild("c1_stu_svy_v01.docx")
           sarchive <- student$AddChild("archive")
-      teacher <- mY1$AddChild("teacher-measures")
+      teacher <- mY1$AddChild("teacher_measures")
         tread <- teacher$AddChild("README_versioning.txt")
-        tsurv <- teacher$AddChild("y1_teach-survey_v02.docx")
+        tsurv <- teacher$AddChild("c1_tch_svy_v02.docx")
           tarchive <- teacher$AddChild("archive")
-          tsurv2 <- tarchive$AddChild("y1_teach-survey_v01.docx")
+          tsurv2 <- tarchive$AddChild("c1_tch_svy_v01.docx")
   data <- project$AddChild("data")
-    y1 <- data$AddChild("year-1")
+    y1 <- data$AddChild("cohort-1")
       raw <- y1$AddChild("raw")
         rawread <- raw$AddChild("README_versioning.txt")
-        ssurveydown <- raw$AddChild("y1_student-survey-download_2020-11-05.csv")
+        ssurveydown <- raw$AddChild("c1_stu_svy_download_2020-11-05.csv")
         rawarchive <- raw$AddChild("archive")
-          ssurveydown2 <- rawarchive$AddChild("y1_student-survey-download_2020-11-01.csv")
+          ssurveydown2 <- rawarchive$AddChild("c1_stu_svy_download_2020-11-01.csv")
       syntax <- y1$AddChild("syntax")
-        synread <- syntax$AddChild("README_steps.txt")
-        synread2 <- syntax$AddChild("README_versioning.txt")
-        step1 <- syntax$AddChild("01_y1_student-survey-cleaning_v01.R")
-        step2 <- syntax$AddChild("02_y1_student-survey-descriptives_v01.R")
+        synread <- syntax$AddChild("README_versioning.txt")
+        synsetup <- syntax$AddChild("00_setup.md")
+        step1 <- syntax$AddChild("01_c1_stu_svy_cleaning_v01.R")
+        step2 <- syntax$AddChild("02_c1_stu_svy_descriptives_v01.R")
         syarchive <- syntax$AddChild("archive")
       clean <- y1$AddChild("clean")
         cleanread <- clean$AddChild("README_versioning.txt")
-        cleanstud <- clean$AddChild("y1_student-survey-clean_v01.csv")
+        cleanstud <- clean$AddChild("c1_stu_svy_clean_v01.csv")
         clarchive <- clean$AddChild("archive")
   track <- project$AddChild("tracking")
     tY1 <- track$AddChild("year-1")
       trackingdb <- tY1$AddChild("tracking-database")
-        trackingdb1 <- trackingdb$AddChild("y1_tracking_v01.sqlite")
+        trackread <- trackingdb$AddChild("README_versioning.txt")
+        trackingdb1 <- trackingdb$AddChild("c1_tracking_v01.sqlite")
         trarchive <- trackingdb$AddChild("archive")
-      consent <- tY1$AddChild("parent-consents")
-        consent2 <- consent$AddChild("y1_parent-consents-compiled_2020-10-14.pdf")
+      consent <- tY1$AddChild("parent_consents")
+        consent2 <- consent$AddChild("c1_parent_consents_compiled_2020-10-14.pdf")
        conarchive <- consent$AddChild("archive")
     
 print(project)
@@ -128,8 +138,8 @@ Some sort of versioning is absolutely necessary to track changes in your documen
 
 A few important pieces of information before moving on:
 
-  1. In your *data* folder, **always** include a *raw* data folder. You always want to keep untouched, raw versions of every data file that you collect, receive, or download. You never know if or when you may need to go back to that raw data after you cleaned and manipulated it for analysis.
-  2. Always limit access to any project folder that holds PII information (your tracking folder) as well as your data folder for security purposes. 
+  1. In your *data* folder, **always** include a *raw* data folder. You always want to keep **untouched**, raw versions of every data file that you collect, receive, or download. You never know if or when you may need to go back to that raw data after you cleaned and manipulated it for analysis.
+  2. Always limit access to any project folder that holds Personally Identifiable Information (PII) (such as your tracking folder) as well as your data folder for security purposes. 
   3. One other thing you can do to protect files that you don't want others to accidentally edit, is *write-protect* them ([Karl Broman](http://kbroman.org/dataorg/pages/backups.html). 
   To do this on a PC:
       - Right-click on the file  
@@ -144,38 +154,42 @@ Resources:
   📑 [Sofware Carpentry](https://www.youtube.com/watch?v=3MEJ38BO6Mo&feature=emb_logo)  
   📑 [CESSDA](https://www.cessda.eu/Training/Training-Resources/Library/Data-Management-Expert-Guide/2.-Organise-Document/File-naming-and-folder-structure)  
   📑 [Helsinki University Library](https://zenodo.org/record/1914401#.YAh46ehKhPZ)  
+  📑 [Teague Henry](https://www.teaguehenry.com/strings-not-factors/2021/1/24/data-management-for-researchers-three-terrifying-tales)  
+  📑 [BIDS](https://github.com/bids-standard/bids-starter-kit/wiki/The-BIDS-folder-hierarchy)
 
 ---
 
 ## File Naming
 
-If you are like me, or most of humanity, you are guilty of giving files names like `research report final.docx` and `research report final-2.docx` and `research report-2-dan edits.docx`. It happens, but as you can see this can makes it very confusing to know any details about what these documents are? What is this research report on? What is the actual final version? When were the edits made on these documents? What are the differences between these documents?
+If you are like me, or most of humanity, you are guilty of naming files something like `research report final.docx` and `research report final-2.docx` and `research report-2-dan edits.docx`. It happens, but as you can see this can makes it very confusing to know any details about what these documents are? What is this research report on? What is the actual final version? When were the edits made on these documents? What are the differences between these documents?
 
-This is why a file naming style guide is so important. It sets the protocol for you and your entire team to use streamlined, descriptive, organized and ultimately human **and** machine-readable file names to remove any future confusion.
+This is why a file naming style guide is so important. It sets the protocol for you and your entire team to use standardized, descriptive, organized and ultimately human **and** machine-readable file names to remove any future confusion.
 
 General file naming conventions to follow include:
 
 - Never use spaces between words. They can often break a URL when shared.
-- Never use special characters. They can have meanings with programming languages and can cause problems.
-- Never use periods. Again it can cause issues when using programming languages that look for the `.` before file extension
-- Use `-` between similar elements and `_` between separate elements. This not only helps to make the name human readable but also allows your computer to read and search files easier.
+- Never use special characters. They can have meaning within programming languages and can cause problems.
+- Use `-` between metadata and `_` within metadata. This not only helps to make the name human readable but also allows your computer to read and search files easier.
 - Choose to either only use lower case letters, or be specific where to use capital letters (ex: at the start of every new word)
 - Make names descriptive (a user should be able to understand the contents of the file without opening it)
 - Consider limiting the number of characters to prevent hitting your path limit
-- Pick a certain order for file name metadata to follow and stick to it. Ex:
+- Keep redundant metadata in file name
+  - Ex: always put time period in file name, even if the file is currently housed in a time period folder
+  - This reduces confusion if you ever move a file to a different folder
+- Pick an order for file name metadata and stick to it. Ex:
   - Order of use (if relevant--and always add a 0 before single digits)
   - Project
-  - Time period (if relevant)
+  - Cohort/Data collection wave (if relevant)
   - Participant
   - Measure
   - Further description
   - Version or Date
-- Do not use \ in dates. Format dates in one of two ways (pick one and add it to the style guide):
+- Do not use `\` in dates. Format dates in one of two ways (pick one and add it to the style guide):
   - YYYY-MM-DD
   - YYYYMMDD
 - When adding versions, pick a format and add it to your style guide. Consider adding a 0 before single digit numbers to keep the file name the same length as it grows. Ex:
-  - V01
-  - V02
+  - v01
+  - v02
 - If your files need to be run in a sequential order, add the order number to the beginning of the file name, with leading zeros to ensure proper sorting
 - Choose abbreviations to use for common names/phrases and add them to your style guide
 
@@ -183,33 +197,31 @@ General file naming conventions to follow include:
 Example file naming style guide:
 
 1. Never use spaces between words.
-2. Never use special characters. 
-3. Never use periods. 
-4. Use `-` between similar elements and `_` between separate elements
-5. Use the following metadata file naming order:
+1. Never use special characters. 
+1. Use `-` between metadata and `_` to separate words within metadata
+1. Use the following metadata file naming order:
     - Order of use (if relevant--and always add a 0 before single digits)
     - Project
-    - Time period (if relevant)
+    - Cohort/Wave (if relevant)
     - Participant
     - Measure
     - Further description
     - Date (always add)
     - Version (if necessary)
-6. Format dates as YYYY-MM-DD
-7. If there are multiple versions of a document on the same date, version using v# with a leading 0.
-7. Only use lower case letters
-8. Keep names under 45 characters
-9. Choose abbreviations to use for common names/phrases and add them to your style guide
-  - Project A Year 1 (2018-19) = y1
-  - Project A = pa
-  - student = s
-  - teacher = t
-  - survey = svy
-7. Examples of this format:
-    - `01_pa_y1_s_svy_cleaning-syntax_2021-01-22.R`
-    - `02_pa_y1_s_svy_cleaning-syntax_2021-01-21v01.R`
-    - `pa_s_svy_protocol_2020-10-01.docx`
-    - `pa_y1_t_svy_data_raw_2020-08-03.csv`
+1. Format dates as YYYY-MM-DD
+1. If there are multiple versions of a document on the same date, version using v# with a leading 0.
+1. Only use lower case letters
+1. Keep names under 45 characters
+1. Choose abbreviations to use for common names/phrases and add them to your style guide
+    - student = stu
+    - teacher = tch
+    - survey = svy
+    - cohort = c
+1. Examples of this format:
+    - `01_c1_stu_svy_cleaning-syntax_2021-01-22.R`
+    - `02_c1_stu_svy_cleaning-syntax_2021-01-21v01.R`
+    - `s_svy_protocol_2020-10-01.docx`
+    - `c1_t_svy_data_raw_2020-08-03.csv`
     
 
 Resources:
@@ -218,6 +230,8 @@ Resources:
   📑 [Washington University in St. Louis Libraries](https://libguides.wustl.edu/c.php?g=47355&p=303442)  
   📑 [Caltech Library](https://authors.library.caltech.edu/103626/1/FileNamingConventionWorksheet_Caltech.pdf)  
   📑 [Jenny Bryan](https://speakerdeck.com/jennybc/how-to-name-files?slide=5)  
+  📑 [Teague Henry](https://www.teaguehenry.com/strings-not-factors/2021/1/24/data-management-for-researchers-three-terrifying-tales)
+  
 
 ---
 
@@ -251,11 +265,13 @@ There are many best practices and considerations around variable naming.
   + Train case (*Scale-Sum*)
 - All variable names should be unique
   + If you collect student gender from a survey and from their school records, consider naming one *s_gender* and the other *d_gender*
+- Consider denoting reverse coding in the variable name
+  + scale1_r (to denote that you have reverse coded that question)
 
-In addition to best practices, here are just other practices that I've noticed others implement. You can pick and choose what works best with you. Just make sure whatever you choose, you put it in your style guide and follow those guidelines all throughout your project.
+In addition to best practices, here are other practices that I've noticed others implement. You can pick and choose what works best for your team. Just make sure whatever you choose, you put it in your style guide and follow those guidelines all throughout your project.
 
-- Some people like to include question ordering in the variable name (personally I'd rather simply keep this information in my data dictionary and not in my actual variable name)
-      + Ex: *q1_gender*, *q2_race*
+- Some people like to include question ordering in the variable name (personally I'd rather simply keep this information in my data dictionary and not in my actual variable name)  
+    + Ex: *q1_gender*, *q2_race*
 - Some people like to include an indication of the measure in the variable name so you always know what instrument the item came from
   - I think this is actually an excellent idea. Ultimately you may create a student level dataset that includes all data pertaining to a student, but without referring to documentation, you won't know which questions were part of the student self-report and which questions were part of the teacher rating of a student. You can make this more clear by adding a prefix to indicate the measure.
       + Ex: s = student self-report and t=teacher rating of student
@@ -285,38 +301,33 @@ Depending on how you plan to merge your data, there are two different ways to ac
 
 2. Create time variables and add them to your data. You do this if you plan to append your data over time in long format. Every participant/case occurs multiple times in your data, once for each period/wave of data collection.
 
-You do not need to have this decided right at the beginning of your project. You really don't even need to decide how to account for time until you are ready to start merging data across time. Until then, most likely you will know when each piece of data is collected by how you name that file and/or the name of the folder you placed it in.
+You do not need to have this decided right at the beginning of your project. You really don't even need to decide how to account for time until you are ready to start merging data across time. Until then, most likely you will know when each piece of data is collected by how you name that file which should include time.
 
 When it comes time to start merging your data (maybe you need the first year of data merged to analyze for a funding report), then you will need to make some decisions about how you want to merge your data. The great thing is, if you choose one method and then decide you need your data in the other format later on, it is very easy to switch back and forth through restructuring your data in a statistical program like R or Stata. We will cover this more in a later training.
 
-1. If you decide to merge your data in wide format, you will need to concatenate time to your variable names in order to differentiate the difference between *toca1* collected in the fall and *toca1* collected in the spring. What this exactly looks like is all dependent on your longitudinal study design. But a few things to consider are:
-    - How do you want to account for time?
-      + Consider how your data is collected? 
-        - Is a a cohort study? How many waves of data collection are there per cohort?
-        - Or do you follow the same participants for the entire study
-    - Do you prefer a prefix or suffix on your variables for time?
-    - Do you want to use a number system or characters to indicate time?
-    - One example of adding time to variable names:
-      + *s1_scale_sum*
-        + This would be student survey (s), wave 1, for the scale sum
-          + Referring to my documentation I would know that wave 1 is the fall of 2019-20
+*Consider a hypothetical, longitudinal RCT.*
+
+You collect data on two cohorts of students and you follow each cohort. One cohort of students is recruited in 2018-19 and the second cohort of students is recruited 2020-21. You follow each cohort for 4 waves of data collection. Two waves occur in the fall and spring of the first year, and two waves of data collection occur in the fall and spring of the follow-up year.
+
+1. If you decide to merge your data in wide format, you will need to concatenate time to your variable names in order to differentiate between the four *toca1* variables that occur in your data for each wave it was collected. What this exactly looks like is all dependent on your longitudinal study design and your preferences. One example of how you might do this for the hypothetical study is to concatenate time (as well as a form abbreviation) as a prefix to each variable. In addition, have a cohort variable in your data. With those two pieces of information I would know, by referring to documentation, that *t1_toca1* for student 30415, is teacher-report wave 1 (fall) and that since their *cohort* is 1, the year is 2018. Similarly for the same student, *w1_tch_id* is wave 1 (fall) teacher id and *cohort* 1 is 2018. If I looked at *t4_toca1* for student 30670, I would know, again through documentation, that the time is spring 2022.
+
+```{r, echo=FALSE, fig.align="center", out.width='80%'}
+
+knitr::include_graphics("img/merge.png")
+
+```
 
   📑 The National Center for Education Statistics has a great example of creating time prefixes for variables in their [ECLS-K:2011 documentation](https://nces.ed.gov/pubs2015/2015074.pdf) on page 7-3.
 
 
-2. If you decide to append data in long format over time then you no longer need to worry about having duplicate variables in a row. However, you will need to create time variables in order to capture the aspect of time. You will need to consider similar issues as we covered above:
-    - How do you want to account for time?
-      + Consider how your data is collected? 
-        - Is a a cohort study? How many waves of data collection are there per cohort?
-        - Or do you follow the same participants for the entire study
-    - Do you want your time variables to be numeric or character variables?
-    - One example of adding time variables:
-      + *cohort* (1,2)
-      + *wave* (1,2,3,4), with the 6 waves of data collection repeating for every cohort
-        + These variables would allow me to know the year and month every data collection period
-        + Documentation would tell me that 1=fall of recruitment year, 2=spring of recruitment year, 3=fall of follow-up year and 4=spring of follow-up year
-        + And, while cohort is my grouping/randomization variable, by referring to my documentation I would also know that cohort 1 was recruited fall 2019-20 and cohort 2 was recruited in 2021-22.
-        + With those two pieces of information (cohort and wave) I would know that cohort 1, wave 2 occurred in spring 2020.
+2. If you decide to append data in long format over time then you no longer need to worry about having duplicate variables in a row. However, you will need to create time variables in order to capture the aspect of time. Again, what this looks like is all dependent on your longitudinal study design and your preferences. One example of how you might do this for the hypothetical study is to create a *wave* variable as well as a *cohort* variable. With those two pieces of information I would know that cohort 1, wave 2, for example, occurred in spring 2020.
+
+```{r, echo=FALSE, fig.align="center", out.width='45%'}
+
+knitr::include_graphics("img/append.png")
+
+```
+
     
 My examples are by no means, the only way to account for time. You really can account for it however it makes sense for your project and team. As I mentioned early, just make sure to document it thoroughly so that future users know how to interpret time in your data. No matter what though, formatting for time variable names also needs to also go into your *style guide*. So if you decide to concatenate time to your variable names, in your style guide you will need to make a rule about this (ex: always add time as a prefix, always separate time by an underscore, etc.).
 
@@ -333,11 +344,11 @@ Additional reading on variable naming:
 
 At the end of any project, you will need to add relevant style guide rules to your final documentation (ex: your codebook) so that when you share your data, others know how to interpret your variable names. 
 
-Here is an example of how you would explain your variable naming in your documentation: 
+Here is an example of how you would explain your variable naming in your documentation if you are merging data in wide format: 
 
 *All variable names are made up of the following 4 components*:  
 1. measure (s=student survey, t=teacher survey, o=teacher observation)  
-2. time period (1=fall, 2=winter, 3=spring)  
+2. data collection wave (1=fall, 2=winter, 3=spring)  
 3. variable/scale name    
 4. variable/scale #  
 
@@ -353,7 +364,7 @@ Sample: *s2_toca4* = student survey-winter-toca scale-item4
 ---
 
   
-Similar to variable naming, variable value protocol also needs to be documented early on. Here are some conventions to follow:
+Similar to variable naming, variable value protocol also needs to be documented early on and standardized within and across projects. Here are some conventions to follow:
 
 * Keep values consistent across the project. Examples:
   + **Do**: Always use 1=yes; 0=no
@@ -380,8 +391,8 @@ knitr::include_graphics("img/missing.png")
 Additional reading on value coding:
 
   📑 [Jessica Logan, Ph.D.](https://figshare.com/articles/Data_Management_and_Data_Management_Plans/7890827)  
-  📑 [Data One](https://old.dataone.org/best-practices/define-parameters)  
-  📑 [Karl Broman](https://kbroman.org/dataorg/pages/consistency.html) 
+  📑 [Data One](https://old.dataone.org/best-practices/define-parameters)   
+  📑 [Karl Broman](https://kbroman.org/dataorg/pages/consistency.html)  
   📑 [Research Connections](https://www.researchconnections.org/content/childcare/find/research-lifecycle.html)
   
 
