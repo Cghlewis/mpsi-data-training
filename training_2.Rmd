@@ -23,7 +23,7 @@ You can view slides from this talk: In Progress
 
 In this training I continue to cover establishing systems that help make a project successful. These structures are the backbone of your project and without them in place, it can create many, many headaches for project staff, can compromise the confidentiality of your data, and may even make your data unusable. 
 
-If you are collecting your own original data as part of your study, for example a randomized controlled trial study, data management best practices should be interwoven throughout your data collection process. I will discuss the role of data management in data collection design, tracking of participants and data collection, as well as data storage and security. I will not go in to the ins and outs of project management, including things such as recruiting participants, consenting participants, training data collectors, or scheduling data collection as those are less tied to data management and more aligned with project coordination. However, I will note that it is important to work with your data manager on the language used in your consent form. If you plan to share your data upon conclusion of your project, either via a repository or your own data request system, you will want to make sure your consent has clear language about your intent to share your de-identified data. If applicable, also include language regarding your intent to collect identifying information in a master list/key for tracking purposes that will be stored separately from your de-identified data. Shero and Hart from Florida State University have a great [Informed Consent Template](https://figshare.com/articles/preprint/Informed_Consent_Template/13218773/1). 
+If you are collecting your own original data as part of your study, for example a randomized controlled trial study, data management best practices should be interwoven throughout your data collection process. I will discuss the role of data management in data collection instrument design, tracking of participants and data collection, as well as data storage and security. I will not go in to the minutiae of project management, including things such as recruiting participants, consenting participants, training data collectors, or scheduling data collection as those are less tied to data management and more aligned with project coordination. However, I will note that it is important to work with your data manager on the language used in your consent form. If you plan to share your data upon conclusion of your project, either via a repository or your own data request system, you will want to make sure your consent has clear language about your intent to share your de-identified data. If applicable, also include language regarding your intent to collect identifying information in a master list/key for tracking purposes that will be stored separately from your de-identified data. Shero and Hart from Florida State University have a great [Informed Consent Template](https://figshare.com/articles/preprint/Informed_Consent_Template/13218773/1). 
 
 [Meyer (2018)](https://journals.sagepub.com/doi/10.1177/2515245917747656) has several helpful dos and donts for language to use in your consent form including:
 
@@ -38,7 +38,7 @@ Other helpful consent resources:
 
  📑 [Within & Between podcast](https://open.spotify.com/episode/7cP4u3gimblEo8S8Z37UZA)  
  📑 [University of Pittsburgh](https://www.hrpo.pitt.edu/data-security-guidance)  
- 📑 [University of Guelph](https://www.uoguelph.ca/research/support-document/i-need-create-master-list-link-participant-id-numberscodes-my-data-what-should-i) 
+ 📑 [University of Guelph](https://www.uoguelph.ca/research/support-document/i-need-create-master-list-link-participant-id-numberscodes-my-data-what-should-i)   
  📑 [ICPSR](https://www.icpsr.umich.edu/web/pages/datamanagement/confientiality/conf-language.html)   
  📑 [Shero and Hart: Working with your IRB](https://figshare.com/articles/preprint/Working_with_your_IRB_Obtaining_consent_for_open_data_sharing_through_consent_forms_and_data_use_agreements/13215305/1)
 
@@ -64,7 +64,7 @@ Research teams may be restricted in how they collect their survey data due to li
 * Reduces cost and effort of manual printing and collating
 * Easier to track completion
 * More efficient than manually entering or manually scoring data (including TeleForm)
-* It reduces errors in both data collection as well as data entry/scoring
+* Reduces errors in both data collection as well as data entry/scoring
 * Can reduce missing data
 * Quick turnaround of clean data 
 * Removes the need to physically store paper data
@@ -138,7 +138,7 @@ Still, depending on your study, participants, and resources, building a web-base
       + Set up a system for error checking    
         - Consider double entering either all or a percentage of your data and running a syntax to check for errors (I will discuss this more in later trainings)
 
-   📑 Reynolds and Schatsnieder from Florida State University have some great suggestions [here](https://figshare.com/articles/preprint/The_Basics_of_Data_Management/13215350/1) for setting up a data entry station for any manual data entry that needs to occur.
+   📑 Reynolds and Schatsnieder from Florida State University have some great suggestions [here](https://figshare.com/articles/preprint/The_Basics_of_Data_Management/13215350/1) for setting up a data entry station and protocol for any manual data entry that needs to occur.
 
 ### Assessments
 
@@ -225,8 +225,8 @@ Other considerations to maintain electronic data privacy include:
 
   + If you take paper forms into the field with participant names on them, consider doing the following to link those names to IDs at a later time:  
     - Write the participant ID on the form and then use a removable label with participant name and place that over the ID. That way the participant never sees the ID, and when you return to the office, you can remove the name label, shred it, and be left with only the ID on the form.  
-    - Write the name on the form, and when the form returns to the office, use a black permanent marker to black out the name and then write the ID on the form before entry. I like this less, because there is still a chance you will be able to see the name through the marker.  
-    - If you need the name in the field (to identify students), but you also need the ID in the field (say to enter on a data collection form) then consider having one sheet with names with a double ID (such as 1,2,3,4) and another sheet that connects the double ID to the true study IDs. These two lists could obviously also be housed on a password protected tablet or phone in the field for additional security. 
+    - Attach a cover sheet to each form that includes identifying information such as student and/or teacher name, then when returning to the office, remove the cover sheet, shred it, and write the study ID on the form before entry.   
+    - If you need the name in the field (to identify students), but you also need the ID in the field (say to enter on a data collection form) then consider having one roster with names with a double ID (such as 1,2,3,4) and another sheet that connects the double ID to the true study IDs. These two lists could obviously also be housed on a password protected tablet or phone in the field for additional security. 
     
 ```{r, echo=FALSE, fig.align="center", out.width='60%'}
 
