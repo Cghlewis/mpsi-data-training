@@ -195,8 +195,11 @@ Consents and assents can also be collected through secure web-based tools, such 
 
 Last I wanted to mention that it is also possible to build all or almost all of your study into one tool (depending on your study). Using a tool like Qualtrics, or building your own tools in applications like R Shiny, you can build your consent, randomization, study ID assignment, survey and assessment all in one tool that participants can access in one simple link. Lucy D'Agostino McGowan has a great example in her slides [here](https://docs.google.com/presentation/d/1FtI4KeX3C8cFBJi0NeTURqfXphrQ2W8sxoDQAd7LrRo/edit#slide=id.p).
 
+---
 
 ## Security in the Field
+
+---
 
 Researchers are always balancing participant confidentiality with maintaining accurate data. IRB requires that participants should **not know their study IDs** and you should **never have a document that has both participant name and study ID** on the same form. However, if your study is longitudinal, maintaining the accuracy of your participant IDs is critical to linking data over time.
 
