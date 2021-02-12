@@ -146,7 +146,7 @@ A few important pieces of information before moving on:
       - Select "Properties"  
       - In the "General" tab, at the bottom is a section called "Attributes"  
       - Select the box "Read Only"  
-   4. Last, another school of thought is that you shouldn't use folders at all. For example, SharePoint advocates for the use metadata/tagging to organize and find files rather than using folders. I do not have experience with this so I won't elaborate further. But [here](https://enterprise-knowledge.com/folders-v-metadata-sharepoint-document-libraries/) is a resource if you would like more information.
+   4. Last, another school of thought is that you shouldn't use folders at all. For example, SharePoint advocates for the use metadata/tagging to organize and find files rather than using folders. I do not have experience with this so I won't elaborate further. But here are resources on tagging in [SharePoint](https://enterprise-knowledge.com/folders-v-metadata-sharepoint-document-libraries/) and [Windows 10](https://www.webnots.com/how-to-add-and-use-tags-in-windows-10/) if you would like more information.
 
 
 Resources: 
@@ -305,7 +305,7 @@ You do not need to have this decided right at the beginning of your project. You
 
 When it comes time to start merging your data (maybe you need the first year of data merged to analyze for a funding report), then you will need to make some decisions about how you want to merge your data. The great thing is, if you choose one method and then decide you need your data in the other format later on, it is very easy to switch back and forth through restructuring your data in a statistical program like R or Stata. We will cover this more in a later training.
 
-*Consider a hypothetical, longitudinal RCT.*
+*Consider a hypothetical, longitudinal cluster randomized trial (CRT).*
 
 You collect data on two cohorts of students and you follow each cohort. Your first cohort of students is recruited in 2018-19 and the second cohort of students is recruited 2020-21. You follow each cohort for 4 waves of data collection. Two waves occur in the fall and spring of the first year, and two waves of data collection occur in the fall and spring of the follow-up year.
 

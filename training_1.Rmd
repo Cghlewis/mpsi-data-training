@@ -194,7 +194,7 @@ It's good to also consider starting to document the variables you aren't collect
       + Location/Site ID (*sch_id*, *dist_id*)
     + Depending on your study design you may also need to account for the following:
       + Treatment/condition/intervention group (Ex: *int*)
-      + Time/wave (*year*, *time*)
+      + Time/wave (*year*, *wave*)
       + Randomization blocks (*cohort*, *group*)
     
 * Variables you derive:

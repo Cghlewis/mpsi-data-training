@@ -391,14 +391,15 @@ div.tocify {
 
 <p><br></p>
 <div class="presentation">
-<p><br> You can view slides from this talk: In Progress</p>
+<p><br> You can view slides from this talk <a href="https://cghlewis.github.io/mpsi-training2/">here</a></p>
 </div>
 <hr />
 <div id="overview" class="section level2">
 <h2>Overview</h2>
 <hr />
 <p>In this training I continue to cover establishing systems that help make a project successful. These structures are the backbone of your project and without them in place, it can create many, many headaches for project staff, can compromise the confidentiality of your data, and may even make your data unusable.</p>
-<p>If you are collecting your own original data as part of your study, for example a randomized controlled trial study, data management best practices should be interwoven throughout your data collection process. I will discuss the role of data management in data collection instrument design, tracking of participants and data collection, as well as data storage and security. I will not go in to the minutiae of project management, including things such as recruiting participants, consenting participants, training data collectors, or scheduling data collection as those are less tied to data management and more aligned with project coordination. However, I will note that it is important to work with your data manager on the language used in your consent form. If you plan to share your data upon conclusion of your project, either via a repository or your own data request system, you will want to make sure your consent has clear language about your intent to share your de-identified data. If applicable, also include language regarding your intent to collect identifying information in a master list/key for tracking purposes that will be stored separately from your de-identified data. Shero and Hart from Florida State University have a great <a href="https://figshare.com/articles/preprint/Informed_Consent_Template/13218773/1">Informed Consent Template</a>.</p>
+<p>If you are collecting your own original data as part of your study, for example a randomized controlled trial study, data management best practices should be interwoven throughout your data collection process. I will discuss the role of data management in data collection instrument design, tracking of participants and data collection, as well as data storage and security. I will not go in to the minutiae of project management, including things such as recruiting participants, consenting participants, training data collectors, or scheduling data collection as those are less tied to data management and more aligned with project coordination.</p>
+<p>However, I will note that it is important that project coordinators and PIs work with a data manager to develop the language used in a consent form. If you plan to share your data upon conclusion of your project, either via a repository or your own data request system, you will want to make sure your consent has clear language about your intent to share your de-identified data. If applicable, also include language regarding your intent to collect identifying information in a master list/key for tracking purposes that will be stored separately from your de-identified data. Shero and Hart from Florida State University have a great <a href="https://figshare.com/articles/preprint/Informed_Consent_Template/13218773/1">Informed Consent Template</a>.</p>
 <p><a href="https://journals.sagepub.com/doi/10.1177/2515245917747656">Meyer (2018)</a> has several helpful dos and donts for language to use in your consent form including:</p>
 <p>✔️ Don’t promise to destroy your data (unless your funder explicitly requires it)<br />
 ✔️ Don’t promise to not share data<br />
@@ -543,14 +544,11 @@ div.tocify {
 <div id="web-based-assessments" class="section level4">
 <h4><strong>Web-based Assessments</strong></h4>
 <p>If a web-based option already exists for your assessment, the obvious answer is to simply use this. For example the Renaissance STAR assessment is administered online.</p>
-<p>However, if your assessment is only available in paper form (such as the BASC-3), consider converting it to a web-based form if at all possible. You can do that in several ways:</p>
+<p>However, if your assessment is only available in paper form, consider converting it to a web-based form if at all possible without altering the integrity of the assessment. You can do that in several ways:</p>
 <ol style="list-style-type: decimal">
 <li>Build the assessment into an online survey platform.</li>
-<li>Build your own application to collect data.</li>
+<li>Build your own application to collect data. - If you build the assessment into your own app or into a survey platform, set it up using the same recommendations for web-based surveys (ex: back end coding to match the actual values on the forms, back end naming variables correctly, etc.)</li>
 </ol>
-<ul>
-<li>If you build the assessment into your own app or into a survey platform, set it up using the same recommendations for web-based surveys (ex: back end coding to match the actual values on the forms, back end naming variables correctly, etc.)</li>
-</ul>
 <p>Once data is collected, proceed with scoring as usual, following the guidelines of the specific assessment.</p>
 </div>
 <div id="offline-assessments" class="section level4">
@@ -569,8 +567,8 @@ div.tocify {
 <h4><strong>Offline Observations</strong></h4>
 <p>If WiFi is not available to you in the field, consider making a form that still eliminates the need for data entry (so not a paper form) and that ideally connects to or creates some type of database or table. Then have data collectors enter data into this form on a device in the field. This does not have to be high-tech. It could simply be:</p>
 <ul>
-<li>An excel file that is pre-built with every field available and the options for each field are limited to only the correct options through a drop-down list.</li>
-<li>Create an Access form that is connected to a database</li>
+<li>An excel file that is pre-built with every observation field and the options for each field are limited to only the correct options through a drop-down list.</li>
+<li>Create a Microsoft Access form that is connected to a database</li>
 <li>Utilize the offline survey options provided by tools such as Qualtrics (see Offline Surveys section)</li>
 <li>Build or use existing offline tools. For duration code classroom observations, we’ve used <a href="https://mooses.vueinnovations.com/">software</a> built by a developer at Vanderbilt to collect frequency and duration observation data. It stores observation text files to the data collectors device.</li>
 </ul>
@@ -598,7 +596,7 @@ div.tocify {
 <div id="security-in-the-field" class="section level2">
 <h2>Security in the Field</h2>
 <hr />
-<p>Researchers are always balancing participant confidentiality with maintaining accurate data. IRB requires that participants should <strong>not know their study IDs</strong> and you should <strong>never have a document that has both participant name and study ID</strong> on the same form. However, if your study is longitudinal, maintaining the accuracy of your participant IDs is critical to linking data over time.</p>
+<p>Researchers are always balancing participant confidentiality with maintaining accurate data. IRB requires that participants should <strong>not know their study IDs</strong> and you should <strong>never have a document that has both participant name and study ID</strong> on the same form. However, if your study is longitudinal, maintaining the accuracy of your study IDs is critical to linking data over time.</p>
 <p>If you are collecting data longitudinally and need to de-identify it, some ideas to handle Study IDs in data collection are the following:</p>
 <div id="web-based-data" class="section level3">
 <h3>Web-based Data:</h3>
@@ -633,7 +631,7 @@ div.tocify {
 <ul>
 <li>If you take paper forms into the field with participant names on them, consider doing the following to link those names to IDs at a later time:
 <ul>
-<li>Write the participant ID on the form and then use a removable label with participant name and place that over the ID. That way the participant never sees the ID, and when you return to the office, you can remove the name label, shred it, and be left with only the ID on the form.<br />
+<li>Write the study ID on the form and then use a removable label with participant name and place that over the ID. That way the participant never sees the ID, and when you return to the office, you can remove the name label, shred it, and be left with only the ID on the form.<br />
 </li>
 <li>Attach a cover sheet to each form that includes identifying information such as student and/or teacher name, then when returning to the office, remove the cover sheet, shred it, and write the study ID on the form before entry.<br />
 </li>
@@ -695,9 +693,9 @@ div.tocify {
 <li>RedCap</li>
 <li>Salesforce</li>
 <li>Qualtrics</li>
-<li>A relational database, maintained using a SQL database engine such as <a href="https://datacarpentry.org/sql-socialsci/">SQLite</a>, MySQL, or PostgreSQL.</li>
+<li>Forms that feed into a relational database, maintained using a SQL (structured query language) database engine such as <a href="https://datacarpentry.org/sql-socialsci/">SQLite</a>, MySQL, or PostgreSQL</li>
 </ul>
-<p>The possibilities really are endless and it all depends on what your team has access to and how tech-savvy your team is. Some systems require specific programming knowledge (ex: setting up a SQL database). It really doesn’t matter too much but I will say I personally prefer using a relational database system, which allows relating tables to one another, eliminating redundant data. Without getting too technical, <a href="https://en.wikipedia.org/wiki/Database_normalization">database normalization</a> increases performance, decreases storage, and makes it much easier to make updates to tables as changes occur. There are many options out there, but Access is just one example of a tool that allows you to relate tables and allow some form of querying.</p>
+<p>The possibilities really are endless and it all depends on what your team has access to and how tech-savvy your team is. Some systems require specific programming knowledge (ex: setting up a SQL database). It really doesn’t matter too much but I will say I personally prefer using a relational database system, which allows relating tables to one another (a schema), eliminating redundant data. Without getting too technical, <a href="https://en.wikipedia.org/wiki/Database_normalization">database normalization</a> increases performance, decreases storage, and makes it much easier to make updates to tables as changes occur. There are many options out there, but Access is just one example of a tool that allows you to relate tables and allow some form of querying.</p>
 <p>Consider this first structure, with 3 very simple tables (a student table, a teacher table, and a school table). Each table has a primary key that makes individuals within that table unique and each table can be connected through a foreign key. For example in the student table, the primary key is <code>studentid</code> and the foreign key is <code>teacherid</code> which connects students to the teacher table. Using a query language (such as SQL) in systems such as Access, we can pull multiple tables together ad hoc to make a table with all the pieces of information we need.</p>
 <p><img src="img/tables.PNG" width="70%" style="display: block; margin: auto;" /></p>
 <p>Say for example, in an effort to get more students in our study, we wanted to send out emails to teachers who have had low student consent numbers for our study. To get the information we need to send those emails, we could easily run a query, such as this SQL query, that joins the student and teacher tables by <code>tch_id</code> and then counts the number of students consented by teacher name and includes teacher email:</p>
@@ -961,7 +959,7 @@ div.tocify {
 <p>At the highest, organizational level, you will want to have separate folders for each of your projects, as well as an overall <em>Team</em> folder that houses general documents related to your team functioning (meeting notes, hr documents, team expectations). You will want to develop a style guide that covers general rules across all folders and house that style guide in an easily accessible location (ex: Team Wiki and/or a README in each project folder)</p>
 <p>Then, within each project folder you will want to build a hierarchy something like this:</p>
 <pre><code>                    levelName
-1 project-new                
+1 project-name               
 2  °--life-cycle-folder      
 3      °--time               
 4          °--data-type      

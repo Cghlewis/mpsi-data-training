@@ -12,7 +12,7 @@ output:
 
 :::presentation
 <br>
-You can view slides from this talk: In Progress
+You can view slides from this talk [here](https://cghlewis.github.io/mpsi-training2/)
 :::
 
 ---
@@ -23,7 +23,9 @@ You can view slides from this talk: In Progress
 
 In this training I continue to cover establishing systems that help make a project successful. These structures are the backbone of your project and without them in place, it can create many, many headaches for project staff, can compromise the confidentiality of your data, and may even make your data unusable. 
 
-If you are collecting your own original data as part of your study, for example a randomized controlled trial study, data management best practices should be interwoven throughout your data collection process. I will discuss the role of data management in data collection instrument design, tracking of participants and data collection, as well as data storage and security. I will not go in to the minutiae of project management, including things such as recruiting participants, consenting participants, training data collectors, or scheduling data collection as those are less tied to data management and more aligned with project coordination. However, I will note that it is important to work with your data manager on the language used in your consent form. If you plan to share your data upon conclusion of your project, either via a repository or your own data request system, you will want to make sure your consent has clear language about your intent to share your de-identified data. If applicable, also include language regarding your intent to collect identifying information in a master list/key for tracking purposes that will be stored separately from your de-identified data. Shero and Hart from Florida State University have a great [Informed Consent Template](https://figshare.com/articles/preprint/Informed_Consent_Template/13218773/1). 
+If you are collecting your own original data as part of your study, for example a randomized controlled trial study, data management best practices should be interwoven throughout your data collection process. I will discuss the role of data management in data collection instrument design, tracking of participants and data collection, as well as data storage and security. I will not go in to the minutiae of project management, including things such as recruiting participants, consenting participants, training data collectors, or scheduling data collection as those are less tied to data management and more aligned with project coordination. 
+
+However, I will note that it is important that project coordinators and PIs work with a data manager to develop the language used in a consent form. If you plan to share your data upon conclusion of your project, either via a repository or your own data request system, you will want to make sure your consent has clear language about your intent to share your de-identified data. If applicable, also include language regarding your intent to collect identifying information in a master list/key for tracking purposes that will be stored separately from your de-identified data. Shero and Hart from Florida State University have a great [Informed Consent Template](https://figshare.com/articles/preprint/Informed_Consent_Template/13218773/1). 
 
 [Meyer (2018)](https://journals.sagepub.com/doi/10.1177/2515245917747656) has several helpful dos and donts for language to use in your consent form including:
 
@@ -148,11 +150,11 @@ For the same reasons I recommend web-based tools for surveys, I also recommend w
 
 If a web-based option already exists for your assessment, the obvious answer is to simply use this. For example the Renaissance STAR assessment is administered online. 
 
-However, if your assessment is only available in paper form (such as the BASC-3), consider converting it to a web-based form if at all possible. You can do that in several ways:
+However, if your assessment is only available in paper form, consider converting it to a web-based form if at all possible without altering the integrity of the assessment. You can do that in several ways:
 
   1. Build the assessment into an online survey platform.
   2. Build your own application to collect data.
-  - If you build the assessment into your own app or into a survey platform, set it up using the same recommendations for web-based surveys (ex: back end coding to match the actual values on the forms, back end naming variables correctly, etc.)
+    - If you build the assessment into your own app or into a survey platform, set it up using the same recommendations for web-based surveys (ex: back end coding to match the actual values on the forms, back end naming variables correctly, etc.)
 
 Once data is collected, proceed with scoring as usual, following the guidelines of the specific assessment.
 
@@ -172,8 +174,8 @@ Observation forms can be built into an online survey platform or your own applic
 
 If WiFi is not available to you in the field, consider making a form that still eliminates the need for data entry (so not a paper form) and that ideally connects to or creates some type of database or table. Then have data collectors enter data into this form on a device in the field. This does not have to be high-tech. It could simply be: 
 
-  - An excel file that is pre-built with every field available and the options for each field are limited to only the correct options through a drop-down list.
-  - Create an Access form that is connected to a database
+  - An excel file that is pre-built with every observation field and the options for each field are limited to only the correct options through a drop-down list.
+  - Create a Microsoft Access form that is connected to a database
   - Utilize the offline survey options provided by tools such as Qualtrics (see Offline Surveys section)
   - Build or use existing offline tools. For duration code classroom observations, we've used [software](https://mooses.vueinnovations.com/) built by a developer at Vanderbilt to collect frequency and duration observation data. It stores observation text files to the data collectors device. 
 
@@ -201,7 +203,7 @@ Last I wanted to mention that it is also possible to build all or almost all of 
 
 ---
 
-Researchers are always balancing participant confidentiality with maintaining accurate data. IRB requires that participants should **not know their study IDs** and you should **never have a document that has both participant name and study ID** on the same form. However, if your study is longitudinal, maintaining the accuracy of your participant IDs is critical to linking data over time.
+Researchers are always balancing participant confidentiality with maintaining accurate data. IRB requires that participants should **not know their study IDs** and you should **never have a document that has both participant name and study ID** on the same form. However, if your study is longitudinal, maintaining the accuracy of your study IDs is critical to linking data over time.
 
 If you are collecting data longitudinally and need to de-identify it, some ideas to handle Study IDs in data collection are the following:
 
@@ -227,7 +229,7 @@ Other considerations to maintain electronic data privacy include:
 ### Offline Data:
 
   + If you take paper forms into the field with participant names on them, consider doing the following to link those names to IDs at a later time:  
-    - Write the participant ID on the form and then use a removable label with participant name and place that over the ID. That way the participant never sees the ID, and when you return to the office, you can remove the name label, shred it, and be left with only the ID on the form.  
+    - Write the study ID on the form and then use a removable label with participant name and place that over the ID. That way the participant never sees the ID, and when you return to the office, you can remove the name label, shred it, and be left with only the ID on the form.  
     - Attach a cover sheet to each form that includes identifying information such as student and/or teacher name, then when returning to the office, remove the cover sheet, shred it, and write the study ID on the form before entry.   
     - If you need the name in the field (to identify students), but you also need the ID in the field (say to enter on a data collection form) then consider having one roster with names with a double ID (such as 1,2,3,4) and another sheet that connects the double ID to the true study IDs. These two lists could obviously also be housed on a password protected tablet or phone in the field for additional security. 
     
@@ -289,9 +291,9 @@ A tracking database (sometimes called a master list because it contains data tha
   + RedCap
   + Salesforce
   + Qualtrics
-  + A relational database, maintained using a SQL database engine such as [SQLite](https://datacarpentry.org/sql-socialsci/), MySQL, or PostgreSQL.
+  + Forms that feed into a relational database, maintained using a SQL (structured query language) database engine such as [SQLite](https://datacarpentry.org/sql-socialsci/), MySQL, or PostgreSQL
 
-The possibilities really are endless and it all depends on what your team has access to and how tech-savvy your team is. Some systems require specific programming knowledge (ex: setting up a SQL database). It really doesn't matter too much but I will say I personally prefer using a relational database system, which allows relating tables to one another, eliminating redundant data. Without getting too technical, [database normalization](https://en.wikipedia.org/wiki/Database_normalization) increases performance, decreases storage, and makes it much easier to make updates to tables as changes occur. There are many options out there, but Access is just one example of a tool that allows you to relate tables and allow some form of querying.
+The possibilities really are endless and it all depends on what your team has access to and how tech-savvy your team is. Some systems require specific programming knowledge (ex: setting up a SQL database). It really doesn't matter too much but I will say I personally prefer using a relational database system, which allows relating tables to one another (a schema), eliminating redundant data. Without getting too technical, [database normalization](https://en.wikipedia.org/wiki/Database_normalization) increases performance, decreases storage, and makes it much easier to make updates to tables as changes occur. There are many options out there, but Access is just one example of a tool that allows you to relate tables and allow some form of querying.
 
 Consider this first structure, with 3 very simple tables (a student table, a teacher table, and a school table). Each table has a primary key that makes individuals within that table unique and each table can be connected through a foreign key. For example in the student table, the primary key is `studentid` and the foreign key is `teacherid` which connects students to the teacher table. Using a query language (such as SQL) in systems such as Access, we can pull multiple tables together ad hoc to make a table with all the pieces of information we need.
 
@@ -568,10 +570,10 @@ At the highest, organizational level, you will want to have separate folders for
 
 Then, within each project folder you will want to build a hierarchy something like this:
 
-```{r, echo=FALSE, comment=NA}
+```{r echo=FALSE, comment=NA}
 library(data.tree)
 
-project2 <- Node$new("project-new")
+project2 <- Node$new("project-name")
   lifecycle <- project2$AddChild("life-cycle-folder")
     time <- lifecycle$AddChild("time")
       datatype <- time$AddChild("data-type")
@@ -600,3 +602,4 @@ More details on setting up this structure can be found in [training_3](https://c
 Resources:
 
   📑 [Helsinki University Library](https://zenodo.org/record/1914401#.YAh46ehKhPZ)
+  
