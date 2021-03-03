@@ -116,29 +116,53 @@ Here are some excellent resources for writing up a DMP:
 
 Before diving into the content of this training, I think it is helpful to cover terminology that will be used in these modules. Many concepts in education research have multiple terms and can be used interchangeably (other terms are listed in brackets). Across different institutions, researchers may use all or some of these terms.
 
-Unique identifier (UID): This is a numeric or alphanumeric identifier that is unique to every participant, site or object.
-Participant ID: [study ID, subject ID, participant code, record id] In longitudinal studies, these identifiers allow us to link data across time.
-Condition: [treatment, intervention status]
-Site ID: [location ID]
-Cohort:
-Wave: [time period, event]
-Tracking: [roster, demographic file, master list, master key] (sometimes called a master list because it contains data that links your assigned study IDs to their identifiable information)
-Variable: [column, field]
-Variable name: [header]
-Subject: [case, row, participant, record]
-Directory:
-Path:
-Randomization block:
-Study:
-Data: "Data are items of recorded information considered collectively for reference or analysis" ([University of Pittsburgh](https://pitt.libguides.com/managedata/understanding)). It can include, but is not limited to survey responses, measurements, assessments, recordings, code, transcripts, and statistics.
-Dataset: [dataframe]
-Raw data: [untouched]
-Clean data: [processed data]
-Standardization:
-PII: 
-Missing: [NULL, NA]
-Anonymous:
-Confidential:
+**Unique identifier (UID)**: This is a numeric or alphanumeric identifier that is unique to every participant, site or object.  
+
+**Participant ID**: [study ID, subject ID, participant code, record id, unique id] In longitudinal studies, these identifiers allow us to link data across time.  
+
+**Condition**: [treatment, intervention status]  
+
+**Site ID**: [location ID]  
+
+**Cohort**:  
+
+**Wave**: [time period, event]  
+
+**Tracking**: [roster, demographic file, master list, master key] (sometimes called a master list because it contains data that links your assigned study IDs to their identifiable information)  
+
+**Variable**: [column, field]  
+
+**Variable name**: [header] 
+
+**Subject**: [case, row, participant, record]  
+
+**Directory**:  
+
+**Path**:
+
+**Randomization block**: 
+
+**Study**:  
+
+**Data**: "Data are items of recorded information considered collectively for reference or analysis" ([University of Pittsburgh](https://pitt.libguides.com/managedata/understanding)). It can include, but is not limited to survey responses, measurements, assessments, recordings, code, transcripts, and statistics.  
+
+**Dataset**: [dataframe, spreadsheet] 
+
+**Raw data**: [untouched]  
+
+**Clean data**: [processed data]  
+
+**Database**:
+
+**Standardization**:  
+
+**PII**:   
+
+**Missing**: [NULL, NA] 
+
+**Anonymous**:  
+
+**Confidential**:  
 
 
 ---
@@ -165,30 +189,23 @@ knitr::include_graphics("img/planning-consider.png")
 As I have been working on this training I have found there are some excellent existing resources out there as well as others who are doing similar work, even in the field of education. Below are some of the resources I highly recommend.
 
 1. Academic Research Librarians
-
-Almost every academic institution employs research data librarians whose job is to help faculty and staff with research data services. This is a great resource to utilize if you work at a university.
+    + Almost every academic institution employs research data librarians whose job is to help faculty and staff with research data services. This is a great resource to utilize if you work at a university.
 Examples:
-[Research Data Management at University of Pittsburgh](https://pitt.libguides.com/managedata)
-[Washington University Data Services Team](https://library.wustl.edu/research-support/data-services/)
-[Data at Reed](https://www.reed.edu/data-at-reed/index.html)
+    + [Research Data Management at University of Pittsburgh](https://pitt.libguides.com/managedata)
+    + [Washington University Data Services Team](https://library.wustl.edu/research-support/data-services/)
+    + [Data at Reed](https://www.reed.edu/data-at-reed/index.html)
 
 2. A team at Florida State University (including Christopher Schatschneider, Tara Reynolds, Sara Hart and colleagues) have been putting out tons of resources around data management, specifically in education, and open science practices in general. 
-
-[The Basic of Data Management](https://docs.google.com/document/d/1GfIo67-wqq-26ZG9etar5tiKKYLLqWCra8jySolAK7Y/edit)
-
-[Open Science in Education Sciences](https://edarxiv.org/qdj4t/)
-
-[Data Sharing in Education Science](https://edarxiv.org/2x3cu)
+      + [The Basic of Data Management](https://docs.google.com/document/d/1GfIo67-wqq-26ZG9etar5tiKKYLLqWCra8jySolAK7Y/edit)
+      + [Open Science in Education Sciences](https://edarxiv.org/qdj4t/)
+      + [Data Sharing in Education Science](https://edarxiv.org/2x3cu)
 
 3. Teague Henry, a postdoctoral fellow in the Department of Psychiatry at the University of Pittsburgh, has been putting out blog posts around data management and they have be very insightful.
-
-[Eight Principles of Good Data Management](https://www.teaguehenry.com/strings-not-factors/2021/2/21/eight-principles-of-good-data-management)
-
-[Data Management for Researchers: Three Tales](https://www.teaguehenry.com/strings-not-factors/2021/1/24/data-management-for-researchers-three-terrifying-tales)
+    + [Eight Principles of Good Data Management](https://www.teaguehenry.com/strings-not-factors/2021/2/21/eight-principles-of-good-data-management)
+    + [Data Management for Researchers: Three Tales](https://www.teaguehenry.com/strings-not-factors/2021/1/24/data-management-for-researchers-three-terrifying-tales)
 
 4. Open Science Foundation has endless slide decks covering data management and open science concepts.
-
-Simply go to https://osf.io/ and type "data management slides" into the search box and you will get over 1 million results!
+    + Simply go to https://osf.io/ and type "data management slides" into the search box and you will get over 1 million results!
 
 5. Kristin Briney, a librarian at CalTech, wrote the book [Data Management for Researchers](http://dataabinitio.com/?author=1), and also has a [blog](http://dataabinitio.com/) where she frequently posts about data management topics and issues.
 
