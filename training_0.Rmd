@@ -46,15 +46,15 @@ Some teams may include additional roles such as research director, lab manager, 
 
 ---
 
-When considering the research project life cycle, oftentimes data managers are not brought in to the project until the "storing data" phase, which typically includes cleaning data to prepare it for future analysis. However, ideally the data manager, whoever has that role, would be involved as early as the design study phase. In the design study phase, the data manager can help design the data management plan. Then during the acquiring materials phase, it's crucial to have a data manager involved when building data collection and data tracking tools. A data manager can help the team to forwardly think about the final data use cases ahead to ensure data is collected efficiently, reliably, and securely, and also ensure that key pieces of data are not left out. This phase is also a perfect time to begin data documentation, best created as a collaboration between the implementation team and the data manager/s. During the data collection phase, the data manager can help trouble shoot data issues as they occur. As the data begins rolling in, the data manager is then front and center during the data cleaning and storage phase, ensuring data is prepped for analysis, stored securely, and ready for sharing.
+When considering the research project life cycle, oftentimes data managers are not brought in to the project until the "organize data" phase, which typically includes cleaning data to prepare it for future analysis. However, ideally the data manager, whoever has that role, would be involved as early as the "develop proposal" phase. In this phase, the data manager can help design the data management plan. Then during the "plan project" phase, it is crucial to have a data manager involved when building data collection and data tracking tools. A data manager can help the team to forwardly think about the final data use cases ahead to ensure data is collected efficiently, reliably, and securely, and also ensure that key pieces of data are not left out. This phase is also a perfect time to begin data documentation, best created as a collaboration between the implementation team and the data manager/s. During the "perform research" and "create data" phase, the data manager can help trouble shoot data issues as they occur. As the data begins rolling in, the data manager is then front and center during the "data storage" and "organize data" phases, ensuring data is prepped for analysis, stored securely, and ready for sharing.
 
-```{r, echo=FALSE, fig.align="center", out.width='50%'}
+```{r, echo=FALSE, fig.align="center", out.width='70%'}
 
-knitr::include_graphics("img/lifecycle.png")
+knitr::include_graphics("img/lifecycle3.png")
 
 ```
 
-Source: [Center for Open Science](https://www.cos.io/)
+Source: [OSF:NIH](https://osf.io/48ufs/)
 
 ---
 

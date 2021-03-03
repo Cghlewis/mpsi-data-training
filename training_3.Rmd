@@ -239,7 +239,7 @@ Resources:
 
 ---
 
-Variable naming protocol should be created early in the project. You will need this protocol in place to start creating your data dictionary. 
+Variable naming protocol should be created early in the project and added to your style guide. You will need this protocol in place to start creating your data dictionary. 
 
 There are many best practices and considerations around variable naming. 
 
@@ -255,7 +255,7 @@ There are many best practices and considerations around variable naming.
 - If you have used the question/scale before, consider keeping the variable name the same across projects
 - Use the same variable name across time in a project
   + If you asked "What is your anxiety level" in fall 2019 and you named it *anxiety1*, and you ask "What is your anxiety level" again in spring 2020, name it *anxiety1* again.
-- Don't use spaces or special characters (inluding `.`)
+- Don't use spaces or special characters (including `.`)
 - Do not start a variable name with a number
 - Be consistent with delimiters and capitalization
   + Pascal case (*ScaleSum*)
@@ -267,6 +267,9 @@ There are many best practices and considerations around variable naming.
   + If you collect student gender from a survey and from their school records, consider naming one *s_gender* and the other *d_gender*
 - Consider denoting reverse coding in the variable name
   + scale1_r (to denote that you have reverse coded that question)
+- Choose abbreviations to use for common names/phrases
+  + scaled score = ss
+  + percentile rank = pr
 
 In addition to best practices, here are other practices that I've noticed others implement. You can pick and choose what works best for your team. Just make sure whatever you choose, you put it in your style guide and follow those guidelines all throughout your project.
 
@@ -305,11 +308,11 @@ You do not need to have this decided right at the beginning of your project. You
 
 When it comes time to start merging your data (maybe you need the first year of data merged to analyze for a funding report), then you will need to make some decisions about how you want to merge your data. The great thing is, if you choose one method and then decide you need your data in the other format later on, it is very easy to switch back and forth through restructuring your data in a statistical program like R or Stata. We will cover this more in a later training.
 
-*Consider a hypothetical, longitudinal cluster randomized trial (CRT).*
+*Consider a hypothetical, longitudinal randomized controlled trial*
 
-You collect data on two cohorts of students and you follow each cohort. Your first cohort of students is recruited in 2018-19 and the second cohort of students is recruited 2020-21. You follow each cohort for 4 waves of data collection. Two waves occur in the fall and spring of the first year, and two waves of data collection occur in the fall and spring of the follow-up year.
+You collect data on two cohorts of students and you follow each cohort for two years. Your first cohort of students is recruited in 2018-19 and the second cohort of students is recruited 2020-21. You follow each cohort for 4 waves of data collection. Two waves occur in the fall and spring of the first year, and two waves occur in the fall and spring of the follow-up year.
 
-1. If you decide to merge your data in wide format, you will need to concatenate time to your variable names in order to differentiate between the four *toca1* variables that occur in your data for each wave it was collected. What this exactly looks like is all dependent on your longitudinal study design and your preferences. One example of how you might do this for the hypothetical study is to concatenate time (as well as a form abbreviation) as a prefix to each variable. In addition, have a cohort variable in your data. With those two pieces of information I would know, by referring to documentation, that *t1_toca1* for student 30415, is teacher-report wave 1 (fall) and that since their *cohort* is 1, the year is 2018. Similarly for the same student, *w1_tch_id* is wave 1 (fall) teacher id and *cohort* 1 is 2018. If I looked at *t4_toca1* for student 30670, I would know, again through documentation, that the time is spring 2022.
+1. If you decide to merge your data in wide format, you will need to concatenate time to your variable names in order to differentiate between the 4 *toca1* variables that occur in your data for each wave it was collected. What this exactly looks like is all dependent on your longitudinal study design and your preferences. One example of how you might do this for the hypothetical study is to concatenate time (as well as a form abbreviation) as a prefix to each variable. In addition, have a cohort variable in your data. With those two pieces of information I would know, by referring to documentation, that *t1_toca1* for student 30415, is teacher-report wave 1 (fall) and that since their *cohort* is 1, the year is 2018. Similarly for the same student, *w1_tch_id* is wave 1 (fall) teacher id and *cohort* 1 is 2018. If I looked at *t4_toca1* for student 30670, I would know, again through documentation, that the time is spring 2022.
 
 ```{r, echo=FALSE, fig.align="center", out.width='80%'}
 
@@ -329,7 +332,7 @@ knitr::include_graphics("img/append.png")
 ```
 
     
-My examples are by no means, the only way to account for time. You really can account for it however it makes sense for your project and team. As I mentioned early, just make sure to document it thoroughly so that future users know how to interpret time in your data. No matter what though, formatting for time variable names also needs to also go into your *style guide*. So if you decide to concatenate time to your variable names, in your style guide you will need to make a rule about this (ex: always add time as a prefix, always separate time by an underscore, etc.).
+My examples are by no means, the only way to account for time. You really can account for it however it makes sense for your project and team. For example you may use years and seasons (f18,s19,f19,s20) rather than numeric waves (1,2,3,4). As I mentioned early, just make sure to document it thoroughly so that future users know how to interpret time in your data. No matter what though, formatting for time variable names also needs to also go into your *style guide*. So if you decide to concatenate time to your variable names, in your style guide you will need to make a rule about this (ex: always add time as a prefix, always separate time by an underscore, etc.).
 
 Additional reading on variable naming:
 

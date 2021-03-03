@@ -17,42 +17,11 @@ You can view slides from this talk [here](https://cghlewis.github.io/mpsi-traini
   
 ---
 
-## Data Management Plan
+## Overview
 
 ---
 
-To increase transparency and to advance scientific inquiry in education research, the Institute of Education Science ([IES](https://ies.ed.gov/funding/datasharing_implementation.asp)) has a policy on providing access to your data at the conclusion of projects funded through their research centers (*Exploration* or *Initial Efficacy and Follow-Up* grants). The plan for sharing data must be laid out in a data management plan (DMP) which is included as an appendix in your grant application. Among other things, the DMP must include the following:  
-
-✔️ Type of data to be shared  
-✔️ Procedures for managing and maintaining confidentiality  
-✔️ Roles and responsibilities of project staff in the management of research data  
-✔️ Expected schedule for data sharing (no later than the publication of findings and at least for 10 years)  
-✔️ Format of the final dataset  
-✔️ Documentation to be provided  
-✔️ Method of data sharing (Share the data yourself, use a data archive, combination of both)  
-✔️ Whether or not a data sharing agreement specifies the conditions under which the data will be shared  
-✔️ Any circumstances that prevent any data from being shared  
-✔️ Most recent rule: A plan for [pre-registering](https://ies.ed.gov/seer/preregistration.asp) your study within the first year of the project  
-
-Pre-registration is just one part of the Department of Education's effort an effort to align research with the [SEER](https://ies.ed.gov/seer/index.asp) and [FAIR](https://www.go-fair.org/fair-principles/) data governance principles. 
-
-This training series is not specific only to IES grants. Almost all funders that education researchers may work with require a DMP that also includes a data sharing or archival plan (ex: [NIJ](https://nij.ojp.gov/funding/research-development-and-evaluation-grant-award-requirements#vj8jg), [NSF](https://www.nsf.gov/bfa/dias/policy/dmp.jsp), and [NIH](https://grants.nih.gov/grants/policy/data_sharing/data_sharing_guidance.htm#doc)). Furthermore, this training will not cover the details of writing up a DMP but rather how to implement a DMP. We will cover topics such as: How do you document data; How do you track it; How do you manage it; How do you keep it secure; and How do you share it. This specific training module will cover documentation.
-
-Before we dive in, as IES is the most prolific funder of RCTs in education, if you are someone who will be writing IES DMPs in the future or want to know more about them, here are some excellent resources:
-
-  📑 [University of Virginia IES DMP   template](https://data.library.virginia.edu/files/IES-Data-Management-Plan-Template-2018.docx)  
-  📑 [IES DMP tool](https://dmptool.org/template_export/1895.pdf)  
-  📑 [IES most recent Request for Applications](https://ies.ed.gov/funding/pdf/2021_84305A.pdf)  
-  📑 [Foundational Practices of Research Data Management](https://riojournal.com/article/56508/instance/5569679/)
-  📑 [Sara Hart Template](https://figshare.com/articles/preprint/Example_of_a_Data_Management_Plan/13218743/1)
-
----
-
-## Documentation
-
----
-
-Data Documentation is not only required by funders including IES, it is essential for data management. Data documentation should cover the who, what, where, when, and why of your project and your data ([OSF: NIH](https://osf.io/48ufs/)).
+Data documentation is not only required by funders including IES, it is essential for data management. Data documentation should cover the who, what, where, when, and why of your project and your data ([OSF: NIH](https://osf.io/48ufs/)).
 
 
 ```{r, echo=FALSE, fig.align="center", out.width='70%'}
@@ -64,11 +33,11 @@ knitr::include_graphics("img/document.png")
 Documentation also allows you to: 
 
 * Track decisions/changes made throughout the life cycle of the project  
-* Make our decisions/analyses replicable   
-* Clean our data with fidelity  
-* Ensure others use and interpret our data accurately  
-* Discover errors in our data  
-* Allow others to find our archived data through metadata
+* Make decisions/analyses replicable   
+* Clean data with fidelity  
+* Ensure others use and interpret data accurately  
+* Discover errors in data  
+* Allow others to find archived data through metadata
 * Reduces [data rot](https://www.teaguehenry.com/strings-not-factors/2021/1/24/data-management-for-researchers-three-terrifying-tales), when good data is transformed over time and becomes unusable because no one tracks the transformation
 
 Documentation can take many forms. [IES](https://ies.ed.gov/funding/datasharing_implementation.asp) states that they expect documentation to "be a comprehensive and stand-alone document that includes all the information necessary to replicate the analysis performed by the original research team" and should include:  
@@ -88,7 +57,11 @@ Additional reading on the importance of data documentation can be found here:
   📑 [Washington University in St. Louis](https://libguides.wustl.edu/c.php?g=47355&p=303435)
   
 
-<br>
+---
+
+## Documentation
+
+---
 
 ### Protocol
 
@@ -190,12 +163,12 @@ It's good to also consider starting to document the variables you aren't collect
 
 * Variables you are assigning:
     + To maintain anonymity and to track participants and merge data over time, you will be   assigning identifiers. 
-      + Participant/Unique ID (*stu_id*, *stu_uid*)
+      + Participant/Study ID (*stu_id*, *tch_id*)
       + Location/Site ID (*sch_id*, *dist_id*)
     + Depending on your study design you may also need to account for the following:
       + Treatment/condition/intervention group (Ex: *int*)
-      + Time/wave (*year*, *wave*)
-      + Randomization blocks (*cohort*, *group*)
+      + Time/wave (*year*, *wave*, *cohort*)
+      + Randomization blocks (*class*, *group*)
     
 * Variables you derive:
     + These include things such as composite scores, weights, or continuous variables grouped into categories. You can start to add these variables and their calculations/logic to your data dictionary.
@@ -280,6 +253,7 @@ A README should capture data such as:
 * Access information (Licenses, recommended citation, associated publications)
 * Methodology (Consent rates, data collection methods, data processing methods, software used, quality-assurance procedures)
 * Optional: Your codebook can also be part of your README, rather than a separate document
+  * Here is an [example](https://libguides.wustl.edu/ld.php?content_id=29108244)
 
 
 Excellent examples, templates, and further details can be found here:
@@ -290,7 +264,7 @@ Excellent examples, templates, and further details can be found here:
   📑 [README template: OSF](https://osf.io/sj8xv/)  
   📑 [README recommended content: UCI](https://guides.lib.uci.edu/datamanagement/readme)  
   📑 [README recommended content: Cornell](https://data.research.cornell.edu/content/readme)    
-  📑 [README recommended content: IHEID](https://libguides.graduateinstitute.ch/rdm/readme)   
+  📑 [README recommended content: IHEID](https://libguides.graduateinstitute.ch/rdm/readme)  
 
 <br>
 
@@ -332,6 +306,7 @@ Additional metadata information can be found here:
   📑 [Data Management for Researchers](https://pelagicpublishing.com/products/data-management-for-researchers-briney)  
   📑 [DMP Tool](https://dmptool.org/general_guidance)  
   📑 [CESSDA](https://www.cessda.eu/Training/Training-Resources/Library/Data-Management-Expert-Guide/2.-Organise-Document/Documentation-and-metadata)
+  📑 [Washington University](https://libguides.wustl.edu/drmr/dataprep)
 
 <br>
 

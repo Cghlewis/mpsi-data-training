@@ -4,6 +4,8 @@ navbar:
   left:
   - text: "MPSI Data Training"
     href: index.html
+  - text: "Data Management"
+    href: training_00.html
   - text: "Project Management"
     href: training_0.html
   - text: "Training 1"

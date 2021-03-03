@@ -361,6 +361,9 @@ div.tocify {
   <a href="index.html">MPSI Data Training</a>
 </li>
 <li>
+  <a href="training_00.html">Data Management</a>
+</li>
+<li>
   <a href="training_0.html">Project Management</a>
 </li>
 <li>
@@ -399,13 +402,12 @@ div.tocify {
 <hr />
 <p>In this training I continue to cover establishing systems that help make a project successful. These structures are the backbone of your project and without them in place, it can create many, many headaches for project staff, can compromise the confidentiality of your data, and may even make your data unusable.</p>
 <p>If you are collecting your own original data as part of your study, for example a randomized controlled trial study, data management best practices should be interwoven throughout your data collection process. I will discuss the role of data management in data collection instrument design, tracking of participants and data collection, as well as data storage and security. I will not go in to the minutiae of project management, including things such as recruiting participants, consenting participants, training data collectors, or scheduling data collection as those are less tied to data management and more aligned with project coordination.</p>
-<p>However, I will note that it is important that project coordinators and PIs work with a data manager to develop the language used in a consent form. If you plan to share your data upon conclusion of your project, either via a repository or your own data request system, you will want to make sure your consent has clear language about your intent to share your de-identified data. If applicable, also include language regarding your intent to collect identifying information in a master list/key for tracking purposes that will be stored separately from your de-identified data. Shero and Hart from Florida State University have a great <a href="https://figshare.com/articles/preprint/Informed_Consent_Template/13218773/1">Informed Consent Template</a>.</p>
+<p>However, I will note that it is important that project coordinators and PIs work with a data manager to develop the language used in a consent form. Most, not all, education research will fall under the <a href="https://oprs.usc.edu/irb-review/types-of-irb-review/exempt/"><em>exempt</em></a> IRB category (minimal risk), allowing you to write your own consent rather than using an IRB template. If you plan to share your data upon conclusion of your project, either via a repository or your own data request system, you will want to make sure your consent has clear language about your intent to share your de-identified data. If applicable, also include language regarding your intent to collect identifying information in a master list/key for tracking purposes that will be stored separately from your de-identified data. Shero and Hart from Florida State University have a great <a href="https://figshare.com/articles/preprint/Informed_Consent_Template/13218773/1">Informed Consent Template</a>.</p>
 <p><a href="https://journals.sagepub.com/doi/10.1177/2515245917747656">Meyer (2018)</a> has several helpful dos and donts for language to use in your consent form including:</p>
 <p>✔️ Don’t promise to destroy your data (unless your funder explicitly requires it)<br />
 ✔️ Don’t promise to not share data<br />
 ✔️ Do get consent to retain and share data<br />
-✔️ Do incorporate data-retention and sharing clauses into IRB templates<br />
-✔️ Do be thoughtful when considering risks of re-identification (ex: small sample size for sub-groups)<br />
+✔️ Do incorporate data-retention and sharing clauses into IRB templates ✔️ Do be thoughtful when considering risks of re-identification (ex: small sample size for sub-groups)<br />
 ✔️ Don’t promise that research analyses of the collected data will be limited to certain topics</p>
 <p>Other helpful consent resources:</p>
 <p>📑 <a href="https://open.spotify.com/episode/7cP4u3gimblEo8S8Z37UZA">Within &amp; Between podcast</a><br />
@@ -565,7 +567,7 @@ div.tocify {
 </div>
 <div id="offline-observations" class="section level4">
 <h4><strong>Offline Observations</strong></h4>
-<p>If WiFi is not available to you in the field, consider making a form that still eliminates the need for data entry (so not a paper form) and that ideally connects to or creates some type of database or table. Then have data collectors enter data into this form on a device in the field. This does not have to be high-tech. It could simply be:</p>
+<p>If WiFi is not available to you in the field, consider making an electronic form that still eliminates the need for data entry (so not a paper form) and that ideally connects to or creates some type of database or table. Then have data collectors enter data into this form on a device in the field. This does not have to be high-tech. It could simply be:</p>
 <ul>
 <li>An excel file that is pre-built with every observation field and the options for each field are limited to only the correct options through a drop-down list.</li>
 <li>Create a Microsoft Access form that is connected to a database</li>
@@ -593,55 +595,58 @@ div.tocify {
 <hr />
 </div>
 </div>
-<div id="security-in-the-field" class="section level2">
-<h2>Security in the Field</h2>
+<div id="data-collection-security" class="section level2">
+<h2>Data Collection Security</h2>
 <hr />
-<p>Researchers are always balancing participant confidentiality with maintaining accurate data. IRB requires that participants should <strong>not know their study IDs</strong> and you should <strong>never have a document that has both participant name and study ID</strong> on the same form. However, if your study is longitudinal, maintaining the accuracy of your study IDs is critical to linking data over time.</p>
-<p>If you are collecting data longitudinally and need to de-identify it, some ideas to handle Study IDs in data collection are the following:</p>
+<p>The simplest way to maintain participant privacy, is to collect anonymous data. If you collect anonymous data, no participant identifying information will be collected in your instruments (name, email, date of birth, etc.). Importantly, you will also want to make sure to not collect IP addresses as they can be used to identify an individual’s computer.</p>
+<p>More commonly in education research though, you will be collecting some identifiers and will be assigning unique IDs to all participants to maintain their <a href="https://www.etsu.edu/irb/documents/confidentiality_vs_privacy.pdf">confidentiality</a> in your research data. In longitudinal studies in particular, you will be using that unique participant ID to link data across time. To the best of your ability, all of your data collection instruments should have that study ID associated with it, rather than name, to ensure confidentiality as well as secure accurate data. This is especially important for longitudinal studies, where maintaining the accuracy of your study IDs is critical to linking data over time.</p>
 <div id="web-based-data" class="section level3">
 <h3>Web-based Data:</h3>
+<p>When sending out or completing in-person web-based surveys/assessments, you can do one of the following (this is not all-inclusive):</p>
+<ol style="list-style-type: decimal">
+<li>Send/give individual links to participants (where each survey link is connected to a study ID within the system). This can usually be done easily in a survey platform using a <em>panel</em>. + This is the most error-proof way to ensure study IDs are entered correctly. You load in IDs directly from your tracking database so that when data is downloaded, the correct ID is already linked to each participant and name is never attached to the data.</li>
+<li>Provide one link to all participants and separately, in an email, in person, or by mail, provide participants with their study ID to enter into the system. + We have used this method when we are conducting surveys/assessments in computer labs or on tablets in schools.
 <ul>
-<li>When sending out web-based surveys/assessments to participants, here are a few options (this is not all-inclusive):
-<ul>
-<li>Send individual links to participants (where each survey link is connected to a study ID within the system). This can usually be done easily in a survey platform using a <em>panel</em>.
-<ul>
-<li>This is the most error-proof way to ensure study IDs are entered correctly. You load in IDs directly from your tracking database so that when data is downloaded, the correct ID is already linked to each participant.</li>
+<li>This can possibly introduce error if a participant enters study ID incorrectly</li>
 </ul></li>
-<li>Send one link to all participants and assign all participants a double ID to enter into the survey (they enter this ID rather than their name). That double ID is added as a new field in your tracking database, which houses your study IDs. When the data is downloaded, a data manager will need to link the study ID to the double ID and then remove the double ID from the data.
+<li>Send one link out to all participants and have each participant enter their name and other identifying information.
 <ul>
-<li>This can possibly introduce error if a participant enters their double ID incorrectly</li>
+<li>This may be the most problematic out of all the options in terms of data management, privacy, and potential for errors.</li>
+<li>You options for working with this data are:
+<ol style="list-style-type: decimal">
+<li>Download the data, replace name and other identifying info with study ID. Replacing name with ID when there are incorrectly spelled names, with various formatting issues, can potentially start to introduce errors and data management troubles. If at all possible, collect more than one piece of identifying information (name and teacher name for instance) in case two students have the same name or a name is illegible.</li>
+<li>If you have not yet assigned study IDs, and your link includes your consent/assent, you can have the system assign study IDs in the back end for you, and when you download the data, those IDs will be tied to data, but not the identifying information, which will be stored separately. This is possible in a tool such as Qualtrics.</li>
+</ol></li>
 </ul></li>
-<li>Send one link out to all participants and have each participant enter their name.
-<ul>
-<li>This may be the most problematic out of all the options in terms of data management, privacy, and potential for errors. When the data is downloaded, the study ID must be linked based on participant name and participant name promptly deleted (to remove all identifying information) and oftentimes participants may not record their name exactly as it is in your tracking database, leading to matching errors.</li>
-</ul></li>
-</ul></li>
-<li>Similar methods can be used for other electronic data collected in the field using forms on tablets or phones.</li>
-</ul>
-<p>Other considerations to maintain electronic data privacy include:</p>
-<ul>
-<li>Add a line to your survey introduction, instructing participants to close their browser at the completion of their survey so that others may not access their responses.</li>
-<li>If you are collecting anonymous data, make sure to not collect IP addresses as they can be used to identify an individual’s computer</li>
-<li><strong>An important one</strong>: Make sure you are using and/or building data collection and storage tools that are approved by your IT department and are considered secure for the level of sensitivity of data you are collecting.</li>
-<li>Make sure your in-field data collection devices (phone, tablet, laptop) are password secured and never left open and unattended and all identifiable information is encrypted (data is encoded so that only those with a password can decipher it). It is also possible to encrypt an entire device, protecting data from being transferred across application. You may also consider remote wiping capabilities on portable devices in case of loss or theft <a href="https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf">J-PAL</a>.</li>
-</ul>
+</ol>
+<p>For method #1 and #2, build a data check into the system. When a participant opens their unique link, or enters their study ID, have the system verify their identity by asking, “Are you <em>first name</em>, <em>last name</em>?”. If they say yes, they move forward, if they say no, the system redirects them to someone to contact. This ensures that participants are not completing someone else’s survey and IDs are connected to the correct participant.</p>
+<p>Ultimately, which method you use for web-based links will first, depend on the data collection instrument. For instance, an online assessment may <em>only</em> have one link and so option #2 or #3 above may be your only option. However, for online surveys, any option is possible. Secondly, it will also depend on your method of dissemination. If you are sending survey links out yourselves to teachers, option #1 is going to be the best method. If a school system will not give you student emails, and you need to have teachers send out links to students, #3 may be best your best option. That method reduces the burden on teachers (having to send multiple links in #1) and potentially reduces error (asking teachers to track multiple links or multiple IDs to send to students in #1 and #2).</p>
 </div>
 <div id="offline-data" class="section level3">
 <h3>Offline Data:</h3>
+<p>If you take paper forms into the field consider doing the following:</p>
 <ul>
-<li>If you take paper forms into the field with participant names on them, consider doing the following to link those names to IDs at a later time:
+<li>Write the study ID on the form and then use either a removable label with participant name and place that over the ID or attach a cover sheet with identifying information such as student name. When you return to the office, you can remove the name label and be left with only the ID on the form.
 <ul>
-<li>Write the study ID on the form and then use a removable label with participant name and place that over the ID. That way the participant never sees the ID, and when you return to the office, you can remove the name label, shred it, and be left with only the ID on the form.<br />
-</li>
-<li>Attach a cover sheet to each form that includes identifying information such as student and/or teacher name, then when returning to the office, remove the cover sheet, shred it, and write the study ID on the form before entry.<br />
-</li>
-<li>If you need the name in the field (to identify students), but you also need the ID in the field (say to enter on a data collection form) then consider having one roster with names with a double ID (such as 1,2,3,4) and another sheet that connects the double ID to the true study IDs. These two lists could obviously also be housed on a password protected tablet or phone in the field for additional security.</li>
+<li>It is this ID only that you will enter into your database, no name.</li>
+<li>Removing the label/cover sheet also ensures that your data entry team only sees participant ID when they enter data, increasing privacy by minimizing the number of people who see see participant name.</li>
+<li>Double and triple check that the study ID is correct <em>before</em> removing the label or cover sheet</li>
+<li>Make a plan for the labels/cover sheets (either shred them if they are no longer needed, or store them securely in a locked file cabinet)</li>
 </ul></li>
+<li>If you need a roster of consented participants in the field with both name and study ID (say to find students and then enter their ID into a data collection system, such as an observation instrument), you can do one of two things:
+<ol style="list-style-type: decimal">
+<li>Bring your tracking database into the field, on a secure device (such as a tablet) and refer to that database as needed</li>
+<li>Print a roster with name and study ID and keep those rosters secure in the field (not laying out on a table) and either shred them when you return to the office if you no longer need them or store them securely.</li>
+</ol></li>
 </ul>
-<p><img src="img/twotables.PNG" width="60%" style="display: block; margin: auto;" /></p>
-<p>Other considerations to maintain paper data privacy include:</p>
+</div>
+<div id="other-considerations" class="section level3">
+<h3>Other considerations:</h3>
 <ul>
+<li>Add a line to your survey introduction, instructing participants to close their browser at the completion of their survey so that others may not access their responses.</li>
+<li>Make sure you are using and/or building data collection and storage tools that are approved by your IT department and are considered secure for the level of sensitivity of data you are collecting.</li>
 <li>Make sure all paper forms are kept in a folder (or even a lock box) with you at all times in the field and they are promptly returned to the office and stored according to your IRB security rules, typically behind two locked doors (ex: in a locked room, in a locked file cabinet).</li>
+<li>Make sure your in-field data collection devices (phone, tablet, laptops) are password secured and never left open and unattended and all identifiable information is encrypted (data is encoded so that only those with a password can decipher it). It is also possible to encrypt an entire device, protecting data from being transferred across application. You may also consider remote wiping capabilities on portable devices in case of loss or theft <a href="https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf">J-PAL</a>.</li>
 </ul>
 <p>Resources:</p>
 <p>📑 <a href="https://www.uoguelph.ca/research/print/1947">University of Guelph</a></p>
@@ -685,7 +690,7 @@ div.tocify {
 <p><br></p>
 <div id="creating-a-tracking-database" class="section level3">
 <h3>Creating a Tracking Database</h3>
-<p>A tracking database (sometimes called a master list because it contains data that links your assigned study IDs to their identifiable information) can be set up in software or an app such as:</p>
+<p>A tracking database can be set up in software or an app such as:</p>
 <ul>
 <li>Microsoft Access</li>
 <li>Excel</li>
@@ -726,7 +731,14 @@ div.tocify {
 <li>Do you want to track longitudinal data all in the same table or make a different for each wave of data collection?</li>
 <li>I have no preference here. It is more streamlined to keep all waves in the same table, but I think for some people it can be overwhelming to have fall, winter, and spring, for example, all tracked in the same table</li>
 </ul></li>
-<li>Make sure to include both primary and foreign keys in all tables</li>
+<li>Decide if you want to keep demographic type information in a table separate from data collection information
+<ul>
+<li>Typically the only demographic information you will keep in your tracking database is information you collect that is considered identifiable and therefore you do not keep it in your study data (ex: DOB for scoring assessments, state ID for linking to state education data, student email for sending out gift cards).</li>
+<li>If the project coordinator is the only one using the tracking database, it is fine to have demographics embedded in the data collection table</li>
+<li>However, if many team members are tracking data, you may choose to have a <em>student-demographics</em> table and a <em>student-data-collection</em> table in order to minimize the number of people accessing identifiable participant information</li>
+<li>Additionally, if you plan to keep your different waves of data collection in separate tables, it will be beneficial to have a separate <em>student-demographics</em> table so that there is no repeating information across waves of data collection (ex: repeating DOB across tables).</li>
+</ul></li>
+<li>Make sure to include both primary and foreign keys in all tables in relational databases</li>
 </ul>
 <p>Other preferences for a tracking system include:</p>
 <ul>
@@ -747,12 +759,12 @@ div.tocify {
 <li>Participant/Site name</li>
 <li>Contact information</li>
 <li>Other IDs necessary for linking data (such as a state ID for linking to student school records)</li>
-<li>Relevant study demographics (such as date of birth, grade level, gender, or zip code)</li>
-<li>Schedule information needed for the study (block, class time)</li>
+<li>Relevant identifiable information (such as date of birth, email, )</li>
+<li>Schedule information needed for the study (block, class time, grade level)</li>
 <li>Consent/Assent received</li>
 <li>Randomization info (cohort, group)</li>
+<li>Consent rate information (# of consents sent out)</li>
 <li>Payment information (ex: W9)</li>
-<li>Double IDs if you use these for data collection</li>
 </ul>
 <p>Fields to track over time (for each period you collect data):</p>
 <ul>
@@ -780,13 +792,13 @@ div.tocify {
 <li>Dates data collection completed</li>
 </ul></li>
 </ul>
+<p>If your study is an RCT, you will also want to keep randomization information tracked as well so that information can be added to your analysis data at a later time. This will most likely be stored separate from your tracking database if you plan to keep individuals, such as project coordinators, blinded to treatment condition.</p>
 <p>Example of a very simplified student table:</p>
 <p><img src="img/table3.PNG" width="120%" style="display: block; margin: auto;" /></p>
-<p>Last, if your study is an RCT, you will also want to keep randomization information tracked as well so that information can be added to your analysis data at a later time. This will most likely be stored separate from your tracking database if you plan to keep individuals, such as project coordinators, blinded to treatment condition.</p>
 <div class="question">
 <p><strong>Quick thought: Study IDs</strong></p>
 <p>As you recruit and consent participants, you will add these participants to a tracking database under an assigned study ID (ex: <em>stu_id</em>, <em>tch_id</em>). These IDs allow participants to remain confidential in your research data. That ID (typically a 2-6 digit random numeric or alphanumeric value) will follow that individual throughout the life of the study and should be <strong>unique</strong> to that individual. This number <strong>never changes</strong>.</p>
-<p>Depending on your study design, some participants <strong>may</strong> have the opportunity to be re-recruited into the study more than once. For example, we had a study where three cohorts of 5th grade students were recruited over three years. Therefore, the same 5th grade teachers were often recruited back into the study each cohort. If you have a similar study design, you <strong>still</strong> keep that same study ID (in this case the same <em>tch_id</em>) for that participant. If you want to identify the unique wave or cohort that a participant is brought back into the study, make sure you have other variables in your data that help you understand why a study ID occurs in your data more than once (ex: Having a <em>cohort</em> variable).</p>
+<p>Depending on your study design, some participants <strong>may</strong> have the opportunity to be re-recruited into the study more than once. For example, we had a study where three cohorts of 5th grade students were recruited over three years. Therefore, the same 5th grade teachers were often recruited back into the study each cohort. If you have a similar study design, you <strong>still</strong> keep that same study ID (in this case the same <em>tch_id</em>) for that participant. If you want to identify the unique wave or cohort that a participant is brought back into the study, make sure you have other variables in your data that help you understand why a study ID occurs in your data more than once (ex: Having a <em>cohort</em> variable). The study ID concatenated with the cohort provides you with a unique row identifier.</p>
 <p><img src="img/IDtable.PNG" width="60%" style="display: block; margin: auto;" /></p>
 </div>
 <p><br></p>
@@ -801,7 +813,7 @@ div.tocify {
 <div id="data-storage" class="section level2">
 <h2>Data Storage</h2>
 <hr />
-<p>Whether you are working with your own original collected data, or you are working with data provided to you from an entity such as a school district, or you are working with publicly available data, you need to consider secure data storage.</p>
+<p>Whether you are working with your own original collected data, or you are working with data provided to you from an entity such as a school district, or you are working with publicly available data, you need to consider short-term secure data storage. I say short-term because this is how you will store your data while you are actively collecting data for your project. Data retention/long-term storage, after your study is complete, will be discussed in a later training.</p>
 <p>In general you will most likely be working with one of four types of data and will need to store your data according to the type of data:</p>
 <ul>
 <li>Anonymous data (Data at no time has ever had identifying information tied to it and can never be linked back to an individual)</li>
@@ -832,7 +844,6 @@ div.tocify {
 <li>This data should have limited access (only available to the few individuals who actually need to interact with this data)</li>
 <li>It should be stored on a password-protected, university/institution sponsored shared network or cloud service with encryption (never a personal computer)</li>
 <li>Since this is your only crosswalk between your study IDs and PIIs, make sure to backup this data regularly</li>
-<li>Last, although I discussed writing consents so that you do not need to destroy data at any point after study completion, you can and should plan to destroy your tracking database/master key after all study data is cleaned and de-identified and your study is completed. The timeline for destroying this key after study completion may be dependent on the data retention plan required by your IRB, so consult with them for further details.</li>
 </ul>
 </div>
 <div id="storing-electronic-records" class="section level3">
@@ -841,7 +852,7 @@ div.tocify {
 <ul>
 <li>It should be stored on a password-protected university/institution sponsored shared network or cloud service</li>
 <li>Limit access to your data folder to only those who need to work with the data. This ensures no one intentionally or unintentionally makes changes to your data.</li>
-<li>Have a data backup policy (<a href="https://old.dataone.org/best-practices/create-and-document-data-backup-policy">DataONE</a>)</li>
+<li>Backup this data regularly</li>
 <li>School record data you acquire from schools and districts may have its own set of regulations such as <a href="https://studentprivacy.ed.gov/audience/researchers">(FERPA)</a> so it is worth checking that your storage meets those requirements as well.</li>
 </ul>
 </div>
@@ -863,7 +874,6 @@ div.tocify {
 <li>Conduct the the video call in a secure/private location</li>
 <li>If recording the session, make sure that participants are notified that the session is being recorded</li>
 <li>Sessions are stored on an Institution approved cloud service or managed service</li>
-<li>Once transcripts are created from the data, make a plan to destroy recordings</li>
 </ul>
 <p>Note: These same data security rules will also apply to data that is recorded in person. And furthermore, any data that is recorded on detachable media will need to follow the detachable media guidelines.</p>
 </div>
@@ -906,7 +916,8 @@ div.tocify {
 <ul>
 <li>Make regular back-ups of your data
 <ul>
-<li>Have a policy in place for who will perform and check the backups, what the backup schedule will be, and where the backups will be stored (a location separate from the original data)</li>
+<li>Have a policy in place for who will perform and check the backups, what the backup schedule will be, and where the backups will be stored, (<a href="https://old.dataone.org/best-practices/create-and-document-data-backup-policy">DataONE</a>)</li>
+<li>Implement the <a href="https://www.reed.edu/data-at-reed/managing_data/version_control_backup.html">3-2-1 rule</a>, 3 copies of your data, on 2 different types of storage media, in more than 1 location.</li>
 </ul></li>
 <li>Password protect your devices (with strong passwords)</li>
 <li>Never leave a device open and unattended. Lock your device and go offline when not in use.</li>
@@ -948,7 +959,7 @@ div.tocify {
 📑 <a href="https://www.poverty-action.org/sites/default/files/publications/IPA-Best-Practices-for-Data-and-Code-Management-Nov-2015.pdf">IPA</a><br />
 📑 <a href="http://kbroman.org/dataorg/pages/backups.html">Karl Broman</a><br />
 📑 <a href="https://www.umsystem.edu/ums/is/infosec/research-data-security">University of Missouri</a><br />
-📑 <a href="https://riojournal.com/article/56508/instance/5569681/">Foundational Practices of Research Data Management</a></p>
+📑 <a href="https://riojournal.com/article/56508/instance/5569681/">Foundational Practices of Research Data Management</a> 📑 <a href="https://pitt.libguides.com/managedata/storing">University of Pittsburgh, RDM</a> 📑 <a href="https://www.veeam.com/blog/how-to-follow-the-3-2-1-backup-rule-with-veeam-backup-replication.html">Veeam</a> 📑 <a href="https://security.uconn.edu/data-security-checklist/#">University of Connecticut</a></p>
 <hr />
 </div>
 </div>
@@ -962,14 +973,14 @@ div.tocify {
 1 project-name               
 2  °--life-cycle-folder      
 3      °--time               
-4          °--data-type      
+4          °--content        
 5              °--participant
 6                  °--archive</code></pre>
 <ul>
 <li><p>Level 1: The name of the project</p></li>
 <li><p>Level 2: General research life cycle folders (Ex: data, documentation, project management, intervention, tracking)</p></li>
 <li><p>Level 3: For longitudinal studies I tend to like the third level to be time period or grouping sub-folders (Ex: cohort 1, or wave 1)</p></li>
-<li><p>Level 4: Specific data type folders (Ex: raw data, syntax, clean data)</p></li>
+<li><p>Level 4: Specific content folders (Ex: raw data, syntax, clean data)</p></li>
 <li><p>Level 5: Participant specific folder (ex: student, teacher).</p></li>
 <li><p>Level 6: All previous versions of files can go in here to reduce clutter</p></li>
 </ul>

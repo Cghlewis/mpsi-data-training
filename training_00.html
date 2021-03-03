@@ -11,7 +11,7 @@
 
 
 
-<title>training_00.utf8</title>
+<title>Data Management</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,11 +19,12 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -259,6 +260,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -266,6 +330,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -284,6 +358,9 @@ $(document).ready(function () {
       <ul class="nav navbar-nav">
         <li>
   <a href="index.html">MPSI Data Training</a>
+</li>
+<li>
+  <a href="training_00.html">Data Management</a>
 </li>
 <li>
   <a href="training_0.html">Project Management</a>
@@ -309,52 +386,68 @@ $(document).ready(function () {
 
 
 
+<h1 class="title toc-ignore">Data Management</h1>
 
 </div>
 
 
-<table>
-<tbody>
-<tr class="odd">
-<td align="right">title: “Data Management”</td>
-</tr>
-<tr class="even">
-<td align="right">output:</td>
-</tr>
-<tr class="odd">
-<td align="right">html_document:</td>
-</tr>
-<tr class="even">
-<td align="right">css: “css/custom.css”</td>
-</tr>
-<tr class="odd">
-<td align="right">toc: TRUE</td>
-</tr>
-<tr class="even">
-<td align="right">toc_float: TRUE</td>
-</tr>
-<tr class="odd">
-<td align="right">anchor_sections: FALSE</td>
-</tr>
-</tbody>
-</table>
-<p>Data Management is the planning, organization, storage and dissemination of your research study data. Successful data management allows your research to be replicable, understandable, secure and useful data while poor data management can lead to erroneous conclusions, unusable data, and data security issues.</p>
-<div id="project-life-cycle" class="section level2">
-<h2>Project Life Cycle</h2>
+<p>Research data management involves the planning, documentation, organization, storage, and dissemination of your research study data. Successful data management allows your research to be replicable, interpretable, secure, and usable while poor data management can lead to erroneous conclusions, unusable or even lost data, and security issues. Consequently, data management is an ethical issue. The replication crisis is just one example of a failure to include good data management practices in research, resulting for example, in one study finding that across 100 replicated experiments from three psychology journals, only 36% of statistically significant findings could be replicated <a href="https://science.sciencemag.org/content/349/6251/aac4716">(Open Science Collaboration, 2015)</a>.</p>
+<p>Data management includes these broad concepts:</p>
+<ul>
+<li>Documentation</li>
+<li>Standardization (of file names, variable names, file paths)</li>
+<li>Data collection planning</li>
+<li>Data tracking</li>
+<li>Data storage</li>
+<li>Data processing and preservation, including documenting what <a href="https://www.teaguehenry.com/strings-not-factors/2021/2/21/eight-principles-of-good-data-management">Teague Henry</a> refers to as the chain of processing</li>
+<li>Data sharing</li>
+<li>Analysis (we will not cover analysis in this series, however, many of the data management concepts covered in this training are applicable during analysis as well)</li>
+</ul>
+<p>And generally follows this data life cycle:</p>
+<p><img src="img/data-lifecycle.jpg" width="50%" style="display: block; margin: auto;" /></p>
+<p>Source: <a href="https://blogs.ntu.edu.sg/lib-datamanagement/data-lifecycle/">Nayang Technological University</a></p>
+<hr />
+<div id="framework" class="section level2">
+<h2>Framework</h2>
+<hr />
+<div id="fair" class="section level3">
+<h3>FAIR</h3>
+<p>In 2016, the <a href="https://www.go-fair.org/fair-principles/">FAIR Principles</a> were published in Scientific Data, outlining 4 guiding principles for scientific data management and stewardship. Those principles are:</p>
+<p>F: Findable</p>
+<p>All data should be findable through good data documentation, aka metadata. As we move towards automation in our work and life, the need for machine-readable metadata becomes more prevalent for automatic discovery of data.</p>
+<p>A: Accessible</p>
+<p>You data is accessible if humans can access your data. This can mean your data is available in a repository or through a request system.</p>
+<p>I: Interoperable</p>
+<p>Both humans and machines should be able to read and interpret your data. Software licenses should not pose a barrier to usage. Data should be available in open formats that can be accessed by any software such as .csv, .txt, .dat, etc. Furthermore, thorough data documentation should accompany data to allow that data to interoperable.</p>
+<p>R: Reusable</p>
+<p>Your metadata should provide information on the broad context of your project as well as your data collection to allow for accurate use of your data.</p>
+<p>Additional resources:</p>
+<p>📑 <a href="https://podcasts.apple.com/us/podcast/episode-4-the-what-why-how-and-hesitations-of-data-sharing/id1517310439?i=1000483521281">Within &amp; Between podcast</a></p>
 </div>
-<div id="fair-and-seer-open-science" class="section level2">
-<h2>FAIR and SEER (Open Science)</h2>
+<div id="seer" class="section level3">
+<h3>SEER</h3>
+<p>In addition to the FAIR principles, the <a href="https://ies.ed.gov/seer/index.asp">SEER principles</a>, developed in 2018 by Institute of Education Sciences (IES), provide Standards in Excellence in Education Research. While the principles broadly cover the entire life cycle of a research study, they provide context for good data management within an education research study. The SEER principles include:</p>
+<ul>
+<li>Pre-register studies</li>
+<li>Make findings, methods, and data open</li>
+<li>Identify interventions’ core components</li>
+<li>Document treatment implementation and contrast</li>
+<li>Analyze interventions’ costs</li>
+<li>Focus on meaningful outcomes</li>
+<li>Facilitate generalization of study findings</li>
+<li>Support scaling of promising results</li>
+</ul>
 </div>
-<div id="types-of-data-i-am-referring-to" class="section level2">
-<h2>Types of data I am referring to</h2>
+<div id="open-science" class="section level3">
+<h3>Open Science</h3>
+<p>The concept of Open Science has pushed quality data management to the forefront, bringing visibility to its cause, as well as advances in practices and urgency to implement them. Open Science aims to make scientific research and dissemination accessible for all, making the need for good data management practices absolutely necessary. Open science advocates for open data, open analysis, open materials, preregistration, and open access (<a href="https://edarxiv.org/qdj4t/">van Dijk, W., Schatschneider, C., &amp; Hart, S. A., 2020</a>). Organizations such as the <a href="https://www.cos.io/">Center for Open Science</a>, have become a well-known proponents of open science, offering the open science framework <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5370619/">(OSF)</a>, as a tool to promote open science through the entire research life cycle. Furthermore, many education funders such as NIH, NSF, and IES have aligned their fundee requirements with these open science practices, such as the practice of pre-registration mentioned above in the SEER principles.</p>
+<hr />
 </div>
-<div id="data-mgmt-practices-to-consider" class="section level2">
-<h2>Data Mgmt practices to consider</h2>
 </div>
 <div id="data-management-plan" class="section level2">
 <h2>Data Management Plan</h2>
 <hr />
-<p>To increase transparency and to advance scientific inquiry in education research, the Institute of Education Science (<a href="https://ies.ed.gov/funding/datasharing_implementation.asp">IES</a>) has a policy on providing access to your data at the conclusion of projects funded through their research centers (<em>Exploration</em> or <em>Initial Efficacy and Follow-Up</em> grants). The plan for sharing data must be laid out in a data management plan (DMP) which is included as an appendix in your grant application. Among other things, the DMP must include the following:</p>
+<p>Outside of practical and principled reasons to want to improve your data management, funding institutions require a certain level of data management for their funded projects. For example, to increase transparency and to advance scientific inquiry in education research, (<a href="https://ies.ed.gov/funding/datasharing_implementation.asp">IES</a>) has a policy on providing access to your data at the conclusion of projects funded through their research centers (<em>Exploration</em> or <em>Initial Efficacy and Follow-Up</em> grants). The plan for sharing data must be laid out in a data management plan (DMP) which is included as an appendix in your grant application. Among other things, the DMP must include the following:</p>
 <p>✔️ Type of data to be shared<br />
 ✔️ Procedures for managing and maintaining confidentiality<br />
 ✔️ Roles and responsibilities of project staff in the management of research data<br />
@@ -362,19 +455,65 @@ $(document).ready(function () {
 ✔️ Format of the final dataset<br />
 ✔️ Documentation to be provided<br />
 ✔️ Method of data sharing (Share the data yourself, use a data archive, combination of both)<br />
-✔️ Whether or not a data sharing agreement specifies the conditions under which the data will be shared ✔️ Any circumstances that prevent any data from being shared<br />
+✔️ Whether or not a data sharing agreement specifies the conditions under which the data will be shared<br />
+✔️ Any circumstances that prevent any data from being shared<br />
 ✔️ Most recent rule: A plan for <a href="https://ies.ed.gov/seer/preregistration.asp">pre-registering</a> your study within the first year of the project</p>
 <p>Pre-registration is just one part of the Department of Education’s effort an effort to align research with the <a href="https://ies.ed.gov/seer/index.asp">SEER</a> and <a href="https://www.go-fair.org/fair-principles/">FAIR</a> data governance principles.</p>
-<p>This training series is not specific only to IES grants. Almost all funders that education researchers may work with require a DMP that also includes a data sharing or archival plan (ex: <a href="https://nij.ojp.gov/funding/research-development-and-evaluation-grant-award-requirements#vj8jg">NIJ</a>, <a href="https://www.nsf.gov/bfa/dias/policy/dmp.jsp">NSF</a>, and <a href="https://grants.nih.gov/grants/policy/data_sharing/data_sharing_guidance.htm#doc">NIH</a>). Furthermore, this training will not cover the details of writing up a DMP but rather how to implement a DMP. We will cover topics such as: How do you document data; How do you track it; How do you manage it; How do you keep it secure; and How do you share it. This specific training module will cover documentation.</p>
-<p>Before we dive in, as IES is the most prolific funder of RCTs in education, if you are someone who will be writing IES DMPs in the future or want to know more about them, here are some excellent resources:</p>
+<p>In addition to IES, many other funders that education researchers may work with require a DMP (ex: <a href="https://nij.ojp.gov/funding/research-development-and-evaluation-grant-award-requirements#vj8jg">NIJ</a>, <a href="https://www.nsf.gov/bfa/dias/policy/dmp.jsp">NSF</a>, and <a href="https://grants.nih.gov/grants/policy/data_sharing/data_sharing_guidance.htm#doc">NIH</a>). This training will not cover the details of writing up a DMP but rather how to implement a DMP.</p>
+<p>Here are some excellent resources for writing up a DMP:</p>
 <p>📑 <a href="https://data.library.virginia.edu/files/IES-Data-Management-Plan-Template-2018.docx">University of Virginia IES DMP template</a><br />
 📑 <a href="https://dmptool.org/template_export/1895.pdf">IES DMP tool</a><br />
 📑 <a href="https://ies.ed.gov/funding/pdf/2021_84305A.pdf">IES most recent Request for Applications</a><br />
-📑 <a href="https://riojournal.com/article/56508/instance/5569679/">Foundational Practices of Research Data Management</a> 📑 <a href="https://figshare.com/articles/preprint/Example_of_a_Data_Management_Plan/13218743/1">Sara Hart Template</a></p>
+📑 <a href="https://riojournal.com/article/56508/instance/5569679/">Foundational Practices of Research Data Management</a><br />
+📑 <a href="https://figshare.com/articles/preprint/Example_of_a_Data_Management_Plan/13218743/1">Sara Hart template</a></p>
+<hr />
+</div>
+<div id="terminologyvocabulary" class="section level2">
+<h2>Terminology/vocabulary</h2>
+<hr />
+<p>Before diving into the content of this training, I think it is helpful to cover terminology that will be used in these modules. Many concepts in education research have multiple terms and can be used interchangeably (other terms are listed in brackets). Across different institutions, researchers may use all or some of these terms.</p>
+<p>Unique identifier (UID): This is a numeric or alphanumeric identifier that is unique to every participant, site or object. Participant ID: [study ID, subject ID, participant code, record id] In longitudinal studies, these identifiers allow us to link data across time. Condition: [treatment, intervention status] Site ID: [location ID] Cohort: Wave: [time period, event] Tracking: [roster, demographic file, master list, master key] (sometimes called a master list because it contains data that links your assigned study IDs to their identifiable information) Variable: [column, field] Variable name: [header] Subject: [case, row, participant, record] Directory: Path: Randomization block: Study: Data: “Data are items of recorded information considered collectively for reference or analysis” (<a href="https://pitt.libguides.com/managedata/understanding">University of Pittsburgh</a>). It can include, but is not limited to survey responses, measurements, assessments, recordings, code, transcripts, and statistics. Dataset: [dataframe] Raw data: [untouched] Clean data: [processed data] Standardization: PII: Missing: [NULL, NA] Anonymous: Confidential:</p>
+<hr />
+</div>
+<div id="considerations" class="section level2">
+<h2>Considerations</h2>
+<hr />
+<p>Good data management requires a lot of thought and planning. The <a href="https://pitt.libguides.com/managedata/understanding">University of Pittsburgh</a> has an excellent list of 12 things to consider in your data management planning.</p>
+<p><img src="img/planning-consider.png" width="60%" /></p>
+<hr />
+</div>
+<div id="resources" class="section level2">
+<h2>Resources</h2>
+<hr />
+<p>As I have been working on this training I have found there are some excellent existing resources out there as well as others who are doing similar work, even in the field of education. Below are some of the resources I highly recommend.</p>
+<ol style="list-style-type: decimal">
+<li>Academic Research Librarians</li>
+</ol>
+<p>Almost every academic institution employs research data librarians whose job is to help faculty and staff with research data services. This is a great resource to utilize if you work at a university. Examples: <a href="https://pitt.libguides.com/managedata">Research Data Management at University of Pittsburgh</a> <a href="https://library.wustl.edu/research-support/data-services/">Washington University Data Services Team</a> <a href="https://www.reed.edu/data-at-reed/index.html">Data at Reed</a></p>
+<ol start="2" style="list-style-type: decimal">
+<li>A team at Florida State University (including Christopher Schatschneider, Tara Reynolds, Sara Hart and colleagues) have been putting out tons of resources around data management, specifically in education, and open science practices in general.</li>
+</ol>
+<p><a href="https://docs.google.com/document/d/1GfIo67-wqq-26ZG9etar5tiKKYLLqWCra8jySolAK7Y/edit">The Basic of Data Management</a></p>
+<p><a href="https://edarxiv.org/qdj4t/">Open Science in Education Sciences</a></p>
+<p><a href="https://edarxiv.org/2x3cu">Data Sharing in Education Science</a></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Teague Henry, a postdoctoral fellow in the Department of Psychiatry at the University of Pittsburgh, has been putting out blog posts around data management and they have be very insightful.</li>
+</ol>
+<p><a href="https://www.teaguehenry.com/strings-not-factors/2021/2/21/eight-principles-of-good-data-management">Eight Principles of Good Data Management</a></p>
+<p><a href="https://www.teaguehenry.com/strings-not-factors/2021/1/24/data-management-for-researchers-three-terrifying-tales">Data Management for Researchers: Three Tales</a></p>
+<ol start="4" style="list-style-type: decimal">
+<li>Open Science Foundation has endless slide decks covering data management and open science concepts.</li>
+</ol>
+<p>Simply go to <a href="https://osf.io/" class="uri">https://osf.io/</a> and type “data management slides” into the search box and you will get over 1 million results!</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Kristin Briney, a librarian at CalTech, wrote the book <a href="http://dataabinitio.com/?author=1">Data Management for Researchers</a>, and also has a <a href="http://dataabinitio.com/">blog</a> where she frequently posts about data management topics and issues.</li>
+</ol>
 </div>
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -407,6 +546,32 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
