@@ -30,7 +30,7 @@ The project coordinator is an essential member of the research team. As the name
 
 ### Data Manager
 
-The data manager is also an essential member of the team. This person (or persons) is responsible for the organizing, cleaning, documenting, storing, and dissemination of research project data. It is also advisable to include this person in beginning stages of a research study to assist in tasks such as the design of data collection materials. They can often be helpful in problem solving and alleviating future potential trouble areas with data collection. Last, a data manager may also be the person who builds tools such as tracking databases, forms, or surveys. 
+The data manager is also an essential member of the team. This person (or persons) is responsible for the organizing, cleaning, documenting, storing, and dissemination of research project data. It is also advisable to include this person in beginning stages of a research study to assist in tasks such as the design of data collection materials. They can often be helpful in problem solving and alleviating future potential trouble areas with data collection. Last, a data manager, or someone on the data team (if you are lucky enough to have an entire data team) may also be the person who builds tools such as tracking databases, forms, or surveys. 
 
 ### Research Assistant
 
@@ -70,6 +70,7 @@ When it comes to project management, there are tools that may help a team assign
 * [Smartsheet](https://www.smartsheet.com/) (task and timeline management)
 * [Doodle](https://doodle.com/en/) (online scheduling tool)
 * [Todoist](https://todoist.com/) (task management tool)
+* [Microsoft To Do](https://todo.microsoft.com/tasks/) (task management tool)
 
 When it comes to communication tools (email, video, and/or instant message functioning), the purpose of these tools can vary. Sometimes you need instant responses (especially when issues arise in the field during data collection), other times you need to have longer planning meetings, other times you may want to keep records of conversations. Different communication tools meet different needs. Again, without endorsing any particular form of communication, tools that teams often use include:
 

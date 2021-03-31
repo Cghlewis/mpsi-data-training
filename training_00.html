@@ -391,14 +391,14 @@ div.tocify {
 </div>
 
 
-<p>Research data management involves the planning, documentation, organization, storage, and dissemination of your research study data. Successful data management allows your research to be replicable, interpretable, secure, and usable while poor data management can lead to erroneous conclusions, unusable or even lost data, and security issues. Consequently, data management is an ethical issue. The replication crisis is just one example of a failure to include good data management practices in research, resulting for example, in one study finding that across 100 replicated experiments from three psychology journals, only 36% of statistically significant findings could be replicated <a href="https://science.sciencemag.org/content/349/6251/aac4716">(Open Science Collaboration, 2015)</a>.</p>
+<p>Research data management involves the planning, documentation, organization, storage, and dissemination of research study data. A plan for data management should be developed before a project ever starts and that plan should be implemented alongside all research study activities through out the entire project life cycle. Successful data management upholds research integrity (<a href="https://library.umassmed.edu/resources/necdmc/modules">UMASS</a>), and allows research to be replicable, interpretable, secure, and usable while poor data management can lead to erroneous conclusions, unusable or even lost data, and security issues. Consequently, data management is an ethical issue. The replication crisis is just one example of a failure to include good data management practices in research, resulting for example, in one study finding that across 100 replicated experiments from three psychology journals, only 36% of statistically significant findings could be replicated <a href="https://science.sciencemag.org/content/349/6251/aac4716">(Open Science Collaboration, 2015)</a>.</p>
 <p>Data management includes these broad concepts:</p>
 <ul>
 <li>Documentation</li>
 <li>Standardization (of file names, variable names, file paths)</li>
 <li>Data collection planning</li>
-<li>Data tracking</li>
-<li>Data storage</li>
+<li>Participant and data tracking</li>
+<li>Data storage and security</li>
 <li>Data processing and preservation, including documenting what <a href="https://www.teaguehenry.com/strings-not-factors/2021/2/21/eight-principles-of-good-data-management">Teague Henry</a> refers to as the chain of processing</li>
 <li>Data sharing</li>
 <li>Analysis (we will not cover analysis in this series, however, many of the data management concepts covered in this training are applicable during analysis as well)</li>
@@ -414,15 +414,16 @@ div.tocify {
 <h3>FAIR</h3>
 <p>In 2016, the <a href="https://www.go-fair.org/fair-principles/">FAIR Principles</a> were published in Scientific Data, outlining 4 guiding principles for scientific data management and stewardship. Those principles are:</p>
 <p>F: Findable</p>
-<p>All data should be findable through good data documentation, aka metadata. As we move towards automation in our work and life, the need for machine-readable metadata becomes more prevalent for automatic discovery of data.</p>
+<p>All data should be findable through a persistent identifier and good data documentation, aka metadata. As we move towards automation in our work and life, the need for machine-readable metadata becomes more prevalent for automatic discovery of data.</p>
 <p>A: Accessible</p>
 <p>You data is accessible if humans can access your data. This can mean your data is available in a repository or through a request system.</p>
 <p>I: Interoperable</p>
-<p>Both humans and machines should be able to read and interpret your data. Software licenses should not pose a barrier to usage. Data should be available in open formats that can be accessed by any software such as .csv, .txt, .dat, etc. Furthermore, thorough data documentation should accompany data to allow that data to interoperable.</p>
+<p>Use standardized vocabularies as well as formats. Both humans and machines should be able to read and interpret your data. Software licenses should not pose a barrier to usage. Data should be available in open formats that can be accessed by any software such as .csv, .txt, .dat, etc. Furthermore, thorough data documentation should accompany data to allow that data to interoperable.</p>
 <p>R: Reusable</p>
-<p>Your metadata should provide information on the broad context of your project as well as your data collection to allow for accurate use of your data.</p>
+<p>Your metadata should provide information on the broad context of your project as well as your data collection to allow for accurate use of your data. You should also have clear licensing for data use.</p>
 <p>Additional resources:</p>
-<p>📑 <a href="https://podcasts.apple.com/us/podcast/episode-4-the-what-why-how-and-hesitations-of-data-sharing/id1517310439?i=1000483521281">Within &amp; Between podcast</a></p>
+<p>📑 <a href="https://podcasts.apple.com/us/podcast/episode-4-the-what-why-how-and-hesitations-of-data-sharing/id1517310439?i=1000483521281">Within &amp; Between podcast</a><br />
+📑 <a href="https://zenodo.org/record/3534954#.YFIxBZ1KiUk">Jessica Rex</a></p>
 </div>
 <div id="seer" class="section level3">
 <h3>SEER</h3>
@@ -447,7 +448,7 @@ div.tocify {
 <div id="data-management-plan" class="section level2">
 <h2>Data Management Plan</h2>
 <hr />
-<p>Outside of practical and principled reasons to want to improve your data management, funding institutions require a certain level of data management for their funded projects. For example, to increase transparency and to advance scientific inquiry in education research, (<a href="https://ies.ed.gov/funding/datasharing_implementation.asp">IES</a>) has a policy on providing access to your data at the conclusion of projects funded through their research centers (<em>Exploration</em> or <em>Initial Efficacy and Follow-Up</em> grants). The plan for sharing data must be laid out in a data management plan (DMP) which is included as an appendix in your grant application. Among other things, the DMP must include the following:</p>
+<p>Outside of practical and principled reasons to want to improve your data management, funding institutions require a certain level of data management for their funded projects. For example, to increase transparency and to advance scientific inquiry in education research, <a href="https://ies.ed.gov/funding/datasharing_implementation.asp">IES</a> has a policy on providing access to your data at the conclusion of projects funded through their research centers (<em>Exploration</em> or <em>Initial Efficacy and Follow-Up</em> grants). The plan for sharing data must be laid out in a data management plan (DMP) which is included as an appendix in your grant application. Among other things, the DMP must include the following:</p>
 <p>✔️ Type of data to be shared<br />
 ✔️ Procedures for managing and maintaining confidentiality<br />
 ✔️ Roles and responsibilities of project staff in the management of research data<br />
@@ -471,38 +472,45 @@ div.tocify {
 <div id="terminologyvocabulary" class="section level2">
 <h2>Terminology/vocabulary</h2>
 <hr />
-<p>Before diving into the content of this training, I think it is helpful to cover terminology that will be used in these modules. Many concepts in education research have multiple terms and can be used interchangeably (other terms are listed in brackets). Across different institutions, researchers may use all or some of these terms.</p>
-<p><strong>Unique identifier (UID)</strong>: This is a numeric or alphanumeric identifier that is unique to every participant, site or object.</p>
-<p><strong>Participant ID</strong>: [study ID, subject ID, participant code, record id, unique id] In longitudinal studies, these identifiers allow us to link data across time.</p>
-<p><strong>Condition</strong>: [treatment, intervention status]</p>
-<p><strong>Site ID</strong>: [location ID]</p>
-<p><strong>Cohort</strong>:</p>
-<p><strong>Wave</strong>: [time period, event]</p>
-<p><strong>Tracking</strong>: [roster, demographic file, master list, master key] (sometimes called a master list because it contains data that links your assigned study IDs to their identifiable information)</p>
-<p><strong>Variable</strong>: [column, field]</p>
-<p><strong>Variable name</strong>: [header]</p>
-<p><strong>Subject</strong>: [case, row, participant, record]</p>
-<p><strong>Directory</strong>:</p>
-<p><strong>Path</strong>:</p>
-<p><strong>Randomization block</strong>:</p>
-<p><strong>Study</strong>:</p>
-<p><strong>Data</strong>: “Data are items of recorded information considered collectively for reference or analysis” (<a href="https://pitt.libguides.com/managedata/understanding">University of Pittsburgh</a>). It can include, but is not limited to survey responses, measurements, assessments, recordings, code, transcripts, and statistics.</p>
-<p><strong>Dataset</strong>: [dataframe, spreadsheet]</p>
-<p><strong>Raw data</strong>: [untouched]</p>
-<p><strong>Clean data</strong>: [processed data]</p>
-<p><strong>Database</strong>:</p>
-<p><strong>Standardization</strong>:</p>
-<p><strong>PII</strong>:</p>
-<p><strong>Missing</strong>: [NULL, NA]</p>
-<p><strong>Anonymous</strong>:</p>
-<p><strong>Confidential</strong>:</p>
+<p>Before diving into the content of this training, I think it is helpful to cover terminology that will be used in these modules. Many concepts in education research have multiple terms and can be used interchangeably (other terms are listed in [brackets]). Across different institutions, researchers may use all or some of these terms.</p>
+<p><strong>Study</strong>: For these materials, study refers to a single funded research project resulting in one more more datasets to be used to answer a research question.</p>
+<p><strong>Cross-sectional</strong>: Data is collected on participants for a single time point.</p>
+<p><strong>Longitudinal</strong>: Data is collected on participants over a period of time.</p>
+<p><strong>Attrition</strong>: <a href="https://ies.ed.gov/ncee/wwc/Docs/OnlineTraining/wwc_training_m2.pdf">The loss of study units from the sample</a>, often seen in longitudinal studies.</p>
+<p><strong>Randomized Controlled Trial</strong>: [RCT] A study design that randomly assigns participants to a control or treatment condition. In education research you often hear about two types of RCTs. The first being the Individual-Level Randomized Controlled Trial (I-RCT) in which individuals (such as students) are randomized directly to the treatment or control group. The second is a Cluster Randomized Controlled Trial (C-RCT), sometimes also called group-randomized, in which clusters of students (such as classrooms) are randomized (<a href="https://ies.ed.gov/ncer/pubs/20142000/index.asp">IES, 2014</a>).</p>
+<p><strong>Condition</strong>: [intervention status] The level of the independent variable that an individual or group is exposed to (treatment or control).</p>
+<p><strong>Treatment</strong>: [experiment] The individual or group receives the intervention.</p>
+<p><strong>Control</strong>: [business as usual] The individual or group does not receive the intervention.</p>
+<p><strong>Subject</strong>: [case, participant, site, record] A person or place participating in research and has one or more piece of data collected on them.</p>
+<p><strong>Cohort</strong>: A group of participants recruited into the study at the same time.</p>
+<p><strong>Wave</strong>: [time period, time point, event, session] Intervals of data collection over time.</p>
+<p><strong>Anonymous</strong>: Data at no time has ever had identifying information tied to it and can never be linked back to an individual. This data can not be linked across time or measures.</p>
+<p><strong>Confidential</strong>: Personally identifiable information (PII) in your data has been removed and names are replaced with a code and the only way to link the data back to an individual is through that code. The identifying code file is stored separate from the research data.</p>
+<p><strong>De-identified</strong>: Data is considered de-identified when all PIIs are removed and there is no longer a link to a participant’s identity anywhere; i.e., all names in your research data are replaced with a code and the identifying list that links that code to identifying information is destroyed at the conclusion of a study.</p>
+<p><strong>PII</strong>: Personally identifiable information is protected information that can directly or indirectly identify a study participant. It includes but is not limited to name, social security number, email, birthdate, district or school name.</p>
+<p><strong>Study ID</strong>: [participant ID, location ID, site ID, unique identifier (UID), subject ID, participant code, record id] This is a numeric or alphanumeric identifier that is unique to every participant, site or object in order to create confidential and de-identified data. These identifiers allow researchers to link data across time or measure.</p>
+<p><strong>Participant database</strong>: [study roster, demographic file, master list, master key, linking key, code key, key code, main list, identifiers dataset, crosswalk, record keeping, tracking, participant tracking] This database, or spreadsheet, includes any identifiable information on your participants as well as their assigned study ID. It is your only own means of linking your confidential research study data to a participant’s true identity. It is also used to track data collected across time and measures as well as participant attrition.</p>
+<p><strong>Data</strong>: [research data] “Data are items of recorded information considered collectively for reference or analysis” (<a href="https://pitt.libguides.com/managedata/understanding">University of Pittsburgh</a>). It can include, but is not limited to survey responses, measurements, assessments, recordings, code, transcripts, and statistics. Most education research data is considered “observational” meaning data is captured in real-time and can’t be replaced as opposed to experimental (lab) data or simulation data.</p>
+<p><strong>Data formats</strong>: Education research data is typically collected in one of three formats: text( .txt, .pdf, .docx), numeric (.xlsx, .csv, .sav) , multimedia (.mpeg, .wav).</p>
+<p><strong>Dataset</strong>: [dataframe, spreadsheet] A structured collection of data usually stored in tabular form. A research study usually produces one final dataset per entity/unit (ex: teacher dataset, student dataset).</p>
+<p><strong>Raw data</strong>: [primary, untouched] Unprocessed data collected directly from a source.</p>
+<p><strong>Clean data</strong>: [processed data, research ready data] Any data that has been manipulated or modified.</p>
+<p><strong>Database</strong>: In this training, I typically use this term to refer to a relational database. An organized collection of related data stored in tables that can be linked together by a common identifier.</p>
+<p><strong>Variable</strong>: [column, field, question] Any phenomenon you are collecting information on/trying to measure. These variables will make up columns in your datasets or databases.</p>
+<p><strong>Variable name</strong>: [header] A shortened symbolic name given the variable in your data to represent the information it contains.</p>
+<p><strong>Missing data</strong>: [NULL, NA] Occurs when there is no data stored in a variable for a particular observation/respondent.</p>
+<p><strong>Directory</strong>: “A file system cataloging structure which contains references to other computer files”(<a href="https://en.wikipedia.org/wiki/Directory_(computing)">Wikipedia</a>).</p>
+<p><strong>Path</strong>: “The general form of the name of a file or directory, specifies a unique location in a file system” (<a href="https://en.wikipedia.org/wiki/Path_(computing)">Wikipedia</a>).</p>
+<p><strong>Standardization</strong>: Developing a set of agreed upon technical standards and applying them within and across all research projects.</p>
+<p>Resources:</p>
+<p>📑 <a href="https://www2.le.ac.uk/services/research-data/old-2019-12-11/documents/UoL_ReserchDataDefinitions_20120904.pdf">University of Leicester</a></p>
 <hr />
 </div>
 <div id="considerations" class="section level2">
 <h2>Considerations</h2>
 <hr />
 <p>Good data management requires a lot of thought and planning. The <a href="https://pitt.libguides.com/managedata/understanding">University of Pittsburgh</a> has an excellent list of 12 things to consider in your data management planning.</p>
-<p><img src="img/planning-consider.png" width="60%" /></p>
+<p><img src="img/planning-consider2.png" width="70%" /></p>
 <hr />
 </div>
 <div id="resources" class="section level2">
@@ -510,29 +518,32 @@ div.tocify {
 <hr />
 <p>As I have been working on this training I have found there are some excellent existing resources out there as well as others who are doing similar work, even in the field of education. Below are some of the resources I highly recommend.</p>
 <ol style="list-style-type: decimal">
-<li>Academic Research Librarians
+<li><p>Academic Research Librarians</p>
 <ul>
 <li>Almost every academic institution employs research data librarians whose job is to help faculty and staff with research data services. This is a great resource to utilize if you work at a university. Examples:</li>
 <li><a href="https://pitt.libguides.com/managedata">Research Data Management at University of Pittsburgh</a></li>
 <li><a href="https://library.wustl.edu/research-support/data-services/">Washington University Data Services Team</a></li>
 <li><a href="https://www.reed.edu/data-at-reed/index.html">Data at Reed</a></li>
 </ul></li>
-<li>A team at Florida State University (including Christopher Schatschneider, Tara Reynolds, Sara Hart and colleagues) have been putting out tons of resources around data management, specifically in education, and open science practices in general.
+<li><p>A team at Florida State University (including Christopher Schatschneider, Tara Reynolds, Sara Hart and colleagues) have been putting out tons of resources around data management, specifically in education, and open science practices in general.</p>
 <ul>
 <li><a href="https://docs.google.com/document/d/1GfIo67-wqq-26ZG9etar5tiKKYLLqWCra8jySolAK7Y/edit">The Basic of Data Management</a></li>
 <li><a href="https://edarxiv.org/qdj4t/">Open Science in Education Sciences</a></li>
 <li><a href="https://edarxiv.org/2x3cu">Data Sharing in Education Science</a></li>
 </ul></li>
-<li>Teague Henry, a postdoctoral fellow in the Department of Psychiatry at the University of Pittsburgh, has been putting out blog posts around data management and they have be very insightful.
+<li><p>Teague Henry, a postdoctoral fellow in the Department of Psychiatry at the University of Pittsburgh, has been putting out blog posts around data management and they have be very insightful.</p>
 <ul>
 <li><a href="https://www.teaguehenry.com/strings-not-factors/2021/2/21/eight-principles-of-good-data-management">Eight Principles of Good Data Management</a></li>
 <li><a href="https://www.teaguehenry.com/strings-not-factors/2021/1/24/data-management-for-researchers-three-terrifying-tales">Data Management for Researchers: Three Tales</a></li>
 </ul></li>
-<li>Open Science Foundation has endless slide decks covering data management and open science concepts.
+<li><p>Open Science Foundation has endless slide decks covering data management and open science concepts.</p>
 <ul>
 <li>Simply go to <a href="https://osf.io/" class="uri">https://osf.io/</a> and type “data management slides” into the search box and you will get over 1 million results!</li>
 </ul></li>
-<li>Kristin Briney, a librarian at CalTech, wrote the book <a href="http://dataabinitio.com/?author=1">Data Management for Researchers</a>, and also has a <a href="http://dataabinitio.com/">blog</a> where she frequently posts about data management topics and issues.</li>
+<li><p>Kristin Briney, a librarian at CalTech, wrote the book <a href="http://dataabinitio.com/?author=1">Data Management for Researchers</a>, and also has a <a href="http://dataabinitio.com/">blog</a> where she frequently posts about data management topics and issues.</p></li>
+<li><p>John Borghi at Stanford has developed a great <a href="https://laneguides.stanford.edu/DataManagement/checklist">data management checklist</a>.</p></li>
+<li><p>UMASS has an entire curriculum around <a href="https://library.umassmed.edu/resources/necdmc/modules">research data management</a>.</p></li>
+<li><p>This Research Data Managment 1 Day Workshop has a large list of resources around <a href="https://zenodo.org/record/4562630#.YFIzYp1KiUn">data management</a>.</p></li>
 </ol>
 </div>
 

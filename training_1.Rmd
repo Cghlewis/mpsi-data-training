@@ -24,9 +24,9 @@ You can view slides from this talk [here](https://cghlewis.github.io/mpsi-traini
 Data documentation is not only required by funders including IES, it is essential for data management. Data documentation should cover the who, what, where, when, and why of your project and your data ([OSF: NIH](https://osf.io/48ufs/)).
 
 
-```{r, echo=FALSE, fig.align="center", out.width='70%'}
+```{r, echo=FALSE, fig.align="center", out.width='65%'}
 
-knitr::include_graphics("img/document.png")
+knitr::include_graphics("img/document2.png")
 
 ```
 
@@ -69,11 +69,11 @@ A document/s to record all your procedures changes made to those procedures thro
 
 At some point someone will ask you how or why you did something the way you did. This is the document that will save you because it is very likely that you will not remember. This document also helps standardize your procedures. You can and should refer back to this document during a longitudinal study to ensure you continue to implement procedures in the same way. 
 
-I highly recommend always adding protocol as part of any data documentation plan. You can make separate protocol documents per procedure or keep them all in one standalone document with a table of contents. Most likely your protocol will not be shared outside of your team, but the information in your protocol can be used to inform other documentation such as READMEs or codebooks. Your protocol can live in any format that works for you (ex: .docx, .md, .txt). It is a living document that will be continually updated so use a format that makes sense for you. 
+I highly recommend always adding protocol as part of any data documentation plan. You can make separate protocol documents per procedure or keep them all in one standalone document with a table of contents. Most likely your protocol will not be shared outside of your team, but the information in your protocol can be used to inform other documentation such as READMEs or codebooks. Your protocol can live in any format that works for you (ex: .docx, .md, .txt). It is a living document that will be continually updated so use a format that makes sense for you. All of your project protocols should be housed in an easily accessible location in a project folder or any protocol that applies across all projects should be kept in an accessible location in your team folder.
 
 Protocol should cover procedures/decisions for the following:
 
-* Participant recruitment
+* Participant recruitment (inclusionary and exclusionary decisions)
 * Consent and assent
 * Participant selection
 * Randomization and blinding/unblinding
@@ -102,6 +102,8 @@ It is also good practice to add a copy of your data collection instruments to yo
   
   📑 These [slides](https://figshare.com/articles/Data_Management_and_Data_Management_Plans/7890827) from Jessica Logan, Ph.D. have nice protocol examples.
 
+It is also possible to have protocol that may be applicable across all projects (such as rules for data entry). While these kinds of protocols should go in your project specific protocol for documentation, you can also keep a copy of these more broad rules in an institutional protocol (or some may call it a lab manual) to be referred to for all projects.
+
 <br>
 
 ### Style Guide
@@ -116,7 +118,7 @@ Example [style guide](https://github.com/bartvandebiezen/file-name-conventions/b
 
 I am including a wiki in this list even though I think it is an unconventional documentation tool in education research. A wiki can help your team internally document, organize, and navigate reference material. If you use platforms such as Microsoft SharePoint, a wiki can be a great place to store information that your team frequently refers to. SharePoint describes a wiki as "a site that is designed for groups of people to quickly capture and share ideas by creating simple pages and linking them together." It is a page that anyone on your team can add/edit content (a short blurb about the document) and then can link to those referenced documents for easy access. 
 
-Wikis can be made for specific research projects and are great for referring to frequently requested information (ex: recruitment information or participant payment details). You can also make a general research team wiki that includes information that either applies to your entire team (ex: Team meeting notes or employee manual) or information that is relevant across all projects (ex: Style guide). 
+Wikis can be made for specific research projects and are great for referring to frequently requested information (ex: recruitment information or participant payment details). You can also make a general research team wiki that includes information that either applies to your entire team (ex: Team meeting notes or employee manual) or information that is relevant across all projects (ex: Style guide, lab manual). 
 
   📑 You can make wikis with many other tools, but you can read more about Sharepoint's wiki [here](https://support.microsoft.com/en-us/office/create-and-edit-a-wiki-dc64f9c2-d1a2-44b5-ac59-b9d535551a32).
 
@@ -192,7 +194,8 @@ Additional reading on data dictionaries can be found here:
   📑 [USDA](https://data.nal.usda.gov/data-dictionary-purpose)  
   📑 [University of Helsinki](https://www.helsinki.fi/en/research/guide-for-data-documentation#section-72708)  
   📑 [Karl Broman](http://kbroman.org/dataorg/pages/dictionary.html)  
-  📑 [Penn State](https://www.methodology.psu.edu/ra/most/redcap/)
+  📑 [Penn State](https://www.methodology.psu.edu/ra/most/redcap/)  
+  📑 [Education Data Done Right](file:///C:/Users/HAMPTO~1/AppData/Local/Temp/eddatadoneright.pdf)
 
 <br>
 
@@ -270,7 +273,7 @@ Excellent examples, templates, and further details can be found here:
 
 ### Metadata
 
-Metadata is *data about data*. They are structured data that "provide information about the dataset to help people find, understand, and use your data" ([IES](https://ies.ed.gov/funding/datasharing_faq.asp)). Most of the time when you hear the term metadata, it will be referring to what I am going to call project-level metadata. Project-level metadata is a type of descriptive metadata that aids in finding your project through internet searches. It is like the "label of the dataset". At minimum the information captured should include who created the data, when the data were created, a title and description of the data, and a unique identifier for the data. This is the type of data we discussed capturing earlier within the *General*, *File*, and *Access* portion of our *README* files. 
+Metadata is *data about data*. They are structured data that "provide information about the dataset to help people find, understand, and use your data" ([IES](https://ies.ed.gov/funding/datasharing_faq.asp)). Most of the time when you hear the term metadata, it will be referring to what I am going to call project-level metadata. Project-level metadata is a type of descriptive and legal metadata that aids in finding your project through internet searches. It is like the "label of the dataset". At minimum the information captured should include who created the data, when the data were created, a title and description of the data, and a unique identifier for the data. This is the type of data we discussed capturing earlier within the *General*, *File*, and *Access* portion of our *README* files. 
 
 Common elements of project-level metadata include:
 
@@ -283,9 +286,9 @@ Source: [University of Portland](https://libguides.up.edu/datamanagement/documen
 
 Metadata can also also be categorized further into data-level and variable-level:
 
-* Data-level metadata, which might be considered administrative metadata, focuses more on the details of each dataset such as instruments used to collect the data and software used to process the data. Lucikly, creating this metadata requires no extra effort because this is the exact information captured in sections like *Methodology* in your *README* files above.
+* Data-level metadata, which might be considered administrative or technical metadata, focuses more on the details of each dataset such as instruments used to collect the data and software used to process the data. Lucikly, creating this metadata requires no extra effort because this is the exact information captured in sections like *Methodology* in your *README* files above.
 
-* Variable-level metadata, which might be considered structural metadata, is data about the variables in your dataset. This can be both incorporated into your data, by adding attributes like variable and value labels, as well as accounted for externally, and it is includes all the information discussed earlier in your *codebook* and/or *data dictionary*. If your data is qualitative in nature (such as documents, photos, videos, or sound files), metadata such as date/time/location, tags/keywords, or measurement information can sometimes be embedded directly into your files ([IHEID](https://libguides.graduateinstitute.ch/rdm/qualitative)). 
+* Variable-level metadata, which might be considered structural metadata, is data about the variables in your dataset. This can be both incorporated into your data, by adding attributes like variable and value labels, as well as accounted for externally, and it is includes all the information discussed earlier in your *codebook* and/or *data dictionary*. This data should also describe how datasets relate to one another (ex: student dataset is linked to teacher dataset through tch_id). If your data is qualitative in nature (such as documents, photos, videos, or sound files), metadata such as date/time/location, tags/keywords, or measurement information can sometimes be embedded directly into your files ([IHEID](https://libguides.graduateinstitute.ch/rdm/qualitative)). 
 
 The most notable thing about metadata is that many fields follow metadata standards that aid in the "retrieving and indexing" of your data ([University of Arizona](https://data.library.arizona.edu/best-practices/data-documentation-readme-metadata)). Standards include things such as agreed upon formats, vocabularies, and structure. For example social science often follows the Data Documentation Initiative ([DDI](https://ddialliance.org/)) standards. However, ([IES](https://ies.ed.gov/funding/datasharing_faq.asp)) states that education has no standards and that instead "researchers should document everything and strive to make notation as interpretable as possible". Metadata can either be embedded within data or included in a separate file such as a README.txt or .pdf file.
 
@@ -305,8 +308,9 @@ Additional metadata information can be found here:
   📑 [Washington University in St. Louis](https://libguides.wustl.edu/c.php?g=47355&p=305263)  
   📑 [Data Management for Researchers](https://pelagicpublishing.com/products/data-management-for-researchers-briney)  
   📑 [DMP Tool](https://dmptool.org/general_guidance)  
-  📑 [CESSDA](https://www.cessda.eu/Training/Training-Resources/Library/Data-Management-Expert-Guide/2.-Organise-Document/Documentation-and-metadata)
-  📑 [Washington University](https://libguides.wustl.edu/drmr/dataprep)
+  📑 [CESSDA](https://www.cessda.eu/Training/Training-Resources/Library/Data-Management-Expert-Guide/2.-Organise-Document/Documentation-and-metadata)  
+  📑 [Washington University](https://libguides.wustl.edu/drmr/dataprep)  
+  📑 [Jessica Rex](https://zenodo.org/record/3534954#.YFIxBZ1KiUk)  
 
 <br>
 
@@ -351,4 +355,4 @@ Although, *publishing data* will come in a later module, I did want to wrap up b
 * README file (for each dataset) - including the project-level metadata
 * Data dictionaries and/or codebooks
 
-  📑 If you want to see an amazingly thorough (and very long) example of data documentation, explore the [Early Childhood Longitudinal Study, Kindergarten Class of 2010-11 User's Manual](https://nces.ed.gov/pubs2015/2015074.pdf) from IES.
+📑 If you want to see an amazingly thorough (and very long) example of data documentation, explore the [Early Childhood Longitudinal Study, Kindergarten Class of 2010-11 User's Manual](https://nces.ed.gov/pubs2015/2015074.pdf) from IES.

@@ -7,9 +7,11 @@ author: "Crystal Lewis"
 
 This is the site for the [Missouri Prevention Science Institute (MPSI)](http://moprevention.org/) training series on *data management in large-scale education research studies*. This series will cover best practices in data management procedures throughout the entire life cycle of research project implementation (from grant award to end of grant). While I think parts of this series will apply to any type of education research, I think the series is mainly geared towards those doing longitudinal evaluation research, specifically those conducting randomized controlled trial studies (RCTs).
 
-In tandem with this training series, I am continuing to research best practices in data management and intend to make these tutorials into a larger manual. The training materials on this site may be updated as more information is obtained. If you work in education research, particularly with RCTs, and would be willing to share your expertise with me to improve this manual, please contact me [here](mailto:hamptoncg@missouri.edu). Acknowledgment and gratitude for those who have taken time out of their busy schedules to share their wisdom with me so far: Francis Huang, Mary McCraken, Ryan Estrellado, Kim Manturuk, Beth Chance, Jessica Logan, and Rebecca Schmidt.
+In tandem with this training series, I am continuing to research best practices in data management and intend to make these tutorials into a larger manual. The training materials on this site may be updated periodically as more information is obtained. If you work in education research, particularly with RCTs, and would be willing to share your expertise with me to improve this manual, please contact me [here](mailto:hamptoncg@missouri.edu). Acknowledgment and gratitude for those who have taken time out of their busy schedules to share their wisdom with me so far: Francis Huang, Mary McCraken, Ryan Estrellado, Kim Manturuk, Beth Chance, Jessica Logan, and Rebecca Schmidt.
 
 While this specific training is for staff and others affiliated with the MPSI, I am making these materials available for anyone who finds them useful. My hope is that when completed, this comprehensive manual will assist all new PIs, data managers, project coordinators, research assistants, and others who have been awarded their first research grant, or even those with established careers, in navigating how to implement a successful data management plan throughout their project. There are many great resources out there on data management in research and I will share those resources in this series. However, what I think will make this resource unique is the narrow focus on education research, an area with scarce data management information.
+
+**About me**: I oversee data management activities in the MPSI. We currently have 7 federally funded research grants (5 of which are RCTs). In my time with the MPSI I have been a part of almost every aspect of the research data life cycle. I have been a project coordinator, data collector, analyst, supervisor, grant writer, and data manager, and in these roles I have seen the good, the bad, and the ugly of data management. My experiences and my passion to improve data management practices in our organization and across all organizations is my motivation for creating these materials.
 
 *Training materials were last updated on `r format(Sys.time(), '%m/%d/%Y')`*  
 
@@ -21,11 +23,11 @@ While this specific training is for staff and others affiliated with the MPSI, I
 |----------|----------|-----------------------------------------------------------------------|
 |1         | 09/25/20 |Documentation                                                          |
 |2         | 02/12/21 |Setting up data structures                                             |
-|3         | 03/05/21 |Style Guide                                                            |
-|4         | 04/02/21 |Intro to R and RStudio, reading in and reviewing data                  |
-|5         | TBD      |Data wrangling basics                                                  |
-|6         | TBD      |Restructuring, merging, or aggregating data                            |
-|7         | TBD      |Cleaning data start to finish, exporting data                          |
-|8         | TBD      |Advanced topics: TBD                                                   |
+|3         | 04/16/21 |Style Guide                                                            |
+|4         | 04/30/21 |Writing a data cleaning plan                                           |
+|5         | TBD      |Intro to R and RStudio, reading in and reviewing data                  |
+|6         | TBD      |Data wrangling basics                                                  |
+|7         | TBD      |Restructuring, merging, or aggregating data                            |
+|8         | TBD      |Cleaning data start to finish, exporting data                          |
 |9         | TBD      |Advanced topics: TBD                                                   |
 |10        | TBD      |Sharing data upon project completion                                   |
