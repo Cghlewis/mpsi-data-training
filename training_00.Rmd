@@ -59,7 +59,7 @@ Your metadata should provide information on the broad context of your project as
 Additional resources:
 
   📑 [Within & Between podcast](https://podcasts.apple.com/us/podcast/episode-4-the-what-why-how-and-hesitations-of-data-sharing/id1517310439?i=1000483521281)  
-  📑 [Jessica Rex](https://zenodo.org/record/3534954#.YFIxBZ1KiUk)
+  📑 [Jessica Rex slides](https://zenodo.org/record/3534954#.YFIxBZ1KiUk)
 
 
 ### SEER
@@ -186,7 +186,9 @@ Resources:
 
 ---
 
-Good data management requires a lot of thought and planning. The [University of Pittsburgh](https://pitt.libguides.com/managedata/understanding) has an excellent list of 12 things to consider in your data management planning.
+Good data management requires a lot of thought and planning. This quote from [Sarah Arena at Harvard Medical School](https://datamanagement.hms.harvard.edu/news/invest-research-data-management-get-data-manager) aptly describes the necessity and challenges of the data management process, ""finding answers and designing solutions are both iterative processes that involve collaboration, question-asking, lots of research, and recognizing when the perfect is becoming the enemy of the good." 
+
+The [University of Pittsburgh](https://pitt.libguides.com/managedata/understanding) has an excellent list of 12 things to consider in your data management planning.
 
 ```{r, echo=FALSE, out.width='70%'}
 
@@ -213,7 +215,7 @@ Examples:
 2. A team at Florida State University (including Christopher Schatschneider, Tara Reynolds, Sara Hart and colleagues) have been putting out tons of resources around data management, specifically in education, and open science practices in general. 
       + [The Basic of Data Management](https://docs.google.com/document/d/1GfIo67-wqq-26ZG9etar5tiKKYLLqWCra8jySolAK7Y/edit)
       + [Open Science in Education Sciences](https://edarxiv.org/qdj4t/)
-      + [Data Sharing in Education Science](https://edarxiv.org/2x3cu)
+      + [Data Sharing in Education Science](https://journals.sagepub.com/doi/full/10.1177/23328584211006475#.YGuYDCaQo48.twitter)
 
 3. Teague Henry, a postdoctoral fellow in the Department of Psychiatry at the University of Pittsburgh, has been putting out blog posts around data management and they have be very insightful.
     + [Eight Principles of Good Data Management](https://www.teaguehenry.com/strings-not-factors/2021/2/21/eight-principles-of-good-data-management)
@@ -229,4 +231,6 @@ Examples:
 7. UMASS has an entire curriculum around [research data management](https://library.umassmed.edu/resources/necdmc/modules).
 
 8. This Research Data Managment 1 Day Workshop has a large list of resources around [data management](https://zenodo.org/record/4562630#.YFIzYp1KiUn).
+
+9. Julia Strand has a great [preprint](https://psyarxiv.com/rsn5y) that outlines best practices for improving data management/reducing errors in your research lab.
 

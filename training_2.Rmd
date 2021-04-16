@@ -80,7 +80,7 @@ Research teams may be restricted in how they collect their survey data due to li
 
 #### **Web-based Surveys**
 
-There are many web-based survey platforms (Ex: Qualtrics, Survey Monkey, Google Forms, Microsoft Forms) you can use to develop surveys. If those existing platforms do not meet your needs, you can always build your own web-based application to collect data. 
+There are many web-based survey platforms (Ex: Qualtrics, Survey Monkey, Google Forms, Microsoft Forms, SurveyCTO) you can use to develop surveys. If those existing platforms do not meet your needs, you can always build your own web-based application to collect data. 
 
   + You can hire a developer to build an app for you
   + You can build your own application to collect data in tools such as R or Tableau
@@ -126,7 +126,7 @@ No matter what platform you use, building your survey requires some up front pla
 
 #### **Offline Surveys**
 
-If your site or participants do not have WiFi and/or email access, one option is to work with a survey platform (such as Qualtrics) that allows you to create a survey online, administer it using an offline survey app on your phone or tablet, and then upload that data back to the survey platform once you have an internet connection again.
+If your site or participants do not have WiFi and/or email access, one option is to work with a survey platform (such as Qualtrics or SurveyCTO) that allows you to create a survey online, administer it using an offline survey app on your phone or tablet, and then upload that data back to the survey platform once you have an internet connection again.
 
 Still, depending on your study, participants, and resources, building a web-based survey may not be possible and/or it may not be the best option for your project.
 
@@ -151,7 +151,7 @@ To improve data entry issues:
         - What they should do if they come across missing data (skip the cell, enter a certain number such as -999, etc.)
         - What they should do if a respondent circles multiple answers
       + Set up a system for error checking    
-        - Consider [double entering](http://barchard.faculty.unlv.edu/doubleentry/Scott%20Data%20Entry%20WPA%202008.pdf) either all or a percentage of your data and running a syntax to check for errors (I will discuss this more in later trainings)
+        - Consider having two different staff members [double enter](http://barchard.faculty.unlv.edu/doubleentry/Scott%20Data%20Entry%20WPA%202008.pdf) either all or a percentage of your data and running a syntax to check for errors (I will discuss this more in later trainings)
 
    📑 Reynolds and Schatsnieder from Florida State University have some great suggestions [here](https://figshare.com/articles/preprint/The_Basics_of_Data_Management/13215350/1) for setting up a data entry station and protocol for any manual data entry that needs to occur.  
    📑 Data Management Episode 1 and 2 of [Within and Between](http://www.withinandbetweenpod.com/) podcast has some great examples of how to set up data entry protocol.
@@ -225,12 +225,20 @@ Last I wanted to mention that it is also possible to build all or almost all of 
 
 The simplest way to maintain participant privacy is to collect anonymous data. If you collect anonymous data, no participant identifying information will be collected in your instruments (name, email, date of birth, etc.). Importantly, you will also want to make sure to not collect IP addresses as they can be used to identify an individual's computer. However, if you collect anonymous data, you will not be able to link data across measures or across time.
 
-More commonly in education research though, you will be collecting some identifiers (ex: name). However, in order to maintain participant [confidentiality](https://www.etsu.edu/irb/documents/confidentiality_vs_privacy.pdf) you cannot keep those identifiers in your research data. You will need to assign unique IDs to all participants and replace all identifying information with that study ID. In longitudinal studies in particular, you will be using that unique participant ID to link data across time and across measures. 
+More commonly in education research you will be collecting some identifiers (ex: name). However, in order to maintain participant [confidentiality](https://www.etsu.edu/irb/documents/confidentiality_vs_privacy.pdf) you cannot keep those identifiers in your research data. You will need to assign unique IDs to all participants and replace all identifying information with that study ID. In longitudinal studies in particular, you will be using that unique participant ID to link data across time and across measures. 
 
 To the best of your ability, all of your data collection instruments should have that study ID associated embedded in the form when you send it out into the field, rather than name, to ensure confidentiality (participant name is never actually on your study data and therefore does not need to be removed) as well as to reduce errors that may occur when replacing names with study IDs. This is especially important for longitudinal studies, where maintaining the accuracy of your study IDs is critical to linking data over time.
 
-**Reminder**: While I am highly recommending you attach study ID to your data collection instruments, it is important to remember that you must have either name OR the study ID attached to your data collection instruments in order to link data across measures and time. If you do not collect identifiers, you will **not** be able to link your data across measures and time. Your data will essentially be anonymous.
+:::question
+**Quick thought: Identifiers**
 
+While I am highly recommending you attach study ID alone to your data collection instruments, it is important to remember that you must have **some** sort of identifier (either name OR the study ID) built into every data collection instrument (survey, observation form, assessment, etc.) in order to link data across measures and time. If you do not collect identifiers, you will **not** be able to link your data across measures and time. Your data will essentially be anonymous. 
+
+Even if you are purposefully collecting anonymous data, if you have randomized participants, say schools, you will still need an identifier for the randomization block/cluster built into your instrument (ex: sch_id) or you will not be able to know which participants are treatment and which are control.
+
+:::
+
+<br>
 
 ### Web-based Data:
 
@@ -538,7 +546,7 @@ Last, most of what I have covered here is relevant for studies where you plan to
 
 ---
 
-Whether you are working with your own original collected data, or you are working with data provided to you from an entity such as a school district, or you are working with publicly available data, you need to consider short-term secure data storage. I say short-term because this is how you will store your data while you are actively collecting data for your project. Data retention/long-term storage, after your study is complete, will be discussed in a later training. 
+Whether you are working with your own original collected data, or you are working with extant data provided to you from an entity such as a school district, or publicly available data, you need to consider short-term secure data storage. I say short-term because this is how you will store your data while you are actively collecting data for your project. Data retention/long-term storage, after your study is complete, will be discussed in a later training. 
 
 In general you will most likely be working with one of four types of data and will need to store your data according to the type of data:
 
@@ -566,7 +574,7 @@ Because your participant database contains identifiable information about your p
 
   + It should be stored separately from your confidential study data
   + This data should have limited access (only available to the few individuals who actually need to interact with this data)
-  + It should be stored on a password-protected, university/institution sponsored shared network or cloud service with encryption (never a personal computer)
+  + It should be stored on a password-protected, university/institution sponsored shared server or cloud service with encryption (never a personal computer)
   + Since this is your only crosswalk between your study IDs and PIIs, make sure to backup this data regularly
   
 ### Storing electronic records
@@ -577,7 +585,7 @@ Your typical study data files are in formats such as csv, tab-delimited, excel, 
   + Limit access to your data folder to only those who need to work with the data. This ensures no one intentionally or unintentionally makes changes to your data.
   + Your de-identified study data should be kept separate from any file that can link an ID to a participants true identity (ex: your participant database)
   + Backup this data regularly
-  + School record data you acquire from schools and districts may have its own set of regulations such as [FERPA](https://studentprivacy.ed.gov/audience/researchers) and [HIPPA](https://studentprivacy.ed.gov/sites/default/files/resource_document/file/ferpa-hipaa-guidance.pdf) so it is worth checking that your storage meets those requirements as well.
+  + Extant data you acquire, such as student record data from schools and districts may have its own set of regulations such as [FERPA](https://studentprivacy.ed.gov/audience/researchers) and [HIPPA](https://studentprivacy.ed.gov/sites/default/files/resource_document/file/ferpa-hipaa-guidance.pdf) so it is worth checking that your storage meets those requirements as well.
   
 ### Storing detachable media
 
@@ -649,21 +657,6 @@ Again, I am not an IT professional, but some general security rules to keep in m
   + There are [data classification levels (DCL)](https://www.umsystem.edu/ums/is/infosec/classification-definitions) that help you identify the security you need based on the type of data you have. Knowing what level your data falls under can help you start conversations with your IT department to decide if you are meeting the level of security you need to meet FERPA and HIPPA requirements if applicable.
   + Last, talk with your IT staff for recommendations on storage, security, and file sharing. They are the experts!
 
-<br>
-
-:::question
-**Quick thought: Institutional Server**
-
-While some institutions may allow cloud storage, [J-PAL](https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf) suggests possible benefits to using a institution provided server if available are:  
-
-  * Your IT department may provide secure remote access via VPN, typically involving multiple layers of security including encrypting network connections and requiring two factor authentication  
-  * IT staff may be able to automate secure data backups for you  
-  * IT staff may be able to restrict access to folders for you  
-
-:::
-
-<br>
-
 Resources on data security:
 
   📑 [University of Guelph](https://www.uoguelph.ca/ccs/sites/uoguelph.ca.ccs/files/Categorization%20%26%20Security%20of%20Research%20Data_Final.pdf)  
@@ -682,6 +675,8 @@ Resources on data security:
   📑 [Veeam](https://www.veeam.com/blog/how-to-follow-the-3-2-1-backup-rule-with-veeam-backup-replication.html)  
   📑 [University of Connecticut](https://security.uconn.edu/data-security-checklist/#)  
   📑 [Brandeis University](https://www.brandeis.edu/ora/hrpp/pdfs/data-management.pdf)
+  📑 [Reasons to consider SharePoint for data storage](https://www.youtube.com/watch?v=RmQylg5_WSY)
+  📑 [Reasons to consider Institutional Servers for data storage](https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf)
   
 ---
 

@@ -69,7 +69,7 @@ A document/s to record all your procedures changes made to those procedures thro
 
 At some point someone will ask you how or why you did something the way you did. This is the document that will save you because it is very likely that you will not remember. This document also helps standardize your procedures. You can and should refer back to this document during a longitudinal study to ensure you continue to implement procedures in the same way. 
 
-I highly recommend always adding protocol as part of any data documentation plan. You can make separate protocol documents per procedure or keep them all in one standalone document with a table of contents. Most likely your protocol will not be shared outside of your team, but the information in your protocol can be used to inform other documentation such as READMEs or codebooks. Your protocol can live in any format that works for you (ex: .docx, .md, .txt). It is a living document that will be continually updated so use a format that makes sense for you. All of your project protocols should be housed in an easily accessible location in a project folder or any protocol that applies across all projects should be kept in an accessible location in your team folder.
+I highly recommend always adding protocol as part of any data documentation plan. You can make separate protocol documents per procedure or keep them all in one standalone document with a table of contents. Most likely your protocol will not be shared outside of your team, but the information in your protocol can be used to inform other documentation such as READMEs or codebooks. Your protocol can live in any format that works for you (ex: .docx, .md, .txt, google doc, or you can use a platform such as [protocols.io](https://www.protocols.io/)). It is a living document that will be continually updated so use a format that makes sense for you. All of your project protocols should be housed in an easily accessible location such as the top of a project folder or any protocol that applies across all projects should be kept in an accessible location such as your team folder.
 
 Protocol should cover procedures/decisions for the following:
 
@@ -116,11 +116,13 @@ Example [style guide](https://github.com/bartvandebiezen/file-name-conventions/b
 
 ### Wiki
 
-I am including a wiki in this list even though I think it is an unconventional documentation tool in education research. A wiki can help your team internally document, organize, and navigate reference material. If you use platforms such as Microsoft SharePoint, a wiki can be a great place to store information that your team frequently refers to. SharePoint describes a wiki as "a site that is designed for groups of people to quickly capture and share ideas by creating simple pages and linking them together." It is a page that anyone on your team can add/edit content (a short blurb about the document) and then can link to those referenced documents for easy access. 
+I am including a wiki in this list even though I think it is an unconventional documentation tool in education research. A wiki can help your team internally document, organize, and navigate reference material. If you use platforms such as Microsoft SharePoint, your default team page type is wiki and your home page can be a great place to store information that your team frequently refers to. SharePoint describes a wiki as "a site that is designed for groups of people to quickly capture and share ideas by creating simple pages and linking them together." It is a page that anyone on your team can add/edit content (a short blurb about the document) and then can link to those referenced documents for easy access. 
 
 Wikis can be made for specific research projects and are great for referring to frequently requested information (ex: recruitment information or participant payment details). You can also make a general research team wiki that includes information that either applies to your entire team (ex: Team meeting notes or employee manual) or information that is relevant across all projects (ex: Style guide, lab manual). 
 
-  📑 You can make wikis with many other tools, but you can read more about Sharepoint's wiki [here](https://support.microsoft.com/en-us/office/create-and-edit-a-wiki-dc64f9c2-d1a2-44b5-ac59-b9d535551a32).
+  📑 You can make wikis with many other tools, but you can read more about SharePoint's wiki [here](https://support.microsoft.com/en-us/office/create-and-edit-a-wiki-dc64f9c2-d1a2-44b5-ac59-b9d535551a32).
+  
+  📑 [Notion](https://www.notion.so/guides/how-to-build-a-wiki-for-your-company) is another tool I recently learned of to build a wiki as well.
 
   📑 There is a great episode of the [Education Data Chat](https://www.buzzsprout.com/1074286/5185513-episode-5-organizing-shared-network-drives-tips-and-tricks) podcast where they discuss wikis as well.
 

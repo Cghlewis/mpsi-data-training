@@ -12,24 +12,30 @@ output:
 
 :::presentation
 <br>
-You can view slides from this talk: In Progress.
+You can view slides from this talk [here](https://cghlewis.github.io/mpsi-training3/)
 :::
 
 
 A style guide is such an integral piece to data management, I am giving it its own section! We will cover best practices for file structures, file naming and versioning, variable naming, and value coding. Whatever rules you put in place, make sure they are written down, stored somewhere that is accessible to the entire team (for example a team wiki or a README) and that all staff are trained to follow the style guide protocols. I highly recommend applying this style guide across **all** projects and therefore putting this style guide in a team folder. If there is any style that is specific to a certain project, you will want to place that style guide at the top of a project folder in a README or on a project wiki.
 
+Reasons a style guide is imperative include:
+
+* Standardization (within and across projects)
+* Interpretation: Consistent and clear structure, naming, and coding allows your files and variables to be findable and understandable to humans and computers.
+* Reproducibility: If the organization of your file paths, file naming, or variable naming constantly changes, that undermines the reproducibility of any data management or analysis code you have written.
+
 ---
 
 ## Directory Structure
 
-As I mentioned in training 2, how you set up your directory structure is based on your preferences. However, it is important to get that structure written out in a **style guide** so that everyone is following the same rules within and across projects.
+As I mentioned in training 2, how you set up your directory structure is based on your preferences. However, it is important to get that structure written out in a **style guide** so that everyone is following the same rules within and across projects. 
 
 Useful guidelines for setting up directory structure include:
 
   + Strike a balance between a deep and shallow structure
     - Too shallow leads to too many files in one folder, difficult to sort through
     - Too deep leads to too many clicks to get to one file, plus file paths can max out with too many characters (ex: SharePoint has a path limit of 260 characters)
-  + Create folders that are specific enough that you can limit access (ex: tracking folder that only houses your tracking database and you limit access to it)
+  + Create folders that are specific enough that you can limit access (ex: participant database folder that only houses your participant database and you limit access to it)
   + Make your folder names meaningful and easy to understand
   + Make your folder names machine readable
     - Don't use spaces or punctuation in your folder names
@@ -43,14 +49,16 @@ Useful guidelines for setting up directory structure include:
       - Level 1: Name of project  
       - Level 2: Life cycle folders  
       - Level 3: Time period/Data collection wave folders (if relevant)  
-      - Level 4: Specific content folder  
-      - Level 5: Archive folders  
+      - Level 4: Participant folder (if relevent)
+      - Level 5: Specific content folder  
+      - Level 6: Archive folders  
   2. All folders should be named according to these rules  
       - Meaningful name but no longer than 20 characters  
       - No spaces or periods in folder names  
       - Only use lower case letters  
       - Use `-` to separate words  
   3. All previous versions of files must be placed into their respective *archive* folder
+      - README_versioning.txt placed in each folder to document changes between versions
   
 
 **Here is an example of a directory structure that would be created based on that style guide:**
@@ -64,64 +72,48 @@ project <- Node$new("project-new")
     ic1 <- intervention$AddChild("cohort-1")
     coach <- ic1$AddChild("coaching_materials")
       coachread <- coach$AddChild("README_versioning.txt")
-     coachobs <- coach$AddChild("c1_coaching_obs-form_v02.docx")
      carchive <- coach$AddChild("archive")
-      coachobsarch <- carchive$AddChild("c1_coaching_obs-form_v01.docx")
   projectmgmt <- project$AddChild("project-mgmt")
-    protocols <- projectmgmt$AddChild("protocols")
     pY1 <- projectmgmt$AddChild("cohort-1")
     sched <- pY1$AddChild("scheduling-materials")
       schedread <- sched$AddChild("README_versioning.txt")
-     sched1 <- sched$AddChild("c1_data-collection-sched_v01.xlsx")
      scarchive <- sched$AddChild("archive")
   documentation <- project$AddChild("documentation")
-   datadictionary <- documentation$AddChild("data-dictionary")
-    dictread <- datadictionary$AddChild("README_versioning.txt")
-    dict <- datadictionary$AddChild("project-new_data-dictionary_v05.xlsx")
-    darchive <- datadictionary$AddChild("archive")
-      dict2 <- darchive$AddChild("project-new_data-dictionary_v04.xlsx")
-    codebook <- documentation$AddChild("codebook")
-      coderead <- codebook$AddChild("README_versioning.txt")
-      code <- codebook$AddChild("project-new_codebook_v02.pdf")
-      coarchive <- codebook$AddChild("archive")
-        code2 <- coarchive$AddChild("project-new_codebook_v01.pdf")
+      protocols <- documentation$AddChild("protocols")
+        proread <- protocols$AddChild("README_versioning.txt")
+        proarchive <- protocols$AddChild("archive")
+      datadictionary <- documentation$AddChild("data-dictionary")
+        dictread <- datadictionary$AddChild("README_versioning.txt")
+        darchive <- datadictionary$AddChild("archive")
+     codebook <- documentation$AddChild("codebook")
+        coderead <- codebook$AddChild("README_versioning.txt")
+        coarchive <- codebook$AddChild("archive")
     mY1 <- documentation$AddChild("cohort-1")
       student <- mY1$AddChild("student_measures")
         studread <- student$AddChild("README_versioning.txt")
-        studsurv <- student$AddChild("c1_stu_svy_v01.docx")
           sarchive <- student$AddChild("archive")
       teacher <- mY1$AddChild("teacher_measures")
         tread <- teacher$AddChild("README_versioning.txt")
-        tsurv <- teacher$AddChild("c1_tch_svy_v02.docx")
           tarchive <- teacher$AddChild("archive")
-          tsurv2 <- tarchive$AddChild("c1_tch_svy_v01.docx")
   data <- project$AddChild("data")
     y1 <- data$AddChild("cohort-1")
-      raw <- y1$AddChild("raw")
+      studentd <- y1$AddChild("student")
+      raw <- studentd$AddChild("raw")
         rawread <- raw$AddChild("README_versioning.txt")
-        ssurveydown <- raw$AddChild("c1_stu_svy_download_2020-11-05.csv")
         rawarchive <- raw$AddChild("archive")
-          ssurveydown2 <- rawarchive$AddChild("c1_stu_svy_download_2020-11-01.csv")
-      syntax <- y1$AddChild("syntax")
+      syntax <- studentd$AddChild("syntax")
         synread <- syntax$AddChild("README_versioning.txt")
-        synsetup <- syntax$AddChild("00_setup.md")
-        step1 <- syntax$AddChild("01_c1_stu_svy_cleaning_v01.R")
-        step2 <- syntax$AddChild("02_c1_stu_svy_descriptives_v01.R")
         syarchive <- syntax$AddChild("archive")
-      clean <- y1$AddChild("clean")
+      clean <- studentd$AddChild("clean")
         cleanread <- clean$AddChild("README_versioning.txt")
-        cleanstud <- clean$AddChild("c1_stu_svy_clean_v01.csv")
         clarchive <- clean$AddChild("archive")
   track <- project$AddChild("tracking")
-    tY1 <- track$AddChild("year-1")
-      trackingdb <- tY1$AddChild("tracking-database")
+    tY1 <- track$AddChild("cohort-1")
+      trackingdb <- tY1$AddChild("participant-database")
         trackread <- trackingdb$AddChild("README_versioning.txt")
-        trackingdb1 <- trackingdb$AddChild("c1_tracking_v01.sqlite")
         trarchive <- trackingdb$AddChild("archive")
       consent <- tY1$AddChild("parent_consents")
-        consent2 <- consent$AddChild("c1_parent_consents_compiled_2020-10-14.pdf")
-       conarchive <- consent$AddChild("archive")
-    
+
 print(project)
 
 ```
@@ -131,7 +123,7 @@ print(project)
 :::question
 **Quick thought: Versioning Documents**
 
-Some sort of versioning is absolutely necessary to track changes in your documents throughout the life cycle of your project. If you use software that has versioning (ex: Git, Sharepoint, Box), which I highly recommend, then you do not need to add the versioning README files to your folders or create archive folders. Through versioning software, you can save over previous versions of files, without having to add an extension such as v01, v02. And when you save over previous versions, the software tracks the date, allows you to comment on the changes made from your previous version, and at any time, you can view previous versions of the document, review comments from those versions and even retrieve previous versions. If, however, your team does not use versioning software, adding extensions to file names and READMEs to file folders is a viable alternative.
+Some sort of versioning is absolutely necessary to track changes in your documents throughout the life cycle of your project. If you use a platform that has versioning (ex: Git, SharePoint, Box), which I highly recommend, then you do not need to add the versioning README files to your folders or create archive folders. Through versioning software, you can save over previous versions of files, without having to add an extension such as v01, v02. And when you save over previous versions, the platform tracks the date, allows you to comment on the changes made from your previous version, and at any time, you can view previous versions of the document, review comments from those versions and even retrieve previous versions. If, however, your team does not use versioning software, adding extensions to file names and READMEs to file folders is a viable alternative.
 
 :::
 
@@ -159,6 +151,7 @@ Resources:
   📑 [BIDS](https://github.com/bids-standard/bids-starter-kit/wiki/The-BIDS-folder-hierarchy)  
   📑 [Stanford Medical](https://laneguides.stanford.edu/DataManagement/Organizing)  
   📑 [Danielle Navarro](https://slides.djnavarro.net/project-structure/#1)  
+  📑 [Project TIER (Teaching Integrity in Empirical Research)](https://www.projecttier.org/tier-protocol/) provides a protocol as well as a template for organizing your files for data processing and analysis
 
 ---
 
@@ -217,8 +210,8 @@ Example file naming style guide:
 1. Format dates as YYYY-MM-DD
 1. If there are multiple versions of a document on the same date, version using v# with a leading 0.
 1. Only use lower case letters
-1. Keep names under 45 characters (this is excessive, many people will recommend shorter names)
-1. Choose abbreviations to use for common names/phrases and add them to your style guide
+1. Keep names under 45 characters (*FYI: this is excessive, many people will recommend shorter names*)
+1. Use the following abbreviations
     - student = stu
     - teacher = tch
     - survey = svy
@@ -228,12 +221,12 @@ Example file naming style guide:
     - `01_dsc_c1_stu_svy_cleaning-syntax_2021-01-22.R`
     - `01_dsc_c1_stu_svy_cleaning-syntax_2021-01-22v02.R`
     - `dsc_stu_svy_protocol_2020-10-01.docx`
-    - `dsc_c1_tch_svy_data_raw_2020-08-03.csv`
+    - `dsc_c1_tch_svy_raw-download_2020-08-03.csv`
     
 
 Resources:
 
-  📑 [Stanford Libraries](file:///C:/Users/hamptoncg/Downloads/FileNamingHandout_v3%20(1).pdf)  
+  📑 [Stanford Libraries](https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-naming)  
   📑 [Washington University in St. Louis Libraries](https://libguides.wustl.edu/c.php?g=47355&p=303442)  
   📑 [Caltech Library](https://authors.library.caltech.edu/103626/1/FileNamingConventionWorksheet_Caltech.pdf)  
   📑 [Jenny Bryan](https://speakerdeck.com/jennybc/how-to-name-files?slide=5)  
@@ -279,7 +272,7 @@ There are many best practices and considerations around variable naming.
 - Choose abbreviations to use for common names/phrases
   + scaled score = ss
   + percentile rank = pr
-  + Emily Rieder has a great [blog post](https://emilyriederer.netlify.app/post/column-name-contracts/) on using controlled vocabularies in variable naming and how that sets up a sort of contract between data producers and data consumers to be able to interpet data usage and lineage.
+    + Emily Rieder has a great [blog post](https://emilyriederer.netlify.app/post/column-name-contracts/) on using controlled vocabularies in variable naming and how that sets up a sort of contract between data producers and data consumers to be able to interpet data usage and lineage.
 
 In addition to best practices, here are other practices that I've noticed others implement. You can pick and choose what works best for your team. Just make sure whatever you choose, you put it in your style guide and follow those guidelines all throughout your project.
 

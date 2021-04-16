@@ -445,7 +445,7 @@ div.tocify {
 <p><strong>Note</strong>: With the COVID-19 pandemic in 2020, I think many of us doing education research have had to make a huge switch, very quickly, to collecting data electronically and remotely. This is yet another reason to create/utilize web-based data collection instruments in particular, to prepare for the unknown, and provide flexibility to collect data even when you aren’t able to physically be in schools.</p>
 <div id="web-based-surveys" class="section level4">
 <h4><strong>Web-based Surveys</strong></h4>
-<p>There are many web-based survey platforms (Ex: Qualtrics, Survey Monkey, Google Forms, Microsoft Forms) you can use to develop surveys. If those existing platforms do not meet your needs, you can always build your own web-based application to collect data.</p>
+<p>There are many web-based survey platforms (Ex: Qualtrics, Survey Monkey, Google Forms, Microsoft Forms, SurveyCTO) you can use to develop surveys. If those existing platforms do not meet your needs, you can always build your own web-based application to collect data.</p>
 <ul>
 <li>You can hire a developer to build an app for you</li>
 <li>You can build your own application to collect data in tools such as R or Tableau</li>
@@ -519,7 +519,7 @@ div.tocify {
 </div>
 <div id="offline-surveys" class="section level4">
 <h4><strong>Offline Surveys</strong></h4>
-<p>If your site or participants do not have WiFi and/or email access, one option is to work with a survey platform (such as Qualtrics) that allows you to create a survey online, administer it using an offline survey app on your phone or tablet, and then upload that data back to the survey platform once you have an internet connection again.</p>
+<p>If your site or participants do not have WiFi and/or email access, one option is to work with a survey platform (such as Qualtrics or SurveyCTO) that allows you to create a survey online, administer it using an offline survey app on your phone or tablet, and then upload that data back to the survey platform once you have an internet connection again.</p>
 <p>Still, depending on your study, participants, and resources, building a web-based survey may not be possible and/or it may not be the best option for your project.</p>
 <p>If you must collect paper survey data I recommend the following to reduce error:</p>
 <ul>
@@ -552,7 +552,7 @@ div.tocify {
 </ul></li>
 <li>Set up a system for error checking
 <ul>
-<li>Consider <a href="http://barchard.faculty.unlv.edu/doubleentry/Scott%20Data%20Entry%20WPA%202008.pdf">double entering</a> either all or a percentage of your data and running a syntax to check for errors (I will discuss this more in later trainings)</li>
+<li>Consider having two different staff members <a href="http://barchard.faculty.unlv.edu/doubleentry/Scott%20Data%20Entry%20WPA%202008.pdf">double enter</a> either all or a percentage of your data and running a syntax to check for errors (I will discuss this more in later trainings)</li>
 </ul></li>
 </ul></li>
 </ul>
@@ -619,9 +619,14 @@ div.tocify {
 <h2>Data Collection Security</h2>
 <hr />
 <p>The simplest way to maintain participant privacy is to collect anonymous data. If you collect anonymous data, no participant identifying information will be collected in your instruments (name, email, date of birth, etc.). Importantly, you will also want to make sure to not collect IP addresses as they can be used to identify an individual’s computer. However, if you collect anonymous data, you will not be able to link data across measures or across time.</p>
-<p>More commonly in education research though, you will be collecting some identifiers (ex: name). However, in order to maintain participant <a href="https://www.etsu.edu/irb/documents/confidentiality_vs_privacy.pdf">confidentiality</a> you cannot keep those identifiers in your research data. You will need to assign unique IDs to all participants and replace all identifying information with that study ID. In longitudinal studies in particular, you will be using that unique participant ID to link data across time and across measures.</p>
+<p>More commonly in education research you will be collecting some identifiers (ex: name). However, in order to maintain participant <a href="https://www.etsu.edu/irb/documents/confidentiality_vs_privacy.pdf">confidentiality</a> you cannot keep those identifiers in your research data. You will need to assign unique IDs to all participants and replace all identifying information with that study ID. In longitudinal studies in particular, you will be using that unique participant ID to link data across time and across measures.</p>
 <p>To the best of your ability, all of your data collection instruments should have that study ID associated embedded in the form when you send it out into the field, rather than name, to ensure confidentiality (participant name is never actually on your study data and therefore does not need to be removed) as well as to reduce errors that may occur when replacing names with study IDs. This is especially important for longitudinal studies, where maintaining the accuracy of your study IDs is critical to linking data over time.</p>
-<p><strong>Reminder</strong>: While I am highly recommending you attach study ID to your data collection instruments, it is important to remember that you must have either name OR the study ID attached to your data collection instruments in order to link data across measures and time. If you do not collect identifiers, you will <strong>not</strong> be able to link your data across measures and time. Your data will essentially be anonymous.</p>
+<div class="question">
+<p><strong>Quick thought: Identifiers</strong></p>
+<p>While I am highly recommending you attach study ID alone to your data collection instruments, it is important to remember that you must have <strong>some</strong> sort of identifier (either name OR the study ID) built into every data collection instrument (survey, observation form, assessment, etc.) in order to link data across measures and time. If you do not collect identifiers, you will <strong>not</strong> be able to link your data across measures and time. Your data will essentially be anonymous.</p>
+<p>Even if you are purposefully collecting anonymous data, if you have randomized participants, say schools, you will still need an identifier for the randomization block/cluster built into your instrument (ex: sch_id) or you will not be able to know which participants are treatment and which are control.</p>
+</div>
+<p><br></p>
 <div id="web-based-data" class="section level3">
 <h3>Web-based Data:</h3>
 <p>When sending out or completing in-person web-based surveys/assessments, you can do one of the following to connect your data to a participant (this is not all-inclusive):</p>
@@ -731,7 +736,7 @@ div.tocify {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#opyyrmospl .gt_table {
+#varkbdsqmb .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -756,7 +761,7 @@ div.tocify {
   border-left-color: #D3D3D3;
 }
 
-#opyyrmospl .gt_heading {
+#varkbdsqmb .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -768,7 +773,7 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#opyyrmospl .gt_title {
+#varkbdsqmb .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -778,7 +783,7 @@ div.tocify {
   border-bottom-width: 0;
 }
 
-#opyyrmospl .gt_subtitle {
+#varkbdsqmb .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -788,13 +793,13 @@ div.tocify {
   border-top-width: 0;
 }
 
-#opyyrmospl .gt_bottom_border {
+#varkbdsqmb .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#opyyrmospl .gt_col_headings {
+#varkbdsqmb .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -809,7 +814,7 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#opyyrmospl .gt_col_heading {
+#varkbdsqmb .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -829,7 +834,7 @@ div.tocify {
   overflow-x: hidden;
 }
 
-#opyyrmospl .gt_column_spanner_outer {
+#varkbdsqmb .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -841,15 +846,15 @@ div.tocify {
   padding-right: 4px;
 }
 
-#opyyrmospl .gt_column_spanner_outer:first-child {
+#varkbdsqmb .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#opyyrmospl .gt_column_spanner_outer:last-child {
+#varkbdsqmb .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#opyyrmospl .gt_column_spanner {
+#varkbdsqmb .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -861,7 +866,7 @@ div.tocify {
   width: 100%;
 }
 
-#opyyrmospl .gt_group_heading {
+#varkbdsqmb .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -883,7 +888,7 @@ div.tocify {
   vertical-align: middle;
 }
 
-#opyyrmospl .gt_empty_group_heading {
+#varkbdsqmb .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -898,15 +903,15 @@ div.tocify {
   vertical-align: middle;
 }
 
-#opyyrmospl .gt_from_md > :first-child {
+#varkbdsqmb .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#opyyrmospl .gt_from_md > :last-child {
+#varkbdsqmb .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#opyyrmospl .gt_row {
+#varkbdsqmb .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -925,7 +930,7 @@ div.tocify {
   overflow-x: hidden;
 }
 
-#opyyrmospl .gt_stub {
+#varkbdsqmb .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -937,7 +942,7 @@ div.tocify {
   padding-left: 12px;
 }
 
-#opyyrmospl .gt_summary_row {
+#varkbdsqmb .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -947,7 +952,7 @@ div.tocify {
   padding-right: 5px;
 }
 
-#opyyrmospl .gt_first_summary_row {
+#varkbdsqmb .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -957,7 +962,7 @@ div.tocify {
   border-top-color: #D3D3D3;
 }
 
-#opyyrmospl .gt_grand_summary_row {
+#varkbdsqmb .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -967,7 +972,7 @@ div.tocify {
   padding-right: 5px;
 }
 
-#opyyrmospl .gt_first_grand_summary_row {
+#varkbdsqmb .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -977,11 +982,11 @@ div.tocify {
   border-top-color: #D3D3D3;
 }
 
-#opyyrmospl .gt_striped {
+#varkbdsqmb .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#opyyrmospl .gt_table_body {
+#varkbdsqmb .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -990,7 +995,7 @@ div.tocify {
   border-bottom-color: #D3D3D3;
 }
 
-#opyyrmospl .gt_footnotes {
+#varkbdsqmb .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1004,13 +1009,13 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#opyyrmospl .gt_footnote {
+#varkbdsqmb .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#opyyrmospl .gt_sourcenotes {
+#varkbdsqmb .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1024,46 +1029,46 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#opyyrmospl .gt_sourcenote {
+#varkbdsqmb .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#opyyrmospl .gt_left {
+#varkbdsqmb .gt_left {
   text-align: left;
 }
 
-#opyyrmospl .gt_center {
+#varkbdsqmb .gt_center {
   text-align: center;
 }
 
-#opyyrmospl .gt_right {
+#varkbdsqmb .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#opyyrmospl .gt_font_normal {
+#varkbdsqmb .gt_font_normal {
   font-weight: normal;
 }
 
-#opyyrmospl .gt_font_bold {
+#varkbdsqmb .gt_font_bold {
   font-weight: bold;
 }
 
-#opyyrmospl .gt_font_italic {
+#varkbdsqmb .gt_font_italic {
   font-style: italic;
 }
 
-#opyyrmospl .gt_super {
+#varkbdsqmb .gt_super {
   font-size: 65%;
 }
 
-#opyyrmospl .gt_footnote_marks {
+#varkbdsqmb .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="opyyrmospl" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="varkbdsqmb" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -1288,7 +1293,7 @@ div.tocify {
 <div id="data-storage" class="section level2">
 <h2>Data Storage</h2>
 <hr />
-<p>Whether you are working with your own original collected data, or you are working with data provided to you from an entity such as a school district, or you are working with publicly available data, you need to consider short-term secure data storage. I say short-term because this is how you will store your data while you are actively collecting data for your project. Data retention/long-term storage, after your study is complete, will be discussed in a later training.</p>
+<p>Whether you are working with your own original collected data, or you are working with extant data provided to you from an entity such as a school district, or publicly available data, you need to consider short-term secure data storage. I say short-term because this is how you will store your data while you are actively collecting data for your project. Data retention/long-term storage, after your study is complete, will be discussed in a later training.</p>
 <p>In general you will most likely be working with one of four types of data and will need to store your data according to the type of data:</p>
 <ul>
 <li>Anonymous data (Data at no time has ever had identifying information tied to it and can never be linked back to an individual)</li>
@@ -1317,7 +1322,7 @@ div.tocify {
 <ul>
 <li>It should be stored separately from your confidential study data</li>
 <li>This data should have limited access (only available to the few individuals who actually need to interact with this data)</li>
-<li>It should be stored on a password-protected, university/institution sponsored shared network or cloud service with encryption (never a personal computer)</li>
+<li>It should be stored on a password-protected, university/institution sponsored shared server or cloud service with encryption (never a personal computer)</li>
 <li>Since this is your only crosswalk between your study IDs and PIIs, make sure to backup this data regularly</li>
 </ul>
 </div>
@@ -1329,7 +1334,7 @@ div.tocify {
 <li>Limit access to your data folder to only those who need to work with the data. This ensures no one intentionally or unintentionally makes changes to your data.</li>
 <li>Your de-identified study data should be kept separate from any file that can link an ID to a participants true identity (ex: your participant database)</li>
 <li>Backup this data regularly</li>
-<li>School record data you acquire from schools and districts may have its own set of regulations such as <a href="https://studentprivacy.ed.gov/audience/researchers">FERPA</a> and <a href="https://studentprivacy.ed.gov/sites/default/files/resource_document/file/ferpa-hipaa-guidance.pdf">HIPPA</a> so it is worth checking that your storage meets those requirements as well.</li>
+<li>Extant data you acquire, such as student record data from schools and districts may have its own set of regulations such as <a href="https://studentprivacy.ed.gov/audience/researchers">FERPA</a> and <a href="https://studentprivacy.ed.gov/sites/default/files/resource_document/file/ferpa-hipaa-guidance.pdf">HIPPA</a> so it is worth checking that your storage meets those requirements as well.</li>
 </ul>
 </div>
 <div id="storing-detachable-media" class="section level3">
@@ -1417,19 +1422,6 @@ div.tocify {
 <li>There are <a href="https://www.umsystem.edu/ums/is/infosec/classification-definitions">data classification levels (DCL)</a> that help you identify the security you need based on the type of data you have. Knowing what level your data falls under can help you start conversations with your IT department to decide if you are meeting the level of security you need to meet FERPA and HIPPA requirements if applicable.</li>
 <li>Last, talk with your IT staff for recommendations on storage, security, and file sharing. They are the experts!</li>
 </ul>
-<p><br></p>
-<div class="question">
-<p><strong>Quick thought: Institutional Server</strong></p>
-<p>While some institutions may allow cloud storage, <a href="https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf">J-PAL</a> suggests possible benefits to using a institution provided server if available are:</p>
-<ul>
-<li>Your IT department may provide secure remote access via VPN, typically involving multiple layers of security including encrypting network connections and requiring two factor authentication<br />
-</li>
-<li>IT staff may be able to automate secure data backups for you<br />
-</li>
-<li>IT staff may be able to restrict access to folders for you</li>
-</ul>
-</div>
-<p><br></p>
 <p>Resources on data security:</p>
 <p>📑 <a href="https://www.uoguelph.ca/ccs/sites/uoguelph.ca.ccs/files/Categorization%20%26%20Security%20of%20Research%20Data_Final.pdf">University of Guelph</a><br />
 📑 <a href="https://www.hrpo.pitt.edu/data-security-guidance">University of Pittsburgh</a><br />
@@ -1446,7 +1438,7 @@ div.tocify {
 📑 <a href="https://pitt.libguides.com/managedata/storing">University of Pittsburgh, RDM</a><br />
 📑 <a href="https://www.veeam.com/blog/how-to-follow-the-3-2-1-backup-rule-with-veeam-backup-replication.html">Veeam</a><br />
 📑 <a href="https://security.uconn.edu/data-security-checklist/#">University of Connecticut</a><br />
-📑 <a href="https://www.brandeis.edu/ora/hrpp/pdfs/data-management.pdf">Brandeis University</a></p>
+📑 <a href="https://www.brandeis.edu/ora/hrpp/pdfs/data-management.pdf">Brandeis University</a> 📑 <a href="https://www.youtube.com/watch?v=RmQylg5_WSY">Reasons to consider SharePoint for data storage</a> 📑 <a href="https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf">Reasons to consider Institutional Servers for data storage</a></p>
 <hr />
 </div>
 </div>

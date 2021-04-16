@@ -394,9 +394,15 @@ div.tocify {
 
 <p><br></p>
 <div class="presentation">
-<p><br> You can view slides from this talk: In Progress.</p>
+<p><br> You can view slides from this talk <a href="https://cghlewis.github.io/mpsi-training3/">here</a></p>
 </div>
 <p>A style guide is such an integral piece to data management, I am giving it its own section! We will cover best practices for file structures, file naming and versioning, variable naming, and value coding. Whatever rules you put in place, make sure they are written down, stored somewhere that is accessible to the entire team (for example a team wiki or a README) and that all staff are trained to follow the style guide protocols. I highly recommend applying this style guide across <strong>all</strong> projects and therefore putting this style guide in a team folder. If there is any style that is specific to a certain project, you will want to place that style guide at the top of a project folder in a README or on a project wiki.</p>
+<p>Reasons a style guide is imperative include:</p>
+<ul>
+<li>Standardization (within and across projects)</li>
+<li>Interpretation: Consistent and clear structure, naming, and coding allows your files and variables to be findable and understandable to humans and computers.</li>
+<li>Reproducibility: If the organization of your file paths, file naming, or variable naming constantly changes, that undermines the reproducibility of any data management or analysis code you have written.</li>
+</ul>
 <hr />
 <div id="directory-structure" class="section level2">
 <h2>Directory Structure</h2>
@@ -408,7 +414,7 @@ div.tocify {
 <li>Too shallow leads to too many files in one folder, difficult to sort through</li>
 <li>Too deep leads to too many clicks to get to one file, plus file paths can max out with too many characters (ex: SharePoint has a path limit of 260 characters)</li>
 </ul></li>
-<li>Create folders that are specific enough that you can limit access (ex: tracking folder that only houses your tracking database and you limit access to it)</li>
+<li>Create folders that are specific enough that you can limit access (ex: participant database folder that only houses your participant database and you limit access to it)</li>
 <li>Make your folder names meaningful and easy to understand</li>
 <li>Make your folder names machine readable
 <ul>
@@ -428,9 +434,10 @@ div.tocify {
 </li>
 <li>Level 3: Time period/Data collection wave folders (if relevant)<br />
 </li>
-<li>Level 4: Specific content folder<br />
+<li>Level 4: Participant folder (if relevent)</li>
+<li>Level 5: Specific content folder<br />
 </li>
-<li>Level 5: Archive folders<br />
+<li>Level 6: Archive folders<br />
 </li>
 </ul></li>
 <li>All folders should be named according to these rules
@@ -444,77 +451,64 @@ div.tocify {
 <li>Use <code>-</code> to separate words<br />
 </li>
 </ul></li>
-<li>All previous versions of files must be placed into their respective <em>archive</em> folder</li>
+<li>All previous versions of files must be placed into their respective <em>archive</em> folder
+<ul>
+<li>README_versioning.txt placed in each folder to document changes between versions</li>
+</ul></li>
 </ol>
 <p><strong>Here is an example of a directory structure that would be created based on that style guide:</strong></p>
-<pre><code>                                                    levelName
-1  project-new                                               
-2   ¦--README_style-guide.txt                                
-3   ¦--intervention                                          
-4   ¦   °--cohort-1                                          
-5   ¦       °--coaching_materials                            
-6   ¦           ¦--README_versioning.txt                     
-7   ¦           ¦--c1_coaching_obs-form_v02.docx             
-8   ¦           °--archive                                   
-9   ¦               °--c1_coaching_obs-form_v01.docx         
-10  ¦--project-mgmt                                          
-11  ¦   ¦--protocols                                         
-12  ¦   °--cohort-1                                          
-13  ¦       °--scheduling-materials                          
-14  ¦           ¦--README_versioning.txt                     
-15  ¦           ¦--c1_data-collection-sched_v01.xlsx         
-16  ¦           °--archive                                   
-17  ¦--documentation                                         
-18  ¦   ¦--data-dictionary                                   
-19  ¦   ¦   ¦--README_versioning.txt                         
-20  ¦   ¦   ¦--project-new_data-dictionary_v05.xlsx          
-21  ¦   ¦   °--archive                                       
-22  ¦   ¦       °--project-new_data-dictionary_v04.xlsx      
-23  ¦   ¦--codebook                                          
-24  ¦   ¦   ¦--README_versioning.txt                         
-25  ¦   ¦   ¦--project-new_codebook_v02.pdf                  
-26  ¦   ¦   °--archive                                       
-27  ¦   ¦       °--project-new_codebook_v01.pdf              
-28  ¦   °--cohort-1                                          
-29  ¦       ¦--student_measures                              
-30  ¦       ¦   ¦--README_versioning.txt                     
-31  ¦       ¦   ¦--c1_stu_svy_v01.docx                       
-32  ¦       ¦   °--archive                                   
-33  ¦       °--teacher_measures                              
-34  ¦           ¦--README_versioning.txt                     
-35  ¦           ¦--c1_tch_svy_v02.docx                       
-36  ¦           °--archive                                   
-37  ¦               °--c1_tch_svy_v01.docx                   
-38  ¦--data                                                  
-39  ¦   °--cohort-1                                          
-40  ¦       ¦--raw                                           
-41  ¦       ¦   ¦--README_versioning.txt                     
-42  ¦       ¦   ¦--c1_stu_svy_download_2020-11-05.csv        
-43  ¦       ¦   °--archive                                   
-44  ¦       ¦       °--c1_stu_svy_download_2020-11-01.csv    
-45  ¦       ¦--syntax                                        
-46  ¦       ¦   ¦--README_versioning.txt                     
-47  ¦       ¦   ¦--00_setup.md                               
-48  ¦       ¦   ¦--01_c1_stu_svy_cleaning_v01.R              
-49  ¦       ¦   ¦--02_c1_stu_svy_descriptives_v01.R          
-50  ¦       ¦   °--archive                                   
-51  ¦       °--clean                                         
-52  ¦           ¦--README_versioning.txt                     
-53  ¦           ¦--c1_stu_svy_clean_v01.csv                  
-54  ¦           °--archive                                   
-55  °--tracking                                              
-56      °--year-1                                            
-57          ¦--tracking-database                             
-58          ¦   ¦--README_versioning.txt                     
-59          ¦   ¦--c1_tracking_v01.sqlite                    
-60          ¦   °--archive                                   
-61          °--parent_consents                               
-62              ¦--c1_parent_consents_compiled_2020-10-14.pdf
-63              °--archive                                   </code></pre>
+<pre><code>                                   levelName
+1  project-new                              
+2   ¦--README_style-guide.txt               
+3   ¦--intervention                         
+4   ¦   °--cohort-1                         
+5   ¦       °--coaching_materials           
+6   ¦           ¦--README_versioning.txt    
+7   ¦           °--archive                  
+8   ¦--project-mgmt                         
+9   ¦   °--cohort-1                         
+10  ¦       °--scheduling-materials         
+11  ¦           ¦--README_versioning.txt    
+12  ¦           °--archive                  
+13  ¦--documentation                        
+14  ¦   ¦--protocols                        
+15  ¦   ¦   ¦--README_versioning.txt        
+16  ¦   ¦   °--archive                      
+17  ¦   ¦--data-dictionary                  
+18  ¦   ¦   ¦--README_versioning.txt        
+19  ¦   ¦   °--archive                      
+20  ¦   ¦--codebook                         
+21  ¦   ¦   ¦--README_versioning.txt        
+22  ¦   ¦   °--archive                      
+23  ¦   °--cohort-1                         
+24  ¦       ¦--student_measures             
+25  ¦       ¦   ¦--README_versioning.txt    
+26  ¦       ¦   °--archive                  
+27  ¦       °--teacher_measures             
+28  ¦           ¦--README_versioning.txt    
+29  ¦           °--archive                  
+30  ¦--data                                 
+31  ¦   °--cohort-1                         
+32  ¦       °--student                      
+33  ¦           ¦--raw                      
+34  ¦           ¦   ¦--README_versioning.txt
+35  ¦           ¦   °--archive              
+36  ¦           ¦--syntax                   
+37  ¦           ¦   ¦--README_versioning.txt
+38  ¦           ¦   °--archive              
+39  ¦           °--clean                    
+40  ¦               ¦--README_versioning.txt
+41  ¦               °--archive              
+42  °--tracking                             
+43      °--cohort-1                         
+44          ¦--participant-database         
+45          ¦   ¦--README_versioning.txt    
+46          ¦   °--archive                  
+47          °--parent_consents              </code></pre>
 <p><br></p>
 <div class="question">
 <p><strong>Quick thought: Versioning Documents</strong></p>
-<p>Some sort of versioning is absolutely necessary to track changes in your documents throughout the life cycle of your project. If you use software that has versioning (ex: Git, Sharepoint, Box), which I highly recommend, then you do not need to add the versioning README files to your folders or create archive folders. Through versioning software, you can save over previous versions of files, without having to add an extension such as v01, v02. And when you save over previous versions, the software tracks the date, allows you to comment on the changes made from your previous version, and at any time, you can view previous versions of the document, review comments from those versions and even retrieve previous versions. If, however, your team does not use versioning software, adding extensions to file names and READMEs to file folders is a viable alternative.</p>
+<p>Some sort of versioning is absolutely necessary to track changes in your documents throughout the life cycle of your project. If you use a platform that has versioning (ex: Git, SharePoint, Box), which I highly recommend, then you do not need to add the versioning README files to your folders or create archive folders. Through versioning software, you can save over previous versions of files, without having to add an extension such as v01, v02. And when you save over previous versions, the platform tracks the date, allows you to comment on the changes made from your previous version, and at any time, you can view previous versions of the document, review comments from those versions and even retrieve previous versions. If, however, your team does not use versioning software, adding extensions to file names and READMEs to file folders is a viable alternative.</p>
 </div>
 <p><br></p>
 <p>A few important pieces of information before moving on:</p>
@@ -541,7 +535,8 @@ div.tocify {
 📑 <a href="https://www.teaguehenry.com/strings-not-factors/2021/1/24/data-management-for-researchers-three-terrifying-tales">Teague Henry</a><br />
 📑 <a href="https://github.com/bids-standard/bids-starter-kit/wiki/The-BIDS-folder-hierarchy">BIDS</a><br />
 📑 <a href="https://laneguides.stanford.edu/DataManagement/Organizing">Stanford Medical</a><br />
-📑 <a href="https://slides.djnavarro.net/project-structure/#1">Danielle Navarro</a></p>
+📑 <a href="https://slides.djnavarro.net/project-structure/#1">Danielle Navarro</a><br />
+📑 <a href="https://www.projecttier.org/tier-protocol/">Project TIER (Teaching Integrity in Empirical Research)</a> provides a protocol as well as a template for organizing your files for data processing and analysis</p>
 <hr />
 </div>
 <div id="file-naming" class="section level2">
@@ -606,8 +601,8 @@ div.tocify {
 <li>Format dates as YYYY-MM-DD</li>
 <li>If there are multiple versions of a document on the same date, version using v# with a leading 0.</li>
 <li>Only use lower case letters</li>
-<li>Keep names under 45 characters (this is excessive, many people will recommend shorter names)</li>
-<li>Choose abbreviations to use for common names/phrases and add them to your style guide
+<li>Keep names under 45 characters (<em>FYI: this is excessive, many people will recommend shorter names</em>)</li>
+<li>Use the following abbreviations
 <ul>
 <li>student = stu</li>
 <li>teacher = tch</li>
@@ -620,11 +615,11 @@ div.tocify {
 <li><code>01_dsc_c1_stu_svy_cleaning-syntax_2021-01-22.R</code></li>
 <li><code>01_dsc_c1_stu_svy_cleaning-syntax_2021-01-22v02.R</code></li>
 <li><code>dsc_stu_svy_protocol_2020-10-01.docx</code></li>
-<li><code>dsc_c1_tch_svy_data_raw_2020-08-03.csv</code></li>
+<li><code>dsc_c1_tch_svy_raw-download_2020-08-03.csv</code></li>
 </ul></li>
 </ol>
 <p>Resources:</p>
-<p>📑 <a href="file:///C:/Users/hamptoncg/Downloads/FileNamingHandout_v3%20(1).pdf">Stanford Libraries</a><br />
+<p>📑 <a href="https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-naming">Stanford Libraries</a><br />
 📑 <a href="https://libguides.wustl.edu/c.php?g=47355&amp;p=303442">Washington University in St. Louis Libraries</a><br />
 📑 <a href="https://authors.library.caltech.edu/103626/1/FileNamingConventionWorksheet_Caltech.pdf">Caltech Library</a><br />
 📑 <a href="https://speakerdeck.com/jennybc/how-to-name-files?slide=5">Jenny Bryan</a><br />
@@ -684,8 +679,10 @@ div.tocify {
 <li>Choose abbreviations to use for common names/phrases
 <ul>
 <li>scaled score = ss</li>
-<li>percentile rank = pr</li>
+<li>percentile rank = pr
+<ul>
 <li>Emily Rieder has a great <a href="https://emilyriederer.netlify.app/post/column-name-contracts/">blog post</a> on using controlled vocabularies in variable naming and how that sets up a sort of contract between data producers and data consumers to be able to interpet data usage and lineage.</li>
+</ul></li>
 </ul></li>
 </ul>
 <p>In addition to best practices, here are other practices that I’ve noticed others implement. You can pick and choose what works best for your team. Just make sure whatever you choose, you put it in your style guide and follow those guidelines all throughout your project.</p>
