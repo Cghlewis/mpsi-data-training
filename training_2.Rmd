@@ -691,9 +691,9 @@ Resources on data security:
   📑 [University of Pittsburgh, RDM](https://pitt.libguides.com/managedata/storing)  
   📑 [Veeam](https://www.veeam.com/blog/how-to-follow-the-3-2-1-backup-rule-with-veeam-backup-replication.html)  
   📑 [University of Connecticut](https://security.uconn.edu/data-security-checklist/#)  
-  📑 [Brandeis University](https://www.brandeis.edu/ora/hrpp/pdfs/data-management.pdf)
-  📑 [Reasons to consider SharePoint for data storage](https://www.youtube.com/watch?v=RmQylg5_WSY)
-  📑 [Reasons to consider Institutional Servers for data storage](https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf)
+  📑 [Brandeis University](https://www.brandeis.edu/ora/hrpp/pdfs/data-management.pdf)   
+  📑 [Reasons to consider SharePoint for data storage](https://www.youtube.com/watch?v=RmQylg5_WSY)   
+  📑 [Reasons to consider Institutional Servers for data storage](https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf)   
   
 ---
 
