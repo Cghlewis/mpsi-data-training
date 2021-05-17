@@ -24,7 +24,7 @@ While this specific training is for staff and others affiliated with the MPSI, I
 |1         | 09/25/20 |Documentation                                                          |
 |2         | 02/12/21 |Setting up data structures                                             |
 |3         | 04/16/21 |Style Guide                                                            |
-|4         | 05/14/21 |Writing a data cleaning plan                                           |
+|4         | TBD      |Writing a data cleaning plan                                           |
 |5         | TBD      |Intro to R and RStudio, reading in and reviewing data                  |
 |6         | TBD      |Data wrangling basics                                                  |
 |7         | TBD      |Restructuring, merging, or aggregating data                            |
