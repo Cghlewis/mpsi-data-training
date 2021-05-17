@@ -519,9 +519,13 @@ div.tocify {
 </div>
 <div id="offline-surveys" class="section level4">
 <h4><strong>Offline Surveys</strong></h4>
-<p>If your site or participants do not have WiFi and/or email access, one option is to work with a survey platform (such as Qualtrics or SurveyCTO) that allows you to create a survey online, administer it using an offline survey app on your phone or tablet, and then upload that data back to the survey platform once you have an internet connection again.</p>
-<p>Still, depending on your study, participants, and resources, building a web-based survey may not be possible and/or it may not be the best option for your project.</p>
-<p>If you must collect paper survey data I recommend the following to reduce error:</p>
+<p>If your site or participants do not have WiFi and/or email access, you generally have a few options.</p>
+<ol style="list-style-type: decimal">
+<li><p>One option is to work with a survey platform (such as Qualtrics or SurveyCTO) that allows you to create a survey online, administer it using an offline survey app on your phone or tablet, and then upload that data back to the survey platform once you have an internet connection again.</p></li>
+<li><p>Still, depending on your study, participants, and resources, building a web-based survey may not be possible and/or it may not be the best option for your project. So your second option is a paper survey.</p></li>
+</ol>
+<ul>
+<li>If you must collect paper survey data I recommend the following to reduce error:
 <ul>
 <li>Have very clear instructions/training on how to complete the paper form</li>
 <li>Make sure to write survey questions to the best of your ability that prevents respondents from being confused and circling multiple answers or writing other answers in the margins</li>
@@ -530,8 +534,8 @@ div.tocify {
 <li>Check all forms for missing data again when they return back to the office</li>
 </ul></li>
 <li>If you are using a mail survey, check for missing data when the survey is returned</li>
-</ul>
-<p>To improve data entry issues:</p>
+</ul></li>
+<li>To improve data entry issues:
 <ul>
 <li>Consider using something like <a href="https://ocrsolution.com/teleform-software/">TeleForm</a> to reduce hand entry of data
 <ul>
@@ -553,6 +557,7 @@ div.tocify {
 <li>Set up a system for error checking
 <ul>
 <li>Consider having two different staff members <a href="http://barchard.faculty.unlv.edu/doubleentry/Scott%20Data%20Entry%20WPA%202008.pdf">double enter</a> either all or a percentage of your data and running a syntax to check for errors (I will discuss this more in later trainings)</li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -588,18 +593,18 @@ div.tocify {
 <div id="offline-observations" class="section level4">
 <h4><strong>Offline Observations</strong></h4>
 <p>If WiFi is not available to you in the field, consider making an electronic form that still eliminates the need for data entry (so not a paper form) and that ideally connects to or creates some type of database or table. Then have data collectors enter data into this form on a device in the field. This does not have to be high-tech. It could simply be:</p>
-<ul>
-<li>An excel file that is pre-built with every observation field and the options for each field are limited to only the correct options through a drop-down list.</li>
+<ol style="list-style-type: decimal">
+<li>An Excel file that is pre-built with every observation field and the options for each field are limited to only the correct options through a drop-down list.</li>
 <li>Create a Microsoft Access form that is connected to a database</li>
 <li>Utilize the offline survey options provided by tools such as Qualtrics (see Offline Surveys section)</li>
 <li>Build or use existing offline tools. For duration code classroom observations, we’ve used <a href="https://mooses.vueinnovations.com/">software</a> built by a developer at Vanderbilt to collect frequency and duration observation data. It stores observation text files to the data collectors device.</li>
-</ul>
-<p>Collecting electronic data in the field becomes tricky when you are having people use tools simultaneously that aren’t connected to a shared database (such as separate excel files or Access databases). When you use a survey platform everyone’s data is feeding into the same database/table. However, when you are using separate Excel files for instance, everyone is storing data on their own device. This requires you to set up a way for collectors to share files (ex: Dropbox, Box, or whatever your institution deems is a secure system) and then for you to merge those files together across data collectors. It is definitely trickier, although possibly still a more efficient and reliable method that paper forms and hand entry of data.</p>
+</ol>
+<p>Collecting electronic data in the field becomes tricky when you are having people use tools simultaneously that aren’t connected to a shared database (such as separate Excel files or Access databases). When you use an online/offline survey platform, everyone’s data is feeding into the same database/table. However, when you are using separate Excel files for instance, everyone is storing data on their own device. This requires you to set up a way for collectors to share files (ex: Dropbox, Box, or whatever your institution deems is a secure system) and then for you to merge those files together across data collectors. It is definitely trickier, although possibly still a more efficient and reliable method that paper forms and hand entry of data.</p>
 </div>
 </div>
 <div id="interviews-or-focus-groups" class="section level3">
 <h3>Interviews or Focus Groups</h3>
-<p>I don’t work much with qualitative data so I won’t say much here. Interviews and focus groups are typically recorded (at least audio) whether they are collected in-person or online. Then if you transcribe (some people simply just take notes), transcription is either outsourced to a company, done in-house, or done using transcription software and is usually kept in something such as a word document or Google doc. For this type of qualitative data, I have no preference for how it is collected and transcribed as long as the transcription is accurate and it is a format that is appropriate for any analysis software you plan to use.</p>
+<p>I don’t work much with qualitative data so I won’t say much here. Interviews and focus groups are typically recorded (at least audio) whether they are collected in-person or online. Then if you transcribe (some people simply just take notes), transcription is either outsourced to a company, done in-house, or done using transcription software and is usually kept in a file such as a Word document or Google doc. For this type of qualitative data, I have no preference for how it is collected and transcribed as long as the transcription is accurate and it is a format that is appropriate for any analysis software you plan to use.</p>
 </div>
 <div id="secondary-data-sources" class="section level3">
 <h3>Secondary Data Sources</h3>
@@ -618,7 +623,7 @@ div.tocify {
 <div id="data-collection-security" class="section level2">
 <h2>Data Collection Security</h2>
 <hr />
-<p>The simplest way to maintain participant privacy is to collect anonymous data. If you collect anonymous data, no participant identifying information will be collected in your instruments (name, email, date of birth, etc.). Importantly, you will also want to make sure to not collect IP addresses as they can be used to identify an individual’s computer. However, if you collect anonymous data, you will not be able to link data across measures or across time.</p>
+<p>The simplest way to maintain participant privacy is to collect anonymous data. This is easily done through methods such as anonymous survey links (or even <a href="https://www.qualtrics.com/support/survey-platform/distributions-module/web-distribution/qr-code/">scannable QR codes linked to an anonymous form</a>), as well as distribution of paper forms or data collector entry into applications. However, if you collect anonymous data, no participant identifying information should be collected in your instruments (name, email, date of birth, etc.). You will also want to make sure to <strong>not</strong> collect IP addresses as they can be used to identify an individual’s computer. It’s also important to recognize that if you collect anonymous data, you will not be able to link data across measures or across time.</p>
 <p>More commonly in education research you will be collecting some identifiers (ex: name). However, in order to maintain participant <a href="https://www.etsu.edu/irb/documents/confidentiality_vs_privacy.pdf">confidentiality</a> you cannot keep those identifiers in your research data. You will need to assign unique IDs to all participants and replace all identifying information with that study ID. In longitudinal studies in particular, you will be using that unique participant ID to link data across time and across measures.</p>
 <p>To the best of your ability, all of your data collection instruments should have that study ID associated embedded in the form when you send it out into the field, rather than name, to ensure confidentiality (participant name is never actually on your study data and therefore does not need to be removed) as well as to reduce errors that may occur when replacing names with study IDs. This is especially important for longitudinal studies, where maintaining the accuracy of your study IDs is critical to linking data over time.</p>
 <div class="question">
@@ -633,7 +638,7 @@ div.tocify {
 <ol style="list-style-type: decimal">
 <li>Send/give individual links to participants (where each survey link is connected to a study ID within the system). This can usually be done easily in a survey platform using a <em>panel</em>.
 <ul>
-<li>This is the most error-proof way to ensure study IDs are entered correctly. You load in IDs directly from your linking key so that when data is downloaded, the correct ID is already linked to each participant and name is never attached to the downloaded data.<br />
+<li>This is the most error-proof way to ensure study IDs are entered correctly. You load in IDs directly from your participant database so that when data is downloaded, the correct ID is already linked to each participant and name is never attached to the downloaded data.<br />
 </li>
 </ul></li>
 <li>Provide one link to all participants and separately, in an email, in person, or by mail, provide participants with their study ID to enter into the system.
@@ -643,7 +648,7 @@ div.tocify {
 <li>This can possibly introduce error if a participant enters study ID incorrectly</li>
 </ul></li>
 </ul></li>
-<li>Send one link out to all participants and have each participant enter their name and other identifying information. I say “and other identifying information” because what the particiant enters needs to be unique and not duplicated. Some people in your study may have the exact same name as someone else in your study. To prevent causing confusion, collect two pieces of information such as name and DOB so you are able to link that individual to the correct study ID.
+<li>Send one link out to all participants and have each participant enter their name and other identifying information. I say “and other identifying information” because what the participant enters needs to be unique and not duplicated. Some people in your study may have the exact same name as someone else in your study. To prevent causing confusion, collect two pieces of information such as name and DOB so you are able to link that individual to the correct study ID.
 <ul>
 <li>This may be the most problematic out of all the options in terms of data management, privacy, and potential for errors.</li>
 <li>Your options for working with this data are:
@@ -736,7 +741,7 @@ div.tocify {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#varkbdsqmb .gt_table {
+#gtvklmgvvb .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -761,7 +766,7 @@ div.tocify {
   border-left-color: #D3D3D3;
 }
 
-#varkbdsqmb .gt_heading {
+#gtvklmgvvb .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -773,7 +778,7 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#varkbdsqmb .gt_title {
+#gtvklmgvvb .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -783,7 +788,7 @@ div.tocify {
   border-bottom-width: 0;
 }
 
-#varkbdsqmb .gt_subtitle {
+#gtvklmgvvb .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -793,13 +798,13 @@ div.tocify {
   border-top-width: 0;
 }
 
-#varkbdsqmb .gt_bottom_border {
+#gtvklmgvvb .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#varkbdsqmb .gt_col_headings {
+#gtvklmgvvb .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -814,7 +819,7 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#varkbdsqmb .gt_col_heading {
+#gtvklmgvvb .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -834,7 +839,7 @@ div.tocify {
   overflow-x: hidden;
 }
 
-#varkbdsqmb .gt_column_spanner_outer {
+#gtvklmgvvb .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -846,15 +851,15 @@ div.tocify {
   padding-right: 4px;
 }
 
-#varkbdsqmb .gt_column_spanner_outer:first-child {
+#gtvklmgvvb .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#varkbdsqmb .gt_column_spanner_outer:last-child {
+#gtvklmgvvb .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#varkbdsqmb .gt_column_spanner {
+#gtvklmgvvb .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -866,7 +871,7 @@ div.tocify {
   width: 100%;
 }
 
-#varkbdsqmb .gt_group_heading {
+#gtvklmgvvb .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -888,7 +893,7 @@ div.tocify {
   vertical-align: middle;
 }
 
-#varkbdsqmb .gt_empty_group_heading {
+#gtvklmgvvb .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -903,15 +908,15 @@ div.tocify {
   vertical-align: middle;
 }
 
-#varkbdsqmb .gt_from_md > :first-child {
+#gtvklmgvvb .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#varkbdsqmb .gt_from_md > :last-child {
+#gtvklmgvvb .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#varkbdsqmb .gt_row {
+#gtvklmgvvb .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -930,7 +935,7 @@ div.tocify {
   overflow-x: hidden;
 }
 
-#varkbdsqmb .gt_stub {
+#gtvklmgvvb .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -942,7 +947,7 @@ div.tocify {
   padding-left: 12px;
 }
 
-#varkbdsqmb .gt_summary_row {
+#gtvklmgvvb .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -952,7 +957,7 @@ div.tocify {
   padding-right: 5px;
 }
 
-#varkbdsqmb .gt_first_summary_row {
+#gtvklmgvvb .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -962,7 +967,7 @@ div.tocify {
   border-top-color: #D3D3D3;
 }
 
-#varkbdsqmb .gt_grand_summary_row {
+#gtvklmgvvb .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -972,7 +977,7 @@ div.tocify {
   padding-right: 5px;
 }
 
-#varkbdsqmb .gt_first_grand_summary_row {
+#gtvklmgvvb .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -982,11 +987,11 @@ div.tocify {
   border-top-color: #D3D3D3;
 }
 
-#varkbdsqmb .gt_striped {
+#gtvklmgvvb .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#varkbdsqmb .gt_table_body {
+#gtvklmgvvb .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -995,7 +1000,7 @@ div.tocify {
   border-bottom-color: #D3D3D3;
 }
 
-#varkbdsqmb .gt_footnotes {
+#gtvklmgvvb .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1009,13 +1014,13 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#varkbdsqmb .gt_footnote {
+#gtvklmgvvb .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#varkbdsqmb .gt_sourcenotes {
+#gtvklmgvvb .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1029,46 +1034,46 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#varkbdsqmb .gt_sourcenote {
+#gtvklmgvvb .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#varkbdsqmb .gt_left {
+#gtvklmgvvb .gt_left {
   text-align: left;
 }
 
-#varkbdsqmb .gt_center {
+#gtvklmgvvb .gt_center {
   text-align: center;
 }
 
-#varkbdsqmb .gt_right {
+#gtvklmgvvb .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#varkbdsqmb .gt_font_normal {
+#gtvklmgvvb .gt_font_normal {
   font-weight: normal;
 }
 
-#varkbdsqmb .gt_font_bold {
+#gtvklmgvvb .gt_font_bold {
   font-weight: bold;
 }
 
-#varkbdsqmb .gt_font_italic {
+#gtvklmgvvb .gt_font_italic {
   font-style: italic;
 }
 
-#varkbdsqmb .gt_super {
+#gtvklmgvvb .gt_super {
   font-size: 65%;
 }
 
-#varkbdsqmb .gt_footnote_marks {
+#gtvklmgvvb .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="varkbdsqmb" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="gtvklmgvvb" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -1262,7 +1267,8 @@ div.tocify {
 </ol>
 <p><img src="img/form-view-new.PNG" width="55%" style="display: block; margin: auto;" /></p>
 <p><br></p>
-<p>There are many other ways to load data into a database but for this use case (tracking participation in an education research study) I am only covering these two methods. However, you can read about all the methods <a href="https://www.quackit.com/database/tutorial/adding_data_to_database.cfm">here</a>.</p>
+<p>There are many other ways to load data into a database but for this use case (tracking participation in an education research study) I am only covering these two methods. However, you can read about several other methods <a href="https://www.quackit.com/database/tutorial/adding_data_to_database.cfm">here</a>.</p>
+<p>Also, most recently I’ve heard people mention the idea of automating at least some data entry/tracking through the use of unique scannable QR codes for instance on paper data <strong>or</strong> through a connection/integration between your online data collection platform and your tracking database (ex: <a href="https://www.workato.com/integrations/quickbase+qualtrics">Qualtrics and Quick Base</a>). This type of linking would require your database to be cloud based and most likely requires some technical skills to set up this linking process. But it’s a cool idea! For example, using unique QR codes, similar to what is used for <a href="https://blog.beaconstac.com/2020/07/qr-codes-for-inventory-management/">tracking inventory</a>, you could scan a QR code on a survey when it comes back from data collection and “check it in” to your participant database under their ID. Or by integrating your survey platform and participant database, you could add new participants to your database as they complete their consents and surveys online.</p>
 </div>
 <div id="considerations" class="section level3">
 <h3>Considerations</h3>

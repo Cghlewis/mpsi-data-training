@@ -126,32 +126,32 @@ No matter what platform you use, building your survey requires some up front pla
 
 #### **Offline Surveys**
 
-If your site or participants do not have WiFi and/or email access, one option is to work with a survey platform (such as Qualtrics or SurveyCTO) that allows you to create a survey online, administer it using an offline survey app on your phone or tablet, and then upload that data back to the survey platform once you have an internet connection again.
+If your site or participants do not have WiFi and/or email access, you generally have a few options.
 
-Still, depending on your study, participants, and resources, building a web-based survey may not be possible and/or it may not be the best option for your project.
+  1. One option is to work with a survey platform (such as Qualtrics or SurveyCTO) that allows you to create a survey online, administer it using an offline survey app on your phone or tablet, and then upload that data back to the survey platform once you have an internet connection again.
 
-If you must collect paper survey data I recommend the following to reduce error:
+  2. Still, depending on your study, participants, and resources, building a web-based survey may not be possible and/or it may not be the best option for your project. So your second option is a paper survey. 
 
-  + Have very clear instructions/training on how to complete the paper form
-  + Make sure to write survey questions to the best of your ability that prevents respondents from being confused and circling multiple answers or writing other answers in the margins
-  + If your staff are implementing surveys out in the field, have them check for missing data in the field before they return to the office
-    + Check all forms for missing data again when they return back to the office
-  + If you are using a mail survey, check for missing data when the survey is returned
+  + If you must collect paper survey data I recommend the following to reduce error:
+    + Have very clear instructions/training on how to complete the paper form
+    + Make sure to write survey questions to the best of your ability that prevents respondents from being confused and circling multiple answers or writing other answers in the margins
+    + If your staff are implementing surveys out in the field, have them check for missing data in the field before they return to the office
+        + Check all forms for missing data again when they return back to the office
+    + If you are using a mail survey, check for missing data when the survey is returned
 
-To improve data entry issues:
-
-  + Consider using something like [TeleForm](https://ocrsolution.com/teleform-software/) to reduce hand entry of data
-    + I personally have not used this but I know TeleForm designs machine readable forms that can later be scanned rather than hand entered
-  + If staff are hand entering data into a database or spreadsheet (rather than using Teleform), set up clear databases for staff to enter the data
-      + Consider using a database tool such as Access, FileMaker, RedCap, or QuickBase rather than a spreadsheet. If you must use Excel, be aware of some of the limitations and possible issues: 
-        - The formatting that Excel sometimes applies to fields may cause errors in your data (dates get formatted as numeric, strings get formatted as dates, and other nightmares)
-        - It's easy to enter data into the wrong row or column in a spreadsheet as you are able to click anywhere is the spreadsheet
-      + Restrict entry in fields (only allow numeric values if you want staff to enter numbers rather than the actual words associated with response options)
-      + Have very clear instructions for data entry (make sure these rules are in your protocol). It should include instructions such as:
-        - What they should do if they come across missing data (skip the cell, enter a certain number such as -999, etc.)
-        - What they should do if a respondent circles multiple answers
-      + Set up a system for error checking    
-        - Consider having two different staff members [double enter](http://barchard.faculty.unlv.edu/doubleentry/Scott%20Data%20Entry%20WPA%202008.pdf) either all or a percentage of your data and running a syntax to check for errors (I will discuss this more in later trainings)
+  + To improve data entry issues:
+    + Consider using something like [TeleForm](https://ocrsolution.com/teleform-software/) to reduce hand entry of data
+        + I personally have not used this but I know TeleForm designs machine readable forms that can later be scanned rather than hand entered
+    + If staff are hand entering data into a database or spreadsheet (rather than using Teleform), set up clear databases for staff to enter the data
+        + Consider using a database tool such as Access, FileMaker, RedCap, or QuickBase rather than a spreadsheet. If you must use Excel, be aware of some of the limitations and possible issues: 
+            - The formatting that Excel sometimes applies to fields may cause errors in your data (dates get formatted as numeric, strings get formatted as dates, and other nightmares)
+            - It's easy to enter data into the wrong row or column in a spreadsheet as you are able to click anywhere is the spreadsheet
+        + Restrict entry in fields (only allow numeric values if you want staff to enter numbers rather than the actual words associated with response options)
+        + Have very clear instructions for data entry (make sure these rules are in your protocol). It should include instructions such as:
+            - What they should do if they come across missing data (skip the cell, enter a certain number such as -999, etc.)
+            - What they should do if a respondent circles multiple answers
+        + Set up a system for error checking    
+            - Consider having two different staff members [double enter](http://barchard.faculty.unlv.edu/doubleentry/Scott%20Data%20Entry%20WPA%202008.pdf) either all or a percentage of your data and running a syntax to check for errors (I will discuss this more in later trainings)
 
    📑 Reynolds and Schatsnieder from Florida State University have some great suggestions [here](https://figshare.com/articles/preprint/The_Basics_of_Data_Management/13215350/1) for setting up a data entry station and protocol for any manual data entry that needs to occur.  
    📑 Data Management Episode 1 and 2 of [Within and Between](http://www.withinandbetweenpod.com/) podcast has some great examples of how to set up data entry protocol.
@@ -190,17 +190,17 @@ Observation forms can be built into an online survey platform or your own applic
 
 If WiFi is not available to you in the field, consider making an electronic form that still eliminates the need for data entry (so not a paper form) and that ideally connects to or creates some type of database or table. Then have data collectors enter data into this form on a device in the field. This does not have to be high-tech. It could simply be: 
 
-  - An excel file that is pre-built with every observation field and the options for each field are limited to only the correct options through a drop-down list.
-  - Create a Microsoft Access form that is connected to a database
-  - Utilize the offline survey options provided by tools such as Qualtrics (see Offline Surveys section)
-  - Build or use existing offline tools. For duration code classroom observations, we've used [software](https://mooses.vueinnovations.com/) built by a developer at Vanderbilt to collect frequency and duration observation data. It stores observation text files to the data collectors device. 
+  1. An Excel file that is pre-built with every observation field and the options for each field are limited to only the correct options through a drop-down list.
+  2. Create a Microsoft Access form that is connected to a database
+  3. Utilize the offline survey options provided by tools such as Qualtrics (see Offline Surveys section)
+  4. Build or use existing offline tools. For duration code classroom observations, we've used [software](https://mooses.vueinnovations.com/) built by a developer at Vanderbilt to collect frequency and duration observation data. It stores observation text files to the data collectors device. 
 
-Collecting electronic data in the field becomes tricky when you are having people use tools simultaneously that aren't connected to a shared database (such as separate excel files or Access databases). When you use a survey platform everyone's data is feeding into the same database/table. However, when you are using separate Excel files for instance, everyone is storing data on their own device. This requires you to set up a way for collectors to share files (ex: Dropbox, Box, or whatever your institution deems is a secure system) and then for you to merge those files together across data collectors. It is definitely trickier, although possibly still a more efficient and reliable method that paper forms and hand entry of data. 
+Collecting electronic data in the field becomes tricky when you are having people use tools simultaneously that aren't connected to a shared database (such as separate Excel files or Access databases). When you use an online/offline survey platform, everyone's data is feeding into the same database/table. However, when you are using separate Excel files for instance, everyone is storing data on their own device. This requires you to set up a way for collectors to share files (ex: Dropbox, Box, or whatever your institution deems is a secure system) and then for you to merge those files together across data collectors. It is definitely trickier, although possibly still a more efficient and reliable method that paper forms and hand entry of data. 
 
 
 ### Interviews or Focus Groups
 
-I don't work much with qualitative data so I won't say much here. Interviews and focus groups are typically recorded (at least audio) whether they are collected in-person or online. Then if you transcribe (some people simply just take notes), transcription is either outsourced to a company, done in-house, or done using transcription software and is usually kept in something such as a word document or Google doc. For this type of qualitative data, I have no preference for how it is collected and transcribed as long as the transcription is accurate and it is a format that is appropriate for any analysis software you plan to use.
+I don't work much with qualitative data so I won't say much here. Interviews and focus groups are typically recorded (at least audio) whether they are collected in-person or online. Then if you transcribe (some people simply just take notes), transcription is either outsourced to a company, done in-house, or done using transcription software and is usually kept in a file such as a Word document or Google doc. For this type of qualitative data, I have no preference for how it is collected and transcribed as long as the transcription is accurate and it is a format that is appropriate for any analysis software you plan to use.
 
 
 ### Secondary Data Sources
@@ -223,7 +223,7 @@ Last I wanted to mention that it is also possible to build all or almost all of 
 
 ---
 
-The simplest way to maintain participant privacy is to collect anonymous data. If you collect anonymous data, no participant identifying information will be collected in your instruments (name, email, date of birth, etc.). Importantly, you will also want to make sure to not collect IP addresses as they can be used to identify an individual's computer. However, if you collect anonymous data, you will not be able to link data across measures or across time.
+The simplest way to maintain participant privacy is to collect anonymous data. This is easily done through methods such as anonymous survey links (or even [scannable QR codes linked to an anonymous form](https://www.qualtrics.com/support/survey-platform/distributions-module/web-distribution/qr-code/)), as well as distribution of paper forms or data collector entry into applications. However, if you collect anonymous data, no participant identifying information should be collected in your instruments (name, email, date of birth, etc.). You will also want to make sure to **not** collect IP addresses as they can be used to identify an individual's computer. It's also important to recognize that if you collect anonymous data, you will not be able to link data across measures or across time.
 
 More commonly in education research you will be collecting some identifiers (ex: name). However, in order to maintain participant [confidentiality](https://www.etsu.edu/irb/documents/confidentiality_vs_privacy.pdf) you cannot keep those identifiers in your research data. You will need to assign unique IDs to all participants and replace all identifying information with that study ID. In longitudinal studies in particular, you will be using that unique participant ID to link data across time and across measures. 
 
@@ -245,11 +245,11 @@ Even if you are purposefully collecting anonymous data, if you have randomized p
 When sending out or completing in-person web-based surveys/assessments, you can do one of the following to connect your data to a participant (this is not all-inclusive):  
 
   1. Send/give individual links to participants (where each survey link is connected to a study ID within the system). This can usually be done easily in a survey platform using a *panel*.   
-      + This is the most error-proof way to ensure study IDs are entered correctly. You load in IDs directly from your linking key so that when data is downloaded, the correct ID is already linked to each participant and name is never attached to the downloaded data.  
+      + This is the most error-proof way to ensure study IDs are entered correctly. You load in IDs directly from your participant database so that when data is downloaded, the correct ID is already linked to each participant and name is never attached to the downloaded data.  
   1. Provide one link to all participants and separately, in an email, in person, or by mail, provide participants with their study ID to enter into the system. 
       + We have used this method when we are conducting surveys/assessments in computer labs or on tablets in schools.
         + This can possibly introduce error if a participant enters study ID incorrectly
-  3. Send one link out to all participants and have each participant enter their name and other identifying information. I say "and other identifying information" because what the particiant enters needs to be unique and not duplicated. Some people in your study may have the exact same name as someone else in your study. To prevent causing confusion, collect two pieces of information such as name and DOB so you are able to link that individual to the correct study ID.
+  3. Send one link out to all participants and have each participant enter their name and other identifying information. I say "and other identifying information" because what the participant enters needs to be unique and not duplicated. Some people in your study may have the exact same name as someone else in your study. To prevent causing confusion, collect two pieces of information such as name and DOB so you are able to link that individual to the correct study ID.
       + This may be the most problematic out of all the options in terms of data management, privacy, and potential for errors. 
       + Your options for working with this data are:
         1. Download the data, replace name and other identifying info with study ID. Replacing name with ID when there are incorrectly spelled names, with various formatting issues, can potentially start to introduce errors and data management troubles. If at all possible, collect more than one piece of identifying information (name and teacher name for instance) in case two students have the same name or a name is illegible.
@@ -509,10 +509,12 @@ knitr::include_graphics("img/datasheet-view-new.png")
 knitr::include_graphics("img/form-view-new.png")
 
 ```
- 
+
 <br>
 
-There are many other ways to load data into a database but for this use case (tracking participation in an education research study) I am only covering these two methods. However, you can read about all the methods [here](https://www.quackit.com/database/tutorial/adding_data_to_database.cfm).
+There are many other ways to load data into a database but for this use case (tracking participation in an education research study) I am only covering these two methods. However, you can read about several other methods [here](https://www.quackit.com/database/tutorial/adding_data_to_database.cfm). 
+
+Also, most recently I've heard people mention the idea of automating at least some data entry/tracking through the use of unique scannable QR codes for instance on paper data **or** through a connection/integration between your online data collection platform and your tracking database (ex: [Qualtrics and Quick Base](https://www.workato.com/integrations/quickbase+qualtrics)). This type of linking would require your database to be cloud based and most likely requires some technical skills to set up this linking process. But it's a cool idea! For example, using unique QR codes, similar to what is used for [tracking inventory](https://blog.beaconstac.com/2020/07/qr-codes-for-inventory-management/), you could scan a QR code on a survey when it comes back from data collection and "check it in" to your participant database under their ID. Or by integrating your survey platform and participant database, you could add new participants to your database as they complete their consents and surveys online.
 
 ### Considerations
 
