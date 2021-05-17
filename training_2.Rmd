@@ -487,7 +487,7 @@ Again if you are building these as individual spreadsheets in a workbook rather 
 
 ### Entering data
 
-For the purposes of this database, there are probably two methods of entering data. 
+For the purposes of this database, there are probably two most common methods of entering data. 
 
 1. Enter data directly into a datasheet view. This looks exactly as you would expect, a tabular form where you enter data for each participant in a row. You can do this in systems such as Access, QuickBase, Excel and Google Sheets.
     * Pros: It's the quickest and easiest method. It also allows you to view all the data holistically.
@@ -512,9 +512,24 @@ knitr::include_graphics("img/form-view-new.png")
 
 <br>
 
-There are many other ways to load data into a database but for this use case (tracking participation in an education research study) I am only covering these two methods. However, you can read about several other methods [here](https://www.quackit.com/database/tutorial/adding_data_to_database.cfm). 
+There are many other ways to load data into a database but for this use case (tracking participation in an education research study) these are probably the most common methods. However, you can read about several other methods [here](https://www.quackit.com/database/tutorial/adding_data_to_database.cfm). 
 
-Also, most recently I've heard people mention the idea of automating at least some data entry/tracking through the use of unique scannable QR codes for instance on paper data **or** through a connection/integration between your online data collection platform and your tracking database (ex: [Qualtrics and Quick Base](https://www.workato.com/integrations/quickbase+qualtrics)). This type of linking would require your database to be cloud based and most likely requires some technical skills to set up this linking process. But it's a cool idea! For example, using unique QR codes, similar to what is used for [tracking inventory](https://blog.beaconstac.com/2020/07/qr-codes-for-inventory-management/), you could scan a QR code on a survey when it comes back from data collection and "check it in" to your participant database under their ID. Or by integrating your survey platform and participant database, you could add new participants to your database as they complete their consents and surveys online.
+Also, most recently I've heard people mention the idea of automating at least some data entry/tracking through the use of unique scannable codes **or** through integration of your online data collection platform and your tracking database (ex: [Qualtrics and Quick Base](https://www.workato.com/integrations/quickbase+qualtrics)). This type of tracking most likely requires some technical skills to set up this linking process. But it's a cool idea and may reduce at least some error that occurs in manually tracking data. For example, by creating a unique QR code/barcode (linked to a participant ID) that is added to every paper survey, similar to what is used for [tracking inventory](https://blog.beaconstac.com/2020/07/qr-codes-for-inventory-management/), you can scan that code when data collection is complete to "check in" a survey to your participant database. Or by integrating your survey platform and participant database, you could add new participants to your database as they complete their consents and surveys online.
+
+QR code/barcode resources:
+
+  📑 [Creating Barcodes in Excel](https://www.smartsheet.com/content/excel-barcodes)   
+  📑 [Scanning Barcodes into an Excel Spreadsheet](https://www.youtube.com/watch?v=yssnGacoTNA)   
+  📑 [Creating Barcodes in Word](https://support.microsoft.com/en-us/office/add-barcodes-to-labels-495cf789-c9d9-4ea5-8eb9-7299170d4831)   
+  📑 [Scanning QR codes into Google Sheets](https://www.youtube.com/watch?v=XGS3ctyVbHA)   
+  📑 [Creating Barcodes in Access](https://www.activebarcode.com/howto/access-barcode-object-report.html)   
+  📑 [Scanning Barcodes into Access](https://www.techwalla.com/articles/how-to-read-barcode-data-into-ms-access-databases)   
+  
+Integration resources:
+
+  📑 [Examples of Qualtrics Integration](https://www.qualtrics.com/support/integrations/integrations-overview/)   
+  📑 [Examples of QuickBase Integration](https://www.quickbase.com/business-application-platform/integrations)   
+
 
 ### Considerations
 
