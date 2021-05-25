@@ -249,7 +249,7 @@ When sending out or completing in-person web-based surveys/assessments, you can 
   1. Provide one link to all participants and separately, in an email, in person, or by mail, provide participants with their study ID to enter into the system. 
       + We have used this method when we are conducting surveys/assessments in computer labs or on tablets in schools.
         + This can possibly introduce error if a participant enters study ID incorrectly
-  3. Send one link out to all participants and have each participant enter their name and other identifying information. I say "and other identifying information" because what the participant enters needs to be unique and not duplicated. Some people in your study may have the exact same name as someone else in your study. To prevent causing confusion, collect two pieces of information such as name and DOB so you are able to link that individual to the correct study ID.
+  1. Send one link out to all participants and have each participant enter their name and other identifying information. I say "and other identifying information" because what the participant enters needs to be unique and not duplicated. Some people in your study may have the exact same name as someone else in your study. To prevent causing confusion, collect two pieces of information such as name and DOB so you are able to link that individual to the correct study ID.
       + This may be the most problematic out of all the options in terms of data management, privacy, and potential for errors. 
       + Your options for working with this data are:
         1. Download the data, replace name and other identifying info with study ID. Replacing name with ID when there are incorrectly spelled names, with various formatting issues, can potentially start to introduce errors and data management troubles. If at all possible, collect more than one piece of identifying information (name and teacher name for instance) in case two students have the same name or a name is illegible.
@@ -259,6 +259,31 @@ For method #1 and #2, build a data check into the system. When a participant ope
 
 Ultimately, which method you use for web-based links will first, depend on the data collection instrument. For instance, an online assessment may *only* have one link and so option #2 or #3 above may be your only option. However, for online surveys, any option is possible. Secondly, it will also depend on your method of dissemination. If you are sending survey links out yourselves to teachers, option #1 is going to be the best method. If a school system will not give you student emails, and you need to have teachers send out links to students, #3 may be best your best option. That method reduces the burden on teachers (having to send multiple links in #1) and potentially reduces error (asking teachers to track multiple links or multiple IDs to send to students in #1 and #2).
 
+    
+:::question
+**Quick thought: Public links**
+
+All of the options above assume you are making a private link that you are only sending to existing or potential study participants (i.e.: students in a classroom, teachers in a school). However, there may be times you need to publicly recruit and collect data for your study. I've been reading about the threat of bots with public online surveys and the havoc they can wreak on a research study. If you need to use a public link, some suggestions for securing your survey include: 
+
+1. Not posting the link on social media
+1. Using [captcha verification](https://www.qualtrics.com/support/survey-platform/survey-module/editing-questions/question-types-guide/advanced/captcha-verification/)
+1. Do not automate payment upon survey completion
+1. Include open-ended questions
+1. Build attention/logic checks into survey
+1. Ask some of the same questions twice (once early on and again at the end)
+
+But even with these additions to the survey, you will want to check your data thoroughly before analyzing it and before providing payments to participants. Look for things such as participants who sped through the survey too fast, inconsistent answers on questions, nonsensical answers, timestamps that don't make sense, or identical surveys.
+
+Ultimately, the recommendation is to not have public survey links, and to only use unique links for participants. Even if this means extra work where you have a public link with a screener, and then after participants are verified through the screener, you then send a private link. 
+
+Resources:
+
+  📑 [Melissa Simone, Behavioral Scientist](https://behavioralscientist.org/how-to-battle-the-bots-wrecking-your-online-study/)   
+  📑 [Melissa Simone, STAT](https://www-new.statnews.com/2019/11/21/bots-started-sabotaging-my-online-research-i-fought-back/)   
+  📑 [Cloud Research](https://www.cloudresearch.com/resources/blog/after-the-bot-scare-understanding-whats-been-happening-with-data-collection-on-mturk-and-how-to-stop-it/)    
+:::
+
+<br>
 
 ### Offline Data:
 
