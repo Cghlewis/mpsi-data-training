@@ -14,6 +14,8 @@ navbar:
     href: training_2.html
   - text: "Training 3"
     href: training_3.html
+  - text: "Training 4"
+    href: training_4.html
 output:
   html_document:
     theme: flatly

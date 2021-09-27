@@ -7,4 +7,29 @@ output:
     anchor_sections: FALSE
 ---
   
-This will include information on writing a data cleaning plan.
+<br>
+
+:::presentation
+<br>
+You can view slides from this talk TBD
+:::
+
+<br>
+
+This training is just being developed.....
+
+
+
+Data cleaning or data wrangling is the process of organizing and transforming raw data into a dataset that can be easily accessed and analyzed. A data cleaning plan is a written plan for how you plan to tranform your raw data into the clean, usable data.
+
+
+In the world of quantitative education research, we are most likely trying to create rectangular datasets (rows and columns), rather than having data in text files, video recordings, xml, etc. Even in qualitative research, we are often wrangling data to be in a format that is analyzable and allows categorization.
+
+For repeated measures.
+in either long or wide format (depending on the use case). Wide format being one unique participant per row, long format being participants repeating in each row.
+
+General Rules:
+No repeating IDs
+Numbers rather than words for categories (although R can factorize and create a number on the back end)
+
+https://www.theanalysisfactor.com/wide-and-long-data/

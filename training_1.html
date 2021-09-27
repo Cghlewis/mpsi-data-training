@@ -375,6 +375,9 @@ div.tocify {
 <li>
   <a href="training_3.html">Training 3</a>
 </li>
+<li>
+  <a href="training_4.html">Training 4</a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -439,9 +442,10 @@ div.tocify {
 <hr />
 <div id="protocol" class="section level3">
 <h3>Protocol</h3>
-<p>A document/s to record all your procedures changes made to those procedures throughout the grant.</p>
+<p>I’ve seen this document called many other names including procedures manual, standard operation procedures (sop), research protocol, or coordinator’s manual. The CITI Good Clinical Practices <a href="https://about.citiprogram.org/series/good-clinical-practice-gcp/">training</a> calls this a Clinical Protocol. Whatever term you use, this is a document/s to record all of your procedures and changes made to those procedures throughout the grant.</p>
 <p>At some point someone will ask you how or why you did something the way you did. This is the document that will save you because it is very likely that you will not remember. This document also helps standardize your procedures. You can and should refer back to this document during a longitudinal study to ensure you continue to implement procedures in the same way.</p>
-<p>I highly recommend always adding protocol as part of any data documentation plan. You can make separate protocol documents per procedure or keep them all in one standalone document with a table of contents. Most likely your protocol will not be shared outside of your team, but the information in your protocol can be used to inform other documentation such as READMEs or codebooks. Your protocol can live in any format that works for you (ex: .docx, .md, .txt, google doc, or you can use a platform such as <a href="https://www.protocols.io/">protocols.io</a>). It is a living document that will be continually updated so use a format that makes sense for you. All of your project protocols should be housed in an easily accessible location such as the top of a project folder or any protocol that applies across all projects should be kept in an accessible location such as your team folder.</p>
+<p>I highly recommend always adding protocol as part of any data documentation plan. You can make separate protocol documents per procedure or keep them all in one standalone document with a table of contents. Most likely your protocol will not be shared outside of your team, but the information in your protocol can be used to inform other documentation such as READMEs or codebooks. Your protocol can live in any format that works for you (ex: .docx, .md, .txt, google doc, or you can use a platform such as <a href="https://www.protocols.io/">protocols.io</a>). It is a living document that will be continually updated so use a format that makes sense for you. All of your project/grant specific protocols should be housed in an easily accessible location such as the top of a project folder.</p>
+<p>It is also possible to have protocols that may be applicable across all projects (such as rules for data entry). You can keep a copy of these more broad rules in an institutional protocol (or some may call it a lab manual) to be referred to for all projects and keep it in an accessible location such as your team folder.</p>
 <p>Protocol should cover procedures/decisions for the following:</p>
 <ul>
 <li>Participant recruitment (inclusionary and exclusionary decisions)</li>
@@ -473,8 +477,9 @@ div.tocify {
 <li>Any related documents or research behind the revision</li>
 </ul>
 <p>It is also good practice to add a copy of your data collection instruments to your protocol (Surveys, Interview Questions, etc.), as well as changes/versions of those and explanations for the changes.</p>
-<p>📑 These <a href="https://figshare.com/articles/Data_Management_and_Data_Management_Plans/7890827">slides</a> from Jessica Logan, Ph.D. have nice protocol examples.</p>
-<p>It is also possible to have protocol that may be applicable across all projects (such as rules for data entry). While these kinds of protocols should go in your project specific protocol for documentation, you can also keep a copy of these more broad rules in an institutional protocol (or some may call it a lab manual) to be referred to for all projects.</p>
+<p>📑 These <a href="https://figshare.com/articles/Data_Management_and_Data_Management_Plans/7890827">slides</a> from Jessica Logan, Ph.D. have nice protocol examples.<br />
+📑 This <a href="img/sample_sop.pdf">sample</a> protocol (or sop) from CITI, while not education focused, provides a nice template for how to lay out each individual protocol.<br />
+📑 This is a cool <a href="https://cds-snc.github.io/design-research-handbook/home/">example</a> of an interactive research protocol housed on GitHub. You could build something similar in a tool like Google Docs. While this one isn’t education specific, you can see how the outline can be replaced with education research content.</p>
 <p><br></p>
 </div>
 <div id="style-guide" class="section level3">
@@ -494,7 +499,7 @@ div.tocify {
 </div>
 <div id="data-dictionary" class="section level3">
 <h3>Data Dictionary</h3>
-<p>A data dictionary is another essential data management document and I highly suggest you start this before your ever collect a piece of data. This will help you set up successful back-end coding as you create data collection tools and it will serve as a reference document you can use as questions come up about the data. It is also a document that can be shared with others to help them better understand your data. A data dictionary is usually in rectangular format, for example an excel spreadsheet, google sheet or something similar that has rows and columns. It includes all information relevant to every variable in your data.</p>
+<p>A data dictionary is another essential data management document and I highly suggest you start this before your ever collect a piece of data. This will help you set up successful back-end coding as you create data collection tools and it will serve as a reference document you can use as questions come up about the data. It is also a document that can be shared with others to help them better understand your data. A data dictionary is usually in rectangular format, for example an Excel spreadsheet, Google sheet or something similar that has rows and columns. It includes all information relevant to every variable in your data.</p>
 <p>📑 Here is a nice <a href="https://media.screensteps.com/image_assets/assets/001/878/671/original/8fbcc565-602f-4ac6-b828-2eaaeb67578b.png">example</a> of a very simple data dictionary.</p>
 <p>Your dictionary <strong>should</strong> capture information such as:</p>
 <ul>
@@ -504,7 +509,8 @@ div.tocify {
 </li>
 <li>Exact question text<br />
 </li>
-<li>Associated scale (if the item belongs to a scale)</li>
+<li>Associated scale/measure (if the item belongs to a scale)</li>
+<li>Associated form (Student survey, teacher rating of student, etc.)</li>
 <li>Value range or value codes ([1-99] or 0=No, 1=Yes)<br />
 </li>
 <li>Measurement unit (numeric, string, date, etc.)<br />
@@ -515,7 +521,6 @@ div.tocify {
 <li>Reverse coding</li>
 <li>Calculations (composite variables, scores)</li>
 <li>Notes (such as versions/changes to this variable)</li>
-<li>Group variables by measure (Student survey, teacher rating of student, etc.)</li>
 <li>Question number (order number of the question on the measure)</li>
 </ul>
 <p>You may consider having separate data dictionaries per expected final dataset. So for example, if you plan to have a final teacher dataset and a final student dataset, you may want to have a student dictionary and a teacher dictionary rather than having only one data dictionary and marking teacher or student in the universe column.</p>
@@ -566,7 +571,7 @@ div.tocify {
 📑 <a href="https://www.helsinki.fi/en/research/guide-for-data-documentation#section-72708">University of Helsinki</a><br />
 📑 <a href="http://kbroman.org/dataorg/pages/dictionary.html">Karl Broman</a><br />
 📑 <a href="https://www.methodology.psu.edu/ra/most/redcap/">Penn State</a><br />
-📑 <a href="file:///C:/Users/HAMPTO~1/AppData/Local/Temp/eddatadoneright.pdf">Education Data Done Right</a></p>
+📑 <a href="https://www.eddatadoneright.com/">Education Data Done Right</a></p>
 <p><br></p>
 </div>
 <div id="codebook" class="section level3">
@@ -622,7 +627,8 @@ div.tocify {
 <p>Further information on codebooks can be found here:</p>
 <p>📑 <a href="https://www.icpsr.umich.edu/icpsrweb/content/shared/ICPSR/faqs/what-is-a-codebook.html">ICPSR</a><br />
 📑 <a href="https://www.datafiles.samhsa.gov/faq/what-codebook-nid3440">SAMHDA</a><br />
-📑 <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;ved=2ahUKEwjb8-TwpMPsAhUM2qwKHXFdB1cQFjAKegQIBBAC&amp;url=https%3A%2F%2Fosf.io%2F72hrh%2F%3Faction%3Ddownload%26version%3D2&amp;usg=AOvVaw340qQlC9mDMzc444K_dkhT">Kai Horstmann</a></p>
+📑 <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;ved=2ahUKEwjb8-TwpMPsAhUM2qwKHXFdB1cQFjAKegQIBBAC&amp;url=https%3A%2F%2Fosf.io%2F72hrh%2F%3Faction%3Ddownload%26version%3D2&amp;usg=AOvVaw340qQlC9mDMzc444K_dkhT">Kai Horstmann</a><br />
+📑 <a href="https://rubenarslan.github.io/codebook/index.html">The R package Codebook</a></p>
 <p><br></p>
 </div>
 <div id="readme" class="section level3">
@@ -672,7 +678,7 @@ div.tocify {
 📑 <a href="https://www.lse.ac.uk/library/research-support/research-data-management/metadata-and-documentation">London School of Economics and Political Science</a><br />
 📑 <a href="https://libguides.wustl.edu/c.php?g=47355&amp;p=305263">Washington University in St. Louis</a><br />
 📑 <a href="https://pelagicpublishing.com/products/data-management-for-researchers-briney">Data Management for Researchers</a><br />
-📑 <a href="https://dmptool.org/general_guidance">DMP Tool</a><br />
+📑 <a href="https://dmptool.org/general_guidance">DMP Tool General Guidance</a><br />
 📑 <a href="https://www.cessda.eu/Training/Training-Resources/Library/Data-Management-Expert-Guide/2.-Organise-Document/Documentation-and-metadata">CESSDA</a><br />
 📑 <a href="https://libguides.wustl.edu/drmr/dataprep">Washington University</a><br />
 📑 <a href="https://zenodo.org/record/3534954#.YFIxBZ1KiUk">Jessica Rex</a></p>

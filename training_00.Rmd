@@ -104,11 +104,14 @@ In addition to IES, many other funders that education researchers may work with 
 
 Here are some excellent resources for writing up a DMP:
 
+  📑 [DMP Tool](https://dmptool.org/)
   📑 [University of Virginia IES DMP   template](https://data.library.virginia.edu/files/IES-Data-Management-Plan-Template-2018.docx)  
-  📑 [IES DMP tool](https://dmptool.org/template_export/1895.pdf)  
+  📑 [IES DMP template](https://dmptool.org/template_export/1895.pdf)  
   📑 [IES most recent Request for Applications](https://ies.ed.gov/funding/pdf/2021_84305A.pdf)  
   📑 [Foundational Practices of Research Data Management](https://riojournal.com/article/56508/instance/5569679/)  
   📑 [Sara Hart template](https://figshare.com/articles/preprint/Example_of_a_Data_Management_Plan/13218743/1)
+  📑 [Montclair example education DMP](https://www.montclair.edu/sponsored-programs/wp-content/uploads/sites/194/2019/02/Data-Management-Plan-Sample.pdf)
+  📑 [University of Minnesota example DMPs including one for education](https://www.lib.umn.edu/services/data/dmp-examples)
   
 ---
 
@@ -196,6 +199,26 @@ knitr::include_graphics("img/planning-consider2.png")
 
 ```
 
+---
+
+## Ethics
+
+---
+
+As another example of how data management is an ethical issue, I have recently come across the term [data curation debt](https://academic.oup.com/ije/article/49/4/1067/5866677), coined by a team of researchers at Newcastle University. They note that much like the software engineering principle of technical debt, researchers also incur a debt when they implement sub-optimal data management practices, especially in cohort/longitudinal studies. And this debt not only must be paid back but also accrues interest. The longer this debt is accrued, the more difficult it is to pay back and may eventually be impossible to pay back. 
+
+Consider if bad documentation is implemented throughout a research project. What then happens when a researcher goes to analyze the data with no or very poor documentation? They are unable to understand the data and team members are asked to go back and do their best to create documentation explaining the past several years of data collection, slowing any progress on analysis and outputs. Or worse, researchers use the data without documentation and potentially draw conclusions with incorrect assumptions about the data. Or maybe they are unable to use the data at all because too much time has passed and team members cannot remember key pieces of information for documentation. 
+
+Every module in this training explains a way to reduce data curation debt. At a higher level though, the Newcastle University teams also recommends:
+
++ Ensuring data managers have a voice at the highest level in your lab/organization to strategize plans to identify and reduce data curation debt
+
++ Transparently report any data curation debt incurred to funders, stakeholders, researchers
+
++ Dedicate resources to preventing and addressing data curation debt
+
++ Develop good data management protocols that are embedded in the project to prevent data curation debt
+
 
 ---
 
@@ -230,7 +253,11 @@ Examples:
 
 7. UMASS has an entire curriculum around [research data management](https://library.umassmed.edu/resources/necdmc/modules).
 
-8. This Research Data Managment 1 Day Workshop has a large list of resources around [data management](https://zenodo.org/record/4562630#.YFIzYp1KiUn).
+8. This Research Data Management 1 Day Workshop has a large list of resources around [data management](https://zenodo.org/record/4562630#.YFIzYp1KiUn).
 
 9. Julia Strand has a great [preprint](https://psyarxiv.com/rsn5y) that outlines best practices for improving data management/reducing errors in your research lab.
+
+10. Yasmeen Shorish has all of her publications and presentations around information sharing listed on her [website](https://sites.lib.jmu.edu/yasmeen/scholarship/).
+
+11. This crowdsourced data management [syllabus](https://osf.io/vkztw/) created at SIPS 2021 is an excellent overview of data management concepts and questions researchers can consider.
 

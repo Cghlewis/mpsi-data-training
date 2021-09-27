@@ -375,6 +375,9 @@ div.tocify {
 <li>
   <a href="training_3.html">Training 3</a>
 </li>
+<li>
+  <a href="training_4.html">Training 4</a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -422,7 +425,7 @@ div.tocify {
 <div id="data-collection-instruments" class="section level2">
 <h2>Data Collection Instruments</h2>
 <hr />
-<p>When it comes to the intersection of data management and data collection, there is a lot to consider. If at all possible, take some planning time to create data collection instruments and procedures that keep your data secure, valid, minimize errors, and relieve future data cleaning headaches. I am going to cover some common instruments teams create to collect original data, and ways you may be able to make these more streamlined and efficient instruments.</p>
+<p>When it comes to the intersection of data management and data collection, there is a lot to consider. If at all possible, take some planning time to create data collection instruments and procedures that keep your data secure, valid, minimize errors, and relieve future data cleaning headaches. I am going to cover some common instruments created to collect original data, and ways you may be able to make those instruments more streamlined and efficient.</p>
 <p><strong>Quick note</strong>: Everything you read below is from my personal experience as well as a summary of what I have heard while interviewing other researchers. As such I may be missing out on even better ways to set up these systems. I am open to feedback!</p>
 <p><br></p>
 <div id="surveys" class="section level3">
@@ -431,6 +434,7 @@ div.tocify {
 <ul>
 <li>Forms are easier to maintain/update</li>
 <li>Reduces cost and effort of manual printing and collating</li>
+<li>Can be distributed in many ways (links, emails, QR codes)</li>
 <li>Easier to track completion</li>
 <li>More efficient than manually entering or manually scoring data (including TeleForm)</li>
 <li>Reduces errors in both data collection as well as data entry/scoring</li>
@@ -448,7 +452,7 @@ div.tocify {
 <p>There are many web-based survey platforms (Ex: Qualtrics, Survey Monkey, Google Forms, Microsoft Forms, SurveyCTO) you can use to develop surveys. If those existing platforms do not meet your needs, you can always build your own web-based application to collect data.</p>
 <ul>
 <li>You can hire a developer to build an app for you</li>
-<li>You can build your own application to collect data in tools such as R or Tableau</li>
+<li>You can build your own application to collect data in tools such as R (ex: using <a href="https://formr.org/documentation#get_started">{formR}</a>) or Tableau</li>
 </ul>
 <p>No matter what platform you use, building your survey requires some up front planning. First and foremost make sure to build a survey that is both valid and reliable. Secondly, take time to think how the data you collect will be <em>translated into a database</em>. Remember, every question answered is then stored in a database within the platform that you will later download to a file. Here are several suggestions to adhere to when creating your survey that will provide you with more accurate data and reduce future data management headaches (<em>While I will not provide a tutorial for how to implement each suggestion, they are all possible in a platform such as Qualtrics</em>):</p>
 <ol style="list-style-type: decimal">
@@ -459,6 +463,7 @@ div.tocify {
 <li>Code all values as they are in your data dictionary (Ex: 1=strongly agree, 2= agree, etc.)
 <ul>
 <li>In Qualtrics you can do this using the “recode values” option</li>
+<li>As you edit your survey, check that your coded values did not change as you updated your survey (It happens!). This is why options such as “tools -&gt; reset recode values” exist in programs like Qualtrics, which allow you to start over with sequential back end coding.</li>
 </ul></li>
 <li>Use data validation to reduce errors and missing data
 <ul>
@@ -477,8 +482,10 @@ div.tocify {
 <ul>
 <li>School Name as a drop-down removes the potential for people to enter school names differently (some which you may not be able to decipher)
 <ul>
-<li>(“South Middle School”, “South Middle”, “SOUTH”, “Soth Mid”)</li>
+<li>(“South Middle School”, “South Middle”, “SOUTH”, “Soth Mid”)<br />
+</li>
 </ul></li>
+<li>An exception to this rule is for categories such as demographics. For example, for gender you may prefer to allow people to enter their gender in an open text box rather than giving them a pre-determined list, there are tools, such as the R package called <a href="https://ropenscilabs.github.io/gendercoder/">gendercoder</a>, that help you recategorize this data through coding after it is collected (we will talk about these tools more in later trainings).</li>
 </ul></li>
 <li>If there is an infinite number of response options or the number of options is large, use an open text box.
 <ul>
@@ -541,28 +548,9 @@ div.tocify {
 <ul>
 <li>I personally have not used this but I know TeleForm designs machine readable forms that can later be scanned rather than hand entered</li>
 </ul></li>
-<li>If staff are hand entering data into a database or spreadsheet (rather than using Teleform), set up clear databases for staff to enter the data
-<ul>
-<li>Consider using a database tool such as Access, FileMaker, RedCap, or QuickBase rather than a spreadsheet. If you must use Excel, be aware of some of the limitations and possible issues:
-<ul>
-<li>The formatting that Excel sometimes applies to fields may cause errors in your data (dates get formatted as numeric, strings get formatted as dates, and other nightmares)</li>
-<li>It’s easy to enter data into the wrong row or column in a spreadsheet as you are able to click anywhere is the spreadsheet</li>
-</ul></li>
-<li>Restrict entry in fields (only allow numeric values if you want staff to enter numbers rather than the actual words associated with response options)</li>
-<li>Have very clear instructions for data entry (make sure these rules are in your protocol). It should include instructions such as:
-<ul>
-<li>What they should do if they come across missing data (skip the cell, enter a certain number such as -999, etc.)</li>
-<li>What they should do if a respondent circles multiple answers</li>
-</ul></li>
-<li>Set up a system for error checking
-<ul>
-<li>Consider having two different staff members <a href="http://barchard.faculty.unlv.edu/doubleentry/Scott%20Data%20Entry%20WPA%202008.pdf">double enter</a> either all or a percentage of your data and running a syntax to check for errors (I will discuss this more in later trainings)</li>
-</ul></li>
-</ul></li>
+<li>Ultimately though, if staff are hand entering data from paper forms, follow guidelines laid out below in <a href="#data-entry">Data Entry</a>.</li>
 </ul></li>
 </ul>
-<p>📑 Reynolds and Schatsnieder from Florida State University have some great suggestions <a href="https://figshare.com/articles/preprint/The_Basics_of_Data_Management/13215350/1">here</a> for setting up a data entry station and protocol for any manual data entry that needs to occur.<br />
-📑 Data Management Episode 1 and 2 of <a href="http://www.withinandbetweenpod.com/">Within and Between</a> podcast has some great examples of how to set up data entry protocol.</p>
 </div>
 </div>
 <div id="assessments" class="section level3">
@@ -612,7 +600,37 @@ div.tocify {
 </div>
 <div id="consents" class="section level3">
 <h3>Consents</h3>
-<p>Consents and assents can also be collected through secure web-based tools, such as Qualtrics or DocuSign. It does however, require your participants to have access to the internet and/or email. Consult with your IRB to see what tools are approved.</p>
+<p>Most studies require researchers to collect consent and/or assent on participants. Informed consent is collected on any participant, 18 years or older. If a student is under 18 years old, a parent consent as well as a student assent is collected. Consents and assents are typically collected one of two ways.</p>
+<ol style="list-style-type: decimal">
+<li>Web-based: Consents and assents can be collected through secure web-based tools, such as Qualtrics or DocuSign. Consult with your IRB to see what tools are approved.</li>
+</ol>
+<ul>
+<li>Considerations for this method include:
+<ul>
+<li>It does require your participants to have access to the internet and possibly also email.</li>
+<li>Schools are very unlikely to give you parent email addresses. You may need to have school personnel send the parent consent link out on your behalf (or send home a paper form with a QR code)<br />
+</li>
+</ul></li>
+<li>Benefits to this method include:
+<ul>
+<li>Student assents can be completed in the classroom on any electronic device or in a computer lab with internet.<br />
+</li>
+<li>It reduces the manual labor of having to pick up paper forms from schools or have them mailed/scanned. You can simply download or access the consents online at any time.</li>
+</ul></li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Paper form: If you use a paper form, just make sure to have systems in place to allow you to track exactly where a form came from and who it belongs to. I say this as sometimes a person’s printed name or signature is illegible or you receive a student assent back but you are unsure which classroom the form came from.</li>
+</ol>
+<ul>
+<li>Here are a few methods that may help alleviate future problems:
+<ul>
+<li>If a school is willing to provide class rosters, you can pre-label your student and parent consents/assents before sending them home. That way when a form is returned you know exactly what classroom that student belongs to and what that student’s name is. IRB should not have a problem with researchers collecting rosters, but some schools may (think FERPA) so this may not be possible.<br />
+</li>
+<li>Another option is to ask teachers to print student name and their name (teacher’s names) on forms before they are sent home (or when they are returned)<br />
+</li>
+<li>Make sure to have both a print your name line <strong>and</strong> a signature line on all consent forms. Even with adult consent forms.</li>
+</ul></li>
+</ul>
 </div>
 <div id="all-in-one-study" class="section level3">
 <h3>All-in-One Study</h3>
@@ -620,32 +638,96 @@ div.tocify {
 <hr />
 </div>
 </div>
+<div id="data-entry" class="section level2">
+<h2>Data Entry</h2>
+<hr />
+<p>If you end up having to use paper forms to collect any of your data and need to manually enter that data, then there are several steps you can take to minimize error in that process.</p>
+<ol style="list-style-type: decimal">
+<li>Set up databases for staff to enter the data<br />
+</li>
+</ol>
+<ul>
+<li>Consider using a database tool such as Access, FileMaker, RedCap, or QuickBase rather than a spreadsheet. Most of these tools allow you to set up form for users to enter data into that then are submitted into a table on the back end. This reduces data entry errors.</li>
+<li>If you must use a spreadsheet tool such as SPSS or Excel, be aware of some of the limitations and possible issues:
+<ul>
+<li>The formatting that Excel sometimes applies to fields may cause errors in your data (dates get formatted as numeric, strings get formatted as dates, and other nightmares)<br />
+</li>
+<li>It’s easy to enter data into the wrong row or column in a spreadsheet as you are able to click anywhere in the spreadsheet. You may even write over existing data on accident.</li>
+<li>One way to prevent some errors in these tools is to restrict entry in fields (only allow numeric values if you want staff to enter numbers rather than the actual words associated with response options). Also, add drop down lists for each of your categorical questions, only allowing acceptable responses.</li>
+</ul></li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Develop a data entry protocol. Your protocol can/should include:<br />
+</li>
+</ol>
+<ul>
+<li>How and where staff access, store, and enter data
+<ul>
+<li>Is it stored in a locked file cabinet? What drawer?<br />
+</li>
+<li>Do they return the data back to that same drawer after entry or store in a new drawer that denotes the data has been entered? If returning back to the same drawer, does the staff member initial the form to denote that it has been entered?<br />
+</li>
+<li>What is the file path to the data entry database?<br />
+</li>
+</ul></li>
+<li>Have very clear instructions for data entry including:
+<ul>
+<li>What they should do if they come across missing data (skip the cell, enter a certain number such as -999, etc.)<br />
+</li>
+<li>What they should do if a respondent circles multiple answers<br />
+</li>
+<li>What they should do if a respondent completed multiple surveys/assessments</li>
+</ul></li>
+<li>Set up a system for error checking
+<ul>
+<li>I highly recommend you implement a system where you <a href="http://barchard.faculty.unlv.edu/doubleentry/Scott%20Data%20Entry%20WPA%202008.pdf">double enter</a> a portion, if not all of your data, to check for entry errors.
+<ul>
+<li>This looks like creating two identical databases, and having two different staff members (not the same staff member), enter data into each databases. Assign staff member A to enter data into database 1 and staff member B to enter data into database 2.<br />
+</li>
+<li>To track the entry of the physical copies of these forms, you can simply have each staff member initial the form after it has been entered in their respective database.</li>
+<li>Then when all data is entered in both forms, the following things happen:
+<ol style="list-style-type: lower-alpha">
+<li>The project coordinator checks both forms/files to make sure the N of each file matches what their participant tracking database says they collected (i.e. - someone didn’t forget to enter a form)<br />
+</li>
+<li>Then a syntax is run to check for errors (I will discuss this more in later trainings)<br />
+</li>
+<li>If errors are found, they are rectified by going back to the original databases and correcting the error in database 1 or database 2, wherever the error occurred. Then the syntax is run again until no more errors are found<br />
+</li>
+<li>Then both files are accurate and either database 1 or database 2 can be used as your analysis file.</li>
+</ol></li>
+</ul></li>
+</ul></li>
+</ul>
+<p>📑 Reynolds and Schatsnieder from Florida State University have some great suggestions <a href="https://figshare.com/articles/preprint/The_Basics_of_Data_Management/13215350/1">here</a> for setting up a data entry station and protocol for any manual data entry that needs to occur.<br />
+📑 Data Management Episode 1 and 2 of <a href="http://www.withinandbetweenpod.com/">Within and Between</a> podcast has some great examples of how to set up data entry protocol.<br />
+📑 While I haven’t read <a href="https://methods.sagepub.com/Book/the-practice-of-survey-research">The Practice of Survey Research</a>, it looks to have an entire chapter devoted to data entry that may be worth reading</p>
+<hr />
+</div>
 <div id="data-collection-security" class="section level2">
 <h2>Data Collection Security</h2>
 <hr />
-<p>The simplest way to maintain participant privacy is to collect anonymous data. This is easily done through methods such as anonymous survey links (or even <a href="https://www.qualtrics.com/support/survey-platform/distributions-module/web-distribution/qr-code/">scannable QR codes linked to an anonymous form</a>), as well as distribution of paper forms or data collector entry into applications. However, if you collect anonymous data, no participant identifying information should be collected in your instruments (name, email, date of birth, etc.). You will also want to make sure to <strong>not</strong> collect IP addresses as they can be used to identify an individual’s computer. It’s also important to recognize that if you collect anonymous data, you will not be able to link data across measures or across time.</p>
+<p>The simplest way to maintain participant privacy is to collect anonymous data. If you collect anonymous data, no participant identifying information should be collected in your instruments (name, email, date of birth, etc.). You will also want to make sure to <strong>not</strong> collect IP addresses as they can be used to identify an individual’s computer. It’s also important to recognize that if you collect anonymous data, you will not be able to link data across measures or across time.</p>
 <p>More commonly in education research you will be collecting some identifiers (ex: name). However, in order to maintain participant <a href="https://www.etsu.edu/irb/documents/confidentiality_vs_privacy.pdf">confidentiality</a> you cannot keep those identifiers in your research data. You will need to assign unique IDs to all participants and replace all identifying information with that study ID. In longitudinal studies in particular, you will be using that unique participant ID to link data across time and across measures.</p>
-<p>To the best of your ability, all of your data collection instruments should have that study ID associated embedded in the form when you send it out into the field, rather than name, to ensure confidentiality (participant name is never actually on your study data and therefore does not need to be removed) as well as to reduce errors that may occur when replacing names with study IDs. This is especially important for longitudinal studies, where maintaining the accuracy of your study IDs is critical to linking data over time.</p>
 <div class="question">
 <p><strong>Quick thought: Identifiers</strong></p>
-<p>While I am highly recommending you attach study ID alone to your data collection instruments, it is important to remember that you must have <strong>some</strong> sort of identifier (either name OR the study ID) built into every data collection instrument (survey, observation form, assessment, etc.) in order to link data across measures and time. If you do not collect identifiers, you will <strong>not</strong> be able to link your data across measures and time. Your data will essentially be anonymous.</p>
-<p>Even if you are purposefully collecting anonymous data, if you have randomized participants, say schools, you will still need an identifier for the randomization block/cluster built into your instrument (ex: sch_id) or you will not be able to know which participants are treatment and which are control.</p>
+<p>It is important to remember that you must have <strong>some</strong> sort of identifier built into every data collection instrument (survey, observation form, assessment, etc.) in order to link data across measures and time. Whether you have participants enter an identifier like their name into a form or you already have study ID linked to a form in some way. You just need to make sure you aren’t accidentally collecting anonymous data. If you do not have identifiers in your instruments, you will <strong>not</strong> be able to link your data across measures and time.</p>
+<p>Even if you are purposefully collecting anonymous data, if you have randomized participants, say schools, you will still need an identifier for the randomization block/cluster built into your instrument (ex: sch_id) or you will not be able to cluster based on that information.</p>
 </div>
 <p><br></p>
 <div id="web-based-data" class="section level3">
 <h3>Web-based Data:</h3>
 <p>When sending out or completing in-person web-based surveys/assessments, you can do one of the following to connect your data to a participant (this is not all-inclusive):</p>
 <ol style="list-style-type: decimal">
-<li>Send/give individual links to participants (where each survey link is connected to a study ID within the system). This can usually be done easily in a survey platform using a <em>panel</em>.
+<li>Send/give individual links to participants (where each survey link is connected to a study ID within the system). This can usually be done easily in a survey platform such as Qualtrics using a <a href="https://www.qualtrics.com/support/survey-platform/contacts/contact-list-overview/">contact list</a>.
 <ul>
-<li>This is the most error-proof way to ensure study IDs are entered correctly. You load in IDs directly from your participant database so that when data is downloaded, the correct ID is already linked to each participant and name is never attached to the downloaded data.<br />
-</li>
+<li>This is the most error-proof way to ensure study IDs are entered correctly. You load in IDs directly from your participant database so that when data is downloaded, the correct ID is already linked to each participant and name is never attached to the downloaded data. The participant never has to enter any identifying information into the form since their identifier is linked on the back end.</li>
+<li>Make sure to build a data check into the system. When a participant opens their unique link, verify their identity by asking, “Are you <em>first name</em>?”. Only use first name to protect other’s identity. If they say yes, they move forward, if they say no, the system redirects them to someone to contact. This ensures that participants are not completing someone else’s survey and IDs are connected to the correct participant.</li>
 </ul></li>
 <li>Provide one link to all participants and separately, in an email, in person, or by mail, provide participants with their study ID to enter into the system.
 <ul>
 <li>We have used this method when we are conducting surveys/assessments in computer labs or on tablets in schools.
 <ul>
-<li>This can possibly introduce error if a participant enters study ID incorrectly</li>
+<li>This can possibly introduce error if a participant enters study ID incorrectly. Similar to above, after a participant enters their ID, verify their identity by asking, “Are you <em>first name</em>?”. If they say yes, they move forward, if they say no, the system redirects them to someone to contact.</li>
 </ul></li>
 </ul></li>
 <li>Send one link out to all participants and have each participant enter their name and other identifying information. I say “and other identifying information” because what the participant enters needs to be unique and not duplicated. Some people in your study may have the exact same name as someone else in your study. To prevent causing confusion, collect two pieces of information such as name and DOB so you are able to link that individual to the correct study ID.
@@ -653,12 +735,14 @@ div.tocify {
 <li>This may be the most problematic out of all the options in terms of data management, privacy, and potential for errors.</li>
 <li>Your options for working with this data are:
 <ol style="list-style-type: decimal">
-<li>Download the data, replace name and other identifying info with study ID. Replacing name with ID when there are incorrectly spelled names, with various formatting issues, can potentially start to introduce errors and data management troubles. If at all possible, collect more than one piece of identifying information (name and teacher name for instance) in case two students have the same name or a name is illegible.</li>
+<li>Download the data, replace name and other identifying info with study ID. Replacing name with ID when there are incorrectly spelled names, with various formatting issues, can potentially start to introduce errors and data management troubles. As mentioned above, collect more than one piece of identifying information (name and teacher name for instance) in case two students have the same name or a name is illegible.</li>
 <li>If you have not yet assigned study IDs, and your link includes your consent/assent, you can have the system assign study IDs in the back end for you, and when you download the data, those IDs will be tied to data, but not the identifying information, which will be stored separately. This is possible in a tool such as Qualtrics.</li>
 </ol></li>
 </ul></li>
 </ol>
-<p>For method #1 and #2, build a data check into the system. When a participant opens their unique link, or enters their study ID, have the system verify their identity by asking, “Are you <em>first name</em>, <em>last name</em>?”. If they say yes, they move forward, if they say no, the system redirects them to someone to contact. This ensures that participants are not completing someone else’s survey and IDs are connected to the correct participant.</p>
+<p>This image shows what a data de-identification system looks like where identifiers are collected and need to be removed for the analysis dataset. Table 1 would be the incoming survey data with identifiers, Table 2 would be your <a href="#participant-database">Participant Database</a> (which I talk about more below), and Table 3 is your de-identified analysis dataset.</p>
+<p><img src="img/analysis_dataset.PNG" width="90%" style="display: block; margin: auto;" /></p>
+<p>Source: <a href="https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf">J-PAL</a></p>
 <p>Ultimately, which method you use for web-based links will first, depend on the data collection instrument. For instance, an online assessment may <em>only</em> have one link and so option #2 or #3 above may be your only option. However, for online surveys, any option is possible. Secondly, it will also depend on your method of dissemination. If you are sending survey links out yourselves to teachers, option #1 is going to be the best method. If a school system will not give you student emails, and you need to have teachers send out links to students, #3 may be best your best option. That method reduces the burden on teachers (having to send multiple links in #1) and potentially reduces error (asking teachers to track multiple links or multiple IDs to send to students in #1 and #2).</p>
 <div class="question">
 <p><strong>Quick thought: Public links</strong></p>
@@ -688,7 +772,7 @@ div.tocify {
 <ul>
 <li>It is this ID only that you will enter into your data entry form, no name.</li>
 <li>Removing the label/cover sheet also ensures that your data entry team only sees participant ID when they enter data, increasing privacy by minimizing the number of people who see see participant name.</li>
-<li>Double and triple check against your linking roster that the study ID is correct <em>before</em> removing the label or cover sheet</li>
+<li>Double and triple check against your participant database that the study ID is correct <em>before</em> removing the label or cover sheet</li>
 <li>Make a plan for the labels/cover sheets (either shred them if they are no longer needed, or store them securely in a locked file cabinet and shred them at a later point)</li>
 </ul></li>
 </ul>
@@ -743,6 +827,7 @@ div.tocify {
 <li>Microsoft Access</li>
 <li>Excel</li>
 <li>QuickBase</li>
+<li>Airtable</li>
 <li>REDCap</li>
 <li>Google Tables</li>
 <li>Google Sheets/Google Forms</li>
@@ -760,7 +845,7 @@ div.tocify {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#eiixwpkmin .gt_table {
+#elgpuczzsi .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -785,7 +870,7 @@ div.tocify {
   border-left-color: #D3D3D3;
 }
 
-#eiixwpkmin .gt_heading {
+#elgpuczzsi .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -797,7 +882,7 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#eiixwpkmin .gt_title {
+#elgpuczzsi .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -807,7 +892,7 @@ div.tocify {
   border-bottom-width: 0;
 }
 
-#eiixwpkmin .gt_subtitle {
+#elgpuczzsi .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -817,13 +902,13 @@ div.tocify {
   border-top-width: 0;
 }
 
-#eiixwpkmin .gt_bottom_border {
+#elgpuczzsi .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#eiixwpkmin .gt_col_headings {
+#elgpuczzsi .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -838,7 +923,7 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#eiixwpkmin .gt_col_heading {
+#elgpuczzsi .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -858,7 +943,7 @@ div.tocify {
   overflow-x: hidden;
 }
 
-#eiixwpkmin .gt_column_spanner_outer {
+#elgpuczzsi .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -870,15 +955,15 @@ div.tocify {
   padding-right: 4px;
 }
 
-#eiixwpkmin .gt_column_spanner_outer:first-child {
+#elgpuczzsi .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#eiixwpkmin .gt_column_spanner_outer:last-child {
+#elgpuczzsi .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#eiixwpkmin .gt_column_spanner {
+#elgpuczzsi .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -890,7 +975,7 @@ div.tocify {
   width: 100%;
 }
 
-#eiixwpkmin .gt_group_heading {
+#elgpuczzsi .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -912,7 +997,7 @@ div.tocify {
   vertical-align: middle;
 }
 
-#eiixwpkmin .gt_empty_group_heading {
+#elgpuczzsi .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -927,15 +1012,15 @@ div.tocify {
   vertical-align: middle;
 }
 
-#eiixwpkmin .gt_from_md > :first-child {
+#elgpuczzsi .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#eiixwpkmin .gt_from_md > :last-child {
+#elgpuczzsi .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#eiixwpkmin .gt_row {
+#elgpuczzsi .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -954,7 +1039,7 @@ div.tocify {
   overflow-x: hidden;
 }
 
-#eiixwpkmin .gt_stub {
+#elgpuczzsi .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -966,7 +1051,7 @@ div.tocify {
   padding-left: 12px;
 }
 
-#eiixwpkmin .gt_summary_row {
+#elgpuczzsi .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -976,7 +1061,7 @@ div.tocify {
   padding-right: 5px;
 }
 
-#eiixwpkmin .gt_first_summary_row {
+#elgpuczzsi .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -986,7 +1071,7 @@ div.tocify {
   border-top-color: #D3D3D3;
 }
 
-#eiixwpkmin .gt_grand_summary_row {
+#elgpuczzsi .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -996,7 +1081,7 @@ div.tocify {
   padding-right: 5px;
 }
 
-#eiixwpkmin .gt_first_grand_summary_row {
+#elgpuczzsi .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1006,11 +1091,11 @@ div.tocify {
   border-top-color: #D3D3D3;
 }
 
-#eiixwpkmin .gt_striped {
+#elgpuczzsi .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#eiixwpkmin .gt_table_body {
+#elgpuczzsi .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1019,7 +1104,7 @@ div.tocify {
   border-bottom-color: #D3D3D3;
 }
 
-#eiixwpkmin .gt_footnotes {
+#elgpuczzsi .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1033,13 +1118,13 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#eiixwpkmin .gt_footnote {
+#elgpuczzsi .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#eiixwpkmin .gt_sourcenotes {
+#elgpuczzsi .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1053,46 +1138,46 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#eiixwpkmin .gt_sourcenote {
+#elgpuczzsi .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#eiixwpkmin .gt_left {
+#elgpuczzsi .gt_left {
   text-align: left;
 }
 
-#eiixwpkmin .gt_center {
+#elgpuczzsi .gt_center {
   text-align: center;
 }
 
-#eiixwpkmin .gt_right {
+#elgpuczzsi .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#eiixwpkmin .gt_font_normal {
+#elgpuczzsi .gt_font_normal {
   font-weight: normal;
 }
 
-#eiixwpkmin .gt_font_bold {
+#elgpuczzsi .gt_font_bold {
   font-weight: bold;
 }
 
-#eiixwpkmin .gt_font_italic {
+#elgpuczzsi .gt_font_italic {
   font-style: italic;
 }
 
-#eiixwpkmin .gt_super {
+#elgpuczzsi .gt_super {
   font-size: 65%;
 }
 
-#eiixwpkmin .gt_footnote_marks {
+#elgpuczzsi .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="eiixwpkmin" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="elgpuczzsi" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -1166,13 +1251,14 @@ div.tocify {
 </li>
 <li>When a teacher changes their last name, you don’t have to go back to the student table and update that last name for all of their students.</li>
 </ul>
-<p>Ultimately though, set up this participant database in whatever system works for you. It just needs to be set up. This is system is vital to protecting the confidentiality of your participant data as well as record keeping for all of your data collected.</p>
+<p>Ultimately though, set up this participant database in whatever system works for you. It just needs to be set up. This is system is vital to protecting the confidentiality of your participant data as well as record keeping for all of your data collected. If it is easier for you and your project, you can build these tables as individual spreadsheets in a workbook rather than relational tables. If you do, remember it will be more difficult to query information and you will most likely want to include duplicate information across tables (teacher and school name in your student table for instance). This will prevent you from having to flip back and forth across sheets.</p>
 <p>Relational database resources:</p>
 <p>📑 <a href="https://bus206.pressbooks.com/chapter/chapter-4-data-and-databases/">Database vs. Spreadsheet</a><br />
 📑 <a href="https://www.alphr.com/business/1000859/7-spreadsheet-problems-and-how-to-solve-them/">7 Excel Spreadsheet Problems</a><br />
 📑 <a href="https://drive.google.com/file/d/11QlIriyQCCu0NYbh4OUf6D1_odBxGVb7/view">Jenna Jordan has a great example of how and why to build a relational database</a><br />
 📑 <a href="https://help.quickbase.com/user-assistance/about_relationships.html">QuickBase explanation of table-to-table relationships</a><br />
-📑 <a href="https://support.google.com/area120-tables/answer/10082863?hl=en">Relating tables in Google Tables</a></p>
+📑 <a href="https://support.google.com/area120-tables/answer/10400909?hl=en">Relating tables in Google Tables</a><br />
+📑 <a href="https://brycevernon.com/airtable-vs-google-sheets-comparison/">Airtable vs Google Sheets</a></p>
 </div>
 <div id="fields-to-include" class="section level3">
 <h3>Fields to include</h3>
@@ -1236,7 +1322,7 @@ div.tocify {
 <p>This data collection information/tracking may seem trivial, but it is vitally important to the integrity of your research study for these reasons:</p>
 <ul>
 <li>A project coordinator cannot keep track of what has been collected in their head. They need to have that information tracked and stored so they know what still needs to be completed.</li>
-<li>A PI at some point will come to a project coordinator and say, why are we missing data on X number of students or on this teacher during Y wave of data collection. The notes section of this database is how you will be able to answer those questions. <strong>This has happened with our projects multiple times.</strong></li>
+<li>A PI at some point will come to a project coordinator and say, why are we missing data on X number of students or on this teacher during wave Y of data collection. The notes section of this database is how you will be able to answer those questions. <strong>This has happened with our projects multiple times.</strong></li>
 <li>A data manager will approach a project coordinator and say they have 105 students in their student survey data for wave Y, is that accurate? A project coordinator can then refer to their participant database and say, no actually we should have 107. Maybe they find that 2 surveys were never entered into the survey study dataset. <strong>This has personally happened to me more times than I can count.</strong></li>
 </ul>
 <p>The participant database is what holds the project together. I cannot stress this enough.</p>
@@ -1264,7 +1350,6 @@ div.tocify {
 </ul>
 </div>
 <p><br></p>
-<p>Again if you are building these as individual spreadsheets in a workbook rather than relational tables that can be queried, you will most likely want to include duplicate information across tables (teacher and school name in your student table for instance). This will prevent you from having to flip back and forth across sheets.</p>
 </div>
 <div id="entering-data" class="section level3">
 <h3>Entering data</h3>
@@ -1414,24 +1499,25 @@ div.tocify {
 </div>
 <div id="sharing-data" class="section level3">
 <h3>Sharing data</h3>
-<p>These rules all come from <a href="https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf">J-PAL</a>.</p>
+<p>When sharing data, if you data includes any form of PII, choose a secure method of file sharing.</p>
 <ul>
-<li>Choose secure methods of file transfer
+<li>Secure methods of file transfer
 <ul>
-<li>Upload encrypted files to cloud storage that is approved by your institution</li>
+<li>Upload files to HIPPA/FERPA compliant cloud storage that is approved by your institution</li>
 <li>Email an encrypted file, sharing the password separately</li>
 <li>Mailing encrypted files stored on an encrypted device</li>
+<li>Sharing data through an institution approved survey platform with encryption features</li>
 </ul></li>
 <li>How <strong>not</strong> to share data:
 <ul>
-<li>Never share data with PII via email
+<li>Emailing an unencrypted file
 <ul>
-<li>This includes even a password-protected excel file</li>
+<li>This includes a password-protected Excel file</li>
 </ul></li>
-<li>Never mail unencrypted media (ex: flash drives)</li>
-<li>Don’t upload unecrypted data to cloud storage</li>
+<li>Mailing unencrypted media (ex: flash drives)</li>
 </ul></li>
 </ul>
+<p>Resource: <a href="https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf">J-PAL</a></p>
 </div>
 <div id="general-security-rules" class="section level3">
 <h3>General security rules</h3>

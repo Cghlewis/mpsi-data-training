@@ -52,7 +52,7 @@ Final note before diving into this content: Before any project begins, all data 
 
 ---
 
-When it comes to the intersection of data management and data collection, there is a lot to consider. If at all possible, take some planning time to create data collection instruments and procedures that keep your data secure, valid, minimize errors, and relieve future data cleaning headaches. I am going to cover some common instruments teams create to collect original data, and ways you may be able to make these more streamlined and efficient instruments.
+When it comes to the intersection of data management and data collection, there is a lot to consider. If at all possible, take some planning time to create data collection instruments and procedures that keep your data secure, valid, minimize errors, and relieve future data cleaning headaches. I am going to cover some common instruments created to collect original data, and ways you may be able to make those instruments more streamlined and efficient.
 
 **Quick note**: Everything you read below is from my personal experience as well as a summary of what I have heard while interviewing other researchers. As such I may be missing out on even better ways to set up these systems. I am open to feedback!
 
@@ -64,6 +64,7 @@ Research teams may be restricted in how they collect their survey data due to li
 
 * Forms are easier to maintain/update
 * Reduces cost and effort of manual printing and collating
+* Can be distributed in many ways (links, emails, QR codes)
 * Easier to track completion
 * More efficient than manually entering or manually scoring data (including TeleForm)
 * Reduces errors in both data collection as well as data entry/scoring
@@ -83,7 +84,7 @@ Research teams may be restricted in how they collect their survey data due to li
 There are many web-based survey platforms (Ex: Qualtrics, Survey Monkey, Google Forms, Microsoft Forms, SurveyCTO) you can use to develop surveys. If those existing platforms do not meet your needs, you can always build your own web-based application to collect data. 
 
   + You can hire a developer to build an app for you
-  + You can build your own application to collect data in tools such as R or Tableau
+  + You can build your own application to collect data in tools such as R (ex: using [{formR}](https://formr.org/documentation#get_started)) or Tableau
   
 No matter what platform you use, building your survey requires some up front planning. First and foremost make sure to build a survey that is both valid and reliable. Secondly, take time to think how the data you collect will be *translated into a database*. Remember, every question answered is then stored in a database within the platform that you will later download to a file. Here are several suggestions to adhere to when creating your survey that will provide you with more accurate data and reduce future data management headaches (*While I will not provide a tutorial for how to implement each suggestion, they are all possible in a platform such as Qualtrics*):  
 
@@ -91,6 +92,7 @@ No matter what platform you use, building your survey requires some up front pla
       - This isn't a name that your survey participants will see, but it is the variable name you will see when you download your data
   1. Code all values as they are in your data dictionary (Ex: 1=strongly agree, 2= agree, etc.)
       - In Qualtrics you can do this using the "recode values" option
+      - As you edit your survey, check that your coded values did not change as you updated your survey (It happens!). This is why options such as "tools -> reset recode values" exist in programs like Qualtrics, which allow you to start over with sequential back end coding.
   1. Use data validation to reduce errors and missing data
       - Content validation:
         - Make GPA a numeric only field (restrict the number of digits)
@@ -100,7 +102,8 @@ No matter what platform you use, building your survey requires some up front pla
         - Request response (notifies the respondent that they skipped a question and asks if they still want to move forward)
   1. If there is a finite number of response options, and the number isn't too large (less than ~ 20) use a drop-down list rather than open-ended field
       - School Name as a drop-down removes the potential for people to enter school names differently (some which you may not be able to decipher)
-        + ("South Middle School", "South Middle", "SOUTH", "Soth Mid")
+        + ("South Middle School", "South Middle", "SOUTH", "Soth Mid")  
+      - An exception to this rule is for categories such as demographics. For example, for gender you may prefer to allow people to enter their gender in an open text box rather than giving them a pre-determined list, there are tools, such as the R package called [gendercoder](https://ropenscilabs.github.io/gendercoder/), that help you recategorize this data through coding after it is collected (we will talk about these tools more in later trainings).
   1. If there is an infinite number of response options or the number of options is large, use an open text box. 
       - Consider limiting the number of characters allowed in the text box unless you want to allow users to write paragraphs of information.
       - Using open ended text boxes does not mean you can not re-group this information into categories later through syntax. It is just more time-consuming and requires interpretation and decision making on the part of the data cleaner/analyst.
@@ -131,30 +134,17 @@ If your site or participants do not have WiFi and/or email access, you generally
   1. One option is to work with a survey platform (such as Qualtrics or SurveyCTO) that allows you to create a survey online, administer it using an offline survey app on your phone or tablet, and then upload that data back to the survey platform once you have an internet connection again.
 
   2. Still, depending on your study, participants, and resources, building a web-based survey may not be possible and/or it may not be the best option for your project. So your second option is a paper survey. 
-
   + If you must collect paper survey data I recommend the following to reduce error:
     + Have very clear instructions/training on how to complete the paper form
     + Make sure to write survey questions to the best of your ability that prevents respondents from being confused and circling multiple answers or writing other answers in the margins
     + If your staff are implementing surveys out in the field, have them check for missing data in the field before they return to the office
-        + Check all forms for missing data again when they return back to the office
+      + Check all forms for missing data again when they return back to the office
     + If you are using a mail survey, check for missing data when the survey is returned
 
   + To improve data entry issues:
     + Consider using something like [TeleForm](https://ocrsolution.com/teleform-software/) to reduce hand entry of data
-        + I personally have not used this but I know TeleForm designs machine readable forms that can later be scanned rather than hand entered
-    + If staff are hand entering data into a database or spreadsheet (rather than using Teleform), set up clear databases for staff to enter the data
-        + Consider using a database tool such as Access, FileMaker, RedCap, or QuickBase rather than a spreadsheet. If you must use Excel, be aware of some of the limitations and possible issues: 
-            - The formatting that Excel sometimes applies to fields may cause errors in your data (dates get formatted as numeric, strings get formatted as dates, and other nightmares)
-            - It's easy to enter data into the wrong row or column in a spreadsheet as you are able to click anywhere is the spreadsheet
-        + Restrict entry in fields (only allow numeric values if you want staff to enter numbers rather than the actual words associated with response options)
-        + Have very clear instructions for data entry (make sure these rules are in your protocol). It should include instructions such as:
-            - What they should do if they come across missing data (skip the cell, enter a certain number such as -999, etc.)
-            - What they should do if a respondent circles multiple answers
-        + Set up a system for error checking    
-            - Consider having two different staff members [double enter](http://barchard.faculty.unlv.edu/doubleentry/Scott%20Data%20Entry%20WPA%202008.pdf) either all or a percentage of your data and running a syntax to check for errors (I will discuss this more in later trainings)
-
-   📑 Reynolds and Schatsnieder from Florida State University have some great suggestions [here](https://figshare.com/articles/preprint/The_Basics_of_Data_Management/13215350/1) for setting up a data entry station and protocol for any manual data entry that needs to occur.  
-   📑 Data Management Episode 1 and 2 of [Within and Between](http://www.withinandbetweenpod.com/) podcast has some great examples of how to set up data entry protocol.
+      + I personally have not used this but I know TeleForm designs machine readable forms that can later be scanned rather than hand entered
+    + Ultimately though, if staff are hand entering data from paper forms, follow guidelines laid out below in [Data Entry].
    
 
 ### Assessments
@@ -210,12 +200,63 @@ If you receive any non-public, confidential, secondary data sources, such as sch
 
 ### Consents
 
-Consents and assents can also be collected through secure web-based tools, such as Qualtrics or DocuSign. It does however, require your participants to have access to the internet and/or email. Consult with your IRB to see what tools are approved.
+Most studies require researchers to collect consent and/or assent on participants. Informed consent is collected on any participant, 18 years or older. If a student is under 18 years old, a parent consent as well as a student assent is collected. Consents and assents are typically collected one of two ways.
 
-
+  1. Web-based: Consents and assents can be collected through secure web-based tools, such as Qualtrics or DocuSign. Consult with your IRB to see what tools are approved. 
+  + Considerations for this method include:  
+    + It does require your participants to have access to the internet and possibly also email.
+    + Schools are very unlikely to give you parent email addresses. You may need to have school personnel send the parent consent link out on your behalf (or send home a paper form with a QR code)  
+  + Benefits to this method include:
+    + Student assents can be completed in the classroom on any electronic device or in a computer lab with internet.  
+    + It reduces the manual labor of having to pick up paper forms from schools or have them mailed/scanned. You can simply download or access the consents online at any time.  
+    
+  2. Paper form: If you use a paper form, just make sure to have systems in place to allow you to track exactly where a form came from and who it belongs to. I say this as sometimes a person's printed name or signature is illegible or you receive a student assent back but you are unsure which classroom the form came from. 
+  + Here are a few methods that may help alleviate future problems:  
+      + If a school is willing to provide class rosters, you can pre-label your student and parent consents/assents before sending them home. That way when a form is returned you know exactly what classroom that student belongs to and what that student's name is. IRB should not have a problem with researchers collecting rosters, but some schools may (think FERPA) so this may not be possible.  
+      + Another option is to ask teachers to print student name and their name (teacher's names) on forms before they are sent home (or when they are returned)  
+      + Make sure to have both a print your name line **and** a signature line on all consent forms. Even with adult consent forms.  
+    
 ### All-in-One Study
 
 Last I wanted to mention that it is also possible to build all or almost all of your study into one tool (depending on your study). Using a tool like Qualtrics, or building your own tools in applications like R Shiny, you can build your consent, randomization, study ID assignment, survey and assessment all in one tool that participants can access in one simple link. Lucy D'Agostino McGowan has a great example in her slides [here](https://docs.google.com/presentation/d/1FtI4KeX3C8cFBJi0NeTURqfXphrQ2W8sxoDQAd7LrRo/edit#slide=id.p).
+
+---
+
+## Data Entry
+
+---
+    
+If you end up having to use paper forms to collect any of your data and need to manually enter that data, then there are several steps you can take to minimize error in that process.
+
+  1. Set up databases for staff to enter the data  
+  + Consider using a database tool such as Access, FileMaker, RedCap, or QuickBase rather than a spreadsheet. Most of these tools allow you to set up form for users to enter data into that then are submitted into a table on the back end. This reduces data entry errors.
+  + If you must use a spreadsheet tool such as SPSS or Excel, be aware of some of the limitations and possible issues: 
+    - The formatting that Excel sometimes applies to fields may cause errors in your data (dates get formatted as numeric, strings get formatted as dates, and other nightmares)  
+    - It's easy to enter data into the wrong row or column in a spreadsheet as you are able to click anywhere in the spreadsheet. You may even write over existing data on accident. 
+    - One way to prevent some errors in these tools is to restrict entry in fields (only allow numeric values if you want staff to enter numbers rather than the actual words associated with response options). Also, add drop down lists for each of your categorical questions, only allowing acceptable responses. 
+            
+  2. Develop a data entry protocol. Your protocol can/should include:  
+  + How and where staff access, store, and enter data  
+    - Is it stored in a locked file cabinet? What drawer?  
+    - Do they return the data back to that same drawer after entry or store in a new drawer that denotes the data has been entered? If returning back to the same drawer, does the staff member initial the form to denote that it has been entered?  
+    - What is the file path to the data entry database?  
+  + Have very clear instructions for data entry including:  
+      - What they should do if they come across missing data (skip the cell, enter a certain number such as -999, etc.)  
+      - What they should do if a respondent circles multiple answers  
+      - What they should do if a respondent completed multiple surveys/assessments
+  + Set up a system for error checking  
+      - I highly recommend you implement a system where you [double enter](http://barchard.faculty.unlv.edu/doubleentry/Scott%20Data%20Entry%20WPA%202008.pdf) a portion, if not all of your data, to check for entry errors.  
+        - This looks like creating two identical databases, and having two different staff members (not the same staff member), enter data into each databases. Assign staff member A to enter data into database 1 and staff member B to enter data into database 2.   
+        - To track the entry of the physical copies of these forms, you can simply have each staff member initial the form after it has been entered in their respective database.
+        - Then when all data is entered in both forms, the following things happen:  
+          a) The project coordinator checks both forms/files to make sure the N of each file matches what their participant tracking database says they collected (i.e. - someone didn't forget to enter a form)  
+          b) Then a syntax is run to check for errors (I will discuss this more in later trainings)  
+          c) If errors are found, they are rectified by going back to the original databases and correcting the error in database 1 or database 2, wherever the error occurred. Then the syntax is run again until no more errors are found  
+          d) Then both files are accurate and either database 1 or database 2 can be used as your analysis file.  
+            
+   📑 Reynolds and Schatsnieder from Florida State University have some great suggestions [here](https://figshare.com/articles/preprint/The_Basics_of_Data_Management/13215350/1) for setting up a data entry station and protocol for any manual data entry that needs to occur.  
+   📑 Data Management Episode 1 and 2 of [Within and Between](http://www.withinandbetweenpod.com/) podcast has some great examples of how to set up data entry protocol.  
+   📑 While I haven't read [The Practice of Survey Research](https://methods.sagepub.com/Book/the-practice-of-survey-research), it looks to have an entire chapter devoted to data entry that may be worth reading
 
 ---
 
@@ -223,18 +264,16 @@ Last I wanted to mention that it is also possible to build all or almost all of 
 
 ---
 
-The simplest way to maintain participant privacy is to collect anonymous data. This is easily done through methods such as anonymous survey links (or even [scannable QR codes linked to an anonymous form](https://www.qualtrics.com/support/survey-platform/distributions-module/web-distribution/qr-code/)), as well as distribution of paper forms or data collector entry into applications. However, if you collect anonymous data, no participant identifying information should be collected in your instruments (name, email, date of birth, etc.). You will also want to make sure to **not** collect IP addresses as they can be used to identify an individual's computer. It's also important to recognize that if you collect anonymous data, you will not be able to link data across measures or across time.
+The simplest way to maintain participant privacy is to collect anonymous data. If you collect anonymous data, no participant identifying information should be collected in your instruments (name, email, date of birth, etc.). You will also want to make sure to **not** collect IP addresses as they can be used to identify an individual's computer. It's also important to recognize that if you collect anonymous data, you will not be able to link data across measures or across time.
 
 More commonly in education research you will be collecting some identifiers (ex: name). However, in order to maintain participant [confidentiality](https://www.etsu.edu/irb/documents/confidentiality_vs_privacy.pdf) you cannot keep those identifiers in your research data. You will need to assign unique IDs to all participants and replace all identifying information with that study ID. In longitudinal studies in particular, you will be using that unique participant ID to link data across time and across measures. 
-
-To the best of your ability, all of your data collection instruments should have that study ID associated embedded in the form when you send it out into the field, rather than name, to ensure confidentiality (participant name is never actually on your study data and therefore does not need to be removed) as well as to reduce errors that may occur when replacing names with study IDs. This is especially important for longitudinal studies, where maintaining the accuracy of your study IDs is critical to linking data over time.
 
 :::question
 **Quick thought: Identifiers**
 
-While I am highly recommending you attach study ID alone to your data collection instruments, it is important to remember that you must have **some** sort of identifier (either name OR the study ID) built into every data collection instrument (survey, observation form, assessment, etc.) in order to link data across measures and time. If you do not collect identifiers, you will **not** be able to link your data across measures and time. Your data will essentially be anonymous. 
+It is important to remember that you must have **some** sort of identifier built into every data collection instrument (survey, observation form, assessment, etc.) in order to link data across measures and time. Whether you have participants enter an identifier like their name into a form or you already have study ID linked to a form in some way. You just need to make sure you aren't accidentally collecting anonymous data. If you do not have identifiers in your instruments, you will **not** be able to link your data across measures and time.
 
-Even if you are purposefully collecting anonymous data, if you have randomized participants, say schools, you will still need an identifier for the randomization block/cluster built into your instrument (ex: sch_id) or you will not be able to know which participants are treatment and which are control.
+Even if you are purposefully collecting anonymous data, if you have randomized participants, say schools, you will still need an identifier for the randomization block/cluster built into your instrument (ex: sch_id) or you will not be able to cluster based on that information.
 
 :::
 
@@ -244,22 +283,30 @@ Even if you are purposefully collecting anonymous data, if you have randomized p
 
 When sending out or completing in-person web-based surveys/assessments, you can do one of the following to connect your data to a participant (this is not all-inclusive):  
 
-  1. Send/give individual links to participants (where each survey link is connected to a study ID within the system). This can usually be done easily in a survey platform using a *panel*.   
-      + This is the most error-proof way to ensure study IDs are entered correctly. You load in IDs directly from your participant database so that when data is downloaded, the correct ID is already linked to each participant and name is never attached to the downloaded data.  
+  1. Send/give individual links to participants (where each survey link is connected to a study ID within the system). This can usually be done easily in a survey platform such as Qualtrics using a [contact list](https://www.qualtrics.com/support/survey-platform/contacts/contact-list-overview/).
+      + This is the most error-proof way to ensure study IDs are entered correctly. You load in IDs directly from your participant database so that when data is downloaded, the correct ID is already linked to each participant and name is never attached to the downloaded data. The participant never has to enter any identifying information into the form since their identifier is linked on the back end. 
+      + Make sure to build a data check into the system. When a participant opens their unique link, verify their identity by asking, "Are you *first name*?". Only use first name to protect other's identity. If they say yes, they move forward, if they say no, the system redirects them to someone to contact. This ensures that participants are not completing someone else's survey and IDs are connected to the correct participant.
   1. Provide one link to all participants and separately, in an email, in person, or by mail, provide participants with their study ID to enter into the system. 
       + We have used this method when we are conducting surveys/assessments in computer labs or on tablets in schools.
-        + This can possibly introduce error if a participant enters study ID incorrectly
+        + This can possibly introduce error if a participant enters study ID incorrectly. Similar to above, after a participant enters their ID, verify their identity by asking, "Are you *first name*?". If they say yes, they move forward, if they say no, the system redirects them to someone to contact.
   1. Send one link out to all participants and have each participant enter their name and other identifying information. I say "and other identifying information" because what the participant enters needs to be unique and not duplicated. Some people in your study may have the exact same name as someone else in your study. To prevent causing confusion, collect two pieces of information such as name and DOB so you are able to link that individual to the correct study ID.
       + This may be the most problematic out of all the options in terms of data management, privacy, and potential for errors. 
       + Your options for working with this data are:
-        1. Download the data, replace name and other identifying info with study ID. Replacing name with ID when there are incorrectly spelled names, with various formatting issues, can potentially start to introduce errors and data management troubles. If at all possible, collect more than one piece of identifying information (name and teacher name for instance) in case two students have the same name or a name is illegible.
+        1. Download the data, replace name and other identifying info with study ID. Replacing name with ID when there are incorrectly spelled names, with various formatting issues, can potentially start to introduce errors and data management troubles. As mentioned above, collect more than one piece of identifying information (name and teacher name for instance) in case two students have the same name or a name is illegible.
         2. If you have not yet assigned study IDs, and your link includes your consent/assent, you can have the system assign study IDs in the back end for you, and when you download the data, those IDs will be tied to data, but not the identifying information, which will be stored separately. This is possible in a tool such as Qualtrics.
-        
-For method #1 and #2, build a data check into the system. When a participant opens their unique link, or enters their study ID, have the system verify their identity by asking, "Are you *first name*, *last name*?". If they say yes, they move forward, if they say no, the system redirects them to someone to contact. This ensures that participants are not completing someone else's survey and IDs are connected to the correct participant.
+
+This image shows what a data de-identification system looks like where identifiers are collected and need to be removed for the analysis dataset. Table 1 would be the incoming survey data with identifiers, Table 2 would be your [Participant Database] (which I talk about more below), and Table 3 is your de-identified analysis dataset.
+
+```{r, echo=FALSE, fig.align="center", out.width='90%'}
+
+knitr::include_graphics("img/analysis_dataset.png")
+
+```
+
+Source: [J-PAL](https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf)  
 
 Ultimately, which method you use for web-based links will first, depend on the data collection instrument. For instance, an online assessment may *only* have one link and so option #2 or #3 above may be your only option. However, for online surveys, any option is possible. Secondly, it will also depend on your method of dissemination. If you are sending survey links out yourselves to teachers, option #1 is going to be the best method. If a school system will not give you student emails, and you need to have teachers send out links to students, #3 may be best your best option. That method reduces the burden on teachers (having to send multiple links in #1) and potentially reduces error (asking teachers to track multiple links or multiple IDs to send to students in #1 and #2).
 
-    
 :::question
 **Quick thought: Public links**
 
@@ -292,7 +339,7 @@ If you take paper forms into the field consider doing the following to connect y
   * Write the study ID on the form and then use either a removable label with participant name and place that over the ID or attach a cover sheet with identifying information such as student name. When you return to the office, you can remove the name label/cover sheet and be left with only the ID on the form.
     + It is this ID only that you will enter into your data entry form, no name.
     + Removing the label/cover sheet also ensures that your data entry team only sees participant ID when they enter data, increasing privacy by minimizing the number of people who see see participant name. 
-    + Double and triple check against your linking roster that the study ID is correct *before* removing the label or cover sheet
+    + Double and triple check against your participant database that the study ID is correct *before* removing the label or cover sheet
     + Make a plan for the labels/cover sheets (either shred them if they are no longer needed, or store them securely in a locked file cabinet and shred them at a later point)
 
 ```{r, echo=FALSE, fig.align="center", out.width='60%'}
@@ -356,6 +403,7 @@ A participant database can be set up in a program such as:
   + Microsoft Access
   + Excel
   + QuickBase
+  + Airtable
   + REDCap
   + Google Tables
   + Google Sheets/Google Forms
@@ -413,7 +461,7 @@ Using a relational structure allows us to eliminate redundant data. This not onl
   + When a teacher changes their last name, you don't have to go back to the student table and update that last name for all of their students.  
 
 
-Ultimately though, set up this participant database in whatever system works for you. It just needs to be set up. This is system is vital to protecting the confidentiality of your participant data as well as record keeping for all of your data collected.
+Ultimately though, set up this participant database in whatever system works for you. It just needs to be set up. This is system is vital to protecting the confidentiality of your participant data as well as record keeping for all of your data collected. If it is easier for you and your project, you can build these tables as individual spreadsheets in a workbook rather than relational tables. If you do, remember it will be more difficult to query information and you will most likely want to include duplicate information across tables (teacher and school name in your student table for instance). This will prevent you from having to flip back and forth across sheets.
 
 Relational database resources:
 
@@ -421,7 +469,8 @@ Relational database resources:
   📑 [7 Excel Spreadsheet Problems](https://www.alphr.com/business/1000859/7-spreadsheet-problems-and-how-to-solve-them/)  
   📑 [Jenna Jordan has a great example of how and why to build a relational database](https://drive.google.com/file/d/11QlIriyQCCu0NYbh4OUf6D1_odBxGVb7/view)  
   📑 [QuickBase explanation of table-to-table relationships](https://help.quickbase.com/user-assistance/about_relationships.html)  
-  📑 [Relating tables in Google Tables](https://support.google.com/area120-tables/answer/10082863?hl=en)
+  📑 [Relating tables in Google Tables](https://support.google.com/area120-tables/answer/10400909?hl=en)  
+  📑 [Airtable vs Google Sheets](https://brycevernon.com/airtable-vs-google-sheets-comparison/)  
 
 ### Fields to include
 
@@ -483,7 +532,7 @@ Fields to track over time (for each wave of data collection):
 This data collection information/tracking may seem trivial, but it is vitally important to the integrity of your research study for these reasons:
 
   + A project coordinator cannot keep track of what has been collected in their head. They need to have that information tracked and stored so they know what still needs to be completed.
-  + A PI at some point will come to a project coordinator and say, why are we missing data on X number of students or on this teacher during Y wave of data collection. The notes section of this database is how you will be able to answer those questions. **This has happened with our projects multiple times.**
+  + A PI at some point will come to a project coordinator and say, why are we missing data on X number of students or on this teacher during wave Y of data collection. The notes section of this database is how you will be able to answer those questions. **This has happened with our projects multiple times.**
   + A data manager will approach a project coordinator and say they have 105 students in their student survey data for wave Y, is that accurate? A project coordinator can then refer to their participant database and say, no actually we should have 107. Maybe they find that 2 surveys were never entered into the survey study dataset. **This has personally happened to me more times than I can count.** 
 
 The participant database is what holds the project together. I cannot stress this enough.
@@ -507,8 +556,6 @@ A few best practices for tracking that improve project coordination and data man
 
 <br>
 
-
-Again if you are building these as individual spreadsheets in a workbook rather than relational tables that can be queried, you will most likely want to include duplicate information across tables (teacher and school name in your student table for instance). This will prevent you from having to flip back and forth across sheets.
 
 ### Entering data
 
@@ -664,18 +711,19 @@ Note: These same data security rules will also apply to data that is recorded in
   
 ### Sharing data
 
-These rules all come from [J-PAL](https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf).
+When sharing data, if you data includes any form of PII, choose a secure method of file sharing. 
 
-  + Choose secure methods of file transfer
-    - Upload encrypted files to cloud storage that is approved by your institution
+  + Secure methods of file transfer
+    - Upload files to HIPPA/FERPA compliant cloud storage that is approved by your institution
     - Email an encrypted file, sharing the password separately
     - Mailing encrypted files stored on an encrypted device
+    - Sharing data through an institution approved survey platform with encryption features
   + How **not** to share data:
-    - Never share data with PII via email
-      - This includes even a password-protected excel file
-    - Never mail unencrypted media (ex: flash drives)
-    - Don't upload unecrypted data to cloud storage
+    - Emailing an unencrypted file
+      - This includes a password-protected Excel file
+    - Mailing unencrypted media (ex: flash drives)
 
+Resource: [J-PAL](https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf)
 
 ### General security rules
 
