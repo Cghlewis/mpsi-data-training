@@ -13,12 +13,22 @@
 
 <title>Data Cleaning Plan</title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
@@ -36,11 +46,6 @@
     </style>
 
 <style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -53,33 +58,9 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
 
+
+<link rel="stylesheet" href="css/custom.css" type="text/css" />
 
 
 
@@ -88,10 +69,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -108,40 +85,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 60px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h2 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h3 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h4 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h5 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h6 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -169,7 +119,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -181,7 +131,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -192,10 +142,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -207,7 +170,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -333,7 +295,7 @@ div.tocify {
 
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
+<div class="row">
 <div class="col-xs-12 col-sm-4 col-md-3">
 <div id="TOC" class="tocify">
 </div>
@@ -385,7 +347,7 @@ div.tocify {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -398,13 +360,522 @@ div.tocify {
 <div class="presentation">
 <p><br> You can view slides from this talk TBD</p>
 </div>
+<p><strong>This module is a work in progress.</strong></p>
+<hr />
+<div id="overview" class="section level2">
+<h2>Overview</h2>
+<hr />
+<p>Data cleaning or data wrangling is the process of organizing and transforming raw data into a dataset that can be easily accessed and analyzed. A data cleaning plan is a written proposal, usually created by a data manager, for how you plan to transform your raw data into the clean, usable data. Think of this as a roadmap. This is different than a code file or even a pseudocode file in that there is no code or syntax in a data cleaning plan. It is just a plain text explanation for the transformations and checks you intend to do with a raw data file. It can be saved in any format that works for you, .txt, .docx, .rmd, etc. You can even write it in a code file (ex: .R) through comments if you wish, and I often do, as long as it is not code or technical skills dependent. Anyone from a project coordinator to a programmer should be able to read and understand this file and provide feedback if needed. A data cleaning plan is started prior to data collection, however, similar to every other piece of documentation, this is also a living document that will be updated as you obtain more knowledge.</p>
+<p>An example of a <strong>very</strong> simplified cleaning plan:</p>
+<p><img src="img/plan2.PNG" width="80%" style="display: block; margin: auto;" /></p>
+<hr />
+</div>
+<div id="foundation" class="section level2">
+<h2>Foundation</h2>
+<hr />
+<p>In order to start a data cleaning plan, you need to have the following:</p>
+<ol style="list-style-type: decimal">
+<li>Data literacy</li>
+<li>Domain knowledge</li>
+<li>Software knowledge</li>
+<li>Consultation with stakeholders</li>
+</ol>
+<div id="data-literacy" class="section level3">
+<h3>Data literacy</h3>
+<p>Data cleaning requires a solid foundation around <a href="https://en.wikipedia.org/wiki/Data_literacy">data literacy</a>, the ability to create, interpret, and communicate data as information. Without data literacy it is difficult to visualize how to transform the raw data you have into the format that you need to answer your questions.</p>
+<p>While we hope data literacy and good data management permeates every step of the data lifecycle, including data collection, neat data is rarely handed to you, and oftentimes you are taking a file that is mostly unusable and converting it to something useful.</p>
+<p>Here are ways to build data literacy, adapted from <a href="https://venngage.com/blog/data-literacy/">Venngage</a>:</p>
+<ol style="list-style-type: decimal">
+<li>Recognize that data errors are inevitable. Despite your best efforts to collect clean data, issues such as duplicate records, illegal values, or missing data still occur (<a href="https://files.eric.ed.gov/fulltext/ED583982.pdf">Hubbard, 2017</a>).</li>
+<li>Know the types of data you are working with (quantitative, qualitative)</li>
+<li>Understand the source of where your data comes from (primary data sources, secondary data sources) and also how data is created (aggregation, calculations, etc.)</li>
+<li>Keep your data organized (understand data structure)</li>
+<li>Know how to look for patterns and outliers in data, and be aware of your own biases.</li>
+<li>Use Exploratory Data Analysis (EDA) to validate data</li>
+<li>The more data you work with, the more you learn</li>
+</ol>
+<p>📑 Additional <a href="https://hbr.org/2020/02/boost-your-teams-data-literacy">resource</a> on boosting data literacy</p>
+</div>
+<div id="domain-knowledge" class="section level3">
+<h3>Domain knowledge</h3>
+<p>A lot of data literacy also relies on domain knowledge or ghost knowledge(<a href="https://counting.substack.com/p/whys-it-hard-to-teach-data-cleaning" class="uri">https://counting.substack.com/p/whys-it-hard-to-teach-data-cleaning</a>), information you only learn from being immersed in a field. Examples of domain knowledge I have acquired from being in the field of education research include:</p>
+<ul>
+<li><p>If researchers tell me they are analyzing longitudinal data, I know I need to account for time in the data in some way (ex: add a time variable). If researchers are clustering data, I know I need to account for that cluster in the data in some way (ex: add a cohort variable). I know if we have multiple forms or forms across time, we have to link our data and I need to add a unique study id to link data.</p></li>
+<li><p>There are school districts we work with that send us student level discipline data (ex: number of OSS or ISS referrals). They do not have codebooks or data dictionaries for these data. However, I know from working with these districts and having conversations with them, that if there are no referrals for a student, they leave a cell blank (rather than enter a zero). If I did not have this domain knowledge, I would assume the information is simply missing.</p></li>
+<li><p>Similarly, I know from working with certain districts as well as state education agencies and having conversations with them, that how state test scores are collected or scored have changed across years (state and district). Again, most of these agencies don’t usually have codebooks or data dictionaries but I have learned this through conversations and by noticing differences in score ranges over time.</p></li>
+<li><p>Again, from working with districts and states, I know to prepare for inconsistencies in data. I’ve seen variable names change over time. I’ve also seen the variables collected change over time. And sometimes, across time, variables with the exact same name are no longer measuring the same thing (another reason why documentation is so important).</p></li>
+</ul>
+</div>
+<div id="software-knowledge" class="section level3">
+<h3>Software knowledge</h3>
+<p>I know what you may be thinking here. Earlier I said that the interpretation of a data cleaning plan should not require any technical knowledge. This is still true. However, the person who writes the data cleaning plan still needs to have a basic understanding of how the software that is used to collect the data and any software that will be used to clean or analyze the data. This knowledge will inform the steps you add to a data cleaning plan.</p>
+<p>Become familiar with the following: 1. The tools used to collect data</p>
+<ul>
+<li>Is it online software?
+<ul>
+<li>If yes, is the data exported? What file type is exported?<br />
+</li>
+<li>Can you connect to the data through other means (ex: API)?<br />
+</li>
+<li>How are values coded (numeric or words)?<br />
+</li>
+<li>How are missing values coded?<br />
+</li>
+<li>What are the additional variables this software adds to an export file that we don’t need for our clean data?<br />
+</li>
+<li>How are “select all” questions exported?
+<ul>
+<li>For example I know when Qualtrics collects data from a “select all” question
+<ol style="list-style-type: lower-alpha">
+<li>the data will export in multiple columns like the question below where we asked, “Which tools do you use for remote teaching?”</li>
+<li>Yes will be coded as 1 and No will be exported as NAs</li>
+</ol></li>
+</ul></li>
+<li>Extract sample data to get a feel for all of this!</li>
+</ul></li>
+</ul>
+<div id="fhinbptevu" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#fhinbptevu .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#fhinbptevu .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#fhinbptevu .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#fhinbptevu .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#fhinbptevu .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fhinbptevu .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#fhinbptevu .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#fhinbptevu .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#fhinbptevu .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#fhinbptevu .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#fhinbptevu .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#fhinbptevu .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#fhinbptevu .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#fhinbptevu .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#fhinbptevu .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#fhinbptevu .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#fhinbptevu .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#fhinbptevu .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fhinbptevu .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#fhinbptevu .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fhinbptevu .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#fhinbptevu .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#fhinbptevu .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fhinbptevu .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#fhinbptevu .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#fhinbptevu .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#fhinbptevu .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#fhinbptevu .gt_left {
+  text-align: left;
+}
+
+#fhinbptevu .gt_center {
+  text-align: center;
+}
+
+#fhinbptevu .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#fhinbptevu .gt_font_normal {
+  font-weight: normal;
+}
+
+#fhinbptevu .gt_font_bold {
+  font-weight: bold;
+}
+
+#fhinbptevu .gt_font_italic {
+  font-style: italic;
+}
+
+#fhinbptevu .gt_super {
+  font-size: 65%;
+}
+
+#fhinbptevu .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 65%;
+}
+</style>
+<table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">Q1_1</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">Q1_2</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">Q1_3</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">Q1_4</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_right">NA</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">NA</td>
+<td class="gt_row gt_right">NA</td></tr>
+    <tr><td class="gt_row gt_right">NA</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">1</td></tr>
+    <tr><td class="gt_row gt_right">NA</td>
+<td class="gt_row gt_right">NA</td>
+<td class="gt_row gt_right">NA</td>
+<td class="gt_row gt_right">NA</td></tr>
+    <tr><td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">1</td>
+<td class="gt_row gt_right">NA</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
 <p><br></p>
-<p>This training is just being developed…..</p>
-<p>Data cleaning or data wrangling is the process of organizing and transforming raw data into a dataset that can be easily accessed and analyzed. A data cleaning plan is a written plan for how you plan to tranform your raw data into the clean, usable data.</p>
+<ul>
+<li>Is the data hand entered from paper forms?
+<ul>
+<li>How is the data entered/exported? File type?</li>
+<li>What funky formatting things does that software do?
+<ul>
+<li>Excel loves to <a href="https://www.theverge.com/2020/8/6/21355674/human-genes-rename-microsoft-excel-misreading-dates">autocorrect</a> numeric or character values to dates for example</li>
+</ul></li>
+</ul></li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>What software are we using to clean the data?
+<ul>
+<li>Is the software case sensitive?</li>
+<li>Does it have variable name limits?</li>
+<li>Does it have other limitations on variable names (can’t start with a number)?</li>
+</ul></li>
+<li>What software do stakeholders plan to use to analyze the data? **Note we may not always know this, but if we do, we can try to accommodate this
+<ul>
+<li>Is there a certain file type required for data import?
+<ul>
+<li>For example, <a href="https://stats.idre.ucla.edu/mplus/seminars/mplus-class-notes/entering/">Mplus</a> can only read ASCII text files</li>
+</ul></li>
+<li>What missing values are allowed
+<ul>
+<li>Again with <a href="https://tutorials.methodsconsultants.com/posts/preparing-data-for-mplus/">Mplus</a>, it doesn’t allow blanks in a data file so all missing values need to be replaced with an actual value (ex: -99)</li>
+</ul></li>
+<li>With all this said, don’t just tailor your output clean file to a particular user. Depending on a users needs, you may export two clean files, one for that user and another general clean analysis file in a file type that will be accessible to anyone and is best for long term preservation. While we will talk more about this in later trainings around data sharing, non-proprietary data formats such as csv or txt are best.</li>
+</ul></li>
+</ol>
+<p>Mplus examples: <a href="https://tutorials.methodsconsultants.com/posts/preparing-data-for-mplus/" class="uri">https://tutorials.methodsconsultants.com/posts/preparing-data-for-mplus/</a> <a href="https://stats.idre.ucla.edu/mplus/faq/how-can-i-move-my-data-from-spss-to-mplus/" class="uri">https://stats.idre.ucla.edu/mplus/faq/how-can-i-move-my-data-from-spss-to-mplus/</a></p>
+<p>Resources around data formats: <a href="https://dmptool.org/general_guidance#file-formats" class="uri">https://dmptool.org/general_guidance#file-formats</a> <a href="https://www.lib.ncsu.edu/do/data-management/formats-and-organization" class="uri">https://www.lib.ncsu.edu/do/data-management/formats-and-organization</a></p>
+</div>
+<div id="consultation-with-stakeholders" class="section level3">
+<h3>Consultation with stakeholders</h3>
+<p>While everything above is absolutely imperative to the data cleaning process, this may actual be the most important step in developing a data cleaning plan. If you don’t know a) how your data is collected, and b) how researchers plan to analyze the data, you have no roadmap for data cleaning. This is where you learn things such as:</p>
+<ol style="list-style-type: decimal">
+<li>The types of data you will be receiving (survey, observation, assessment)</li>
+<li>what format it will be in (csv, xlsx, spss)</li>
+<li>How reliable is the data (will it be hand entered, is it collected by our team, is it coming from an outside source)</li>
+<li>What is the timeline? When should the data team expect to receive data?</li>
+<li>How do researchers intend to use the data</li>
+<li>Do researchers want their final data in long or wide form</li>
+<li>Do they need missing data coded in any specific way</li>
+<li>What file format do they need</li>
+<li>Any additional calculations or transformations that need to be done in the data</li>
+<li>Any other secondary data sources they want brought in to enhance the data</li>
+<li>What is the timeline for when researchers need clean data</li>
+</ol>
+<p>This initial meeting with stakeholders, prior to data collection or even prior to building data collection tools, is a great time to start your documentation. This should not just be one initial meeting though. While the PIs may only need to be brought in at the beginning, a data manager should meet with the coordinators more frequently to monitor changes to the data collection instruments, any new measures added, changes in data collection protocol, any anticipated hiccups. After data is cleaned, data teams should consider having data reviews with project coordinators to cover what data issues were encountered and what could we have done better.</p>
+<hr />
+</div>
+</div>
+<div id="data-structure" class="section level2">
+<h2>Data Structure</h2>
+<hr />
+<p>Before we can start writing our data cleaning plan, we need to understand what structure we need our data to be in for analysis.</p>
 <p>In the world of quantitative education research, we are most likely trying to create rectangular datasets (rows and columns), rather than having data in text files, video recordings, xml, etc. Even in qualitative research, we are often wrangling data to be in a format that is analyzable and allows categorization.</p>
-<p>For repeated measures. in either long or wide format (depending on the use case). Wide format being one unique participant per row, long format being participants repeating in each row.</p>
-<p>General Rules: No repeating IDs Numbers rather than words for categories (although R can factorize and create a number on the back end)</p>
-<p><a href="https://www.theanalysisfactor.com/wide-and-long-data/" class="uri">https://www.theanalysisfactor.com/wide-and-long-data/</a></p>
+<hr />
+</div>
+<div id="data-cleaning-steps" class="section level2">
+<h2>Data Cleaning Steps</h2>
+<hr />
+<p>Our role as data managers is not to think of every possible iteration of how an analyst/researcher may want their data or every variable they may need. However, it is our role to reduce the amount of work required to get that data into an analyzable format. Below I lay out some of the go-to steps I like to add to a data cleaning plan and the reasoning behind why I think they are important.</p>
+<hr />
+</div>
+<div id="reproducible-syntax" class="section level2">
+<h2>Reproducible Syntax</h2>
+<hr />
+<p>Over the years I have seen researchers manually clean code….</p>
+</div>
 
 
 
@@ -435,7 +906,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
@@ -444,6 +915,9 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
 
     // move toc-ignore selectors from section div to header
     $('div.section.toc-ignore')

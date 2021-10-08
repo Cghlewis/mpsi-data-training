@@ -81,7 +81,7 @@ Protocol should cover procedures/decisions for the following:
 * Randomization and blinding/unblinding
 * Data collection
 * Staff training
-* Data entry, data retrieval, data scoring
+* Data entry, data retrieval, data scoring (including decision rules)
 * Payments/incentives
 * Intervention implementation
 
@@ -93,7 +93,7 @@ Each protocol should *begin* with the following:
 * Any rationale behind the protocol
 * Any related documents or research behind the protocol
 
-For any *changes* to the protocol after the project has begun, add the following below the original protocol section: 
+There may be times when you need to revise your protocol, either due to decisions made by the researchers (ex: moving surveys from paper to online due to the pandemic) or to note deviations from the protocol discovered during data collection (ex: data collectors were allowing students to read assessment instructions on their own rather than reading them out loud to the group). For any *changes to* or *deviations from* the protocol after the project has begun, add the following below the original protocol section: 
 
 * Revision Date  
 * Who decided on the revision  

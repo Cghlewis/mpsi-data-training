@@ -98,20 +98,22 @@ Outside of practical and principled reasons to want to improve your data managem
 ✔️ Any circumstances that prevent any data from being shared  
 ✔️ Most recent rule: A plan for [pre-registering](https://ies.ed.gov/seer/preregistration.asp) your study within the first year of the project  
 
-Pre-registration is just one part of the Department of Education's effort an effort to align research with the [SEER](https://ies.ed.gov/seer/index.asp) and [FAIR](https://www.go-fair.org/fair-principles/) data governance principles. 
+Pre-registration is just one part of the Department of Education's effort an effort to align research with the [SEER](https://ies.ed.gov/seer/index.asp) and [FAIR](https://www.go-fair.org/fair-principles/) data governance principles.
+
+  📑 Jesse Fleming put together this great [figure](https://figshare.com/articles/figure/Preregistration_Registry_Figure_pdf/16746112/1) to help education researchers choose a template to use for their pre-registration plans.
 
 In addition to IES, many other funders that education researchers may work with require a DMP (ex: [NIJ](https://nij.ojp.gov/funding/research-development-and-evaluation-grant-award-requirements#vj8jg), [NSF](https://www.nsf.gov/bfa/dias/policy/dmp.jsp), and [NIH](https://grants.nih.gov/grants/policy/data_sharing/data_sharing_guidance.htm#doc)). This training will not cover the details of writing up a DMP but rather how to implement a DMP. 
 
 Here are some excellent resources for writing up a DMP:
 
-  📑 [DMP Tool](https://dmptool.org/)
+  📑 [DMP Tool](https://dmptool.org/)  
   📑 [University of Virginia IES DMP   template](https://data.library.virginia.edu/files/IES-Data-Management-Plan-Template-2018.docx)  
   📑 [IES DMP template](https://dmptool.org/template_export/1895.pdf)  
   📑 [IES most recent Request for Applications](https://ies.ed.gov/funding/pdf/2021_84305A.pdf)  
   📑 [Foundational Practices of Research Data Management](https://riojournal.com/article/56508/instance/5569679/)  
-  📑 [Sara Hart template](https://figshare.com/articles/preprint/Example_of_a_Data_Management_Plan/13218743/1)
-  📑 [Montclair example education DMP](https://www.montclair.edu/sponsored-programs/wp-content/uploads/sites/194/2019/02/Data-Management-Plan-Sample.pdf)
-  📑 [University of Minnesota example DMPs including one for education](https://www.lib.umn.edu/services/data/dmp-examples)
+  📑 [Sara Hart template](https://figshare.com/articles/preprint/Example_of_a_Data_Management_Plan/13218743/1)  
+  📑 [Montclair example education DMP](https://www.montclair.edu/sponsored-programs/wp-content/uploads/sites/194/2019/02/Data-Management-Plan-Sample.pdf)  
+  📑 [University of Minnesota example DMPs including one for education](https://www.lib.umn.edu/services/data/dmp-examples)  
   
 ---
 
@@ -260,4 +262,6 @@ Examples:
 10. Yasmeen Shorish has all of her publications and presentations around information sharing listed on her [website](https://sites.lib.jmu.edu/yasmeen/scholarship/).
 
 11. This crowdsourced data management [syllabus](https://osf.io/vkztw/) created at SIPS 2021 is an excellent overview of data management concepts and questions researchers can consider.
+
+12. Aleata Hubbard Cheuoua has some excellent education research data management papers, blogs, and presentations on her [website](http://www.aleatahubbard.com/). Her paper on [Data Cleaning in Mathematics Education Research](http://sigmaa.maa.org/rume/crume2017/Abstracts_Files/Posters/177.pdf) is an especially insightful look at pain points in education data management and ways we can repair issues that arise. 
 

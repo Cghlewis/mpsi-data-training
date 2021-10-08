@@ -13,12 +13,22 @@
 
 <title>Data Management</title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
@@ -36,11 +46,6 @@
     </style>
 
 <style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -53,32 +58,7 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+
 
 
 
@@ -88,10 +68,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -108,40 +84,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 60px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h2 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h3 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h4 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h5 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h6 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -169,7 +118,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -181,7 +130,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -192,10 +141,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -207,7 +169,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -333,7 +294,7 @@ div.tocify {
 
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
+<div class="row">
 <div class="col-xs-12 col-sm-4 col-md-3">
 <div id="TOC" class="tocify">
 </div>
@@ -385,7 +346,7 @@ div.tocify {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -463,13 +424,17 @@ div.tocify {
 ✔️ Any circumstances that prevent any data from being shared<br />
 ✔️ Most recent rule: A plan for <a href="https://ies.ed.gov/seer/preregistration.asp">pre-registering</a> your study within the first year of the project</p>
 <p>Pre-registration is just one part of the Department of Education’s effort an effort to align research with the <a href="https://ies.ed.gov/seer/index.asp">SEER</a> and <a href="https://www.go-fair.org/fair-principles/">FAIR</a> data governance principles.</p>
+<p>📑 Jesse Fleming put together this great <a href="https://figshare.com/articles/figure/Preregistration_Registry_Figure_pdf/16746112/1">figure</a> to help education researchers choose a template to use for their pre-registration plans.</p>
 <p>In addition to IES, many other funders that education researchers may work with require a DMP (ex: <a href="https://nij.ojp.gov/funding/research-development-and-evaluation-grant-award-requirements#vj8jg">NIJ</a>, <a href="https://www.nsf.gov/bfa/dias/policy/dmp.jsp">NSF</a>, and <a href="https://grants.nih.gov/grants/policy/data_sharing/data_sharing_guidance.htm#doc">NIH</a>). This training will not cover the details of writing up a DMP but rather how to implement a DMP.</p>
 <p>Here are some excellent resources for writing up a DMP:</p>
-<p>📑 <a href="https://dmptool.org/">DMP Tool</a> 📑 <a href="https://data.library.virginia.edu/files/IES-Data-Management-Plan-Template-2018.docx">University of Virginia IES DMP template</a><br />
+<p>📑 <a href="https://dmptool.org/">DMP Tool</a><br />
+📑 <a href="https://data.library.virginia.edu/files/IES-Data-Management-Plan-Template-2018.docx">University of Virginia IES DMP template</a><br />
 📑 <a href="https://dmptool.org/template_export/1895.pdf">IES DMP template</a><br />
 📑 <a href="https://ies.ed.gov/funding/pdf/2021_84305A.pdf">IES most recent Request for Applications</a><br />
 📑 <a href="https://riojournal.com/article/56508/instance/5569679/">Foundational Practices of Research Data Management</a><br />
-📑 <a href="https://figshare.com/articles/preprint/Example_of_a_Data_Management_Plan/13218743/1">Sara Hart template</a> 📑 <a href="https://www.montclair.edu/sponsored-programs/wp-content/uploads/sites/194/2019/02/Data-Management-Plan-Sample.pdf">Montclair example education DMP</a> 📑 <a href="https://www.lib.umn.edu/services/data/dmp-examples">University of Minnesota example DMPs including one for education</a></p>
+📑 <a href="https://figshare.com/articles/preprint/Example_of_a_Data_Management_Plan/13218743/1">Sara Hart template</a><br />
+📑 <a href="https://www.montclair.edu/sponsored-programs/wp-content/uploads/sites/194/2019/02/Data-Management-Plan-Sample.pdf">Montclair example education DMP</a><br />
+📑 <a href="https://www.lib.umn.edu/services/data/dmp-examples">University of Minnesota example DMPs including one for education</a></p>
 <hr />
 </div>
 <div id="terminologyvocabulary" class="section level2">
@@ -512,7 +477,7 @@ div.tocify {
 <div id="considerations" class="section level2">
 <h2>Considerations</h2>
 <hr />
-<p>Good data management requires a lot of thought and planning. This quote from <a href="https://datamanagement.hms.harvard.edu/news/invest-research-data-management-get-data-manager">Sarah Arena at Harvard Medical School</a> aptly describes the necessity and challenges of the data management process, "“finding answers and designing solutions are both iterative processes that involve collaboration, question-asking, lots of research, and recognizing when the perfect is becoming the enemy of the good.”</p>
+<p>Good data management requires a lot of thought and planning. This quote from <a href="https://datamanagement.hms.harvard.edu/news/invest-research-data-management-get-data-manager">Sarah Arena at Harvard Medical School</a> aptly describes the necessity and challenges of the data management process, ““finding answers and designing solutions are both iterative processes that involve collaboration, question-asking, lots of research, and recognizing when the perfect is becoming the enemy of the good.”</p>
 <p>The <a href="https://pitt.libguides.com/managedata/understanding">University of Pittsburgh</a> has an excellent list of 12 things to consider in your data management planning.</p>
 <p><img src="img/planning-consider2.png" width="70%" /></p>
 <hr />
@@ -565,6 +530,7 @@ div.tocify {
 <li><p>Julia Strand has a great <a href="https://psyarxiv.com/rsn5y">preprint</a> that outlines best practices for improving data management/reducing errors in your research lab.</p></li>
 <li><p>Yasmeen Shorish has all of her publications and presentations around information sharing listed on her <a href="https://sites.lib.jmu.edu/yasmeen/scholarship/">website</a>.</p></li>
 <li><p>This crowdsourced data management <a href="https://osf.io/vkztw/">syllabus</a> created at SIPS 2021 is an excellent overview of data management concepts and questions researchers can consider.</p></li>
+<li><p>Aleata Hubbard Cheuoua has some excellent education research data management papers, blogs, and presentations on her <a href="http://www.aleatahubbard.com/">website</a>. Her paper on <a href="http://sigmaa.maa.org/rume/crume2017/Abstracts_Files/Posters/177.pdf">Data Cleaning in Mathematics Education Research</a> is an especially insightful look at pain points in education data management and ways we can repair issues that arise.</p></li>
 </ol>
 </div>
 
@@ -597,7 +563,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
@@ -606,6 +572,9 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
 
     // move toc-ignore selectors from section div to header
     $('div.section.toc-ignore')

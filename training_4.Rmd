@@ -2,6 +2,7 @@
 title: "Data Cleaning Plan"
 output: 
   html_document:
+    css: "css/custom.css"
     toc: TRUE
     toc_float: TRUE
     anchor_sections: FALSE
@@ -14,22 +15,167 @@ output:
 You can view slides from this talk TBD
 :::
 
+**This module is a work in progress.**
+
+
+---
+
+## Overview
+
+---
+
+Data cleaning or data wrangling is the process of organizing and transforming raw data into a dataset that can be easily accessed and analyzed. A data cleaning plan is a written proposal, usually created by a data manager, for how you plan to transform your raw data into the clean, usable data. Think of this as a roadmap. This is different than a code file or even a pseudocode file in that there is no code or syntax in a data cleaning plan. It is just a plain text explanation for the transformations and checks you intend to do with a raw data file. It can be saved in any format that works for you, .txt, .docx, .rmd, etc. You can even write it in a code file (ex: .R) through comments if you wish, and I often do, as long as it is not code or technical skills dependent. Anyone from a project coordinator to a programmer should be able to read and understand this file and provide feedback if needed. A data cleaning plan is started prior to data collection, however, similar to every other piece of documentation, this is also a living document that will be updated as you obtain more knowledge. 
+
+An example of a **very** simplified cleaning plan:
+
+```{r, echo=FALSE, fig.align="center", out.width='80%'}
+
+knitr::include_graphics("img/plan2.png")
+
+```
+
+---
+
+## Foundation
+
+---
+
+In order to start a data cleaning plan, you need to have the following:
+
+1. Data literacy
+2. Domain knowledge
+3. Software knowledge 
+4. Consultation with stakeholders
+
+### Data literacy
+
+Data cleaning requires a solid foundation around [data literacy](https://en.wikipedia.org/wiki/Data_literacy), the ability to create, interpret, and communicate data as information. Without data literacy it is difficult to visualize how to transform the raw data you have into the format that you need to answer your questions.
+
+While we hope data literacy and good data management permeates every step of the data lifecycle, including data collection, neat data is rarely handed to you, and oftentimes you are taking a file that is mostly unusable and converting it to something useful. 
+
+Here are ways to build data literacy, adapted from [Venngage](https://venngage.com/blog/data-literacy/):
+
+1. Recognize that data errors are inevitable. Despite your best efforts to collect clean data, issues such as duplicate records, illegal values, or missing data still occur ([Hubbard, 2017](https://files.eric.ed.gov/fulltext/ED583982.pdf)). 
+2. Know the types of data you are working with (quantitative, qualitative)
+3. Understand the source of where your data comes from (primary data sources, secondary data sources) and also how data is created (aggregation, calculations, etc.)
+4. Keep your data organized (understand data structure)
+5. Know how to look for patterns and outliers in data, and be aware of your own biases.
+6. Use Exploratory Data Analysis (EDA) to validate data
+7. The more data you work with, the more you learn
+
+ 📑 Additional [resource](https://hbr.org/2020/02/boost-your-teams-data-literacy) on boosting data literacy
+
+### Domain knowledge
+
+A lot of data literacy also relies on domain knowledge or ghost knowledge(https://counting.substack.com/p/whys-it-hard-to-teach-data-cleaning), information you only learn from being immersed in a field. Examples of domain knowledge I have acquired from being in the field of education research include:
+
+  + If researchers tell me they are analyzing longitudinal data, I know I need to account for time in the data in some way (ex: add a time variable). If researchers are clustering data, I know I need to account for that cluster in the data in some way (ex: add a cohort variable). I know if we have multiple forms or forms across time, we have to link our data and I need to add a unique study id to link data.
+
+  + There are school districts we work with that send us student level discipline data (ex: number of OSS or ISS referrals). They do not have codebooks or data dictionaries for these data. However, I know from working with these districts and having conversations with them, that if there are no referrals for a student, they leave a cell blank (rather than enter a zero). If I did not have this domain knowledge, I would assume the information is simply missing.
+
+   + Similarly, I know from working with certain districts as well as state education agencies and having conversations with them, that how state test scores are collected or scored have changed across years (state and district). Again, most of these agencies don't usually have codebooks or data dictionaries but I have learned this through conversations and by noticing differences in score ranges over time.
+   
+   + Again, from working with districts and states, I know to prepare for inconsistencies in data. I've seen variable names change over time. I've also seen the variables collected change over time. And sometimes, across time, variables with the exact same name are no longer measuring the same thing (another reason why documentation is so important).
+
+
+### Software knowledge
+
+I know what you may be thinking here. Earlier I said that the interpretation of a data cleaning plan should not require any technical knowledge. This is still true. However, the person who writes the data cleaning plan still needs to have a basic understanding of how the software that is used to collect the data and any software that will be used to clean or analyze the data. This knowledge will inform the steps you add to a data cleaning plan.
+
+Become familiar with the following:
+1. The tools used to collect data  
+
+  - Is it online software?  
+    - If yes, is the data exported? What file type is exported?  
+    - Can you connect to the data through other means (ex: API)?  
+    - How are values coded (numeric or words)?  
+    - How are missing values coded?  
+    - What are the additional variables this software adds to an export file that we don't need for our clean data?  
+    - How are "select all" questions exported?  
+      - For example I know when Qualtrics collects data from a "select all" question
+        a) the data will export in multiple columns like the question below where we asked, "Which tools do you use for remote teaching?"
+        b) Yes will be coded as 1 and No will be exported as NAs
+    - Extract sample data to get a feel for all of this!  
+      
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='10%', out.height= '50%'}
+
+library(tidyverse)
+
+tibble::tribble (~ Q1_1, ~ Q1_2, ~Q1_3, ~Q1_4,
+                 NA, 1, NA, NA,
+                 NA, 1, 1, 1,
+                 NA, NA, NA, NA,
+                 1, 1, 1, NA) %>%
+gt::gt()
+  
+```
 <br>
 
-This training is just being developed.....
+  - Is the data hand entered from paper forms?
+    - How is the data entered/exported? File type?
+    - What funky formatting things does that software do?
+      - Excel loves to [autocorrect](https://www.theverge.com/2020/8/6/21355674/human-genes-rename-microsoft-excel-misreading-dates) numeric or character values to dates for example
+2. What software are we using to clean the data?
+    - Is the software case sensitive?
+    - Does it have variable name limits?
+    - Does it have other limitations on variable names (can't start with a number)?
+3. What software do stakeholders plan to use to analyze the data? **Note we may not always know this, but if we do, we can try to accommodate this
+    - Is there a certain file type required for data import?
+      - For example, [Mplus](https://stats.idre.ucla.edu/mplus/seminars/mplus-class-notes/entering/) can only read ASCII text files
+    - What missing values are allowed
+      - Again with [Mplus](https://tutorials.methodsconsultants.com/posts/preparing-data-for-mplus/), it doesn't allow blanks in a data file so all missing values need to be replaced with an actual value (ex: -99)
+    - With all this said, don't just tailor your output clean file to a particular user. Depending on a users needs, you may export two clean files, one for that user and another general clean analysis file in a file type that will be accessible to anyone and is best for long term preservation. While we will talk more about this in later trainings around data sharing, non-proprietary data formats such as csv or txt are best.
+ 
+Mplus examples: https://tutorials.methodsconsultants.com/posts/preparing-data-for-mplus/
+https://stats.idre.ucla.edu/mplus/faq/how-can-i-move-my-data-from-spss-to-mplus/
+      
+Resources around data formats: 
+https://dmptool.org/general_guidance#file-formats
+https://www.lib.ncsu.edu/do/data-management/formats-and-organization
+
+### Consultation with stakeholders
+
+While everything above is absolutely imperative to the data cleaning process, this may actual be the most important step in developing a data cleaning plan. If you don't know a) how your data is collected, and b) how researchers plan to analyze the data, you have no roadmap for data cleaning. This is where you learn things such as:
+
+1. The types of data you will be receiving (survey, observation, assessment) 
+1. what format it will be in (csv, xlsx, spss)
+1. How reliable is the data (will it be hand entered, is it collected by our team, is it coming from an outside source)
+1. What is the timeline? When should the data team expect to receive data?
+1. How do researchers intend to use the data
+1. Do researchers want their final data in long or wide form
+1. Do they need missing data coded in any specific way
+1. What file format do they need
+1. Any additional calculations or transformations that need to be done in the data
+1. Any other secondary data sources they want brought in to enhance the data
+1. What is the timeline for when researchers need clean data
+
+This initial meeting with stakeholders, prior to data collection or even prior to building data collection tools, is a great time to start your documentation. This should not just be one initial meeting though. While the PIs may only need to be brought in at the beginning, a data manager should meet with the coordinators more frequently to monitor changes to the data collection instruments, any new measures added, changes in data collection protocol, any anticipated hiccups. After data is cleaned, data teams should consider having data reviews with project coordinators to cover what data issues were encountered and what could we have done better.
 
 
+---
 
-Data cleaning or data wrangling is the process of organizing and transforming raw data into a dataset that can be easily accessed and analyzed. A data cleaning plan is a written plan for how you plan to tranform your raw data into the clean, usable data.
+## Data Structure
 
+---
+
+Before we can start writing our data cleaning plan, we need to understand what structure we need our data to be in for analysis. 
 
 In the world of quantitative education research, we are most likely trying to create rectangular datasets (rows and columns), rather than having data in text files, video recordings, xml, etc. Even in qualitative research, we are often wrangling data to be in a format that is analyzable and allows categorization.
 
-For repeated measures.
-in either long or wide format (depending on the use case). Wide format being one unique participant per row, long format being participants repeating in each row.
 
-General Rules:
-No repeating IDs
-Numbers rather than words for categories (although R can factorize and create a number on the back end)
+---
 
-https://www.theanalysisfactor.com/wide-and-long-data/
+## Data Cleaning Steps
+
+---
+
+Our role as data managers is not to think of every possible iteration of how an analyst/researcher may want their data or every variable they may need. However, it is our role to reduce the amount of work required to get that data into an analyzable format.  Below I lay out some of the go-to steps I like to add to a data cleaning plan and the reasoning behind why I think they are important.
+
+
+---
+
+## Reproducible Syntax
+
+---
+
+Over the years I have seen researchers manually clean code....

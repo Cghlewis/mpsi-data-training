@@ -13,12 +13,22 @@
 
 <title>Training 2: Data Collection Structures</title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
@@ -36,11 +46,6 @@
     </style>
 
 <style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -53,32 +58,7 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+
 
 <link rel="stylesheet" href="css/custom.css" type="text/css" />
 
@@ -89,10 +69,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -109,40 +85,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 60px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h2 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h3 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h4 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h5 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
-.section h6 {
-  padding-top: 65px;
-  margin-top: -65px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -170,7 +119,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -182,7 +131,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -193,10 +142,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -208,7 +170,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -334,7 +295,7 @@ div.tocify {
 
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
+<div class="row">
 <div class="col-xs-12 col-sm-4 col-md-3">
 <div id="TOC" class="tocify">
 </div>
@@ -386,7 +347,7 @@ div.tocify {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -573,7 +534,7 @@ div.tocify {
 </div>
 <div id="observations" class="section level3">
 <h3>Observations</h3>
-<p>Classroom observations, qualitative or quantitative, can be collected using a web-based tool.</p>
+<p>In person classroom observations, qualitative or quantitative, can be collected using a web-based tool.</p>
 <div id="web-based-observations" class="section level4">
 <h4><strong>Web-based Observations</strong></h4>
 <p>Observation forms can be built into an online survey platform or your own application that data collectors can access on their phones, tablets or laptops in the field. If the observation has duration codes, you can build this into your app or there are existing applications that have built in timers. If the observation simply needs to last X amount of minutes, use a web-based form and you can always just have observers set timers on their phones, similar to what they may do using a paper form.</p>
@@ -588,6 +549,7 @@ div.tocify {
 <li>Build or use existing offline tools. For duration code classroom observations, we’ve used <a href="https://mooses.vueinnovations.com/">software</a> built by a developer at Vanderbilt to collect frequency and duration observation data. It stores observation text files to the data collectors device.</li>
 </ol>
 <p>Collecting electronic data in the field becomes tricky when you are having people use tools simultaneously that aren’t connected to a shared database (such as separate Excel files or Access databases). When you use an online/offline survey platform, everyone’s data is feeding into the same database/table. However, when you are using separate Excel files for instance, everyone is storing data on their own device. This requires you to set up a way for collectors to share files (ex: Dropbox, Box, or whatever your institution deems is a secure system) and then for you to merge those files together across data collectors. It is definitely trickier, although possibly still a more efficient and reliable method that paper forms and hand entry of data.</p>
+<p>All of the above assumes observations completed in the field. Of course if you record observations and code them from the luxury of your office, then the possibilities are wide open and I would recommend to follow any of the above methods that connect to a shared database, such as the online observation form to collect all data seamlessly in one location.</p>
 </div>
 </div>
 <div id="interviews-or-focus-groups" class="section level3">
@@ -841,11 +803,13 @@ div.tocify {
 <p><code>SELECT Student.first_name, Student.last_name, Teacher.first_name AS t_f_name, Teacher.last_name AS</code> <code>t_l_name, Teacher.grade_level</code><br />
 <code>FROM Student INNER JOIN Teacher ON Student.tch_id = Teacher.tch_id</code><br />
 <code>ORDER BY Teacher.last_name, Teacher.first_name, Student.last_name, Student.first_name</code></p>
-<p>Would produce a roster like this: <style>html {
+<p>Would produce a roster like this:</p>
+<div id="wtlggjrhyf" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#elgpuczzsi .gt_table {
+#wtlggjrhyf .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -870,7 +834,7 @@ div.tocify {
   border-left-color: #D3D3D3;
 }
 
-#elgpuczzsi .gt_heading {
+#wtlggjrhyf .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -882,7 +846,7 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#elgpuczzsi .gt_title {
+#wtlggjrhyf .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -892,23 +856,23 @@ div.tocify {
   border-bottom-width: 0;
 }
 
-#elgpuczzsi .gt_subtitle {
+#wtlggjrhyf .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
   padding-top: 0;
-  padding-bottom: 4px;
+  padding-bottom: 6px;
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
 
-#elgpuczzsi .gt_bottom_border {
+#wtlggjrhyf .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#elgpuczzsi .gt_col_headings {
+#wtlggjrhyf .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -923,7 +887,7 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#elgpuczzsi .gt_col_heading {
+#wtlggjrhyf .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -943,7 +907,7 @@ div.tocify {
   overflow-x: hidden;
 }
 
-#elgpuczzsi .gt_column_spanner_outer {
+#wtlggjrhyf .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -955,27 +919,27 @@ div.tocify {
   padding-right: 4px;
 }
 
-#elgpuczzsi .gt_column_spanner_outer:first-child {
+#wtlggjrhyf .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#elgpuczzsi .gt_column_spanner_outer:last-child {
+#wtlggjrhyf .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#elgpuczzsi .gt_column_spanner {
+#wtlggjrhyf .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
   vertical-align: bottom;
   padding-top: 5px;
-  padding-bottom: 6px;
+  padding-bottom: 5px;
   overflow-x: hidden;
   display: inline-block;
   width: 100%;
 }
 
-#elgpuczzsi .gt_group_heading {
+#wtlggjrhyf .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -997,7 +961,7 @@ div.tocify {
   vertical-align: middle;
 }
 
-#elgpuczzsi .gt_empty_group_heading {
+#wtlggjrhyf .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1012,15 +976,15 @@ div.tocify {
   vertical-align: middle;
 }
 
-#elgpuczzsi .gt_from_md > :first-child {
+#wtlggjrhyf .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#elgpuczzsi .gt_from_md > :last-child {
+#wtlggjrhyf .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#elgpuczzsi .gt_row {
+#wtlggjrhyf .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1039,7 +1003,7 @@ div.tocify {
   overflow-x: hidden;
 }
 
-#elgpuczzsi .gt_stub {
+#wtlggjrhyf .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1051,7 +1015,7 @@ div.tocify {
   padding-left: 12px;
 }
 
-#elgpuczzsi .gt_summary_row {
+#wtlggjrhyf .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1061,7 +1025,7 @@ div.tocify {
   padding-right: 5px;
 }
 
-#elgpuczzsi .gt_first_summary_row {
+#wtlggjrhyf .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1071,7 +1035,7 @@ div.tocify {
   border-top-color: #D3D3D3;
 }
 
-#elgpuczzsi .gt_grand_summary_row {
+#wtlggjrhyf .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1081,7 +1045,7 @@ div.tocify {
   padding-right: 5px;
 }
 
-#elgpuczzsi .gt_first_grand_summary_row {
+#wtlggjrhyf .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1091,11 +1055,11 @@ div.tocify {
   border-top-color: #D3D3D3;
 }
 
-#elgpuczzsi .gt_striped {
+#wtlggjrhyf .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#elgpuczzsi .gt_table_body {
+#wtlggjrhyf .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1104,7 +1068,7 @@ div.tocify {
   border-bottom-color: #D3D3D3;
 }
 
-#elgpuczzsi .gt_footnotes {
+#wtlggjrhyf .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1118,13 +1082,13 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#elgpuczzsi .gt_footnote {
+#wtlggjrhyf .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#elgpuczzsi .gt_sourcenotes {
+#wtlggjrhyf .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1138,46 +1102,47 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#elgpuczzsi .gt_sourcenote {
+#wtlggjrhyf .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#elgpuczzsi .gt_left {
+#wtlggjrhyf .gt_left {
   text-align: left;
 }
 
-#elgpuczzsi .gt_center {
+#wtlggjrhyf .gt_center {
   text-align: center;
 }
 
-#elgpuczzsi .gt_right {
+#wtlggjrhyf .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#elgpuczzsi .gt_font_normal {
+#wtlggjrhyf .gt_font_normal {
   font-weight: normal;
 }
 
-#elgpuczzsi .gt_font_bold {
+#wtlggjrhyf .gt_font_bold {
   font-weight: bold;
 }
 
-#elgpuczzsi .gt_font_italic {
+#wtlggjrhyf .gt_font_italic {
   font-style: italic;
 }
 
-#elgpuczzsi .gt_super {
+#wtlggjrhyf .gt_super {
   font-size: 65%;
 }
 
-#elgpuczzsi .gt_footnote_marks {
+#wtlggjrhyf .gt_footnote_marks {
   font-style: italic;
+  font-weight: normal;
   font-size: 65%;
 }
 </style>
-<div id="elgpuczzsi" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
@@ -1189,59 +1154,46 @@ div.tocify {
     </tr>
   </thead>
   <tbody class="gt_table_body">
-    <tr>
-      <td class="gt_row gt_left">Johnny</td>
-      <td class="gt_row gt_left">Rose</td>
-      <td class="gt_row gt_left">Stevie</td>
-      <td class="gt_row gt_left">Budd</td>
-      <td class="gt_row gt_right">3</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">Moira</td>
-      <td class="gt_row gt_left">Rose</td>
-      <td class="gt_row gt_left">Stevie</td>
-      <td class="gt_row gt_left">Budd</td>
-      <td class="gt_row gt_right">3</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">Jocelyn</td>
-      <td class="gt_row gt_left">Schitt</td>
-      <td class="gt_row gt_left">Stevie</td>
-      <td class="gt_row gt_left">Budd</td>
-      <td class="gt_row gt_right">3</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">Patrick</td>
-      <td class="gt_row gt_left">Brewer</td>
-      <td class="gt_row gt_left">Twyla</td>
-      <td class="gt_row gt_left">Sands</td>
-      <td class="gt_row gt_right">4</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">Ray</td>
-      <td class="gt_row gt_left">Butani</td>
-      <td class="gt_row gt_left">Twyla</td>
-      <td class="gt_row gt_left">Sands</td>
-      <td class="gt_row gt_right">4</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">Ted</td>
-      <td class="gt_row gt_left">Mullens</td>
-      <td class="gt_row gt_left">Twyla</td>
-      <td class="gt_row gt_left">Sands</td>
-      <td class="gt_row gt_right">4</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">Alexis</td>
-      <td class="gt_row gt_left">Rose</td>
-      <td class="gt_row gt_left">Twyla</td>
-      <td class="gt_row gt_left">Sands</td>
-      <td class="gt_row gt_right">4</td>
-    </tr>
+    <tr><td class="gt_row gt_left">Johnny</td>
+<td class="gt_row gt_left">Rose</td>
+<td class="gt_row gt_left">Stevie</td>
+<td class="gt_row gt_left">Budd</td>
+<td class="gt_row gt_right">3</td></tr>
+    <tr><td class="gt_row gt_left">Moira</td>
+<td class="gt_row gt_left">Rose</td>
+<td class="gt_row gt_left">Stevie</td>
+<td class="gt_row gt_left">Budd</td>
+<td class="gt_row gt_right">3</td></tr>
+    <tr><td class="gt_row gt_left">Jocelyn</td>
+<td class="gt_row gt_left">Schitt</td>
+<td class="gt_row gt_left">Stevie</td>
+<td class="gt_row gt_left">Budd</td>
+<td class="gt_row gt_right">3</td></tr>
+    <tr><td class="gt_row gt_left">Patrick</td>
+<td class="gt_row gt_left">Brewer</td>
+<td class="gt_row gt_left">Twyla</td>
+<td class="gt_row gt_left">Sands</td>
+<td class="gt_row gt_right">4</td></tr>
+    <tr><td class="gt_row gt_left">Ray</td>
+<td class="gt_row gt_left">Butani</td>
+<td class="gt_row gt_left">Twyla</td>
+<td class="gt_row gt_left">Sands</td>
+<td class="gt_row gt_right">4</td></tr>
+    <tr><td class="gt_row gt_left">Ted</td>
+<td class="gt_row gt_left">Mullens</td>
+<td class="gt_row gt_left">Twyla</td>
+<td class="gt_row gt_left">Sands</td>
+<td class="gt_row gt_right">4</td></tr>
+    <tr><td class="gt_row gt_left">Alexis</td>
+<td class="gt_row gt_left">Rose</td>
+<td class="gt_row gt_left">Twyla</td>
+<td class="gt_row gt_left">Sands</td>
+<td class="gt_row gt_right">4</td></tr>
   </tbody>
   
   
-</table></div></p>
+</table>
+</div>
 <p><br></p>
 <p>Now consider these 3 tables below that are not relational (such as 3 tabs in an excel spreadsheet). Since we are unable to set up a system that links these tables together, we need to enter redundant information into each table (such as teacher or school name) in order to see that information within each table without having to flip back and forth across tables to find the information we need.</p>
 <p><img src="img/tables2-new.PNG" width="70%" style="display: block; margin: auto;" /></p>
@@ -1620,7 +1572,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
@@ -1629,6 +1581,9 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
 
     // move toc-ignore selectors from section div to header
     $('div.section.toc-ignore')

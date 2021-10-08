@@ -72,6 +72,8 @@ When it comes to project management, there are tools that may help a team assign
 * [Todoist](https://todoist.com/) (task management tool)
 * [Microsoft Planner](https://www.microsoft.com/en-us/microsoft-365/business/task-management-software) (task management tool)
 * [Notion](https://www.notion.so) (project management tool)
+* [Basecamp](https://basecamp.com/) (project management tool)
+* [Confluence](https://www.atlassian.com/software/confluence) (project management tool with wiki search power)
 
 When it comes to communication tools (email, video, and/or instant message functioning), the purpose of these tools can vary. Sometimes you need instant responses (especially when issues arise in the field during data collection), other times you need to have longer planning meetings, other times you may want to keep records of conversations. Different communication tools meet different needs. Again, without endorsing any particular form of communication, tools that teams often use include:
 

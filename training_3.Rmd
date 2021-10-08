@@ -15,6 +15,11 @@ output:
 You can view slides from this talk [here](https://cghlewis.github.io/mpsi-training3/)
 :::
 
+---
+
+## Overview
+
+---
 
 A style guide is such an integral piece to data management, I am giving it its own section! We will cover best practices for file structures, file naming and versioning, variable naming, and value coding. Whatever rules you put in place, make sure they are written down, stored somewhere that is accessible to the entire team (for example a team wiki or a README) and that all staff are trained to follow the style guide protocols. I highly recommend applying this style guide across **all** projects and therefore putting this style guide in a team folder. If there is any style that is specific to a certain project, you will want to place that style guide at the top of a project folder in a README or on a project wiki.
 
@@ -27,6 +32,8 @@ Reasons a style guide is imperative include:
 ---
 
 ## Directory Structure
+
+---
 
 As I mentioned in training 2, how you set up your directory structure is based on your preferences. However, it is important to get that structure written out in a **style guide** so that everyone is following the same rules within and across projects. 
 
@@ -156,6 +163,8 @@ Resources:
 ---
 
 ## File Naming
+
+---
 
 If you are like me, or most of humanity, you are guilty of naming files something like `research report final.docx` and `research report final-2.docx` and `research report-2-dan edits.docx`. It happens, but as you can see this can makes it very confusing to know any details about what these documents are? What is this research report on? What is the actual final version? When were the edits made on these documents? What are the differences between these documents?
 

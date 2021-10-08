@@ -170,7 +170,7 @@ If there are no web-based options, or connecting to WiFi is not an option for yo
 
 ### Observations
 
-Classroom observations, qualitative or quantitative, can be collected using a web-based tool. 
+In person classroom observations, qualitative or quantitative, can be collected using a web-based tool. 
 
 #### **Web-based Observations**
 
@@ -186,6 +186,8 @@ If WiFi is not available to you in the field, consider making an electronic form
   4. Build or use existing offline tools. For duration code classroom observations, we've used [software](https://mooses.vueinnovations.com/) built by a developer at Vanderbilt to collect frequency and duration observation data. It stores observation text files to the data collectors device. 
 
 Collecting electronic data in the field becomes tricky when you are having people use tools simultaneously that aren't connected to a shared database (such as separate Excel files or Access databases). When you use an online/offline survey platform, everyone's data is feeding into the same database/table. However, when you are using separate Excel files for instance, everyone is storing data on their own device. This requires you to set up a way for collectors to share files (ex: Dropbox, Box, or whatever your institution deems is a secure system) and then for you to merge those files together across data collectors. It is definitely trickier, although possibly still a more efficient and reliable method that paper forms and hand entry of data. 
+
+All of the above assumes observations completed in the field. Of course if you record observations and code them from the luxury of your office, then the possibilities are wide open and I would recommend to follow any of the above methods that connect to a shared database, such as the online observation form to collect all data seamlessly in one location.
 
 
 ### Interviews or Focus Groups
