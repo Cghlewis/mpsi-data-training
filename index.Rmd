@@ -19,15 +19,15 @@ While this specific training is for staff and others affiliated with the MPSI, I
 
 **Tentative Training Outline** 
 
-| Training | Planned Content                                                       |
-|----------|-----------------------------------------------------------------------|
-|1         |Documentation                                                          |
-|2         |Setting up data structures                                             |
-|3         |Style Guide                                                            |
-|4         |Writing a data cleaning plan                                           |
-|5         |Intro to R and RStudio, reading in and reviewing data                  |
-|6         |Data wrangling basics                                                  |
-|7         |Restructuring, merging, or aggregating data                            |
-|8         |Cleaning data start to finish, exporting data                          |
-|9         |Advanced topics: TBD                                                   |
-|10        |Sharing data upon project completion                                   |
+|Training  |Planned Content                                            |
+|:----------|:-----------------------------------------------------------|
+|1         |Documentation                                              |
+|2         |Setting up data structures                                 |
+|3         |Style Guide                                                |
+|4         |Writing a data cleaning plan                               |
+|5         |Intro to R and RStudio, reading in and reviewing data      |
+|6         |Data wrangling basics                                      |
+|7         |Restructuring, merging, or aggregating data                |
+|8         |Cleaning data start to finish, exporting data              |
+|9         |Advanced topics: TBD                                       |
+|10        |Sharing data upon project completion                       |

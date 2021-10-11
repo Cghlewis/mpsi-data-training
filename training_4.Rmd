@@ -24,15 +24,32 @@ You can view slides from this talk TBD
 
 ---
 
-Data cleaning or data wrangling is the process of organizing and transforming raw data into a dataset that can be easily accessed and analyzed. A data cleaning plan is a written proposal, usually created by a data manager, for how you plan to transform your raw data into the clean, usable data. Think of this as a roadmap. This is different than a code file or even a pseudocode file in that there is no code or syntax in a data cleaning plan. It is just a plain text explanation for the transformations and checks you intend to do with a raw data file. It can be saved in any format that works for you, .txt, .docx, .rmd, etc. You can even write it in a code file (ex: .R) through comments if you wish, and I often do, as long as it is not code or technical skills dependent. Anyone from a project coordinator to a programmer should be able to read and understand this file and provide feedback if needed. A data cleaning plan is started prior to data collection, however, similar to every other piece of documentation, this is also a living document that will be updated as you obtain more knowledge. 
+Data cleaning or data wrangling is the process of organizing and transforming raw data into a dataset that can be easily accessed and analyzed. A data cleaning plan is a written proposal, usually created by a data manager, for how you plan to transform your raw data into the clean, usable data. Think of this as a roadmap. This is different than a code file or even a pseudocode file in that there is no code or syntax in a data cleaning plan. It is just a plain text explanation for the transformations and checks you intend to do with a raw data file. It can be saved in any format that works for you, .txt, .docx, .md, etc. You can even write it in a code file (ex: .R) through comments if you wish, and I often do, as long as reading your comments is not code or technical skills dependent. Anyone from a project coordinator to a programmer should be able to read and understand this file and provide feedback if needed. A data cleaning plan is started prior to data collection, however, similar to every other piece of documentation, this is also a living document that will be updated as you obtain more knowledge. 
 
 An example of a **very** simplified cleaning plan:
 
-```{r, echo=FALSE, fig.align="center", out.width='80%'}
 
-knitr::include_graphics("img/plan2.png")
+*Data cleaning plan for project-a student survey*
 
-```
+1. Import raw data
+1. Check structure (# of rows and cols)
+    + Check rows for duplicate participants or non-consented participants who need to be removed
+      + Compare against a roster (participant tracking)
+    + Check cols against data dictionary
+      + Any additional variables not in data dictionary?
+      + Missing any variables?
+1. Check variable classes
+    + Update classes as needed
+1. Rename variables according to data dictionary
+1. Recategorize open-ended variables d and f
+1. Reverse coded variable a, b, c
+    + Name new variables according to data dictionary
+    + Check reverse scoring
+1. Create sum and mean scores x, y, and z
+    + Name new variables according to data dictionary
+1. Add variable labels and value codes for all variables
+1. Run validation to check ranges of all variables
+1. Export clean data file
 
 ---
 
@@ -109,6 +126,7 @@ tibble::tribble (~ Q1_1, ~ Q1_2, ~Q1_3, ~Q1_4,
 gt::gt()
   
 ```
+
 <br>
 
   - Is the data hand entered from paper forms?
@@ -124,21 +142,15 @@ gt::gt()
       - For example, [Mplus](https://stats.idre.ucla.edu/mplus/seminars/mplus-class-notes/entering/) can only read ASCII text files
     - What missing values are allowed
       - Again with [Mplus](https://tutorials.methodsconsultants.com/posts/preparing-data-for-mplus/), it doesn't allow blanks in a data file so all missing values need to be replaced with an actual value (ex: -99)
-    - With all this said, don't just tailor your output clean file to a particular user. Depending on a users needs, you may export two clean files, one for that user and another general clean analysis file in a file type that will be accessible to anyone and is best for long term preservation. While we will talk more about this in later trainings around data sharing, non-proprietary data formats such as csv or txt are best.
+    - With all this said, don't just tailor your output clean file to a particular user. Depending on a users needs, you may export two clean files, one for that user and another general clean analysis file in a file type that will be accessible to anyone and is best for long term preservation. While we will talk more about this in later trainings around data sharing, non-proprietary data formats such as [csv or txt](https://dmptool.org/general_guidance#file-formats) are best.
  
-Mplus examples: https://tutorials.methodsconsultants.com/posts/preparing-data-for-mplus/
-https://stats.idre.ucla.edu/mplus/faq/how-can-i-move-my-data-from-spss-to-mplus/
-      
-Resources around data formats: 
-https://dmptool.org/general_guidance#file-formats
-https://www.lib.ncsu.edu/do/data-management/formats-and-organization
 
 ### Consultation with stakeholders
 
 While everything above is absolutely imperative to the data cleaning process, this may actual be the most important step in developing a data cleaning plan. If you don't know a) how your data is collected, and b) how researchers plan to analyze the data, you have no roadmap for data cleaning. This is where you learn things such as:
 
 1. The types of data you will be receiving (survey, observation, assessment) 
-1. what format it will be in (csv, xlsx, spss)
+1. What format it will be in (csv, xlsx, spss)
 1. How reliable is the data (will it be hand entered, is it collected by our team, is it coming from an outside source)
 1. What is the timeline? When should the data team expect to receive data?
 1. How do researchers intend to use the data
@@ -162,6 +174,120 @@ Before we can start writing our data cleaning plan, we need to understand what s
 
 In the world of quantitative education research, we are most likely trying to create rectangular datasets (rows and columns), rather than having data in text files, video recordings, xml, etc. Even in qualitative research, we are often wrangling data to be in a format that is analyzable and allows categorization.
 
+The two ways data will need to be structured for the field of education are wide or long. The simplest way to think about wide is that all data collected on a unique participant will be in one row. The easiest scenario to see this is with repeated measure data. If we collect a survey on participants in wave 1 and 2, those waves of data will all be in the same row (merged together) and each wave of data collection will be appended to a variable name to create unique variable names.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='10%', out.height= '50%'}
+
+library(tidyverse)
+
+tibble::tribble (~ stu_id, ~w1_stress1, ~w1_stress2, ~w2_stress1, ~w2_stress2,
+                 56987, 3, 4, 2, 3,
+                 54882, 1, 1, 1, 2,
+                 55574, 2, 1, 4, 1) %>%
+gt::gt()
+  
+```
+
+<br>
+
+In long data, a participant can repeat in your dataset. Again, the most straight forward way to think about this is with repeated measure data, where each row will be a new time point for a participant. This is often called appending data. In this scenario, we no longer need to append the data collection wave to variable names. However, we would need to add a time period variable to denote the wave associated with each row of data.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='10%', out.height= '50%'}
+
+library(tidyverse)
+
+tibble::tribble (~ stu_id,  ~wave, ~stress1, ~stress2,
+                 56987, 1, 3, 4,
+                 56987, 2, 2, 3,
+                 54882, 1, 1, 1, 
+                 54882, 2, 1,2,
+                 55574, 1, 2, 1, 
+                 55574, 2, 4, 1) %>%
+gt::gt()
+  
+```
+
+<br>
+
+There are different reasons for constructing your data one way or another. For example, repeated measure procedures typically require data to be in wide format, where the unit of analysis is the subject. While mixed model procedures typically required data to be in long format, where the unit of analysis is each measurement for the subject.
+
+The thing is, it is **very** easy to restructure data from one way to another. So my opinion is, the easiest way to manage data is to not merge data until you have to. It is much simpler, in terms of data management and syntax writing, to keep variable names consistent over time.
+
+* Don't merge your data files together until you absolutely need to (you need it or someone requests it). * Don't append any time periods to variable names or add a time variable to your data until you have to (this can all be added very easily in your syntax). You will know what time period is associated with the data file based on the file name and storage location.
+
+Once someone requests data or you need it for your own purposes, then you can add a time variable or append time to variables. Just make sure to ask the requestor what format they want their data in.
+
+ 📑 The Analysis Factor has a great [blog post](https://www.theanalysisfactor.com/wide-and-long-data/) on things to consider when choosing between long and wide format.
+
+<br>
+
+### Merging across forms
+
+Most of what I mentioned above refers to how to structure data over time. However, we also need to discuss how to merge disparate data sources within time. Most likely you will be collecting more than one piece of data from participants. You may have a survey and an assessment for instance. Within time, those forms will always be merged in wide format. You will link a participant's survey data to their assessment data through the unique identifier you've give the participants and attached to each form.
+
+<br>
+
+### Tidy Data
+
+I of course, can not pass over the topic of tidy data here. The term is ubiquitous in the world of data and since I plan to use R for data wrangling in later modules, tidy data needs to be covered. Tidy data, defined by [Hadley Wickham](https://www.jstatsoft.org/article/view/v059i10), meets very specific conditions which are:
+
+1. Each variable forms a column
+2. Each observation forms a row
+3. Each type of observational unit forms a table
+
+In a nutshell, tidy data are long format data.
+
+|Not tidy data               |  Tidy data  |
+|:--------------------------:|:-----------:|
+|![](img/not-tidy-data.png)  |![](img/tidy-data.png)|
+
+I think in education research, tidy data definitely has a time and place (for example in creating visualizations/graphs, and some analyses). And as I mentioned earlier, this is the most clean way to store your data since variable names aren't repeating and changing based on things like time periods. However, I think what is most important is organizing your data in the rectangular format (rows and columns) that is necessary for your analysis. I also think it is important to follow some of the other guidelines set forth by Hadley Wickham, and also by Karl Broman and Kara Woo in their paper [Data Organization in Spreadsheets](https://kbroman.org/dataorg/).
+
+Important guidelines to follow:
+
+1. Put just one thing in a cell  
+    + Ex: If a rate column contains two numbers, cases/enrollment
+    + Split that column into two columns (cases and enrollment)
+
+|Two things one cell              |  Two things two cells |
+|:--------------------------:|:-----------:|
+|![](img/two-in-one.png)  |![](img/two-in-two.png)|
+
+2. Make your data a rectangle  
+    + The first row of your data should be variable names (only one row for this)
+    + The remaining data should be rows and columns that correspond to subjects and variables
+  
+|Not rectangle              |  Rectangle |
+|:--------------------------:|:-----------:|
+|![](img/not-rectangle.png)  |![](img/rectangle.png)|
+
+Just be prepared because while you may put in the planning to collect organized data, many of the secondary datasets you use will not be organized in a nice rectangle for you. But don't worry! You can transform the dataset on the left into the one on the right with a little patience, planning, and syntax. You can find more examples of non-rectangular data from Karl Broman [here](https://kbroman.org/dataorg/pages/rectangle.html).
+
+3. Don't use font color or highlighting as data  
+    + If you want to flag data as suspicious, add a variable to indicate that
+
+|Highlight            |  No highlight|
+|:--------------------------:|:-----------:|
+|![](img/highlight.png)  |![](img/no-highlight.png)|
+
+Resources:
+
+  📑 [Karl Broman](https://kbroman.org/dataorg/)  
+  📑 [R for Data Science](https://r4ds.had.co.nz/tidy-data.html)  
+  📑 [Tidy Data](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/0012-9623-90.2.205)  
+
+<br>
+
+### Final Datasets
+
+In the end, what you will most likely want is one dataset per participant entity (school dataset, teacher dataset, student dataset). And if you plan to link these together, you will need to make sure you are able to do that through your ID schema.
+
+```{r, echo=FALSE, fig.align="center", out.width='65%'}
+
+knitr::include_graphics("img/id_schema.png")
+
+```
+
 
 ---
 
@@ -171,6 +297,11 @@ In the world of quantitative education research, we are most likely trying to cr
 
 Our role as data managers is not to think of every possible iteration of how an analyst/researcher may want their data or every variable they may need. However, it is our role to reduce the amount of work required to get that data into an analyzable format.  Below I lay out some of the go-to steps I like to add to a data cleaning plan and the reasoning behind why I think they are important.
 
+First rule: Never touch the raw data. You never know when you will make an error and need to return to the the uncorrected data file. https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/0012-9623-90.2.205
+Second rule: Keep everything (except variables that are identifying and completely unnecessary for project) both item level and aggregated data 
+
+
+  📑 Jeff Leek has a great [blog post](https://simplystatistics.org/2019/05/29/research-quality-data-and-research-quality-databases/) on creating research quality datasets.
 
 ---
 

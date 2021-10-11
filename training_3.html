@@ -608,10 +608,11 @@ div.tocify {
 <ul>
 <li>Instead of <em>q1</em> use <em>gender</em></li>
 </ul></li>
-<li>If a variable is a part of a scale, consider naming is an abbreviation of that scale plus the scale item number
+<li>If a variable is a part of a scale, consider naming is an abbreviation of that scale plus the scale item number (add the number last to make data manipulations easier)
 <ul>
 <li><em>toca1</em></li>
 </ul></li>
+<li>Don’t name a variable any keyword/function used in any programming language (ex: <code>for</code> in R is a function)</li>
 <li>Set a character limit
 <ul>
 <li>Most statistical programs have a limit on variable name characters
@@ -658,11 +659,11 @@ div.tocify {
 </ul>
 <p>In addition to best practices, here are other practices that I’ve noticed others implement. You can pick and choose what works best for your team. Just make sure whatever you choose, you put it in your style guide and follow those guidelines all throughout your project.</p>
 <ul>
-<li>Some people like to include question ordering in the variable name (personally I’d rather simply keep this information in my data dictionary and not in my actual variable name)
+<li><p>Some people like to include question ordering in the variable name (personally I’d rather simply keep this information in my data dictionary and not in my actual variable name). Also, this can get complicated if for any reason you add questions to measures and question order changes.</p>
 <ul>
 <li>Ex: <em>q1_gender</em>, <em>q2_race</em></li>
 </ul></li>
-<li>Some people like to include an indication of the measure in the variable name so you always know what instrument the item came from
+<li><p>Some people like to include an indication of the measure in the variable name so you always know what instrument the item came from</p>
 <ul>
 <li>I think this is actually an excellent idea. Ultimately you may create a student level dataset that includes all data pertaining to a student, but without referring to documentation, you won’t know which questions were part of the student self-report and which questions were part of the teacher rating of a student. You can make this more clear by adding a prefix to indicate the measure.
 <ul>
@@ -670,7 +671,8 @@ div.tocify {
 <li><em>s_anxiety1</em> and <em>t_toca1</em></li>
 </ul></li>
 </ul></li>
-<li>Last, time is probably the trickiest variable to account for and also the least uniform (in terms of consistency) that I’ve seen across teams/projects. I think people account for time in many different ways and call it many different things. My general note is, whatever you choose, just make sure it is documented very clearly for your team and outsiders to understand. With that said, I am going to give time it’s own section below.</li>
+<li><p>Last, time is probably the trickiest variable to account for and also the least uniform (in terms of consistency) that I’ve seen across teams/projects. I think people account for time in many different ways and call it many different things. My general note is, whatever you choose, just make sure it is documented very clearly for your team and outsiders to understand. With that said, I am going to give time it’s own section below.</p>
+<p>📑 Tara Reynolds and Christopher Schatschnieder have some great <a href="https://figshare.com/articles/preprint/The_Basics_of_Data_Management/13215350/1">recommendations</a> of variable naming as well.</p></li>
 </ul>
 <p><br></p>
 <div class="question">
