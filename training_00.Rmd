@@ -181,6 +181,12 @@ Before diving into the content of this training, I think it is helpful to cover 
 
 **Standardization**: Developing a set of agreed upon technical standards and applying them within and across all research projects.
 
+**Merge**: [join] Combining datasets together in a side by side manner (matching on an identifier)
+
+**Append**: Stacking datasets on top of each other (matching variables)
+
+**Syntax**: [code, program] Programming statements written in a text editor. The statements are machine-readable instructions processed by your computer ([University of Washington](https://www.washington.edu/research/glossary/source-code-and-object-code/)).
+
 Resources:
 
  📑 [University of Leicester](https://www2.le.ac.uk/services/research-data/old-2019-12-11/documents/UoL_ReserchDataDefinitions_20120904.pdf)
@@ -263,5 +269,5 @@ Examples:
 
 11. This crowdsourced data management [syllabus](https://osf.io/vkztw/) created at SIPS 2021 is an excellent overview of data management concepts and questions researchers can consider.
 
-12. Aleata Hubbard Cheuoua has some excellent education research data management papers, blogs, and presentations on her [website](http://www.aleatahubbard.com/). Her paper on [Data Cleaning in Mathematics Education Research](http://sigmaa.maa.org/rume/crume2017/Abstracts_Files/Posters/177.pdf) is an especially insightful look at pain points in education data management and ways we can repair issues that arise. 
+12. Aleata Hubbard Cheuoua has some excellent education research data management papers, blogs, and presentations on her [website](http://www.aleatahubbard.com/). Her paper on [Data Cleaning in Mathematics Education Research](https://files.eric.ed.gov/fulltext/ED583982.pdf) is an especially insightful look at pain points in education data management and ways we can repair issues that arise. 
 

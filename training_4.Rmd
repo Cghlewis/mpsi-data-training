@@ -15,16 +15,13 @@ output:
 You can view slides from this talk TBD
 :::
 
-**This module is a work in progress.**
-
-
 ---
 
 ## Overview
 
 ---
 
-Data cleaning or data wrangling is the process of organizing and transforming raw data into a dataset that can be easily accessed and analyzed. A data cleaning plan is a written proposal, usually created by a data manager, for how you plan to transform your raw data into the clean, usable data. Think of this as a roadmap. This is different than a code file or even a pseudocode file in that there is no code or syntax in a data cleaning plan. It is just a plain text explanation for the transformations and checks you intend to do with a raw data file. It can be saved in any format that works for you, .txt, .docx, .md, etc. You can even write it in a code file (ex: .R) through comments if you wish, and I often do, as long as reading your comments is not code or technical skills dependent. Anyone from a project coordinator to a programmer should be able to read and understand this file and provide feedback if needed. A data cleaning plan is started prior to data collection, however, similar to every other piece of documentation, this is also a living document that will be updated as you obtain more knowledge. 
+Data cleaning or data wrangling is the process of organizing and transforming raw data into a dataset that can be easily accessed and analyzed. A data cleaning plan is a written proposal outlining how you plan to transform your raw data into the clean, usable data. This is different than a code file or even a pseudocode file in that there is no code or syntax in a data cleaning plan. It is just a plain text explanation of the transformations and checks you intend to implement on a raw data file. It can be saved in any format that works for you (text, markdown, etc.). You can even write it in a code file (ex: .R) through comments if you wish, and I often do, as long as reading your comments is not code or technical skills dependent. Anyone from a project coordinator to a programmer should be able to read and understand this file and provide feedback if needed. This plan is started prior to data cleaning, however, similar to every other piece of documentation, this is also a living document that will be updated as you obtain more knowledge. 
 
 An example of a **very** simplified cleaning plan:
 
@@ -35,7 +32,7 @@ An example of a **very** simplified cleaning plan:
 1. Check structure (# of rows and cols)
     + Check rows for duplicate participants or non-consented participants who need to be removed
       + Compare against a roster (participant tracking)
-    + Check cols against data dictionary
+    + Check columns against data dictionary
       + Any additional variables not in data dictionary?
       + Missing any variables?
 1. Check variable classes
@@ -84,7 +81,7 @@ Here are ways to build data literacy, adapted from [Venngage](https://venngage.c
 
 ### Domain knowledge
 
-A lot of data literacy also relies on domain knowledge or ghost knowledge(https://counting.substack.com/p/whys-it-hard-to-teach-data-cleaning), information you only learn from being immersed in a field. Examples of domain knowledge I have acquired from being in the field of education research include:
+A lot of data literacy also relies on domain knowledge or [ghost knowledge](https://counting.substack.com/p/whys-it-hard-to-teach-data-cleaning), information you only learn from being immersed in a field. Examples of domain knowledge I have acquired from being in the field of education research include:
 
   + If researchers tell me they are analyzing longitudinal data, I know I need to account for time in the data in some way (ex: add a time variable). If researchers are clustering data, I know I need to account for that cluster in the data in some way (ex: add a cohort variable). I know if we have multiple forms or forms across time, we have to link our data and I need to add a unique study id to link data.
 
@@ -97,11 +94,15 @@ A lot of data literacy also relies on domain knowledge or ghost knowledge(https:
 
 ### Software knowledge
 
-I know what you may be thinking here. Earlier I said that the interpretation of a data cleaning plan should not require any technical knowledge. This is still true. However, the person who writes the data cleaning plan still needs to have a basic understanding of how the software that is used to collect the data and any software that will be used to clean or analyze the data. This knowledge will inform the steps you add to a data cleaning plan.
+I know what you may be thinking here. Earlier I said that the interpretation of a data cleaning plan should not require any technical knowledge. This is still true. However, the person who writes the data cleaning plan still needs to have a basic understanding of the software that is used to collect the data and any software that will be used to clean or analyze the data. This knowledge will inform the steps you add to a data cleaning plan.
 
 Become familiar with the following:
-1. The tools used to collect data  
 
+1. The tools used to collect data  
+  - Is the data hand entered from paper forms?
+    - How is the data entered/exported? File type?
+    - What funky formatting things does that software do?
+      - Excel loves to [autocorrect](https://www.theverge.com/2020/8/6/21355674/human-genes-rename-microsoft-excel-misreading-dates) numeric or character values to dates for example
   - Is it online software?  
     - If yes, is the data exported? What file type is exported?  
     - Can you connect to the data through other means (ex: API)?  
@@ -129,44 +130,47 @@ gt::gt()
 
 <br>
 
-  - Is the data hand entered from paper forms?
-    - How is the data entered/exported? File type?
-    - What funky formatting things does that software do?
-      - Excel loves to [autocorrect](https://www.theverge.com/2020/8/6/21355674/human-genes-rename-microsoft-excel-misreading-dates) numeric or character values to dates for example
 2. What software are we using to clean the data?
     - Is the software case sensitive?
-    - Does it have variable name limits?
+    - Does it have variable name character limits?
     - Does it have other limitations on variable names (can't start with a number)?
-3. What software do stakeholders plan to use to analyze the data? **Note we may not always know this, but if we do, we can try to accommodate this
+3. What software do stakeholders plan to use to analyze the data? We may not always know this, but if we do, we can try to accommodate this
     - Is there a certain file type required for data import?
       - For example, [Mplus](https://stats.idre.ucla.edu/mplus/seminars/mplus-class-notes/entering/) can only read ASCII text files
     - What missing values are allowed
       - Again with [Mplus](https://tutorials.methodsconsultants.com/posts/preparing-data-for-mplus/), it doesn't allow blanks in a data file so all missing values need to be replaced with an actual value (ex: -99)
-    - With all this said, don't just tailor your output clean file to a particular user. Depending on a users needs, you may export two clean files, one for that user and another general clean analysis file in a file type that will be accessible to anyone and is best for long term preservation. While we will talk more about this in later trainings around data sharing, non-proprietary data formats such as [csv or txt](https://dmptool.org/general_guidance#file-formats) are best.
+    - With all this said, don't just tailor your output clean file to a particular user. Depending on a users needs, you may export two clean files, one for that user and another general clean analysis file in a file type that will be accessible to anyone and is best for long term preservation. While we will talk more about this in later trainings around data sharing, [non-proprietary data formats](https://dmptool.org/general_guidance#file-formats) such as csv or txt are best.
  
 
 ### Consultation with stakeholders
 
-While everything above is absolutely imperative to the data cleaning process, this may actual be the most important step in developing a data cleaning plan. If you don't know a) how your data is collected, and b) how researchers plan to analyze the data, you have no roadmap for data cleaning. This is where you learn things such as:
+While everything above is absolutely imperative to the data cleaning process, this may actual be the most important step in developing a data cleaning plan. If you don't know a) how your data is collected, and b) how researchers plan to analyze the data, then you have no roadmap for data cleaning. This is where you learn things such as:
 
 1. The types of data you will be receiving (survey, observation, assessment) 
 1. What format it will be in (csv, xlsx, spss)
-1. How reliable is the data (will it be hand entered, is it collected by our team, is it coming from an outside source)
-1. What is the timeline? When should the data team expect to receive data?
-1. How do researchers intend to use the data
-1. Do researchers want their final data in long or wide form
-1. Do they need missing data coded in any specific way
-1. What file format do they need
-1. Any additional calculations or transformations that need to be done in the data
-1. Any other secondary data sources they want brought in to enhance the data
-1. What is the timeline for when researchers need clean data
+1. How reliable is the data (will it be hand entered, is it collected by your team, is it coming from an outside source)?
+1. What is the timeline? When should the data team expect to receive data? You can document this in a data cleaning timeline/data accounting spreadsheet.
+1. How do researchers intend to use the data?
+1. Do researchers want their final data in long or wide form?
+1. Do they need missing data coded in any specific way?
+1. What file format do they need?
+1. Any additional calculations or transformations that need to be done in the data?
+1. Any other secondary data sources they want brought in to enhance the data?
+1. What is the timeline for when researchers need clean data? You can document this in a data cleaning timeline/data accounting spreadsheet.
 
-This initial meeting with stakeholders, prior to data collection or even prior to building data collection tools, is a great time to start your documentation. This should not just be one initial meeting though. While the PIs may only need to be brought in at the beginning, a data manager should meet with the coordinators more frequently to monitor changes to the data collection instruments, any new measures added, changes in data collection protocol, any anticipated hiccups. After data is cleaned, data teams should consider having data reviews with project coordinators to cover what data issues were encountered and what could we have done better.
+```{r, echo=FALSE, fig.align="center", out.width='75%'}
 
+knitr::include_graphics("img/data-accounting.png")
+
+```
+
+Source: [Data accounting spreadsheet](https://files.eric.ed.gov/fulltext/ED583982.pdf) from Aleata Hubbard
+
+This initial meeting with stakeholders, prior to data collection or even prior to building data collection tools, is a great time to start your documentation. This should not just be one initial meeting though. While the PIs may only need to be brought in at the beginning, a data manager should meet with the coordinators more frequently to monitor changes to the data collection instruments, any new measures added, changes in data collection protocol, or any unanticipated hiccups. Any updates should be documented in things such as protocols, codebooks, data dictionaries, or a data cleaning timeline. After data is cleaned, data teams should consider having data reviews with project coordinators to cover what data issues were encountered and what could the team have done better.
 
 ---
 
-## Data Structure
+## Data structure
 
 ---
 
@@ -174,7 +178,7 @@ Before we can start writing our data cleaning plan, we need to understand what s
 
 In the world of quantitative education research, we are most likely trying to create rectangular datasets (rows and columns), rather than having data in text files, video recordings, xml, etc. Even in qualitative research, we are often wrangling data to be in a format that is analyzable and allows categorization.
 
-The two ways data will need to be structured for the field of education are wide or long. The simplest way to think about wide is that all data collected on a unique participant will be in one row. The easiest scenario to see this is with repeated measure data. If we collect a survey on participants in wave 1 and 2, those waves of data will all be in the same row (merged together) and each wave of data collection will be appended to a variable name to create unique variable names.
+The two ways data will need to be structured for the field of education are wide or long. The simplest way to think about wide is that all data collected on a unique participant will be in one row. The easiest scenario to see this is with repeated measure data. If we collect a survey on participants in wave 1 and 2, those waves of data will all be in the same row (merged/joined together) and each wave of data collection will be appended to a variable name to create unique variable names.
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='10%', out.height= '50%'}
 
@@ -211,11 +215,13 @@ gt::gt()
 
 There are different reasons for constructing your data one way or another. For example, repeated measure procedures typically require data to be in wide format, where the unit of analysis is the subject. While mixed model procedures typically required data to be in long format, where the unit of analysis is each measurement for the subject.
 
-The thing is, it is **very** easy to restructure data from one way to another. So my opinion is, the easiest way to manage data is to not merge data until you have to. It is much simpler, in terms of data management and syntax writing, to keep variable names consistent over time.
+The thing is, it is **very** easy to restructure data from one way to another. So my opinion is, the easiest way to manage data is to:
 
-* Don't merge your data files together until you absolutely need to (you need it or someone requests it). * Don't append any time periods to variable names or add a time variable to your data until you have to (this can all be added very easily in your syntax). You will know what time period is associated with the data file based on the file name and storage location.
+a) Don't merge data until you have to. It is much simpler, in terms of data management and syntax writing, to keep variable names consistent over time.
 
-Once someone requests data or you need it for your own purposes, then you can add a time variable or append time to variables. Just make sure to ask the requestor what format they want their data in.
+b) Don't append any time periods to variable names or add a time variable to your data until you have to (this can all be added very easily in your syntax). You will know what time period is associated with the data file based on the file name and storage location.
+
+Once someone requests data or you need it for your own purposes, then you can add a time variable or append time to variable names as needed, and merge or append data across time. Just make sure to ask the requester what format they want their data in.
 
  📑 The Analysis Factor has a great [blog post](https://www.theanalysisfactor.com/wide-and-long-data/) on things to consider when choosing between long and wide format.
 
@@ -227,9 +233,9 @@ Most of what I mentioned above refers to how to structure data over time. Howeve
 
 <br>
 
-### Tidy Data
+### Tidy data
 
-I of course, can not pass over the topic of tidy data here. The term is ubiquitous in the world of data and since I plan to use R for data wrangling in later modules, tidy data needs to be covered. Tidy data, defined by [Hadley Wickham](https://www.jstatsoft.org/article/view/v059i10), meets very specific conditions which are:
+I of course, cannot pass over the topic of tidy data here. The term is ubiquitous in the world of data and since I plan to use R for data wrangling in later modules, tidy data needs to be covered. Tidy data, defined by [Hadley Wickham](https://www.jstatsoft.org/article/view/v059i10), meets very specific conditions which are:
 
 1. Each variable forms a column
 2. Each observation forms a row
@@ -239,7 +245,7 @@ In a nutshell, tidy data are long format data.
 
 |Not tidy data               |  Tidy data  |
 |:--------------------------:|:-----------:|
-|![](img/not-tidy-data.png)  |![](img/tidy-data.png)|
+|![](img/not-tidy-data2.png)  |![](img/tidy-data2.png)|
 
 I think in education research, tidy data definitely has a time and place (for example in creating visualizations/graphs, and some analyses). And as I mentioned earlier, this is the most clean way to store your data since variable names aren't repeating and changing based on things like time periods. However, I think what is most important is organizing your data in the rectangular format (rows and columns) that is necessary for your analysis. I also think it is important to follow some of the other guidelines set forth by Hadley Wickham, and also by Karl Broman and Kara Woo in their paper [Data Organization in Spreadsheets](https://kbroman.org/dataorg/).
 
@@ -261,7 +267,7 @@ Important guidelines to follow:
 |:--------------------------:|:-----------:|
 |![](img/not-rectangle.png)  |![](img/rectangle.png)|
 
-Just be prepared because while you may put in the planning to collect organized data, many of the secondary datasets you use will not be organized in a nice rectangle for you. But don't worry! You can transform the dataset on the left into the one on the right with a little patience, planning, and syntax. You can find more examples of non-rectangular data from Karl Broman [here](https://kbroman.org/dataorg/pages/rectangle.html).
+Just be prepared because while you may put in the planning to collect organized data, many of the secondary datasets you use will not be organized in a nice rectangle for you. But don't worry! You can transform the dataset on the left into the one on the right with a little patience, planning, and code. You can find more examples of non-rectangular data from Karl Broman [here](https://kbroman.org/dataorg/pages/rectangle.html).
 
 3. Don't use font color or highlighting as data  
     + If you want to flag data as suspicious, add a variable to indicate that
@@ -278,11 +284,11 @@ Resources:
 
 <br>
 
-### Final Datasets
+### Final datasets
 
 In the end, what you will most likely want is one dataset per participant entity (school dataset, teacher dataset, student dataset). And if you plan to link these together, you will need to make sure you are able to do that through your ID schema.
 
-```{r, echo=FALSE, fig.align="center", out.width='65%'}
+```{r, echo=FALSE, fig.align="center", out.width='75%'}
 
 knitr::include_graphics("img/id_schema.png")
 
@@ -291,17 +297,108 @@ knitr::include_graphics("img/id_schema.png")
 
 ---
 
-## Data Cleaning Steps
+## Data cleaning steps
 
 ---
 
-Our role as data managers is not to think of every possible iteration of how an analyst/researcher may want their data or every variable they may need. However, it is our role to reduce the amount of work required to get that data into an analyzable format.  Below I lay out some of the go-to steps I like to add to a data cleaning plan and the reasoning behind why I think they are important.
+Our role as data managers is not to think of every possible iteration of how an analyst/researcher may want their data or every variable they may need. However, it is our role to reduce the amount of work required to get that data into an analyzable format. [Omar Elgarby](https://towardsdatascience.com/the-ultimate-guide-to-data-cleaning-3969843991d4) wrote that "Quality data beats fancy algorithms".
 
-First rule: Never touch the raw data. You never know when you will make an error and need to return to the the uncorrected data file. https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/0012-9623-90.2.205
-Second rule: Keep everything (except variables that are identifying and completely unnecessary for project) both item level and aggregated data 
+Clean data should be:  
 
+  - Valid  
+  - Accurate  
+  - Complete  
+  - Consistent  
+  - Uniform  
 
-  📑 Jeff Leek has a great [blog post](https://simplystatistics.org/2019/05/29/research-quality-data-and-research-quality-databases/) on creating research quality datasets.
+Below I lay out some of the go-to steps I like to add to a data cleaning plan and the reasoning behind why I think they are important. 
+
+### Global rules
+
+First, some global rules:
+
+**First rule**: Never touch the raw data. You never know when you will make an error and need to return to the the uncorrected data file. 
+
+Resources: 
+
+ 📑 [Effective Data Management](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/0012-9623-90.2.205)  
+ 📑 [Psych Technical Specification](https://docs.google.com/document/d/1u8o5jnWk0Iqp_J06PTu5NjBfVsdoPbBhstht6W0fFp0/edit#heading=h.xmrpyhv1y68j)  
+  [](https://docs.google.com/document/d/1GfIo67-wqq-26ZG9etar5tiKKYLLqWCra8jySolAK7Y/edit)
+
+**Second rule**: Keep everything (except variables that are identifying and completely unnecessary for project). Keep both item level and aggregated variables, recoded and original variables.
+
+**Third rule**: Always de-identify the clean/analysis data. Ensure your study ID is in the data and is accurate, then remove all PII (name, SSN, email, DOB, school name, parent name, IP address, etc.).
+
+```{r, echo=FALSE, fig.align="center", out.width='90%'}
+
+knitr::include_graphics("img/analysis_dataset.png")
+
+```
+
+Source: [J-PAL](https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf) 
+
+### Data cleaning steps
+
+While this is not a comprehensive list of every possible data cleaning step you will need for your unique dataset and the questions your stakeholders need to answer, these are common steps that typically apply to all data in some way. You may need more or less steps depending on your data. Also, while these steps are presented in a logical order, they do not all need to happen in this order. 
+
+1. Read in data
+    + Whether this is one file from a folder on your computer, or multiple files, or calling data from an API
+2. Review your data
+    + Rows, columns, values, missing data
+    + Check your number of cases against your participant tracking
+    + Check your columns against your data dictionary
+3. Remove any duplicate cases, cases who are not consented in your study
+    + Check your protocol for removing duplicate responses
+    + If you are missing cases that are tracked as complete, work with the project coordinator to locate that data
+4. If your data does not already contain a study ID, read in a roster from your participant tracking and join your roster with your data
+5. Drop all unimportant columns (not in data dictionary) and any identifying columns (name, email, etc.)
+6. Split columns as needed
+    + Remember the rule, "Put just one things in a cell"
+      + If a column allowed people to indicate multiple responses, those responses may need to be split out into multiple columns or rows
+7. Rename columns to match your data dictionary
+8. Check variable classes/type and update as needed
+    + Convert string to numeric for example
+9. Transform/Normalize variables
+    + Remove symbols from columns such as % or $
+    + Remove white space from strings
+10. Standardize
+    + Make sure all of your variables are measured the same way within your dataset and the same way across time
+    + Rescale variables
+    + Collapse open ended variables into categorical variables (ex: school a, SchoolA, school b, School B, into School A, School B)
+11. Recode variables
+    + If you know all missing values in a column are actual not missing and should be zero, recode NA to 0
+    + Reverse code likert scale variables
+12. Calculate variables laid out in the data dictionary
+    + Create sum and mean scores
+    + Create any necessary standardized scores
+    + Collapse existing variable/s into a new variable
+13. Add missing data values as needed
+    + Add your missing value schema (-99 = skipped, -98 = not applicable, etc.)
+14. Validate data
+    + Adding [flags](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/0012-9623-90.2.205) (columns that identify issues in a row) can be helpful 
+      + Flags for completed or partially completed measure (0=complete, 1=partial)
+    + Flag rows with issues (1 = issues, 0 = no issue)
+      + Values out of range 
+          + Boundaries of var1 is 0-10 and you find a 15
+      + Do cross validation for impossible values
+          + age and grade level - a child age 8 says they are in grade 12
+          + is the gender in one file, different than the gender in another file?
+    + Do the study IDs we have all fall within the list of IDs we have for our study?
+      + This is a chance to check that an ID wasn't entered incorrectly
+15. Transform data (wide to long or long to wide)
+16. Merge and/or append data as needed
+    + Again do validation checks, do you have the correct number of rows and columns after the merge?
+17. Add metadata
+    + Variable labels and value labels
+18. Export clean data
+    
+
+Resources:
+
+  📑 Aleata Hubbard has a [blog post](http://evalu-ate.org/blog/hubbard-sep2016/) on six data cleaning checks  
+  📑 Jeff Leek also has a great [blog post](https://simplystatistics.org/2019/05/29/research-quality-data-and-research-quality-databases/) on creating research quality datasets.  
+  📑 [An Introduction to data cleaning with R](https://cran.r-project.org/doc/contrib/de_Jonge+van_der_Loo-Introduction_to_data_cleaning_with_R.pdf)  
+  📑 [The Basics of Data Management](https://figshare.com/articles/preprint/The_Basics_of_Data_Management/13215350/1)
 
 ---
 
@@ -309,4 +406,34 @@ Second rule: Keep everything (except variables that are identifying and complete
 
 ---
 
-Over the years I have seen researchers manually clean code....
+Over the years I have seen researchers manually clean data in programs like Excel and in every scenario I can think of, it's a bad idea for the following for two major reasons: a) It is not reproducible, b) It leads to errors, and c) It is time consuming. My recommendation is to clean your data, no matter how small the task, with syntax. Even if you use a graphical user interace (GUI) program like SPSS (point and click), you need to log every move you make in that program and paste the code into a syntax file. Syntax files allow you to have a record of every transformation you make from the raw data to your clean data. While writing syntax may seem time consuming up, it helps you to be more thoughtful in your data cleaning process and it can save you an enormous amount of time in the future if you plan to clean data with the same features multiple times (in say a longitudinal study).
+
+You can use whatever program you want to write syntax ([OpenRefine](https://openrefine.org/documentation.html), [R](https://www.r-project.org/), [Stata](https://www.stata.com/), [SPSS](https://www.ibm.com/products/spss-statistics), [SAS](https://www.sas.com/en_us/curiosity.html?utm_source=other&utm_medium=cpm&utm_campaign=non-cbo-us&dclid=&gclid=Cj0KCQjw5JSLBhCxARIsAHgO2SffrjNAWQsn0f4F2czIb-P-daG2oVq1TC4DF6dEaxTB0Nl6MjE-BwAaAtQrEALw_wcB), [SQL](https://en.wikipedia.org/wiki/SQL), etc.). If you review the trainings available through Data Carpentry(https://datacarpentry.org/lessons/) you'll see that most of their data management workshops use SQL, OpenRefine, R, or Python (all open source). 
+
+If I haven't sold you on using syntax yet, here are a few **horror stories** of manually cleaning data (based off of real life events):
+
+1. Working with a partner who sends you clean data, you find three small errors in the data they sent us. 
+   a) One variable had been named incorrectly  
+   b) One sum variable had been calculated incorrectly  
+   c) One variable was missing value labels  
+  
+These all seemed like quick changes you could make very easily in a point and click interface, so you did. Then you saved that dataset as the final clean dataset. However, a month later, your partner found an error in the data they sent you, and they sent you a revised clean dataset. 
+
+This is the process you had to go through:  
+
+  + You did *not* document the changes you made to the prior dataset (either via syntax or even in a README_versioning file). Therefore, you had to do your best to remember what changes you had made to see if you needed to make them again, potentially leaving errors in the data if you forgot a step.  
+  
+  + After checking the data and discovering that the changes you had previously made to the data had still not been corrected in this new file, you had to make all the changes to the new data **again**. This time, you write all the updates in syntax! This allows you to document your changes, as well as saves you from having to re-do all of your point and click work again in the future if you ever received another updated file. You can just run your syntax in a matter of seconds.  
+  
+2. You download two Excel files that need to be appended (they have the same variables). In an attempt to move quickly, you decide to append the files by cutting all the rows from one file and pasting them below the rows of the other file. You then save this data as your complete dataset. At a later point when you are running some descriptive summaries on the data, you notice ranges for some of your variables are incorrect. You go back to your two original files (luckily you saved both original files as "raw" data). You do some detective work and discover that the order of the columns in each file are not identical so when you pasted data from one file to the other, the values did not correctly align. To correct this, you write syntax where you bind the two raw data files using a function that matches files based on column names.  
+
+3. A school district sends you a data file that you have requested. You *know* you only need this data for a one time report so you decide to start doing your manipulations in the raw data, by hand. You save this data, use it for your report, and then plan to never see it again. A year later, your coworker actually needs that data for another report. When that coworker starts digging around in the data, they find errors (values out of range and so forth). However, with no documentation of your changes, no syntax, and no raw data, there is no way to know how to fix the data. The data is rendered useless.
+
+Resource:
+
+  📑 [Effective Data Management](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/0012-9623-90.2.205)
+
+
+
+
+

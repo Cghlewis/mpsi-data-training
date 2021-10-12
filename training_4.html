@@ -360,12 +360,11 @@ div.tocify {
 <div class="presentation">
 <p><br> You can view slides from this talk TBD</p>
 </div>
-<p><strong>This module is a work in progress.</strong></p>
 <hr />
 <div id="overview" class="section level2">
 <h2>Overview</h2>
 <hr />
-<p>Data cleaning or data wrangling is the process of organizing and transforming raw data into a dataset that can be easily accessed and analyzed. A data cleaning plan is a written proposal, usually created by a data manager, for how you plan to transform your raw data into the clean, usable data. Think of this as a roadmap. This is different than a code file or even a pseudocode file in that there is no code or syntax in a data cleaning plan. It is just a plain text explanation for the transformations and checks you intend to do with a raw data file. It can be saved in any format that works for you, .txt, .docx, .md, etc. You can even write it in a code file (ex: .R) through comments if you wish, and I often do, as long as reading your comments is not code or technical skills dependent. Anyone from a project coordinator to a programmer should be able to read and understand this file and provide feedback if needed. A data cleaning plan is started prior to data collection, however, similar to every other piece of documentation, this is also a living document that will be updated as you obtain more knowledge.</p>
+<p>Data cleaning or data wrangling is the process of organizing and transforming raw data into a dataset that can be easily accessed and analyzed. A data cleaning plan is a written proposal outlining how you plan to transform your raw data into the clean, usable data. This is different than a code file or even a pseudocode file in that there is no code or syntax in a data cleaning plan. It is just a plain text explanation of the transformations and checks you intend to implement on a raw data file. It can be saved in any format that works for you (text, markdown, etc.). You can even write it in a code file (ex: .R) through comments if you wish, and I often do, as long as reading your comments is not code or technical skills dependent. Anyone from a project coordinator to a programmer should be able to read and understand this file and provide feedback if needed. This plan is started prior to data cleaning, however, similar to every other piece of documentation, this is also a living document that will be updated as you obtain more knowledge.</p>
 <p>An example of a <strong>very</strong> simplified cleaning plan:</p>
 <p><em>Data cleaning plan for project-a student survey</em></p>
 <ol style="list-style-type: decimal">
@@ -376,7 +375,7 @@ div.tocify {
 <ul>
 <li>Compare against a roster (participant tracking)</li>
 </ul></li>
-<li>Check cols against data dictionary
+<li>Check columns against data dictionary
 <ul>
 <li>Any additional variables not in data dictionary?</li>
 <li>Missing any variables?</li>
@@ -431,7 +430,7 @@ div.tocify {
 </div>
 <div id="domain-knowledge" class="section level3">
 <h3>Domain knowledge</h3>
-<p>A lot of data literacy also relies on domain knowledge or ghost knowledge(<a href="https://counting.substack.com/p/whys-it-hard-to-teach-data-cleaning" class="uri">https://counting.substack.com/p/whys-it-hard-to-teach-data-cleaning</a>), information you only learn from being immersed in a field. Examples of domain knowledge I have acquired from being in the field of education research include:</p>
+<p>A lot of data literacy also relies on domain knowledge or <a href="https://counting.substack.com/p/whys-it-hard-to-teach-data-cleaning">ghost knowledge</a>, information you only learn from being immersed in a field. Examples of domain knowledge I have acquired from being in the field of education research include:</p>
 <ul>
 <li><p>If researchers tell me they are analyzing longitudinal data, I know I need to account for time in the data in some way (ex: add a time variable). If researchers are clustering data, I know I need to account for that cluster in the data in some way (ex: add a cohort variable). I know if we have multiple forms or forms across time, we have to link our data and I need to add a unique study id to link data.</p></li>
 <li><p>There are school districts we work with that send us student level discipline data (ex: number of OSS or ISS referrals). They do not have codebooks or data dictionaries for these data. However, I know from working with these districts and having conversations with them, that if there are no referrals for a student, they leave a cell blank (rather than enter a zero). If I did not have this domain knowledge, I would assume the information is simply missing.</p></li>
@@ -441,9 +440,21 @@ div.tocify {
 </div>
 <div id="software-knowledge" class="section level3">
 <h3>Software knowledge</h3>
-<p>I know what you may be thinking here. Earlier I said that the interpretation of a data cleaning plan should not require any technical knowledge. This is still true. However, the person who writes the data cleaning plan still needs to have a basic understanding of how the software that is used to collect the data and any software that will be used to clean or analyze the data. This knowledge will inform the steps you add to a data cleaning plan.</p>
-<p>Become familiar with the following: 1. The tools used to collect data</p>
+<p>I know what you may be thinking here. Earlier I said that the interpretation of a data cleaning plan should not require any technical knowledge. This is still true. However, the person who writes the data cleaning plan still needs to have a basic understanding of the software that is used to collect the data and any software that will be used to clean or analyze the data. This knowledge will inform the steps you add to a data cleaning plan.</p>
+<p>Become familiar with the following:</p>
+<ol style="list-style-type: decimal">
+<li>The tools used to collect data<br />
+</li>
+</ol>
 <ul>
+<li>Is the data hand entered from paper forms?
+<ul>
+<li>How is the data entered/exported? File type?</li>
+<li>What funky formatting things does that software do?
+<ul>
+<li>Excel loves to <a href="https://www.theverge.com/2020/8/6/21355674/human-genes-rename-microsoft-excel-misreading-dates">autocorrect</a> numeric or character values to dates for example</li>
+</ul></li>
+</ul></li>
 <li>Is it online software?
 <ul>
 <li>If yes, is the data exported? What file type is exported?<br />
@@ -467,12 +478,12 @@ div.tocify {
 <li>Extract sample data to get a feel for all of this!</li>
 </ul></li>
 </ul>
-<div id="xnmuwifewo" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="awzdisadll" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#xnmuwifewo .gt_table {
+#awzdisadll .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -497,7 +508,7 @@ div.tocify {
   border-left-color: #D3D3D3;
 }
 
-#xnmuwifewo .gt_heading {
+#awzdisadll .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -509,7 +520,7 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#xnmuwifewo .gt_title {
+#awzdisadll .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -519,7 +530,7 @@ div.tocify {
   border-bottom-width: 0;
 }
 
-#xnmuwifewo .gt_subtitle {
+#awzdisadll .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -529,13 +540,13 @@ div.tocify {
   border-top-width: 0;
 }
 
-#xnmuwifewo .gt_bottom_border {
+#awzdisadll .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xnmuwifewo .gt_col_headings {
+#awzdisadll .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -550,7 +561,7 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#xnmuwifewo .gt_col_heading {
+#awzdisadll .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -570,7 +581,7 @@ div.tocify {
   overflow-x: hidden;
 }
 
-#xnmuwifewo .gt_column_spanner_outer {
+#awzdisadll .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -582,15 +593,15 @@ div.tocify {
   padding-right: 4px;
 }
 
-#xnmuwifewo .gt_column_spanner_outer:first-child {
+#awzdisadll .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#xnmuwifewo .gt_column_spanner_outer:last-child {
+#awzdisadll .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#xnmuwifewo .gt_column_spanner {
+#awzdisadll .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -602,7 +613,7 @@ div.tocify {
   width: 100%;
 }
 
-#xnmuwifewo .gt_group_heading {
+#awzdisadll .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -624,7 +635,7 @@ div.tocify {
   vertical-align: middle;
 }
 
-#xnmuwifewo .gt_empty_group_heading {
+#awzdisadll .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -639,15 +650,15 @@ div.tocify {
   vertical-align: middle;
 }
 
-#xnmuwifewo .gt_from_md > :first-child {
+#awzdisadll .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xnmuwifewo .gt_from_md > :last-child {
+#awzdisadll .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xnmuwifewo .gt_row {
+#awzdisadll .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -666,7 +677,7 @@ div.tocify {
   overflow-x: hidden;
 }
 
-#xnmuwifewo .gt_stub {
+#awzdisadll .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -678,7 +689,7 @@ div.tocify {
   padding-left: 12px;
 }
 
-#xnmuwifewo .gt_summary_row {
+#awzdisadll .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -688,7 +699,7 @@ div.tocify {
   padding-right: 5px;
 }
 
-#xnmuwifewo .gt_first_summary_row {
+#awzdisadll .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -698,7 +709,7 @@ div.tocify {
   border-top-color: #D3D3D3;
 }
 
-#xnmuwifewo .gt_grand_summary_row {
+#awzdisadll .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -708,7 +719,7 @@ div.tocify {
   padding-right: 5px;
 }
 
-#xnmuwifewo .gt_first_grand_summary_row {
+#awzdisadll .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -718,11 +729,11 @@ div.tocify {
   border-top-color: #D3D3D3;
 }
 
-#xnmuwifewo .gt_striped {
+#awzdisadll .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xnmuwifewo .gt_table_body {
+#awzdisadll .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -731,7 +742,7 @@ div.tocify {
   border-bottom-color: #D3D3D3;
 }
 
-#xnmuwifewo .gt_footnotes {
+#awzdisadll .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -745,13 +756,13 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#xnmuwifewo .gt_footnote {
+#awzdisadll .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#xnmuwifewo .gt_sourcenotes {
+#awzdisadll .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -765,41 +776,41 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#xnmuwifewo .gt_sourcenote {
+#awzdisadll .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#xnmuwifewo .gt_left {
+#awzdisadll .gt_left {
   text-align: left;
 }
 
-#xnmuwifewo .gt_center {
+#awzdisadll .gt_center {
   text-align: center;
 }
 
-#xnmuwifewo .gt_right {
+#awzdisadll .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xnmuwifewo .gt_font_normal {
+#awzdisadll .gt_font_normal {
   font-weight: normal;
 }
 
-#xnmuwifewo .gt_font_bold {
+#awzdisadll .gt_font_bold {
   font-weight: bold;
 }
 
-#xnmuwifewo .gt_font_italic {
+#awzdisadll .gt_font_italic {
   font-style: italic;
 }
 
-#xnmuwifewo .gt_super {
+#awzdisadll .gt_super {
   font-size: 65%;
 }
 
-#xnmuwifewo .gt_footnote_marks {
+#awzdisadll .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -838,24 +849,14 @@ div.tocify {
 </table>
 </div>
 <p><br></p>
-<ul>
-<li>Is the data hand entered from paper forms?
-<ul>
-<li>How is the data entered/exported? File type?</li>
-<li>What funky formatting things does that software do?
-<ul>
-<li>Excel loves to <a href="https://www.theverge.com/2020/8/6/21355674/human-genes-rename-microsoft-excel-misreading-dates">autocorrect</a> numeric or character values to dates for example</li>
-</ul></li>
-</ul></li>
-</ul>
 <ol start="2" style="list-style-type: decimal">
 <li>What software are we using to clean the data?
 <ul>
 <li>Is the software case sensitive?</li>
-<li>Does it have variable name limits?</li>
+<li>Does it have variable name character limits?</li>
 <li>Does it have other limitations on variable names (can’t start with a number)?</li>
 </ul></li>
-<li>What software do stakeholders plan to use to analyze the data? **Note we may not always know this, but if we do, we can try to accommodate this
+<li>What software do stakeholders plan to use to analyze the data? We may not always know this, but if we do, we can try to accommodate this
 <ul>
 <li>Is there a certain file type required for data import?
 <ul>
@@ -865,42 +866,44 @@ div.tocify {
 <ul>
 <li>Again with <a href="https://tutorials.methodsconsultants.com/posts/preparing-data-for-mplus/">Mplus</a>, it doesn’t allow blanks in a data file so all missing values need to be replaced with an actual value (ex: -99)</li>
 </ul></li>
-<li>With all this said, don’t just tailor your output clean file to a particular user. Depending on a users needs, you may export two clean files, one for that user and another general clean analysis file in a file type that will be accessible to anyone and is best for long term preservation. While we will talk more about this in later trainings around data sharing, non-proprietary data formats such as <a href="https://dmptool.org/general_guidance#file-formats">csv or txt</a> are best.</li>
+<li>With all this said, don’t just tailor your output clean file to a particular user. Depending on a users needs, you may export two clean files, one for that user and another general clean analysis file in a file type that will be accessible to anyone and is best for long term preservation. While we will talk more about this in later trainings around data sharing, <a href="https://dmptool.org/general_guidance#file-formats">non-proprietary data formats</a> such as csv or txt are best.</li>
 </ul></li>
 </ol>
 </div>
 <div id="consultation-with-stakeholders" class="section level3">
 <h3>Consultation with stakeholders</h3>
-<p>While everything above is absolutely imperative to the data cleaning process, this may actual be the most important step in developing a data cleaning plan. If you don’t know a) how your data is collected, and b) how researchers plan to analyze the data, you have no roadmap for data cleaning. This is where you learn things such as:</p>
+<p>While everything above is absolutely imperative to the data cleaning process, this may actual be the most important step in developing a data cleaning plan. If you don’t know a) how your data is collected, and b) how researchers plan to analyze the data, then you have no roadmap for data cleaning. This is where you learn things such as:</p>
 <ol style="list-style-type: decimal">
 <li>The types of data you will be receiving (survey, observation, assessment)</li>
 <li>What format it will be in (csv, xlsx, spss)</li>
-<li>How reliable is the data (will it be hand entered, is it collected by our team, is it coming from an outside source)</li>
-<li>What is the timeline? When should the data team expect to receive data?</li>
-<li>How do researchers intend to use the data</li>
-<li>Do researchers want their final data in long or wide form</li>
-<li>Do they need missing data coded in any specific way</li>
-<li>What file format do they need</li>
-<li>Any additional calculations or transformations that need to be done in the data</li>
-<li>Any other secondary data sources they want brought in to enhance the data</li>
-<li>What is the timeline for when researchers need clean data</li>
+<li>How reliable is the data (will it be hand entered, is it collected by your team, is it coming from an outside source)?</li>
+<li>What is the timeline? When should the data team expect to receive data? You can document this in a data cleaning timeline/data accounting spreadsheet.</li>
+<li>How do researchers intend to use the data?</li>
+<li>Do researchers want their final data in long or wide form?</li>
+<li>Do they need missing data coded in any specific way?</li>
+<li>What file format do they need?</li>
+<li>Any additional calculations or transformations that need to be done in the data?</li>
+<li>Any other secondary data sources they want brought in to enhance the data?</li>
+<li>What is the timeline for when researchers need clean data? You can document this in a data cleaning timeline/data accounting spreadsheet.</li>
 </ol>
-<p>This initial meeting with stakeholders, prior to data collection or even prior to building data collection tools, is a great time to start your documentation. This should not just be one initial meeting though. While the PIs may only need to be brought in at the beginning, a data manager should meet with the coordinators more frequently to monitor changes to the data collection instruments, any new measures added, changes in data collection protocol, any anticipated hiccups. After data is cleaned, data teams should consider having data reviews with project coordinators to cover what data issues were encountered and what could we have done better.</p>
+<p><img src="img/data-accounting.PNG" width="75%" style="display: block; margin: auto;" /></p>
+<p>Source: <a href="https://files.eric.ed.gov/fulltext/ED583982.pdf">Data accounting spreadsheet</a> from Aleata Hubbard</p>
+<p>This initial meeting with stakeholders, prior to data collection or even prior to building data collection tools, is a great time to start your documentation. This should not just be one initial meeting though. While the PIs may only need to be brought in at the beginning, a data manager should meet with the coordinators more frequently to monitor changes to the data collection instruments, any new measures added, changes in data collection protocol, or any unanticipated hiccups. Any updates should be documented in things such as protocols, codebooks, data dictionaries, or a data cleaning timeline. After data is cleaned, data teams should consider having data reviews with project coordinators to cover what data issues were encountered and what could the team have done better.</p>
 <hr />
 </div>
 </div>
 <div id="data-structure" class="section level2">
-<h2>Data Structure</h2>
+<h2>Data structure</h2>
 <hr />
 <p>Before we can start writing our data cleaning plan, we need to understand what structure we need our data to be in for analysis.</p>
 <p>In the world of quantitative education research, we are most likely trying to create rectangular datasets (rows and columns), rather than having data in text files, video recordings, xml, etc. Even in qualitative research, we are often wrangling data to be in a format that is analyzable and allows categorization.</p>
-<p>The two ways data will need to be structured for the field of education are wide or long. The simplest way to think about wide is that all data collected on a unique participant will be in one row. The easiest scenario to see this is with repeated measure data. If we collect a survey on participants in wave 1 and 2, those waves of data will all be in the same row (merged together) and each wave of data collection will be appended to a variable name to create unique variable names.</p>
-<div id="gqeidohzkl" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<p>The two ways data will need to be structured for the field of education are wide or long. The simplest way to think about wide is that all data collected on a unique participant will be in one row. The easiest scenario to see this is with repeated measure data. If we collect a survey on participants in wave 1 and 2, those waves of data will all be in the same row (merged/joined together) and each wave of data collection will be appended to a variable name to create unique variable names.</p>
+<div id="yclacbwrco" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#gqeidohzkl .gt_table {
+#yclacbwrco .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -925,7 +928,7 @@ div.tocify {
   border-left-color: #D3D3D3;
 }
 
-#gqeidohzkl .gt_heading {
+#yclacbwrco .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -937,7 +940,7 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#gqeidohzkl .gt_title {
+#yclacbwrco .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -947,7 +950,7 @@ div.tocify {
   border-bottom-width: 0;
 }
 
-#gqeidohzkl .gt_subtitle {
+#yclacbwrco .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -957,13 +960,13 @@ div.tocify {
   border-top-width: 0;
 }
 
-#gqeidohzkl .gt_bottom_border {
+#yclacbwrco .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#gqeidohzkl .gt_col_headings {
+#yclacbwrco .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -978,7 +981,7 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#gqeidohzkl .gt_col_heading {
+#yclacbwrco .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -998,7 +1001,7 @@ div.tocify {
   overflow-x: hidden;
 }
 
-#gqeidohzkl .gt_column_spanner_outer {
+#yclacbwrco .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1010,15 +1013,15 @@ div.tocify {
   padding-right: 4px;
 }
 
-#gqeidohzkl .gt_column_spanner_outer:first-child {
+#yclacbwrco .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#gqeidohzkl .gt_column_spanner_outer:last-child {
+#yclacbwrco .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#gqeidohzkl .gt_column_spanner {
+#yclacbwrco .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1030,7 +1033,7 @@ div.tocify {
   width: 100%;
 }
 
-#gqeidohzkl .gt_group_heading {
+#yclacbwrco .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1052,7 +1055,7 @@ div.tocify {
   vertical-align: middle;
 }
 
-#gqeidohzkl .gt_empty_group_heading {
+#yclacbwrco .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1067,15 +1070,15 @@ div.tocify {
   vertical-align: middle;
 }
 
-#gqeidohzkl .gt_from_md > :first-child {
+#yclacbwrco .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#gqeidohzkl .gt_from_md > :last-child {
+#yclacbwrco .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#gqeidohzkl .gt_row {
+#yclacbwrco .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1094,7 +1097,7 @@ div.tocify {
   overflow-x: hidden;
 }
 
-#gqeidohzkl .gt_stub {
+#yclacbwrco .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1106,7 +1109,7 @@ div.tocify {
   padding-left: 12px;
 }
 
-#gqeidohzkl .gt_summary_row {
+#yclacbwrco .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1116,7 +1119,7 @@ div.tocify {
   padding-right: 5px;
 }
 
-#gqeidohzkl .gt_first_summary_row {
+#yclacbwrco .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1126,7 +1129,7 @@ div.tocify {
   border-top-color: #D3D3D3;
 }
 
-#gqeidohzkl .gt_grand_summary_row {
+#yclacbwrco .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1136,7 +1139,7 @@ div.tocify {
   padding-right: 5px;
 }
 
-#gqeidohzkl .gt_first_grand_summary_row {
+#yclacbwrco .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1146,11 +1149,11 @@ div.tocify {
   border-top-color: #D3D3D3;
 }
 
-#gqeidohzkl .gt_striped {
+#yclacbwrco .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#gqeidohzkl .gt_table_body {
+#yclacbwrco .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1159,7 +1162,7 @@ div.tocify {
   border-bottom-color: #D3D3D3;
 }
 
-#gqeidohzkl .gt_footnotes {
+#yclacbwrco .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1173,13 +1176,13 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#gqeidohzkl .gt_footnote {
+#yclacbwrco .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#gqeidohzkl .gt_sourcenotes {
+#yclacbwrco .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1193,41 +1196,41 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#gqeidohzkl .gt_sourcenote {
+#yclacbwrco .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#gqeidohzkl .gt_left {
+#yclacbwrco .gt_left {
   text-align: left;
 }
 
-#gqeidohzkl .gt_center {
+#yclacbwrco .gt_center {
   text-align: center;
 }
 
-#gqeidohzkl .gt_right {
+#yclacbwrco .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#gqeidohzkl .gt_font_normal {
+#yclacbwrco .gt_font_normal {
   font-weight: normal;
 }
 
-#gqeidohzkl .gt_font_bold {
+#yclacbwrco .gt_font_bold {
   font-weight: bold;
 }
 
-#gqeidohzkl .gt_font_italic {
+#yclacbwrco .gt_font_italic {
   font-style: italic;
 }
 
-#gqeidohzkl .gt_super {
+#yclacbwrco .gt_super {
   font-size: 65%;
 }
 
-#gqeidohzkl .gt_footnote_marks {
+#yclacbwrco .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -1267,12 +1270,12 @@ div.tocify {
 </div>
 <p><br></p>
 <p>In long data, a participant can repeat in your dataset. Again, the most straight forward way to think about this is with repeated measure data, where each row will be a new time point for a participant. This is often called appending data. In this scenario, we no longer need to append the data collection wave to variable names. However, we would need to add a time period variable to denote the wave associated with each row of data.</p>
-<div id="msmeywqyqm" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="ehycokrzvk" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#msmeywqyqm .gt_table {
+#ehycokrzvk .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1297,7 +1300,7 @@ div.tocify {
   border-left-color: #D3D3D3;
 }
 
-#msmeywqyqm .gt_heading {
+#ehycokrzvk .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1309,7 +1312,7 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#msmeywqyqm .gt_title {
+#ehycokrzvk .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1319,7 +1322,7 @@ div.tocify {
   border-bottom-width: 0;
 }
 
-#msmeywqyqm .gt_subtitle {
+#ehycokrzvk .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1329,13 +1332,13 @@ div.tocify {
   border-top-width: 0;
 }
 
-#msmeywqyqm .gt_bottom_border {
+#ehycokrzvk .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#msmeywqyqm .gt_col_headings {
+#ehycokrzvk .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1350,7 +1353,7 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#msmeywqyqm .gt_col_heading {
+#ehycokrzvk .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1370,7 +1373,7 @@ div.tocify {
   overflow-x: hidden;
 }
 
-#msmeywqyqm .gt_column_spanner_outer {
+#ehycokrzvk .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1382,15 +1385,15 @@ div.tocify {
   padding-right: 4px;
 }
 
-#msmeywqyqm .gt_column_spanner_outer:first-child {
+#ehycokrzvk .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#msmeywqyqm .gt_column_spanner_outer:last-child {
+#ehycokrzvk .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#msmeywqyqm .gt_column_spanner {
+#ehycokrzvk .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1402,7 +1405,7 @@ div.tocify {
   width: 100%;
 }
 
-#msmeywqyqm .gt_group_heading {
+#ehycokrzvk .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1424,7 +1427,7 @@ div.tocify {
   vertical-align: middle;
 }
 
-#msmeywqyqm .gt_empty_group_heading {
+#ehycokrzvk .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1439,15 +1442,15 @@ div.tocify {
   vertical-align: middle;
 }
 
-#msmeywqyqm .gt_from_md > :first-child {
+#ehycokrzvk .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#msmeywqyqm .gt_from_md > :last-child {
+#ehycokrzvk .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#msmeywqyqm .gt_row {
+#ehycokrzvk .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1466,7 +1469,7 @@ div.tocify {
   overflow-x: hidden;
 }
 
-#msmeywqyqm .gt_stub {
+#ehycokrzvk .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1478,7 +1481,7 @@ div.tocify {
   padding-left: 12px;
 }
 
-#msmeywqyqm .gt_summary_row {
+#ehycokrzvk .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1488,7 +1491,7 @@ div.tocify {
   padding-right: 5px;
 }
 
-#msmeywqyqm .gt_first_summary_row {
+#ehycokrzvk .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1498,7 +1501,7 @@ div.tocify {
   border-top-color: #D3D3D3;
 }
 
-#msmeywqyqm .gt_grand_summary_row {
+#ehycokrzvk .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1508,7 +1511,7 @@ div.tocify {
   padding-right: 5px;
 }
 
-#msmeywqyqm .gt_first_grand_summary_row {
+#ehycokrzvk .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1518,11 +1521,11 @@ div.tocify {
   border-top-color: #D3D3D3;
 }
 
-#msmeywqyqm .gt_striped {
+#ehycokrzvk .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#msmeywqyqm .gt_table_body {
+#ehycokrzvk .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1531,7 +1534,7 @@ div.tocify {
   border-bottom-color: #D3D3D3;
 }
 
-#msmeywqyqm .gt_footnotes {
+#ehycokrzvk .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1545,13 +1548,13 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#msmeywqyqm .gt_footnote {
+#ehycokrzvk .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#msmeywqyqm .gt_sourcenotes {
+#ehycokrzvk .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1565,41 +1568,41 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#msmeywqyqm .gt_sourcenote {
+#ehycokrzvk .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#msmeywqyqm .gt_left {
+#ehycokrzvk .gt_left {
   text-align: left;
 }
 
-#msmeywqyqm .gt_center {
+#ehycokrzvk .gt_center {
   text-align: center;
 }
 
-#msmeywqyqm .gt_right {
+#ehycokrzvk .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#msmeywqyqm .gt_font_normal {
+#ehycokrzvk .gt_font_normal {
   font-weight: normal;
 }
 
-#msmeywqyqm .gt_font_bold {
+#ehycokrzvk .gt_font_bold {
   font-weight: bold;
 }
 
-#msmeywqyqm .gt_font_italic {
+#ehycokrzvk .gt_font_italic {
   font-style: italic;
 }
 
-#msmeywqyqm .gt_super {
+#ehycokrzvk .gt_super {
   font-size: 65%;
 }
 
-#msmeywqyqm .gt_footnote_marks {
+#ehycokrzvk .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -1647,11 +1650,12 @@ div.tocify {
 </div>
 <p><br></p>
 <p>There are different reasons for constructing your data one way or another. For example, repeated measure procedures typically require data to be in wide format, where the unit of analysis is the subject. While mixed model procedures typically required data to be in long format, where the unit of analysis is each measurement for the subject.</p>
-<p>The thing is, it is <strong>very</strong> easy to restructure data from one way to another. So my opinion is, the easiest way to manage data is to not merge data until you have to. It is much simpler, in terms of data management and syntax writing, to keep variable names consistent over time.</p>
-<ul>
-<li>Don’t merge your data files together until you absolutely need to (you need it or someone requests it). * Don’t append any time periods to variable names or add a time variable to your data until you have to (this can all be added very easily in your syntax). You will know what time period is associated with the data file based on the file name and storage location.</li>
-</ul>
-<p>Once someone requests data or you need it for your own purposes, then you can add a time variable or append time to variables. Just make sure to ask the requestor what format they want their data in.</p>
+<p>The thing is, it is <strong>very</strong> easy to restructure data from one way to another. So my opinion is, the easiest way to manage data is to:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Don’t merge data until you have to. It is much simpler, in terms of data management and syntax writing, to keep variable names consistent over time.</p></li>
+<li><p>Don’t append any time periods to variable names or add a time variable to your data until you have to (this can all be added very easily in your syntax). You will know what time period is associated with the data file based on the file name and storage location.</p></li>
+</ol>
+<p>Once someone requests data or you need it for your own purposes, then you can add a time variable or append time to variable names as needed, and merge or append data across time. Just make sure to ask the requester what format they want their data in.</p>
 <p>📑 The Analysis Factor has a great <a href="https://www.theanalysisfactor.com/wide-and-long-data/">blog post</a> on things to consider when choosing between long and wide format.</p>
 <p><br></p>
 <div id="merging-across-forms" class="section level3">
@@ -1660,8 +1664,8 @@ div.tocify {
 <p><br></p>
 </div>
 <div id="tidy-data" class="section level3">
-<h3>Tidy Data</h3>
-<p>I of course, can not pass over the topic of tidy data here. The term is ubiquitous in the world of data and since I plan to use R for data wrangling in later modules, tidy data needs to be covered. Tidy data, defined by <a href="https://www.jstatsoft.org/article/view/v059i10">Hadley Wickham</a>, meets very specific conditions which are:</p>
+<h3>Tidy data</h3>
+<p>I of course, cannot pass over the topic of tidy data here. The term is ubiquitous in the world of data and since I plan to use R for data wrangling in later modules, tidy data needs to be covered. Tidy data, defined by <a href="https://www.jstatsoft.org/article/view/v059i10">Hadley Wickham</a>, meets very specific conditions which are:</p>
 <ol style="list-style-type: decimal">
 <li>Each variable forms a column</li>
 <li>Each observation forms a row</li>
@@ -1677,8 +1681,8 @@ div.tocify {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="center"><img src="img/not-tidy-data.PNG" /></td>
-<td align="center"><img src="img/tidy-data.PNG" /></td>
+<td align="center"><img src="img/not-tidy-data2.PNG" /></td>
+<td align="center"><img src="img/tidy-data2.PNG" /></td>
 </tr>
 </tbody>
 </table>
@@ -1726,7 +1730,7 @@ div.tocify {
 </tr>
 </tbody>
 </table>
-<p>Just be prepared because while you may put in the planning to collect organized data, many of the secondary datasets you use will not be organized in a nice rectangle for you. But don’t worry! You can transform the dataset on the left into the one on the right with a little patience, planning, and syntax. You can find more examples of non-rectangular data from Karl Broman <a href="https://kbroman.org/dataorg/pages/rectangle.html">here</a>.</p>
+<p>Just be prepared because while you may put in the planning to collect organized data, many of the secondary datasets you use will not be organized in a nice rectangle for you. But don’t worry! You can transform the dataset on the left into the one on the right with a little patience, planning, and code. You can find more examples of non-rectangular data from Karl Broman <a href="https://kbroman.org/dataorg/pages/rectangle.html">here</a>.</p>
 <ol start="3" style="list-style-type: decimal">
 <li>Don’t use font color or highlighting as data
 <ul>
@@ -1754,24 +1758,171 @@ div.tocify {
 <p><br></p>
 </div>
 <div id="final-datasets" class="section level3">
-<h3>Final Datasets</h3>
+<h3>Final datasets</h3>
 <p>In the end, what you will most likely want is one dataset per participant entity (school dataset, teacher dataset, student dataset). And if you plan to link these together, you will need to make sure you are able to do that through your ID schema.</p>
-<p><img src="img/id_schema.PNG" width="65%" style="display: block; margin: auto;" /></p>
+<p><img src="img/id_schema.PNG" width="75%" style="display: block; margin: auto;" /></p>
 <hr />
 </div>
 </div>
 <div id="data-cleaning-steps" class="section level2">
-<h2>Data Cleaning Steps</h2>
+<h2>Data cleaning steps</h2>
 <hr />
-<p>Our role as data managers is not to think of every possible iteration of how an analyst/researcher may want their data or every variable they may need. However, it is our role to reduce the amount of work required to get that data into an analyzable format. Below I lay out some of the go-to steps I like to add to a data cleaning plan and the reasoning behind why I think they are important.</p>
-<p>First rule: Never touch the raw data. You never know when you will make an error and need to return to the the uncorrected data file. <a href="https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/0012-9623-90.2.205" class="uri">https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/0012-9623-90.2.205</a> Second rule: Keep everything (except variables that are identifying and completely unnecessary for project) both item level and aggregated data</p>
-<p>📑 Jeff Leek has a great <a href="https://simplystatistics.org/2019/05/29/research-quality-data-and-research-quality-databases/">blog post</a> on creating research quality datasets.</p>
+<p>Our role as data managers is not to think of every possible iteration of how an analyst/researcher may want their data or every variable they may need. However, it is our role to reduce the amount of work required to get that data into an analyzable format. <a href="https://towardsdatascience.com/the-ultimate-guide-to-data-cleaning-3969843991d4">Omar Elgarby</a> wrote that “Quality data beats fancy algorithms”.</p>
+<p>Clean data should be:</p>
+<ul>
+<li>Valid<br />
+</li>
+<li>Accurate<br />
+</li>
+<li>Complete<br />
+</li>
+<li>Consistent<br />
+</li>
+<li>Uniform</li>
+</ul>
+<p>Below I lay out some of the go-to steps I like to add to a data cleaning plan and the reasoning behind why I think they are important.</p>
+<div id="global-rules" class="section level3">
+<h3>Global rules</h3>
+<p>First, some global rules:</p>
+<p><strong>First rule</strong>: Never touch the raw data. You never know when you will make an error and need to return to the the uncorrected data file.</p>
+<p>Resources:</p>
+<p>📑 <a href="https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/0012-9623-90.2.205">Effective Data Management</a><br />
+📑 <a href="https://docs.google.com/document/d/1u8o5jnWk0Iqp_J06PTu5NjBfVsdoPbBhstht6W0fFp0/edit#heading=h.xmrpyhv1y68j">Psych Technical Specification</a><br />
+<a href="https://docs.google.com/document/d/1GfIo67-wqq-26ZG9etar5tiKKYLLqWCra8jySolAK7Y/edit"></a></p>
+<p><strong>Second rule</strong>: Keep everything (except variables that are identifying and completely unnecessary for project). Keep both item level and aggregated variables, recoded and original variables.</p>
+<p><strong>Third rule</strong>: Always de-identify the clean/analysis data. Ensure your study ID is in the data and is accurate, then remove all PII (name, SSN, email, DOB, school name, parent name, IP address, etc.).</p>
+<p><img src="img/analysis_dataset.PNG" width="90%" style="display: block; margin: auto;" /></p>
+<p>Source: <a href="https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf">J-PAL</a></p>
+</div>
+<div id="data-cleaning-steps-1" class="section level3">
+<h3>Data cleaning steps</h3>
+<p>While this is not a comprehensive list of every possible data cleaning step you will need for your unique dataset and the questions your stakeholders need to answer, these are common steps that typically apply to all data in some way. You may need more or less steps depending on your data. Also, while these steps are presented in a logical order, they do not all need to happen in this order.</p>
+<ol style="list-style-type: decimal">
+<li>Read in data
+<ul>
+<li>Whether this is one file from a folder on your computer, or multiple files, or calling data from an API</li>
+</ul></li>
+<li>Review your data
+<ul>
+<li>Rows, columns, values, missing data</li>
+<li>Check your number of cases against your participant tracking</li>
+<li>Check your columns against your data dictionary</li>
+</ul></li>
+<li>Remove any duplicate cases, cases who are not consented in your study
+<ul>
+<li>Check your protocol for removing duplicate responses</li>
+<li>If you are missing cases that are tracked as complete, work with the project coordinator to locate that data</li>
+</ul></li>
+<li>If your data does not already contain a study ID, read in a roster from your participant tracking and join your roster with your data</li>
+<li>Drop all unimportant columns (not in data dictionary) and any identifying columns (name, email, etc.)</li>
+<li>Split columns as needed
+<ul>
+<li>Remember the rule, “Put just one things in a cell”
+<ul>
+<li>If a column allowed people to indicate multiple responses, those responses may need to be split out into multiple columns or rows</li>
+</ul></li>
+</ul></li>
+<li>Rename columns to match your data dictionary</li>
+<li>Check variable classes/type and update as needed
+<ul>
+<li>Convert string to numeric for example</li>
+</ul></li>
+<li>Transform/Normalize variables
+<ul>
+<li>Remove symbols from columns such as % or $</li>
+<li>Remove white space from strings</li>
+</ul></li>
+<li>Standardize
+<ul>
+<li>Make sure all of your variables are measured the same way within your dataset and the same way across time</li>
+<li>Rescale variables</li>
+<li>Collapse open ended variables into categorical variables (ex: school a, SchoolA, school b, School B, into School A, School B)</li>
+</ul></li>
+<li>Recode variables
+<ul>
+<li>If you know all missing values in a column are actual not missing and should be zero, recode NA to 0</li>
+<li>Reverse code likert scale variables</li>
+</ul></li>
+<li>Calculate variables laid out in the data dictionary
+<ul>
+<li>Create sum and mean scores</li>
+<li>Create any necessary standardized scores</li>
+<li>Collapse existing variable/s into a new variable</li>
+</ul></li>
+<li>Add missing data values as needed
+<ul>
+<li>Add your missing value schema (-99 = skipped, -98 = not applicable, etc.)</li>
+</ul></li>
+<li>Validate data
+<ul>
+<li>Adding <a href="https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/0012-9623-90.2.205">flags</a> (columns that identify issues in a row) can be helpful
+<ul>
+<li>Flags for completed or partially completed measure (0=complete, 1=partial)</li>
+</ul></li>
+<li>Flag rows with issues (1 = issues, 0 = no issue)
+<ul>
+<li>Values out of range
+<ul>
+<li>Boundaries of var1 is 0-10 and you find a 15</li>
+</ul></li>
+<li>Do cross validation for impossible values
+<ul>
+<li>age and grade level - a child age 8 says they are in grade 12</li>
+<li>is the gender in one file, different than the gender in another file?</li>
+</ul></li>
+</ul></li>
+<li>Do the study IDs we have all fall within the list of IDs we have for our study?
+<ul>
+<li>This is a chance to check that an ID wasn’t entered incorrectly</li>
+</ul></li>
+</ul></li>
+<li>Transform data (wide to long or long to wide)</li>
+<li>Merge and/or append data as needed
+<ul>
+<li>Again do validation checks, do you have the correct number of rows and columns after the merge?</li>
+</ul></li>
+<li>Add metadata
+<ul>
+<li>Variable labels and value labels</li>
+</ul></li>
+<li>Export clean data</li>
+</ol>
+<p>Resources:</p>
+<p>📑 Aleata Hubbard has a <a href="http://evalu-ate.org/blog/hubbard-sep2016/">blog post</a> on six data cleaning checks<br />
+📑 Jeff Leek also has a great <a href="https://simplystatistics.org/2019/05/29/research-quality-data-and-research-quality-databases/">blog post</a> on creating research quality datasets.<br />
+📑 <a href="https://cran.r-project.org/doc/contrib/de_Jonge+van_der_Loo-Introduction_to_data_cleaning_with_R.pdf">An Introduction to data cleaning with R</a><br />
+📑 <a href="https://figshare.com/articles/preprint/The_Basics_of_Data_Management/13215350/1">The Basics of Data Management</a></p>
 <hr />
+</div>
 </div>
 <div id="reproducible-syntax" class="section level2">
 <h2>Reproducible Syntax</h2>
 <hr />
-<p>Over the years I have seen researchers manually clean code….</p>
+<p>Over the years I have seen researchers manually clean data in programs like Excel and in every scenario I can think of, it’s a bad idea for the following for two major reasons: a) It is not reproducible, b) It leads to errors, and c) It is time consuming. My recommendation is to clean your data, no matter how small the task, with syntax. Even if you use a graphical user interace (GUI) program like SPSS (point and click), you need to log every move you make in that program and paste the code into a syntax file. Syntax files allow you to have a record of every transformation you make from the raw data to your clean data. While writing syntax may seem time consuming up, it helps you to be more thoughtful in your data cleaning process and it can save you an enormous amount of time in the future if you plan to clean data with the same features multiple times (in say a longitudinal study).</p>
+<p>You can use whatever program you want to write syntax (<a href="https://openrefine.org/documentation.html">OpenRefine</a>, <a href="https://www.r-project.org/">R</a>, <a href="https://www.stata.com/">Stata</a>, <a href="https://www.ibm.com/products/spss-statistics">SPSS</a>, <a href="https://www.sas.com/en_us/curiosity.html?utm_source=other&amp;utm_medium=cpm&amp;utm_campaign=non-cbo-us&amp;dclid=&amp;gclid=Cj0KCQjw5JSLBhCxARIsAHgO2SffrjNAWQsn0f4F2czIb-P-daG2oVq1TC4DF6dEaxTB0Nl6MjE-BwAaAtQrEALw_wcB">SAS</a>, <a href="https://en.wikipedia.org/wiki/SQL">SQL</a>, etc.). If you review the trainings available through Data Carpentry(<a href="https://datacarpentry.org/lessons/" class="uri">https://datacarpentry.org/lessons/</a>) you’ll see that most of their data management workshops use SQL, OpenRefine, R, or Python (all open source).</p>
+<p>If I haven’t sold you on using syntax yet, here are a few <strong>horror stories</strong> of manually cleaning data (based off of real life events):</p>
+<ol style="list-style-type: decimal">
+<li>Working with a partner who sends you clean data, you find three small errors in the data they sent us.
+<ol style="list-style-type: lower-alpha">
+<li>One variable had been named incorrectly<br />
+</li>
+<li>One sum variable had been calculated incorrectly<br />
+</li>
+<li>One variable was missing value labels</li>
+</ol></li>
+</ol>
+<p>These all seemed like quick changes you could make very easily in a point and click interface, so you did. Then you saved that dataset as the final clean dataset. However, a month later, your partner found an error in the data they sent you, and they sent you a revised clean dataset.</p>
+<p>This is the process you had to go through:</p>
+<ul>
+<li><p>You did <em>not</em> document the changes you made to the prior dataset (either via syntax or even in a README_versioning file). Therefore, you had to do your best to remember what changes you had made to see if you needed to make them again, potentially leaving errors in the data if you forgot a step.</p></li>
+<li><p>After checking the data and discovering that the changes you had previously made to the data had still not been corrected in this new file, you had to make all the changes to the new data <strong>again</strong>. This time, you write all the updates in syntax! This allows you to document your changes, as well as saves you from having to re-do all of your point and click work again in the future if you ever received another updated file. You can just run your syntax in a matter of seconds.</p></li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li><p>You download two Excel files that need to be appended (they have the same variables). In an attempt to move quickly, you decide to append the files by cutting all the rows from one file and pasting them below the rows of the other file. You then save this data as your complete dataset. At a later point when you are running some descriptive summaries on the data, you notice ranges for some of your variables are incorrect. You go back to your two original files (luckily you saved both original files as “raw” data). You do some detective work and discover that the order of the columns in each file are not identical so when you pasted data from one file to the other, the values did not correctly align. To correct this, you write syntax where you bind the two raw data files using a function that matches files based on column names.</p></li>
+<li><p>A school district sends you a data file that you have requested. You <em>know</em> you only need this data for a one time report so you decide to start doing your manipulations in the raw data, by hand. You save this data, use it for your report, and then plan to never see it again. A year later, your coworker actually needs that data for another report. When that coworker starts digging around in the data, they find errors (values out of range and so forth). However, with no documentation of your changes, no syntax, and no raw data, there is no way to know how to fix the data. The data is rendered useless.</p></li>
+</ol>
+<p>Resource:</p>
+<p>📑 <a href="https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/0012-9623-90.2.205">Effective Data Management</a></p>
 </div>
 
 
