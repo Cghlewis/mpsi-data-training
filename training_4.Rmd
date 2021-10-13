@@ -99,21 +99,21 @@ I know what you may be thinking here. Earlier I said that the interpretation of 
 Become familiar with the following:
 
 1. The tools used to collect data  
-  - Is the data hand entered from paper forms?
-    - How is the data entered/exported? File type?
-    - What funky formatting things does that software do?
-      - Excel loves to [autocorrect](https://www.theverge.com/2020/8/6/21355674/human-genes-rename-microsoft-excel-misreading-dates) numeric or character values to dates for example
-  - Is it online software?  
-    - If yes, is the data exported? What file type is exported?  
-    - Can you connect to the data through other means (ex: API)?  
-    - How are values coded (numeric or words)?  
-    - How are missing values coded?  
-    - What are the additional variables this software adds to an export file that we don't need for our clean data?  
-    - How are "select all" questions exported?  
-      - For example I know when Qualtrics collects data from a "select all" question
-        a) the data will export in multiple columns like the question below where we asked, "Which tools do you use for remote teaching?"
-        b) Yes will be coded as 1 and No will be exported as NAs
-    - Extract sample data to get a feel for all of this!  
+    - Is the data hand entered from paper forms?
+      - How is the data entered/exported? File type?
+      - What funky formatting things does that software do?
+        - Excel loves to [autocorrect](https://www.theverge.com/2020/8/6/21355674/human-genes-rename-microsoft-excel-misreading-dates) numeric or character values to dates for example
+    - Is it online software?  
+      - If yes, is the data exported? What file type is exported?  
+      - Can you connect to the data through other means (ex: API)?  
+      - How are values coded (numeric or words)?  
+      - How are missing values coded?  
+      - What are the additional variables this software adds to an export file that we don't need for our clean data?  
+      - How are "select all" questions exported?  
+        - For example I know when Qualtrics collects data from a "select all" question
+          a) the data will export in multiple columns like the question below where we asked, "Which tools do you use for remote teaching?"
+          b) Yes will be coded as 1 and No will be exported as NAs
+      - Extract sample data to get a feel for all of this!  
       
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='10%', out.height= '50%'}
 
