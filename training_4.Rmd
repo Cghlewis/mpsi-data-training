@@ -176,7 +176,7 @@ This initial meeting with stakeholders, prior to data collection or even prior t
 
 Before we can start writing our data cleaning plan, we need to understand what structure we need our data to be in for analysis. 
 
-In the world of quantitative education research, we are most likely trying to create rectangular datasets (rows and columns), rather than having data in text files, video recordings, xml, etc. Even in qualitative research, we are often wrangling data to be in a format that is analyzable and allows categorization.
+In the world of quantitative education research, we are most likely trying to create rectangular datasets (rows and columns) that are machine readable, rather than having data in text files (ex:pdf), video recordings, xml, etc. Even in qualitative research, we are often wrangling data to be in a format that is analyzable and allows categorization. 
 
 The two ways data will need to be structured for the field of education are wide or long. The simplest way to think about wide is that all data collected on a unique participant will be in one row. The easiest scenario to see this is with repeated measure data. If we collect a survey on participants in wave 1 and 2, those waves of data will all be in the same row (merged/joined together) and each wave of data collection will be appended to a variable name to create unique variable names.
 
@@ -398,7 +398,8 @@ While this is not a comprehensive list of every possible data cleaning step you 
     + Again do validation checks, do you have the correct number of rows and columns after the merge?
 17. Add metadata
     + Variable labels and value labels
-18. Export clean data
+18. Export clean data to a specified format (.csv, .tsv, .xlsx, .sav, etc.)
+    + Again, review recommendations for best formats for [long-term data storage]((https://dmptool.org/general_guidance#file-formats))
     
 
 Resources:
