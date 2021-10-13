@@ -87,7 +87,7 @@ A lot of data literacy also relies on domain knowledge or [ghost knowledge](http
 
   + There are school districts we work with that send us student level discipline data (ex: number of OSS or ISS referrals). They do not have codebooks or data dictionaries for these data. However, I know from working with these districts and having conversations with them, that if there are no referrals for a student, they leave a cell blank (rather than enter a zero). If I did not have this domain knowledge, I would assume the information is simply missing.
 
-   + Similarly, I know from working with certain districts as well as state education agencies and having conversations with them, that how state test scores are collected or scored have changed across years (state and district). Again, most of these agencies don't usually have codebooks or data dictionaries but I have learned this through conversations and by noticing differences in score ranges over time.
+   + Similarly, I know from working with certain districts as well as state education agencies and having conversations with them, that how test scores are collected or scored have changed across years. Again, most of these agencies don't usually have codebooks or data dictionaries but I have learned this through conversations and by noticing differences in score ranges over time.
    
    + Again, from working with districts and states, I know to prepare for inconsistencies in data. I've seen variable names change over time. I've also seen the variables collected change over time. And sometimes, across time, variables with the exact same name are no longer measuring the same thing (another reason why documentation is so important).
 
@@ -267,7 +267,7 @@ Important guidelines to follow:
 |:--------------------------:|:-----------:|
 |![](img/not-rectangle.png)  |![](img/rectangle.png)|
 
-Just be prepared because while you may put in the planning to collect organized data, many of the secondary datasets you use will not be organized in a nice rectangle for you. But don't worry! You can transform the dataset on the left into the one on the right with a little patience, planning, and code. You can find more examples of non-rectangular data from Karl Broman [here](https://kbroman.org/dataorg/pages/rectangle.html).
+Just be prepared because while you may put in the planning to collect organized data, many of the secondary datasets you use may not be organized in a nice rectangle for you. But don't worry! You can transform the dataset on the left into the one on the right with a little patience, planning, and code. You can find more examples of non-rectangular data from Karl Broman [here](https://kbroman.org/dataorg/pages/rectangle.html).
 
 3. Don't use font color or highlighting as data  
     + If you want to flag data as suspicious, add a variable to indicate that
@@ -275,6 +275,14 @@ Just be prepared because while you may put in the planning to collect organized 
 |Highlight            |  No highlight|
 |:--------------------------:|:-----------:|
 |![](img/highlight.png)  |![](img/no-highlight.png)|
+
+4. Don't leave empty cells
+    + If a cell is actually missing data, make sure it contains something to denote the absence of data (ex: NA) to show that the cell was not left blank unintentionally
+    + If a cell is empty because it is "implied" to be the same value as above, fill that cell with the actual data
+    
+|Empty          |  Not empty|
+|:--------------------------:|:-----------:|
+|![](img/empty.png)  |![](img/not-empty.png)|
 
 Resources:
 

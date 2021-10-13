@@ -259,6 +259,7 @@ If you end up having to use paper forms to collect any of your data and need to 
    📑 Reynolds and Schatsnieder from Florida State University have some great suggestions [here](https://figshare.com/articles/preprint/The_Basics_of_Data_Management/13215350/1) for setting up a data entry station and protocol for any manual data entry that needs to occur.  
    📑 Data Management Episode 1 and 2 of [Within and Between](http://www.withinandbetweenpod.com/) podcast has some great examples of how to set up data entry protocol.  
    📑 While I haven't read [The Practice of Survey Research](https://methods.sagepub.com/Book/the-practice-of-survey-research), it looks to have an entire chapter devoted to data entry that may be worth reading
+   📑 Read [Data Organization in Spreadsheets](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989) to understand how data should and should not be organized if you use a spreadsheet tool for data entry.
 
 ---
 
