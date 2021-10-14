@@ -373,29 +373,35 @@ While this is not a comprehensive list of every possible data cleaning step you 
 10. Standardize
     + Make sure all of your variables are measured the same way within your dataset and the same way across time
     + Rescale variables
-    + Collapse open ended variables into categorical variables (ex: school a, SchoolA, school b, School B, into School A, School B)
+    + Collapse open ended variables into categorical variables 
+      - Ex: school a, SchoolA, school b, School B --> School A, School B
 11. Recode variables
     + If you know all missing values in a column are actual not missing and should be zero, recode NA to 0
     + Reverse code likert scale variables
 12. Calculate variables laid out in the data dictionary
     + Create sum and mean scores
-    + Create any necessary standardized scores
+    + Create standardized scores
     + Collapse existing variable/s into a new variable
 13. Add missing data values as needed
     + Add your missing value schema (-99 = skipped, -98 = not applicable, etc.)
 14. Validate data
-    + Adding [flags](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/0012-9623-90.2.205) (columns that identify issues in a row) can be helpful 
-      + Flags for completed or partially completed measure (0=complete, 1=partial)
-    + Flag rows with issues (1 = issues, 0 = no issue)
-      + Values out of range 
-          + Boundaries of var1 is 0-10 and you find a 15
-      + Do cross validation for impossible values
-          + age and grade level - a child age 8 says they are in grade 12
-          + is the gender in one file, different than the gender in another file?
-    + Do the study IDs we have all fall within the list of IDs we have for our study?
-      + This is a chance to check that an ID wasn't entered incorrectly
+    + Adding [flags](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/0012-9623-90.2.205) can be helpful (columns that identify issues in a row) 
+      + Flags for completed or partially completed measure (0 = complete, 1 = partial)
+      + Flag rows with issues (1 = issues, 0 = no issue)
+    + You can also create reports (ex: markdown documents) that report issues in the dataset
+    + Things to check for in your validation process
+        + Values out of range 
+            + Boundaries of var1 is 0-10 and you find a 15
+        + Cross validation for impossible values
+            + age and grade level - a child age 8 says they are in grade 12
+            + Is the gender in one file, different than the gender in another file?
+        + Do any columns have homogenous values (that shouldn't)
+            + The variable cohort may contain all 1s, but a sum score variable should not contain all 2.5s (there should be variation in that column)
+        + Do the study IDs we have all fall within the list of IDs we have for our study?
+            + This is a chance to check that an ID wasn't entered incorrectly
 15. Transform data (wide to long or long to wide)
 16. Merge and/or append data as needed
+    + Across time, forms, data sources
     + Again do validation checks, do you have the correct number of rows and columns after the merge?
 17. Add metadata
     + Variable labels and value labels
