@@ -248,7 +248,7 @@ Examples:
       + [Open Science in Education Sciences](https://edarxiv.org/qdj4t/)
       + [Data Sharing in Education Science](https://journals.sagepub.com/doi/full/10.1177/23328584211006475#.YGuYDCaQo48.twitter)
 
-3. Teague Henry, a postdoctoral fellow in the Department of Psychiatry at the University of Pittsburgh, has been putting out blog posts around data management and they have be very insightful.
+3. Teague Henry, an Assistant Professor of Psychology and Data Science at UVA, has been putting out blog posts around data management and they have be very insightful.
     + [Eight Principles of Good Data Management](https://www.teaguehenry.com/strings-not-factors/2021/2/21/eight-principles-of-good-data-management)
     + [Data Management for Researchers: Three Tales](https://www.teaguehenry.com/strings-not-factors/2021/1/24/data-management-for-researchers-three-terrifying-tales)
 

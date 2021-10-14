@@ -241,7 +241,7 @@ I of course, cannot pass over the topic of tidy data here. The term is ubiquitou
 2. Each observation forms a row
 3. Each type of observational unit forms a table
 
-In a nutshell, tidy data are long format data.
+Essentially, tidy data are long format data.
 
 |Not tidy data               |  Tidy data  |
 |:--------------------------:|:-----------:|
@@ -325,7 +325,7 @@ Below I lay out some of the go-to steps I like to add to a data cleaning plan an
 
 First, some global rules:
 
-**First rule**: Never touch the raw data. You never know when you will make an error and need to return to the the uncorrected data file. 
+**First rule**: Never make edits to the raw data. You never know when you will make an error and need to return to the the original, uncorrected data file. 
 
 Resources: 
 
@@ -333,9 +333,9 @@ Resources:
  📑 [Psych Technical Specification](https://docs.google.com/document/d/1u8o5jnWk0Iqp_J06PTu5NjBfVsdoPbBhstht6W0fFp0/edit#heading=h.xmrpyhv1y68j)  
   [](https://docs.google.com/document/d/1GfIo67-wqq-26ZG9etar5tiKKYLLqWCra8jySolAK7Y/edit)
 
-**Second rule**: Keep everything (except variables that are identifying and completely unnecessary for project). Keep both item level and aggregated variables, recoded and original variables.
+**Second rule**: Keep everything (except variables that are identifying and completely unnecessary for project). Keep both item level and aggregated variables, recoded and original variables. Again, you never know which variables someone may need for their analysis.
 
-**Third rule**: Always de-identify the clean/analysis data. Ensure your study ID is in the data and is accurate, then remove all PII (name, SSN, email, DOB, school name, parent name, IP address, etc.).
+**Third rule**: Always de-identify the clean/analysis data. First, ensure your study ID is in the data and is accurate, then remove all PII (name, SSN, email, DOB, school name, parent name, IP address, etc.).
 
 ```{r, echo=FALSE, fig.align="center", out.width='90%'}
 
@@ -349,8 +349,9 @@ Source: [J-PAL](https://www.povertyactionlab.org/sites/default/files/Data_Securi
 
 While this is not a comprehensive list of every possible data cleaning step you will need for your unique dataset and the questions your stakeholders need to answer, these are common steps that typically apply to all data in some way. You may need more or less steps depending on your data. Also, while these steps are presented in a logical order, they do not all need to happen in this order. 
 
-1. Read in data
-    + Whether this is one file from a folder on your computer, or multiple files, or calling data from an API
+1. Read raw data into a statistical program (ex: R, Stata, etc.)
+    + Your data may be one file from a folder on your computer, or multiple files, or you may be calling data from an API
+    + You will do all of your data cleaning for your file/s in a statistical program, never touching the raw data
 2. Review your data
     + Rows, columns, values, missing data
     + Check your number of cases against your participant tracking
