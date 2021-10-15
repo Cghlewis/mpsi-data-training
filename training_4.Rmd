@@ -178,7 +178,7 @@ Before we can start writing our data cleaning plan, we need to understand what s
 
 In the world of quantitative education research, we are most likely trying to create rectangular datasets (rows and columns) that are machine readable, rather than having data in text files (ex:pdf), video recordings, xml, etc. Even in qualitative research, we are often wrangling data to be in a format that is analyzable and allows categorization. 
 
-The two ways data will need to be structured for the field of education are wide or long. The simplest way to think about wide is that all data collected on a unique participant will be in one row. The easiest scenario to see this is with repeated measure data. If we collect a survey on participants in wave 1 and 2, those waves of data will all be in the same row (merged/joined together) and each wave of data collection will be appended to a variable name to create unique variable names.
+The two ways data will need to be structured for the field of education are wide or long. The simplest way to think about wide is that all data collected on a unique participant will be in one row. The easiest scenario to see this is with repeated measure data. If we collect a survey on participants in wave 1 and 2, those waves of data will all be in the same row (merged/joined together on a unique ID) and each wave of data collection will be appended to a variable name to create unique variable names.
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='10%', out.height= '50%'}
 
@@ -359,7 +359,7 @@ While this is not a comprehensive list of every possible data cleaning step you 
 3. Remove any duplicate cases, cases who are not consented in your study
     + Check your protocol for removing duplicate responses
     + If you are missing cases that are tracked as complete, work with the project coordinator to locate that data
-4. If your data does not already contain a study ID, read in a roster from your participant tracking and join your roster with your data
+4. If you are supposed to de-identify data and your data does not already contain a study ID, read in a roster from your participant tracking and join your roster with your data
 5. Drop all unimportant columns (not in data dictionary) and any identifying columns (name, email, etc.)
 6. Split columns as needed
     + Remember the rule, "Put just one things in a cell"
@@ -378,10 +378,11 @@ While this is not a comprehensive list of every possible data cleaning step you 
 11. Recode variables
     + If you know all missing values in a column are actual not missing and should be zero, recode NA to 0
     + Reverse code likert scale variables
-12. Calculate variables laid out in the data dictionary
+12. Construct variables laid out in the data dictionary
     + Create sum and mean scores
     + Create standardized scores
     + Collapse existing variable/s into a new variable
+    + Add variables such as cohort or treatment
 13. Add missing data values as needed
     + Add your missing value schema (-99 = skipped, -98 = not applicable, etc.)
 14. Validate data
@@ -395,7 +396,7 @@ While this is not a comprehensive list of every possible data cleaning step you 
         + Cross validation for impossible values
             + age and grade level - a child age 8 says they are in grade 12
             + Is the gender in one file, different than the gender in another file?
-        + Do any columns have homogenous values (that shouldn't)
+        + Do any columns have homogeneous values (that shouldn't)
             + The variable cohort may contain all 1s, but a sum score variable should not contain all 2.5s (there should be variation in that column)
         + Do the study IDs we have all fall within the list of IDs we have for our study?
             + This is a chance to check that an ID wasn't entered incorrectly
@@ -407,6 +408,26 @@ While this is not a comprehensive list of every possible data cleaning step you 
     + Variable labels and value labels
 18. Export clean data to a specified format (.csv, .tsv, .xlsx, .sav, etc.)
     + Again, review recommendations for best formats for [long-term data storage]((https://dmptool.org/general_guidance#file-formats))
+    
+
+<br>
+
+:::question
+**Quick thought: Anonymous data**
+
+If you are collecting anonymous data, many of the steps above will not apply to you:  
+1. You **will not** merge in a participant study ID except maybe at the highest level of data collection (ex: your cluster level, such as school or district ID).  
+2. You **will not** be able to drop duplicate cases (you won't know if you have duplicates in your data because you will have no row level identifying information).  
+
+You **will** still however, need to de-identify data if you collected anything identifying such as school name or IP address.
+
+You will also be limited in your data transformations:  
+1. You **will not** be able to merge disaggregated data in wide format across time or forms because you will have no linking participant ID. You **can only** append data in long form because in long data, rows are stacked on top of each other and aligned based on variable names (no unique participant ID is needed).  
+2. You **can** merge data across time or forms in wide format if you aggregate and join your data to a level that you collected such as school or district.
+
+:::
+
+<br>
     
 
 Resources:
@@ -422,7 +443,7 @@ Resources:
 
 ---
 
-Over the years I have seen researchers manually clean data in programs like Excel and in every scenario I can think of, it's a bad idea because a) it is not reproducible, b) it leads to errors, and c) it is time consuming. My recommendation is to clean your data, no matter how small the task, with syntax. Even if you use a graphical user interace (GUI) program like SPSS (point and click), you need to log every move you make in that program and paste the code into a syntax file. Syntax files allow you to have a record of every transformation you make from the raw data to your clean data. While writing syntax may seem time consuming up, it helps you to be more thoughtful in your data cleaning process and it can save you an enormous amount of time in the future if you plan to clean data with the same features multiple times (in say a longitudinal study).
+Over the years I have seen researchers manually clean data in programs like Excel and in every scenario I can think of, it's a bad idea because a) it is not reproducible, b) it leads to errors, and c) it is time consuming. My recommendation is to clean your data, no matter how small the task, with syntax (machine readable programming instructions written in a text editor that are processed by your computer). Even if you use a graphical user interface (GUI) program like SPSS (point and click), you need to log every move you make in that program and paste the code into a syntax file. Syntax files allow you to have a record of every transformation you make from the raw data to your clean data. While writing syntax may seem time consuming up front, it helps you to be more thoughtful in your data cleaning process and it can save you an enormous amount of time in the future if you plan to clean data with the same features multiple times (in say a longitudinal study).
 
 You can use whatever program you want to write syntax ([OpenRefine](https://openrefine.org/documentation.html), [R](https://www.r-project.org/), [Stata](https://www.stata.com/), [SPSS](https://www.ibm.com/products/spss-statistics), [SAS](https://www.sas.com/en_us/curiosity.html?utm_source=other&utm_medium=cpm&utm_campaign=non-cbo-us&dclid=&gclid=Cj0KCQjw5JSLBhCxARIsAHgO2SffrjNAWQsn0f4F2czIb-P-daG2oVq1TC4DF6dEaxTB0Nl6MjE-BwAaAtQrEALw_wcB), [SQL](https://en.wikipedia.org/wiki/SQL), etc.). If you review the trainings available through [Data Carpentry](https://datacarpentry.org/lessons/) you'll see that most of their data management workshops use SQL, OpenRefine, R, or Python (all open source). 
 
