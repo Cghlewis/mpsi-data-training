@@ -12,7 +12,7 @@ output:
 
 :::presentation
 <br>
-You can view slides from this talk TBD
+You can view slides from this talk: in progress
 :::
 
 ---
@@ -415,7 +415,7 @@ While this is not a comprehensive list of every possible data cleaning step you 
 :::question
 **Quick thought: Anonymous data**
 
-If you are collecting anonymous data, many of the steps above will not apply to you:  
+If you are collecting anonymous data, some of the steps above will not apply to you:  
 1. You **will not** merge in a participant study ID except maybe at the highest level of data collection (ex: your cluster level, such as school or district ID).  
 2. You **will not** be able to drop duplicate cases (you won't know if you have duplicates in your data because you will have no row level identifying information).  
 

@@ -1,33 +1,33 @@
 ---
-title: "MPSI Data Management in Large-Scale Education Research Training Series"
+title: "Data Management in Large-Scale Education Research"
 author: "Crystal Lewis"
 ---
 
 <br>  
 
-This is the site for the [Missouri Prevention Science Institute (MPSI)](http://moprevention.org/) training series on *data management in large-scale education research studies*. This series will cover best practices in data management procedures throughout the entire life cycle of research project implementation (from grant award to end of grant). While I think parts of this series will apply to any type of education research, I think the series is mainly geared towards those doing longitudinal evaluation research, specifically those conducting randomized controlled trial studies (RCTs).
+I started this resource as an internal workshop series for the [Missouri Prevention Science Institute (MPSI)](http://moprevention.org/) and have continued to build it as a personal project that I want to share with anyone who is looking for more information around *data management in large-scale education research studies*. The modules in this resource cover best practices in data management procedures throughout the entire life cycle of research project implementation (from grant award to end of grant). While I think parts of this series will apply to any type of education research, I think the series is mainly geared towards those doing longitudinal evaluation research, specifically those conducting randomized controlled trial studies (RCTs).
 
-In tandem with this training series, I am continuing to research best practices in data management and intend to make these tutorials into a larger manual. The training materials on this site may be updated periodically as more information is obtained. If you work in education research, particularly with RCTs, and would be willing to share your expertise with me to improve this manual, please contact me [here](mailto:hamptoncg@missouri.edu). Acknowledgment and gratitude for those who have taken time out of their busy schedules to share their wisdom with me so far: Francis Huang, Mary McCraken, Ryan Estrellado, Kim Manturuk, Beth Chance, Jessica Logan, and Rebecca Schmidt.
+As part of my writing process, I have been researching data management practices, collecting resources, and speaking with data management professionals. If you work in education research, particularly with RCTs, and would be willing to share your expertise with me to improve this manual, please contact me [here](mailto:cgh.lewis@gmail.com). Acknowledgment and gratitude for those who have taken time out of their busy schedules to share their wisdom with me so far: Francis Huang, Mary McCraken, Ryan Estrellado, Kim Manturuk, Beth Chance, Jessica Logan, and Rebecca Schmidt.
 
-While this specific training is for staff and others affiliated with the MPSI, I am making these materials available for anyone who finds them useful. My hope is that when completed, this comprehensive manual will assist all new PIs, data managers, project coordinators, research assistants, and others who have been awarded their first research grant, or even those with established careers, in navigating how to implement a successful data management plan throughout their project. There are many great resources out there on data management in research and I will share those resources in this series. However, what I think will make this resource unique is the narrow focus on education research, an area with scarce data management information.
+I am making these materials available for anyone who finds them useful. My hope is that when completed, this comprehensive manual will assist all new PIs, data managers, project coordinators, research assistants, and others who have been awarded their first research grant, or even those with established careers, in navigating how to implement a successful data management plan throughout their project. There are many great resources out there on data management in research and I will share those resources in this series. However, what I think will make this resource unique is the narrow focus on education research, an area with scarce data management information.
 
 **About me**: I oversee data management activities in the MPSI. We currently have 8 federally funded research grants (4 of which are RCTs). In my time with the MPSI I have been a part of almost every aspect of the research data life cycle. I have been a project coordinator, data collector, analyst, supervisor, grant writer, and data manager, and in these roles I have seen the good, the bad, and the ugly of data management. My experiences and my passion to improve data management practices in our organization and across all organizations is my motivation for creating these materials.
 
-*Training materials were last updated on `r format(Sys.time(), '%m/%d/%Y')`*  
+*Materials were last updated on `r format(Sys.time(), '%m/%d/%Y')`*  
 
 <br>
 
-**Tentative Training Outline** 
+**Tentative Module Outline** 
 
-|Training  |Planned Content                                            |
+|Module |Content                                            |
 |:----------|:-----------------------------------------------------------|
 |1         |Documentation                                              |
 |2         |Setting up data structures                                 |
 |3         |Style Guide                                                |
 |4         |Writing a data cleaning plan                               |
-|5         |Intro to R and RStudio, reading in and reviewing data      |
-|6         |Data wrangling basics                                      |
-|7         |Restructuring, merging, or aggregating data                |
-|8         |Cleaning data start to finish, exporting data              |
-|9         |Advanced topics: TBD                                       |
-|10        |Sharing data upon project completion                       |
+|5         |Intro to R and RStudio, reading in and reviewing data (forthcoming)     |
+|6         |Data wrangling basics (forthcoming)                                    |
+|7         |Restructuring, merging, or aggregating data (forthcoming)               |
+|8         |Cleaning data start to finish, exporting data (forthcoming)             |
+|9         |Advanced topics: TBD (forthcoming)                                      |
+|10        |Sharing data upon project completion (forthcoming)                       |

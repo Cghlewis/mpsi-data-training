@@ -1,5 +1,5 @@
 ---
-title: "Training 1: Documentation"
+title: "Documentation"
 output: 
   html_document:
     css: "css/custom.css"

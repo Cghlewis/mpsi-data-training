@@ -8,13 +8,13 @@ navbar:
     href: training_00.html
   - text: "Project Management"
     href: training_0.html
-  - text: "Training 1"
+  - text: "Module 1"
     href: training_1.html
-  - text: "Training 2"
+  - text: "Module 2"
     href: training_2.html
-  - text: "Training 3"
+  - text: "Module 3"
     href: training_3.html
-  - text: "Training 4"
+  - text: "Module 4"
     href: training_4.html
 output:
   html_document:
