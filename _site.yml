@@ -2,7 +2,7 @@ name: "mpsi-data-training"
 output_dir: "."
 navbar:
   left:
-  - text: "MPSI Data Training"
+  - text: "About"
     href: index.html
   - text: "Data Management"
     href: training_00.html
