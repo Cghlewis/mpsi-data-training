@@ -449,13 +449,13 @@ You can use whatever program you want to write syntax ([OpenRefine](https://open
 
 If I haven't sold you on using syntax yet, here are a few **horror stories** of manually cleaning data (based off of real life events):
 
-**1\.** A collaborator is in charge of cleaning a portion of your project data, while you clean the other portion. At the end of a data collection wave, the collaborator sends you clean data. Yet when reviewing it you find three small errors in the data they send you.   
+**1\.** A colleague is in charge of cleaning a portion of your project data, while you clean the other portion. At the end of a data collection wave, the colleague sends you clean data. Yet when reviewing it you find three small errors in the data they send you.   
 
    a) One variable had been named incorrectly  
    b) One sum variable had been calculated incorrectly  
    c) One variable was missing value labels  
   
-These all seemed like quick changes you could make very easily in a point and click interface, so you did. Then you saved that dataset as the final clean dataset. However, a month later, your collaboator found an error in the data they sent you, and they send you a revised clean dataset. 
+These all seemed like quick changes you could make very easily in a point and click interface, so you did. Then you saved that dataset as the final clean dataset. However, a month later, your colleague found an error in the data they sent you, and they send you a revised clean dataset. 
 
 This is the process you go through:  
 
