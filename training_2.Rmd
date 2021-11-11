@@ -165,7 +165,7 @@ Once data is collected, proceed with scoring as usual, following the guidelines 
 
 #### **Offline Assessments**
 
-If there are no web-based options, or connecting to WiFi is not an option for your project, then of course, keep with the paper assessments and follow the guidelines of the specific assessment. If the assessment requires any manual scoring (such as the Woodcock Johnson), be sure to implement an error checking system (such as the one mentioned in the offline surveys section).
+If there are no web-based options, or connecting to WiFi is not an option for your project, then of course, keep with the paper assessments and follow the guidelines of the specific assessment. If the assessment requires any manual scoring (such as the Woodcock Johnson), be sure to implement an error checking system (such as the one mentioned in the Offline Surveys section).
 
 
 ### Observations
