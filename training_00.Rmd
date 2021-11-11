@@ -98,7 +98,7 @@ Outside of practical and principled reasons to want to improve your data managem
 ✔️ Any circumstances that prevent any data from being shared  
 ✔️ Most recent rule: A plan for [pre-registering](https://ies.ed.gov/seer/preregistration.asp) your study within the first year of the project  
 
-Pre-registration is just one part of the Department of Education's effort an effort to align research with the [SEER](https://ies.ed.gov/seer/index.asp) and [FAIR](https://www.go-fair.org/fair-principles/) data governance principles.
+Pre-registration is just one part of the Department of Education's effort to align research with the [SEER](https://ies.ed.gov/seer/index.asp) and [FAIR](https://www.go-fair.org/fair-principles/) data governance principles.
 
   📑 Jesse Fleming put together this great [figure](https://figshare.com/articles/figure/Preregistration_Registry_Figure_pdf/16746112/1) to help education researchers choose a template to use for their pre-registration plans.
 
@@ -270,4 +270,6 @@ Examples:
 11. This crowdsourced data management [syllabus](https://osf.io/vkztw/) created at SIPS 2021 is an excellent overview of data management concepts and questions researchers can consider.
 
 12. Aleata Hubbard Cheuoua has some excellent education research data management papers, blogs, and presentations on her [website](http://www.aleatahubbard.com/). Her paper on [Data Cleaning in Mathematics Education Research](https://files.eric.ed.gov/fulltext/ED583982.pdf) is an especially insightful look at pain points in education data management and ways we can repair issues that arise. 
+
+13. Kovacs, M., Hoekstra, R. and Balazs, recently published [The Role of Human Fallibility in Psychological Research: A Survey of Mistakes in Data Management](https://journals.sagepub.com/doi/full/10.1177/25152459211045930).
 
