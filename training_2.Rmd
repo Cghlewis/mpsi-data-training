@@ -231,7 +231,7 @@ Last I wanted to mention that it is also possible to build all or almost all of 
 If you end up having to use paper forms to collect any of your data and need to manually enter that data, then there are several steps you can take to minimize error in that process.
 
   1. Set up databases for staff to enter the data  
-  + Consider using a database tool such as Access, FileMaker, RedCap, or QuickBase rather than a spreadsheet. Most of these tools allow you to set up form for users to enter data into that then are submitted into a table on the back end. This reduces data entry errors.
+  + Consider using a database tool such as Access, FileMaker, RedCap, or QuickBase rather than a spreadsheet. Most of these tools allow you to set up forms for users to enter data into that are then submitted into a table on the back end. This reduces data entry errors.
   + If you must use a spreadsheet tool such as SPSS or Excel, be aware of some of the limitations and possible issues: 
     - The formatting that Excel sometimes applies to fields may cause errors in your data (dates get formatted as numeric, strings get formatted as dates, and other nightmares)  
     - It's easy to enter data into the wrong row or column in a spreadsheet as you are able to click anywhere in the spreadsheet. You may even write over existing data on accident. 
