@@ -273,3 +273,5 @@ Examples:
 
 13. Kovacs, M., Hoekstra, R. and Balazs, recently published [The Role of Human Fallibility in Psychological Research: A Survey of Mistakes in Data Management](https://journals.sagepub.com/doi/full/10.1177/25152459211045930).
 
+14. Joshua Borycz recently wrote an [essay](https://datascience.codata.org/articles/10.5334/dsj-2021-009/) on research data managment workflows.
+
