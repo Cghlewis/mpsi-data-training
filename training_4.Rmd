@@ -133,7 +133,7 @@ gt::gt()
 2. What software are we using to clean the data?
     - Is the software case sensitive?
     - Does it have variable name character limits?
-    - Does it have other limitations on variable names (can't start with a number)?
+    - Does it have other limitations on variable names (can't start with a number, can't contain a "-")?
 3. What software do stakeholders plan to use to analyze the data? We may not always know this, but if we do, we can try to accommodate this
     - Is there a certain file type required for data import?
       - For example, [Mplus](https://stats.idre.ucla.edu/mplus/seminars/mplus-class-notes/entering/) can only read ASCII text files

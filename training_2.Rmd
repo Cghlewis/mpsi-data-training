@@ -233,7 +233,7 @@ If you end up having to use paper forms to collect any of your data and need to 
   1. Set up databases for staff to enter the data  
   + Consider using a database tool such as Access, FileMaker, RedCap, or QuickBase rather than a spreadsheet. Most of these tools allow you to set up forms for users to enter data into that are then submitted into a table on the back end. This reduces data entry errors.
   + If you must use a spreadsheet tool such as SPSS or Excel, be aware of some of the limitations and possible issues: 
-    - The formatting that Excel sometimes applies to fields may cause errors in your data (dates get formatted as numeric, strings get formatted as dates, and other nightmares)  
+    - The formatting that Excel sometimes applies to fields may cause errors in your data (dates get formatted as numeric, strings get formatted as dates, leading zeros get removed from ID variables who should be formatted as character but Excel converts them to numeric, and other nightmares)  
     - It's easy to enter data into the wrong row or column in a spreadsheet as you are able to click anywhere in the spreadsheet. You may even write over existing data on accident. 
     - One way to prevent some errors in these tools is to restrict entry in fields (only allow numeric values if you want staff to enter numbers rather than the actual words associated with response options). Also, add drop down lists for each of your categorical questions, only allowing acceptable responses. 
             
@@ -283,7 +283,7 @@ Even if you are purposefully collecting anonymous data, if you have randomized p
 
 <br>
 
-### Web-based Data:
+### Web-based Data
 
 When sending out or completing in-person web-based surveys/assessments, you can do one of the following to connect your data to a participant (this is not all-inclusive):  
 
@@ -336,7 +336,7 @@ Resources:
 
 <br>
 
-### Offline Data:
+### Offline Data
 
 If you take paper forms into the field consider doing the following to connect your data to a participant:  
 
@@ -356,7 +356,7 @@ Source: [Poverty Action Lab](https://www.povertyactionlab.org/sites/default/file
       1. Bring your tracking database into the field, on a secure device (such as a tablet) and refer to that database as needed.
       2. Print a roster with name and study ID and keep those rosters secure in the field (not laying out on a table) and either shred them when you return to the office if you no longer need them or store them securely.
     
-### Other considerations:
+### Other considerations
 
   - Add a line to your survey introduction, instructing participants to close their browser at the completion of their survey so that others may not access their responses.
   - Make sure you are using and/or building data collection and storage tools that are approved by your IT department and are considered secure for the level of [sensitivity of data](https://www.umsystem.edu/media/is/infosec/DCL_In_A_Nutshell.pdf) you are collecting. 
@@ -451,7 +451,7 @@ gt::gt()
 
 <br>
 
-Now consider these 3 tables below that are not relational (such as 3 tabs in an excel spreadsheet). Since we are unable to set up a system that links these tables together, we need to enter redundant information into each table (such as teacher or school name) in order to see that information within each table without having to flip back and forth across tables to find the information we need. 
+Now consider these 3 tables below that are not relational (such as 3 tabs in an Excel spreadsheet). Since we are unable to set up a system that links these tables together, we need to enter redundant information into each table (such as teacher or school name) in order to see that information within each table without having to flip back and forth across tables to find the information we need. 
 
 ```{r, echo=FALSE, fig.align="center", out.width='70%'}
 
@@ -672,7 +672,7 @@ Because your participant database contains identifiable information about your p
   
 ### Storing electronic records
 
-Your typical study data files are in formats such as csv, tab-delimited, excel, text, word doc, or a statistical program file such as .sav, .dta, .R, or .sas. No matter the file type, your study data should all be de-identified/confidential, only including study IDs and no other identifiers. However, there are still some security precautions you should take.
+Your typical study data files are in formats such as .csv, .tsv, .xlsx, .txt, .docx, or a statistical program file such as .sav, .dta, .rds, or .sas. No matter the file type, your study data should all be de-identified/confidential, only including study IDs and no other identifiers. However, there are still some security precautions you should take.
 
   + It should be stored on a password-protected university/institution sponsored shared network or cloud service
   + Limit access to your data folder to only those who need to work with the data. This ensures no one intentionally or unintentionally makes changes to your data.

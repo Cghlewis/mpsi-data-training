@@ -612,7 +612,7 @@ div.tocify {
 <li>Consider using a database tool such as Access, FileMaker, RedCap, or QuickBase rather than a spreadsheet. Most of these tools allow you to set up forms for users to enter data into that are then submitted into a table on the back end. This reduces data entry errors.</li>
 <li>If you must use a spreadsheet tool such as SPSS or Excel, be aware of some of the limitations and possible issues:
 <ul>
-<li>The formatting that Excel sometimes applies to fields may cause errors in your data (dates get formatted as numeric, strings get formatted as dates, and other nightmares)<br />
+<li>The formatting that Excel sometimes applies to fields may cause errors in your data (dates get formatted as numeric, strings get formatted as dates, leading zeros get removed from ID variables who should be formatted as character but Excel converts them to numeric, and other nightmares)<br />
 </li>
 <li>It’s easy to enter data into the wrong row or column in a spreadsheet as you are able to click anywhere in the spreadsheet. You may even write over existing data on accident.</li>
 <li>One way to prevent some errors in these tools is to restrict entry in fields (only allow numeric values if you want staff to enter numbers rather than the actual words associated with response options). Also, add drop down lists for each of your categorical questions, only allowing acceptable responses.</li>
@@ -678,7 +678,7 @@ div.tocify {
 </div>
 <p><br></p>
 <div id="web-based-data" class="section level3">
-<h3>Web-based Data:</h3>
+<h3>Web-based Data</h3>
 <p>When sending out or completing in-person web-based surveys/assessments, you can do one of the following to connect your data to a participant (this is not all-inclusive):</p>
 <ol style="list-style-type: decimal">
 <li>Send/give individual links to participants (where each survey link is connected to a study ID within the system). This can usually be done easily in a survey platform such as Qualtrics using a <a href="https://www.qualtrics.com/support/survey-platform/contacts/contact-list-overview/">contact list</a>.
@@ -728,7 +728,7 @@ div.tocify {
 <p><br></p>
 </div>
 <div id="offline-data" class="section level3">
-<h3>Offline Data:</h3>
+<h3>Offline Data</h3>
 <p>If you take paper forms into the field consider doing the following to connect your data to a participant:</p>
 <ul>
 <li>Write the study ID on the form and then use either a removable label with participant name and place that over the ID or attach a cover sheet with identifying information such as student name. When you return to the office, you can remove the name label/cover sheet and be left with only the ID on the form.
@@ -749,7 +749,7 @@ div.tocify {
 </ul>
 </div>
 <div id="other-considerations" class="section level3">
-<h3>Other considerations:</h3>
+<h3>Other considerations</h3>
 <ul>
 <li>Add a line to your survey introduction, instructing participants to close their browser at the completion of their survey so that others may not access their responses.</li>
 <li>Make sure you are using and/or building data collection and storage tools that are approved by your IT department and are considered secure for the level of <a href="https://www.umsystem.edu/media/is/infosec/DCL_In_A_Nutshell.pdf">sensitivity of data</a> you are collecting.</li>
@@ -805,12 +805,12 @@ div.tocify {
 <code>FROM Student INNER JOIN Teacher ON Student.tch_id = Teacher.tch_id</code><br />
 <code>ORDER BY Teacher.last_name, Teacher.first_name, Student.last_name, Student.first_name</code></p>
 <p>Would produce a roster like this:</p>
-<div id="zzdnhpazwc" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="mgefraxmtr" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#zzdnhpazwc .gt_table {
+#mgefraxmtr .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -835,7 +835,7 @@ div.tocify {
   border-left-color: #D3D3D3;
 }
 
-#zzdnhpazwc .gt_heading {
+#mgefraxmtr .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -847,7 +847,7 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#zzdnhpazwc .gt_title {
+#mgefraxmtr .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -857,7 +857,7 @@ div.tocify {
   border-bottom-width: 0;
 }
 
-#zzdnhpazwc .gt_subtitle {
+#mgefraxmtr .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -867,13 +867,13 @@ div.tocify {
   border-top-width: 0;
 }
 
-#zzdnhpazwc .gt_bottom_border {
+#mgefraxmtr .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#zzdnhpazwc .gt_col_headings {
+#mgefraxmtr .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -888,7 +888,7 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#zzdnhpazwc .gt_col_heading {
+#mgefraxmtr .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -908,7 +908,7 @@ div.tocify {
   overflow-x: hidden;
 }
 
-#zzdnhpazwc .gt_column_spanner_outer {
+#mgefraxmtr .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -920,15 +920,15 @@ div.tocify {
   padding-right: 4px;
 }
 
-#zzdnhpazwc .gt_column_spanner_outer:first-child {
+#mgefraxmtr .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#zzdnhpazwc .gt_column_spanner_outer:last-child {
+#mgefraxmtr .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#zzdnhpazwc .gt_column_spanner {
+#mgefraxmtr .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -940,7 +940,7 @@ div.tocify {
   width: 100%;
 }
 
-#zzdnhpazwc .gt_group_heading {
+#mgefraxmtr .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -962,7 +962,7 @@ div.tocify {
   vertical-align: middle;
 }
 
-#zzdnhpazwc .gt_empty_group_heading {
+#mgefraxmtr .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -977,15 +977,15 @@ div.tocify {
   vertical-align: middle;
 }
 
-#zzdnhpazwc .gt_from_md > :first-child {
+#mgefraxmtr .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#zzdnhpazwc .gt_from_md > :last-child {
+#mgefraxmtr .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#zzdnhpazwc .gt_row {
+#mgefraxmtr .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1004,7 +1004,7 @@ div.tocify {
   overflow-x: hidden;
 }
 
-#zzdnhpazwc .gt_stub {
+#mgefraxmtr .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1016,7 +1016,7 @@ div.tocify {
   padding-left: 12px;
 }
 
-#zzdnhpazwc .gt_summary_row {
+#mgefraxmtr .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1026,7 +1026,7 @@ div.tocify {
   padding-right: 5px;
 }
 
-#zzdnhpazwc .gt_first_summary_row {
+#mgefraxmtr .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1036,7 +1036,7 @@ div.tocify {
   border-top-color: #D3D3D3;
 }
 
-#zzdnhpazwc .gt_grand_summary_row {
+#mgefraxmtr .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1046,7 +1046,7 @@ div.tocify {
   padding-right: 5px;
 }
 
-#zzdnhpazwc .gt_first_grand_summary_row {
+#mgefraxmtr .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1056,11 +1056,11 @@ div.tocify {
   border-top-color: #D3D3D3;
 }
 
-#zzdnhpazwc .gt_striped {
+#mgefraxmtr .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#zzdnhpazwc .gt_table_body {
+#mgefraxmtr .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1069,7 +1069,7 @@ div.tocify {
   border-bottom-color: #D3D3D3;
 }
 
-#zzdnhpazwc .gt_footnotes {
+#mgefraxmtr .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1083,13 +1083,13 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#zzdnhpazwc .gt_footnote {
+#mgefraxmtr .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#zzdnhpazwc .gt_sourcenotes {
+#mgefraxmtr .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1103,41 +1103,41 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#zzdnhpazwc .gt_sourcenote {
+#mgefraxmtr .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#zzdnhpazwc .gt_left {
+#mgefraxmtr .gt_left {
   text-align: left;
 }
 
-#zzdnhpazwc .gt_center {
+#mgefraxmtr .gt_center {
   text-align: center;
 }
 
-#zzdnhpazwc .gt_right {
+#mgefraxmtr .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#zzdnhpazwc .gt_font_normal {
+#mgefraxmtr .gt_font_normal {
   font-weight: normal;
 }
 
-#zzdnhpazwc .gt_font_bold {
+#mgefraxmtr .gt_font_bold {
   font-weight: bold;
 }
 
-#zzdnhpazwc .gt_font_italic {
+#mgefraxmtr .gt_font_italic {
   font-style: italic;
 }
 
-#zzdnhpazwc .gt_super {
+#mgefraxmtr .gt_super {
   font-size: 65%;
 }
 
-#zzdnhpazwc .gt_footnote_marks {
+#mgefraxmtr .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -1196,7 +1196,7 @@ div.tocify {
 </table>
 </div>
 <p><br></p>
-<p>Now consider these 3 tables below that are not relational (such as 3 tabs in an excel spreadsheet). Since we are unable to set up a system that links these tables together, we need to enter redundant information into each table (such as teacher or school name) in order to see that information within each table without having to flip back and forth across tables to find the information we need.</p>
+<p>Now consider these 3 tables below that are not relational (such as 3 tabs in an Excel spreadsheet). Since we are unable to set up a system that links these tables together, we need to enter redundant information into each table (such as teacher or school name) in order to see that information within each table without having to flip back and forth across tables to find the information we need.</p>
 <p><img src="img/tables2-new.PNG" width="70%" style="display: block; margin: auto;" /></p>
 <p>Using a relational structure allows us to eliminate redundant data. This not only saves us time and energy but reduces errors as well. You can imagine how useful that is.</p>
 <ul>
@@ -1401,7 +1401,7 @@ div.tocify {
 </div>
 <div id="storing-electronic-records" class="section level3">
 <h3>Storing electronic records</h3>
-<p>Your typical study data files are in formats such as csv, tab-delimited, excel, text, word doc, or a statistical program file such as .sav, .dta, .R, or .sas. No matter the file type, your study data should all be de-identified/confidential, only including study IDs and no other identifiers. However, there are still some security precautions you should take.</p>
+<p>Your typical study data files are in formats such as .csv, .tsv, .xlsx, .txt, .docx, or a statistical program file such as .sav, .dta, .rds, or .sas. No matter the file type, your study data should all be de-identified/confidential, only including study IDs and no other identifiers. However, there are still some security precautions you should take.</p>
 <ul>
 <li>It should be stored on a password-protected university/institution sponsored shared network or cloud service</li>
 <li>Limit access to your data folder to only those who need to work with the data. This ensures no one intentionally or unintentionally makes changes to your data.</li>
