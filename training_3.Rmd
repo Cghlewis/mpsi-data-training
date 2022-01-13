@@ -262,9 +262,9 @@ There are many best practices and considerations around variable naming.
   + Most statistical programs have a limit on variable name characters
     - SPSS is 64
     - Stata is 32
-    - SAS is 32
-    - Mplus is 8!
-    - R is 10,000 🙀
+    - SAS is 32  
+    - Mplus is 8!  
+    - R is 10,000 🙀  
 - If you have used the question/scale before, consider keeping the variable name the same across projects
   + The hosts of the Within and Between podcast even suggest the idea of standardizing variable names across the field for commonly used assessments (such as the Woodcock Johnson). Hear more on [Data Management Episode 1](http://www.withinandbetweenpod.com/).
 - Use the same variable name across time in a project

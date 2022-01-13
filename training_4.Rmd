@@ -253,7 +253,8 @@ Important guidelines to follow:
 
 1. Put just one thing in a cell  
     + Ex: If a rate column contains two numbers, cases/enrollment
-    + Split that column into two columns (cases and enrollment)
+    + Split that column into two columns (cases and enrollment)  
+    + Do not merge cells
 
 |Two things one cell              |  Two things two cells |
 |:--------------------------:|:-----------:|
@@ -278,7 +279,8 @@ Just be prepared because while you may put in the planning to collect organized 
 
 4. Don't leave empty cells
     + If a cell is actually missing data, make sure it contains something to denote the absence of data (ex: NA) to show that the cell was not left blank unintentionally
-    + If a cell is empty because it is "implied" to be the same value as above, fill that cell with the actual data
+    + If a cell is empty because it is "implied" to be the same value as above, fill that cell with the actual data  
+    + If the value for that cell is implied to be zero, enter 0 so the user can differentiate between missing values and non-missing values that are simply zero
     
 |Empty          |  Not empty|
 |:--------------------------:|:-----------:|
