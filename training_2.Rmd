@@ -665,9 +665,9 @@ For this section I am going to generally describe the level of security needed t
 
 Because your participant database contains identifiable information about your participants, this data must have the highest security. The specifics of this security will be set by your university or institution. However, the general rules for storing this type of data is:
 
-  + It should be stored separately from your confidential study data
-  + This data should have limited access (only available to the few individuals who actually need to interact with this data)
   + It should be stored on a password-protected, university/institution sponsored shared server or cloud service with encryption (never a personal computer)
+  + It should be stored separately from your confidential study data (separate folder)
+  + This data should have limited access (only available to the few individuals who actually need to interact with this data)
   + Since this is your only crosswalk between your study IDs and PIIs, make sure to backup this data regularly
   
 ### Storing electronic records
@@ -703,13 +703,18 @@ Note: These same data security rules will also apply to data that is recorded in
   
 ### Storing paper data
 
-  + Your paper data should be de-identified/confidential (names removed). 
+Paper data can be one of the most difficult data types to securely manage and track the storage of. When you have a distributed team, collecting data at many sites, sometimes in different states, it can be difficult to track the path and storage of physical data. You will want to make sure you have a very detailed plan for the storage of your data added to your protocol. Never play fast and loose with your paper data. Losing physical files can lead to breaches in confidentiality, loss of data, and other negative consequences. This holds true even for consents and assents. Even though those forms may not have analyzable data, you never know when your IRB may conduct an audit for participant consent, or if you may need to present them for future data requests with an entity such as a school district. If you lose consents/assents, it can look like you are collecting data on those who did not agree to be in the study.  
+
+  + As I mentioned earlier in this training, a typical IRB rule is to store paper data behind two locked doors for security. This typically means a locked file cabinet behind a locked door. 
+  + Your paper data should be de-identified/confidential (names removed) 
     + There are exceptions to this:
-        + If you collect paper consents/assents which typically have participant name/signature (no ID) on them you will store those as is. 
+        + If you collect paper consents/assents which typically have participant name/signature (no ID) on them you will store those as is  
         + If you need to keep paper rosters (with both names and IDs) for the purposes of data collection
           + These rosters should be shredded when no longer needed to reduce the number of documents outside of your participant database that can link your participants' true identity to their study ID
-  + As I mentioned earlier in this training, a typical IRB rule is to store paper data behind two locked doors for security. This typically means a locked file cabinet behind a locked door. 
-  + Never store paper data at a personal residence or leave in your vehicle
+  + Never store paper data at a personal residence or leave in your vehicle. Always make sure your paper data makes it back to your office (or wherever you store your data). Have a rule in your protocol that says the data must always be returned to storage by the end of the day. 
+    - An exception to this may be people collecting paper data out of state (from your office). In this case you will need a protocol for this data, such as:
+      - Keeping the data in a locked file cabinet at the data collector's home until the data can be returned to the office  
+      - Or scanning the forms and uploading to a secure folder at the end of every day and then shredding the original files  
   + When transporting data from a site to your office, consider keeping your files in a lock box and use a personal vehicle for transportation rather than public transit.
   
   

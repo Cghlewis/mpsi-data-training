@@ -244,7 +244,7 @@ Examples:
     + [Data at Reed](https://www.reed.edu/data-at-reed/index.html)
 
 2. A team at Florida State University (including Christopher Schatschneider, Tara Reynolds, Sara Hart and colleagues) have been putting out tons of resources around data management, specifically in education, and open science practices in general. 
-      + [The Basic of Data Management](https://docs.google.com/document/d/1GfIo67-wqq-26ZG9etar5tiKKYLLqWCra8jySolAK7Y/edit)
+      + [The Basics of Data Management](https://docs.google.com/document/d/1GfIo67-wqq-26ZG9etar5tiKKYLLqWCra8jySolAK7Y/edit)
       + [Open Science in Education Sciences](https://edarxiv.org/qdj4t/)
       + [Data Sharing in Education Science](https://journals.sagepub.com/doi/full/10.1177/23328584211006475#.YGuYDCaQo48.twitter)
 
