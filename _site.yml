@@ -1,5 +1,4 @@
 name: "mpsi-data-training"
-google_analytics: "UA-219541758-1"
 output_dir: "."
 navbar:
   left:
