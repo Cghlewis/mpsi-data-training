@@ -5,6 +5,8 @@ output:
     toc: TRUE
     toc_float: TRUE
     anchor_sections: FALSE
+    includes:
+       in_header: google_analytics.html
 ---
 
 Research data management involves the planning, documentation, organization, storage, and dissemination of research study data. A plan for data management should be developed before a project ever starts and that plan should be implemented alongside all research study activities through out the entire project life cycle. Successful data management upholds research integrity ([UMASS](https://library.umassmed.edu/resources/necdmc/modules)), and allows research to be replicable, interpretable, secure, and usable while poor data management can lead to erroneous conclusions, unusable or even lost data, and security issues. Consequently, data management is an ethical issue. The replication crisis is just one example of a failure to include good data management practices in research, resulting for example, in one study finding that across 100 replicated experiments from three psychology journals, only 36% of statistically significant findings could be replicated [(Open Science Collaboration, 2015)](https://science.sciencemag.org/content/349/6251/aac4716).

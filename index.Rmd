@@ -1,6 +1,10 @@
 ---
 title: "Data Management in Large-Scale Education Research"
 author: "Crystal Lewis"
+output: 
+  html_document:
+    includes:
+       in_header: google_analytics.html
 ---
 
 <br>  

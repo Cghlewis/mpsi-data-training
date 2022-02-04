@@ -6,6 +6,8 @@ output:
     toc: TRUE
     toc_float: TRUE
     anchor_sections: FALSE
+    includes:
+       in_header: google_analytics.html
 ---
   
 <br>
