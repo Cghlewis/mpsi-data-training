@@ -4,7 +4,9 @@ author: "Crystal Lewis"
 output: 
   html_document:
     includes:
-       in_header: google_analytics.html
+       in_header:
+          - google_analytics.html
+          - plausible_analytics.html
 ---
 
 <br>  
