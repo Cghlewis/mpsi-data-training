@@ -7,9 +7,7 @@ output:
     toc_float: TRUE
     anchor_sections: FALSE
     includes:
-       in_header:
-          - google_analytics.html
-          - plausible_analytics.html
+       in_header: plausible_analytics.html
 ---
   
 <br>
