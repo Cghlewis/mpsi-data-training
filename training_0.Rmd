@@ -6,7 +6,9 @@ output:
     toc_float: TRUE
     anchor_sections: FALSE
     includes:
-       in_header: google_analytics.html
+       in_header:
+          - google_analytics.html
+          - plausible_analytics.html
 ---
 
 I think it is important to get a feel for the role of data management within the larger research team and how a research team functions cohesively. With that in mind, I want to briefly cover common research team roles as well as tools that help teams communicate and manage tasks. Sometimes a research team may be lucky enough to have all of these roles, other times, just one person, such as the Principal Investigator, may take on all or multiple of these roles. With that said, if your budget allows it, I highly recommend that PIs hire individuals to fill each of the roles mentioned below. Speaking from experience, having personally filled multiple of these roles on a single project in the past, it is very difficult to excel in any area when one person is coordinating a project, actively collecting data, and also trying to manage the data. The struggle is compounded if staff are on multiple studies occurring simultaneously. I recommend to hire staff with expertise in each of these roles below.
