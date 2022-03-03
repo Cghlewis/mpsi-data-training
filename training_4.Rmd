@@ -12,11 +12,6 @@ output:
   
 <br>
 
-:::presentation
-<br>
-You can view slides from this talk: in progress
-:::
-
 ---
 
 ## Overview
@@ -474,8 +469,5 @@ This is the process you go through:
 Resource:
 
   📑 [Effective Data Management](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/0012-9623-90.2.205)
-
-
-
 
 

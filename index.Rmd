@@ -7,7 +7,11 @@ output:
        in_header: plausible_analytics.html
 ---
 
-<br>  
+<br> 
+
+**Update**: I am very excited to say that I will be turning the materials on this website (plus more!) into a book starting this spring. Please check back for updates on the forthcoming book. I plan to write the book in an open/public way that will welcome feedback on additions or changes future readers might find helpful. Thank you!
+
+---
 
 I started this resource as an internal workshop series for the [Missouri Prevention Science Institute (MPSI)](http://moprevention.org/) and have continued to build it as a personal project that I want to share with anyone who is looking for more information around *data management in large-scale education research studies*. The modules in this resource cover best practices in data management procedures throughout the entire life cycle of research project implementation (from grant award to end of grant). While I think parts of this series will apply to any type of education research, I think the series is mainly geared towards those doing longitudinal evaluation research, specifically those conducting randomized controlled trial studies (RCTs).
 
@@ -15,7 +19,7 @@ As part of my writing process, I have been researching data management practices
 
 I am making these materials available for anyone who finds them useful. My hope is that when completed, this comprehensive manual will assist all new PIs, data managers, project coordinators, research assistants, and others who have been awarded their first research grant, or even those with established careers, in navigating how to implement a successful data management plan throughout their project. There are many great resources out there on data management in research and I will share those resources in this series. However, what I think will make this resource unique is the narrow focus on education research, an area with scarce data management information.
 
-**About me**: I am currently a Data Scientist at [Streamline Data Science](https://streamlinedatascience.io/), providing tidy data as a service. Prior to this I oversaw data management activities in the MPSI, which included 8 federally funded research grants (4 of which were RCTs). In my time with the MPSI I was a part of almost every aspect of the research data life cycle. I was a project coordinator, data collector, analyst, supervisor, grant writer, and data manager, and in those roles I saw the good, the bad, and the ugly of data management. My experiences and my passion to improve data management practices in the MPSI and across the entire field of education was my motivation for creating these materials.
+**About me**: I oversaw data management activities in the MPSI for 8 years, which included 8 federally funded research grants (4 of which were RCTs). In my time with the MPSI I was a part of almost every aspect of the research data life cycle. I was a project coordinator, data collector, analyst, supervisor, grant writer, and data manager, and in those roles I saw the good, the bad, and the ugly of data management. My experiences and my passion to improve data management practices in the MPSI and across the entire field of education was my motivation for creating these materials.
 
 *Materials were last updated on `r format(Sys.time(), '%m/%d/%Y')`*  
 
@@ -29,9 +33,4 @@ I am making these materials available for anyone who finds them useful. My hope 
 |2         |Setting up data structures                                 |
 |3         |Style Guide                                                |
 |4         |Writing a data cleaning plan                               |
-|5         |Intro to R and RStudio, reading in and reviewing data (forthcoming)     |
-|6         |Data wrangling basics (forthcoming)                                    |
-|7         |Restructuring, merging, or aggregating data (forthcoming)               |
-|8         |Cleaning data start to finish, exporting data (forthcoming)             |
-|9         |Advanced topics: TBD (forthcoming)                                      |
-|10        |Sharing data upon project completion (forthcoming)                       |
+|5        |Sharing data upon project completion (forthcoming)                       |

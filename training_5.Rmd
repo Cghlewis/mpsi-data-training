@@ -31,3 +31,18 @@ Something about this
 ## Additional resources for learning Intro R
 
 XXXX
+
+
+---
+
+## Getting started with syntax
+
+---
+
+While I do not plan to introduce coding in this resource. I do want to point you in the direction of great resources to get you started, or to fine tune your code if you already write syntax. I personally use R for all of my data cleaning. While I am biased and think it is probably the best option since it is free and open source, I will never shame anyone for using another program. My only suggestion is what I mentioned above, to always log your every move.
+
+
+https://philipppro.github.io/r_coding/
+
+https://github.com/Cghlewis/data-wrangling-functions/wiki
+
