@@ -1,48 +1,89 @@
 ---
-title: "Training 5: Reproducible Data Cleaning"
-author: "Crystal Lewis"
+title: "Data Sharing"
 output: 
   html_document:
+    css: "css/custom.css"
     toc: TRUE
     toc_float: TRUE
     anchor_sections: FALSE
+    includes:
+       in_header: plausible_analytics.html
 ---
 
-## Why use syntax
-
-
-
-## Getting to know R and RStudio
-
-Something
-
-### Installing R and Rstudio
-
-Something about this
-
-### Packages and libraries
-
-Something about this
-
-## Reading in data
-
-Something about this
-
-## Additional resources for learning Intro R
-
-XXXX
-
+<br>
 
 ---
 
-## Getting started with syntax
+## Overview
 
 ---
 
-While I do not plan to introduce coding in this resource. I do want to point you in the direction of great resources to get you started, or to fine tune your code if you already write syntax. I personally use R for all of my data cleaning. While I am biased and think it is probably the best option since it is free and open source, I will never shame anyone for using another program. My only suggestion is what I mentioned above, to always log your every move.
+Data sharing has become one of the most discussed areas around data management. With the growing number of funders requesting a data sharing plan (i.e. NIH), more people want to know how and why they should share their study data. In a 2019 [paper](https://journals.library.ualberta.ca/istl/index.php/istl/article/view/12), Pasek and Mayer found that data curation and re-use was cited as the area most needing improvement by graduate students across two universities. And in a way data sharing is a great jumping off point for many people to think about data management. With an end goal in mind, researchers can start to think about what structures they need to put in place to curate data that will be acceptable for data sharing.
+
+### Funders
+
+Almost all funders that education researchers work with now require data sharing in some form as part of their data management plan. For instance, IES states the following:
+
+NIH new changes
+
+Other
 
 
-https://philipppro.github.io/r_coding/
+### Why data share
 
-https://github.com/Cghlewis/data-wrangling-functions/wiki
+There are many reasons to share data and the number one reason may be that it is required by your funder. But outside of that, there are many other reasons to share data that benefit your line of research as well as the research community as a whole.
+
+Open science practices
+More publications out of your data
+
+
+Within/Between Episode
+Ashley Edwards diagram
+
+
+---
+
+## Where to Share Data
+
+---
+
+### Repository
+
+Why this is good: DOI and citation, metadata, assistance from repository, less maintenance on your part, forces you to be organized throughout the lifecylce of a project (if you choose the repository early on and know what is needed). Dataset versions can be recorded in a repository (if updates are made to a dataset - say an error is found).
+
+- General 
+
+University affliated, OSF, Zenodo
+
+- Domain specific
+
+LDBase, ICPSR
+
+
+### Personal website
+
+- Freely downloadable
+no doi/citation and difficult to track who is using your data
+
+- data request form
+requires work on staff's part to respond
+
+
+---
+
+## Considerations
+
+---
+
+
+### Consent Forms
+
+
+### De-identifying data
+
+
+### Data sharing/use agreements
+
+
+### Retractions
 

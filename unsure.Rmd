@@ -1,0 +1,49 @@
+---
+title: "Training 5: Reproducible Data Cleaning"
+output: 
+  html_document:
+    css: "css/custom.css"
+    toc: TRUE
+    toc_float: TRUE
+    anchor_sections: FALSE
+    includes:
+       in_header: plausible_analytics.html
+---
+  
+## Why use syntax
+  
+  
+  
+## Getting to know R and RStudio
+  
+Something
+
+### Installing R and Rstudio
+
+Something about this
+
+### Packages and libraries
+
+Something about this
+
+## Reading in data
+
+Something about this
+
+## Additional resources for learning Intro R
+
+XXXX
+
+
+---
+  
+## Getting started with syntax
+  
+---
+  
+While I do not plan to introduce coding in this resource. I do want to point you in the direction of great resources to get you started, or to fine tune your code if you already write syntax. I personally use R for all of my data cleaning. While I am biased and think it is probably the best option since it is free and open source, I will never shame anyone for using another program. My only suggestion is what I mentioned above, to always log your every move.
+
+
+https://philipppro.github.io/r_coding/
+  
+https://github.com/Cghlewis/data-wrangling-functions/wiki

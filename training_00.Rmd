@@ -277,3 +277,5 @@ Examples:
 
 14. Joshua Borycz recently wrote an [essay](https://datascience.codata.org/articles/10.5334/dsj-2021-009/) on research data managment workflows.
 
+15. ICPSR has put together a really thorough and helpful handbook on best data management practices called [Guide to Social Science Data Preparation and Archiving](https://www.icpsr.umich.edu/files/deposit/dataprep.pdf).
+

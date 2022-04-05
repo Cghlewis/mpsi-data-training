@@ -232,7 +232,7 @@ Most of what I mentioned above refers to how to structure data over time. Howeve
 
 ### Tidy data
 
-I of course, cannot pass over the topic of tidy data here. The term is ubiquitous in the world of data and since I plan to use R for data wrangling in later modules, tidy data needs to be covered. Tidy data, defined by [Hadley Wickham](https://www.jstatsoft.org/article/view/v059i10), meets very specific conditions which are:
+I of course, cannot pass over the topic of tidy data here. The term is ubiquitous in the world of data wrangling, especially for those who use the R programming language. Tidy data, defined by [Hadley Wickham](https://www.jstatsoft.org/article/view/v059i10), meets very specific conditions which are:
 
 1. Each variable forms a column
 2. Each observation forms a row
