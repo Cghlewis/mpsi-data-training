@@ -330,7 +330,6 @@ Resources:
 
  📑 [Effective Data Management](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/0012-9623-90.2.205)  
  📑 [Psych Technical Specification](https://docs.google.com/document/d/1u8o5jnWk0Iqp_J06PTu5NjBfVsdoPbBhstht6W0fFp0/edit#heading=h.xmrpyhv1y68j)  
-  [](https://docs.google.com/document/d/1GfIo67-wqq-26ZG9etar5tiKKYLLqWCra8jySolAK7Y/edit)
 
 **Second rule**: Keep everything (except variables that are identifying and completely unnecessary for project). Keep both item level and aggregated variables, recoded and original variables. Again, you never know which variables someone may need for their analysis.
 
@@ -406,7 +405,7 @@ While this is not a comprehensive list of every possible data cleaning step you 
 17. Add metadata
     + Variable labels and value labels
 18. Export clean data to a specified format (.csv, .tsv, .xlsx, .sav, etc.)
-    + Again, review recommendations for best formats for [long-term data storage]((https://dmptool.org/general_guidance#file-formats))
+    + Again, review recommendations for best formats for [long-term data storage](https://dmptool.org/general_guidance#file-formats)
     
 
 <br>

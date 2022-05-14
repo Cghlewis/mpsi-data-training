@@ -259,7 +259,7 @@ There are many best practices and considerations around variable naming.
   + Instead of *q1* use *gender*
 - If a variable is a part of a scale, consider naming is an abbreviation of that scale plus the scale item number (add the number last to make data manipulations easier)
   + *toca1*
-- Don't name a variable any keyword/function used in any programming language (ex: `for` or `if` in R is a function)
+- Don't name a variable any keywords (such as `if`,  `for`, `repeat`) or functions used in any programming language (see example list of all base R functions [here](https://stat.ethz.ch/R-manual/R-devel/library/base/html/00Index.html)).
 - Set a character limit
   + Most statistical programs have a limit on variable name characters
     - SPSS is 64

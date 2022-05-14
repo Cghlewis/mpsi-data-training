@@ -12,6 +12,8 @@ output:
 
 <br>
 
+## **In Progress**
+
 ---
 
 ## Overview
@@ -20,36 +22,190 @@ output:
 
 Data sharing has become one of the most discussed areas around data management. With the growing number of funders requesting a data sharing plan (i.e. NIH), more people want to know how and why they should share their study data. In a 2019 [paper](https://journals.library.ualberta.ca/istl/index.php/istl/article/view/12), Pasek and Mayer found that data curation and re-use was cited as the area most needing improvement by graduate students across two universities. And in a way data sharing is a great jumping off point for many people to think about data management. With an end goal in mind, researchers can start to think about what structures they need to put in place to curate data that will be acceptable for data sharing.
 
-### Funders
+---
 
-Almost all funders that education researchers work with now require data sharing in some form as part of their data management plan. For instance, IES states the following:
+## What is Data Sharing
 
-NIH new changes
+---
 
-Other
+While data sharing may sometimes encompass things such as sharing correlation matrices, summary tables, or study results, that is not what this section is about. This section is about sharing raw, item and case level, primary data collected as part of a research study. It can also include extant data collected and added to data that you collect. Beyond that overview, what types of data you share, how you share and where you share, may depend more on things like your funder, your budget, your project/participants, and your field. However, this section will provide many recommendations for what and how to share your data that will lead to the most benefits for you and your data.
+
+---
+
+## Why Share Data? {#share}
+
+---
+
+### Ten Reasons
+
+1. Required by Funder
+
+There are many reasons to share data and the number one reason may be that it is required by your funder. Almost all funders that education researchers work with now require data sharing in some form as part of their data management plan and the requirements are only getting more explicit and serious over time as agencies are better understanding the consequences of not sharing data and the benefits of sharing.
+
+2. Engage in Open Science
+
+While this term can be a catch all for many things, what I mean here is that sharing data allows researchers to review each others findings. This includes confirming and challenging the findings of others ([IES](https://ies.ed.gov/funding/pdf/EDPlanPolicyDevelopmentGuidanceforPublicAccess.pdf). And through this process we enhance scientific rigor and reproducibility. "When a result can be reproduced by multiple scientists, it validates the original results and readiness to progress to the next phase of research" ([NIH](https://www.nih.gov/research-training/rigor-reproducibility)).
+
+3. Accelerate Discovery
+
+This is a reason mentioned in [NIH's documentation](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-21-013.html). Sharing data promotes reuse for future studies by providing access to high-value datasets. This allows researchers to develop and answer questions to pressing education issues in less time than if they had to collect new original data.
+
+4. Promote Collaboration
+
+Sharing your data provides the opportunity for you to collaborate with new and existing collaborators to develop new research questions and studies with the data you have shared.
+
+5. Combine datasets to gain new insights (IES).
+
+Similar to collaboration, sharing your data provides the opportunity to combine datasets across studies, allowing new discoveries. Combining datasets may also help those who have datasets with low-statistical power, and without combining datasets, are unable to answer questions of interest ([Logan, Hart & Schatschneider](https://edarxiv.org/2x3cu/)).
+
+6. Save resources. 
+
+Similar to accelerate discovery, allowing other researchers to use your data, rather than collect new original data saves time, energy and money. Publicly archiving your data allows others to see what has already been collected, reducing duplicate data collection efforts. 
+
+7. Increase citation rate. 
+
+Sharing your dataset with an identifier such as persistent unique identifier (ex: DOI), allows you and others to cite your data in publications. You can track these citations to see the reach of your work.
+
+8. Support equitable access to high-quality datasets.
+
+Similar to save resources, sharing data is a means to provide equitable access of high-quality datasets ([Logan, Hart & Schatschneider](https://edarxiv.org/2x3cu/)) for early career scholars, students, and underrepresented researchers.  Not all researchers have the budget, staff, or connections to collect high-quality datasets, but sharing your datasets freely and openly allows everyone the opportunity to work with these data. Sharing data also serves as an important resource for training future researchers.
+
+9. Diversity of thought.
+
+Sharing data encourages diversity of analysis and opinions. Other researchers may have novel questions that can answer with your data that you have never considered. 
+
+10. Transparency leads to better data management.
+
+One unintended consequence of data sharing may be that it promotes good data management practices. Knowing that you will eventually be sharing your data and documentation with others outside of your team may motivate researchers to think hard about how to organize their data management practices in a way that will produce data that they trust to share with the outside world.
 
 
-### Why data share
+Resources:
 
-There are many reasons to share data and the number one reason may be that it is required by your funder. But outside of that, there are many other reasons to share data that benefit your line of research as well as the research community as a whole.
+ 📑 [Ashley Edwards 10 Benefits of Data Sharing](https://venngage.net/ps/Uz65vsS6hI/new-10-benefits-of-data-sharing)    
+ 📑 [Data Sharing in Education Science](https://edarxiv.org/2x3cu/)  
+ 📑 [Within and Between podcast: The what, why, how, and hesitations of data sharing](http://www.withinandbetweenpod.com/)
 
-Open science practices
-More publications out of your data
+---
+
+## Principles
+
+---
+
+FAIR Principles
 
 
-Within/Between Episode
-Ashley Edwards diagram
+
 
 
 ---
 
-## Where to Share Data
+## Planning for Data Sharing
 
 ---
 
-### Repository
+While Data Sharing may often happen at the end of a project, planning for data sharing should happen at the beginning. For many funders, you'll be required to write a brief overview of your data sharing plan in your data management plan (DMP) as part of you grant proposal, and will also be allowed to submit DMP associated costs in your grant application budget requests. DMPs are often a supplement/appendix to your grant application and restricted to anywhere from 1-2 pages (NIH, NIJ and NSF) to a 5 page maximum (IES). For most funders these DMPs are not part of the scoring process, but they are reviewed by a panel or program officer. Some funders may provide feedback and/or ask for revisions if they believe your plan and/or your budget/associated costs are not adequate.
+
+What to include in a DMP varies some across funding agencies. **While you should check each funding agency's site for their specific DMP requirements**, this comparison table provides an overview of 11 common categories covered in a data management plan and whether four large funding agencies ask applicants to address these categories in their data management plans, as well as any additional guidance they provide for each category.
+
+
+**Categories to Include in a Data Management Plan and Guidance Provided by Funder**
+
+```{r, echo = FALSE, message=FALSE, warning=FALSE}
+
+library(tidyverse)
+library(kableExtra)
+
+data <- readxl::read_excel(here::here("data", "comparison.xlsx")) %>%
+  mutate(across(everything(), ~replace_na(., "")))
+
+data %>%
+  kbl(align = c('l', 'c','c','c','c')) %>% 
+  kable_styling(bootstrap_options = "bordered") %>%
+  column_spec(1:5, width = "3in") %>%
+  row_spec(c(1,3,5, 7, 9, 11, 13, 15, 17, 19, 21),background = "#b0d2da") %>%
+  row_spec(c(2,4,6, 8, 10, 12, 14, 16, 18, 20, 22),background = "#7da1bf") %>%
+  row_spec(0, background = "#2f4a60", color = "white") %>%
+  scroll_box(height = "800px")
+
+#data %>%
+#  kbl(align = c('l', 'c','c','c','c')) %>% 
+#  column_spec(1:5, width = "3in") %>%
+#  kable_styling(bootstrap_options = c("striped")) %>%
+#  row_spec(0, )
+#  scroll_box(height = "800px")
+
+```
+
+
+<br>
+
+However, even if your funder does not require a data sharing plan, there are still many reasons to consider sharing your data, as we covered [above](#share). Planning what, how, and when to share before your project even begins is the best way to ensure you have everything in order by the time you need to share your data. You can always update your plan during or after your project completion. If data sharing is required by your funder, it may be helpful to keep in contact with your program officer regarding any potential changes throughout your project.
+
+Data Management Plan resources:
+
+IES:
+
+ 📑 [IES Implementation Guide for Public Access to Research Data](https://ies.ed.gov/funding/datasharing_implementation.asp)        
+ 📑 [U.S. Department of Education Plan and Policy Development Guidance for Public Access](https://ies.ed.gov/funding/pdf/EDPlanPolicyDevelopmentGuidanceforPublicAccess.pdf)  
+ 📑 [IES Data Sharing FAQ](https://ies.ed.gov/funding/datasharing_faq.asp)   
+ 📑 [IES Policy Regarding Public Access to Research](https://ies.ed.gov/funding/researchaccess.asp)  
+ 📑 [DMP Tool Template IES](https://dmptool.org/template_export/1895.pdf)  
+ 
+NIH:
+
+ 📑 [NIH Writing a Data Management and Sharing   Plan](https://sharing.nih.gov/data-management-and-sharing-policy/planning-and-budgeting-DMS/writing-a-data-management-and-sharing-plan)  
+ 📑 [Final NIH Policy for Data Management and Sharing](https://grants.nih.gov/grants/guide/notice-files/NOT-OD-21-013.html) 
+ 
+NIJ:
+
+ 📑 [NIJ Data Archiving Plan](https://nij.ojp.gov/funding/data-archiving)  
+ 
+NSF: 
+
+ 📑 [Data Management for NSF EHR Directorate Proposals and Awards](https://www.nsf.gov/bfa/dias/policy/dmpdocs/ehr.pdf)  
+ 📑 [NSF Dissemination and Sharing of Research Results](Dissemination and Sharing of Research Results - NSF Data Management Plan Requirements)  
+ 📑 [SPARC Data Sharing Requirement Comparison](http://datasharing.sparcopen.org/compare?ids=11&compare=data)
+
+
+---
+
+## Best Practices
+
+---
+
+While your funder may have guidance as well as requirements for your data sharing plan, there are also generally accepted best practices that you should consider when you construct your plan. Following required guidelines and best practices will help you provide data that is useful and accessible to researchers. 
+
+However, the [Institute of Education Sciences](https://ies.ed.gov/ncee/pubs/2022004/pdf/2022004.pdf) put it best when they said, keep the big picture in mind. They listed out 4 big ideas to consider when planning for data sharing:  
+
+1. Focus on sharing well-organized and well-documented data. Include all documentation necessary for someone with no familiarity with your project to pick up your data and make sense of it. Consider everything you can include so that future researchers aren't reaching back out to you with ongoing questions. Also, organize your data with a well designed structure. Don't share messy files that are inconsistent across the project. Share files that are standardized, uniform, and can be easily linked if necessary. 
+
+2. Commit to sharing some data or code to facilitate analysis. If possible share more data beyond those used to produce a study's main findings. And if your data have restrictions and you are unable to share, is there anything you can share that is still in the vein of open science, such as code or aggregated data?
+
+3. Don't get stuck on one single way to share data. Each project is unique and has it's own opportunities and constraints. Think outside the box about what means of data sharing works best for you, while also considering how to maximize impact.
+
+4. Not most, but some projects will need to consider the possibility of tradeoffs. There may be times when sharing all of your data requires you to share with restricted access, while removing some variables and sharing only some of your data allows you to share the dataset openly. Researchers may need to consider what makes the most sense here, and in some circumstances you may be able to share data through of combination of methods.
+
+### What data to share
+
+Clean vs raw data
+
+Format to share
+
+IES: It is advisable to provide the data in several electronic file formats (one of which is non-proprietary) in order to provide broad use for researchers with access to different analytic software. Note that data must be provided in an electronic format.
+
+### What documentation to share
+
+Everything you possibly can
+
+Format to share
+
+### Where to Share Data
+
+Repository
 
 Why this is good: DOI and citation, metadata, assistance from repository, less maintenance on your part, forces you to be organized throughout the lifecylce of a project (if you choose the repository early on and know what is needed). Dataset versions can be recorded in a repository (if updates are made to a dataset - say an error is found).
+
+Select this repository early on so that you know what is required. The repository may help you plan or provide services for putting pieces together (metadata). Consult early with archive about requirements for data management: Creating a schedule for ongoing deposit of materials
 
 - General 
 
@@ -60,7 +216,7 @@ University affliated, OSF, Zenodo
 LDBase, ICPSR
 
 
-### Personal website
+Personal website
 
 - Freely downloadable
 no doi/citation and difficult to track who is using your data
@@ -69,21 +225,32 @@ no doi/citation and difficult to track who is using your data
 requires work on staff's part to respond
 
 
+### Security and Confidentiality
+
+Consent Forms
+
+
+De-identifying data
+
+Data sharing/use agreements
+
+
+
+### When to Share Data
+
+
+
+Review your funder's requirements for when to share data.
+Upload pieces throughout the study if cleaning as you go. Some repositories encourage this.
+
+
+Resources:
+
+https://www.youtube.com/watch?v=24LTVqHi7hw
+
 ---
 
-## Considerations
+## Retractions
 
 ---
-
-
-### Consent Forms
-
-
-### De-identifying data
-
-
-### Data sharing/use agreements
-
-
-### Retractions
 

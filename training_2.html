@@ -13,7 +13,7 @@
 
 <title>Data Collection Structures</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -62,6 +62,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="css/custom.css" type="text/css" />
 
 
@@ -86,6 +87,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -311,7 +315,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -341,6 +345,9 @@ div.tocify {
 <li>
   <a href="training_4.html">Module 4</a>
 </li>
+<li>
+  <a href="training_5.html">Module 5</a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -368,7 +375,7 @@ div.tocify {
 <hr />
 <p>In this training I continue to cover establishing systems that help make a project successful. These structures are the backbone of your project and without them in place, it can create many, many headaches for project staff, can compromise the confidentiality of your data, and may even make your data unusable.</p>
 <p>If you are collecting your own original data as part of your study, for example a randomized controlled trial study, data management best practices should be interwoven throughout your data collection process. I will discuss the role of data management in data collection instrument design, tracking of participants and data collection, as well as data storage and security. I will not go in to the minutiae of project management, including things such as recruiting participants, consenting participants, training data collectors, or scheduling data collection as those are less tied to data management and more aligned with project coordination.</p>
-<p>However, I will note that it is important that project coordinators and PIs work with a data manager to develop the language used in a consent form. Most, not all, education research that is anonymous or de-identified will fall under the <a href="https://oprs.usc.edu/irb-review/types-of-irb-review/exempt/"><em>exempt</em></a> IRB category (minimal risk), allowing you to write your own consent rather than using an IRB template. If you plan to share your data upon conclusion of your project, either via a repository or your own data request system, you will want to make sure your consent has clear language about your intent to share your de-identified data. If applicable, also include language regarding your intent to collect identifying information in a linking key table for tracking purposes that will be stored separately from your de-identified data. Shero and Hart from Florida State University have a great <a href="https://figshare.com/articles/preprint/Informed_Consent_Template/13218773/1">Informed Consent Template</a>.</p>
+<p>However, I will note that it is important that project coordinators and PIs work with a data manager to develop the language used in a consent form. Most, not all, education research that is anonymous or de-identified will fall under the <a href="https://oprs.usc.edu/irb-review/types-of-irb-review/exempt/"><em>exempt</em></a> Institutional Review Board (IRB) category (minimal risk), allowing you to write your own consent rather than using an IRB template. If you plan to share your data upon conclusion of your project, either via a repository or your own data request system, you will want to make sure your consent has clear language about your intent to share your de-identified data. If applicable, also include language regarding your intent to collect identifying information in a linking key table for tracking purposes that will be stored separately from your de-identified data. Shero and Hart from Florida State University have a great <a href="https://figshare.com/articles/preprint/Informed_Consent_Template/13218773/1">Informed Consent Template</a>.</p>
 <p><a href="https://journals.sagepub.com/doi/10.1177/2515245917747656">Meyer (2018)</a> has several helpful dos and donts for language to use in your consent form including:</p>
 <p>✔️ Don’t promise to destroy your data (unless your funder explicitly requires it)<br />
 ✔️ Don’t promise to not share data<br />
@@ -807,12 +814,12 @@ div.tocify {
 <code>FROM Student INNER JOIN Teacher ON Student.tch_id = Teacher.tch_id</code><br />
 <code>ORDER BY Teacher.last_name, Teacher.first_name, Student.last_name, Student.first_name</code></p>
 <p>Would produce a roster like this:</p>
-<div id="bbnssduujj" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="wupethzjzs" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#bbnssduujj .gt_table {
+#wupethzjzs .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -837,7 +844,7 @@ div.tocify {
   border-left-color: #D3D3D3;
 }
 
-#bbnssduujj .gt_heading {
+#wupethzjzs .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -849,7 +856,7 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#bbnssduujj .gt_title {
+#wupethzjzs .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -861,7 +868,7 @@ div.tocify {
   border-bottom-width: 0;
 }
 
-#bbnssduujj .gt_subtitle {
+#wupethzjzs .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -873,13 +880,13 @@ div.tocify {
   border-top-width: 0;
 }
 
-#bbnssduujj .gt_bottom_border {
+#wupethzjzs .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#bbnssduujj .gt_col_headings {
+#wupethzjzs .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -894,7 +901,7 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#bbnssduujj .gt_col_heading {
+#wupethzjzs .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -914,7 +921,7 @@ div.tocify {
   overflow-x: hidden;
 }
 
-#bbnssduujj .gt_column_spanner_outer {
+#wupethzjzs .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -926,15 +933,15 @@ div.tocify {
   padding-right: 4px;
 }
 
-#bbnssduujj .gt_column_spanner_outer:first-child {
+#wupethzjzs .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#bbnssduujj .gt_column_spanner_outer:last-child {
+#wupethzjzs .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#bbnssduujj .gt_column_spanner {
+#wupethzjzs .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -946,7 +953,7 @@ div.tocify {
   width: 100%;
 }
 
-#bbnssduujj .gt_group_heading {
+#wupethzjzs .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -971,7 +978,7 @@ div.tocify {
   vertical-align: middle;
 }
 
-#bbnssduujj .gt_empty_group_heading {
+#wupethzjzs .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -986,15 +993,15 @@ div.tocify {
   vertical-align: middle;
 }
 
-#bbnssduujj .gt_from_md > :first-child {
+#wupethzjzs .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#bbnssduujj .gt_from_md > :last-child {
+#wupethzjzs .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#bbnssduujj .gt_row {
+#wupethzjzs .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1013,7 +1020,7 @@ div.tocify {
   overflow-x: hidden;
 }
 
-#bbnssduujj .gt_stub {
+#wupethzjzs .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1026,7 +1033,7 @@ div.tocify {
   padding-right: 5px;
 }
 
-#bbnssduujj .gt_stub_row_group {
+#wupethzjzs .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1040,11 +1047,11 @@ div.tocify {
   vertical-align: top;
 }
 
-#bbnssduujj .gt_row_group_first td {
+#wupethzjzs .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#bbnssduujj .gt_summary_row {
+#wupethzjzs .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1054,16 +1061,16 @@ div.tocify {
   padding-right: 5px;
 }
 
-#bbnssduujj .gt_first_summary_row {
+#wupethzjzs .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#bbnssduujj .gt_first_summary_row.thick {
+#wupethzjzs .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#bbnssduujj .gt_last_summary_row {
+#wupethzjzs .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1073,7 +1080,7 @@ div.tocify {
   border-bottom-color: #D3D3D3;
 }
 
-#bbnssduujj .gt_grand_summary_row {
+#wupethzjzs .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1083,7 +1090,7 @@ div.tocify {
   padding-right: 5px;
 }
 
-#bbnssduujj .gt_first_grand_summary_row {
+#wupethzjzs .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1093,11 +1100,11 @@ div.tocify {
   border-top-color: #D3D3D3;
 }
 
-#bbnssduujj .gt_striped {
+#wupethzjzs .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#bbnssduujj .gt_table_body {
+#wupethzjzs .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1106,7 +1113,7 @@ div.tocify {
   border-bottom-color: #D3D3D3;
 }
 
-#bbnssduujj .gt_footnotes {
+#wupethzjzs .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1120,7 +1127,7 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#bbnssduujj .gt_footnote {
+#wupethzjzs .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -1129,7 +1136,7 @@ div.tocify {
   padding-right: 5px;
 }
 
-#bbnssduujj .gt_sourcenotes {
+#wupethzjzs .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1143,7 +1150,7 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#bbnssduujj .gt_sourcenote {
+#wupethzjzs .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1151,60 +1158,69 @@ div.tocify {
   padding-right: 5px;
 }
 
-#bbnssduujj .gt_left {
+#wupethzjzs .gt_left {
   text-align: left;
 }
 
-#bbnssduujj .gt_center {
+#wupethzjzs .gt_center {
   text-align: center;
 }
 
-#bbnssduujj .gt_right {
+#wupethzjzs .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#bbnssduujj .gt_font_normal {
+#wupethzjzs .gt_font_normal {
   font-weight: normal;
 }
 
-#bbnssduujj .gt_font_bold {
+#wupethzjzs .gt_font_bold {
   font-weight: bold;
 }
 
-#bbnssduujj .gt_font_italic {
+#wupethzjzs .gt_font_italic {
   font-style: italic;
 }
 
-#bbnssduujj .gt_super {
+#wupethzjzs .gt_super {
   font-size: 65%;
 }
 
-#bbnssduujj .gt_footnote_marks {
+#wupethzjzs .gt_two_val_uncert {
+  display: inline-block;
+  line-height: 1em;
+  text-align: right;
+  font-size: 60%;
+  vertical-align: -0.25em;
+  margin-left: 0.1em;
+}
+
+#wupethzjzs .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#bbnssduujj .gt_asterisk {
+#wupethzjzs .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#bbnssduujj .gt_slash_mark {
+#wupethzjzs .gt_slash_mark {
   font-size: 0.7em;
   line-height: 0.7em;
   vertical-align: 0.15em;
 }
 
-#bbnssduujj .gt_fraction_numerator {
+#wupethzjzs .gt_fraction_numerator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: 0.45em;
 }
 
-#bbnssduujj .gt_fraction_denominator {
+#wupethzjzs .gt_fraction_denominator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: -0.05em;

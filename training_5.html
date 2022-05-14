@@ -13,7 +13,7 @@
 
 <title>Data Sharing</title>
 
-<script src="site_libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -35,6 +35,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <script defer data-domain="cghlewis.github.io/mpsi-data-training" src="https://plausible.io/js/plausible.js"></script>
   
 
@@ -57,6 +59,7 @@ if (window.hljs) {
   }
 }
 </script>
+
 
 
 
@@ -86,6 +89,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -311,7 +317,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -341,6 +347,9 @@ div.tocify {
 <li>
   <a href="training_4.html">Module 4</a>
 </li>
+<li>
+  <a href="training_5.html">Module 5</a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -359,31 +368,567 @@ div.tocify {
 
 
 <p><br></p>
+<div id="in-progress" class="section level2">
+<h2><strong>In Progress</strong></h2>
 <hr />
+</div>
 <div id="overview" class="section level2">
 <h2>Overview</h2>
 <hr />
 <p>Data sharing has become one of the most discussed areas around data management. With the growing number of funders requesting a data sharing plan (i.e. NIH), more people want to know how and why they should share their study data. In a 2019 <a href="https://journals.library.ualberta.ca/istl/index.php/istl/article/view/12">paper</a>, Pasek and Mayer found that data curation and re-use was cited as the area most needing improvement by graduate students across two universities. And in a way data sharing is a great jumping off point for many people to think about data management. With an end goal in mind, researchers can start to think about what structures they need to put in place to curate data that will be acceptable for data sharing.</p>
-<div id="funders" class="section level3">
-<h3>Funders</h3>
-<p>Almost all funders that education researchers work with now require data sharing in some form as part of their data management plan. For instance, IES states the following:</p>
-<p>NIH new changes</p>
-<p>Other</p>
+<hr />
 </div>
-<div id="why-data-share" class="section level3">
-<h3>Why data share</h3>
-<p>There are many reasons to share data and the number one reason may be that it is required by your funder. But outside of that, there are many other reasons to share data that benefit your line of research as well as the research community as a whole.</p>
-<p>Open science practices More publications out of your data</p>
-<p>Within/Between Episode Ashley Edwards diagram</p>
+<div id="what-is-data-sharing" class="section level2">
+<h2>What is Data Sharing</h2>
+<hr />
+<p>While data sharing may sometimes encompass things such as sharing correlation matrices, summary tables, or study results, that is not what this section is about. This section is about sharing raw, item and case level, primary data collected as part of a research study. It can also include extant data collected and added to data that you collect. Beyond that overview, what types of data you share, how you share and where you share, may depend more on things like your funder, your budget, your project/participants, and your field. However, this section will provide many recommendations for what and how to share your data that will lead to the most benefits for you and your data.</p>
+<hr />
+</div>
+<div id="share" class="section level2">
+<h2>Why Share Data?</h2>
+<hr />
+<div id="ten-reasons" class="section level3">
+<h3>Ten Reasons</h3>
+<ol style="list-style-type: decimal">
+<li>Required by Funder</li>
+</ol>
+<p>There are many reasons to share data and the number one reason may be that it is required by your funder. Almost all funders that education researchers work with now require data sharing in some form as part of their data management plan and the requirements are only getting more explicit and serious over time as agencies are better understanding the consequences of not sharing data and the benefits of sharing.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Engage in Open Science</li>
+</ol>
+<p>While this term can be a catch all for many things, what I mean here is that sharing data allows researchers to review each others findings. This includes confirming and challenging the findings of others (<a href="https://ies.ed.gov/funding/pdf/EDPlanPolicyDevelopmentGuidanceforPublicAccess.pdf">IES</a>. And through this process we enhance scientific rigor and reproducibility. “When a result can be reproduced by multiple scientists, it validates the original results and readiness to progress to the next phase of research” (<a href="https://www.nih.gov/research-training/rigor-reproducibility">NIH</a>).</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Accelerate Discovery</li>
+</ol>
+<p>This is a reason mentioned in <a href="https://grants.nih.gov/grants/guide/notice-files/NOT-OD-21-013.html">NIH’s documentation</a>. Sharing data promotes reuse for future studies by providing access to high-value datasets. This allows researchers to develop and answer questions to pressing education issues in less time than if they had to collect new original data.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Promote Collaboration</li>
+</ol>
+<p>Sharing your data provides the opportunity for you to collaborate with new and existing collaborators to develop new research questions and studies with the data you have shared.</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Combine datasets to gain new insights (IES).</li>
+</ol>
+<p>Similar to collaboration, sharing your data provides the opportunity to combine datasets across studies, allowing new discoveries. Combining datasets may also help those who have datasets with low-statistical power, and without combining datasets, are unable to answer questions of interest (<a href="https://edarxiv.org/2x3cu/">Logan, Hart &amp; Schatschneider</a>).</p>
+<ol start="6" style="list-style-type: decimal">
+<li>Save resources.</li>
+</ol>
+<p>Similar to accelerate discovery, allowing other researchers to use your data, rather than collect new original data saves time, energy and money. Publicly archiving your data allows others to see what has already been collected, reducing duplicate data collection efforts.</p>
+<ol start="7" style="list-style-type: decimal">
+<li>Increase citation rate.</li>
+</ol>
+<p>Sharing your dataset with an identifier such as persistent unique identifier (ex: DOI), allows you and others to cite your data in publications. You can track these citations to see the reach of your work.</p>
+<ol start="8" style="list-style-type: decimal">
+<li>Support equitable access to high-quality datasets.</li>
+</ol>
+<p>Similar to save resources, sharing data is a means to provide equitable access of high-quality datasets (<a href="https://edarxiv.org/2x3cu/">Logan, Hart &amp; Schatschneider</a>) for early career scholars, students, and underrepresented researchers. Not all researchers have the budget, staff, or connections to collect high-quality datasets, but sharing your datasets freely and openly allows everyone the opportunity to work with these data. Sharing data also serves as an important resource for training future researchers.</p>
+<ol start="9" style="list-style-type: decimal">
+<li>Diversity of thought.</li>
+</ol>
+<p>Sharing data encourages diversity of analysis and opinions. Other researchers may have novel questions that can answer with your data that you have never considered.</p>
+<ol start="10" style="list-style-type: decimal">
+<li>Transparency leads to better data management.</li>
+</ol>
+<p>One unintended consequence of data sharing may be that it promotes good data management practices. Knowing that you will eventually be sharing your data and documentation with others outside of your team may motivate researchers to think hard about how to organize their data management practices in a way that will produce data that they trust to share with the outside world.</p>
+<p>Resources:</p>
+<p>📑 <a href="https://venngage.net/ps/Uz65vsS6hI/new-10-benefits-of-data-sharing">Ashley Edwards 10 Benefits of Data Sharing</a><br />
+📑 <a href="https://edarxiv.org/2x3cu/">Data Sharing in Education Science</a><br />
+📑 <a href="http://www.withinandbetweenpod.com/">Within and Between podcast: The what, why, how, and hesitations of data sharing</a></p>
 <hr />
 </div>
 </div>
-<div id="where-to-share-data" class="section level2">
-<h2>Where to Share Data</h2>
+<div id="principles" class="section level2">
+<h2>Principles</h2>
 <hr />
-<div id="repository" class="section level3">
-<h3>Repository</h3>
+<p>FAIR Principles</p>
+<hr />
+</div>
+<div id="planning-for-data-sharing" class="section level2">
+<h2>Planning for Data Sharing</h2>
+<hr />
+<p>While Data Sharing may often happen at the end of a project, planning for data sharing should happen at the beginning. For many funders, you’ll be required to write a brief overview of your data sharing plan in your data management plan (DMP) as part of you grant proposal, and will also be allowed to submit DMP associated costs in your grant application budget requests. DMPs are often a supplement/appendix to your grant application and restricted to anywhere from 1-2 pages (NIH, NIJ and NSF) to a 5 page maximum (IES). For most funders these DMPs are not part of the scoring process, but they are reviewed by a panel or program officer. Some funders may provide feedback and/or ask for revisions if they believe your plan and/or your budget/associated costs are not adequate.</p>
+<p>What to include in a DMP varies some across funding agencies. <strong>While you should check each funding agency’s site for their specific DMP requirements</strong>, this comparison table provides an overview of 11 common categories covered in a data management plan and whether four large funding agencies ask applicants to address these categories in their data management plans, as well as any additional guidance they provide for each category.</p>
+<p><strong>Categories to Include in a Data Management Plan and Guidance Provided by Funder</strong></p>
+<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:800px; ">
+<table class="table table-bordered" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;color: white !important;background-color: #2f4a60 !important;position: sticky; top:0; background-color: #FFFFFF;">
+Content Category
+</th>
+<th style="text-align:center;color: white !important;background-color: #2f4a60 !important;position: sticky; top:0; background-color: #FFFFFF;">
+IES - Data Management Plan
+</th>
+<th style="text-align:center;color: white !important;background-color: #2f4a60 !important;position: sticky; top:0; background-color: #FFFFFF;">
+NIH - Data Management and Sharing Plan
+</th>
+<th style="text-align:center;color: white !important;background-color: #2f4a60 !important;position: sticky; top:0; background-color: #FFFFFF;">
+NIJ - Data Archiving Plan
+</th>
+<th style="text-align:center;color: white !important;background-color: #2f4a60 !important;position: sticky; top:0; background-color: #FFFFFF;">
+NSF - Data Management Plan
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 3in; background-color: #b0d2da !important;">
+Roles and Responsibilities
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 3in; background-color: #7da1bf !important;">
+<p>What are staff roles in mgmt and long-term preservation of data?</p>
+<p>Who ensures accessibility, reliability, and quality of data?</p>
+Is there a plan if a core project member leaves the project or institution?
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+<p>Staff responsible for data creation and management should be identified and their duties described.</p>
+Identify any hardware/software required for managing data.
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 3in; background-color: #b0d2da !important;">
+Type of Data to be Shared
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 3in; background-color: #7da1bf !important;">
+<p>How is data captured (surveys, assessments, observations)?</p>
+<p>Will data be item-level and summary scores?</p>
+<p>Will you share raw datasets and clean Datasets?</p>
+What are the expected # of files? Expected # of participants in files?
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+<p>Full item/case level dataset, not summary statistics or tables are expected. This includes primary data collected through the grant, as well as data created by linking to extant data sources.</p>
+<p>Share, at a minimum, the data underlying any peer-reviewed publication, this includes “final analytic measures as well as the source measures used to construct them”. However, researchers are encouraged to share any data that will “inform the field more broadly”.</p>
+Providing access to final cleaned data is required. Including raw data and derived variables is optional.
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+<p>All primary data collected through the grant regardless of whether the data are used to support scholarly publications.</p>
+Data should be of sufficient quality to validate and replicate research findings.
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+<p>All cleaned data collected under the grant award.</p>
+Data should include all variables used to produce analysis, tables, and descriptive information provided in the final report (ex: computed, derived, and weight variables - if applicable).
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+Share primary data collected during the course of the grant.
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 3in; background-color: #b0d2da !important;">
+Format of Data
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 3in; background-color: #7da1bf !important;">
+<p>Electronic?</p>
+<p>Nonproprietary software format (ex: csv)?</p>
+<p>More than one format (.sav and .csv)?</p>
+Any related tools needed to manipulate shared data?
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+<p>Must be an electronic format.</p>
+<p>Advised to provide data in multiple formats (one being a non-proprietary format).</p>
+Identify any hardware/software required for sharing data.
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+<p>Datasets should be provided in formats consistent with those used in the community that the repository serves.</p>
+Preferred non-proprietary formats.
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+<p>For Quantitative: SPSS preferred, Stata and SAS are acceptable. Embedded variable and value labels, and missing values assigned.</p>
+For Qualitative: txt, rtf, Microsoft Word or PDF, Excel, databases
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 3in; background-color: #b0d2da !important;">
+Documentation
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 3in; background-color: #7da1bf !important;">
+<p>What metadata will you create (data dictionaries, codebooks)?</p>
+<p>Consider project level, dataset level and variable level documentation.</p>
+<p>What format will it be in (xml, csv, pdf)?</p>
+What other documentation do you plan to include when sharing data (code, data collection instruments, protocols)?
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+<p>Provide sufficient documentation to support responsible use by other researchers.</p>
+<p>“Information can be embedded directly into the file or can be included with it as a separate file (e.g., a ReadMe.txt file, a .pdf, etc.).”</p>
+“Documentation should include a summary of the purpose of the data collection, methodology and procedures used to collect the data, timing of the data collection, as well as details of the data codes, definition of variables, variable field locations, and frequencies.”
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+Examples include: Methodology and procedures used to collect the data Data labels Definitions of variables Any other information necessary to reproduce and understand the data
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+<p>Documentation should include: IRB approved protocol, Final project report/journal article, IRB approved consent (if applicable), Data use agreements (if applicable, Description of file formats, data anomalies, frequently used terms/acronyms, instructions for merging files, documentation on decisions, guidance for using weights (if applicable), citations, contact information, codebooks if variable and value labels are not embedded in the data files, syntax files containing statistical programming code as well as data manipulation code.</p>
+PDF format preferred: Word, RTF and ASCII accepted
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 3in; background-color: #b0d2da !important;">
+Standards
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 3in; background-color: #7da1bf !important;">
+Any data/documentation standards being used (ex: DDI, International standard)?
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+“There are emerging metadata standards in many fields, but currently there is not a set of standards in education research.”
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+“While many scientific fields have developed and adopted common data standards, others have not. In such cases, the Plan may indicate that no consensus data standards exist for the scientific data and metadata to be generated, preserved, and shared.”
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+“DMPs submitted to EHR should be appropriate to the data being generated and reflect the procedures, standards and best practices developed by the communities of practice in the area of research being proposed.”
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 3in; background-color: #b0d2da !important;">
+Method of Data Sharing
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 3in; background-color: #7da1bf !important;">
+<p>How will you share data (institutional repository, data archive, PI website)?</p>
+<p>Will data be restricted and is a data enclave required?</p>
+Is a data agreement required?
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+<p>Highly encouraged to deposit data in publicly accessible repositories. However, other methods may be used including the PI taking responsibilitiy for data sharing or some combination of repository and PI data sharing.</p>
+Datasets should be discoverable and citable (ex: metadata and DOI).
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+<p>Strongly encourage the use of established repositories to the extent possible, specifically, domain-specific repositories where possible.</p>
+<p>Data should be findable and identifiable (ex: via a persistent unique identifier or other standard indexing tools).</p>
+While data kept by the researcher or institution, provided on request is not preferred, NIH recognizes and respects that many communities (ex: AI/AN communities) may want to manage, preserve and share their own data.
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+<p>In most cases, the NIJ requires grantees to deposit their data in the National Archive of Criminal Justice Data (NACJD), which is hosted by ICPSR.</p>
+If this is not the appropriate repository for the datasets, the data archiving plan should include submission of study level information and link to data location.
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+“If data or products are to be preserved by a third party, please refer to their preservation plans if available.”
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 3in; background-color: #b0d2da !important;">
+Circumstances preventing sharing
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 3in; background-color: #7da1bf !important;">
+<p>Do you have any data covered by FERPA/HIPAA that doesn’t allow data sharing?</p>
+<p>Do you work with any partners that do not allow you to share data (ex: School districts, Tribal regulations)?</p>
+Are you working with proprietary data?
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+<p>“Specify appropriate restrictions on access to and usage of the data to ensure protection of human subjects while not unduly restricting access to the data.”</p>
+If a DMP states data cannot be shared, researchers must provide a compelling rationale.
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+<p>Will there be any restrictions on data collected from human subjects?</p>
+<p>“Any restrictions imposed by federal, Tribal, or state laws, regulations, or policies, or existing or anticipated agreements.”</p>
+Any limitations should be communicated to both the data repository as well as communicated in the Data Management and Sharing Plan for review.
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+“Unless otherwise specified in writing by the NIJ grant manager, as authorized by the appropriate NIJ authority, data submission is required for all research, development, and evaluation awards, and the requirement may not be unilaterally modified or waived.”
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 3in; background-color: #b0d2da !important;">
+Privacy and rights of participants
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 3in; background-color: #7da1bf !important;">
+<p>How will you maintain participant confidentiality during your project and when data is shared, prevent disclosure of PII?</p>
+Did participants sign informed consent? Did the consent communicate how participant data are expected to be used and shared?
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+<p>Protect confidentiality in final data and follow rules in accordance with IRB and any state/federal laws and regulations.</p>
+<p>Proxy IDs may be used to protect direct disclosure of participants in data, but means of indirect exposure should be identified as well (ex: small numbers, sample characteristics) and remedies provided.</p>
+Consent forms and IRB approvals should reference future data sharing so that participants, schools, and other participating organizations are made aware of conditions that will be put in place to protect privacy prior to any data collection.
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+Describe informed consent as well as how you well protect privacy and confidentiality “consistent with applicable federal, Tribal, state, and local laws, regulations, and policies”
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+“All direct identifiers to be removed and all indirect identifiers to be recoded to prohibit re-identification.”
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+“Access and sharing of data and products should reflect appropriate protections for IRB, privacy, confidentiality, data security, and intellectual property.”
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 3in; background-color: #b0d2da !important;">
+Data Security
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+NO
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 3in; background-color: #7da1bf !important;">
+<p>How will you keep data secure on site during the project.</p>
+Consider IRB requirements.
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+<p>Protect confidentiality in final data and follow rules in accordance with IRB and any state/federal laws and regulations.</p>
+<p>Proxy IDs may be used to protect direct disclosure of participants in data, but means of indirect exposure should be identified as well (ex: small numbers, sample characteristics) and remedies provided.</p>
+Consent forms and IRB approvals should reference future data sharing so that participants, schools, and other participating organizations are made aware of conditions that will be put in place to protect privacy prior to any data collection.
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+You do not have to speak to security as NIH acknowledges that data security fall within the purview of Institutional IRB (while the project is active) and the repository (once data is shared).
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+“All direct identifiers to be removed and all indirect identifiers to be recoded to prohibit re-identification.”
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+“Access and sharing of data and products should reflect appropriate protections for IRB, privacy, confidentiality, data security, and intellectual property.”
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 3in; background-color: #b0d2da !important;">
+Schedule for Data Sharing
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 3in; background-color: #7da1bf !important;">
+When will you share data and for how long?
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+<p>No later than when the main findings from the final study dataset are published in a peer-reviewed scholarly publication. However, researchers may share data earlier as well, if appropriate.</p>
+Data should be available for 10 years unless a shorter period of time is required to comply with Federal or State laws.
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+<p>Data should be shared no later than the time of an associated publication or end of the grant period, whichever comes first.</p>
+<p>A single project can share data at different times (ex: share data underlying publication during the period of award but ALSO share data that have not yet led to a publication by the end of the award period).</p>
+Data should be available as long as it is useful for the larger research community.
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+“Grant recipients are strongly encouraged to submit data sets 90 days or earlier prior to the end of the award project period.”
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+“Access to data and products should be provided, and data and the products of research shared, as soon as is reasonably possible.”
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 3in; background-color: #b0d2da !important;">
+Pre-registration
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+YES
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+NO
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+NO
+</td>
+<td style="text-align:center;width: 3in; background-color: #b0d2da !important;">
+NO
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 3in; background-color: #7da1bf !important;">
+Where and when will you pre-register your study?
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+<p>Causal impact studies must be pre-registered in a recognized study registry, documenting their confirmatory research questions and planned analytic activities.</p>
+<p>Must be registered within the first year of the project.</p>
+Example registry options: OSF, Registry of efficacy and effectiveness studies (REES).
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+</td>
+<td style="text-align:center;width: 3in; background-color: #7da1bf !important;">
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><br></p>
+<p>However, even if your funder does not require a data sharing plan, there are still many reasons to consider sharing your data, as we covered <a href="#share">above</a>. Planning what, how, and when to share before your project even begins is the best way to ensure you have everything in order by the time you need to share your data. You can always update your plan during or after your project completion. If data sharing is required by your funder, it may be helpful to keep in contact with your program officer regarding any potential changes throughout your project.</p>
+<p>Data Management Plan resources:</p>
+<p>IES:</p>
+<p>📑 <a href="https://ies.ed.gov/funding/datasharing_implementation.asp">IES Implementation Guide for Public Access to Research Data</a><br />
+📑 <a href="https://ies.ed.gov/funding/pdf/EDPlanPolicyDevelopmentGuidanceforPublicAccess.pdf">U.S. Department of Education Plan and Policy Development Guidance for Public Access</a><br />
+📑 <a href="https://ies.ed.gov/funding/datasharing_faq.asp">IES Data Sharing FAQ</a><br />
+📑 <a href="https://ies.ed.gov/funding/researchaccess.asp">IES Policy Regarding Public Access to Research</a><br />
+📑 <a href="https://dmptool.org/template_export/1895.pdf">DMP Tool Template IES</a></p>
+<p>NIH:</p>
+<p>📑 <a href="https://sharing.nih.gov/data-management-and-sharing-policy/planning-and-budgeting-DMS/writing-a-data-management-and-sharing-plan">NIH Writing a Data Management and Sharing Plan</a><br />
+📑 <a href="https://grants.nih.gov/grants/guide/notice-files/NOT-OD-21-013.html">Final NIH Policy for Data Management and Sharing</a></p>
+<p>NIJ:</p>
+<p>📑 <a href="https://nij.ojp.gov/funding/data-archiving">NIJ Data Archiving Plan</a></p>
+<p>NSF:</p>
+<p>📑 <a href="https://www.nsf.gov/bfa/dias/policy/dmpdocs/ehr.pdf">Data Management for NSF EHR Directorate Proposals and Awards</a><br />
+📑 <a href="Dissemination%20and%20Sharing%20of%20Research%20Results%20-%20NSF%20Data%20Management%20Plan%20Requirements">NSF Dissemination and Sharing of Research Results</a><br />
+📑 <a href="http://datasharing.sparcopen.org/compare?ids=11&amp;compare=data">SPARC Data Sharing Requirement Comparison</a></p>
+<hr />
+</div>
+<div id="best-practices" class="section level2">
+<h2>Best Practices</h2>
+<hr />
+<p>While your funder may have guidance as well as requirements for your data sharing plan, there are also generally accepted best practices that you should consider when you construct your plan. Following required guidelines and best practices will help you provide data that is useful and accessible to researchers.</p>
+<p>However, the <a href="https://ies.ed.gov/ncee/pubs/2022004/pdf/2022004.pdf">Institute of Education Sciences</a> put it best when they said, keep the big picture in mind. They listed out 4 big ideas to consider when planning for data sharing:</p>
+<ol style="list-style-type: decimal">
+<li><p>Focus on sharing well-organized and well-documented data. Include all documentation necessary for someone with no familiarity with your project to pick up your data and make sense of it. Consider everything you can include so that future researchers aren’t reaching back out to you with ongoing questions. Also, organize your data with a well designed structure. Don’t share messy files that are inconsistent across the project. Share files that are standardized, uniform, and can be easily linked if necessary.</p></li>
+<li><p>Commit to sharing some data or code to facilitate analysis. If possible share more data beyond those used to produce a study’s main findings. And if your data have restrictions and you are unable to share, is there anything you can share that is still in the vein of open science, such as code or aggregated data?</p></li>
+<li><p>Don’t get stuck on one single way to share data. Each project is unique and has it’s own opportunities and constraints. Think outside the box about what means of data sharing works best for you, while also considering how to maximize impact.</p></li>
+<li><p>Not most, but some projects will need to consider the possibility of tradeoffs. There may be times when sharing all of your data requires you to share with restricted access, while removing some variables and sharing only some of your data allows you to share the dataset openly. Researchers may need to consider what makes the most sense here, and in some circumstances you may be able to share data through of combination of methods.</p></li>
+</ol>
+<div id="what-data-to-share" class="section level3">
+<h3>What data to share</h3>
+<p>Clean vs raw data</p>
+<p>Format to share</p>
+<p>IES: It is advisable to provide the data in several electronic file formats (one of which is non-proprietary) in order to provide broad use for researchers with access to different analytic software. Note that data must be provided in an electronic format.</p>
+</div>
+<div id="what-documentation-to-share" class="section level3">
+<h3>What documentation to share</h3>
+<p>Everything you possibly can</p>
+<p>Format to share</p>
+</div>
+<div id="where-to-share-data" class="section level3">
+<h3>Where to Share Data</h3>
+<p>Repository</p>
 <p>Why this is good: DOI and citation, metadata, assistance from repository, less maintenance on your part, forces you to be organized throughout the lifecylce of a project (if you choose the repository early on and know what is needed). Dataset versions can be recorded in a repository (if updates are made to a dataset - say an error is found).</p>
+<p>Select this repository early on so that you know what is required. The repository may help you plan or provide services for putting pieces together (metadata). Consult early with archive about requirements for data management: Creating a schedule for ongoing deposit of materials</p>
 <ul>
 <li>General</li>
 </ul>
@@ -392,31 +937,29 @@ div.tocify {
 <li>Domain specific</li>
 </ul>
 <p>LDBase, ICPSR</p>
-</div>
-<div id="personal-website" class="section level3">
-<h3>Personal website</h3>
+<p>Personal website</p>
 <ul>
 <li><p>Freely downloadable no doi/citation and difficult to track who is using your data</p></li>
 <li><p>data request form requires work on staff’s part to respond</p></li>
 </ul>
+</div>
+<div id="security-and-confidentiality" class="section level3">
+<h3>Security and Confidentiality</h3>
+<p>Consent Forms</p>
+<p>De-identifying data</p>
+<p>Data sharing/use agreements</p>
+</div>
+<div id="when-to-share-data" class="section level3">
+<h3>When to Share Data</h3>
+<p>Review your funder’s requirements for when to share data. Upload pieces throughout the study if cleaning as you go. Some repositories encourage this.</p>
+<p>Resources:</p>
+<p><a href="https://www.youtube.com/watch?v=24LTVqHi7hw" class="uri">https://www.youtube.com/watch?v=24LTVqHi7hw</a></p>
 <hr />
 </div>
 </div>
-<div id="considerations" class="section level2">
-<h2>Considerations</h2>
+<div id="retractions" class="section level2">
+<h2>Retractions</h2>
 <hr />
-<div id="consent-forms" class="section level3">
-<h3>Consent Forms</h3>
-</div>
-<div id="de-identifying-data" class="section level3">
-<h3>De-identifying data</h3>
-</div>
-<div id="data-sharinguse-agreements" class="section level3">
-<h3>Data sharing/use agreements</h3>
-</div>
-<div id="retractions" class="section level3">
-<h3>Retractions</h3>
-</div>
 </div>
 
 

@@ -44,7 +44,7 @@ In 2016, the [FAIR Principles](https://www.go-fair.org/fair-principles/) were pu
 
 F: Findable
 
-All data should be findable through a persistent identifier and good data documentation, aka metadata. As we move towards automation in our work and life, the need for machine-readable metadata becomes more prevalent for automatic discovery of data.
+All data should be findable through a persistent identifier and have good data documentation, aka metadata. As we move towards automation in our work and life, the need for machine-readable metadata becomes more prevalent for automatic discovery of data.
 
 A: Accessible
 
@@ -66,7 +66,7 @@ Additional resources:
 
 ### SEER
 
-In addition to the FAIR principles, the [SEER principles](https://ies.ed.gov/seer/index.asp), developed in 2018 by Institute of Education Sciences (IES), provide Standards in Excellence in Education Research. While the principles broadly cover the entire life cycle of a research study, they provide context for good data management within an education research study. The SEER principles include:
+In addition to the FAIR principles, the [SEER principles](https://ies.ed.gov/seer/index.asp), developed in 2018 by Institute of Education Sciences (IES), provide Standards for Excellence in Education Research. While the principles broadly cover the entire life cycle of a research study, they provide context for good data management within an education research study. The SEER principles include:
 
 * Pre-register studies
 * Make findings, methods, and data open
