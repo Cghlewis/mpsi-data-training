@@ -93,7 +93,7 @@ Resources:
 
 ### FAIR
 
-As a reminder of what we covered in the [Data Management Module](https://cghlewis.github.io/mpsi-data-training/training_00.html), in 2016 the [FAIR Principles](https://www.go-fair.org/fair-principles/) were published in Scientific Data, outlining 4 guiding principles for scientific data management and stewardship. These principles should be referred to when choosing, when, where and how to share your research data.
+As a reminder of what we covered in the [Data Management Module](https://cghlewis.github.io/mpsi-data-training/training_00.html), in 2016 the [FAIR Principles](https://www.go-fair.org/fair-principles/) were published in Scientific Data, outlining 4 guiding principles for scientific data management and stewardship. These principles should be referred to when choosing when, where and how to share your research data.
 
 F: Findable
 
