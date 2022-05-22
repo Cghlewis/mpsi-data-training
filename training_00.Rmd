@@ -161,7 +161,7 @@ Before diving into the content of this training, I think it is helpful to cover 
 
 **Data**: [research data] "Data are items of recorded information considered collectively for reference or analysis" ([University of Pittsburgh](https://pitt.libguides.com/managedata/understanding)). It can include, but is not limited to survey responses, measurements, assessments, recordings, code, transcripts, and statistics. Most education research data is considered "observational" meaning data is captured in real-time and can't be replaced as opposed to experimental (lab) data or simulation data.
 
-**Data formats**: Education research data is typically collected in one of three formats: text( .txt, .pdf, .docx), numeric (.xlsx, .csv, .sav) , multimedia (.mpeg, .wav).
+**Data formats**: Education research data is typically collected in one of three file formats: text( .txt, .pdf, .docx), tabular (.xlsx, .csv, .sav) , multimedia (.mpeg, .wav).
 
 **Dataset**: [dataframe, spreadsheet] A structured collection of data usually stored in tabular form. A research study usually produces one final dataset per entity/unit (ex: teacher dataset, student dataset).
 

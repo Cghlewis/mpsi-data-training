@@ -91,11 +91,30 @@ Resources:
 
 ---
 
-FAIR Principles
+### FAIR
 
+As a reminder of what we covered in the [Data Management Module](https://cghlewis.github.io/mpsi-data-training/training_00.html), in 2016 the [FAIR Principles](https://www.go-fair.org/fair-principles/) were published in Scientific Data, outlining 4 guiding principles for scientific data management and stewardship. These principles should be referred to when choosing, when, where and how to share your research data.
 
+F: Findable
 
+All data should be findable through a persistent identifier and have good data documentation, aka metadata. As we move towards automation in our work and life, the need for machine-readable metadata becomes more prevalent for automatic discovery of data.
 
+A: Accessible
+
+You data is accessible if humans can access your data. This can mean your data is available in a repository or through a request system. 
+
+I: Interoperable
+
+Use standardized vocabularies as well as formats. Both humans and machines should be able to read and interpret your data. Software licenses should not pose a barrier to usage. Data should be available in open formats that can be accessed by any software such as .csv, .txt, .dat, etc. Furthermore, thorough data documentation should accompany data.
+
+R: Reusable
+
+Your metadata should provide information on the broad context of your project as well as your data collection to allow for accurate use of your data. You should also have clear licensing for data use. 
+
+Additional resources:
+
+  📑 [Within & Between podcast](https://podcasts.apple.com/us/podcast/episode-4-the-what-why-how-and-hesitations-of-data-sharing/id1517310439?i=1000483521281)  
+  📑 [Practical Solutions for Sharing Data and Materials from Psychological Research](https://journals.sagepub.com/doi/10.1177/2515245917746500)
 
 ---
 

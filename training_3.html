@@ -621,7 +621,11 @@ div.tocify {
 <ul>
 <li><em>toca1</em></li>
 </ul></li>
-<li>Don’t name a variable any keywords (such as <code>if</code>, <code>for</code>, <code>repeat</code>) or functions used in any programming language (see example list of all base R functions <a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/00Index.html">here</a>).</li>
+<li>Don’t name a variable any keywords (such as <code>if</code>, <code>for</code>, <code>repeat</code>) or functions used in any programming language
+<ul>
+<li>See example list of all base R functions <a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/00Index.html">here</a>)</li>
+<li>See examples of SPSS keywords to avoid <a href="https://ezspss.com/rules-for-naming-variables-in-spss/">here</a></li>
+</ul></li>
 <li>Set a character limit
 <ul>
 <li>Most statistical programs have a limit on variable name characters
@@ -644,15 +648,19 @@ div.tocify {
 <ul>
 <li>If you asked “What is your anxiety level” in fall 2019 and you named it <em>anxiety1</em>, and you ask “What is your anxiety level” again in spring 2020, name it <em>anxiety1</em> again.</li>
 </ul></li>
-<li>Don’t use spaces or special characters (including <code>.</code>)</li>
+<li>Don’t use spaces or special characters (except <code>_</code>)
+<ul>
+<li><code>-</code> is not allowed in programs such as R and SPSS as it can be mistaken for a minus sign</li>
+<li>While <code>.</code> is allowed in R and SPSS it is not allowed in Stata so it’s best to just avoid using it</li>
+</ul></li>
 <li>Do not start a variable name with a number</li>
 <li>Be consistent with delimiters and capitalization
 <ul>
 <li>Pascal case (<em>ScaleSum</em>)</li>
 <li>Snake case (<em>scale_sum</em>)–preferred method for variable names</li>
 <li>Camel case (<em>scaleSum</em>)</li>
-<li>Kebab case (<em>scale-sum</em>)</li>
-<li>Train case (<em>Scale-Sum</em>)</li>
+<li>Kebab case (<em>scale-sum</em>)–don’t use for variable names</li>
+<li>Train case (<em>Scale-Sum</em>)–don’t use for variable names</li>
 </ul></li>
 <li>All variable names should be <strong>unique</strong>
 <ul>

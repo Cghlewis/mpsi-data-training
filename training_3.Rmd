@@ -259,7 +259,9 @@ There are many best practices and considerations around variable naming.
   + Instead of *q1* use *gender*
 - If a variable is a part of a scale, consider naming is an abbreviation of that scale plus the scale item number (add the number last to make data manipulations easier)
   + *toca1*
-- Don't name a variable any keywords (such as `if`,  `for`, `repeat`) or functions used in any programming language (see example list of all base R functions [here](https://stat.ethz.ch/R-manual/R-devel/library/base/html/00Index.html)).
+- Don't name a variable any keywords (such as `if`,  `for`, `repeat`) or functions used in any programming language
+  + See example list of all base R functions [here](https://stat.ethz.ch/R-manual/R-devel/library/base/html/00Index.html))
+  + See examples of SPSS keywords to avoid [here](https://ezspss.com/rules-for-naming-variables-in-spss/)
 - Set a character limit
   + Most statistical programs have a limit on variable name characters
     - SPSS is 64
@@ -271,14 +273,16 @@ There are many best practices and considerations around variable naming.
   + The hosts of the Within and Between podcast even suggest the idea of standardizing variable names across the field for commonly used assessments (such as the Woodcock Johnson). Hear more on [Data Management Episode 1](http://www.withinandbetweenpod.com/).
 - Use the same variable name across time in a project
   + If you asked "What is your anxiety level" in fall 2019 and you named it *anxiety1*, and you ask "What is your anxiety level" again in spring 2020, name it *anxiety1* again.
-- Don't use spaces or special characters (including `.`)
+- Don't use spaces or special characters (except `_`)
+  + `-` is not allowed in programs such as R and SPSS as it can be mistaken for a minus sign
+  + While `.` is allowed in R and SPSS it is not allowed in Stata so it's best to just avoid using it
 - Do not start a variable name with a number
 - Be consistent with delimiters and capitalization
   + Pascal case (*ScaleSum*)
   + Snake case (*scale_sum*)--preferred method for variable names
   + Camel case (*scaleSum*)
-  + Kebab case (*scale-sum*)
-  + Train case (*Scale-Sum*)
+  + Kebab case (*scale-sum*)--don't use for variable names
+  + Train case (*Scale-Sum*)--don't use for variable names
 - All variable names should be **unique**
   + If you collect student gender from a survey and from their school records, consider naming one *s_gender* and the other *d_gender*
 - Consider denoting reverse coding in the variable name
