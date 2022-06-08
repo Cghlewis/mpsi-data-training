@@ -99,7 +99,7 @@ Become familiar with the following:
     - Is the data hand entered from paper forms?
       - How is the data entered/exported? File type?
       - What funky formatting things does that software do?
-        - Excel loves to [autocorrect](https://www.theverge.com/2020/8/6/21355674/human-genes-rename-microsoft-excel-misreading-dates) numeric or character values to dates for example
+        - Microsoft Excel loves to [autocorrect](https://www.theverge.com/2020/8/6/21355674/human-genes-rename-microsoft-excel-misreading-dates) numeric or character values to dates or [autocorrect](https://twitter.com/CMastication/status/1534613326076026881) character numbers with leading 0s to numeric
     - Is it online software?  
       - If yes, is the data exported? What file type is exported?  
       - Can you connect to the data through other means (ex: API)?  
