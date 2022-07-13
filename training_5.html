@@ -1207,7 +1207,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
 <div id="considering-what-to-share-1" class="section level4">
 <h4>Considering what to share</h4>
 <p><strong>What is suggested from your funder?</strong></p>
-<p>If you completed a data management plan as part of your grant proposal, it’s likely that your funder asked you to very likely that your funder provided some general guidance on what type of documentation they expect you to share. Depending on the document you read, IES generally suggests you share things such as codebooks that describe each measure, syntax files used to convert raw data to analytic data, and general project level data that allows users to know to better understand the purpose of the project and what activities happened during the grant. See <a href="xxx">DMP table</a> above to read more about what funders suggest.</p>
+<p>If you completed a data management plan as part of your grant proposal, it’s likely that your funder asked you to very likely that your funder provided some general guidance on what type of documentation they expect you to share. Depending on the document you read, IES generally suggests you share things such as codebooks that describe each measure, syntax files used to convert raw data to analytic data, and general project level data that allows users to know to better understand the purpose of the project and what activities happened during the grant. See <a href="https://cghlewis.github.io/mpsi-data-training/training_5.html#Planning_for_Data_Sharing">DMP table</a> above to read more about what funders suggest.</p>
 <p><strong>What is required from your repository?</strong></p>
 <p>Each repository may also mandate specific documentation or may suggest types of documentation to provide. Review the requirements of your repository early on in your project so you can plan for appropriate documentation. <a href="https://www.icpsr.umich.edu/web/pages/deposit/index.html">ICPSR</a> for example provides suggested documentation to include, such as codebooks, instruments, README files, project summary documents and publications. And they also have an intake form that allows you to enter project level metadata when you submit your data to their system.</p>
 </div>
@@ -1241,17 +1241,17 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
 <li>Publications: These can be either shared in the project or linked within the project to another site where the publication lives.</li>
 <li>Code: In terms of code, I believe there are two types of code that can be shared:
 <ol style="list-style-type: decimal">
-<li><strong>Raw data cleaning code</strong>: This is the code used to transform your true raw data to your cleaned data file. I am a believer that you do not need to share this code. It is often not something anyone would be interested in and there could potentially be 40 or more syntax files to clean each form of data for each wave of data collection. If you want to share the transformations you performed on the raw data to get to your clean file, I would suggest adding these transformations to your data dictionary. It will be easier to read (not in code) and less overwhelming for the user. You simply add a column to your data dictionary that is called something along the lines of “recodes” or “transformations”. See example below. You can also consider including a data cleaning plan, discussed in <a href="xx">Module 4</a>, either in replacement of adding your transformations to your data dictionary, or in addition to. Providing a data cleaning plan gives a linear look at the order of transformations that you performed.</li>
+<li><strong>Raw data cleaning code</strong>: This is the code used to transform your true raw data to your cleaned data file. I am a believer that you do not need to share this code. It is often not something anyone would be interested in and there could potentially be 40 or more syntax files to clean each form of data for each wave of data collection. If you want to share the transformations you performed on the raw data to get to your clean file, I would suggest adding these transformations to your data dictionary. It will be easier to read (not in code) and less overwhelming for the user. You simply add a column to your data dictionary that is called something along the lines of “recodes” or “transformations”. See example below. You can also consider including a data cleaning plan, discussed in <a href="https://cghlewis.github.io/mpsi-data-training/training_4.html">Module 4</a>, either in replacement of adding your transformations to your data dictionary, or in addition to. Providing a data cleaning plan gives a linear look at the order of transformations that you performed.</li>
 <li><strong>Analysis code</strong>: This is the code used to transform your cleaned data file into your analytic file, created solely for the purpose of some analysis. This is usually code you use to narrow the sample, narrow the variables you use, and do additional transformations specifically for your analysis. If you plan to share any analysis level files, I do recommend sharing this code. However, before sharing this code, you need to review this code for identifiers. Are there any names or other direct identifiers (either in the code or the comments) included in the code that need to be removed before sharing? Also plan to remove any absolute paths to your personal working directories and replace with relative paths.</li>
 </ol></li>
 </ul>
 <p>Ex: Data Dictionary with Transformations</p>
-<div id="tajbzevnyf" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="qxczrjptyl" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#tajbzevnyf .gt_table {
+#qxczrjptyl .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1276,7 +1276,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   border-left-color: #D3D3D3;
 }
 
-#tajbzevnyf .gt_heading {
+#qxczrjptyl .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1288,7 +1288,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   border-right-color: #D3D3D3;
 }
 
-#tajbzevnyf .gt_title {
+#qxczrjptyl .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1300,7 +1300,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   border-bottom-width: 0;
 }
 
-#tajbzevnyf .gt_subtitle {
+#qxczrjptyl .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1312,13 +1312,13 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   border-top-width: 0;
 }
 
-#tajbzevnyf .gt_bottom_border {
+#qxczrjptyl .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#tajbzevnyf .gt_col_headings {
+#qxczrjptyl .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1333,7 +1333,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   border-right-color: #D3D3D3;
 }
 
-#tajbzevnyf .gt_col_heading {
+#qxczrjptyl .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1353,7 +1353,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   overflow-x: hidden;
 }
 
-#tajbzevnyf .gt_column_spanner_outer {
+#qxczrjptyl .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1365,15 +1365,15 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   padding-right: 4px;
 }
 
-#tajbzevnyf .gt_column_spanner_outer:first-child {
+#qxczrjptyl .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#tajbzevnyf .gt_column_spanner_outer:last-child {
+#qxczrjptyl .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#tajbzevnyf .gt_column_spanner {
+#qxczrjptyl .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1385,7 +1385,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   width: 100%;
 }
 
-#tajbzevnyf .gt_group_heading {
+#qxczrjptyl .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1410,7 +1410,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   vertical-align: middle;
 }
 
-#tajbzevnyf .gt_empty_group_heading {
+#qxczrjptyl .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1425,15 +1425,15 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   vertical-align: middle;
 }
 
-#tajbzevnyf .gt_from_md > :first-child {
+#qxczrjptyl .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#tajbzevnyf .gt_from_md > :last-child {
+#qxczrjptyl .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#tajbzevnyf .gt_row {
+#qxczrjptyl .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1452,7 +1452,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   overflow-x: hidden;
 }
 
-#tajbzevnyf .gt_stub {
+#qxczrjptyl .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1465,7 +1465,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   padding-right: 5px;
 }
 
-#tajbzevnyf .gt_stub_row_group {
+#qxczrjptyl .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1479,11 +1479,11 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   vertical-align: top;
 }
 
-#tajbzevnyf .gt_row_group_first td {
+#qxczrjptyl .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#tajbzevnyf .gt_summary_row {
+#qxczrjptyl .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1493,16 +1493,16 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   padding-right: 5px;
 }
 
-#tajbzevnyf .gt_first_summary_row {
+#qxczrjptyl .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#tajbzevnyf .gt_first_summary_row.thick {
+#qxczrjptyl .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#tajbzevnyf .gt_last_summary_row {
+#qxczrjptyl .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1512,7 +1512,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   border-bottom-color: #D3D3D3;
 }
 
-#tajbzevnyf .gt_grand_summary_row {
+#qxczrjptyl .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1522,7 +1522,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   padding-right: 5px;
 }
 
-#tajbzevnyf .gt_first_grand_summary_row {
+#qxczrjptyl .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1532,11 +1532,11 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   border-top-color: #D3D3D3;
 }
 
-#tajbzevnyf .gt_striped {
+#qxczrjptyl .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#tajbzevnyf .gt_table_body {
+#qxczrjptyl .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1545,7 +1545,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   border-bottom-color: #D3D3D3;
 }
 
-#tajbzevnyf .gt_footnotes {
+#qxczrjptyl .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1559,7 +1559,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   border-right-color: #D3D3D3;
 }
 
-#tajbzevnyf .gt_footnote {
+#qxczrjptyl .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -1568,7 +1568,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   padding-right: 5px;
 }
 
-#tajbzevnyf .gt_sourcenotes {
+#qxczrjptyl .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1582,7 +1582,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   border-right-color: #D3D3D3;
 }
 
-#tajbzevnyf .gt_sourcenote {
+#qxczrjptyl .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1590,36 +1590,36 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   padding-right: 5px;
 }
 
-#tajbzevnyf .gt_left {
+#qxczrjptyl .gt_left {
   text-align: left;
 }
 
-#tajbzevnyf .gt_center {
+#qxczrjptyl .gt_center {
   text-align: center;
 }
 
-#tajbzevnyf .gt_right {
+#qxczrjptyl .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#tajbzevnyf .gt_font_normal {
+#qxczrjptyl .gt_font_normal {
   font-weight: normal;
 }
 
-#tajbzevnyf .gt_font_bold {
+#qxczrjptyl .gt_font_bold {
   font-weight: bold;
 }
 
-#tajbzevnyf .gt_font_italic {
+#qxczrjptyl .gt_font_italic {
   font-style: italic;
 }
 
-#tajbzevnyf .gt_super {
+#qxczrjptyl .gt_super {
   font-size: 65%;
 }
 
-#tajbzevnyf .gt_two_val_uncert {
+#qxczrjptyl .gt_two_val_uncert {
   display: inline-block;
   line-height: 1em;
   text-align: right;
@@ -1628,31 +1628,31 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   margin-left: 0.1em;
 }
 
-#tajbzevnyf .gt_footnote_marks {
+#qxczrjptyl .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#tajbzevnyf .gt_asterisk {
+#qxczrjptyl .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#tajbzevnyf .gt_slash_mark {
+#qxczrjptyl .gt_slash_mark {
   font-size: 0.7em;
   line-height: 0.7em;
   vertical-align: 0.15em;
 }
 
-#tajbzevnyf .gt_fraction_numerator {
+#qxczrjptyl .gt_fraction_numerator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: 0.45em;
 }
 
-#tajbzevnyf .gt_fraction_denominator {
+#qxczrjptyl .gt_fraction_denominator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: -0.05em;
