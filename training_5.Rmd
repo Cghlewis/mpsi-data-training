@@ -10,12 +10,6 @@ output:
        in_header: plausible_analytics.html
 ---
 
-<br>
-
-## **In Progress**
-
----
-
 ## Overview
 
 ---
@@ -204,72 +198,487 @@ However, the [Institute of Education Sciences](https://ies.ed.gov/ncee/pubs/2022
 
 4. Not most, but some projects will need to consider the possibility of tradeoffs. There may be times when sharing all of your data requires you to share with restricted access, while removing some variables and sharing only some of your data allows you to share the dataset openly. Researchers may need to consider what makes the most sense here, and in some circumstances you may be able to share data through of combination of methods.
 
+### Where to Share Data
+
+#### Repository
+
+There are many reasons to choose a repository over alternatives such as sharing from your personal website or providing data upon request.
+
+1. It's a good open science practice
+
+Providing data in a repository allows your data to be publicly accessible. While saying you provide data upon request or providing access through a request system on your personal website is still data sharing, it misses the mark on the FAIR principles of Accessible. Repositories allow discoverability of your data through searchability. As opposed to sharing on a personal website or sharing data on request, sharing data in an open repository allows others to discover your data merely by searching for topics of interest. Authors can also link to their repository within publications.
+
+2. Funders prefer it
+
+As open data sharing has become a requirement for many federal funders, data management plans have started suggesting that PIs share data in a repository vs other options, if at all possible. IES, NIH and NIJ all recommend the use of openly accessible repositories over the alternative of having to contact PIs to request data.
+
+3. Repositories provide persistent identifiers and licensing
+
+Repositories offer unique persistent identifiers which allow datasets to be citable, meeting the FAIR principle of Findable. Researchers can track the contributions of their dataset through the citation of their dataset in published papers. Researchers can also add links to their repository data in papers.
+
+Repositories also offer licensing which allow you to make clear how others can use your data. For example, LDbase, a Learning and Development Data Repository, suggests that depositors use the Open Data Commons Attribution License (ODC-by), which allows others to use, modify and share the deposited data but users must cite the dataset when doing so.
+
+4. Using a repository provides a "hands-off" approach to data sharing
+
+While preparing your materials for deposit in a repository may seem like a lot of upfront work, it is actually the least burdensome route for future you and your staff. Using a repository takes away the long-term commitment of your staff to respond to data requests and build datasets for requestors. In this respect, it also reduces cost. Costs associated with paying staff to respond to these data requests. Also costs for continuing to protect your data from "obsolescence, loss or irreversible damage" from humans or technology ([ICPSR](https://www.icpsr.umich.edu/files/deposit/dataprep.pdf)). Making sure your file types are becoming obsolete or protecting your data from corruption all take resources. [Roger Peng](https://simplystatistics.org/posts/2020-04-30-asymptotics-of-reproducibility/) likens this to "maintenance capital expenditure" in the business world. How much do I need to invest to keep up my promise of data sharing. Using a repository reduces this investment because, depending on the repository, they may take care of some or all of this for you.
+
+5. Repositories provide viable options for restricted data
+
+Some data may need to be for restricted use only, not available to the general public, either because of participant confidentiality issues, third-party licensing or due to consent language/use agreements that restrict data sharing.
+
+For restricted use data, some repositories provide the option to have data housed in a secure data enclave which stores and protects data with the highest security. This data can be accessed through an application process where applicants agree to strict requirements to preserve confidentiality. "Some repositories assess applicants against a set of criteria, while others require the original researcher to grant permission for its use" ([IES](https://ies.ed.gov/ncee/pubs/2022004/pdf/2022004.pdf)). Some repositories may provide onsite data enclaves as well as remote secure access data enclaves. Remote enclaves do not allow users to download data to their computer but instead the user can analyze the data remotely.
+
+6. Repositories may have resources to guide you through the data sharing process
+
+While not all repositories have physical people available to help curate your data, repositories typically have detailed guidelines about what you **should** deposit and what formats those files should be in. This guidance can be very helpful for those who are new to data sharing and feeling overwhelmed by the process. It's a good practice, that if you plan to share your data in a specific repository, to reach out to that repository early. Work with them to develop your Data Management Plan (DMP), or review the requirements of the repository before completing your DMP so that you know what you will be expected to have together at the end of your study. This early investigation into a repository can help you organize your data management processes throughout the study. You can also start developing a schedule for ongoing deposits of data and documentation if that is something you want to consider doing throughout your study.
+
+**Considerations for Choosing a Repository**
+
+1. Domain specific vs General
+
+One of the first choices you might consider is, do I want to use a domain-specific repository, relevant to my field, or a more general repository. Domain-specific repositories may be of more interest to researchers in your field and may be the best option to help facilitate discovery of your datasets. Using a domain specific repository can also help you ensure you are preserving data and providing documentation according to recognized standards in your field. However, there are many other considerations to take into account in addition to discoverability so weigh all options.
+
+1. Cost
+
+Consider the costs to both store your data and for users to access your data. There may also be costs associated with additional services such as data curation.
+
+2.  Data Access
+
+Consider how users access the data in the repository. Is access accessible to a wide audience? Are users required to have an account to access data or is that optional? 
+
+Is it only data download or are there other ways to work with the data online as well? 
+
+Does the repository have appropriate procedures to protect access to data? Does it offer options for restricted use files? Do researchers set the terms of use for restricted files or does the repository?
+
+3. Data Security
+
+For data security, consider how the data is stored and backed up. Also consider what standards the repository meets to ensure it is protecting participant confidentiality.
+
+How is data stored? What storage is used and how often is data backed up? Is data encrypted during transfer and/or at rest?
+
+Does the repository meet [GDPR (General Data Protection Regulation) standards](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation#General_provisions) for data protection? 
+
+Does the repository help you review your data for missed identifiers? 
+
+4. Types and Formats of Data Accepted
+
+Check for size limits of both the data files and the entire project. Also check which file types are allowed. Certain repositories may have preferences for file types for both data files and documentation files.
+
+5. Assignment of DOI
+
+Does the repository assign a direct object identifier which allows researchers to track the use and contributions of their dataset? This is an important deciding factor. A DOI allows your dataset to be findable, one of the FAIR principles. They can make your datasets easier to find and can be used to measure the citation impact of your dataset.
+
+6. Viable Length of Deposit
+
+Does the repository have the resources to stay afloat for the appropriate length of time to meet your funder's data sharing requirement? (i.e. 10 years for an IES grant)
+
+7. Versioning and Removal
+
+Do depositor's have permission to freely update and remove data from the repository? Does the repository version amended data? Do they notify users, who have already downloaded data, that there is a new version available?
+
+8. Additional Services
+
+Does the repository provide curation services to ensure high quality data is deposited? Ensuring data are in interoperable formats, with appropriate metadata, and identifiers removed? Or is that up to the depositor?
+
+9. Linking Capabilities
+
+Does the repository allow you to link to other projects, publications, code, or data? Does it allow you to link to your code on sites like GitHub? Does it allow you to link to other projects within the repository? Does it allow you to link to other projects or pre-registrations outside of the repository? Does it allow you to link to publications?
+
+10. CoreTrustSeal
+
+Is the repository certified by the [CoreTrustSeal](https://www.coretrustseal.org/)? This is not a must-have, but can be an additional assurance to both you and your funders that the repository you are choosing has been vetted by an independent authority to ensure your data will be managed and curated with high standards and that you will have continued access to your data.
+
+
+**Repository Options**
+
+Currently there are very few education specific repositories. Both LDbase and ICPSR are recommended by IES. LDbase being truly for education researchers, and ICPSR being a little more general, for social sciences. There are many general repository options though. A few well-known ones include Harvard DataVerse, Dryad, OSF, Zenodo, and FigShare.
+
+[Institute of Education Sciences](https://ies.ed.gov/ncee/pubs/2022004/pdf/2022004.pdf) put together a table comparing 5 commonly used repositories.  
+
+\*Note: There is an error for LDbase. They **do** allow you to update and remove data.
+
+```{r, echo=FALSE, fig.align="center", out.width='70%'}
+
+knitr::include_graphics("img/repo_table.PNG")
+
+```
+
+Resources:
+
+ 📑 [Registry of repositories](https://www.re3data.org/)  
+ 📑 [Great overview and comparison of 4 well-known repositories](https://evodify.com/free-research-repository/)    
+ 📑 [Additional Information on CoreTrustSeal](https://cdsweb.u-strasbg.fr/CTS-CDS)
+
+
+#### Other means of data sharing
+
+There may be reasons that you cannot share with a repository, maybe an agreement made with a study partner. Or you are just not ready to make the leap to depositing in a repository. Other options do exist. While these methods may technically meet the requirements of your funder, keep in mind that all of these options:
+
++ Reduce the visibility of your data. How will you notify researchers that your data is available?
++ Most likely increase the burden on you or your team to respond to requests and maintain data over time. 
++ Reduce accessibility of your data. These methods are likely to increase burden on your requestor who has to complete informal data requests, which are not always a streamlined process. This may reduce the number of people who use your data. 
++ Will be difficult to track the use of your datasets over time. Without assigning a DOI to your dataset, you will need to rely on requestors to notify you of future publications. Be sure to have a data request agreement in place that allows requestors to state the purpose of their request and their publication intentions.
++ Increase risks in data sharing. With no repository managing secure file transfers, your team will need to consider how to securely provide access to data for approved users.
+
+Non-repository means of data sharing:
+
+1. Deposit your data with an agency that you partnered with for the study (i.e. a School District). All data requests will go through that partner.
+
+2. Share your data through a lab, personal, or project website. While this seems like an accessible option, you still need to remember the long term costs associated with maintaining this data and responding to data requests.
+
+3. Informal peer-to-peer sharing. This may work well for peers but doesn't make a broader audience aware of the availability of your data and keeps the burden of data maintenance and responding to requests on you and your staff. Also, with no formal request system in place, this makes it difficult for the requestor to know who to contact to request the data or what information is needed to retrieve the data.
+
+4. Supplemental materials attached to an article or stored on a publisher's website. 
+
+5. The least recommended option here is to have a statement in your publication that says "data available upon request" and then provide an email for people to reach out to request data. There are countless horror stories where people have reached out to authors about getting data and they've either never heard back or were told that the data was not in fact, available. It is best to already have a system already in place and direct people to that system, either a repository, your personal website with a data request form, etc.
+
+[Borghi and Gulick](https://arxiv.org/ftp/arxiv/papers/2110/2110.00888.pdf) put together a flow chart for choosing where to deposit your data that can be helpful to navigate your options. Although, to the point about restricted data, while the authors refer you to institutional libraries, we've seen that some repositories do allow you to submit restricted data to be accessed in enclaves.
+
+```{r, echo=FALSE, fig.align="center", out.width='80%'}
+
+knitr::include_graphics("img/repo_flow.PNG")
+
+```
+
+
 ### What data to share
 
-Clean vs raw data
+#### Considering what to share
 
-Format to share
+**Consent**
 
-IES: It is advisable to provide the data in several electronic file formats (one of which is non-proprietary) in order to provide broad use for researchers with access to different analytic software. Note that data must be provided in an electronic format.
++ The first thing to review before sharing any data is, what did you say you were going to do in your approved IRB consent form, or more importantly, what language you did NOT use. 
+    - Make sure you didn't use any language that suggested you are "not going to share data" or that you "plan to destroy data" at a certain point. You want your consent language to be broad and not restrict your data sharing to aggregate tables. 
+
++ You want your consent language to discuss confidentiality but also mention that there are still risks.
+    - Make sure your consent form explains that your team will make all reasonable efforts to de-identify data and keep it secure, but it is impossible to guarantee that your data may never be linked back to you. However, due to the extensive de-identification process, the harm or risk to the participant would be minimal. 
+    - If your consent form does not warn about the possibility of re-identification, in addition to removing direct identifiers from your data, you need to really consider small sample sizes and combinations of variables that might allow some to re-identify a participant.
+    
++ It's a bonus if you used language that explicitly states that you plan to publicly share data in a trusted repository and participant's data may be used for future research.
+
++ When putting your data together for sharing, review permission to share and remove any consented participant who did not give permission for you to share their data. This information *should* have been tracked in your participant tracking database at the time of consent collection.
+
++ Refer back to [Module 2](file:///C:/Users/Crystal/Desktop/desktop/R/Book/mpsi-data-training/training_2.html) for Meyer's dos and don'ts of consent form language.
+
+Resources for additional information on consent language:
+
+ 📑 [Data Sharing in Education Science](https://edarxiv.org/2x3cu/)  
+ 📑 [ICPSR](https://www.icpsr.umich.edu/web/pages/datamanagement/confientiality/conf-language.html)   
+ 📑 [Shero and Hart: Working with your IRB](https://figshare.com/articles/preprint/Working_with_your_IRB_Obtaining_consent_for_open_data_sharing_through_consent_forms_and_data_use_agreements/13215305/1)  
+
+
+**Funder requirements**
+
+You'll also want to review what you laid out in your data management plan in your project proposal. What did you say you would share (although this can be adjusted) and what did your funder suggest you do share? Most funders will state that at *minimum*, the data underlying your peer-reviewed, published study findings should be shared. However, most funders will also note that you should consider sharing more than that. 
+
+
+#### Data
+
+Researchers should consider sharing all primary data collected through the project, including both raw (item-level) and derived variables and can also consider sharing any existing data linked to original data. If extant data is included, make sure to review any existing data licenses associated with that data that may impact data sharing. There may also be some item-level data that cannot be shared. Review copyright for published scales to see what is allowed. Some paid assessments may only allow you to share derived scores or un-labelled item-level information (ex: "item 1 of assessment" vs "the actual question wording") ([Jessica Logan](https://figshare.com/articles/presentation/Data_Sharing_and_Data_Shared/15040740)).
+
+**Format**
+
+You'll need to consider what format to share your data in. This encompasses many decisions.
+
+1. Raw vs Clean vs Analytic files
+
++ The **true raw data** is the data that comes directly from the source with no manipulations. The problem with this raw data is, it's not usually in a user-friendly format. Metadata is not usually applied, variable names aren't decipherable, and values may be confusing. The other thing about the true raw data is, you may have not yet removed participants who are not in the study, removed duplicate instances, or removed identifying variables. This data should never leave your secure data storage area, approved by IRB, in your lab. 
+
++ The next level is **de-identified raw data**. This is your raw data as mentioned above, but with identifiers removed, duplicates removed, and checked to ensure that only consented participants are included. While this file *can* be shared, I still don't find this file very useful for those wanting to use your data. 
+
++ The third level is a **cleaned data file**. This is your raw data file, checked to ensure that only consented participants are included, de-identified, and cleaned to a usable standard. If you refer back to our discussion on [data cleaning steps](https://cghlewis.github.io/mpsi-data-training/training_4.html#Data_cleaning_steps), it would include the transformations mentioned there. Think of a dataset with interpretable and consistent variable names, with metadata added (such a variable and value labels), and coded consistently. This is a data file that is “ready for analysis”. This means the dataset should be in the minimally accepted format for a future researcher to be able to pick up the dataset and do some basic exploratory analysis with the dataset without having to dig deep into the documentation. This is a broad, clean, general dataset that ANYONE can use. It will include all item-level data as well as any derived scores (sum scores, means) or created variables (ex: cohort, time) necessary to complete the file. My recommendation is that **this** is the file you share.
+
++ The fourth level is an **analytic file**. While people use this term in different ways, what I am referring to here is a file prepared, based on the aforementioned cleaned data file, that has additional transformations that are *created solely for the purpose of that specific analysis*. You can think of this as a file used as the basis of a specific publication. While I do recommended this file to be shared as well, I view this as a secondary source, shared for the purposes of allowing replication of your study, rather than for the purposes of people using your data for their own future analyses.
+
+2. Merged vs Unlinked
+
+If you are collecting data across time or collecting different forms within time but across participants, you will need to consider whether or not you want to merge files before sharing or provide distinct files that users can merge on their own.
+
++ **Merging datasets** may be a great options for longitudinal studies with many waves of data collection. Merging files across time can reduce the burden for researchers who want to view all data across time for each unit of analysis. You may consider making a merged file for each participant level (student level dataset, teacher level dataset, school level dataset). While education researchers typically merge their datasets in wide format, where each case is one row, there may be reasons to merge your data in long format. Merging in long format is more efficient for data storage and may make data contents more clear. Variable names stay the same across time (rather than have time appended to them), and each case has a row of data for each time point they were in the study.
+
++ **Uploading datasets separately** is another option though. Keeping data in separate files reduces file size and may make it easier to upload and access data. It may also make it easier for researchers to narrow down files to their variables of interest. If they are only interested in one form from the student dataset, having the forms separated allows researchers to download just the file for that one form, rather than downloading the larger dataset and dropping variables not relevant to their research. If you decide to share datasets separately in repository, consider developing a folder and file naming structure that allows researchers to know what they are working with. You will also need to ensure that your files have identifiers to link datasets. Consider adding a README to your documentation that lays out how files can be linked through identifiers.
+
+```{r echo=FALSE, comment=NA}
+library(data.tree)
+
+project <- Node$new("project-name")
+  files_1920 <- project$AddChild("files_1920")
+    student <- files_1920$AddChild("student")
+    teacher <- files_1920$AddChild("teacher")
+  files_2021 <- project$AddChild("files_2021")
+    student2 <- files_2021$AddChild("student")
+    teacher2 <- files_2021$AddChild("teacher")
+          
+print(project)
+
+```
+
+
+3. File format
+
++ Most funders, including IES, prefer data to be deposited in an electronic, rectangular format. It is also recommended to provide data in at least one non-proprietary format that is not restricted to a specific software. This not only provides access to a broader audience, those without specific software licenses, but also protects against technological obsolescence. Open formats include text files like .csv, tab-delimited, or ASCII. This recommendation meets the FAIR principle of interoperable.
+
++ It is nice, however, to **also** share data in formats that have embedded metadata, created using programs such as SAS, Stata, or SPSS. You can either export a file that allows embedded metadata (.sas7bdat, .dta, .sav), or you can create raw ASCII files along with setup files for people to run in specified statistical programs. Providing your data in more than one format (non-proprietary and proprietary), can give your user options and also protect your data from obsolescence.
+
++ It is important to review your repository requirements. ICPSR for example, prefers submissions of files with embedded metadata, such as SPSS, Stata or SAS files. They then use these files and curate them into ASCII data with setup files to accompany statistical programs. The National Archive of Criminal Justice Data used by NIJ prefers SPSS formats for quantitative data, but will also accept Stata or SAS files.
+
+**Confidentiality**
+
+No matter what data you share or what format you share it in, you need to consider confidentiality. All data you share should be de-identified. This includes removing direct identifiers as well as reducing the risk of confidentiality breaches through indirect identifiers or deduction.
+
+1. De-Identified Data
+
++ Direct Identifiers
+
+  + These are personally identifiable information (PII) like we discussed in [Module 2](file:///C:/Users/Crystal/Desktop/desktop/R/Book/mpsi-data-training/training_2.html#Data_Storage). These are typically identifiers collected for data collection and project implementation purposes but not necessary for secondary analyses and should be removed before sharing data. These include the [18 HIPAA identifiers](https://www.luc.edu/its/aboutits/itspoliciesguidelines/hipaainformation/18hipaaidentifiers/) as well as [FERPA Identifiers](https://studentprivacy.ed.gov/content/personally-identifiable-information-education-records#glossary-node-210), such as:
+
+    * Name
+    * Email
+    * Phone Number
+    * Social Security Numbers
+    * State, District, or School level assigned Student IDs
+    * IP Address
+
+  + If schools and districts were promised confidentiality, names of schools and districts will need to be removed as well.
+
+  + In replacement of names, random study IDs (either numeric or alphanumeric) should be used to allow linking across forms and time, as well as clustering of observations as needed. IDs should not be assigned in a logical order, such as alphabetical. They should also be completely distinct from identifying information such as name and birth date. If IDs were assigned this way during the study, or IDs were shared throughout the study with participants, consider assigning yet another set of study IDs for the purposes of publicly sharing data. You will want to track both sets of these IDs in your participant tracking database.
+
++ Indirect Identifiers
+
+  + These are identifiers that may not independently link to an individual in your study but through combinations of these variables, or small group sizes, individuals may be identified. 
+
+    * Birth date
+    * Small counts of gender, race, special education, or other demographics (Review categorical variables with categories of 5 or less, some people may see 3 or less)
+    * Crosstabs of variables (ex: grade level and special education status)
+    * Geography (ex: zipcode)
+    * Exact dates of events
+
+  + A few methods, **there are many more**, to account for these variables are:
+
+    + Top or Bottom Coding: This is a method of restricting the upper and lower range to mask outliers. For something like income you may top code to "$150k or higher".
+
++ Combine/Collapse categories: For categorical variables with categories containing Ns of 5 or less, consider combining categories into an "other" category. If issues of small sample size occur with crosstabs, you can also consider merging two or more variables into a new summary variable.
+    
+    + Aggregation: Identifier variables here are replaced with higher level aggregations of information. For example you may aggregate zip code to county or state level geography or aggregate birth date to year of birth.
+    
+    + Recode continuous variables: Continuous variables with outliers can be collapsed into categories to reduce the chances of participant deduction.
+
+    + Remove/redact variables: This often happens with variables such as birth date. Most researchers want birth date for an age calculation so it is feasible to calculate age variables using your dates of interest (ex: assessment date) and then remove both birth dates and assessment dates before sharing data.
+
+
++ Open-ended comments/questions
+
+  + These types of open-ended text boxes need to be considered for any identifying information. You can either choose to remove all open text variables before sharing data or code all responses into a categorical variable.
+
++ Once your data has been de-identified, this data is ready to ready to be released on the internet. If no other restrictions exist for this data (i.e. a data use or sharing agreement) the data follows the Release and Forget model. There is little control a data owner has once the data is released into the world outside of any licenses that have been assigned, and any terms of use requestors agree to when accessing the data.
+
+
+Resources on de-identification:
+
+ 📑 [Schatsneider, Edwards, and Shero have a great paper on data de-identification](https://figshare.com/articles/preprint/De-Identification_Guide/13228664)   
+ 📑 [J-PAL has an excellent table of direct and indirect identifiers, as well as recommended de-identification methods on page 10](https://www.povertyactionlab.org/sites/default/files/research-resources/J-PAL-guide-to-deidentifying-data.pdf)   
+ 📑 [Great recommendations on de-identification of data from LDbase](https://infograph.venngage.com/ps/5p6yjaAGTSs/new-5-things-to-check-for-data-deidentification)   
+ 📑 [ICPSR has a discussion on treating indirect identifiers](https://www.icpsr.umich.edu/files/deposit/dataprep.pdf)   
+ 📑 [IES has a section on Disclosure Risk Management in their Sharing Study Data Guide](https://ies.ed.gov/ncee/pubs/2022004/pdf/2022004.pdf)   
+ 📑 [The Turing Way provides examples of anonymizing data](https://the-turing-way.netlify.app/reproducible-research/rdm/rdm-personal.html)    
+ 📑 [National Institute of Standards and Technology De-Identification Guide](https://nvlpubs.nist.gov/nistpubs/ir/2015/NIST.IR.8053.pdf)
+
+
+
+2. Identifiable Data
+
+  + If you are unable to remove all identifiers, if your consent agreements do not allow you to share data, or if identifiers are integral for linking datasets, then you have the option of creating a restricted use file. These files can be shared through a data enclave. Some repositories may provide both the option of onsite data enclaves as well as virtual secure access enclaves. Using remote access enclaves, users are not allowed to download data but are able to analyze data remotely. Onsite data enclaves typically have security measures in place such as no windows, key card entry, and a computer with no internet access. These enclaves are also typically monitored by archive staff. Access to these restricted data are permitted only through an application process where requestors complete a detailed data use agreement.
+  
+  + Even if you need to create a restricted access file, it is important to consider creating a second, de-identified file as well to maximize public benefit. The public access version may have more variables removed for categories collapsed to create anonymity while the restricted file will leave limited identifying information in the data. However, be sure to consider all possible disclosure risks before sharing to ensure that someone with access to both the restricted and public files are not able to identify individuals. Also make sure that no inconsistencies between files are created during the de-identification process.
+
+[The United States Department of Health and Human Services](https://www.childandfamilydataarchive.org/cfda/archives/CFDA/studies/38290/summary) has a great example of depositing restricted access research study data in a repository (Child and Family Data Archive). You can see here that various metadata are available for the study but restricted data are not available for direct download.
+
+```{r, echo=FALSE, fig.align="center", out.width='100%'}
+
+knitr::include_graphics("img/restricted_use.PNG")
+
+```
+
+```{r, echo=FALSE, fig.align="center", out.width='95%'}
+
+knitr::include_graphics("img/restricted_use2.PNG")
+
+```
+
+
+3. Data Use vs Data Sharing Agreements
+
+* Data Use Agreements are legally binding formal agreements (contract) used when sharing data with restricted access. [Florida State University](https://www.ldbase.org/resources/best-practices/data-use-vs-data-sharing) has an example of a DUA here. 
+
+  * The topics typically outlined in a DUA include:
+
+    * Terms and conditions of the use of the data, including prohibiting any attempt to re-identify the data, linking to
+  other data or redistribution
+    * Review access controls
+    * Obligations for keeping the data secure during time of access
+    * Liability of harm from using the data
+    * Publication rules
+    * Privacy rights
+
+  * While the user is typically also required to provide the following information:
+
+    * What is their research plan and reasons for needing access to confidential information
+    * A data protection plan for keeping data secure
+    * IRB approval
+
+* Data Sharing Agreement are documents that researchers may wish to have users complete when they want to list the terms of use of their data. This is a less formal agreement and can be used when you are sharing de-identified data. LDbase has a great [sample Data Use Agreement](https://www.ldbase.org/resources/templates/example-data-sharing-agreement). Reasons for using a data sharing agreement might include:
+
+  * You are still actively analyzing your data and want to limit access
+  * You want users to agree to specific terms of use, such as adding you as a co-author on papers using your data or ensure users cite your data in publications
+  * While your data may be de-identified there may still be qualitative data or small sample sizes that could potentially make participants identifiable so you want to restrict who uses the data and ensure users have a plan to maintain confidentiality
+  * You want to limit the types of research projects that use your data
+
+Resources:
+
+ 📑 [ICPSR provides more detail on Data Use Agreements](https://www.icpsr.umich.edu/files/deposit/dataprep.pdf)     
+ 📑 [LDbase explains data use vs data sharing agreements](https://www.ldbase.org/resources/best-practices/data-use-vs-data-sharing)  
+ 📑 [UNC Data Use Agreement Flow Chart](https://research.unc.edu/wp-content/uploads/sites/61/2013/04/CCM3_039360.pdf)
+
+<br>
 
 ### What documentation to share
 
-Everything you possibly can
+I think the general rule is, share as much documentation as you possibly can! But to narrow that down, I've provided some general guidance below.
 
-Format to share
+#### Considering what to share
 
-### Where to Share Data
+**What is suggested from your funder?**
 
-Repository
+If you completed a data management plan as part of your grant proposal, it's likely that your funder asked you to  very likely that your funder provided some general guidance on what type of documentation they expect you to share. Depending on the document you read, IES generally suggests you share things such as codebooks that describe each measure, syntax files used to convert raw data to analytic data, and general project level data that allows users to know to better understand the purpose of the project and what activities happened during the grant. See [DMP table](xxx) above to read more about what funders suggest.
 
-Why this is good: DOI and citation, metadata, assistance from repository, less maintenance on your part, forces you to be organized throughout the lifecylce of a project (if you choose the repository early on and know what is needed). Dataset versions can be recorded in a repository (if updates are made to a dataset - say an error is found).
+**What is required from your repository?**
 
-Select this repository early on so that you know what is required. The repository may help you plan or provide services for putting pieces together (metadata). Consult early with archive about requirements for data management: Creating a schedule for ongoing deposit of materials
+Each repository may also mandate specific documentation or may suggest types of documentation to provide. Review the requirements of your repository early on in your project so you can plan for appropriate documentation. [ICPSR](https://www.icpsr.umich.edu/web/pages/deposit/index.html
+) for example provides suggested documentation to include, such as codebooks, instruments, README files, project summary documents and publications. And they also have an intake form that allows you to enter project level metadata when you submit your data to their system.
 
-- General 
+#### Types of documentation to share
 
-University affliated, OSF, Zenodo
+Similar to what we discussed in Module 1, documentation can be categorized into 3 different types of metadata. Consider sharing something from each of these categories to give users the best overview of your project and how to use your data.
 
-- Domain specific
+1. Project level documentation
 
-LDBase, ICPSR
+This documentation should give a user a holistic picture of the project: What was the purpose, who participated, and what activities happened during the study. Some of this documentation may be directly entered into your repository (check before developing this as a standalone document), or it may also be provided as a standalone document. For example, both [ICPSR](https://www.icpsr.umich.edu/web/pages/deposit/deposit-fields.html) and [LDbase](https://www.ldbase.org/resources/user-guide/information-to-gather/project-metadata) have an intake form that allows you to enter this information directly into the system upon submission.
 
+Sections to consider including in this document:
+  + Funding Source
+  + Overview of study
+  + Intervention and Research Design
+  + Setting and Sample
+  + Project Timeline (what data was collected, on whom, and when)
+  + Measures Used in Study (including citations)
+  + Overview of Procedures (Recruitment, Consent, Inclusion/Exclusion Criteria, Randomization, Data Collection, Data Preparation and Processing)
+  
+Supplemental project level documents that can also be included are:
+  + Consort Diagrams
+  + Data Collection Instruments
+  + A Table of Response Rates for Instruments
+  
+2. Dataset level documentation
 
-Personal website
+This documentation provides a big picture sense of what datasets are included in the project and how they are connected. The type of dataset level documentation to consider including when data sharing is a README. As discussed in Module 1, a README is a plain text document that can serve many purposes. It literally is an indicator to users to "Read Me" before moving forward with this data. In the context of data sharing, your README should include things such as
+  + The file name of each included dataset
+  + How datasets can be linked together (linking variable)
+  + Ns of each dataset
+  + Any acronyms used in each dataset worth knowing (ex: st_ = student measures, tch_ = teacher measures)
 
-- Freely downloadable
-no doi/citation and difficult to track who is using your data
+See p.58 of the [IES Sharing Study Data Guide](https://ies.ed.gov/ncee/pubs/2022004/pdf/2022004.pdf) for an example of a README.
+  
+3. Variable level documentation
 
-- data request form
-requires work on staff's part to respond
+This is documentation that allows users to know exactly what is included in your data files and how to interpret each column. There are two types of variable level documentation to consider including.
 
++ Data dictionary: This rectangular document describes every variable in each dataset, how the variables are coded, and any transformations made to any variables. This can also include information such as scales associated with each variable, survey skip patterns, variable universe, and missing values assigned. See p.46 of the [IES Sharing Study Data Guide](https://ies.ed.gov/ncee/pubs/2022004/pdf/2022004.pdf) for an example of a simple data dictionary.
 
-### Security and Confidentiality
++ Codebook: This is a text file or pdf that provides summary level information about the associated dataset and variables. Without ever having to open the data file, a user can see summary statistics about the data and make decisions based on that information. This file should include every variable in the data and provide information such as the name, label and type, as well as summary statistics for each variables (Ns, percents, means, ranges, and percent missing). See p.48 of the [IES Sharing Study Data Guide](https://ies.ed.gov/ncee/pubs/2022004/pdf/2022004.pdf) for an example of a codebook.
 
-Consent Forms
+**Note:** These terms are often interchangeable. You will notice that in the IES Data Sharing Study Data Guide, they refer to a Codebook as as Summary Statistics Document and they refer to a Data Dictionary as a Codebook. Depending on what organization you work with, different terms may be used, but the ideas are all still the same. 
 
+4. Other documentation to include:
+  + Publications: These can be either shared in the project or linked within the project to another site where the publication lives.
+  + Code: In terms of code, I believe there are two types of code that can be shared:
+    1. **Raw data cleaning code**: This is the code used to transform your true raw data to your cleaned data file. I am a believer that you do not need to share this code. It is often not something anyone would be interested in and there could potentially be 40 or more syntax files to clean each form of data for each wave of data collection. If you want to share the transformations you performed on the raw data to get to your clean file, I would suggest adding these transformations to your data dictionary. It will be easier to read (not in code) and less overwhelming for the user. You simply add a column to your data dictionary that is called something along the lines of "recodes" or "transformations". See example below. You can also consider including a data cleaning plan, discussed in [Module 4](xx), either in replacement of adding your transformations to your data dictionary, or in addition to. Providing a data cleaning plan gives a linear look at the order of transformations that you performed.
+    2. **Analysis code**: This is the code used to transform your cleaned data file into your analytic file, created solely for the purpose of some analysis. This is usually code you use to narrow the sample, narrow the variables you use, and do additional transformations specifically for your analysis. If you plan to share any analysis level files, I do recommend sharing this code. However, before sharing this code, you need to review this code for identifiers. Are there any names or other direct identifiers (either in the code or the comments) included in the code that need to be removed before sharing? Also plan to remove any absolute paths to your personal working directories and replace with relative paths. 
 
-De-identifying data
+Ex: Data Dictionary with Transformations    
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='10%', out.height= '50%'}
 
-Data sharing/use agreements
+library(tidyverse)
 
+tibble::tribble (~ var_name, ~ label, ~type, ~original_value, ~transformation, ~final_value,
+                 "item1", "I like pizza", "numeric", "1 = agree, 2 = neutral, 3 = disagree", 
+                 "1 -> 3, 2 -> 2, 3 -> 1", "1 = disagree, 2 = neutral, 3 = agree",
+                 "item2" , "I don't like school", "numeric", "1 = disagree, 2 = neutral, 3 = agree", "NA", "NA") %>%
+gt::gt()
+  
+```
+
+<br>
+
+#### Format of Documentation
+
+**Repository Requirements**
+
+If you are sharing data with a repository, check their requirements before creating documentation. Each repository may have required or suggested documentation formats. For example, [ICPSR](https://www.icpsr.umich.edu/web/pages/deposit/index.html) requires documentation to be submitted in Word, ASCII or DDI XML format and they in turn convert your documentation to XML or PDF format. [NIJ](https://nij.ojp.gov/funding/data-archiving) which has it's own suggested repository, National Archive of Criminal Justice Data (and ICPSR sponsored archive), requests documentation to be in PDF, Word, or ASCII format. You'll also want to check if there are any metadata standards your repository complies with, such as [DDI standards](https://www.icpsr.umich.edu/web/pages/datamanagement/lifecycle/metadata.html), and if that requires any additional considerations on your part or if the archive does the work to make sure standards are met.
+
+**General Suggestions**
+
+In general, sharing documentation in non-proprietary formats is recommended. These are files anyone can open no matter what software they own. PDFs and text files are generally good formats. If a rectangular format is required, for documents such as metadata, csv files can be created and still opened in any spreadsheet program.
+
+<br>
 
 
 ### When to Share Data
 
+Similar to what data and documentation to share, in terms of when to share data, you want to consider both your funder's requirements, your repository's suggestions, as well as your own personal preferences.
 
+**Funder Requirements**
 
-Review your funder's requirements for when to share data.
-Upload pieces throughout the study if cleaning as you go. Some repositories encourage this.
+Your funder will most certainly have a suggested time frame for when they expect your data to be shared. [IES](https://ies.ed.gov/funding/datasharing_implementation.asp) for example states that study data must be shared no later than when you publish the main findings of your study. This is a typical recommendation from funders.
 
+**Repository Suggestions**
 
-Resources:
+If you are depositing your data in a repository, you may also find they provide guidance on when to share your data. [ICPSR](https://www.icpsr.umich.edu/files/deposit/dataprep.pdf), at minimum, requires that users deposit data before the end of a project so that any issues with the data can easily be resolved. However, they also recommend to begin uploading data as soon as possible after each wave of data collection. If you choose this method, ongoing data deposit, you will want to consider if you would like to embargo your data. Embargo means you deposit your data with delayed dissemination, delaying the public release of your data until a later time point (for example, after your study is complete). This allows you to continually deposit your data (to reduce workload at the end of your study), while also allowing you sole access to your data while your project is active. If you choose to deposit data on an ongoing basis, make sure that your repository allows you to edit, update and version your data if errors are found or changes are needed at any point during the project.
 
-https://www.youtube.com/watch?v=24LTVqHi7hw
+<br>
+
+Overall Helpful Data Sharing Resources:
+
+ 📑 [Sara Hart gave a talk at the 2022 COS Unconference on Data Sharing that is very insightful](https://www.youtube.com/watch?v=24LTVqHi7hw)
+ 📑 [ICPSR's Data Preparation and Archiving Guide](https://www.icpsr.umich.edu/files/deposit/dataprep.pdf)
+ 📑 [LDbase has tons of helpful guides](https://www.ldbase.org/resources)
+
 
 ---
 
-## Retractions
+## Retraction and Revisions
 
 ---
 
+Data Sharing is a great service to the larger community and that service it is built upon trust. It's built upon you trusting that your data is accurate and represents the true information that you collected. It is also built upon users putting their trust in you and your data, that the data you provide are accurate and free from errors, and that the findings you publish are based off of data that are free from errors and manipulation.
+
+This means, when you find errors in the data that you have publicly shared, you have an obligation to do something about it.
+
+**If your data is deposited in a repository:**
+
+1. Consider making a comment in your project, notifying users of errors in the data. If the repository requires/allows users to make an account before accessing the data, they may have a system to email current users to let them know a new comment was added to a project they have downloaded.
+
+2. If the errors in your data is fixable, take time to go back to the raw data and re-clean, making the appropriate edits.
+
+3. Upload a new version of your data to the repository. Make comments about the revisions so that users know what changes have been made between the previous and new version of your data.
+
+If your data is not in a repository:
+
+1. Do the same as above but instead, consider personally reaching out to anyone that has submitted a data request to you, to make them aware of errors and changes in the data.
+
+
+If you have used your data in a publication, you will need to consider retracting the paper from the journal. Contact your journal to make them aware of the errors you found. Consider the story of [Dr. Kate Laskowski](https://laskowskilab.faculty.ucdavis.edu/2020/01/29/retractions/), who began finding errors in her data, after publishing with it, and decided she had no other choice but to retract her publication. You can find the retracted article [here](https://www.journals.uchicago.edu/doi/full/10.1086/708066?mobileUi=0).
+
+An [article](https://www.sciencedirect.com/science/article/pii/S0213911118300724) in Science Direct found that across a three year span, of all the articles retracted in the journal PubMed, data processing errors were the number two reason for journal retractions. Errors happen, we are all human, but it is best to take the time and care to manage your data during your project so that retractions are not necessary later on.
+
+ 
+ To learn more about reasons for retractions, you can read the blog [Retraction Watch](https://retractionwatch.com/) or search their [database](https://retractionwatch.com/retraction-watch-database-user-guide/).

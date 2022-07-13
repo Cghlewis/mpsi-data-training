@@ -35,5 +35,5 @@ Currently I am working as a freelance research data management consultant. I wor
 |2         |Setting up data structures                                 |
 |3         |Style Guide                                                |
 |4         |Writing a data cleaning plan                               |
-|5        |Sharing data upon project completion (in progress)                       |
+|5        |Sharing data upon project completion                      |
 |6        |The research data management process (forthcoming)                       |
