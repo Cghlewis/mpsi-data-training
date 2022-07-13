@@ -321,23 +321,25 @@ Resources:
 
 There may be reasons that you cannot share with a repository; maybe an agreement made with a study partner, or you are just not ready to make the leap to depositing in a repository. Other options do exist. While these methods may technically meet the requirements of your funder, keep in mind that all of these options:
 
-+ Reduce the visibility of your data. How will you notify researchers that your data is available?
++ Reduce the visibility of your data. How will you notify researchers that your data is available?  
 + Most likely increase the burden on you or your team to respond to requests and maintain data over time. 
-+ Reduce accessibility of your data. These methods are likely to increase burden on your requestor who has to complete informal data requests, which are not always a streamlined process. This may reduce the number of people who use your data. 
++ Reduce accessibility of your data. These methods are likely to increase burden on your requestor who has to complete informal data requests, which are not always a streamlined process. This may reduce the number of people who use your data.   
 + Will be difficult to track the use of your datasets over time. Without assigning a DOI to your dataset, you will need to rely on requestors to notify you of future publications. Be sure to have a data request agreement in place that allows requestors to state the purpose of their request and their publication intentions.
-+ Increase risks in data sharing. With no repository managing secure file transfers, your team will need to consider how to securely provide access to data for approved users.
++ Increase risks in data sharing. With no repository managing the secure storage and secure file transfers, your team will need to consider how to continue to securely store your data as well as how to securely provide access to data for approved users.
 
 Non-repository means of data sharing:
 
-1. Deposit your data with an agency that you partnered with for the study (i.e. a School District). All data requests will go through that partner.
+1. Deposit your data with an Institutional Archive. This method has several benefits compared to the others listed below, such as reducing the burden on your staff and securely storing your data. However, institutional repositories may provide less services than a public repository and the data will less discoverable to others outside of your institution. 
 
-2. Share your data through a lab, personal, or project website. While this seems like an accessible option, you still need to remember the long term costs associated with maintaining this data and responding to data requests.
+2. Deposit your data with an agency that you partnered with for the study (i.e. a School District). All data requests will go through that partner.
 
-3. Informal peer-to-peer sharing. This may work well for peers but doesn't make a broader audience aware of the availability of your data and keeps the burden of data maintenance and responding to requests on you and your staff. Also, with no formal request system in place, this makes it difficult for the requestor to know who to contact to request the data or what information is needed to retrieve the data.
+3. Share your data through a lab, personal, or project website. While this seems like an accessible option, you still need to remember the long term costs associated with maintaining this data and responding to data requests.
 
-4. Supplemental materials attached to an article or stored on a publisher's website. 
+4. Informal peer-to-peer sharing, ([UK Data Service](https://ukdataservice.ac.uk/learning-hub/research-data-management/plan-to-share/how-to-share-data/)). This may work well for peers but doesn't make a broader audience aware of the availability of your data and keeps the burden of data maintenance and responding to requests on you and your staff. Also, with no formal request system in place, this makes it difficult for the requestor to know who to contact to request the data or what information is needed to retrieve the data.
 
-5. The least recommended option here is to have a statement in your publication that says "data available upon request" and then provide an email for people to reach out to request data. There are countless horror stories where people have reached out to authors about getting data and they've either never heard back or were told that the data was not in fact, available. It is best to already have a system already in place and direct people to that system, either a repository, your personal website with a data request form, etc.
+5. Supplemental materials attached to an article or stored on a publisher's website. 
+
+6. The least recommended option here is to have a statement in your publication that says "data available upon request" and then provide an email for people to reach out to request data. There are countless horror stories where people have reached out to authors about getting data and they've either never heard back or were told that the data was not in fact, available. It is best to already have a system already in place and direct people to that system, either a repository, your personal website with a data request form, etc.
 
 [Borghi and Gulick](https://arxiv.org/ftp/arxiv/papers/2110/2110.00888.pdf) put together a flow chart for choosing where to deposit your data that can be helpful to navigate your options. Although, to the point about restricted data, while the authors refer you to institutional libraries, we've seen that some public repositories do allow you to submit restricted data to be accessed in enclaves.
 
