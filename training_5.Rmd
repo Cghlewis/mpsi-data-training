@@ -591,7 +591,7 @@ Supplemental project level documents that can also be included are:
   
 2. Dataset level documentation
 
-This documentation provides a big picture sense of what datasets are included in the project and how they are connected. The type of dataset level documentation to consider including when data sharing is a README. As discussed in Module 1, a README is a plain text document that can serve many purposes. It literally is an indicator to users to "Read Me" before moving forward with this data. In the context of data sharing, your README should include things such as:
+This documentation provides a big picture sense of what datasets are included in the project and how they are connected. The type of dataset level documentation to consider including when data sharing is a README. As discussed in [Module 1](https://cghlewis.github.io/mpsi-data-training/training_1.html#README), a README is a plain text document that can serve many purposes. It literally is an indicator to users to "Read Me" before moving forward with this data. In the context of data sharing, your README should include things such as:
 
   + The file name of each included dataset  
   + How datasets can be linked together (linking variable)  

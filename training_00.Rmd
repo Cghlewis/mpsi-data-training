@@ -281,3 +281,4 @@ Examples:
 
 16. The Department of Education has released a new report, [Sharing Study Data: A Guide for Education Researchers](https://ies.ed.gov/ncee/pubs/2022004/pdf/2022004.pdf), which includes data sharing guidance, a data management checklist and several examples of data documentation.
 
+17. [The Turing Way handbook](https://the-turing-way.netlify.app/welcome) is a comprehensive manual on reproducible research from the Turing Institute.
