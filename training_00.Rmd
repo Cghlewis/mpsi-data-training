@@ -239,24 +239,24 @@ Every module in this training explains a way to reduce data curation debt. At a 
 As I have been working on this training I have found there are some excellent existing resources out there as well as others who are doing similar work, even in the field of education. Below are some of the resources I highly recommend.
 
 1. Academic Research Librarians
-    + Almost every academic institution employs research data librarians whose job is to help faculty and staff with research data services. This is a great resource to utilize if you work at a university.
-Examples:
+    + Almost every academic institution employs research data librarians whose job is to help faculty and staff with research data services. This is a great resource to utilize if you work at a university. Examples:
     + [Research Data Management at University of Pittsburgh](https://pitt.libguides.com/managedata)
     + [Washington University Data Services Team](https://library.wustl.edu/research-support/data-services/)
     + [Data at Reed](https://www.reed.edu/data-at-reed/index.html)
-
+<br>
 2. A team at Florida State University (including Christopher Schatschneider, Tara Reynolds, Sara Hart and colleagues) have been putting out tons of resources around data management, specifically in education, and open science practices in general. 
-      + [The Basics of Data Management](https://docs.google.com/document/d/1GfIo67-wqq-26ZG9etar5tiKKYLLqWCra8jySolAK7Y/edit)
-      + [Open Science in Education Sciences](https://edarxiv.org/qdj4t/)
-      + [Data Sharing in Education Science](https://journals.sagepub.com/doi/full/10.1177/23328584211006475#.YGuYDCaQo48.twitter)
-
+    + [The Basics of Data Management](https://docs.google.com/document/d/1GfIo67-wqq-26ZG9etar5tiKKYLLqWCra8jySolAK7Y/edit)
+    + [Open Science in Education Sciences](https://edarxiv.org/qdj4t/)
+    + [Data Sharing in Education Science](https://journals.sagepub.com/doi/full/10.1177/23328584211006475#.YGuYDCaQo48.twitter)
+<br>
 3. Teague Henry, an Assistant Professor of Psychology and Data Science at UVA, has been putting out blog posts around data management and they have be very insightful.
     + [Eight Principles of Good Data Management](https://www.teaguehenry.com/strings-not-factors/2021/2/21/eight-principles-of-good-data-management)
     + [Data Management for Researchers: Three Tales](https://www.teaguehenry.com/strings-not-factors/2021/1/24/data-management-for-researchers-three-terrifying-tales)
-
+<br>
 4. Open Science Foundation has endless slide decks covering data management and open science concepts.
-    + Simply go to https://osf.io/ and type "data management slides" into the search box and you will get over 1 million results!
-
+    + Simply go to https://osf.io/ and type "data management slides" into the search box and you will get over 1 million results!   
+    + You can also specifically go to the [Open Scholarship Knowledge Base](https://www.oercommons.org/hubs/OSKB) to find curated resources.  
+<br>
 5. Kristin Briney, a librarian at CalTech, wrote the book [Data Management for Researchers](http://dataabinitio.com/?author=1), and also has a [blog](http://dataabinitio.com/) where she frequently posts about data management topics and issues.
 
 6. John Borghi at Stanford has developed a great [data management checklist](https://laneguides.stanford.edu/DataManagement/checklist).
