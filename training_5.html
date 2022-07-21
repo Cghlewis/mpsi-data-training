@@ -1079,7 +1079,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
 <li><p>The <strong>true raw data</strong> is the data that comes directly from the source with no manipulations. The problem with this raw data is, it’s not usually in a user-friendly format. Metadata is not usually applied, variable names aren’t decipherable, and values may be confusing. The other thing about the true raw data is, you may have not yet removed participants who are not in the study, removed duplicate instances, or removed identifying variables. This data should never leave your secure data storage area, approved by IRB, in your lab.</p></li>
 <li><p>The next level is <strong>de-identified raw data</strong>. This is your raw data as mentioned above, but with identifiers removed, duplicates removed, and checked to ensure that only consented participants are included. While this file <em>can</em> be shared, I still don’t find this file very useful for those wanting to use your data.</p></li>
 <li><p>The third level is a <strong>cleaned data file</strong>. This is your raw data file, checked to ensure that only consented participants are included, de-identified, and cleaned to a usable standard. If you refer back to our discussion on <a href="https://cghlewis.github.io/mpsi-data-training/training_4.html#Data_cleaning_steps">data cleaning steps</a>, it would include the transformations mentioned there. Think of a dataset with interpretable and consistent variable names, with metadata added (such a variable and value labels), and coded consistently. This is a data file that is “ready for analysis”. This means the dataset should be in the minimally accepted format for a future researcher to be able to pick up the dataset and do some basic exploratory analysis with the dataset without having to dig deep into the documentation. This is a broad, clean, general dataset that ANYONE can use. It will include all item-level data as well as any derived scores (sum scores, means) or created variables (ex: cohort, time) necessary to complete the file. My recommendation is that <strong>this</strong> is the file you share.</p></li>
-<li><p>The fourth level is an <strong>analytic file</strong>. While people use this term in different ways, what I am referring to here is a file prepared, based on the aforementioned cleaned data file, that has additional transformations that are <em>created solely for the purpose of that specific analysis</em>. You can think of this as a file used as the basis of a specific publication. While I do recommended this file to be shared as well, I view this as a secondary source, shared for the purposes of allowing replication of your study, rather than for the purposes of people using your data for their own future analyses.</p></li>
+<li><p>The fourth level is an <strong>analytic file</strong>. While people use this term in different ways, what I am referring to here is a file prepared for a specific analysis that is based on the aforementioned cleaned data file. These are files that begin as the cleaned data file mentioned above and then may be further reduced in size (either in cases and/or columns), and may have additional transformations that are <em>created solely for the purpose of a specific analysis</em>. You can think of this as a file used as the basis of a specific publication. While I do recommended this file to be shared as well, I view this as a secondary source, shared for the purposes of allowing replication of your study, rather than for the purposes of people using your data for their own future analyses.</p></li>
 </ul>
 <ol start="2" style="list-style-type: decimal">
 <li>Merged vs Unlinked</li>
@@ -1281,12 +1281,12 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
 </ol></li>
 </ul>
 <p>Ex: Data Dictionary with Transformations</p>
-<div id="cjjzsxutrk" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="qvtwwxhnkf" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#cjjzsxutrk .gt_table {
+#qvtwwxhnkf .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1311,7 +1311,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   border-left-color: #D3D3D3;
 }
 
-#cjjzsxutrk .gt_heading {
+#qvtwwxhnkf .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1323,7 +1323,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   border-right-color: #D3D3D3;
 }
 
-#cjjzsxutrk .gt_title {
+#qvtwwxhnkf .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1335,7 +1335,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   border-bottom-width: 0;
 }
 
-#cjjzsxutrk .gt_subtitle {
+#qvtwwxhnkf .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1347,13 +1347,13 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   border-top-width: 0;
 }
 
-#cjjzsxutrk .gt_bottom_border {
+#qvtwwxhnkf .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#cjjzsxutrk .gt_col_headings {
+#qvtwwxhnkf .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1368,7 +1368,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   border-right-color: #D3D3D3;
 }
 
-#cjjzsxutrk .gt_col_heading {
+#qvtwwxhnkf .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1388,7 +1388,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   overflow-x: hidden;
 }
 
-#cjjzsxutrk .gt_column_spanner_outer {
+#qvtwwxhnkf .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1400,15 +1400,15 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   padding-right: 4px;
 }
 
-#cjjzsxutrk .gt_column_spanner_outer:first-child {
+#qvtwwxhnkf .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#cjjzsxutrk .gt_column_spanner_outer:last-child {
+#qvtwwxhnkf .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#cjjzsxutrk .gt_column_spanner {
+#qvtwwxhnkf .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1420,7 +1420,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   width: 100%;
 }
 
-#cjjzsxutrk .gt_group_heading {
+#qvtwwxhnkf .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1445,7 +1445,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   vertical-align: middle;
 }
 
-#cjjzsxutrk .gt_empty_group_heading {
+#qvtwwxhnkf .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1460,15 +1460,15 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   vertical-align: middle;
 }
 
-#cjjzsxutrk .gt_from_md > :first-child {
+#qvtwwxhnkf .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#cjjzsxutrk .gt_from_md > :last-child {
+#qvtwwxhnkf .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#cjjzsxutrk .gt_row {
+#qvtwwxhnkf .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1487,7 +1487,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   overflow-x: hidden;
 }
 
-#cjjzsxutrk .gt_stub {
+#qvtwwxhnkf .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1500,7 +1500,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   padding-right: 5px;
 }
 
-#cjjzsxutrk .gt_stub_row_group {
+#qvtwwxhnkf .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1514,11 +1514,11 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   vertical-align: top;
 }
 
-#cjjzsxutrk .gt_row_group_first td {
+#qvtwwxhnkf .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#cjjzsxutrk .gt_summary_row {
+#qvtwwxhnkf .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1528,16 +1528,16 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   padding-right: 5px;
 }
 
-#cjjzsxutrk .gt_first_summary_row {
+#qvtwwxhnkf .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#cjjzsxutrk .gt_first_summary_row.thick {
+#qvtwwxhnkf .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#cjjzsxutrk .gt_last_summary_row {
+#qvtwwxhnkf .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1547,7 +1547,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   border-bottom-color: #D3D3D3;
 }
 
-#cjjzsxutrk .gt_grand_summary_row {
+#qvtwwxhnkf .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1557,7 +1557,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   padding-right: 5px;
 }
 
-#cjjzsxutrk .gt_first_grand_summary_row {
+#qvtwwxhnkf .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1567,11 +1567,11 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   border-top-color: #D3D3D3;
 }
 
-#cjjzsxutrk .gt_striped {
+#qvtwwxhnkf .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#cjjzsxutrk .gt_table_body {
+#qvtwwxhnkf .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1580,7 +1580,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   border-bottom-color: #D3D3D3;
 }
 
-#cjjzsxutrk .gt_footnotes {
+#qvtwwxhnkf .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1594,7 +1594,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   border-right-color: #D3D3D3;
 }
 
-#cjjzsxutrk .gt_footnote {
+#qvtwwxhnkf .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -1603,7 +1603,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   padding-right: 5px;
 }
 
-#cjjzsxutrk .gt_sourcenotes {
+#qvtwwxhnkf .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1617,7 +1617,7 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   border-right-color: #D3D3D3;
 }
 
-#cjjzsxutrk .gt_sourcenote {
+#qvtwwxhnkf .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1625,36 +1625,36 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   padding-right: 5px;
 }
 
-#cjjzsxutrk .gt_left {
+#qvtwwxhnkf .gt_left {
   text-align: left;
 }
 
-#cjjzsxutrk .gt_center {
+#qvtwwxhnkf .gt_center {
   text-align: center;
 }
 
-#cjjzsxutrk .gt_right {
+#qvtwwxhnkf .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#cjjzsxutrk .gt_font_normal {
+#qvtwwxhnkf .gt_font_normal {
   font-weight: normal;
 }
 
-#cjjzsxutrk .gt_font_bold {
+#qvtwwxhnkf .gt_font_bold {
   font-weight: bold;
 }
 
-#cjjzsxutrk .gt_font_italic {
+#qvtwwxhnkf .gt_font_italic {
   font-style: italic;
 }
 
-#cjjzsxutrk .gt_super {
+#qvtwwxhnkf .gt_super {
   font-size: 65%;
 }
 
-#cjjzsxutrk .gt_two_val_uncert {
+#qvtwwxhnkf .gt_two_val_uncert {
   display: inline-block;
   line-height: 1em;
   text-align: right;
@@ -1663,31 +1663,31 @@ Example registry options: OSF, Registry of efficacy and effectiveness studies (R
   margin-left: 0.1em;
 }
 
-#cjjzsxutrk .gt_footnote_marks {
+#qvtwwxhnkf .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#cjjzsxutrk .gt_asterisk {
+#qvtwwxhnkf .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#cjjzsxutrk .gt_slash_mark {
+#qvtwwxhnkf .gt_slash_mark {
   font-size: 0.7em;
   line-height: 0.7em;
   vertical-align: 0.15em;
 }
 
-#cjjzsxutrk .gt_fraction_numerator {
+#qvtwwxhnkf .gt_fraction_numerator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: 0.45em;
 }
 
-#cjjzsxutrk .gt_fraction_denominator {
+#qvtwwxhnkf .gt_fraction_denominator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: -0.05em;
