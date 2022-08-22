@@ -246,8 +246,8 @@ As I have been working on this training I have found there are some excellent ex
 <br>
 2. A team at Florida State University (including Christopher Schatschneider, Tara Reynolds, Sara Hart and colleagues) have been putting out tons of resources around data management, specifically in education, and open science practices in general. 
     + [The Basics of Data Management](https://docs.google.com/document/d/1GfIo67-wqq-26ZG9etar5tiKKYLLqWCra8jySolAK7Y/edit)
-    + [Open Science in Education Sciences](https://edarxiv.org/qdj4t/)
-    + [Data Sharing in Education Science](https://journals.sagepub.com/doi/full/10.1177/23328584211006475#.YGuYDCaQo48.twitter)
+    + [Data Sharing in Education Science](https://journals.sagepub.com/doi/full/10.1177/23328584211006475#.YGuYDCaQo48)
+    + [Open Science in Education Sciences](https://journals.sagepub.com/doi/full/10.1177/0022219420945267)
 <br>
 3. Teague Henry, an Assistant Professor of Psychology and Data Science at UVA, has been putting out blog posts around data management and they have be very insightful.
     + [Eight Principles of Good Data Management](https://www.teaguehenry.com/strings-not-factors/2021/2/21/eight-principles-of-good-data-management)
@@ -283,4 +283,3 @@ As I have been working on this training I have found there are some excellent ex
 
 17. [The Turing Way handbook](https://the-turing-way.netlify.app/welcome) is a comprehensive manual on reproducible research from the Turing Institute.
 
-18. van Dijk, W., Schatschneider, C. & Hart, S. published a thorough article on [Open Science in Education Sciences](https://journals.sagepub.com/doi/full/10.1177/0022219420945267) in particular.
