@@ -191,7 +191,7 @@ Before diving into the content of this training, I think it is helpful to cover 
 
 Resources:
 
- 📑 [University of Leicester](https://www2.le.ac.uk/services/research-data/old-2019-12-11/documents/UoL_ReserchDataDefinitions_20120904.pdf)
+ 📑 [FORRT List of Terms](https://forrt.org/glossary/research-data-management/#)
 
 ---
 
@@ -257,7 +257,7 @@ As I have been working on this training I have found there are some excellent ex
     + Simply go to https://osf.io/ and type "data management slides" into the search box and you will get over 1 million results!   
     + You can also specifically go to the [Open Scholarship Knowledge Base](https://www.oercommons.org/hubs/OSKB) to find curated resources.  
 <br>
-5. Kristin Briney, a librarian at CalTech, wrote the book [Data Management for Researchers](http://dataabinitio.com/?author=1), and also has a [blog](http://dataabinitio.com/) where she frequently posts about data management topics and issues.
+5. Kristin Briney, a librarian at CalTech, wrote the book [Data Management for Researchers](http://dataabinitio.com/?page_id=672), and also has a [blog](http://dataabinitio.com/) where she frequently posts about data management topics and issues.
 
 6. John Borghi at Stanford has developed a great [data management checklist](https://laneguides.stanford.edu/DataManagement/checklist).
 

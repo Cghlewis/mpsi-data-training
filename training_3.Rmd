@@ -419,7 +419,6 @@ Additional reading on value coding:
   📑 [Jessica Logan, Ph.D.](https://figshare.com/articles/Data_Management_and_Data_Management_Plans/7890827)  
   📑 [Data One](https://old.dataone.org/best-practices/define-parameters)   
   📑 [Karl Broman](https://kbroman.org/dataorg/pages/consistency.html)  
-  📑 [Research Connections](https://www.researchconnections.org/content/childcare/find/research-lifecycle.html)
   
 
 ---
