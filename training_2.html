@@ -13,7 +13,7 @@
 
 <title>Data Collection Structures</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -147,11 +147,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -367,73 +371,173 @@ div.tocify {
 
 <p><br></p>
 <div class="presentation">
-<p><br> You can view slides from this talk <a href="https://cghlewis.github.io/mpsi-training2/">here</a></p>
+<p><br> You can view slides from this talk <a
+href="https://cghlewis.github.io/mpsi-training2/">here</a></p>
 </div>
 <hr />
 <div id="overview" class="section level2">
 <h2>Overview</h2>
 <hr />
-<p>In this training I continue to cover establishing systems that help make a project successful. These structures are the backbone of your project and without them in place, it can create many, many headaches for project staff, can compromise the confidentiality of your data, and may even make your data unusable.</p>
-<p>If you are collecting your own original data as part of your study, for example a randomized controlled trial study, data management best practices should be interwoven throughout your data collection process. I will discuss the role of data management in data collection instrument design, tracking of participants and data collection, as well as data storage and security. I will not go in to the minutiae of project management, including things such as recruiting participants, consenting participants, training data collectors, or scheduling data collection as those are less tied to data management and more aligned with project coordination.</p>
-<p>However, I will note that it is important that project coordinators and PIs work with a data manager to develop the language used in a consent form. Most, not all, education research that is anonymous or de-identified will fall under the <a href="https://oprs.usc.edu/irb-review/types-of-irb-review/exempt/"><em>exempt</em></a> Institutional Review Board (IRB) category (minimal risk), allowing you to write your own consent rather than using an IRB template. If you plan to share your data upon conclusion of your project, either via a repository or your own data request system, you will want to make sure your consent has clear language about your intent to share your de-identified data. If applicable, also include language regarding your intent to collect identifying information in a linking key table for tracking purposes that will be stored separately from your de-identified data. Shero and Hart from Florida State University have a great <a href="https://figshare.com/articles/preprint/Informed_Consent_Template/13218773/1">Informed Consent Template</a>.</p>
-<p><a href="https://journals.sagepub.com/doi/10.1177/2515245917747656">Meyer (2018)</a> has several helpful dos and donts for language to use in your consent form including:</p>
-<p>✔️ Don’t promise to destroy your data (unless your funder explicitly requires it)<br />
+<p>In this training I continue to cover establishing systems that help
+make a project successful. These structures are the backbone of your
+project and without them in place, it can create many, many headaches
+for project staff, can compromise the confidentiality of your data, and
+may even make your data unusable.</p>
+<p>If you are collecting your own original data as part of your study,
+for example a randomized controlled trial study, data management best
+practices should be interwoven throughout your data collection process.
+I will discuss the role of data management in data collection instrument
+design, tracking of participants and data collection, as well as data
+storage and security. I will not go in to the minutiae of project
+management, including things such as recruiting participants, consenting
+participants, training data collectors, or scheduling data collection as
+those are less tied to data management and more aligned with project
+coordination.</p>
+<p>However, I will note that it is important that project coordinators
+and PIs work with a data manager to develop the language used in a
+consent form. Most, not all, education research that is anonymous or
+de-identified will fall under the <a
+href="https://oprs.usc.edu/irb-review/types-of-irb-review/exempt/"><em>exempt</em></a>
+Institutional Review Board (IRB) category (minimal risk), allowing you
+to write your own consent rather than using an IRB template. If you plan
+to share your data upon conclusion of your project, either via a
+repository or your own data request system, you will want to make sure
+your consent has clear language about your intent to share your
+de-identified data. If applicable, also include language regarding your
+intent to collect identifying information in a linking key table for
+tracking purposes that will be stored separately from your de-identified
+data. Shero and Hart from Florida State University have a great <a
+href="https://figshare.com/articles/preprint/Informed_Consent_Template/13218773/1">Informed
+Consent Template</a>.</p>
+<p><a
+href="https://journals.sagepub.com/doi/10.1177/2515245917747656">Meyer
+(2018)</a> has several helpful dos and donts for language to use in your
+consent form including:</p>
+<p>✔️ Don’t promise to destroy your data (unless your funder explicitly
+requires it)<br />
 ✔️ Don’t promise to not share data<br />
 ✔️ Do get consent to retain and share data<br />
-✔️ Do incorporate data-retention and sharing clauses into IRB templates<br />
-✔️ Do be thoughtful when considering risks of re-identification (ex: small sample size for sub-groups)<br />
-✔️ Don’t promise that research analyses of the collected data will be limited to certain topics</p>
+✔️ Do incorporate data-retention and sharing clauses into IRB
+templates<br />
+✔️ Do be thoughtful when considering risks of re-identification (ex:
+small sample size for sub-groups)<br />
+✔️ Don’t promise that research analyses of the collected data will be
+limited to certain topics</p>
 <p>Other helpful consent resources:</p>
-<p>📑 <a href="https://open.spotify.com/episode/7cP4u3gimblEo8S8Z37UZA">Within &amp; Between podcast</a><br />
-📑 <a href="https://www.hrpo.pitt.edu/data-security-guidance">University of Pittsburgh</a><br />
-📑 <a href="https://www.uoguelph.ca/research/support-document/i-need-create-master-list-link-participant-id-numberscodes-my-data-what-should-i">University of Guelph</a><br />
-📑 <a href="https://www.icpsr.umich.edu/web/pages/datamanagement/confientiality/conf-language.html">ICPSR</a><br />
-📑 <a href="https://figshare.com/articles/preprint/Working_with_your_IRB_Obtaining_consent_for_open_data_sharing_through_consent_forms_and_data_use_agreements/13215305/1">Shero and Hart: Working with your IRB</a></p>
-<p>Final note before diving into this content: Before any project begins, all data collection instruments and protocol must be submitted to an Institutional Review Board (IRB) for approval. The IRB, a formal organization designated to review and monitor human participant research, ensures that the welfare, rights, and privacy of research participants are maintained throughout the project. Some of the systems I cover throughout this series will be vetted by an IRB (ex: original data collection), others will not (ex: documentation, style guide). This training will not cover the ins and outs of the IRB, but I wanted to note that while this training provides many suggestions for setting up your data collection systems, you must always have required forms approved by IRB before moving forward with original data collection.</p>
+<p>📑 <a
+href="https://open.spotify.com/episode/7cP4u3gimblEo8S8Z37UZA">Within
+&amp; Between podcast</a><br />
+📑 <a href="https://www.hrpo.pitt.edu/data-security-guidance">University
+of Pittsburgh</a><br />
+📑 <a
+href="https://www.uoguelph.ca/research/support-document/i-need-create-master-list-link-participant-id-numberscodes-my-data-what-should-i">University
+of Guelph</a><br />
+📑 <a
+href="https://www.icpsr.umich.edu/web/pages/datamanagement/confientiality/conf-language.html">ICPSR</a><br />
+📑 <a
+href="https://figshare.com/articles/preprint/Working_with_your_IRB_Obtaining_consent_for_open_data_sharing_through_consent_forms_and_data_use_agreements/13215305/1">Shero
+and Hart: Working with your IRB</a></p>
+<p>Final note before diving into this content: Before any project
+begins, all data collection instruments and protocol must be submitted
+to an Institutional Review Board (IRB) for approval. The IRB, a formal
+organization designated to review and monitor human participant
+research, ensures that the welfare, rights, and privacy of research
+participants are maintained throughout the project. Some of the systems
+I cover throughout this series will be vetted by an IRB (ex: original
+data collection), others will not (ex: documentation, style guide). This
+training will not cover the ins and outs of the IRB, but I wanted to
+note that while this training provides many suggestions for setting up
+your data collection systems, you must always have required forms
+approved by IRB before moving forward with original data collection.</p>
 <hr />
 </div>
 <div id="data-collection-instruments" class="section level2">
 <h2>Data Collection Instruments</h2>
 <hr />
-<p>When it comes to the intersection of data management and data collection, there is a lot to consider. If at all possible, take some planning time to create data collection instruments and procedures that keep your data secure, valid, minimize errors, and relieve future data cleaning headaches. I am going to cover some common instruments created to collect original data, and ways you may be able to make those instruments more streamlined and efficient.</p>
-<p><strong>Quick note</strong>: Everything you read below is from my personal experience as well as a summary of what I have heard while interviewing other researchers. As such I may be missing out on even better ways to set up these systems. I am open to feedback!</p>
+<p>When it comes to the intersection of data management and data
+collection, there is a lot to consider. If at all possible, take some
+planning time to create data collection instruments and procedures that
+keep your data secure, valid, minimize errors, and relieve future data
+cleaning headaches. I am going to cover some common instruments created
+to collect original data, and ways you may be able to make those
+instruments more streamlined and efficient.</p>
+<p><strong>Quick note</strong>: Everything you read below is from my
+personal experience as well as a summary of what I have heard while
+interviewing other researchers. As such I may be missing out on even
+better ways to set up these systems. I am open to feedback!</p>
 <p><br></p>
 <div id="surveys" class="section level3">
 <h3>Surveys</h3>
-<p>Research teams may be restricted in how they collect their survey data due to limited resources, research design, or even the population being studied. However, if at all possible, I highly recommend collecting surveys using software/web-based tools that directly feed into a table or database rather than through paper forms. The reasons are:</p>
+<p>Research teams may be restricted in how they collect their survey
+data due to limited resources, research design, or even the population
+being studied. However, if at all possible, I highly recommend
+collecting surveys using software/web-based tools that directly feed
+into a table or database rather than through paper forms. The reasons
+are:</p>
 <ul>
 <li>Forms are easier to maintain/update</li>
 <li>Reduces cost and effort of manual printing and collating</li>
 <li>Can be distributed in many ways (links, emails, QR codes)</li>
 <li>Easier to track completion</li>
-<li>More efficient than manually entering or manually scoring data (including TeleForm)</li>
-<li>Reduces errors in both data collection as well as data entry/scoring</li>
+<li>More efficient than manually entering or manually scoring data
+(including TeleForm)</li>
+<li>Reduces errors in both data collection as well as data
+entry/scoring</li>
 <li>Can reduce missing data</li>
 <li>Quick turnaround of clean data</li>
 <li>Removes the need to physically store paper data</li>
-<li>Allows for assigning correct variable names, value codes, and labels within the form</li>
+<li>Allows for assigning correct variable names, value codes, and labels
+within the form</li>
 <li>Provides more data privacy than paper data</li>
-<li>Bonus: Streamlines pipeline for real-time reporting/dashboarding options (can pull data using APIs)</li>
-<li>Bonus: Able to use crowdsourcing options such as MTurk and Prolific</li>
+<li>Bonus: Streamlines pipeline for real-time reporting/dashboarding
+options (can pull data using APIs)</li>
+<li>Bonus: Able to use crowdsourcing options such as MTurk and
+Prolific</li>
 </ul>
-<p><strong>Note</strong>: With the COVID-19 pandemic in 2020, I think many of us doing education research have had to make a huge switch, very quickly, to collecting data electronically and remotely. This is yet another reason to create/utilize web-based data collection instruments in particular, to prepare for the unknown, and provide flexibility to collect data even when you aren’t able to physically be in schools.</p>
+<p><strong>Note</strong>: With the COVID-19 pandemic in 2020, I think
+many of us doing education research have had to make a huge switch, very
+quickly, to collecting data electronically and remotely. This is yet
+another reason to create/utilize web-based data collection instruments
+in particular, to prepare for the unknown, and provide flexibility to
+collect data even when you aren’t able to physically be in schools.</p>
 <div id="web-based-surveys" class="section level4">
 <h4><strong>Web-based Surveys</strong></h4>
-<p>There are many web-based survey platforms (Ex: Qualtrics, Survey Monkey, Google Forms, Microsoft Forms, SurveyCTO) you can use to develop surveys. If those existing platforms do not meet your needs, you can always build your own web-based application to collect data.</p>
+<p>There are many web-based survey platforms (Ex: Qualtrics, Survey
+Monkey, Google Forms, Microsoft Forms, SurveyCTO) you can use to develop
+surveys. If those existing platforms do not meet your needs, you can
+always build your own web-based application to collect data.</p>
 <ul>
 <li>You can hire a developer to build an app for you</li>
-<li>You can build your own application to collect data in tools such as R (ex: using <a href="https://formr.org/documentation#get_started">{formR}</a>) or Tableau</li>
+<li>You can build your own application to collect data in tools such as
+R (ex: using <a
+href="https://formr.org/documentation#get_started">{formR}</a>) or
+Tableau</li>
 </ul>
-<p>No matter what platform you use, building your survey requires some up front planning. First and foremost make sure to build a survey that is both valid and reliable. Secondly, take time to think how the data you collect will be <em>translated into a database</em>. Remember, every question answered is then stored in a database within the platform that you will later download to a file. Here are several suggestions to adhere to when creating your survey that will provide you with more accurate data and reduce future data management headaches (<em>While I will not provide a tutorial for how to implement each suggestion, they are all possible in a platform such as Qualtrics</em>):</p>
+<p>No matter what platform you use, building your survey requires some
+up front planning. First and foremost make sure to build a survey that
+is both valid and reliable. Secondly, take time to think how the data
+you collect will be <em>translated into a database</em>. Remember, every
+question answered is then stored in a database within the platform that
+you will later download to a file. Here are several suggestions to
+adhere to when creating your survey that will provide you with more
+accurate data and reduce future data management headaches (<em>While I
+will not provide a tutorial for how to implement each suggestion, they
+are all possible in a platform such as Qualtrics</em>):</p>
 <ol style="list-style-type: decimal">
-<li>Name all your survey items the correct item name from your data dictionary (Ex: Rename the Qualtrics default Q1 to s_gender)
+<li>Name all your survey items the correct item name from your data
+dictionary (Ex: Rename the Qualtrics default Q1 to s_gender)
 <ul>
-<li>This isn’t a name that your survey participants will see, but it is the variable name you will see when you download your data</li>
+<li>This isn’t a name that your survey participants will see, but it is
+the variable name you will see when you download your data</li>
 </ul></li>
-<li>Code all values as they are in your data dictionary (Ex: 1=strongly agree, 2= agree, etc.)
+<li>Code all values as they are in your data dictionary (Ex: 1=strongly
+agree, 2= agree, etc.)
 <ul>
 <li>In Qualtrics you can do this using the “recode values” option</li>
-<li>As you edit your survey, check that your coded values did not change as you updated your survey (It happens!). This is why options such as “tools -&gt; reset recode values” exist in programs like Qualtrics, which allow you to start over with sequential back end coding.</li>
+<li>As you edit your survey, check that your coded values did not change
+as you updated your survey (It happens!). This is why options such as
+“tools -&gt; reset recode values” exist in programs like Qualtrics,
+which allow you to start over with sequential back end coding.</li>
 </ul></li>
 <li>Use data validation to reduce errors and missing data
 <ul>
@@ -444,37 +548,58 @@ div.tocify {
 </ul></li>
 <li>Response validation
 <ul>
-<li>Force response (a respondent must answer the question to move forward)</li>
-<li>Request response (notifies the respondent that they skipped a question and asks if they still want to move forward)</li>
+<li>Force response (a respondent must answer the question to move
+forward)</li>
+<li>Request response (notifies the respondent that they skipped a
+question and asks if they still want to move forward)</li>
 </ul></li>
 </ul></li>
-<li>If there is a finite number of response options, and the number isn’t too large (less than ~ 20) use a drop-down list rather than open-ended field
+<li>If there is a finite number of response options, and the number
+isn’t too large (less than ~ 20) use a drop-down list rather than
+open-ended field
 <ul>
-<li>School Name as a drop-down removes the potential for people to enter school names differently (some which you may not be able to decipher)
+<li>School Name as a drop-down removes the potential for people to enter
+school names differently (some which you may not be able to decipher)
 <ul>
 <li>(“South Middle School”, “South Middle”, “SOUTH”, “Soth Mid”)<br />
 </li>
 </ul></li>
-<li>An exception to this rule is for categories such as demographics. For example, for gender you may prefer to allow people to enter their gender in an open text box rather than giving them a pre-determined list, there are tools, such as the R package called <a href="https://ropenscilabs.github.io/gendercoder/">gendercoder</a>, that help you recategorize this data through coding after it is collected (we will talk about these tools more in later trainings).</li>
+<li>An exception to this rule is for categories such as demographics.
+For example, for gender you may prefer to allow people to enter their
+gender in an open text box rather than giving them a pre-determined
+list, there are tools, such as the R package called <a
+href="https://ropenscilabs.github.io/gendercoder/">gendercoder</a>, that
+help you recategorize this data through coding after it is collected (we
+will talk about these tools more in later trainings).</li>
 </ul></li>
-<li>If there is an infinite number of response options or the number of options is large, use an open text box.
+<li>If there is an infinite number of response options or the number of
+options is large, use an open text box.
 <ul>
-<li>Consider limiting the number of characters allowed in the text box unless you want to allow users to write paragraphs of information.</li>
-<li>Using open ended text boxes does not mean you can not re-group this information into categories later through syntax. It is just more time-consuming and requires interpretation and decision making on the part of the data cleaner/analyst.</li>
+<li>Consider limiting the number of characters allowed in the text box
+unless you want to allow users to write paragraphs of information.</li>
+<li>Using open ended text boxes does not mean you can not re-group this
+information into categories later through syntax. It is just more
+time-consuming and requires interpretation and decision making on the
+part of the data cleaner/analyst.</li>
 </ul></li>
 <li>Only ask for one piece of information per question
 <ul>
 <li>Don’t ask: Please list your ACT or SAT score.</li>
-<li>Do ask: Please list your ACT score. Please list your SAT score. In separate questions.</li>
+<li>Do ask: Please list your ACT score. Please list your SAT score. In
+separate questions.</li>
 </ul></li>
 <li>Make your question wording abundantly clear
 <ul>
 <li>Don’t ask: Are you from this county?</li>
 <li>Do ask: Do you currently live in this county?</li>
 </ul></li>
-<li>Make the question format the same across studies. For continuity, it is a good practice to keep variable names and formats the same within and across studies.
+<li>Make the question format the same across studies. For continuity, it
+is a good practice to keep variable names and formats the same within
+and across studies.
 <ul>
-<li>If <em>anxiety1</em> was a slider question, on a scale from 1-10, with one point increments in a previous study, build this question the same way in the next study</li>
+<li>If <em>anxiety1</em> was a slider question, on a scale from 1-10,
+with one point increments in a previous study, build this question the
+same way in the next study</li>
 </ul></li>
 <li>Do make your response options clear in the question
 <ul>
@@ -482,153 +607,300 @@ div.tocify {
 <ul>
 <li>Does m=male or mother?</li>
 </ul></li>
-<li>Do ask: Which parent are you? (mother/father/legal guardian/other)</li>
+<li>Do ask: Which parent are you? (mother/father/legal
+guardian/other)</li>
 </ul></li>
 </ol>
 <div id="feedback" class="section level5">
 <h5>Feedback</h5>
 <ul>
-<li>If you are unsure if your survey is going to download the way you want it to, make some sample data! Send the survey to a few staff members and have them take the survey using a “test” name. Then you can download the sample data and see if it looks the way you expect it to. You can always remove this test data either within the survey platform itself or delete it during your cleaning process.</li>
-<li>Sending your survey out to staff to test is also a great opportunity to get feedback! Was there any language that was unclear? Did you forget some skip logic? Did you leave off an option or maybe an entire question? Get this feedback early as it is very difficult to make changes mid-project!</li>
+<li>If you are unsure if your survey is going to download the way you
+want it to, make some sample data! Send the survey to a few staff
+members and have them take the survey using a “test” name. Then you can
+download the sample data and see if it looks the way you expect it to.
+You can always remove this test data either within the survey platform
+itself or delete it during your cleaning process.</li>
+<li>Sending your survey out to staff to test is also a great opportunity
+to get feedback! Was there any language that was unclear? Did you forget
+some skip logic? Did you leave off an option or maybe an entire
+question? Get this feedback early as it is very difficult to make
+changes mid-project!</li>
 </ul>
-<p>📑 <a href="https://www.pewresearch.org/methods/u-s-survey-research/questionnaire-design/">Pew Research</a> and <a href="https://www.qualtrics.com/blog/10-tips-for-building-effective-surveys/">Qualtrics</a> both provide comprehensive best practices in questionnaire design.</p>
+<p>📑 <a
+href="https://www.pewresearch.org/methods/u-s-survey-research/questionnaire-design/">Pew
+Research</a> and <a
+href="https://www.qualtrics.com/blog/10-tips-for-building-effective-surveys/">Qualtrics</a>
+both provide comprehensive best practices in questionnaire design.</p>
 </div>
 </div>
 <div id="offline-surveys" class="section level4">
 <h4><strong>Offline Surveys</strong></h4>
-<p>If your site or participants do not have WiFi and/or email access, you generally have a few options.</p>
+<p>If your site or participants do not have WiFi and/or email access,
+you generally have a few options.</p>
 <ol style="list-style-type: decimal">
-<li><p>One option is to work with a survey platform (such as Qualtrics or SurveyCTO) that allows you to create a survey online, administer it using an offline survey app on your phone or tablet, and then upload that data back to the survey platform once you have an internet connection again.</p></li>
-<li><p>Still, depending on your study, participants, and resources, building a web-based survey may not be possible and/or it may not be the best option for your project. So your second option is a paper survey.</p></li>
+<li><p>One option is to work with a survey platform (such as Qualtrics
+or SurveyCTO) that allows you to create a survey online, administer it
+using an offline survey app on your phone or tablet, and then upload
+that data back to the survey platform once you have an internet
+connection again.</p></li>
+<li><p>Still, depending on your study, participants, and resources,
+building a web-based survey may not be possible and/or it may not be the
+best option for your project. So your second option is a paper
+survey.</p></li>
 </ol>
 <ul>
-<li>If you must collect paper survey data I recommend the following to reduce error:
+<li>If you must collect paper survey data I recommend the following to
+reduce error:
 <ul>
-<li>Have very clear instructions/training on how to complete the paper form</li>
-<li>Make sure to write survey questions to the best of your ability that prevents respondents from being confused and circling multiple answers or writing other answers in the margins</li>
-<li>If your staff are implementing surveys out in the field, have them check for missing data in the field before they return to the office
+<li>Have very clear instructions/training on how to complete the paper
+form</li>
+<li>Make sure to write survey questions to the best of your ability that
+prevents respondents from being confused and circling multiple answers
+or writing other answers in the margins</li>
+<li>If your staff are implementing surveys out in the field, have them
+check for missing data in the field before they return to the office
 <ul>
-<li>Check all forms for missing data again when they return back to the office</li>
+<li>Check all forms for missing data again when they return back to the
+office</li>
 </ul></li>
-<li>If you are using a mail survey, check for missing data when the survey is returned</li>
+<li>If you are using a mail survey, check for missing data when the
+survey is returned</li>
 </ul></li>
 <li>To improve data entry issues:
 <ul>
-<li>Consider using something like <a href="https://ocrsolution.com/teleform-software/">TeleForm</a> to reduce hand entry of data
+<li>Consider using something like <a
+href="https://ocrsolution.com/teleform-software/">TeleForm</a> to reduce
+hand entry of data
 <ul>
-<li>I personally have not used this but I know TeleForm designs machine readable forms that can later be scanned rather than hand entered</li>
+<li>I personally have not used this but I know TeleForm designs machine
+readable forms that can later be scanned rather than hand entered</li>
 </ul></li>
-<li>Ultimately though, if staff are hand entering data from paper forms, follow guidelines laid out below in <a href="#data-entry">Data Entry</a>.</li>
+<li>Ultimately though, if staff are hand entering data from paper forms,
+follow guidelines laid out below in <a href="#data-entry">Data
+Entry</a>.</li>
 </ul></li>
 </ul>
 </div>
 </div>
 <div id="assessments" class="section level3">
 <h3>Assessments</h3>
-<p>For the same reasons I recommend web-based tools for surveys, I also recommend web-based tools for assessments.</p>
+<p>For the same reasons I recommend web-based tools for surveys, I also
+recommend web-based tools for assessments.</p>
 <div id="web-based-assessments" class="section level4">
 <h4><strong>Web-based Assessments</strong></h4>
-<p>If a web-based option already exists for your assessment, the obvious answer is to simply use this. For example the Renaissance STAR assessment is administered online.</p>
-<p>However, if your assessment is only available in paper form, consider converting it to a web-based form if at all possible without altering the integrity of the assessment. You can do that in several ways:</p>
+<p>If a web-based option already exists for your assessment, the obvious
+answer is to simply use this. For example the Renaissance STAR
+assessment is administered online.</p>
+<p>However, if your assessment is only available in paper form, consider
+converting it to a web-based form if at all possible without altering
+the integrity of the assessment. You can do that in several ways:</p>
 <ol style="list-style-type: decimal">
 <li>Build the assessment into an online survey platform.</li>
-<li>Build your own application to collect data. - If you build the assessment into your own app or into a survey platform, set it up using the same recommendations for web-based surveys (ex: back end coding to match the actual values on the forms, back end naming variables correctly, etc.)</li>
+<li>Build your own application to collect data. - If you build the
+assessment into your own app or into a survey platform, set it up using
+the same recommendations for web-based surveys (ex: back end coding to
+match the actual values on the forms, back end naming variables
+correctly, etc.)</li>
 </ol>
-<p>Once data is collected, proceed with scoring as usual, following the guidelines of the specific assessment.</p>
+<p>Once data is collected, proceed with scoring as usual, following the
+guidelines of the specific assessment.</p>
 </div>
 <div id="offline-assessments" class="section level4">
 <h4><strong>Offline Assessments</strong></h4>
-<p>If there are no web-based options, or connecting to WiFi is not an option for your project, then of course, keep with the paper assessments and follow the guidelines of the specific assessment. If the assessment requires any manual scoring (such as the Woodcock Johnson), be sure to implement an error checking system (such as the one mentioned in the Offline Surveys section).</p>
+<p>If there are no web-based options, or connecting to WiFi is not an
+option for your project, then of course, keep with the paper assessments
+and follow the guidelines of the specific assessment. If the assessment
+requires any manual scoring (such as the Woodcock Johnson), be sure to
+implement an error checking system (such as the one mentioned in the
+Offline Surveys section).</p>
 </div>
 </div>
 <div id="observations" class="section level3">
 <h3>Observations</h3>
-<p>In person classroom observations, qualitative or quantitative, can be collected using a web-based tool.</p>
+<p>In person classroom observations, qualitative or quantitative, can be
+collected using a web-based tool.</p>
 <div id="web-based-observations" class="section level4">
 <h4><strong>Web-based Observations</strong></h4>
-<p>Observation forms can be built into an online survey platform or your own application that data collectors can access on their phones, tablets or laptops in the field. If the observation has duration codes, you can build this into your app or there are existing applications that have built in timers. If the observation simply needs to last X amount of minutes, use a web-based form and you can always just have observers set timers on their phones, similar to what they may do using a paper form.</p>
+<p>Observation forms can be built into an online survey platform or your
+own application that data collectors can access on their phones, tablets
+or laptops in the field. If the observation has duration codes, you can
+build this into your app or there are existing applications that have
+built in timers. If the observation simply needs to last X amount of
+minutes, use a web-based form and you can always just have observers set
+timers on their phones, similar to what they may do using a paper
+form.</p>
 </div>
 <div id="offline-observations" class="section level4">
 <h4><strong>Offline Observations</strong></h4>
-<p>If WiFi is not available to you in the field, consider making an electronic form that still eliminates the need for data entry (so not a paper form) and that ideally connects to or creates some type of database or table. Then have data collectors enter data into this form on a device in the field. This does not have to be high-tech. It could simply be:</p>
+<p>If WiFi is not available to you in the field, consider making an
+electronic form that still eliminates the need for data entry (so not a
+paper form) and that ideally connects to or creates some type of
+database or table. Then have data collectors enter data into this form
+on a device in the field. This does not have to be high-tech. It could
+simply be:</p>
 <ol style="list-style-type: decimal">
-<li>An Excel file that is pre-built with every observation field and the options for each field are limited to only the correct options through a drop-down list.</li>
+<li>An Excel file that is pre-built with every observation field and the
+options for each field are limited to only the correct options through a
+drop-down list.</li>
 <li>Create a Microsoft Access form that is connected to a database</li>
-<li>Utilize the offline survey options provided by tools such as Qualtrics (see Offline Surveys section)</li>
-<li>Build or use existing offline tools. For duration code classroom observations, we’ve used <a href="https://mooses.vueinnovations.com/">software</a> built by a developer at Vanderbilt to collect frequency and duration observation data. It stores observation text files to the data collectors device.</li>
+<li>Utilize the offline survey options provided by tools such as
+Qualtrics (see Offline Surveys section)</li>
+<li>Build or use existing offline tools. For duration code classroom
+observations, we’ve used <a
+href="https://mooses.vueinnovations.com/">software</a> built by a
+developer at Vanderbilt to collect frequency and duration observation
+data. It stores observation text files to the data collectors
+device.</li>
 </ol>
-<p>Collecting electronic data in the field becomes tricky when you are having people use tools simultaneously that aren’t connected to a shared database (such as separate Excel files or Access databases). When you use an online/offline survey platform, everyone’s data is feeding into the same database/table. However, when you are using separate Excel files for instance, everyone is storing data on their own device. This requires you to set up a way for collectors to share files (ex: Dropbox, Box, or whatever your institution deems is a secure system) and then for you to merge those files together across data collectors. It is definitely trickier, although possibly still a more efficient and reliable method that paper forms and hand entry of data.</p>
-<p>All of the above assumes observations completed in the field. Of course if you record observations and code them from the luxury of your office, then the possibilities are wide open and I would recommend to follow any of the above methods that connect to a shared database, such as the online observation form to collect all data seamlessly in one location.</p>
+<p>Collecting electronic data in the field becomes tricky when you are
+having people use tools simultaneously that aren’t connected to a shared
+database (such as separate Excel files or Access databases). When you
+use an online/offline survey platform, everyone’s data is feeding into
+the same database/table. However, when you are using separate Excel
+files for instance, everyone is storing data on their own device. This
+requires you to set up a way for collectors to share files (ex: Dropbox,
+Box, or whatever your institution deems is a secure system) and then for
+you to merge those files together across data collectors. It is
+definitely trickier, although possibly still a more efficient and
+reliable method that paper forms and hand entry of data.</p>
+<p>All of the above assumes observations completed in the field. Of
+course if you record observations and code them from the luxury of your
+office, then the possibilities are wide open and I would recommend to
+follow any of the above methods that connect to a shared database, such
+as the online observation form to collect all data seamlessly in one
+location.</p>
 </div>
 </div>
 <div id="interviews-or-focus-groups" class="section level3">
 <h3>Interviews or Focus Groups</h3>
-<p>I don’t work much with qualitative data so I won’t say much here. Interviews and focus groups are typically recorded (at least audio) whether they are collected in-person or online. Then if you transcribe (some people simply just take notes), transcription is either outsourced to a company, done in-house, or done using transcription software and is usually kept in a file such as a Word document or Google doc. For this type of qualitative data, I have no preference for how it is collected and transcribed as long as the transcription is accurate and it is a format that is appropriate for any analysis software you plan to use.</p>
+<p>I don’t work much with qualitative data so I won’t say much here.
+Interviews and focus groups are typically recorded (at least audio)
+whether they are collected in-person or online. Then if you transcribe
+(some people simply just take notes), transcription is either outsourced
+to a company, done in-house, or done using transcription software and is
+usually kept in a file such as a Word document or Google doc. For this
+type of qualitative data, I have no preference for how it is collected
+and transcribed as long as the transcription is accurate and it is a
+format that is appropriate for any analysis software you plan to
+use.</p>
 </div>
 <div id="secondary-data-sources" class="section level3">
 <h3>Secondary Data Sources</h3>
-<p>If you receive any non-public, confidential, secondary data sources, such as school district records, just make sure you ask for them in a format that is usable to you. For instance, I have received school district records in PDF form, and while, after much data wrangling it <strong>can</strong> be usable, it would be much easier to request to receive this information in tabular format.</p>
+<p>If you receive any non-public, confidential, secondary data sources,
+such as school district records, just make sure you ask for them in a
+format that is usable to you. For instance, I have received school
+district records in PDF form, and while, after much data wrangling it
+<strong>can</strong> be usable, it would be much easier to request to
+receive this information in tabular format.</p>
 </div>
 <div id="consents" class="section level3">
 <h3>Consents</h3>
-<p>Most studies require researchers to collect consent and/or assent on participants. Informed consent is collected on any participant, 18 years or older. If a student is under 18 years old, a parent consent as well as a student assent is collected. Consents and assents are typically collected one of two ways.</p>
+<p>Most studies require researchers to collect consent and/or assent on
+participants. Informed consent is collected on any participant, 18 years
+or older. If a student is under 18 years old, a parent consent as well
+as a student assent is collected. Consents and assents are typically
+collected one of two ways.</p>
 <ol style="list-style-type: decimal">
-<li>Web-based: Consents and assents can be collected through secure web-based tools, such as Qualtrics or DocuSign. Consult with your IRB to see what tools are approved.</li>
+<li>Web-based: Consents and assents can be collected through secure
+web-based tools, such as Qualtrics or DocuSign. Consult with your IRB to
+see what tools are approved.</li>
 </ol>
 <ul>
 <li>Considerations for this method include:
 <ul>
-<li>It does require your participants to have access to the internet and possibly also email.</li>
-<li>Schools are very unlikely to give you parent email addresses. You may need to have school personnel send the parent consent link out on your behalf (or send home a paper form with a QR code)<br />
+<li>It does require your participants to have access to the internet and
+possibly also email.</li>
+<li>Schools are very unlikely to give you parent email addresses. You
+may need to have school personnel send the parent consent link out on
+your behalf (or send home a paper form with a QR code)<br />
 </li>
 </ul></li>
 <li>Benefits to this method include:
 <ul>
-<li>Student assents can be completed in the classroom on any electronic device or in a computer lab with internet.<br />
+<li>Student assents can be completed in the classroom on any electronic
+device or in a computer lab with internet.<br />
 </li>
-<li>It reduces the manual labor of having to pick up paper forms from schools or have them mailed/scanned. You can simply download or access the consents online at any time.</li>
+<li>It reduces the manual labor of having to pick up paper forms from
+schools or have them mailed/scanned. You can simply download or access
+the consents online at any time.</li>
 </ul></li>
 </ul>
 <ol start="2" style="list-style-type: decimal">
-<li>Paper form: If you use a paper form, just make sure to have systems in place to allow you to track exactly where a form came from and who it belongs to. I say this as sometimes a person’s printed name or signature is illegible or you receive a student assent back but you are unsure which classroom the form came from.</li>
+<li>Paper form: If you use a paper form, just make sure to have systems
+in place to allow you to track exactly where a form came from and who it
+belongs to. I say this as sometimes a person’s printed name or signature
+is illegible or you receive a student assent back but you are unsure
+which classroom the form came from.</li>
 </ol>
 <ul>
 <li>Here are a few methods that may help alleviate future problems:
 <ul>
-<li>If a school is willing to provide class rosters, you can pre-label your student and parent consents/assents before sending them home. That way when a form is returned you know exactly what classroom that student belongs to and what that student’s name is. IRB should not have a problem with researchers collecting rosters, but some schools may (think FERPA) so this may not be possible.<br />
+<li>If a school is willing to provide class rosters, you can pre-label
+your student and parent consents/assents before sending them home. That
+way when a form is returned you know exactly what classroom that student
+belongs to and what that student’s name is. IRB should not have a
+problem with researchers collecting rosters, but some schools may (think
+FERPA) so this may not be possible.<br />
 </li>
-<li>Another option is to ask teachers to print student name and their name (teacher’s names) on forms before they are sent home (or when they are returned)<br />
+<li>Another option is to ask teachers to print student name and their
+name (teacher’s names) on forms before they are sent home (or when they
+are returned)<br />
 </li>
-<li>Make sure to have both a print your name line <strong>and</strong> a signature line on all consent forms. Even with adult consent forms.</li>
+<li>Make sure to have both a print your name line <strong>and</strong> a
+signature line on all consent forms. Even with adult consent forms.</li>
 </ul></li>
 </ul>
 </div>
 <div id="all-in-one-study" class="section level3">
 <h3>All-in-One Study</h3>
-<p>Last I wanted to mention that it is also possible to build all or almost all of your study into one tool (depending on your study). Using a tool like Qualtrics, or building your own tools in applications like R Shiny, you can build your consent, randomization, study ID assignment, survey and assessment all in one tool that participants can access in one simple link. Lucy D’Agostino McGowan has a great example in her slides <a href="https://docs.google.com/presentation/d/1FtI4KeX3C8cFBJi0NeTURqfXphrQ2W8sxoDQAd7LrRo/edit#slide=id.p">here</a>.</p>
+<p>Last I wanted to mention that it is also possible to build all or
+almost all of your study into one tool (depending on your study). Using
+a tool like Qualtrics, or building your own tools in applications like R
+Shiny, you can build your consent, randomization, study ID assignment,
+survey and assessment all in one tool that participants can access in
+one simple link. Lucy D’Agostino McGowan has a great example in her
+slides <a
+href="https://docs.google.com/presentation/d/1FtI4KeX3C8cFBJi0NeTURqfXphrQ2W8sxoDQAd7LrRo/edit#slide=id.p">here</a>.</p>
 <hr />
 </div>
 </div>
 <div id="data-entry" class="section level2">
 <h2>Data Entry</h2>
 <hr />
-<p>If you end up having to use paper forms to collect any of your data and need to manually enter that data, then there are several steps you can take to minimize error in that process.</p>
+<p>If you end up having to use paper forms to collect any of your data
+and need to manually enter that data, then there are several steps you
+can take to minimize error in that process.</p>
 <ol style="list-style-type: decimal">
 <li>Set up databases for staff to enter the data<br />
 </li>
 </ol>
 <ul>
-<li>Consider using a database tool such as Access, FileMaker, RedCap, or QuickBase rather than a spreadsheet. Most of these tools allow you to set up forms for users to enter data into that are then submitted into a table on the back end. This reduces data entry errors.</li>
-<li>If you must use a spreadsheet tool such as SPSS or Excel, be aware of some of the limitations and possible issues:
+<li>Consider using a database tool such as Access, FileMaker, RedCap, or
+QuickBase rather than a spreadsheet. Most of these tools allow you to
+set up forms for users to enter data into that are then submitted into a
+table on the back end. This reduces data entry errors.</li>
+<li>If you must use a spreadsheet tool such as SPSS or Excel, be aware
+of some of the limitations and possible issues:
 <ul>
-<li>The formatting that Excel sometimes applies to fields may cause errors in your data (dates get formatted as numeric, strings get formatted as dates, leading zeros get removed from ID variables who should be formatted as character but Excel converts them to numeric, and other nightmares)<br />
+<li>The formatting that Excel sometimes applies to fields may cause
+errors in your data (dates get formatted as numeric, strings get
+formatted as dates, leading zeros get removed from ID variables who
+should be formatted as character but Excel converts them to numeric, and
+other nightmares)<br />
 </li>
-<li>It’s easy to enter data into the wrong row or column in a spreadsheet as you are able to click anywhere in the spreadsheet. You may even write over existing data on accident.</li>
-<li>One way to prevent some errors in these tools is to restrict entry in fields (only allow numeric values if you want staff to enter numbers rather than the actual words associated with response options). Also, add drop down lists for each of your categorical questions, only allowing acceptable responses.</li>
+<li>It’s easy to enter data into the wrong row or column in a
+spreadsheet as you are able to click anywhere in the spreadsheet. You
+may even write over existing data on accident.</li>
+<li>One way to prevent some errors in these tools is to restrict entry
+in fields (only allow numeric values if you want staff to enter numbers
+rather than the actual words associated with response options). Also,
+add drop down lists for each of your categorical questions, only
+allowing acceptable responses.</li>
 </ul></li>
 </ul>
 <ol start="2" style="list-style-type: decimal">
-<li>Develop a data entry protocol. Your protocol can/should include:<br />
+<li>Develop a data entry protocol. Your protocol can/should
+include:<br />
 </li>
 </ol>
 <ul>
@@ -636,164 +908,369 @@ div.tocify {
 <ul>
 <li>Is it stored in a locked file cabinet? What drawer?<br />
 </li>
-<li>Do they return the data back to that same drawer after entry or store in a new drawer that denotes the data has been entered? If returning back to the same drawer, does the staff member initial the form to denote that it has been entered?<br />
+<li>Do they return the data back to that same drawer after entry or
+store in a new drawer that denotes the data has been entered? If
+returning back to the same drawer, does the staff member initial the
+form to denote that it has been entered?<br />
 </li>
 <li>What is the file path to the data entry database?<br />
 </li>
 </ul></li>
 <li>Have very clear instructions for data entry including:
 <ul>
-<li>What they should do if they come across missing data (skip the cell, enter a certain number such as -999, etc.)<br />
+<li>What they should do if they come across missing data (skip the cell,
+enter a certain number such as -999, etc.)<br />
 </li>
 <li>What they should do if a respondent circles multiple answers</li>
-<li>What they should do if a respondent completed multiple surveys/assessments</li>
+<li>What they should do if a respondent completed multiple
+surveys/assessments</li>
 </ul></li>
 <li>Set up a system for error checking
 <ul>
-<li>I highly recommend you implement a system where you <a href="http://barchard.faculty.unlv.edu/doubleentry/Scott%20Data%20Entry%20WPA%202008.pdf">double enter</a> a portion, if not all of your data, to check for entry errors.
+<li>I highly recommend you implement a system where you <a
+href="http://barchard.faculty.unlv.edu/doubleentry/Scott%20Data%20Entry%20WPA%202008.pdf">double
+enter</a> a portion, if not all of your data, to check for entry errors.
 <ul>
-<li>This looks like creating two identical databases, and having two different staff members (not the same staff member), enter data into each databases. Assign staff member A to enter data into database 1 and staff member B to enter data into database 2.<br />
+<li>This looks like creating two identical databases, and having two
+different staff members (not the same staff member), enter data into
+each databases. Assign staff member A to enter data into database 1 and
+staff member B to enter data into database 2.<br />
 </li>
-<li>To track the entry of the physical copies of these forms, you can simply have each staff member initial the form after it has been entered in their respective database.</li>
-<li>Then when all data is entered in both forms, the following things happen:
+<li>To track the entry of the physical copies of these forms, you can
+simply have each staff member initial the form after it has been entered
+in their respective database.</li>
+<li>Then when all data is entered in both forms, the following things
+happen:
 <ol style="list-style-type: lower-alpha">
-<li>The project coordinator checks both forms/files to make sure the N of each file matches what their participant tracking database says they collected (i.e. - someone didn’t forget to enter a form)<br />
+<li>The project coordinator checks both forms/files to make sure the N
+of each file matches what their participant tracking database says they
+collected (i.e. - someone didn’t forget to enter a form)<br />
 </li>
-<li>Then a syntax is run to check for errors (I will discuss this more in later trainings)<br />
+<li>Then a syntax is run to check for errors (I will discuss this more
+in later trainings)<br />
 </li>
-<li>If errors are found, they are rectified by going back to the original databases and correcting the error in database 1 or database 2, wherever the error occurred. Then the syntax is run again until no more errors are found<br />
+<li>If errors are found, they are rectified by going back to the
+original databases and correcting the error in database 1 or database 2,
+wherever the error occurred. Then the syntax is run again until no more
+errors are found<br />
 </li>
-<li>Then both files are accurate and either database 1 or database 2 can be used as your analysis file.</li>
+<li>Then both files are accurate and either database 1 or database 2 can
+be used as your analysis file.</li>
 </ol></li>
 </ul></li>
 </ul></li>
 </ul>
-<p>📑 Reynolds and Schatsnieder from Florida State University have some great suggestions <a href="https://figshare.com/articles/preprint/The_Basics_of_Data_Management/13215350/1">here</a> for setting up a data entry station and protocol for any manual data entry that needs to occur.<br />
-📑 Data Management Episode 1 and 2 of <a href="http://www.withinandbetweenpod.com/">Within and Between</a> podcast has some great examples of how to set up data entry protocol.<br />
-📑 While I haven’t read <a href="https://methods.sagepub.com/Book/the-practice-of-survey-research">The Practice of Survey Research</a>, it looks to have an entire chapter devoted to data entry that may be worth reading<br />
-📑 Read <a href="https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989">Data Organization in Spreadsheets</a> to understand how data should and should not be organized if you use a spreadsheet tool for data entry.<br />
-📑 Barchard &amp; Verenikina have an article: <a href="https://www.sciencedirect.com/science/article/abs/pii/S0747563213000873">Improving data accuracy: Selecting the best data checking technique</a></p>
+<p>📑 Reynolds and Schatsnieder from Florida State University have some
+great suggestions <a
+href="https://figshare.com/articles/preprint/The_Basics_of_Data_Management/13215350/1">here</a>
+for setting up a data entry station and protocol for any manual data
+entry that needs to occur.<br />
+📑 Data Management Episode 1 and 2 of <a
+href="http://www.withinandbetweenpod.com/">Within and Between</a>
+podcast has some great examples of how to set up data entry
+protocol.<br />
+📑 While I haven’t read <a
+href="https://methods.sagepub.com/Book/the-practice-of-survey-research">The
+Practice of Survey Research</a>, it looks to have an entire chapter
+devoted to data entry that may be worth reading<br />
+📑 Read <a
+href="https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989">Data
+Organization in Spreadsheets</a> to understand how data should and
+should not be organized if you use a spreadsheet tool for data
+entry.<br />
+📑 Barchard &amp; Verenikina have an article: <a
+href="https://www.sciencedirect.com/science/article/abs/pii/S0747563213000873">Improving
+data accuracy: Selecting the best data checking technique</a> 📑
+Barchard &amp; Pace have another article: <a
+href="https://www.sciencedirect.com/science/article/abs/pii/S0747563211000707">Preventing
+human error: The impact of data entry methods on data accuracy and
+statistical results</a></p>
 <hr />
 </div>
 <div id="data-collection-security" class="section level2">
 <h2>Data Collection Security</h2>
 <hr />
-<p>The simplest way to maintain participant privacy is to collect anonymous data. If you collect anonymous data, no participant identifying information should be collected in your instruments (name, email, date of birth, etc.). You will also want to make sure to <strong>not</strong> collect IP addresses as they can be used to identify an individual’s computer. It’s also important to recognize that if you collect anonymous data, you will not be able to link data across measures or across time.</p>
-<p>More commonly in education research you will be collecting some identifiers (ex: name). However, in order to maintain participant <a href="https://www.etsu.edu/irb/documents/confidentiality_vs_privacy.pdf">confidentiality</a> you cannot keep those identifiers in your research data. You will need to assign unique IDs to all participants and replace all identifying information with that study ID. In longitudinal studies in particular, you will be using that unique participant ID to link data across time and across measures.</p>
+<p>The simplest way to maintain participant privacy is to collect
+anonymous data. If you collect anonymous data, no participant
+identifying information should be collected in your instruments (name,
+email, date of birth, etc.). You will also want to make sure to
+<strong>not</strong> collect IP addresses as they can be used to
+identify an individual’s computer. It’s also important to recognize that
+if you collect anonymous data, you will not be able to link data across
+measures or across time.</p>
+<p>More commonly in education research you will be collecting some
+identifiers (ex: name). However, in order to maintain participant <a
+href="https://www.etsu.edu/irb/documents/confidentiality_vs_privacy.pdf">confidentiality</a>
+you cannot keep those identifiers in your research data. You will need
+to assign unique IDs to all participants and replace all identifying
+information with that study ID. In longitudinal studies in particular,
+you will be using that unique participant ID to link data across time
+and across measures.</p>
 <div class="question">
 <p><strong>Quick thought: Identifiers</strong></p>
-<p>It is important to remember that you must have <strong>some</strong> sort of identifier built into every data collection instrument (survey, observation form, assessment, etc.) in order to link data across measures and time. Whether you have participants enter an identifier like their name into a form or you already have study ID linked to a form in some way. You just need to make sure you aren’t accidentally collecting anonymous data. If you do not have identifiers in your instruments, you will <strong>not</strong> be able to link your data across measures and time.</p>
-<p>Even if you are purposefully collecting anonymous data, if you have randomized participants, say schools, you will still need an identifier for the randomization block/cluster built into your instrument (ex: sch_id) or you will not be able to cluster based on that information.</p>
+<p>It is important to remember that you must have <strong>some</strong>
+sort of identifier built into every data collection instrument (survey,
+observation form, assessment, etc.) in order to link data across
+measures and time. Whether you have participants enter an identifier
+like their name into a form or you already have study ID linked to a
+form in some way. You just need to make sure you aren’t accidentally
+collecting anonymous data. If you do not have identifiers in your
+instruments, you will <strong>not</strong> be able to link your data
+across measures and time.</p>
+<p>Even if you are purposefully collecting anonymous data, if you have
+randomized participants, say schools, you will still need an identifier
+for the randomization block/cluster built into your instrument (ex:
+sch_id) or you will not be able to cluster based on that
+information.</p>
 </div>
 <p><br></p>
 <div id="web-based-data" class="section level3">
 <h3>Web-based Data</h3>
-<p>When sending out or completing in-person web-based surveys/assessments, you can do one of the following to connect your data to a participant (this is not all-inclusive):</p>
+<p>When sending out or completing in-person web-based
+surveys/assessments, you can do one of the following to connect your
+data to a participant (this is not all-inclusive):</p>
 <ol style="list-style-type: decimal">
-<li>Send/give individual links to participants (where each survey link is connected to a study ID within the system). This can usually be done easily in a survey platform such as Qualtrics using a <a href="https://www.qualtrics.com/support/survey-platform/contacts/contact-list-overview/">contact list</a>.
+<li>Send/give individual links to participants (where each survey link
+is connected to a study ID within the system). This can usually be done
+easily in a survey platform such as Qualtrics using a <a
+href="https://www.qualtrics.com/support/survey-platform/contacts/contact-list-overview/">contact
+list</a>.
 <ul>
-<li>This is the most error-proof way to ensure study IDs are entered correctly. You load in IDs directly from your participant database so that when data is downloaded, the correct ID is already linked to each participant and name is never attached to the downloaded data. The participant never has to enter any identifying information into the form since their identifier is linked on the back end.</li>
-<li>Make sure to build a data check into the system. When a participant opens their unique link, verify their identity by asking, “Are you <em>first name</em>?”. Only use first name to protect other’s identity. If they say yes, they move forward, if they say no, the system redirects them to someone to contact. This ensures that participants are not completing someone else’s survey and IDs are connected to the correct participant.</li>
+<li>This is the most error-proof way to ensure study IDs are entered
+correctly. You load in IDs directly from your participant database so
+that when data is downloaded, the correct ID is already linked to each
+participant and name is never attached to the downloaded data. The
+participant never has to enter any identifying information into the form
+since their identifier is linked on the back end.</li>
+<li>Make sure to build a data check into the system. When a participant
+opens their unique link, verify their identity by asking, “Are you
+<em>first name</em>?”. Only use first name to protect other’s identity.
+If they say yes, they move forward, if they say no, the system redirects
+them to someone to contact. This ensures that participants are not
+completing someone else’s survey and IDs are connected to the correct
+participant.</li>
 </ul></li>
-<li>Provide one link to all participants and separately, in an email, in person, or by mail, provide participants with their study ID to enter into the system.
+<li>Provide one link to all participants and separately, in an email, in
+person, or by mail, provide participants with their study ID to enter
+into the system.
 <ul>
-<li>We have used this method when we are conducting surveys/assessments in computer labs or on tablets in schools.
+<li>We have used this method when we are conducting surveys/assessments
+in computer labs or on tablets in schools.
 <ul>
-<li>This can possibly introduce error if a participant enters study ID incorrectly. Similar to above, after a participant enters their ID, verify their identity by asking, “Are you <em>first name</em>?”. If they say yes, they move forward, if they say no, the system redirects them to someone to contact.</li>
+<li>This can possibly introduce error if a participant enters study ID
+incorrectly. Similar to above, after a participant enters their ID,
+verify their identity by asking, “Are you <em>first name</em>?”. If they
+say yes, they move forward, if they say no, the system redirects them to
+someone to contact.</li>
 </ul></li>
 </ul></li>
-<li>Send one link out to all participants and have each participant enter their name and other identifying information. I say “and other identifying information” because what the participant enters needs to be unique and not duplicated. Some people in your study may have the exact same name as someone else in your study. To prevent causing confusion, collect two pieces of information such as name and DOB so you are able to link that individual to the correct study ID.
+<li>Send one link out to all participants and have each participant
+enter their name and other identifying information. I say “and other
+identifying information” because what the participant enters needs to be
+unique and not duplicated. Some people in your study may have the exact
+same name as someone else in your study. To prevent causing confusion,
+collect two pieces of information such as name and DOB so you are able
+to link that individual to the correct study ID.
 <ul>
-<li>This may be the most problematic out of all the options in terms of data management, privacy, and potential for errors.</li>
+<li>This may be the most problematic out of all the options in terms of
+data management, privacy, and potential for errors.</li>
 <li>Your options for working with this data are:
 <ol style="list-style-type: decimal">
-<li>Download the data, replace name and other identifying info with study ID. Replacing name with ID when there are incorrectly spelled names, with various formatting issues, can potentially start to introduce errors and data management troubles. As mentioned above, collect more than one piece of identifying information (name and teacher name for instance) in case two students have the same name or a name is illegible.</li>
-<li>If you have not yet assigned study IDs, and your link includes your consent/assent, you can have the system assign study IDs in the back end for you, and when you download the data, those IDs will be tied to data, but not the identifying information, which will be stored separately. This is possible in a tool such as Qualtrics.</li>
+<li>Download the data, replace name and other identifying info with
+study ID. Replacing name with ID when there are incorrectly spelled
+names, with various formatting issues, can potentially start to
+introduce errors and data management troubles. As mentioned above,
+collect more than one piece of identifying information (name and teacher
+name for instance) in case two students have the same name or a name is
+illegible.</li>
+<li>If you have not yet assigned study IDs, and your link includes your
+consent/assent, you can have the system assign study IDs in the back end
+for you, and when you download the data, those IDs will be tied to data,
+but not the identifying information, which will be stored separately.
+This is possible in a tool such as Qualtrics.</li>
 </ol></li>
 </ul></li>
 </ol>
-<p>This image shows what a data de-identification system looks like where identifiers are collected and need to be removed for the analysis dataset. Table 1 would be the incoming survey data with identifiers, Table 2 would be your <a href="#participant-database">Participant Database</a> (which I talk about more below), and Table 3 is your de-identified analysis dataset.</p>
+<p>This image shows what a data de-identification system looks like
+where identifiers are collected and need to be removed for the analysis
+dataset. Table 1 would be the incoming survey data with identifiers,
+Table 2 would be your <a href="#participant-database">Participant
+Database</a> (which I talk about more below), and Table 3 is your
+de-identified analysis dataset.</p>
 <p><img src="img/analysis_dataset.PNG" width="90%" style="display: block; margin: auto;" /></p>
-<p>Source: <a href="https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf">J-PAL</a></p>
-<p>Ultimately, which method you use for web-based links will first, depend on the data collection instrument. For instance, an online assessment may <em>only</em> have one link and so option #2 or #3 above may be your only option. However, for online surveys, any option is possible. Secondly, it will also depend on your method of dissemination. If you are sending survey links out yourselves to teachers, option #1 is going to be the best method. If a school system will not give you student emails, and you need to have teachers send out links to students, #3 may be best your best option. That method reduces the burden on teachers (having to send multiple links in #1) and potentially reduces error (asking teachers to track multiple links or multiple IDs to send to students in #1 and #2).</p>
+<p>Source: <a
+href="https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf">J-PAL</a></p>
+<p>Ultimately, which method you use for web-based links will first,
+depend on the data collection instrument. For instance, an online
+assessment may <em>only</em> have one link and so option #2 or #3 above
+may be your only option. However, for online surveys, any option is
+possible. Secondly, it will also depend on your method of dissemination.
+If you are sending survey links out yourselves to teachers, option #1 is
+going to be the best method. If a school system will not give you
+student emails, and you need to have teachers send out links to
+students, #3 may be best your best option. That method reduces the
+burden on teachers (having to send multiple links in #1) and potentially
+reduces error (asking teachers to track multiple links or multiple IDs
+to send to students in #1 and #2).</p>
 <div class="question">
 <p><strong>Quick thought: Public links</strong></p>
-<p>All of the options above assume you are making a private link that you are only sending to existing or potential study participants (i.e.: students in a classroom, teachers in a school). However, there may be times you need to publicly recruit and collect data for your study. I’ve been reading about the threat of bots with public online surveys and the havoc they can wreak on a research study. If you need to use a public link, some suggestions for securing your survey include:</p>
+<p>All of the options above assume you are making a private link that
+you are only sending to existing or potential study participants (i.e.:
+students in a classroom, teachers in a school). However, there may be
+times you need to publicly recruit and collect data for your study. I’ve
+been reading about the threat of bots with public online surveys and the
+havoc they can wreak on a research study. If you need to use a public
+link, some suggestions for securing your survey include:</p>
 <ol style="list-style-type: decimal">
 <li>Not posting the link on social media</li>
-<li>Using <a href="https://www.qualtrics.com/support/survey-platform/survey-module/editing-questions/question-types-guide/advanced/captcha-verification/">captcha verification</a></li>
+<li>Using <a
+href="https://www.qualtrics.com/support/survey-platform/survey-module/editing-questions/question-types-guide/advanced/captcha-verification/">captcha
+verification</a></li>
 <li>Do not automate payment upon survey completion</li>
 <li>Include open-ended questions</li>
 <li>Build attention/logic checks into survey</li>
-<li>Ask some of the same questions twice (once early on and again at the end)</li>
+<li>Ask some of the same questions twice (once early on and again at the
+end)</li>
 </ol>
-<p>But even with these additions to the survey, you will want to check your data thoroughly before analyzing it and before providing payments to participants. Look for things such as participants who sped through the survey too fast, inconsistent answers on questions, nonsensical answers, timestamps that don’t make sense, or identical surveys.</p>
-<p>Ultimately, the recommendation is to not have public survey links, and to only use unique links for participants. Even if this means extra work where you have a public link with a screener, and then after participants are verified through the screener, you then send a private link.</p>
+<p>But even with these additions to the survey, you will want to check
+your data thoroughly before analyzing it and before providing payments
+to participants. Look for things such as participants who sped through
+the survey too fast, inconsistent answers on questions, nonsensical
+answers, timestamps that don’t make sense, or identical surveys.</p>
+<p>Ultimately, the recommendation is to not have public survey links,
+and to only use unique links for participants. Even if this means extra
+work where you have a public link with a screener, and then after
+participants are verified through the screener, you then send a private
+link.</p>
 <p>Resources:</p>
-<p>📑 <a href="https://behavioralscientist.org/how-to-battle-the-bots-wrecking-your-online-study/">Melissa Simone, Behavioral Scientist</a><br />
-📑 <a href="https://www-new.statnews.com/2019/11/21/bots-started-sabotaging-my-online-research-i-fought-back/">Melissa Simone, STAT</a><br />
-📑 <a href="https://www.cloudresearch.com/resources/blog/after-the-bot-scare-understanding-whats-been-happening-with-data-collection-on-mturk-and-how-to-stop-it/">Cloud Research</a></p>
+<p>📑 <a
+href="https://behavioralscientist.org/how-to-battle-the-bots-wrecking-your-online-study/">Melissa
+Simone, Behavioral Scientist</a><br />
+📑 <a
+href="https://www-new.statnews.com/2019/11/21/bots-started-sabotaging-my-online-research-i-fought-back/">Melissa
+Simone, STAT</a><br />
+📑 <a
+href="https://www.cloudresearch.com/resources/blog/after-the-bot-scare-understanding-whats-been-happening-with-data-collection-on-mturk-and-how-to-stop-it/">Cloud
+Research</a></p>
 </div>
 <p><br></p>
 </div>
 <div id="offline-data" class="section level3">
 <h3>Offline Data</h3>
-<p>If you take paper forms into the field consider doing the following to connect your data to a participant:</p>
+<p>If you take paper forms into the field consider doing the following
+to connect your data to a participant:</p>
 <ul>
-<li>Write the study ID on the form and then use either a removable label with participant name and place that over the ID or attach a cover sheet with identifying information such as student name. When you return to the office, you can remove the name label/cover sheet and be left with only the ID on the form.
+<li>Write the study ID on the form and then use either a removable label
+with participant name and place that over the ID or attach a cover sheet
+with identifying information such as student name. When you return to
+the office, you can remove the name label/cover sheet and be left with
+only the ID on the form.
 <ul>
-<li>It is this ID only that you will enter into your data entry form, no name.</li>
-<li>Removing the label/cover sheet also ensures that your data entry team only sees participant ID when they enter data, increasing privacy by minimizing the number of people who see see participant name.</li>
-<li>Double and triple check against your participant database that the study ID is correct <em>before</em> removing the label or cover sheet</li>
-<li>Make a plan for the labels/cover sheets (either shred them if they are no longer needed, or store them securely in a locked file cabinet and shred them at a later point)</li>
+<li>It is this ID only that you will enter into your data entry form, no
+name.</li>
+<li>Removing the label/cover sheet also ensures that your data entry
+team only sees participant ID when they enter data, increasing privacy
+by minimizing the number of people who see see participant name.</li>
+<li>Double and triple check against your participant database that the
+study ID is correct <em>before</em> removing the label or cover
+sheet</li>
+<li>Make a plan for the labels/cover sheets (either shred them if they
+are no longer needed, or store them securely in a locked file cabinet
+and shred them at a later point)</li>
 </ul></li>
 </ul>
-<p><img src="img/cover-sheet.PNG" width="60%" style="display: block; margin: auto;" /> Source: <a href="https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf">Poverty Action Lab</a></p>
+<p><img src="img/cover-sheet.PNG" width="60%" style="display: block; margin: auto;" />
+Source: <a
+href="https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf">Poverty
+Action Lab</a></p>
 <ul>
-<li>If you need a roster of consented participants in the field with both name and study ID, you can do one of two things:
+<li>If you need a roster of consented participants in the field with
+both name and study ID, you can do one of two things:
 <ol style="list-style-type: decimal">
-<li>Bring your tracking database into the field, on a secure device (such as a tablet) and refer to that database as needed.</li>
-<li>Print a roster with name and study ID and keep those rosters secure in the field (not laying out on a table) and either shred them when you return to the office if you no longer need them or store them securely.</li>
+<li>Bring your tracking database into the field, on a secure device
+(such as a tablet) and refer to that database as needed.</li>
+<li>Print a roster with name and study ID and keep those rosters secure
+in the field (not laying out on a table) and either shred them when you
+return to the office if you no longer need them or store them
+securely.</li>
 </ol></li>
 </ul>
 </div>
 <div id="other-considerations" class="section level3">
 <h3>Other considerations</h3>
 <ul>
-<li>Add a line to your survey introduction, instructing participants to close their browser at the completion of their survey so that others may not access their responses.</li>
-<li>Make sure you are using and/or building data collection and storage tools that are approved by your IT department and are considered secure for the level of <a href="https://www.umsystem.edu/media/is/infosec/DCL_In_A_Nutshell.pdf">sensitivity of data</a> you are collecting.</li>
-<li>Make sure all paper forms are kept in a folder (or even a lock box) with you at all times in the field and they are promptly returned to the office and stored according to your IRB security rules, typically behind two locked doors (ex: in a locked room, in a locked file cabinet).</li>
-<li>Make sure your in-field data collection devices (phone, tablet, laptops) are password secured and never left open and unattended and all identifiable information is encrypted (data is encoded so that only those with a password can decipher it). It is also possible to encrypt an entire device, protecting data from being transferred across application. You may also consider remote wiping capabilities on portable devices in case of loss or theft <a href="https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf">J-PAL</a>.</li>
+<li>Add a line to your survey introduction, instructing participants to
+close their browser at the completion of their survey so that others may
+not access their responses.</li>
+<li>Make sure you are using and/or building data collection and storage
+tools that are approved by your IT department and are considered secure
+for the level of <a
+href="https://www.umsystem.edu/media/is/infosec/DCL_In_A_Nutshell.pdf">sensitivity
+of data</a> you are collecting.</li>
+<li>Make sure all paper forms are kept in a folder (or even a lock box)
+with you at all times in the field and they are promptly returned to the
+office and stored according to your IRB security rules, typically behind
+two locked doors (ex: in a locked room, in a locked file cabinet).</li>
+<li>Make sure your in-field data collection devices (phone, tablet,
+laptops) are password secured and never left open and unattended and all
+identifiable information is encrypted (data is encoded so that only
+those with a password can decipher it). It is also possible to encrypt
+an entire device, protecting data from being transferred across
+application. You may also consider remote wiping capabilities on
+portable devices in case of loss or theft <a
+href="https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf">J-PAL</a>.</li>
 </ul>
 <p>Resources:</p>
-<p>📑 <a href="https://www.uoguelph.ca/research/print/1947">University of Guelph</a></p>
+<p>📑 <a href="https://www.uoguelph.ca/research/print/1947">University
+of Guelph</a></p>
 <hr />
 </div>
 </div>
 <div id="participant-database" class="section level2">
 <h2>Participant Database</h2>
 <hr />
-<p>A participant database is often called a “master list” or “key” by IRB as this is your only database that can link your participants’ true identity to their study ID. As you recruit and consent participants, you will record their name, assign them a study ID, and enter any other necessary identifying information (ex: email) into the participant database.</p>
-<p>In addition to recording a participant’s name and assigned study ID in this database, this is also the location you will track any and all activities that occur with those participants.</p>
-<p>There are many pieces of information to document/track for a research study including:</p>
+<p>A participant database is often called a “master list” or “key” by
+IRB as this is your only database that can link your participants’ true
+identity to their study ID. As you recruit and consent participants, you
+will record their name, assign them a study ID, and enter any other
+necessary identifying information (ex: email) into the participant
+database.</p>
+<p>In addition to recording a participant’s name and assigned study ID
+in this database, this is also the location you will track any and all
+activities that occur with those participants.</p>
+<p>There are many pieces of information to document/track for a research
+study including:</p>
 <ul>
 <li>Consents and assents collected</li>
 <li>Incentives/payments provided</li>
 <li>Data collection completion</li>
 <li>Participant movement</li>
 </ul>
-<p>And all of this needs to be documented across time (waves and cohorts) and space (classrooms and sites).</p>
+<p>And all of this needs to be documented across time (waves and
+cohorts) and space (classrooms and sites).</p>
 <p>A thorough and complete participant database is vital to:</p>
 <ul>
 <li>Securing data de-identification</li>
 <li>Project coordination and record keeping</li>
-<li><a href="http://www.consort-statement.org/consort-statement/flow-diagram">Consort diagram</a> and <a href="https://public.tableau.com/profile/crystal.lewis#!/vizhome/RCTSankey/Dashboard1">participant flow</a> creation</li>
+<li><a
+href="http://www.consort-statement.org/consort-statement/flow-diagram">Consort
+diagram</a> and <a
+href="https://public.tableau.com/profile/crystal.lewis#!/vizhome/RCTSankey/Dashboard1">participant
+flow</a> creation</li>
 <li>Dataset verification</li>
 </ul>
-<p>While the coordinator typically oversees the updating of this database, it is extremely helpful to consult with a data manager when setting up this system to make sure you include all relevant fields and to make sure the database is understandable when someone needs to verify information.</p>
+<p>While the coordinator typically oversees the updating of this
+database, it is extremely helpful to consult with a data manager when
+setting up this system to make sure you include all relevant fields and
+to make sure the database is understandable when someone needs to verify
+information.</p>
 <div id="building-a-database" class="section level3">
 <h3>Building a database</h3>
-<p>In a nutshell, the participant database will either be set up in a database (a series of tables), or a series of spreadsheets. At the most basic level, you will create one table/sheet per entity in your study (entities being participants, sites, districts, etc.). Example: Student table, Teacher table, School table, District table.</p>
+<p>In a nutshell, the participant database will either be set up in a
+database (a series of tables), or a series of spreadsheets. At the most
+basic level, you will create one table/sheet per entity in your study
+(entities being participants, sites, districts, etc.). Example: Student
+table, Teacher table, School table, District table.</p>
 <p>A participant database can be set up in a program such as:</p>
 <ul>
 <li>Microsoft Access</li>
@@ -803,23 +1280,51 @@ div.tocify {
 <li>REDCap</li>
 <li>Google Tables</li>
 <li>Google Sheets/Google Forms</li>
-<li>Forms that feed into a relational database, maintained using a SQL (structured query language) database engine such as <a href="https://datacarpentry.org/sql-socialsci/">SQLite</a>, MySQL, or PostgreSQL</li>
+<li>Forms that feed into a relational database, maintained using a SQL
+(structured query language) database engine such as <a
+href="https://datacarpentry.org/sql-socialsci/">SQLite</a>, MySQL, or
+PostgreSQL</li>
 </ul>
-<p>The possibilities really are endless and it all depends on what your team has access to and how tech-savvy your team is. Some systems require specific programming knowledge (ex: setting up a SQL database). I personally prefer using a <a href="https://datacarpentry.org/sql-socialsci/01-relational-database/index.html">relational database system</a>, which allows relating tables to one another (a schema), eliminating redundant data. Without getting too technical, <a href="https://en.wikipedia.org/wiki/Database_normalization">database normalization</a> increases performance, decreases storage, and makes it much easier to make updates to tables as changes occur. There are many options out there, but Access is just one example of a tool that allows you to relate tables and allows some form of querying.</p>
-<p>Consider this first structure below, with 3 very simple tables (a student table, a teacher table, and a school table). Each table has a primary key that makes individuals within that table unique and each table can be connected through a foreign key. For example in the student table, the primary key is <code>stu_id</code> and the foreign key is <code>tch_id</code> which connects students to the teacher table. Using a query language (such as SQL) in systems such as Access, we can pull multiple tables together ad hoc to make a table with all the pieces of information we need.</p>
-<p>Note: Not all relational databases require technical skills and coding. Systems such as QuickBase build relations between tables and allow querying through their point and click, low-code application.</p>
+<p>The possibilities really are endless and it all depends on what your
+team has access to and how tech-savvy your team is. Some systems require
+specific programming knowledge (ex: setting up a SQL database). I
+personally prefer using a <a
+href="https://datacarpentry.org/sql-socialsci/01-relational-database/index.html">relational
+database system</a>, which allows relating tables to one another (a
+schema), eliminating redundant data. Without getting too technical, <a
+href="https://en.wikipedia.org/wiki/Database_normalization">database
+normalization</a> increases performance, decreases storage, and makes it
+much easier to make updates to tables as changes occur. There are many
+options out there, but Access is just one example of a tool that allows
+you to relate tables and allows some form of querying.</p>
+<p>Consider this first structure below, with 3 very simple tables (a
+student table, a teacher table, and a school table). Each table has a
+primary key that makes individuals within that table unique and each
+table can be connected through a foreign key. For example in the student
+table, the primary key is <code>stu_id</code> and the foreign key is
+<code>tch_id</code> which connects students to the teacher table. Using
+a query language (such as SQL) in systems such as Access, we can pull
+multiple tables together ad hoc to make a table with all the pieces of
+information we need.</p>
+<p>Note: Not all relational databases require technical skills and
+coding. Systems such as QuickBase build relations between tables and
+allow querying through their point and click, low-code application.</p>
 <p><img src="img/tables-new.PNG" width="70%" style="display: block; margin: auto;" /></p>
-<p>Say for example, we needed to pull a roster together for each teacher. We could easily run a query, such as this SQL query, that joins the student and teacher tables by <code>tch_id</code> and then pulls the relevant teacher and student information from both tables:</p>
-<p><code>SELECT Student.first_name, Student.last_name, Teacher.first_name AS t_f_name, Teacher.last_name AS</code> <code>t_l_name, Teacher.grade_level</code><br />
+<p>Say for example, we needed to pull a roster together for each
+teacher. We could easily run a query, such as this SQL query, that joins
+the student and teacher tables by <code>tch_id</code> and then pulls the
+relevant teacher and student information from both tables:</p>
+<p><code>SELECT Student.first_name, Student.last_name, Teacher.first_name AS t_f_name, Teacher.last_name AS</code>
+<code>t_l_name, Teacher.grade_level</code><br />
 <code>FROM Student INNER JOIN Teacher ON Student.tch_id = Teacher.tch_id</code><br />
 <code>ORDER BY Teacher.last_name, Teacher.first_name, Student.last_name, Student.first_name</code></p>
 <p>Would produce a roster like this:</p>
-<div id="jpmvbfbijz" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="ksgibfamqc" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#jpmvbfbijz .gt_table {
+#ksgibfamqc .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -844,7 +1349,7 @@ div.tocify {
   border-left-color: #D3D3D3;
 }
 
-#jpmvbfbijz .gt_heading {
+#ksgibfamqc .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -856,7 +1361,7 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#jpmvbfbijz .gt_title {
+#ksgibfamqc .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -868,7 +1373,7 @@ div.tocify {
   border-bottom-width: 0;
 }
 
-#jpmvbfbijz .gt_subtitle {
+#ksgibfamqc .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -880,13 +1385,13 @@ div.tocify {
   border-top-width: 0;
 }
 
-#jpmvbfbijz .gt_bottom_border {
+#ksgibfamqc .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#jpmvbfbijz .gt_col_headings {
+#ksgibfamqc .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -901,7 +1406,7 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#jpmvbfbijz .gt_col_heading {
+#ksgibfamqc .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -921,7 +1426,7 @@ div.tocify {
   overflow-x: hidden;
 }
 
-#jpmvbfbijz .gt_column_spanner_outer {
+#ksgibfamqc .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -933,15 +1438,15 @@ div.tocify {
   padding-right: 4px;
 }
 
-#jpmvbfbijz .gt_column_spanner_outer:first-child {
+#ksgibfamqc .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#jpmvbfbijz .gt_column_spanner_outer:last-child {
+#ksgibfamqc .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#jpmvbfbijz .gt_column_spanner {
+#ksgibfamqc .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -953,7 +1458,7 @@ div.tocify {
   width: 100%;
 }
 
-#jpmvbfbijz .gt_group_heading {
+#ksgibfamqc .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -978,7 +1483,7 @@ div.tocify {
   vertical-align: middle;
 }
 
-#jpmvbfbijz .gt_empty_group_heading {
+#ksgibfamqc .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -993,15 +1498,15 @@ div.tocify {
   vertical-align: middle;
 }
 
-#jpmvbfbijz .gt_from_md > :first-child {
+#ksgibfamqc .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#jpmvbfbijz .gt_from_md > :last-child {
+#ksgibfamqc .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#jpmvbfbijz .gt_row {
+#ksgibfamqc .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1020,7 +1525,7 @@ div.tocify {
   overflow-x: hidden;
 }
 
-#jpmvbfbijz .gt_stub {
+#ksgibfamqc .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1033,7 +1538,7 @@ div.tocify {
   padding-right: 5px;
 }
 
-#jpmvbfbijz .gt_stub_row_group {
+#ksgibfamqc .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1047,11 +1552,11 @@ div.tocify {
   vertical-align: top;
 }
 
-#jpmvbfbijz .gt_row_group_first td {
+#ksgibfamqc .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#jpmvbfbijz .gt_summary_row {
+#ksgibfamqc .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1061,16 +1566,16 @@ div.tocify {
   padding-right: 5px;
 }
 
-#jpmvbfbijz .gt_first_summary_row {
+#ksgibfamqc .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#jpmvbfbijz .gt_first_summary_row.thick {
+#ksgibfamqc .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#jpmvbfbijz .gt_last_summary_row {
+#ksgibfamqc .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1080,7 +1585,7 @@ div.tocify {
   border-bottom-color: #D3D3D3;
 }
 
-#jpmvbfbijz .gt_grand_summary_row {
+#ksgibfamqc .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1090,7 +1595,7 @@ div.tocify {
   padding-right: 5px;
 }
 
-#jpmvbfbijz .gt_first_grand_summary_row {
+#ksgibfamqc .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1100,11 +1605,11 @@ div.tocify {
   border-top-color: #D3D3D3;
 }
 
-#jpmvbfbijz .gt_striped {
+#ksgibfamqc .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#jpmvbfbijz .gt_table_body {
+#ksgibfamqc .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1113,7 +1618,7 @@ div.tocify {
   border-bottom-color: #D3D3D3;
 }
 
-#jpmvbfbijz .gt_footnotes {
+#ksgibfamqc .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1127,7 +1632,7 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#jpmvbfbijz .gt_footnote {
+#ksgibfamqc .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -1136,7 +1641,7 @@ div.tocify {
   padding-right: 5px;
 }
 
-#jpmvbfbijz .gt_sourcenotes {
+#ksgibfamqc .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1150,7 +1655,7 @@ div.tocify {
   border-right-color: #D3D3D3;
 }
 
-#jpmvbfbijz .gt_sourcenote {
+#ksgibfamqc .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1158,36 +1663,36 @@ div.tocify {
   padding-right: 5px;
 }
 
-#jpmvbfbijz .gt_left {
+#ksgibfamqc .gt_left {
   text-align: left;
 }
 
-#jpmvbfbijz .gt_center {
+#ksgibfamqc .gt_center {
   text-align: center;
 }
 
-#jpmvbfbijz .gt_right {
+#ksgibfamqc .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#jpmvbfbijz .gt_font_normal {
+#ksgibfamqc .gt_font_normal {
   font-weight: normal;
 }
 
-#jpmvbfbijz .gt_font_bold {
+#ksgibfamqc .gt_font_bold {
   font-weight: bold;
 }
 
-#jpmvbfbijz .gt_font_italic {
+#ksgibfamqc .gt_font_italic {
   font-style: italic;
 }
 
-#jpmvbfbijz .gt_super {
+#ksgibfamqc .gt_super {
   font-size: 65%;
 }
 
-#jpmvbfbijz .gt_two_val_uncert {
+#ksgibfamqc .gt_two_val_uncert {
   display: inline-block;
   line-height: 1em;
   text-align: right;
@@ -1196,31 +1701,31 @@ div.tocify {
   margin-left: 0.1em;
 }
 
-#jpmvbfbijz .gt_footnote_marks {
+#ksgibfamqc .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#jpmvbfbijz .gt_asterisk {
+#ksgibfamqc .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#jpmvbfbijz .gt_slash_mark {
+#ksgibfamqc .gt_slash_mark {
   font-size: 0.7em;
   line-height: 0.7em;
   vertical-align: 0.15em;
 }
 
-#jpmvbfbijz .gt_fraction_numerator {
+#ksgibfamqc .gt_fraction_numerator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: 0.45em;
 }
 
-#jpmvbfbijz .gt_fraction_denominator {
+#ksgibfamqc .gt_fraction_denominator {
   font-size: 0.6em;
   line-height: 0.6em;
   vertical-align: -0.05em;
@@ -1279,58 +1784,125 @@ div.tocify {
 </table>
 </div>
 <p><br></p>
-<p>Now consider these 3 tables below that are not relational (such as 3 tabs in an Excel spreadsheet). Since we are unable to set up a system that links these tables together, we need to enter redundant information into each table (such as teacher or school name) in order to see that information within each table without having to flip back and forth across tables to find the information we need.</p>
+<p>Now consider these 3 tables below that are not relational (such as 3
+tabs in an Excel spreadsheet). Since we are unable to set up a system
+that links these tables together, we need to enter redundant information
+into each table (such as teacher or school name) in order to see that
+information within each table without having to flip back and forth
+across tables to find the information we need.</p>
 <p><img src="img/tables2-new.PNG" width="70%" style="display: block; margin: auto;" /></p>
-<p>Using a relational structure allows us to eliminate redundant data. This not only saves us time and energy but reduces errors as well. You can imagine how useful that is.</p>
+<p>Using a relational structure allows us to eliminate redundant data.
+This not only saves us time and energy but reduces errors as well. You
+can imagine how useful that is.</p>
 <ul>
-<li>You don’t have to type things like teacher name and school name over and over for every student in the student table.<br />
+<li>You don’t have to type things like teacher name and school name over
+and over for every student in the student table.<br />
 </li>
-<li>When a teacher changes their last name, you don’t have to go back to the student table and update that last name for all of their students.</li>
+<li>When a teacher changes their last name, you don’t have to go back to
+the student table and update that last name for all of their
+students.</li>
 </ul>
-<p>Ultimately though, set up this participant database in whatever system works for you. It just needs to be set up. This is system is vital to protecting the confidentiality of your participant data as well as record keeping for all of your data collected. If it is easier for you and your project, you can build these tables as individual spreadsheets in a workbook rather than relational tables. If you do, remember it will be more difficult to query information and you will most likely want to include duplicate information across tables (teacher and school name in your student table for instance). This will prevent you from having to flip back and forth across sheets.</p>
+<p>Ultimately though, set up this participant database in whatever
+system works for you. It just needs to be set up. This is system is
+vital to protecting the confidentiality of your participant data as well
+as record keeping for all of your data collected. If it is easier for
+you and your project, you can build these tables as individual
+spreadsheets in a workbook rather than relational tables. If you do,
+remember it will be more difficult to query information and you will
+most likely want to include duplicate information across tables (teacher
+and school name in your student table for instance). This will prevent
+you from having to flip back and forth across sheets.</p>
 <p>Relational database resources:</p>
-<p>📑 <a href="https://bus206.pressbooks.com/chapter/chapter-4-data-and-databases/">Database vs. Spreadsheet</a><br />
-📑 <a href="https://www.alphr.com/business/1000859/7-spreadsheet-problems-and-how-to-solve-them/">7 Excel Spreadsheet Problems</a><br />
-📑 <a href="https://drive.google.com/file/d/11QlIriyQCCu0NYbh4OUf6D1_odBxGVb7/view">Jenna Jordan has a great example of how and why to build a relational database</a><br />
-📑 <a href="https://help.quickbase.com/user-assistance/about_relationships.html">QuickBase explanation of table-to-table relationships</a><br />
-📑 <a href="https://support.google.com/area120-tables/answer/10400909?hl=en">Relating tables in Google Tables</a><br />
-📑 <a href="https://brycevernon.com/airtable-vs-google-sheets-comparison/">Airtable vs Google Sheets</a></p>
+<p>📑 <a
+href="https://bus206.pressbooks.com/chapter/chapter-4-data-and-databases/">Database
+vs. Spreadsheet</a><br />
+📑 <a
+href="https://www.alphr.com/business/1000859/7-spreadsheet-problems-and-how-to-solve-them/">7
+Excel Spreadsheet Problems</a><br />
+📑 <a
+href="https://drive.google.com/file/d/11QlIriyQCCu0NYbh4OUf6D1_odBxGVb7/view">Jenna
+Jordan has a great example of how and why to build a relational
+database</a><br />
+📑 <a
+href="https://help.quickbase.com/user-assistance/about_relationships.html">QuickBase
+explanation of table-to-table relationships</a><br />
+📑 <a
+href="https://support.google.com/area120-tables/answer/10400909?hl=en">Relating
+tables in Google Tables</a><br />
+📑 <a
+href="https://brycevernon.com/airtable-vs-google-sheets-comparison/">Airtable
+vs Google Sheets</a></p>
 </div>
 <div id="fields-to-include" class="section level3">
 <h3>Fields to include</h3>
-<p>As you build your tables/sheets, you will need to decide what fields to include. As you create those fields, consider the following:</p>
+<p>As you build your tables/sheets, you will need to decide what fields
+to include. As you create those fields, consider the following:</p>
 <ol style="list-style-type: decimal">
-<li>Set <a href="https://datacarpentry.org/sql-socialsci/01-relational-database/index.html">data types</a> for your fields (ex: character, integer, date, boolean, etc.). Restrict entry values to these types to reduce error.</li>
-<li>When naming your fields, adhere to variable naming best practices (no spaces between words, no special characters, all field names in a table should be unique).</li>
-<li>Do not lump separate pieces of information into the same field (ex: separate first name and last name into two fields).</li>
+<li>Set <a
+href="https://datacarpentry.org/sql-socialsci/01-relational-database/index.html">data
+types</a> for your fields (ex: character, integer, date, boolean, etc.).
+Restrict entry values to these types to reduce error.</li>
+<li>When naming your fields, adhere to variable naming best practices
+(no spaces between words, no special characters, all field names in a
+table should be unique).</li>
+<li>Do not lump separate pieces of information into the same field (ex:
+separate first name and last name into two fields).</li>
 </ol>
 <p>Fields to include at the beginning of your study:</p>
 <ul>
-<li>Study ID/Location ID (Primary Key and Foreign Keys for relational databases)</li>
+<li>Study ID/Location ID (Primary Key and Foreign Keys for relational
+databases)</li>
 <li>Participant/Site name</li>
 <li>Contact information</li>
-<li>Other IDs necessary for linking data (such as a state ID for linking to student school records)</li>
-<li>Relevant identifiable information (such as date of birth, email)</li>
-<li>Schedule information needed for the study (block, class time, grade level)</li>
+<li>Other IDs necessary for linking data (such as a state ID for linking
+to student school records)</li>
+<li>Relevant identifiable information (such as date of birth,
+email)</li>
+<li>Schedule information needed for the study (block, class time, grade
+level)</li>
 <li>Consent/Assent received</li>
 <li>Randomization info (cohort, group)</li>
-<li>Number assessed for eligibility (# of consents sent out, # of students in class)</li>
+<li>Number assessed for eligibility (# of consents sent out, # of
+students in class)</li>
 <li>Payment information (ex: W-9)</li>
 <li>Condition (treatment/control)
 <ul>
-<li>If your project coordinator needs to stay blinded, you will want to store condition information elsewhere</li>
+<li>If your project coordinator needs to stay blinded, you will want to
+store condition information elsewhere</li>
 </ul></li>
-<li>Movement/Dropped (ex: track if a student moved out of the school during fall data collection)</li>
+<li>Movement/Dropped (ex: track if a student moved out of the school
+during fall data collection)</li>
 </ul>
 <div class="question">
 <p><strong>Quick thought: Study IDs</strong></p>
-<p>As you recruit and consent participants/sites, you will add them to a participant database under an assigned study ID (ex: <em>stu_id</em>, <em>tch_id</em>). These IDs allow participants/sites to remain confidential in your research data. That ID (typically a 2-6 digit random numeric or alphanumeric value) will follow that individual/site throughout the life of the study and should be <strong>unique</strong> to that individual/site. This number <strong>never changes</strong>.</p>
-<p>Depending on your study design, some participants may have the opportunity to be re-recruited into the study more than once. For example, we had a study where three cohorts of 5th grade students were recruited over three years. Therefore, the same 5th grade teachers were often recruited back into the study each cohort. If you have a similar study design, you <strong>still</strong> keep that same study ID (in this case the same <em>tch_id</em>) for that participant. If you want to identify the unique wave or cohort that a participant is brought back into the study, make sure you have other variables in your data that help you understand why a study ID occurs in your data more than once (ex: a <em>cohort</em> variable). The study ID concatenated with the cohort provides you with a unique row identifier.</p>
+<p>As you recruit and consent participants/sites, you will add them to a
+participant database under an assigned study ID (ex: <em>stu_id</em>,
+<em>tch_id</em>). These IDs allow participants/sites to remain
+confidential in your research data. That ID (typically a 2-6 digit
+random numeric or alphanumeric value) will follow that individual/site
+throughout the life of the study and should be <strong>unique</strong>
+to that individual/site. This number <strong>never changes</strong>.</p>
+<p>Depending on your study design, some participants may have the
+opportunity to be re-recruited into the study more than once. For
+example, we had a study where three cohorts of 5th grade students were
+recruited over three years. Therefore, the same 5th grade teachers were
+often recruited back into the study each cohort. If you have a similar
+study design, you <strong>still</strong> keep that same study ID (in
+this case the same <em>tch_id</em>) for that participant. If you want to
+identify the unique wave or cohort that a participant is brought back
+into the study, make sure you have other variables in your data that
+help you understand why a study ID occurs in your data more than once
+(ex: a <em>cohort</em> variable). The study ID concatenated with the
+cohort provides you with a unique row identifier.</p>
 <p><img src="img/IDtable.PNG" width="60%" style="display: block; margin: auto;" /></p>
-<p>Jenna Jordan has a great blog post on <a href="https://jennajordan.me/blog/defining-unique-identifiers">UIDs</a>.</p>
+<p>Jenna Jordan has a great blog post on <a
+href="https://jennajordan.me/blog/defining-unique-identifiers">UIDs</a>.</p>
 </div>
 <p><br></p>
-<p>After your participants are recruited and you begin data collection, you can imagine there are many pieces of information to track such as incentives/payments and data collection completion. These fields will also need to be added to your participant database.</p>
+<p>After your participants are recruited and you begin data collection,
+you can imagine there are many pieces of information to track such as
+incentives/payments and data collection completion. These fields will
+also need to be added to your participant database.</p>
 <p>Fields to track over time (for each wave of data collection):</p>
 <ul>
 <li>Data collected (for each unique piece of data)
@@ -1342,7 +1914,9 @@ div.tocify {
 <li>Survey collected (complete/incomplete)<br />
 </li>
 </ul></li>
-<li>Notes (ex: This is where you want to track ANYTHING you may need to remember at a later time such as reasons for missing data, errors in the data, etc.)<br />
+<li>Notes (ex: This is where you want to track ANYTHING you may need to
+remember at a later time such as reasons for missing data, errors in the
+data, etc.)<br />
 </li>
 <li>Payment/incentives provided<br />
 </li>
@@ -1355,33 +1929,52 @@ div.tocify {
 <li>Dates data collection completed</li>
 </ul></li>
 </ul>
-<p>This data collection information/tracking may seem trivial, but it is vitally important to the integrity of your research study for these reasons:</p>
+<p>This data collection information/tracking may seem trivial, but it is
+vitally important to the integrity of your research study for these
+reasons:</p>
 <ul>
-<li>A project coordinator cannot keep track of what has been collected in their head. They need to have that information tracked and stored so they know what still needs to be completed.</li>
-<li>A PI at some point will come to a project coordinator and say, why are we missing data on X number of students or on this teacher during wave Y of data collection. The notes section of this database is how you will be able to answer those questions. <strong>This has happened with our projects multiple times.</strong></li>
-<li>A data manager will approach a project coordinator and say they have 105 students in their student survey data for wave Y, is that accurate? A project coordinator can then refer to their participant database and say, no actually we should have 107. Maybe they find that 2 surveys were never entered into the survey study dataset. <strong>This has personally happened to me more times than I can count.</strong></li>
+<li>A project coordinator cannot keep track of what has been collected
+in their head. They need to have that information tracked and stored so
+they know what still needs to be completed.</li>
+<li>A PI at some point will come to a project coordinator and say, why
+are we missing data on X number of students or on this teacher during
+wave Y of data collection. The notes section of this database is how you
+will be able to answer those questions. <strong>This has happened with
+our projects multiple times.</strong></li>
+<li>A data manager will approach a project coordinator and say they have
+105 students in their student survey data for wave Y, is that accurate?
+A project coordinator can then refer to their participant database and
+say, no actually we should have 107. Maybe they find that 2 surveys were
+never entered into the survey study dataset. <strong>This has personally
+happened to me more times than I can count.</strong></li>
 </ul>
-<p>The participant database is what holds the project together. I cannot stress this enough.</p>
+<p>The participant database is what holds the project together. I cannot
+stress this enough.</p>
 <p><br></p>
 <div class="question">
 <p><strong>Quick thought: Tracking Best Practices</strong></p>
-<p>A few best practices for tracking that improve project coordination and data management:</p>
+<p>A few best practices for tracking that improve project coordination
+and data management:</p>
 <ul>
 <li>Only track data that you physically have
 <ul>
 <li>Never track data that someone tells you they collected
 <ul>
-<li>Mark that info in “Notes” and track when you have the physical/electronic data</li>
+<li>Mark that info in “Notes” and track when you have the
+physical/electronic data</li>
 </ul></li>
 </ul></li>
 <li>Track daily throughout data collection
 <ul>
 <li>Don’t wait to track until the end of data collection</li>
-<li>This improves the accuracy of your tracking as well as your project coordination</li>
+<li>This improves the accuracy of your tracking as well as your project
+coordination</li>
 </ul></li>
 <li>Only track complete data
 <ul>
-<li>If a survey is only partially completed and you plan to send it back out for completion, mark this in the notes but do not mark it as completed</li>
+<li>If a survey is only partially completed and you plan to send it back
+out for completion, mark this in the notes but do not mark it as
+completed</li>
 </ul></li>
 </ul>
 </div>
@@ -1389,73 +1982,177 @@ div.tocify {
 </div>
 <div id="entering-data" class="section level3">
 <h3>Entering data</h3>
-<p>For the purposes of this database, there are probably two most common methods of entering data.</p>
+<p>For the purposes of this database, there are probably two most common
+methods of entering data.</p>
 <ol style="list-style-type: decimal">
-<li>Enter data directly into a datasheet view. This looks exactly as you would expect, a tabular form where you enter data for each participant in a row. You can do this in systems such as Access, QuickBase, Excel and Google Sheets.
+<li>Enter data directly into a datasheet view. This looks exactly as you
+would expect, a tabular form where you enter data for each participant
+in a row. You can do this in systems such as Access, QuickBase, Excel
+and Google Sheets.
 <ul>
-<li>Pros: It’s the quickest and easiest method. It also allows you to view all the data holistically.</li>
-<li>Cons: Can lead to errors if someone enters data on the wrong row/record. Not all systems have the ability to allow you to directly enter data in datasheet view.</li>
+<li>Pros: It’s the quickest and easiest method. It also allows you to
+view all the data holistically.</li>
+<li>Cons: Can lead to errors if someone enters data on the wrong
+row/record. Not all systems have the ability to allow you to directly
+enter data in datasheet view.</li>
 </ul></li>
 </ol>
 <p><img src="img/datasheet-view-new.PNG" width="90%" style="display: block; margin: auto;" /></p>
 <ol start="2" style="list-style-type: decimal">
-<li>Create a form that is linked to each table that you enter data into. Data entered into that form is automatically inserted into the tables you created. You can do this in systems such as Access, QuickBase, and even Google Forms linked to Google Sheets.
+<li>Create a form that is linked to each table that you enter data into.
+Data entered into that form is automatically inserted into the tables
+you created. You can do this in systems such as Access, QuickBase, and
+even Google Forms linked to Google Sheets.
 <ul>
-<li>Pros: Reduces data entry errors as you are only working on one participant form at a time.</li>
-<li>Cons: More time consuming. Not all systems have the ability to set up forms.</li>
+<li>Pros: Reduces data entry errors as you are only working on one
+participant form at a time.</li>
+<li>Cons: More time consuming. Not all systems have the ability to set
+up forms.</li>
 </ul></li>
 </ol>
 <p><img src="img/form-view-new.PNG" width="55%" style="display: block; margin: auto;" /></p>
 <p><br></p>
-<p>There are many other ways to load data into a database but for this use case (tracking participation in an education research study) these are probably the most common methods. However, you can read about several other methods <a href="https://www.quackit.com/database/tutorial/adding_data_to_database.cfm">here</a>.</p>
-<p>Also, most recently I’ve heard people mention the idea of automating at least some data entry/tracking through the use of unique scannable codes <strong>or</strong> through integration of your online data collection platform and your tracking database (ex: <a href="https://www.workato.com/integrations/quickbase+qualtrics">Qualtrics and Quick Base</a>). This type of tracking most likely requires some technical skills to set up this linking process. But it’s a cool idea and may reduce at least some error that occurs in manually tracking data. For example, by creating a unique QR code/barcode (linked to a participant ID) that is added to every paper survey, similar to what is used for <a href="https://blog.beaconstac.com/2020/07/qr-codes-for-inventory-management/">tracking inventory</a>, you can scan that code when data collection is complete to “check in” a survey to your participant database. Or by integrating your survey platform and participant database, you could add new participants to your database as they complete their consents and surveys online.</p>
+<p>There are many other ways to load data into a database but for this
+use case (tracking participation in an education research study) these
+are probably the most common methods. However, you can read about
+several other methods <a
+href="https://www.quackit.com/database/tutorial/adding_data_to_database.cfm">here</a>.</p>
+<p>Also, most recently I’ve heard people mention the idea of automating
+at least some data entry/tracking through the use of unique scannable
+codes <strong>or</strong> through integration of your online data
+collection platform and your tracking database (ex: <a
+href="https://www.workato.com/integrations/quickbase+qualtrics">Qualtrics
+and Quick Base</a>). This type of tracking most likely requires some
+technical skills to set up this linking process. But it’s a cool idea
+and may reduce at least some error that occurs in manually tracking
+data. For example, by creating a unique QR code/barcode (linked to a
+participant ID) that is added to every paper survey, similar to what is
+used for <a
+href="https://blog.beaconstac.com/2020/07/qr-codes-for-inventory-management/">tracking
+inventory</a>, you can scan that code when data collection is complete
+to “check in” a survey to your participant database. Or by integrating
+your survey platform and participant database, you could add new
+participants to your database as they complete their consents and
+surveys online.</p>
 <p>QR code/barcode resources:</p>
-<p>📑 <a href="https://www.smartsheet.com/content/excel-barcodes">Creating Barcodes in Excel</a><br />
-📑 <a href="https://www.youtube.com/watch?v=yssnGacoTNA">Scanning Barcodes into an Excel Spreadsheet</a><br />
-📑 <a href="https://support.microsoft.com/en-us/office/add-barcodes-to-labels-495cf789-c9d9-4ea5-8eb9-7299170d4831">Creating Barcodes in Word</a><br />
-📑 <a href="https://www.youtube.com/watch?v=XGS3ctyVbHA">Scanning QR codes into Google Sheets</a><br />
-📑 <a href="https://www.activebarcode.com/howto/access-barcode-object-report.html">Creating Barcodes in Access</a><br />
-📑 <a href="https://www.techwalla.com/articles/how-to-read-barcode-data-into-ms-access-databases">Scanning Barcodes into Access</a></p>
+<p>📑 <a
+href="https://www.smartsheet.com/content/excel-barcodes">Creating
+Barcodes in Excel</a><br />
+📑 <a href="https://www.youtube.com/watch?v=yssnGacoTNA">Scanning
+Barcodes into an Excel Spreadsheet</a><br />
+📑 <a
+href="https://support.microsoft.com/en-us/office/add-barcodes-to-labels-495cf789-c9d9-4ea5-8eb9-7299170d4831">Creating
+Barcodes in Word</a><br />
+📑 <a href="https://www.youtube.com/watch?v=XGS3ctyVbHA">Scanning QR
+codes into Google Sheets</a><br />
+📑 <a
+href="https://www.activebarcode.com/howto/access-barcode-object-report.html">Creating
+Barcodes in Access</a><br />
+📑 <a
+href="https://www.techwalla.com/articles/how-to-read-barcode-data-into-ms-access-databases">Scanning
+Barcodes into Access</a></p>
 <p>Integration resources:</p>
-<p>📑 <a href="https://www.qualtrics.com/support/integrations/integrations-overview/">Examples of Qualtrics Integration</a><br />
-📑 <a href="https://www.quickbase.com/business-application-platform/integrations">Examples of QuickBase Integration</a></p>
+<p>📑 <a
+href="https://www.qualtrics.com/support/integrations/integrations-overview/">Examples
+of Qualtrics Integration</a><br />
+📑 <a
+href="https://www.quickbase.com/business-application-platform/integrations">Examples
+of QuickBase Integration</a></p>
 </div>
 <div id="considerations" class="section level3">
 <h3>Considerations</h3>
-<p>There are two issues you may want to consider when developing these systems:</p>
+<p>There are two issues you may want to consider when developing these
+systems:</p>
 <ol style="list-style-type: decimal">
-<li><p>At the most basic level you will have one table per entity (student, teacher, etc.), as we discussed. However, you can imagine these tables/sheets can become very wide if you are collecting data on a lot of measures or many waves of data collection and very long if you are collecting data on a lot of participants over several cohorts. If this is the case, you may want to consider building a more complex schema (such as different tables for each time period or for each cohort) that again link together through primary and foreign keys. You can read more about creating a schema <a href="https://medium.com/@kimtnguyen/relational-database-schema-design-overview-70e447ff66f9">here</a>.</p></li>
-<li><p>Another issue that may occur is, if team members other than the project coordinator will be tracking data collection, you may want to limit their access to participant identifying information. If this is true, similar to above, you may consider building a more complex schema where you create separate tables for participant demographic/identifying information and tables with only participant ID and data collection tracking, that again can be linked through primary and foreign keys.</p></li>
+<li><p>At the most basic level you will have one table per entity
+(student, teacher, etc.), as we discussed. However, you can imagine
+these tables/sheets can become very wide if you are collecting data on a
+lot of measures or many waves of data collection and very long if you
+are collecting data on a lot of participants over several cohorts. If
+this is the case, you may want to consider building a more complex
+schema (such as different tables for each time period or for each
+cohort) that again link together through primary and foreign keys. You
+can read more about creating a schema <a
+href="https://medium.com/@kimtnguyen/relational-database-schema-design-overview-70e447ff66f9">here</a>.</p></li>
+<li><p>Another issue that may occur is, if team members other than the
+project coordinator will be tracking data collection, you may want to
+limit their access to participant identifying information. If this is
+true, similar to above, you may consider building a more complex schema
+where you create separate tables for participant demographic/identifying
+information and tables with only participant ID and data collection
+tracking, that again can be linked through primary and foreign
+keys.</p></li>
 </ol>
 </div>
 <div id="final-thoughts" class="section level3">
 <h3>Final thoughts</h3>
 <p>Other overall preferences for your participant database include:</p>
 <ul>
-<li>Use some sort of versioning as you will be constantly updating and adding to your tracking system and there may be times when you need to check an older version<br />
+<li>Use some sort of versioning as you will be constantly updating and
+adding to your tracking system and there may be times when you need to
+check an older version<br />
 </li>
-<li>Use a system that allows querying/filtering of data (pull tables of information as needed such as rosters or percent of surveys collected per classroom, filter table to only see students who have not dropped)<br />
+<li>Use a system that allows querying/filtering of data (pull tables of
+information as needed such as rosters or percent of surveys collected
+per classroom, filter table to only see students who have not
+dropped)<br />
 </li>
-<li>Use a system that easily allows export of data if you need to print rosters or print labels, etc.</li>
+<li>Use a system that easily allows export of data if you need to print
+rosters or print labels, etc.</li>
 </ul>
-<p>Although data storage is our next topic, I want to mention right now, that this participant database clearly has identifiable and protected information. Therefore it should be stored securely and apart from all other study data. This is the only file that directly links your participants’ true identity to your confidential study data and it should <strong>never</strong> be stored in the same folder as your study data. Additionally, it should have limited access. Only those who need access, such as the project coordinator, data manager, and any other staff assisting with tracking, should have access to this file for security purposes.</p>
+<p>Although data storage is our next topic, I want to mention right now,
+that this participant database clearly has identifiable and protected
+information. Therefore it should be stored securely and apart from all
+other study data. This is the only file that directly links your
+participants’ true identity to your confidential study data and it
+should <strong>never</strong> be stored in the same folder as your study
+data. Additionally, it should have limited access. Only those who need
+access, such as the project coordinator, data manager, and any other
+staff assisting with tracking, should have access to this file for
+security purposes.</p>
 <p>Resources on securing a participant database:</p>
-<p>📑 <a href="https://www.uoguelph.ca/research/support-document/i-need-create-master-list-link-participant-id-numberscodes-my-data-what-should-i">University of Guelph</a><br />
-📑 <a href="https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf">Poverty Action Lab</a></p>
-<p>Last, most of what I have covered here is relevant for studies where you plan to de-identify your data. If you are collecting anonymous data, you do not need a participant database per se because you are not collecting any identifying information on your participants. With that said, you may still wish to and probably should set up a simple system to track your data collection efforts.</p>
+<p>📑 <a
+href="https://www.uoguelph.ca/research/support-document/i-need-create-master-list-link-participant-id-numberscodes-my-data-what-should-i">University
+of Guelph</a><br />
+📑 <a
+href="https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf">Poverty
+Action Lab</a></p>
+<p>Last, most of what I have covered here is relevant for studies where
+you plan to de-identify your data. If you are collecting anonymous data,
+you do not need a participant database per se because you are not
+collecting any identifying information on your participants. With that
+said, you may still wish to and probably should set up a simple system
+to track your data collection efforts.</p>
 <hr />
 </div>
 </div>
 <div id="data-storage" class="section level2">
 <h2>Data Storage</h2>
 <hr />
-<p>Whether you are working with your own original collected data, or you are working with extant data provided to you from an entity such as a school district, or publicly available data, you need to consider short-term secure data storage. I say short-term because this is how you will store your data while you are actively collecting data for your project. Data retention/long-term storage, after your study is complete, will be discussed in a later training.</p>
-<p>In general you will most likely be working with one of four types of data and will need to store your data according to the type of data:</p>
+<p>Whether you are working with your own original collected data, or you
+are working with extant data provided to you from an entity such as a
+school district, or publicly available data, you need to consider
+short-term secure data storage. I say short-term because this is how you
+will store your data while you are actively collecting data for your
+project. Data retention/long-term storage, after your study is complete,
+will be discussed in a later training.</p>
+<p>In general you will most likely be working with one of four types of
+data and will need to store your data according to the type of data:</p>
 <ul>
-<li>Anonymous data (Data at no time has ever had identifying information tied to it and can never be linked back to an individual)</li>
-<li>Confidential data (Personally identifiable information (PII) in your data has been removed and names are replaced with a code and the only way to link the data back to an individual is through that code. Identifiers are stored separate from the research data in your tracking database/master list.)</li>
-<li>De-identified data (Data is considered de-identified when all PIIs are removed and there is no longer a link to a participant’s identity anywhere; i.e., all names are replaced with a code and all tracking databases/master lists that link to that code are destroyed at the conclusion of a study)</li>
-<li>Identifiable data (Data that includes personally identifiable information (PII))
+<li>Anonymous data (Data at no time has ever had identifying information
+tied to it and can never be linked back to an individual)</li>
+<li>Confidential data (Personally identifiable information (PII) in your
+data has been removed and names are replaced with a code and the only
+way to link the data back to an individual is through that code.
+Identifiers are stored separate from the research data in your tracking
+database/master list.)</li>
+<li>De-identified data (Data is considered de-identified when all PIIs
+are removed and there is no longer a link to a participant’s identity
+anywhere; i.e., all names are replaced with a code and all tracking
+databases/master lists that link to that code are destroyed at the
+conclusion of a study)</li>
+<li>Identifiable data (Data that includes personally identifiable
+information (PII))
 <ul>
 <li>PII includes any of the following (and more):
 <ul>
@@ -1471,31 +2168,64 @@ div.tocify {
 </ul></li>
 </ul></li>
 </ul>
-<p>For this section I am going to generally describe the level of security needed to store your data depending on the type of data. However, I am <strong>not</strong> a security expert and in an effort to not explain security incorrectly, I would like to refer readers to this document from <a href="https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf">J-PAL</a>. It is one of the most comprehensive documents I have come across regarding data security.</p>
+<p>For this section I am going to generally describe the level of
+security needed to store your data depending on the type of data.
+However, I am <strong>not</strong> a security expert and in an effort to
+not explain security incorrectly, I would like to refer readers to this
+document from <a
+href="https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf">J-PAL</a>.
+It is one of the most comprehensive documents I have come across
+regarding data security.</p>
 <div id="storing-a-participant-database" class="section level3">
 <h3>Storing a participant database</h3>
-<p>Because your participant database contains identifiable information about your participants, this data must have the highest security. The specifics of this security will be set by your university or institution. However, the general rules for storing this type of data is:</p>
+<p>Because your participant database contains identifiable information
+about your participants, this data must have the highest security. The
+specifics of this security will be set by your university or
+institution. However, the general rules for storing this type of data
+is:</p>
 <ul>
-<li>It should be stored on a password-protected, university/institution sponsored shared server or cloud service with encryption (never a personal computer)</li>
-<li>It should be stored separately from your confidential study data (separate folder)</li>
-<li>This data should have limited access (only available to the few individuals who actually need to interact with this data)</li>
-<li>Since this is your only crosswalk between your study IDs and PIIs, make sure to backup this data regularly</li>
+<li>It should be stored on a password-protected, university/institution
+sponsored shared server or cloud service with encryption (never a
+personal computer)</li>
+<li>It should be stored separately from your confidential study data
+(separate folder)</li>
+<li>This data should have limited access (only available to the few
+individuals who actually need to interact with this data)</li>
+<li>Since this is your only crosswalk between your study IDs and PIIs,
+make sure to backup this data regularly</li>
 </ul>
 </div>
 <div id="storing-electronic-records" class="section level3">
 <h3>Storing electronic records</h3>
-<p>Your typical study data files are in formats such as .csv, .tsv, .xlsx, .txt, .docx, or a statistical program file such as .sav, .dta, .rds, or .sas. No matter the file type, your study data should all be de-identified/confidential, only including study IDs and no other identifiers. However, there are still some security precautions you should take.</p>
+<p>Your typical study data files are in formats such as .csv, .tsv,
+.xlsx, .txt, .docx, or a statistical program file such as .sav, .dta,
+.rds, or .sas. No matter the file type, your study data should all be
+de-identified/confidential, only including study IDs and no other
+identifiers. However, there are still some security precautions you
+should take.</p>
 <ul>
-<li>It should be stored on a password-protected university/institution sponsored shared network or cloud service</li>
-<li>Limit access to your data folder to only those who need to work with the data. This ensures no one intentionally or unintentionally makes changes to your data.</li>
-<li>Your de-identified study data should be kept separate from any file that can link an ID to a participants true identity (ex: your participant database)</li>
+<li>It should be stored on a password-protected university/institution
+sponsored shared network or cloud service</li>
+<li>Limit access to your data folder to only those who need to work with
+the data. This ensures no one intentionally or unintentionally makes
+changes to your data.</li>
+<li>Your de-identified study data should be kept separate from any file
+that can link an ID to a participants true identity (ex: your
+participant database)</li>
 <li>Backup this data regularly</li>
-<li>Extant data you acquire, such as student record data from schools and districts may have its own set of regulations such as <a href="https://studentprivacy.ed.gov/audience/researchers">FERPA</a> and <a href="https://studentprivacy.ed.gov/sites/default/files/resource_document/file/ferpa-hipaa-guidance.pdf">HIPPA</a> so it is worth checking that your storage meets those requirements as well.</li>
+<li>Extant data you acquire, such as student record data from schools
+and districts may have its own set of regulations such as <a
+href="https://studentprivacy.ed.gov/audience/researchers">FERPA</a> and
+<a
+href="https://studentprivacy.ed.gov/sites/default/files/resource_document/file/ferpa-hipaa-guidance.pdf">HIPPA</a>
+so it is worth checking that your storage meets those requirements as
+well.</li>
 </ul>
 </div>
 <div id="storing-detachable-media" class="section level3">
 <h3>Storing detachable media</h3>
-<p>This includes items such as external hard drives, flash drives, or CDs.</p>
+<p>This includes items such as external hard drives, flash drives, or
+CDs.</p>
 <ul>
 <li>Store behind two locked doors</li>
 <li>Do not store at a personal residence or leave in a vehicle</li>
@@ -1504,56 +2234,100 @@ div.tocify {
 </div>
 <div id="storing-audiovideo-data" class="section level3">
 <h3>Storing audio/video data</h3>
-<p>A newer type of data collection is occurring since the COVID-19 pandemic, and that is observations, interviews, and focus groups occurring via video conferencing. This data is especially sensitive as it may include names and faces as part of the recording. Again, you will want to refer to your specific institution guidelines, but generally:</p>
+<p>A newer type of data collection is occurring since the COVID-19
+pandemic, and that is observations, interviews, and focus groups
+occurring via video conferencing. This data is especially sensitive as
+it may include names and faces as part of the recording. Again, you will
+want to refer to your specific institution guidelines, but
+generally:</p>
 <ul>
-<li>You will want to use approved software that is licensed by your Institution</li>
-<li>You will want to make sure that software and cloud storage is HIPPA and/or FERPA-compliant if you need it to be</li>
+<li>You will want to use approved software that is licensed by your
+Institution</li>
+<li>You will want to make sure that software and cloud storage is HIPPA
+and/or FERPA-compliant if you need it to be</li>
 <li>Conduct the the video call in a secure/private location</li>
-<li>If recording the session, make sure that participants are notified that the session is being recorded</li>
-<li>Sessions are stored on an Institution approved cloud service or managed service</li>
+<li>If recording the session, make sure that participants are notified
+that the session is being recorded</li>
+<li>Sessions are stored on an Institution approved cloud service or
+managed service</li>
 </ul>
-<p>Note: These same data security rules will also apply to data that is recorded in person. And furthermore, any data that is recorded on detachable media will need to follow the detachable media guidelines.</p>
+<p>Note: These same data security rules will also apply to data that is
+recorded in person. And furthermore, any data that is recorded on
+detachable media will need to follow the detachable media
+guidelines.</p>
 </div>
 <div id="storing-paper-data" class="section level3">
 <h3>Storing paper data</h3>
-<p>Paper data can be one of the most difficult data types to securely manage and track the storage of. When you have a distributed team, collecting data at many sites, sometimes in different states, it can be difficult to track the path and storage of physical data. You will want to make sure you have a very detailed plan for the storage of your data added to your protocol. Never play fast and loose with your paper data. Losing physical files can lead to breaches in confidentiality, loss of data, and other negative consequences. This holds true even for consents and assents. Even though those forms may not have analyzable data, you never know when your IRB may conduct an audit for participant consent, or if you may need to present them for future data requests with an entity such as a school district. If you lose consents/assents, it can look like you are collecting data on those who did not agree to be in the study.</p>
+<p>Paper data can be one of the most difficult data types to securely
+manage and track the storage of. When you have a distributed team,
+collecting data at many sites, sometimes in different states, it can be
+difficult to track the path and storage of physical data. You will want
+to make sure you have a very detailed plan for the storage of your data
+added to your protocol. Never play fast and loose with your paper data.
+Losing physical files can lead to breaches in confidentiality, loss of
+data, and other negative consequences. This holds true even for consents
+and assents. Even though those forms may not have analyzable data, you
+never know when your IRB may conduct an audit for participant consent,
+or if you may need to present them for future data requests with an
+entity such as a school district. If you lose consents/assents, it can
+look like you are collecting data on those who did not agree to be in
+the study.</p>
 <ul>
-<li>As I mentioned earlier in this training, a typical IRB rule is to store paper data behind two locked doors for security. This typically means a locked file cabinet behind a locked door.</li>
+<li>As I mentioned earlier in this training, a typical IRB rule is to
+store paper data behind two locked doors for security. This typically
+means a locked file cabinet behind a locked door.</li>
 <li>Your paper data should be de-identified/confidential (names removed)
 <ul>
 <li>There are exceptions to this:
 <ul>
-<li>If you collect paper consents/assents which typically have participant name/signature (no ID) on them you will store those as is<br />
+<li>If you collect paper consents/assents which typically have
+participant name/signature (no ID) on them you will store those as
+is<br />
 </li>
-<li>If you need to keep paper rosters (with both names and IDs) for the purposes of data collection
+<li>If you need to keep paper rosters (with both names and IDs) for the
+purposes of data collection
 <ul>
-<li>These rosters should be shredded when no longer needed to reduce the number of documents outside of your participant database that can link your participants’ true identity to their study ID</li>
+<li>These rosters should be shredded when no longer needed to reduce the
+number of documents outside of your participant database that can link
+your participants’ true identity to their study ID</li>
 </ul></li>
 </ul></li>
 </ul></li>
-<li>Never store paper data at a personal residence or leave in your vehicle. Always make sure your paper data makes it back to your office (or wherever you store your data). Have a rule in your protocol that says the data must always be returned to storage by the end of the day.
+<li>Never store paper data at a personal residence or leave in your
+vehicle. Always make sure your paper data makes it back to your office
+(or wherever you store your data). Have a rule in your protocol that
+says the data must always be returned to storage by the end of the day.
 <ul>
-<li>An exception to this may be people collecting paper data out of state (from your office). In this case you will need a protocol for this data, such as:
+<li>An exception to this may be people collecting paper data out of
+state (from your office). In this case you will need a protocol for this
+data, such as:
 <ul>
-<li>Keeping the data in a locked file cabinet at the data collector’s home until the data can be returned to the office<br />
+<li>Keeping the data in a locked file cabinet at the data collector’s
+home until the data can be returned to the office<br />
 </li>
-<li>Or scanning the forms and uploading to a secure folder at the end of every day and then shredding the original files<br />
+<li>Or scanning the forms and uploading to a secure folder at the end of
+every day and then shredding the original files<br />
 </li>
 </ul></li>
 </ul></li>
-<li>When transporting data from a site to your office, consider keeping your files in a lock box and use a personal vehicle for transportation rather than public transit.</li>
+<li>When transporting data from a site to your office, consider keeping
+your files in a lock box and use a personal vehicle for transportation
+rather than public transit.</li>
 </ul>
 </div>
 <div id="sharing-data" class="section level3">
 <h3>Sharing data</h3>
-<p>When sharing data, if you data includes any form of PII, choose a secure method of file sharing.</p>
+<p>When sharing data, if you data includes any form of PII, choose a
+secure method of file sharing.</p>
 <ul>
 <li>Secure methods of file transfer
 <ul>
-<li>Upload files to HIPPA/FERPA compliant cloud storage that is approved by your institution</li>
+<li>Upload files to HIPPA/FERPA compliant cloud storage that is approved
+by your institution</li>
 <li>Email an encrypted file, sharing the password separately</li>
 <li>Mailing encrypted files stored on an encrypted device</li>
-<li>Sharing data through an institution approved survey platform with encryption features</li>
+<li>Sharing data through an institution approved survey platform with
+encryption features</li>
 </ul></li>
 <li>How <strong>not</strong> to share data:
 <ul>
@@ -1564,60 +2338,130 @@ div.tocify {
 <li>Mailing unencrypted media (ex: flash drives)</li>
 </ul></li>
 </ul>
-<p>Resource: <a href="https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf">J-PAL</a></p>
+<p>Resource: <a
+href="https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf">J-PAL</a></p>
 </div>
 <div id="general-security-rules" class="section level3">
 <h3>General security rules</h3>
-<p>Again, I am not an IT professional, but some general security rules to keep in mind for all data and devices are:</p>
+<p>Again, I am not an IT professional, but some general security rules
+to keep in mind for all data and devices are:</p>
 <ul>
 <li>Make regular back-ups of your data
 <ul>
-<li>Have a policy in place for who will perform and check the backups, what the backup schedule will be, and where the backups will be stored, (<a href="https://old.dataone.org/best-practices/create-and-document-data-backup-policy">DataONE</a>)</li>
-<li>Implement the <a href="https://www.reed.edu/data-at-reed/managing_data/version_control_backup.html">3-2-1 rule</a>, 3 copies of your data, on 2 different types of storage media, in more than 1 location.</li>
+<li>Have a policy in place for who will perform and check the backups,
+what the backup schedule will be, and where the backups will be stored,
+(<a
+href="https://old.dataone.org/best-practices/create-and-document-data-backup-policy">DataONE</a>)</li>
+<li>Implement the <a
+href="https://www.reed.edu/data-at-reed/managing_data/version_control_backup.html">3-2-1
+rule</a>, 3 copies of your data, on 2 different types of storage media,
+in more than 1 location.</li>
 </ul></li>
 <li>Password protect your devices (with strong passwords)</li>
-<li>Never leave a device open and unattended. Lock your device and go offline when not in use.</li>
+<li>Never leave a device open and unattended. Lock your device and go
+offline when not in use.</li>
 <li>Don’t send confidential data via email</li>
 <li>Keep your virus protection up to date</li>
-<li>Use encryption at all points in the data flow (from collection to storage)</li>
+<li>Use encryption at all points in the data flow (from collection to
+storage)</li>
 <li>Encrypt any identifiable data on portable devices</li>
-<li>If any identifiable information is collected, promptly replace it with study IDs and delete/destroy identifiable information as soon as possible after data collection</li>
-<li>Only provide access to those who need access to your data, and remove access when people are no longer affiliated with your institution or the study</li>
+<li>If any identifiable information is collected, promptly replace it
+with study IDs and delete/destroy identifiable information as soon as
+possible after data collection</li>
+<li>Only provide access to those who need access to your data, and
+remove access when people are no longer affiliated with your institution
+or the study</li>
 <li>Never store identifiable information on your desktop</li>
-<li>Consider having staff review and sign a data responsibility agreement that discusses the ways they will work with the data ethically, responsibly, and securely</li>
-<li>When deleting data, consider using data erasing software to remove sensitive data</li>
-<li>Have a data security plan, in writing, for every project (who has access to what data, what happens when someone leaves the team, data retention period, data sharing plan, data training requirements)</li>
-<li>There are <a href="https://www.umsystem.edu/ums/is/infosec/classification-definitions">data classification levels (DCL)</a> that help you identify the security you need based on the type of data you have. Knowing what level your data falls under can help you start conversations with your IT department to decide if you are meeting the level of security you need to meet FERPA and HIPPA requirements if applicable.</li>
-<li>Last, talk with your IT staff for recommendations on storage, security, and file sharing. They are the experts!</li>
+<li>Consider having staff review and sign a data responsibility
+agreement that discusses the ways they will work with the data
+ethically, responsibly, and securely</li>
+<li>When deleting data, consider using data erasing software to remove
+sensitive data</li>
+<li>Have a data security plan, in writing, for every project (who has
+access to what data, what happens when someone leaves the team, data
+retention period, data sharing plan, data training requirements)</li>
+<li>There are <a
+href="https://www.umsystem.edu/ums/is/infosec/classification-definitions">data
+classification levels (DCL)</a> that help you identify the security you
+need based on the type of data you have. Knowing what level your data
+falls under can help you start conversations with your IT department to
+decide if you are meeting the level of security you need to meet FERPA
+and HIPPA requirements if applicable.</li>
+<li>Last, talk with your IT staff for recommendations on storage,
+security, and file sharing. They are the experts!</li>
 </ul>
 <p>Resources on data security:</p>
-<p>📑 <a href="https://www.uoguelph.ca/ccs/sites/uoguelph.ca.ccs/files/Categorization%20%26%20Security%20of%20Research%20Data_Final.pdf">University of Guelph</a><br />
-📑 <a href="https://www.hrpo.pitt.edu/data-security-guidance">University of Pittsburgh</a><br />
-📑 <a href="https://research-compliance.umich.edu/data-security-guidelines">University of Michigan</a><br />
-📑 <a href="https://ria.princeton.edu/human-research-protection/data/best-practices-for-data-a">Princeton University</a><br />
-📑 <a href="https://www.unr.edu/research-integrity/human-research/human-research-protection-policy-manual/410-maintaining-data-confidentiality">University of Nevada</a><br />
-📑 <a href="https://www.pacificu.edu/academics/research/scholarship-and-sponsored-projects/research-compliance-integrity/institutional-review-board/irb-policies-recommended-practices/data-security-storage">Pacific University Oregon</a><br />
-📑 <a href="http://research.fiu.edu/irb/data-management-security/">Florida International University</a><br />
-📑 <a href="https://old.dataone.org/best-practices/create-and-document-data-backup-policy">DataONE</a><br />
-📑 <a href="https://www.poverty-action.org/sites/default/files/publications/IPA-Best-Practices-for-Data-and-Code-Management-Nov-2015.pdf">IPA</a><br />
-📑 <a href="http://kbroman.org/dataorg/pages/backups.html">Karl Broman</a><br />
-📑 <a href="https://www.umsystem.edu/ums/is/infosec/research-data-security">University of Missouri</a><br />
-📑 <a href="https://riojournal.com/article/56508/instance/5569681/">Foundational Practices of Research Data Management</a><br />
-📑 <a href="https://pitt.libguides.com/managedata/storing">University of Pittsburgh, RDM</a><br />
-📑 <a href="https://www.veeam.com/blog/how-to-follow-the-3-2-1-backup-rule-with-veeam-backup-replication.html">Veeam</a><br />
-📑 <a href="https://security.uconn.edu/data-security-checklist/#">University of Connecticut</a><br />
-📑 <a href="https://www.brandeis.edu/ora/hrpp/pdfs/data-management.pdf">Brandeis University</a><br />
-📑 <a href="https://www.youtube.com/watch?v=RmQylg5_WSY">Reasons to consider SharePoint for data storage</a><br />
-📑 <a href="https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf">Reasons to consider Institutional Servers for data storage</a></p>
+<p>📑 <a
+href="https://www.uoguelph.ca/ccs/sites/uoguelph.ca.ccs/files/Categorization%20%26%20Security%20of%20Research%20Data_Final.pdf">University
+of Guelph</a><br />
+📑 <a href="https://www.hrpo.pitt.edu/data-security-guidance">University
+of Pittsburgh</a><br />
+📑 <a
+href="https://research-compliance.umich.edu/data-security-guidelines">University
+of Michigan</a><br />
+📑 <a
+href="https://ria.princeton.edu/human-research-protection/data/best-practices-for-data-a">Princeton
+University</a><br />
+📑 <a
+href="https://www.unr.edu/research-integrity/human-research/human-research-protection-policy-manual/410-maintaining-data-confidentiality">University
+of Nevada</a><br />
+📑 <a
+href="https://www.pacificu.edu/academics/research/scholarship-and-sponsored-projects/research-compliance-integrity/institutional-review-board/irb-policies-recommended-practices/data-security-storage">Pacific
+University Oregon</a><br />
+📑 <a
+href="http://research.fiu.edu/irb/data-management-security/">Florida
+International University</a><br />
+📑 <a
+href="https://old.dataone.org/best-practices/create-and-document-data-backup-policy">DataONE</a><br />
+📑 <a
+href="https://www.poverty-action.org/sites/default/files/publications/IPA-Best-Practices-for-Data-and-Code-Management-Nov-2015.pdf">IPA</a><br />
+📑 <a href="http://kbroman.org/dataorg/pages/backups.html">Karl
+Broman</a><br />
+📑 <a
+href="https://www.umsystem.edu/ums/is/infosec/research-data-security">University
+of Missouri</a><br />
+📑 <a
+href="https://riojournal.com/article/56508/instance/5569681/">Foundational
+Practices of Research Data Management</a><br />
+📑 <a href="https://pitt.libguides.com/managedata/storing">University of
+Pittsburgh, RDM</a><br />
+📑 <a
+href="https://www.veeam.com/blog/how-to-follow-the-3-2-1-backup-rule-with-veeam-backup-replication.html">Veeam</a><br />
+📑 <a
+href="https://security.uconn.edu/data-security-checklist/#">University
+of Connecticut</a><br />
+📑 <a
+href="https://www.brandeis.edu/ora/hrpp/pdfs/data-management.pdf">Brandeis
+University</a><br />
+📑 <a href="https://www.youtube.com/watch?v=RmQylg5_WSY">Reasons to
+consider SharePoint for data storage</a><br />
+📑 <a
+href="https://www.povertyactionlab.org/sites/default/files/Data_Security_Procedures_December.pdf">Reasons
+to consider Institutional Servers for data storage</a></p>
 <hr />
 </div>
 </div>
 <div id="directory-structure" class="section level2">
 <h2>Directory Structure</h2>
 <hr />
-<p>No matter where your team stores your files, it is important to develop a logical directory structure. It makes it so much easier to find your files and it facilitates sharing within and outside of your team. You will want to build this structure into your style guide and implement it generally across all of your projects to create cohesion. The most important thing is to allow files to be findable, have a structure that allows you to control user access, and to keep folders shallow enough that you don’t reach a limit on the allowable length of a path name for any file.</p>
-<p>At the highest, organizational level, you will want to have separate folders for each of your projects, as well as an overall <em>Team</em> folder that houses general documents related to your team functioning (meeting notes, hr documents, team expectations). You will want to develop a style guide that covers general rules across all folders and house that style guide in an easily accessible location (ex: Team Wiki and/or a README in each project folder)</p>
-<p>Then, within each project folder you will want to build a hierarchy, something like this:</p>
+<p>No matter where your team stores your files, it is important to
+develop a logical directory structure. It makes it so much easier to
+find your files and it facilitates sharing within and outside of your
+team. You will want to build this structure into your style guide and
+implement it generally across all of your projects to create cohesion.
+The most important thing is to allow files to be findable, have a
+structure that allows you to control user access, and to keep folders
+shallow enough that you don’t reach a limit on the allowable length of a
+path name for any file.</p>
+<p>At the highest, organizational level, you will want to have separate
+folders for each of your projects, as well as an overall <em>Team</em>
+folder that houses general documents related to your team functioning
+(meeting notes, hr documents, team expectations). You will want to
+develop a style guide that covers general rules across all folders and
+house that style guide in an easily accessible location (ex: Team Wiki
+and/or a README in each project folder)</p>
+<p>Then, within each project folder you will want to build a hierarchy,
+something like this:</p>
 <pre><code>                    levelName
 1 project-name               
 2  °--life-cycle-folder      
@@ -1627,15 +2471,23 @@ div.tocify {
 6                  °--archive</code></pre>
 <ul>
 <li><p>Level 1: The name of the project</p></li>
-<li><p>Level 2: General research life cycle folders (Ex: data, documentation, project management, intervention, tracking)</p></li>
-<li><p>Level 3: For longitudinal studies I tend to like the third level to be time period or grouping sub-folders (Ex: cohort 1, or wave 1)</p></li>
-<li><p>Level 4: Specific content folders (Ex: raw data, syntax, clean data)</p></li>
-<li><p>Level 5: Participant specific folder (ex: student, teacher).</p></li>
-<li><p>Level 6: All previous versions of files can go in an archive folder to reduce clutter</p></li>
+<li><p>Level 2: General research life cycle folders (Ex: data,
+documentation, project management, intervention, tracking)</p></li>
+<li><p>Level 3: For longitudinal studies I tend to like the third level
+to be time period or grouping sub-folders (Ex: cohort 1, or wave
+1)</p></li>
+<li><p>Level 4: Specific content folders (Ex: raw data, syntax, clean
+data)</p></li>
+<li><p>Level 5: Participant specific folder (ex: student,
+teacher).</p></li>
+<li><p>Level 6: All previous versions of files can go in an archive
+folder to reduce clutter</p></li>
 </ul>
-<p>More details on setting up this structure can be found in <a href="https://cghlewis.github.io/mpsi-data-training/training_3.html">training_3</a>.</p>
+<p>More details on setting up this structure can be found in <a
+href="https://cghlewis.github.io/mpsi-data-training/training_3.html">training_3</a>.</p>
 <p>Resources:</p>
-<p>📑 <a href="https://zenodo.org/record/1914401#.YAh46ehKhPZ">Helsinki University Library</a></p>
+<p>📑 <a href="https://zenodo.org/record/1914401#.YAh46ehKhPZ">Helsinki
+University Library</a></p>
 </div>
 
 

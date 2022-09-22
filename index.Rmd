@@ -9,7 +9,7 @@ output:
 
 <br> 
 
-**Update**: I am very excited to say that I will be turning the materials on this website (plus more!) into a book starting this spring. Please check back for updates on the forthcoming book. I plan to write the book in an open/public way that will welcome feedback on additions or changes future readers might find helpful. Thank you!
+**Update**: I am very excited to say that I have begun to turn these materials (plus more) into a book! You can see the ongoing progression at [https://datamgmtinedresearch.com/](https://datamgmtinedresearch.com/)! Any and all feedback is welcome.
 
 ---
 
@@ -21,7 +21,7 @@ I am making these materials available for anyone who finds them useful. My hope 
 
 **About me**: I oversaw data management activities in the MPSI for 8 years, which included 8 federally funded research grants (4 of which were RCTs). In my time with the MPSI I was a part of almost every aspect of the research data life cycle. I was a project coordinator, data collector, analyst, supervisor, grant writer, and data manager, and in those roles I saw the good, the bad, and the ugly of data management. My experiences and my passion to improve data management practices in the MPSI and across the entire field of education was my motivation for creating these materials. 
 
-Currently I am working as a freelance research data management consultant. I work with researchers and their teams to develop and implement data management best practices. You can learn more about my current projects at [https://github.com/Cghlewis](https://github.com/Cghlewis).
+Currently I am working as a freelance research data management consultant. I work with researchers and their teams to develop and implement data management best practices. You can learn more about my current projects at [https://cghlewis.com/](https://cghlewis.com/).
 
 *Materials were last updated on `r format(Sys.time(), '%m/%d/%Y')`*  
 

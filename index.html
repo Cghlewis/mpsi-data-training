@@ -14,7 +14,7 @@
 
 <title>Data Management in Large-Scale Education Research</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -144,11 +144,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -284,24 +288,74 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Data Management in Large-Scale Education Research</h1>
+<h1 class="title toc-ignore">Data Management in Large-Scale Education
+Research</h1>
 <h4 class="author">Crystal Lewis</h4>
 
 </div>
 
 
 <p><br></p>
-<p><strong>Update</strong>: I am very excited to say that I will be turning the materials on this website (plus more!) into a book starting this spring. Please check back for updates on the forthcoming book. I plan to write the book in an open/public way that will welcome feedback on additions or changes future readers might find helpful. Thank you!</p>
+<p><strong>Update</strong>: I am very excited to say that I have begun
+to turn these materials (plus more) into a book! You can see the ongoing
+progression at <a
+href="https://datamgmtinedresearch.com/">https://datamgmtinedresearch.com/</a>!
+Any and all feedback is welcome.</p>
 <hr />
-<p>I started this resource as an internal workshop series for the <a href="http://moprevention.org/">Missouri Prevention Science Institute (MPSI)</a> and have continued to build it as a personal project that I want to share with anyone who is looking for more information around <em>data management in large-scale education research studies</em>. The modules in this resource cover best practices in data management procedures throughout the entire life cycle of research project implementation (from grant award to end of grant). While I think parts of this series will apply to any type of education research, I think the series is mainly geared towards those doing longitudinal evaluation research, specifically those conducting randomized controlled trial studies (RCTs).</p>
-<p>As part of my writing process, I have been researching data management practices, collecting resources, and speaking with data management professionals. If you work in education research, particularly with RCTs, and would be willing to share your expertise with me to improve this manual, please contact me <a href="mailto:cgh.lewis@gmail.com">here</a>. Acknowledgment and gratitude for those who have taken time out of their busy schedules to share their wisdom with me so far: Francis Huang, Mary McCraken, Ryan Estrellado, Kim Manturuk, Beth Chance, Jessica Logan, Rebecca Schmidt, and Sara Hart.</p>
-<p>I am making these materials available for anyone who finds them useful. My hope is that when completed, this comprehensive manual will assist all new PIs, data managers, project coordinators, research assistants, and others who have been awarded their first research grant, or even those with established careers, in navigating how to implement a successful data management plan throughout their project. There are many great resources out there on data management in research and I will share those resources in this series. However, what I think will make this resource unique is the narrow focus on education research, an area with scarce data management information.</p>
-<p><strong>About me</strong>: I oversaw data management activities in the MPSI for 8 years, which included 8 federally funded research grants (4 of which were RCTs). In my time with the MPSI I was a part of almost every aspect of the research data life cycle. I was a project coordinator, data collector, analyst, supervisor, grant writer, and data manager, and in those roles I saw the good, the bad, and the ugly of data management. My experiences and my passion to improve data management practices in the MPSI and across the entire field of education was my motivation for creating these materials.</p>
-<p>Currently I am working as a freelance research data management consultant. I work with researchers and their teams to develop and implement data management best practices. You can learn more about my current projects at <a href="https://github.com/Cghlewis">https://github.com/Cghlewis</a>.</p>
-<p><em>Materials were last updated on 07/13/2022</em></p>
+<p>I started this resource as an internal workshop series for the <a
+href="http://moprevention.org/">Missouri Prevention Science Institute
+(MPSI)</a> and have continued to build it as a personal project that I
+want to share with anyone who is looking for more information around
+<em>data management in large-scale education research studies</em>. The
+modules in this resource cover best practices in data management
+procedures throughout the entire life cycle of research project
+implementation (from grant award to end of grant). While I think parts
+of this series will apply to any type of education research, I think the
+series is mainly geared towards those doing longitudinal evaluation
+research, specifically those conducting randomized controlled trial
+studies (RCTs).</p>
+<p>As part of my writing process, I have been researching data
+management practices, collecting resources, and speaking with data
+management professionals. If you work in education research,
+particularly with RCTs, and would be willing to share your expertise
+with me to improve this manual, please contact me <a
+href="mailto:cgh.lewis@gmail.com">here</a>. Acknowledgment and gratitude
+for those who have taken time out of their busy schedules to share their
+wisdom with me so far: Francis Huang, Mary McCraken, Ryan Estrellado,
+Kim Manturuk, Beth Chance, Jessica Logan, Rebecca Schmidt, and Sara
+Hart.</p>
+<p>I am making these materials available for anyone who finds them
+useful. My hope is that when completed, this comprehensive manual will
+assist all new PIs, data managers, project coordinators, research
+assistants, and others who have been awarded their first research grant,
+or even those with established careers, in navigating how to implement a
+successful data management plan throughout their project. There are many
+great resources out there on data management in research and I will
+share those resources in this series. However, what I think will make
+this resource unique is the narrow focus on education research, an area
+with scarce data management information.</p>
+<p><strong>About me</strong>: I oversaw data management activities in
+the MPSI for 8 years, which included 8 federally funded research grants
+(4 of which were RCTs). In my time with the MPSI I was a part of almost
+every aspect of the research data life cycle. I was a project
+coordinator, data collector, analyst, supervisor, grant writer, and data
+manager, and in those roles I saw the good, the bad, and the ugly of
+data management. My experiences and my passion to improve data
+management practices in the MPSI and across the entire field of
+education was my motivation for creating these materials.</p>
+<p>Currently I am working as a freelance research data management
+consultant. I work with researchers and their teams to develop and
+implement data management best practices. You can learn more about my
+current projects at <a
+href="https://cghlewis.com/">https://cghlewis.com/</a>.</p>
+<p><em>Materials were last updated on 09/22/2022</em></p>
 <p><br></p>
 <p><strong>Tentative Module Outline</strong></p>
 <table>
+<colgroup>
+<col width="15%" />
+<col width="84%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Module</th>

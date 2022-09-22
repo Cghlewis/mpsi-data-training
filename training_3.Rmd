@@ -392,6 +392,9 @@ Sample: *s2_toca4* = student survey-winter-toca scale-item4
   
 Similar to variable naming, variable value protocol also needs to be documented early on and standardized within and across projects. Here are some conventions to follow:
 
+* Value codes must be unique
+  + **Do**: Assign 1=yes and 2=don't know
+    + **Don't**: Assign 1=yes and 1=don't know
 * Keep values consistent across the project. Examples:
   + **Do**: Always use 1=yes; 0=no
     + **Don't**: For some variables use 2=yes; 1=no, for other variables 1=yes; 0=no

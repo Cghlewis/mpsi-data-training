@@ -13,7 +13,7 @@
 
 <title>Style Guide</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -147,11 +147,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -997,6 +1001,13 @@ scale-item4</p>
 documented early on and standardized within and across projects. Here
 are some conventions to follow:</p>
 <ul>
+<li>Value codes must be unique
+<ul>
+<li><strong>Do</strong>: Assign 1=yes and 2=don’t know
+<ul>
+<li><strong>Don’t</strong>: Assign 1=yes and 1=don’t know</li>
+</ul></li>
+</ul></li>
 <li>Keep values consistent across the project. Examples:
 <ul>
 <li><strong>Do</strong>: Always use 1=yes; 0=no
