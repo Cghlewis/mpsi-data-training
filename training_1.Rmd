@@ -165,8 +165,8 @@ As I mentioned earlier, it is important to start a data dictionary **before** ev
 
 * What measures are we collecting? (Ex: Student Assessment, Teacher Observation, Teacher Survey, Principal Interview)
 * What are the items/scales included?
-* What is your variable naming protocol? (See variable naming)
-* Do your items/scales have pre-determined value coding rules or can we assign our own? What is our value coding protocol? (See value coding)
+* What is your variable naming protocol? (See [variable naming in Style Guide](https://cghlewis.github.io/mpsi-data-training/training_3.html#Variable_Naming))
+* Do your items/scales have pre-determined value coding rules or can we assign our own? What is our value coding protocol? (See [value coding in Style Guide](https://cghlewis.github.io/mpsi-data-training/training_3.html#Value_Coding))
     
 It's good to also consider starting to document the variables you aren't collecting but you are **assigning** or **deriving**. 
 
