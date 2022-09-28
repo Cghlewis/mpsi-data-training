@@ -406,7 +406,7 @@ Similar to variable naming, variable value protocol also needs to be documented 
 * Define missing values
   + I am personally okay with leaving missing values as NA or NULL
   + However, you may care about the reason for missing data and need to consider defining missing values based on their properties
-  + The key is to use extreme values that do not actually occur in your data and to also not use character values in a numeric field
+  + The key is to use extreme values that do not actually occur in your data and to also not use character missing values in a numeric field
 
 Example of missing codes used by [NCES](https://nces.ed.gov/pubs2015/2015074.pdf):
 
@@ -420,7 +420,7 @@ knitr::include_graphics("img/missing.png")
 Additional reading on value coding:
 
   📑 [Jessica Logan, Ph.D.](https://figshare.com/articles/Data_Management_and_Data_Management_Plans/7890827)  
-  📑 [Data One](https://old.dataone.org/best-practices/define-parameters)   
+  📑 [Data One](https://dataoneorg.github.io/Education//bestpractices/identify-missing-values)   
   📑 [Karl Broman](https://kbroman.org/dataorg/pages/consistency.html)  
   
 
