@@ -1,5 +1,5 @@
 ---
-title: "Active Data Collection Storage and Security Checklist"
+title: "Data Storage and Security Checklist"
 output: 
   html_document:
     toc: TRUE
@@ -13,15 +13,17 @@ output:
 
 ### Storage
 
-🔲 What data do we need to store?
+🔲 What data do we need to store during our active project?
 
   - Physical, Electronic
   
 🔲 What is the expected size of the data we need to store? How much storage do we need?
-
-  - How many participants?
-  - File size?
-  - Number of physical papers/books? 
+  
+  - Electronic
+      - How many participants?
+      - File size
+  - Paper
+      - Number of physical papers/books/etc.?
   
 🔲 What are our requirements? How do we stay compliant?
 
@@ -45,7 +47,8 @@ output:
     - Do we have a file structure laid out in a Style Guide?
       - Where will data be stored (raw, clean), documentation, participant tracking database, and so on
     - Do we have file naming conventions laid out in a Style Guide?
-  - Physical - how will physical data be organized?
+  - Physical 
+      - How will physical data be organized?
   - Who will build these structures?
   
 🔲 How will participant confidentiality be maintained?
@@ -68,7 +71,8 @@ output:
   
 🔲 How will data be versioned?
   
-  - Manually? See Style Guide
+  - Manually?
+      - Is this written out in a Style Guide?
   - Programatically?
   
 🔲 How will rules be documented?

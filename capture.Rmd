@@ -27,8 +27,9 @@ output:
 
 🔲 Who is entering data?
 
-🔲 How are we entering data? 
-    - Double entry? How much?
+🔲 How are we entering data?   
+    
+  - Double entry? How much?
 
 🔲 How do we ensure accuracy of entered data?
 
@@ -42,7 +43,7 @@ output:
   
 🔲 How are we capturing raw electronic data collected internally?
 
-  - Download, API, secure transfer, something else?
+  - Download, API, something else?
 
 🔲 Who is extracting the data?
   
@@ -58,7 +59,7 @@ output:
   
   - Download, API, secure transfer from an external partner, something else?
 
-🔲 What file format will the data be in when received?
+🔲 What file format will the data be in when captured?
 
 🔲 Are there any rights concerning the external data that need to be considered?
 
