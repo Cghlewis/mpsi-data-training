@@ -1,5 +1,5 @@
 ---
-title: "Training 6:Putting it all together"
+title: "Putting it all together"
 output: 
   html_document:
     css: "css/custom.css"
@@ -10,6 +10,7 @@ output:
        in_header: plausible_analytics.html
 ---
 
+<br>
 ---
 
 ## Overview
