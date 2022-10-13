@@ -1,0 +1,83 @@
+---
+title: "Data Capture Checklist"
+output: 
+  html_document:
+  css: "css/custom.css"
+toc: TRUE
+toc_float: TRUE
+anchor_sections: FALSE
+includes:
+  in_header: plausible_analytics.html
+---
+
+<br>
+
+🔲 What original data collected/created internally do I need to capture?
+
+  - Is it physical or electronic?
+
+🔲 What existing data are we re-using that I need to capture?
+
+<br>
+
+#### Physical data collected internally
+  
+🔲 How are we converting paper data to electronic format?
+
+🔲 What tool/s are we using?
+
+🔲 Who is entering data?
+
+🔲 How are we entering data? 
+    - Double entry? How much?
+
+🔲 How do we ensure accuracy of entered data?
+
+🔲 Who is extracting the entered data?
+
+🔲 What file format will the data be in when extracted?
+
+<br>
+
+#### Electronic data collected internally
+  
+🔲 How are we capturing raw electronic data collected internally?
+
+  - Download, API, secure transfer, something else?
+
+🔲 Who is extracting the data?
+  
+🔲 What file format will the data be in when extracted?
+
+🔲 Who will check the accuracy of the raw data?
+
+<br>
+
+#### Electronic data captured from existing sources
+  
+🔲 How are we capturing raw electronic data collected externally? (ex: Dept of Ed data or school district data)
+  
+  - Download, API, secure transfer from an external partner, something else?
+
+🔲 What file format will the data be in when received?
+
+🔲 Are there any rights concerning the external data that need to be considered?
+
+🔲 Are data agreements/other documents required from external partners?
+
+🔲 Do we need to communicate with external partners to receive the data?
+
+  - How are we communicating with external partners? 
+  - Who is the contact from our team? Who is the contact for the external partner?
+  - How is communication documented?
+  - How will the data be securely transferred so participant confidentiality is not at risk?
+  - How do we clearly communicate what data is needed?
+  - How do we set timelines to receive data?
+  - How do we communicate any errors or missing information when data is received?
+    
+
+
+
+
+
+

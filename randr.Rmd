@@ -1,0 +1,47 @@
+---
+title: "Roles and Responsibilities Checklist"
+output: 
+  html_document:
+  css: "css/custom.css"
+toc: TRUE
+toc_float: TRUE
+anchor_sections: FALSE
+includes:
+  in_header: plausible_analytics.html
+---
+
+🔲 What are the team roles in relation to data? Who has those roles?
+  
+  - What are the tasks of each role?
+  - What will be the rights and responsibilities of each role?
+  - What skills are needed for this role?
+  
+🔲 What costs will be associated with these roles?
+
+
+🔲 How will we train staff on their responsibilities?
+  
+  - When will these trainings occur?  
+  - Who will implement the trainings?  
+  
+🔲 What trainings do staff need for around data management?
+  
+  - Who will track the completion of these trainings?  
+  
+🔲 How will roles (within the data team and across data and project teams) communicate? 
+  
+  - What tools will be used?  
+  - What are the expectations around response times?  
+  - How will we document communication?  
+  
+🔲 How will tasks be monitored?
+
+  - How will tasks be handed off?
+  - How will people know when tasks are completed?
+  - What tools, if any, will be used for task management?
+  
+🔲 What is a transition plan if anyone should leave their role?
+
+  - What transition documents do we have in place?
+  - Who will assist with training that new person?
+

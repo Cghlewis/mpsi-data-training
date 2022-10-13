@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Training 6:Putting it all together</title>
+
+<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script defer data-domain="cghlewis.github.io/mpsi-data-training" src="https://plausible.io/js/plausible.js"></script>
+  
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="css/custom.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">About</a>
+</li>
+<li>
+  <a href="training_00.html">Data Management</a>
+</li>
+<li>
+  <a href="training_0.html">Project Management</a>
+</li>
+<li>
+  <a href="training_1.html">Module 1</a>
+</li>
+<li>
+  <a href="training_2.html">Module 2</a>
+</li>
+<li>
+  <a href="training_3.html">Module 3</a>
+</li>
+<li>
+  <a href="training_4.html">Module 4</a>
+</li>
+<li>
+  <a href="training_5.html">Module 5</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Training 6:Putting it all together</h1>
+
+</div>
+
+
+<hr />
+<div id="overview" class="section level2">
+<h2>Overview</h2>
+<hr />
+<p>This module is about connecting all of the pieces of the puzzle and
+thinking about how we can move from simply knowing what good data
+management <em>should</em> look like, to planning how you will actually
+manage data in your lab, for your projects, and with your team.</p>
+<p>For the most part, the modules in this website have discussed phases
+of data management and best practices as independent steps in the data
+management life cycle. Yet we know very well, that all of these phases
+are dependent and connected. Before we begin to choose which practices
+to implement, we need to be able to put practices in context of outcomes
+(what are the benefits of implementing different practices). We then
+move on to review the data management and research life cycle to better
+understand how each module fits into the larger process. Then, we talk
+about <em>when</em> to start choosing the practices you want to
+implement, and provide checklists as tools to use in the planning
+process. And last, we talk about putting it all together by creating a
+data management workflow that works for you.</p>
+<hr />
+</div>
+<div id="importance-of-best-practices" class="section level2">
+<h2>Importance of best practices</h2>
+<hr />
+<p>While there are MANY reasons to implement good data management
+practices (ex: funder requirements, legal and ethical mandates,
+contributing to open science, etc.), I think we can boil the benefits of
+data management down to 3 basic outcomes. Good data management produces
+<strong>reproducible</strong>, <strong>reliable</strong>, and
+<strong>secure</strong> data for you and future users.</p>
+<p>Let’s connect these outcomes to actions that we have covered in
+previous modules:</p>
+<p><strong>Reproducible</strong></p>
+<p>Reproducible is defined as being able to produce the same results
+using the same materials and procedure. This could be anything from
+reproducing a data collection effort to reproducing a clean data
+file.</p>
+<p>Data Management practices that contribute to reproducibility
+include:</p>
+<ul>
+<li><a
+href="https://cghlewis.github.io/mpsi-data-training/training_1.html">Documentation</a></li>
+<li><a
+href="https://cghlewis.github.io/mpsi-data-training/training_3.html">Style
+Guide</a></li>
+<li><a
+href="https://cghlewis.github.io/mpsi-data-training/training_4.html">Data
+Cleaning Plan</a></li>
+<li><a
+href="https://cghlewis.github.io/mpsi-data-training/training_4.html#Reproducible_syntax">Syntax
+Writing</a></li>
+</ul>
+<p><strong>Reliable</strong></p>
+<p>Reliable data is accurate/true and complete data that you can trust.
+Unreliable data might include problems such as inaccurately entered
+data, incorrectly coded variables, or missing values, and can lead to
+inaccurate decision making.</p>
+<p>Practices that contribute to reliable data include:</p>
+<ul>
+<li><a
+href="https://cghlewis.github.io/mpsi-data-training/training_2.html#Data_Collection_Instruments">Creation
+of data collection tools using data dictionaries</a></li>
+<li><a
+href="https://cghlewis.github.io/mpsi-data-training/training_2.html#Participant_Database">Participant
+tracking</a></li>
+<li><a
+href="https://cghlewis.github.io/mpsi-data-training/training_2.html#Data_Entry">Double
+entry of physical data</a></li>
+<li><a
+href="https://cghlewis.github.io/mpsi-data-training/training_1.html#Miscellaneous">Versioning
+of data and code</a></li>
+<li><a
+href="https://cghlewis.github.io/mpsi-data-training/training_4.html#Data_cleaning_steps">Validity
+checks</a></li>
+</ul>
+<p><strong>Secure</strong></p>
+<p>Data security involves storing and sharing data in a way that
+protects participant confidentiality as well as prevents loss of
+information.</p>
+<p>Practices that contribute to data security include:</p>
+<ul>
+<li><a
+href="https://cghlewis.github.io/mpsi-data-training/training_2.html#Data_Storage">Storing
+paper and electronic data according to your IRB and DCL Rules</a></li>
+<li><a
+href="https://cghlewis.github.io/mpsi-data-training/training_2.html#Data_Storage">De-identifying
+data</a></li>
+<li><a
+href="https://cghlewis.github.io/mpsi-data-training/training_2.html#Data_Storage">Training
+staff on data security</a></li>
+<li><a
+href="https://cghlewis.github.io/mpsi-data-training/training_2.html#Data_Storage">Requiring
+data access and use agreements</a></li>
+<li><a
+href="https://cghlewis.github.io/mpsi-data-training/training_0.html">Assigning
+roles and responsibilities</a></li>
+</ul>
+<hr />
+</div>
+<div id="research-life-cycle" class="section level2">
+<h2>Research Life Cycle</h2>
+<hr />
+<p>We touched on the research life cycle in the <a
+href="https://cghlewis.github.io/mpsi-data-training/training_0.html#Project_Life_Cycle">Project
+Management module</a>. However, I think it’s important now that we have
+gone through best practices, to put them all into context of where they
+fit in the data management life cycle.</p>
+<p>Below we have a research life cycle image that shows how data
+management and project coordination work in parallel and collaboratively
+throughout a study. I typically think of the project
+management/coordination path as consisting of the PI/Co-PI as well as
+the project coordinator, and any other staff in charge of implementing
+the project as well as any intervention. The data management path
+consists of anyone in charge of working with data or data products (such
+as documentation or data collection tools), and again could still
+include PIs/Co-PIs, project coordinators, data managers and any other
+staff working with data. Sometimes the project team and the data team
+are the same people (especially if the team is small). Either way, it is
+still helpful to see how these paths work simultaneously and
+collaboratively.</p>
+<p><img src="img/cl_lifecycle.PNG" /></p>
+<p>Moving from left to right:</p>
+<ol style="list-style-type: decimal">
+<li>In a typical study we first begin by generating ideas, deciding what
+we want to study.</li>
+<li>Then, most likely, we will look for funding to implement that study.
+This is where the two paths begin to diverge. If the team is applying
+for federal funding, the proposal and budget are created in the project
+management track, while the 2-5 page required data management plan (DMP)
+is created in the data track. Again, it may be the same people working
+on both of these pieces.</li>
+<li>Next, if the project is funded, the project team will begin planning
+things such as hiring, recruitment, data collection, and how to
+implement the intervention. At the same time, those working on the data
+team will begin to plan out how to specifically implement the 2-5 page
+DMP submitted to their funder and start putting any necessary structures
+into place.</li>
+<li>Once planning is complete, the team moves into the cycle of data
+collection. It is called a cycle because if your study is longitudinal,
+every step here will occur cyclically. Once one phase of data collection
+wraps up, the team re-enters the cycle again for the next phase of data
+collection, until all data collection is complete for the entire
+project.
+<ul>
+<li>The data management and project management team begin the cycle by
+starting documentation. You can see that this phase occurs
+collaboratively because it is denoted with a double outline. Both teams
+begin developing documentation like data dictionaries, style guides, and
+protocols.</li>
+<li>Once documentation is started, both teams begin to create any
+necessary data collection instruments. These instruments will be created
+with input from the documentation. During this phase the team may also
+develop their participant tracking database.</li>
+<li>Next, the project management team moves into the data collection
+phase. This may involve recruitment and consenting, as well as data
+collection. At this point, the data management team just provides
+support as needed.</li>
+<li>As data is collected, the project team will track data as it is
+collected in the participant tracking database. The data management team
+will collaborate with the project management team to help troubleshoot
+anything related to the actual tracking database.</li>
+<li>Next, once data is collected, the teams move into the data capture
+phase. This is where teams are actively retrieving or converting data.
+For electronic data this may look like downloading data from a platform
+or having data sent to the team via a secure transfer. For physical
+data, this may look like teams entering paper data into a database.
+Oftentimes, this again is a collaborative effort between the project
+management team and the data team.</li>
+<li>Once the data is captured, it needs to be stored. While the data
+team may be in charge of setting up and monitoring the storage efforts,
+the project team may be the ones actively retrieving and storing the
+data.</li>
+<li>Next the teams move into the cleaning and validation phase. At this
+time the data team is reviewing data cleaning plans, writing data
+cleaning scripts and actively cleaning data from the most recent data
+collection round.</li>
+<li>And last, the data team will version data as it is updated or errors
+are found.</li>
+</ul></li>
+<li>The teams then only move out of the active data collection phase
+when all data collection for the project is complete. At this time the
+project team begins analyzing study data and working on publications.
+They are able to do this because of the organized processes implemented
+during the data collection cycle. Since data was managed and cleaned
+throughout, data is ready for analysis as soon as data collection is
+complete. Then, while the project team is analyzing data, the data team
+is doing any additional preparation to archive data for public
+sharing.</li>
+<li>Last, the team submits data for public sharing.</li>
+</ol>
+<hr />
+</div>
+<div id="planning-data-management" class="section level2">
+<h2>Planning Data Management</h2>
+<hr />
+<p>Data management planning is <strong>the most</strong> important step
+you can implement in the data management life cycle. Data management
+planning is the catalyst for reaping all of the benefits mentioned
+above. Without planning, the chances of inconsistencies, lost data, and
+human errors increase greatly. Think about a project where data is
+collected inconsistently, files are saved haphazardly, data cleaning is
+not well documented, and data is stored and shared without rules for
+security. It sounds like the story line of a data management horror
+narrative.</p>
+<p>We saw in our data management flow chart above, that data management
+planning is mentioned twice. First it is mentioned in the context of a
+data management plan (DMP), the 2-5 page document required by federal
+funders that we reviewed in <a
+href="https://cghlewis.github.io/mpsi-data-training/training_5.html#Why_Share_Data">Module
+5</a>. And while DMPs provide a hopeful guide for future practices,
+there is often a disconnect between the broad theory behind those plans
+and the actual complex implementation of those plans in practice (<a
+href="https://datascience.codata.org/articles/10.5334/dsj-2021-009/">Borycz,
+2021</a>). This is when the second planning phase comes into play.
+Planning data management refers to making detailed decisions and
+creating actionable steps to implement your DMP. This data management
+planning happens at the same time that the project team is planning for
+project implementation (things like how to collect data, how to hire
+staff, planning supplies, how to recruit participants, how to
+communicate with sites, etc).</p>
+<div id="checklists" class="section level3">
+<h3>Checklists</h3>
+<p>Planning checklists can be really useful in helping you remember the
+various data management decisions that need to be made before your
+project begins. Below are checklists broken out by each phase. While
+these checklists will not encompass everything that every project will
+need to consider, it is a jumping off point for starting these team
+discussions. When reviewing these checklists, take into consideration
+all the variations that are unique to your team and project such as:</p>
+<ol style="list-style-type: decimal">
+<li>Requirements of your funder
+<ul>
+<li>What did you say you would do in your DMP? Make sure to follow your
+DMP (or revise your DMP to match your new decisions - remember your DMP
+is a living document).</li>
+</ul></li>
+<li>Requirements of your IRB
+<ul>
+<li>What data security requirements are set forth by your IRB? What data
+collection restrictions/allowances are given by your IRB?</li>
+</ul></li>
+<li>The skill level of your team
+<ul>
+<li>Does your team have the skill set to implement the practices you
+plan to implement or will some additional training be needed?</li>
+</ul></li>
+<li>Available tools
+<ul>
+<li>What tools are available to your team? Does your
+organization/university only allow you to use certain platforms for data
+storage? What is the complexity of your tools? Will additional training
+be needed?</li>
+</ul></li>
+<li>Budget constraints
+<ul>
+<li>Do you have the budget to implement all of the practices you want to
+implement or will you need to plan something more feasible?</li>
+</ul></li>
+<li>The complexity of your project
+<ul>
+<li>The size of your project, the amount and types of data you are
+collecting, the number of participants or the populations you are
+collecting data from, the sensitivity level of the data you are
+collecting, the number of sites you are collecting data at, and the
+number of partners and decision makers you are working with, all factor
+into your data management planning.</li>
+</ul></li>
+<li>Interpersonal skills
+<ul>
+<li>Believe it or not, implementing good data management requires really
+good interpersonal skills. Your team needs to be able to communicate
+openly and clearly with each other and with external partners in order
+to plan and implement sometimes very nuanced and complex processes to
+keep your data organized. Knowing how well your team communicates and
+works together will help you as you plan for the best structures that
+fit within your team culture.</li>
+</ul></li>
+<li>Buy-in
+<ul>
+<li>You need to know your team’s buy-in. If your team cannot get on
+board with your vision for improving data management, it’s going to be
+very difficult to not have mistakes start creeping in very quickly
+because the motivation to keep implementing good practices just won’t be
+there. Knowing the buy-in level of your team is very important when
+planning for data management and anticipating possible future
+mistakes.</li>
+</ul></li>
+</ol>
+<div id="checklist-templates" class="section level4">
+<h4>Checklist Templates</h4>
+<p>Note that many of these checklists will occur alongside (or may
+overlap with) general project planning which should have their own set
+of checklists.</p>
+<ul>
+<li><a href="randr.html">Roles and Responsibilities</a></li>
+<li><a href="document.html">Documentation</a></li>
+<li><a href="collection.html">Data Collection</a></li>
+<li><a href="tracking.html">Data Tracking</a></li>
+<li><a href="capture.html">Data Capture</a></li>
+<li><a href="storage.html">Data Storage and Security</a></li>
+<li><a href="clean.html">Data Cleaning</a></li>
+<li><a href="share.html">Data Sharing</a></li>
+</ul>
+<p>You can see other examples of helpful checklists here:</p>
+<p>📑 <a
+href="https://figshare.com/articles/poster/Data_Management_Plan_Checklist/1130852">Kristin
+Briney Data Managment Plan Checklist</a><br />
+📑 <a
+href="https://datamanagement.hms.harvard.edu/plan-design/biomedical-data-lifecycle">Harvard
+Longwood Research Data Management Series of Checklists</a><br />
+📑 <a
+href="https://laneguides.stanford.edu/DataManagement/checklist">Stanford
+Medicine Lane Medical Library</a><br />
+📑 <a
+href="https://ukdataservice.ac.uk/learning-hub/research-data-management/plan-to-share/checklist/">UK
+Data Service</a></p>
+</div>
+</div>
+<div id="workflows" class="section level3">
+<h3>Workflows</h3>
+<p>Another part of the planning phase is developing data management
+workflows.</p>
+<p>A workflow, often illustrated with a flow diagram, is a series of
+repeatable tasks that help you move through the stages of the research
+life cycle in an “organized and efficient manner” (<a
+href="https://library.csp.edu/c.php?g=929514&amp;p=6724401">Concordia-Saint
+Paul</a>). A workflow is personalized. It is where you start to choose
+which “best practices” work for your project and your team. One team may
+collect survey data on paper because their participants are young
+children, hand enter it into Excel because it is the tool their team is
+familiar with, and double enter 20% because they don’t have the capacity
+to enter more than that. Another team may collect paper data, hand enter
+into FileMaker because that is the only tool they have access to, and
+double enter 100% because they have the budget and capacity to do
+that.</p>
+<p><a href="https://hdsr.mitpress.mit.edu/pub/72kcw990/release/1">Borghi
+and Van Gulick</a> view a workflow as a series of steps that a research
+team chooses, out of a the many possibilities not chosen. Maybe you
+won’t always be able to implement the “best practices” but you can
+decide what is good enough for your team based on motivations,
+incentives, needs, resources, skill set, and rules and regulations.</p>
+<p>Here is a very simplified example of the decision making process,
+based on the <a
+href="https://hdsr.mitpress.mit.edu/pub/72kcw990/release/1">Borghi and
+Van Gulick</a> flow chart. Of course in real life we are often choosing
+between many more than just 2 options!</p>
+<p><img src="img/decision-diagram.PNG" /></p>
+<div id="how-to-create-a-workflow" class="section level4">
+<h4>How to create a workflow</h4>
+<p>Your checklists are guides for what decisions need to be made. As you
+walk through your checklists, you can begin to enter your decisions into
+a workflow diagram. The order of your steps should follow the general
+order of the data management life cycle (specifically the data
+collection cycle). You will want to have a workflow diagram for every
+piece of data that you collect. So for example, if you collect the
+following:</p>
+<ul>
+<li>Student paper survey</li>
+<li>Student online assessment</li>
+<li>Student district level administrative data</li>
+</ul>
+<p>You will have 3 workflow diagrams for these 3 processes.</p>
+<p>Your diagrams should include the <strong>who</strong>,
+<strong>what</strong>, <strong>where</strong>, and <strong>when</strong>
+of each task/step in the process.</p>
+<p>Your diagram can be displayed in any format that works for you. Here
+are a few examples of workflow diagrams.</p>
+<div class="figure" style="text-align: center">
+<img src="img/workflow1.PNG" alt="Source: [Read, et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5370608/) " width="70%" />
+<p class="caption">
+Source: <a
+href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5370608/">Read, et
+al.</a>
+</p>
+</div>
+<p><br></p>
+<div class="figure" style="text-align: center">
+<img src="img/workflow2.PNG" alt="Source: [Yenni, et al.](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3000125) " width="70%" />
+<p class="caption">
+Source: <a
+href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3000125">Yenni,
+et al.</a>
+</p>
+</div>
+<p><br></p>
+<div class="figure" style="text-align: center">
+<img src="img/workflow3.PNG" alt="Source: [Briney, et al.](https://riojournal.com/article/56508/) " width="70%" />
+<p class="caption">
+Source: <a href="https://riojournal.com/article/56508/">Briney, et
+al.</a>
+</p>
+</div>
+<p>And while all of these diagrams are good jumping off points, I think
+an effective diagram really needs to call out (at least minimally) the
+who, what, where, and when of each task. I think a template like this
+one below works very well. Remember, this is a repeatable process. So
+while this diagram is linear, as it should be (steps laid out in the
+order in which we expect them to happen), this process will be repeated
+<strong>every</strong> time we collect this same piece of data.</p>
+<p><img src="img/workflow4.PNG" /></p>
+<p><br></p>
+<p>Here is how I might complete this diagram for a student survey.</p>
+<p><img src="img/workflow5.PNG" /></p>
+</div>
+<div id="benefits-to-visualizing-a-workflow" class="section level4">
+<h4>Benefits to visualizing a workflow</h4>
+<p>Visualizing these decisions in diagram format has many benefits.
+First it allows your team to see how their roles and responsibilities
+fit into the larger research process. Also, showing how data management
+is integrated into the larger research workflow can help team members
+view data management as part of their daily routine, rather than “extra
+work”. And last, reviewing workflows as a team and allowing members to
+provide feedback can help create buy-in for data management process.</p>
+</div>
+<div id="putting-your-workflow-into-a-protocol" class="section level4">
+<h4>Putting your workflow into a protocol</h4>
+<p>While these workflow diagrams are excellent for high level views of
+what the process will be. We can easily see that we are unable to put
+fine details into this visual diagram.</p>
+<p>So the last step of creating a workflow, is to put all steps into a
+protocol. In your protocol you will add all necessary details of the
+process. You can also attach your visual diagram as an addendum to the
+protocol for reference.</p>
+<p>Here is an example of how I might translate the student survey
+workflow from above, into a detailed protocol. Notice that I mention
+that I have a <strong>separate</strong> protocol just for the data
+cleaning portion of this workflow (and this might be because the data
+cleaning workflow is the same worklfow used across many different types
+of data).</p>
+<p>**NOTE: All workflows should be written into protocols, yet all
+protocols are not created from workflows. Sometimes protocols are simply
+documentation of decisions that are made. Take for example, a protocol
+on how study IDs will be assigned, or a protocol for inclusion/exclusion
+criteria. These don’t require workflows necessarily, yet they still need
+to be documented in a protocol.</p>
+<p><img src="img/protocol.PNG" /></p>
+</div>
+<div id="workflow-considerations" class="section level4">
+<h4>Workflow considerations</h4>
+<p>Similar to the questions you need to consider when reviewing your
+planning checklists. You also need to evaluate the following things when
+developing your workflow.</p>
+<p>✔️ Does your flow preserve the integrity of your data? Is there any
+point where you might lose or comprise data?<br />
+✔️ Is there any point in the flow where data is not being handled
+securely? Someone gains access to identifiable information that should
+not have access?<br />
+✔️ Is your flow in accordance with all of your compliance requirements
+(IRB, FERPA, HIPAA, etc.)?<br />
+✔️ Is your flow feasible for your team (based on size, skill level,
+motivation, etc.)?<br />
+✔️ Is your flow feasible for your budget and available resources?<br />
+✔️ Is your flow feasible for the amount and types of data you are
+collecting?<br />
+✔️ Are there any bottlenecks in the workflow? Areas where resources or
+training are needed? Any areas where tasks should be re-directed?</p>
+<p>Workflow resources:</p>
+<p>📑 <a
+href="https://datascience.codata.org/articles/10.5334/dsj-2021-009/">Borycz</a><br />
+📑 <a href="https://hdsr.mitpress.mit.edu/pub/72kcw990/release/1">Borghi
+and Van Gulick</a><br />
+📑 <a href="https://riojournal.com/article/56508/">Briney, Coates, and
+Goben</a><br />
+📑 <a href="https://dataflowtoolkit.dk/index.php?otypeid=120">Data Flow
+Toolkit</a></p>
+<hr />
+</div>
+</div>
+</div>
+<div id="last-thoughts" class="section level2">
+<h2>Last Thoughts</h2>
+<hr />
+<p>Data management is complicated and the concepts can feel nebulous at
+times. At a lot of what works great for one team, may not work at all
+for another. Or even what works great for one round of data collection,
+may not work great for the next round. Things change: staff, situations,
+data, tools, life events, etc. Everything that is suggested in this
+entire series is just that, suggestions. They are ways that may help you
+get closer to having a better data management process than you had in
+your previous project, or in the last year of your current project, or
+even in the last week. By now I think we’ve all learned that data
+management is important. How we get to well-managed data doesn’t have to
+be through the same means and it doesn’t have to be implementing
+<strong>everything</strong> mentioned in this series. Ultimately, if you
+care about data management, if you are taking time to plan and think
+through your processes, if you are documenting those processes, and you
+are able to get your team on board with those processes, I call that a
+win!</p>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

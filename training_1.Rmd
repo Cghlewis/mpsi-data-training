@@ -281,7 +281,9 @@ Excellent examples, templates, and further details can be found here:
 
 ### Metadata
 
-Metadata is *data about data*. They are structured data that "provide information about the dataset to help people find, understand, and use your data" ([IES](https://ies.ed.gov/funding/datasharing_faq.asp)). Most of the time when you hear the term metadata, it will be referring to what I am going to call project-level metadata. Project-level metadata is a type of descriptive and legal metadata that aids in finding your project through internet searches. It is like the "label of the dataset". At minimum the information captured should include who created the data, when the data were created, a title and description of the data, and a unique identifier for the data. This is the type of data we discussed capturing earlier within the *General*, *File*, and *Access* portion of our *README* files. 
+Metadata is *data about data*. They are structured data that "provide information about the dataset to help people find, understand, and use your data" ([IES](https://ies.ed.gov/funding/datasharing_faq.asp)). Most of the time when you hear the term metadata, it will be referring to what I am going to call project-level metadata. 
+
+1. Project-level metadata is a type of descriptive and legal metadata that aids in finding your project through internet searches. It is like the "label of the dataset". At minimum the information captured should include who created the data, when the data were created, a title and description of the data, and a unique identifier for the data. This is the type of data we discussed capturing earlier within the *General*, *File*, and *Access* portion of our *README* files. 
 
 Common elements of project-level metadata include:
 
@@ -294,9 +296,9 @@ Source: [University of Portland](https://libguides.up.edu/datamanagement/documen
 
 Metadata can also also be categorized further into data-level and variable-level:
 
-* Data-level metadata, which might be considered administrative or technical metadata, focuses more on the details of each dataset such as instruments used to collect the data and software used to process the data. Lucikly, creating this metadata requires no extra effort because this is the exact information captured in sections like *Methodology* in your *README* files above.
+2. Data-level metadata, which might be considered administrative or technical metadata, focuses more on the details of each dataset such as instruments used to collect the data and software used to process the data. Lucikly, creating this metadata requires no extra effort because this is the exact information captured in sections like *Methodology* in your *README* files above.
 
-* Variable-level metadata, which might be considered structural metadata, is data about the variables in your dataset. This can be both incorporated into your data, by adding attributes like variable and value labels, as well as accounted for externally, and it is includes all the information discussed earlier in your *codebook* and/or *data dictionary*. This data should also describe how datasets relate to one another (ex: student dataset is linked to teacher dataset through tch_id). If your data is qualitative in nature (such as documents, photos, videos, or sound files), metadata such as date/time/location, tags/keywords, or measurement information can sometimes be embedded directly into your files ([IHEID](https://libguides.graduateinstitute.ch/rdm/qualitative)). 
+3. Variable-level metadata, which might be considered structural metadata, is data about the variables in your dataset. This can be both incorporated into your data, by adding attributes like variable and value labels, as well as accounted for externally, and it is includes all the information discussed earlier in your *codebook* and/or *data dictionary*. This data should also describe how datasets relate to one another (ex: student dataset is linked to teacher dataset through tch_id). If your data is qualitative in nature (such as documents, photos, videos, or sound files), metadata such as date/time/location, tags/keywords, or measurement information can sometimes be embedded directly into your files ([IHEID](https://libguides.graduateinstitute.ch/rdm/qualitative)). 
 
 The most notable thing about metadata is that many fields follow metadata standards that aid in the "retrieving and indexing" of your data ([University of Arizona](https://data.library.arizona.edu/best-practices/data-documentation-readme-metadata)). Standards include things such as agreed upon formats, vocabularies, and structure. For example social science often follows the Data Documentation Initiative ([DDI](https://ddialliance.org/)) standards. However, ([IES](https://ies.ed.gov/funding/datasharing_faq.asp)) states that education has no standards and that instead "researchers should document everything and strive to make notation as interpretable as possible". Metadata can either be embedded within data or included in a separate file such as a README.txt or .pdf file.
 
@@ -327,8 +329,8 @@ Additional metadata information can be found here:
 Last you should consider documenting **all** your data processes to allow for reproducibility. This may fit into one of the above mentioned documents, or it may be a separate text or markdown files (such as a README), a syntax file, or even an excel file. Keep this document in the folder related to the content and name it accordingly. 
 Consider tracking things such as:
 
-* Versioning (Ex: `README_district-file-versions.txt`):
-  * If you use version control, this is easy to track through commit messages or commenting. However, if you do not use software that has version control, consider keeping a document that tracks differences between files.
+* Versioning (Ex: `README_district-file-changelog.txt`):
+  * If you use version control, this is easy to track through commit messages or commenting. However, if you do not use software that has version control, consider keeping a document, such as a changelog, that tracks differences between files.
     + `district-data_2020-10-02.xlsx`: File received from District A containing 2019-20 test scores
     + `district-data_2020-10-03.xlsx`: File received from District A with 5 additional students added after `district-data_2020-10-02.xlsx` was received
     + `district-data_2020-10-04.xlsx`: File received form District A with test scores updated for 30 students because errors were found in `district-data_2020-10-03.xlsx`  

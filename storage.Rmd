@@ -1,0 +1,131 @@
+---
+title: "Active Data Collection Storage and Security Checklist"
+output: 
+  html_document:
+  css: "css/custom.css"
+toc: TRUE
+toc_float: TRUE
+anchor_sections: FALSE
+includes:
+  in_header: plausible_analytics.html
+---
+
+<br>
+
+### Storage
+
+🔲 What data do we need to store?
+
+  - Physical, Electronic
+  
+🔲 What is the expected size of the data we need to store? How much storage do we need?
+
+  - How many participants?
+  - File size?
+  - Number of physical papers/books? 
+  
+🔲 What are our requirements? How do we stay compliant?
+
+  - IRB requirements
+  - Funder DMP
+  - Organization IT rules
+  - FERPA, HIPAA
+  - Confidentiality
+  - What are our data classification levels (DCL)
+  
+🔲 What are our secure storage solutions?
+
+  - Electronic (consider hardware and software)
+  - Physical
+  
+🔲 Are there any costs associated with our storage solutions?
+  
+🔲 How will our storage be structured?
+
+  - Electronic
+    - Do we have a file structure laid out in a Style Guide?
+      - Where will data be stored (raw, clean), documentation, participant tracking database, and so on
+    - Do we have file naming conventions laid out in a Style Guide?
+  - Physical - how will physical data be organized?
+  - Who will build these structures?
+  
+🔲 How will participant confidentiality be maintained?
+
+  - What direct identifiers need to be removed in clean data?
+  - What indirect identifiers need to be accounted for in clean data?
+  
+🔲 Who will have access to what? How are permissions set?
+
+  - Identifiable data such as the Participant Tracking Database
+  - Raw identifiable data
+  - Identifiable consent forms
+  - Master datasets
+  
+🔲 How will data be backed up?
+  
+  - What tools will be used?
+  - How often will backups occurr?
+  - Who oversees the backups?
+  
+🔲 How will data be versioned?
+  
+  - Manually? See Style Guide
+  - Programatically?
+  
+🔲 How will rules be documented?
+
+  - Are storage and security rules documented in a protocol?
+  
+🔲 How will staff be trained on data storage and security rules?
+
+  - Who trains staff?
+  - What is the frequency of training?
+  
+🔲 Will there be a data use/access agreement for staff? 
+  
+  - Who will draft the agreement?  
+  - How will agreements be collected?  
+  - What will the oversight of this look like?  
+  
+🔲 Who will monitor data storage and security?
+
+  - Paper data stored securely
+  - Electronic data stored securely
+  - Data de-identification
+  - Update permissions as needed
+  - Monitor training compliance
+
+<br>
+
+### Transfer
+
+🔲 If we need to transfer data, how can we do so securely?
+
+  - How will paper data in the field be returned to the office in a way that protects confidentiality?
+  - How will paper data in the field be protected so that data is not lost?
+  
+🔲 How are team members allowed to share data?
+
+  - How will electronic data be securely shared with partners at other sites?
+    - This could be sharing study data with project partners at other universities or sharing rosters with school sites. How should they plan to share study information securely that doesn't comprise participant confidentiality.
+
+<br>
+
+### Internal Data Use
+
+🔲 How can data be used internally?
+
+  - How can team members access data for analysis?
+  - What data are team members allowed to use for analysis?
+  - Who oversees this process (of team members using study data)
+  
+### Retention
+  
+🔲 How long will I retain my raw data?
+
+  - What is required to be compliant?
+  
+🔲 How will we dispose of data when we need to?
+
+  - Electronic
+  - Physical

@@ -1,0 +1,51 @@
+---
+title: "Data Sharing Checklist"
+output: 
+  html_document:
+  css: "css/custom.css"
+toc: TRUE
+toc_float: TRUE
+anchor_sections: FALSE
+includes:
+  in_header: plausible_analytics.html
+---
+
+🔲 How do we meet compliance for public data sharing?
+
+  - Consent forms and MOUs (data sharing language included)
+
+🔲 What data are we publicly sharing?
+
+  - What data did we say we would publicly share in our DMP?
+  
+🔲 Where/How are we publicly sharing our data?
+
+  - Where did we say we were sharing our data in our DMP?
+  
+🔲 What costs will be associated with public data sharing?
+
+🔲 Who will oversee that data is shared publicly?
+
+  - If sharing in a repository, who will work with the repository to hand over data?
+  - If sharing in other ways, who will oversee the data sharing activities?
+
+🔲 What format are we publicly sharing data in?
+
+  - What file format?
+  - Merged or unmerged
+  - De-identified or will there be restricted use identifiable data
+  - If using a repository, what are the requirements of the repository?
+  
+🔲 What data sharing agreements do we need to create?
+
+🔲 Do we want to add any licenses to our data?
+
+🔲 When are we sharing data publicly?
+
+🔲 What supplemental documents are we publicly sharing?
+
+  - Documentation, instruments, and so on
+
+🔲 What file format will our supplemental documents be in?
+
+

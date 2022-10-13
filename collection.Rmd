@@ -1,0 +1,43 @@
+---
+title: "Data Collection Checklist"
+output: 
+  html_document:
+  css: "css/custom.css"
+toc: TRUE
+toc_float: TRUE
+anchor_sections: FALSE
+includes:
+  in_header: plausible_analytics.html
+---
+
+🔲 What original data are we collecting?
+  
+  - Qualitative or Quantitative
+  - What exact scales/measures are we using?
+  - What items make up those scales/measures?
+  - What are the value options/range of each item?
+  - What are the variable types of each item? 
+  - How are those items transformed after being collected? (ex: recoded, scored)
+  - Do we have all of this information documented in a data dictionary?
+  
+🔲 Who is ensuring that data collection scales/measures are compliant and approved?
+
+🔲 What instruments are we using to collect original data?
+  
+  - Surveys, observations, assessments, measurements, interviews, focus groups, and so on
+  
+🔲 What tools are we using to collect data?
+
+  - Online platforms, handheld devices, paper, and so on
+  
+🔲 Who is ensuring that data collection tools are compliant with rules and regulations??
+  
+🔲 Are there any costs associated with our data collection tools?
+  
+🔲 Who is creating the data collection instruments?
+
+  - Who is testing/reviewing the instruments?
+
+
+
+

@@ -11,12 +11,12 @@
 
 
 
-<title>Training 5: Reproducible Data Cleaning</title>
+<title>Active Data Collection Storage and Security Checklist</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.16/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -29,14 +29,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<script defer data-domain="cghlewis.github.io/mpsi-data-training" src="https://plausible.io/js/plausible.js"></script>
-  
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -63,7 +58,6 @@ if (window.hljs) {
 
 
 
-<link rel="stylesheet" href="css/custom.css" type="text/css" />
 
 
 
@@ -147,11 +141,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -241,6 +239,9 @@ $(document).ready(function () {
 }
 
 @media print {
+#TOC {
+  display: none !important;
+}
 .toc-content {
   /* see https://github.com/w3c/csswg-drafts/issues/4434 */
   float: right;
@@ -287,6 +288,12 @@ div.tocify {
   border-radius: 0px;
 }
 
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
 
 </style>
 
@@ -360,41 +367,148 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Training 5: Reproducible Data Cleaning</h1>
+<h1 class="title toc-ignore">Active Data Collection Storage and Security
+Checklist</h1>
 
 </div>
 
 
-<div id="why-use-syntax" class="section level2">
-<h2>Why use syntax</h2>
+<p><br></p>
+<div id="storage" class="section level3">
+<h3>Storage</h3>
+<p>🔲 What data do we need to store?</p>
+<ul>
+<li>Physical, Electronic</li>
+</ul>
+<p>🔲 What is the expected size of the data we need to store? How much
+storage do we need?</p>
+<ul>
+<li>How many participants?</li>
+<li>File size?</li>
+<li>Number of physical papers/books?</li>
+</ul>
+<p>🔲 What are our requirements? How do we stay compliant?</p>
+<ul>
+<li>IRB requirements</li>
+<li>Funder DMP</li>
+<li>Organization IT rules</li>
+<li>FERPA, HIPAA</li>
+<li>Confidentiality</li>
+<li>What are our data classification levels (DCL)</li>
+</ul>
+<p>🔲 What are our secure storage solutions?</p>
+<ul>
+<li>Electronic (consider hardware and software)</li>
+<li>Physical</li>
+</ul>
+<p>🔲 Are there any costs associated with our storage solutions?</p>
+<p>🔲 How will our storage be structured?</p>
+<ul>
+<li>Electronic
+<ul>
+<li>Do we have a file structure laid out in a Style Guide?
+<ul>
+<li>Where will data be stored (raw, clean), documentation, participant
+tracking database, and so on</li>
+</ul></li>
+<li>Do we have file naming conventions laid out in a Style Guide?</li>
+</ul></li>
+<li>Physical - how will physical data be organized?</li>
+<li>Who will build these structures?</li>
+</ul>
+<p>🔲 How will participant confidentiality be maintained?</p>
+<ul>
+<li>What direct identifiers need to be removed in clean data?</li>
+<li>What indirect identifiers need to be accounted for in clean
+data?</li>
+</ul>
+<p>🔲 Who will have access to what? How are permissions set?</p>
+<ul>
+<li>Identifiable data such as the Participant Tracking Database</li>
+<li>Raw identifiable data</li>
+<li>Identifiable consent forms</li>
+<li>Master datasets</li>
+</ul>
+<p>🔲 How will data be backed up?</p>
+<ul>
+<li>What tools will be used?</li>
+<li>How often will backups occurr?</li>
+<li>Who oversees the backups?</li>
+</ul>
+<p>🔲 How will data be versioned?</p>
+<ul>
+<li>Manually? See Style Guide</li>
+<li>Programatically?</li>
+</ul>
+<p>🔲 How will rules be documented?</p>
+<ul>
+<li>Are storage and security rules documented in a protocol?</li>
+</ul>
+<p>🔲 How will staff be trained on data storage and security rules?</p>
+<ul>
+<li>Who trains staff?</li>
+<li>What is the frequency of training?</li>
+</ul>
+<p>🔲 Will there be a data use/access agreement for staff?</p>
+<ul>
+<li>Who will draft the agreement?<br />
+</li>
+<li>How will agreements be collected?<br />
+</li>
+<li>What will the oversight of this look like?</li>
+</ul>
+<p>🔲 Who will monitor data storage and security?</p>
+<ul>
+<li>Paper data stored securely</li>
+<li>Electronic data stored securely</li>
+<li>Data de-identification</li>
+<li>Update permissions as needed</li>
+<li>Monitor training compliance</li>
+</ul>
+<p><br></p>
 </div>
-<div id="getting-to-know-r-and-rstudio" class="section level2">
-<h2>Getting to know R and RStudio</h2>
-<p>Something</p>
-<div id="installing-r-and-rstudio" class="section level3">
-<h3>Installing R and Rstudio</h3>
-<p>Something about this</p>
+<div id="transfer" class="section level3">
+<h3>Transfer</h3>
+<p>🔲 If we need to transfer data, how can we do so securely?</p>
+<ul>
+<li>How will paper data in the field be returned to the office in a way
+that protects confidentiality?</li>
+<li>How will paper data in the field be protected so that data is not
+lost?</li>
+</ul>
+<p>🔲 How are team members allowed to share data?</p>
+<ul>
+<li>How will electronic data be securely shared with partners at other
+sites?
+<ul>
+<li>This could be sharing study data with project partners at other
+universities or sharing rosters with school sites. How should they plan
+to share study information securely that doesn’t comprise participant
+confidentiality.</li>
+</ul></li>
+</ul>
+<p><br></p>
 </div>
-<div id="packages-and-libraries" class="section level3">
-<h3>Packages and libraries</h3>
-<p>Something about this</p>
+<div id="internal-data-use" class="section level3">
+<h3>Internal Data Use</h3>
+<p>🔲 How can data be used internally?</p>
+<ul>
+<li>How can team members access data for analysis?</li>
+<li>What data are team members allowed to use for analysis?</li>
+<li>Who oversees this process (of team members using study data)</li>
+</ul>
 </div>
-</div>
-<div id="reading-in-data" class="section level2">
-<h2>Reading in data</h2>
-<p>Something about this</p>
-</div>
-<div id="additional-resources-for-learning-intro-r" class="section level2">
-<h2>Additional resources for learning Intro R</h2>
-<p>XXXX</p>
-<hr />
-</div>
-<div id="getting-started-with-syntax" class="section level2">
-<h2>Getting started with syntax</h2>
-<hr />
-<p>While I do not plan to introduce coding in this resource. I do want to point you in the direction of great resources to get you started, or to fine tune your code if you already write syntax. I personally use R for all of my data cleaning. While I am biased and think it is probably the best option since it is free and open source, I will never shame anyone for using another program. My only suggestion is what I mentioned above, to always log your every move.</p>
-<p><a href="https://philipppro.github.io/r_coding/" class="uri">https://philipppro.github.io/r_coding/</a></p>
-<p><a href="https://github.com/Cghlewis/data-wrangling-functions/wiki" class="uri">https://github.com/Cghlewis/data-wrangling-functions/wiki</a></p>
+<div id="retention" class="section level3">
+<h3>Retention</h3>
+<p>🔲 How long will I retain my raw data?</p>
+<ul>
+<li>What is required to be compliant?</li>
+</ul>
+<p>🔲 How will we dispose of data when we need to?</p>
+<ul>
+<li>Electronic</li>
+<li>Physical</li>
+</ul>
 </div>
 
 
@@ -446,7 +560,7 @@ $(document).ready(function ()  {
 
     // establish options
     var options = {
-      selectors: "h1,h2,h3",
+      selectors: "",
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
@@ -455,8 +569,8 @@ $(document).ready(function ()  {
       ignoreSelector: ".toc-ignore",
       scrollTo: 0
     };
-    options.showAndHide = true;
-    options.smoothScroll = true;
+    options.showAndHide = false;
+    options.smoothScroll = false;
 
     // tocify
     var toc = $("#TOC").tocify(options).data("toc-tocify");

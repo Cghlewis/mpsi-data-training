@@ -1,0 +1,51 @@
+---
+title: "Documentation Checklist"
+output: 
+  html_document:
+  css: "css/custom.css"
+toc: TRUE
+toc_float: TRUE
+anchor_sections: FALSE
+includes:
+  in_header: plausible_analytics.html
+---
+
+🔲 What team level documentation will we create?
+
+  - Wiki, Lab Manual, Style Guide
+  - When will we create it?
+  - Who will create it?
+  - What tool will we use to create it?
+  - Where will we store it?
+  - Who will maintain it?
+  - How will we version it?
+
+🔲 What project level documentation will we create?
+  
+  - Style Guide, Protocols, Timeline
+  - When will we create it?
+  - Who will create it?
+  - What tool will we use to create it?
+  - Where will we store it?
+  - Who will maintain it?
+  - How will we version it?
+  
+🔲 What dataset level documentation will we create?
+
+  - ReadMes
+  - When will we create it?
+  - Who will create it?
+  - What tool will we use to create it?
+  - Where will we store it?
+  - Who will maintain it?
+  - How will we version it?
+
+🔲 What variable level documentation will we create?
+  
+  - Data Dictionaries, Codebooks
+  - When will we create it?
+  - Who will create it?
+  - What tool will we use to create it?
+  - Where will we store it?
+  - Who will maintain it?
+  - How will we version it?

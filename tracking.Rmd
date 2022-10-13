@@ -1,0 +1,35 @@
+---
+title: "Data Tracking Checklist"
+output: 
+  html_document:
+  css: "css/custom.css"
+toc: TRUE
+toc_float: TRUE
+anchor_sections: FALSE
+includes:
+  in_header: plausible_analytics.html
+---
+
+🔲 What tool will be used to track incoming participant data and ID schema?
+
+🔲 Who is ensuring that tracking tools are compliant with rules and regulations?
+
+🔲 Are there any costs associated with our data tracking tool?
+  
+🔲 How should the database be structured?
+  
+  - What tables and fields need to be included in the tracking system?
+  - How will tables be connected?
+
+🔲 Who will build the data tracking system?
+
+🔲 How will participants be added to the tracking system?
+
+🔲 How will study IDs be assigned?
+
+  - What ID schema will be used?
+  - Is this schema documented?
+  
+🔲 Where will the database be stored?
+
+  - Who will have access?
