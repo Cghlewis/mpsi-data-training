@@ -161,7 +161,9 @@ A workflow, often illustrated with a flow diagram, is a series of repeatable tas
 Here is a very simplified example of the decision making process, based on the [Borghi and Van Gulick](https://hdsr.mitpress.mit.edu/pub/72kcw990/release/1) flow chart. Of course in real life we are often choosing between many more than just 2 options!
 
 
-![](img/decision-diagram.PNG)
+```{r, echo=FALSE, out.width="60%", fig.align= 'center'}
+knitr::include_graphics("img/decision-diagram.PNG")
+```
 
 #### How to create a workflow
 
