@@ -2,12 +2,11 @@
 title: "Roles and Responsibilities Checklist"
 output: 
   html_document:
-  css: "css/custom.css"
-toc: TRUE
-toc_float: TRUE
-anchor_sections: FALSE
-includes:
-  in_header: plausible_analytics.html
+    toc: TRUE
+    toc_float: TRUE
+    anchor_sections: FALSE
+    includes:
+      in_header: plausible_analytics.html
 ---
 
 🔲 What are the team roles in relation to data? Who has those roles?

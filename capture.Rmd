@@ -2,12 +2,11 @@
 title: "Data Capture Checklist"
 output: 
   html_document:
-  css: "css/custom.css"
-toc: TRUE
-toc_float: TRUE
-anchor_sections: FALSE
-includes:
-  in_header: plausible_analytics.html
+    toc: TRUE
+    toc_float: TRUE
+    anchor_sections: FALSE
+    includes:
+      in_header: plausible_analytics.html
 ---
 
 <br>

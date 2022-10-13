@@ -2,7 +2,6 @@
 title: "Data Sharing"
 output: 
   html_document:
-    css: "css/custom.css"
     toc: TRUE
     toc_float: TRUE
     anchor_sections: FALSE
