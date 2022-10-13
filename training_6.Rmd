@@ -210,7 +210,7 @@ Visualizing these decisions in diagram format has many benefits. First it allows
 
 #### Putting your workflow into a protocol
 
-While these workflow diagrams are excellent for high level views of what the process will be. We can easily see that we are unable to put fine details into this visual diagram. 
+While these workflow diagrams are excellent for high level views of what the process will be, we can easily see that we are unable to put fine details into this visual diagram. 
 
 So the last step of creating a workflow, is to put all steps into a protocol. In your protocol you will add all necessary details of the process. You can also attach your visual diagram as an addendum to the protocol for reference.
 
