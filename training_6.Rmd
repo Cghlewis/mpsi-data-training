@@ -154,7 +154,7 @@ You can see other examples of helpful checklists here:
 
 Another part of the planning phase is developing data management workflows.
 
-A workflow, often illustrated with a flow diagram, is a series of repeatable tasks that help you move through the stages of the research life cycle in an "organized and efficient manner" ([Concordia-Saint Paul](https://library.csp.edu/c.php?g=929514&p=6724401)). A workflow is personalized. It is where you start to choose which "best practices" work for your project and your team. One team may collect survey data on paper because their participants are young children, hand enter it into Excel because it is the tool their team is familiar with, and double enter 20% because they don't have the capacity to enter more than that. Another team may collect paper data, hand enter into FileMaker because that is the only tool they have access to, and double enter 100% because they have the budget and capacity to do that.
+A workflow, often illustrated with a flow diagram, is a series of repeatable tasks that help you move through the stages of the research life cycle in an "organized and efficient manner" ([Concordia-Saint Paul](https://library.csp.edu/c.php?g=929514&p=6724401)). A workflow is personalized. It is where you start to choose which "best practices" work for your project and your team. One team may collect survey data on paper because their participants are young children, hand enter it into Excel because it is the tool their team is familiar with, and double enter 20% because they don't have the capacity to enter more than that. Another team may collect paper data because they are collecting data in the field, hand enter the data into FileMaker because that is the only tool they have access to, and double enter 100% because they have the budget and capacity to do that.
 
 [Borghi and Van Gulick](https://hdsr.mitpress.mit.edu/pub/72kcw990/release/1) view a workflow as a series of steps that a research team chooses, out of a the many possibilities not chosen. Maybe you won’t always be able to implement the “best practices” but you can decide what is good enough for your team based on motivations, incentives, needs, resources, skill set, and rules and regulations.
 
@@ -194,7 +194,7 @@ knitr::include_graphics("img/workflow2.PNG")
 knitr::include_graphics("img/workflow3.PNG")
 ```
 
-And while all of these diagrams are good jumping off points, I think an effective diagram really needs to call out (at least minimally) the who, what, where, and when of each task. I think a template like this one below works very well. Remember, this is a repeatable process. So while this diagram is linear, as it should be (steps laid out in the order in which we expect them to happen), this process will be repeated **every** time we collect this same piece of data.
+And while all of these diagrams are good jumping off points, I think an effective diagram really needs to call out (at least minimally) the who, what, where, and when of each task. I think a template like this one below works very well. Remember, this is a repeatable process. So while this diagram is linear (steps laid out in the order in which we expect them to happen), this process will be repeated **every** time we collect this same piece of data.
 
 ![](img/workflow4.PNG)
 
@@ -214,7 +214,7 @@ While these workflow diagrams are excellent for high level views of what the pro
 
 So the last step of creating a workflow, is to put all steps into a protocol. In your protocol you will add all necessary details of the process. You can also attach your visual diagram as an addendum to the protocol for reference.
 
-Here is an example of how I might translate the student survey workflow from above, into a detailed protocol. Notice that I mention that I have a **separate** protocol just for the data cleaning portion of this workflow (and this might be because the data cleaning workflow is the same worklfow used across many different types of data).
+Here is an example of how I might translate the student survey workflow from above, into a detailed protocol. Notice that I mention that I have a **separate** protocol just for the data cleaning portion of this workflow (and this might be because the data cleaning workflow is the same workflow used across many different types of data).
 
 **NOTE: All workflows should be written into protocols, yet all protocols are not created from workflows. Sometimes protocols are simply documentation of decisions that are made. Take for example, a protocol on how study IDs will be assigned, or a protocol for inclusion/exclusion criteria. These don't require workflows necessarily, yet they still need to be documented in a protocol.
 
