@@ -23,7 +23,7 @@ output:
   - When will these trainings occur?  
   - Who will implement the trainings?  
   
-🔲 What trainings do staff need for around data management?
+🔲 What trainings are required for staff around data management (ex: CITI training)?
   
   - Who will track the completion of these trainings?  
   
