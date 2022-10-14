@@ -208,13 +208,13 @@ Here is how I might complete this diagram for a student survey.
 
 #### Benefits to visualizing a workflow
 
-Visualizing these decisions in diagram format has many benefits. First it allows your team to see how their roles and responsibilities fit into the larger research process. Also, showing how data management is integrated into the larger research workflow can help team members view data management as part of their daily routine, rather than "extra work". And last, reviewing workflows as a team and allowing members to provide feedback can help create buy-in for data management process.
+Visualizing these decisions in diagram format has many benefits. First it allows your team to see how their roles and responsibilities fit into the larger research process. Showing how data management is integrated into the larger research workflow can help team members view data management as part of their daily routine, rather than "extra work". And last, reviewing workflows as a team and allowing members to provide feedback can help create buy-in for data management processes.
 
 #### Putting your workflow into a protocol
 
 While these workflow diagrams are excellent for high level views of what the process will be, we can easily see that we are unable to put fine details into this visual diagram. 
 
-So the last step of creating a workflow, is to put all steps into a protocol. In your protocol you will add all necessary details of the process. You can also attach your visual diagram as an addendum to the protocol for reference.
+So the last step of creating a workflow, is to put all steps into a [protocol](https://cghlewis.github.io/mpsi-data-training/training_1.html#Protocol). In your protocol you will add all necessary details of the process. You can also attach your visual diagram as an addendum to the protocol for reference.
 
 Here is an example of how I might translate the student survey workflow from above, into a detailed protocol. Notice that I mention that I have a **separate** protocol just for the data cleaning portion of this workflow (and this might be because the data cleaning workflow is the same workflow used across many different types of data).
 
