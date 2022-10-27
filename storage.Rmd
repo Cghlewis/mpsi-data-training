@@ -28,8 +28,9 @@ output:
 🔲 What are our requirements? How do we stay compliant?
 
   - IRB requirements
+  - Institutional data policies
   - Funder DMP
-  - Organization IT rules
+  - Organizational IT Department policies
   - FERPA, HIPAA
   - Confidentiality
   - What are our data classification levels (DCL)

@@ -36,4 +36,4 @@ Currently I am working as a freelance research data management consultant. I wor
 |3         |Style guide                                                |
 |4         |Writing a data cleaning plan                               |
 |5        |Sharing data upon project completion                      |
-|6        |Putting it all together: Putting it all together                     |
+|6        |Putting it all together                  |

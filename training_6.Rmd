@@ -228,7 +228,7 @@ Similar to the questions you need to consider when reviewing your planning check
 
 ✔️ Does your flow preserve the integrity of your data? Is there any point where you might lose or comprise data?    
 ✔️ Is there any point in the flow where data is not being handled securely? Someone gains access to identifiable information that should not have access?    
-✔️ Is your flow in accordance with all of your compliance requirements (IRB, FERPA, HIPAA, etc.)?   
+✔️ Is your flow in accordance with all of your compliance requirements (IRB, FERPA, HIPAA, Institutional Data Policies, etc.)?   
 ✔️ Is your flow feasible for your team (based on size, skill level, motivation, etc.)?     
 ✔️ Is your flow feasible for your budget and available resources?     
 ✔️ Is your flow feasible for the amount and types of data you are collecting?    
