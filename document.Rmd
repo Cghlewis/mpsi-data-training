@@ -21,7 +21,7 @@ output:
 
 🔲 What project level documentation will we create?
   
-  - Style Guide, Protocols, Timeline
+  - Style Guide, SOPs, Protocol, Timeline, Consort Diagram
   - When will we create it?
   - Who will create it?
   - What tool will we use to create it?
@@ -31,7 +31,7 @@ output:
   
 🔲 What dataset level documentation will we create?
 
-  - ReadMes
+  - ReadMes, Changelogs
   - When will we create it?
   - Who will create it?
   - What tool will we use to create it?
