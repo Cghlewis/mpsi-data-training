@@ -9,32 +9,44 @@ output:
       in_header: plausible_analytics.html
 ---
 
-🔲 Who is in charge of cleaning data?
-
 🔲 What are the final clean datasets that should be produced?
 
 🔲 What file format should each clean dataset be in?
 
-  - What did we say in our DMP?
+  - What did we say in our Data Management Plan?
 
 🔲 What are the team standards for what constitutes a clean dataset?
 
   - Are these standards laid out in documentation?
   
+🔲 Who will write the data cleaning plan for each piece of data being collected?
+
+  - Who will review the plan?
+  
+🔲 How will participant confidentiality be maintained in our data cleaning plan?
+
+  - What direct identifiers need to be removed in clean data?
+  - What indirect identifiers need to be accounted for in clean data?
+
+🔲 Who is in charge of cleaning data?
+
+  - When will data cleaning occur?
+  - Is there a timeline for when clean data is needed?
+  
+🔲 What tools will be used for data cleaning?
+
+  - Are there any costs associated with our data cleaning tools?
+  
 🔲 What structure should clean datasets be in?
 
   - Long vs wide
   - Merged vs separate (across time, across forms)
-
-🔲 Do we have rules for file naming, variable naming, value coding, and versioning laid out in our Style Guide?
-
-🔲 Is there a data cleaning plan created for each piece of data being collected?
-
-🔲 What tools will be used for data cleaning?
-
-🔲 Are there any costs associated with our data cleaning tools?
-
-🔲 Is there a timeline for when clean data is needed?
+  
+🔲 How will data and code be versioned?
+  
+  - Manually?
+      - Is this written out in a Style Guide?
+  - Programmatically?
 
 
 

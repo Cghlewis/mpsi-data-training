@@ -46,39 +46,21 @@ output:
 
   - Electronic
     - Do we have a file structure laid out in a Style Guide?
-      - Where will data be stored (raw, clean), documentation, participant tracking database, and so on
     - Do we have file naming conventions laid out in a Style Guide?
   - Physical 
       - How will physical data be organized?
   - Who will build these structures?
   
-🔲 How will participant confidentiality be maintained?
-
-  - What direct identifiers need to be removed in clean data?
-  - What indirect identifiers need to be accounted for in clean data?
-  
 🔲 Who will have access to what? How are permissions set?
-
-  - Identifiable data such as the Participant Tracking Database
-  - Raw identifiable data
-  - Identifiable consent forms
-  - Master datasets
   
 🔲 How will data be backed up?
   
   - What tools will be used?
-  - How often will backups occurr?
+  - How often will backups occur?
   - Who oversees the backups?
   
-🔲 How will data be versioned?
-  
-  - Manually?
-      - Is this written out in a Style Guide?
-  - Programatically?
-  
-🔲 How will rules be documented?
+🔲 How will we document data storage and security rules?
 
-  - Are storage and security rules documented in a protocol?
   
 🔲 How will staff be trained on data storage and security rules?
 
@@ -93,10 +75,8 @@ output:
   
 🔲 Who will monitor data storage and security?
 
-  - Paper data stored securely
-  - Electronic data stored securely
-  - Data de-identification
-  - Update permissions as needed
+  - Data is being stored securely
+  - Update permissions as needed (ex: when staff leave access is removed)
   - Monitor training compliance
 
 <br>

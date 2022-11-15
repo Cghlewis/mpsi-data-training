@@ -31,13 +31,18 @@ output:
 
   - Online platforms, handheld devices, paper, and so on
   
+🔲 Who is creating the data collection instruments?
+  
+  - How will we uniquely identify participants in our instruments?
+  - How will data errors be prevented in our instruments?
+
+🔲 Who is testing/reviewing the instruments?
+  
 🔲 Who is ensuring that data collection tools are compliant with rules and regulations??
   
 🔲 Are there any costs associated with our data collection tools?
   
-🔲 Who is creating the data collection instruments?
 
-  - Who is testing/reviewing the instruments?
 
 
 

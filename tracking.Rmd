@@ -15,14 +15,17 @@ output:
 
 🔲 Are there any costs associated with our data tracking tool?
   
-🔲 How should the database be structured?
+🔲 How should the tracking database be structured?
   
   - What tables and fields need to be included in the tracking system?
-  - How will tables be connected?
+  - Do we need to link tables? How will tables be linked?
 
 🔲 Who will build the data tracking system?
 
 🔲 How will participants be added to the tracking system?
+
+  - Who will add participants?  
+  - When will participants be added?
 
 🔲 How will study IDs be assigned?
 
