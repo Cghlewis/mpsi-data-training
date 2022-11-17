@@ -11,36 +11,45 @@ output:
 
 🔲 What original data are we collecting?
   
-  - Qualitative or Quantitative
-  - What exact scales/measures are we using?
-  - What items make up those scales/measures?
-  - What are the value options/range of each item?
-  - What are the variable types of each item? 
-  - How are those items transformed after being collected? (ex: recoded, scored)
-  - Do we have all of this information documented in a data dictionary?
-  
+  - Qualitative, quantitative, both?
+  - What measures?
+
 🔲 Does this project require IRB approval? 
 
   - Who is ensuring that data collection scales/measures are compliant and approved?
 
 🔲 What instruments are we using to collect original data?
-  
+
   - Surveys, observations, assessments, measurements, interviews, focus groups, and so on
   
-🔲 What tools are we using to collect data?
+For each instrument, answer the following questions
+
+🔲 What data are we collecting with that instrument?
+
+  - What exact scales/measures are collected by this instrument?
+  - What items make up those scales/measures?
+  - What are the value options/range of each item?
+  - What are the variable types of each item? 
+  - How will these items transformed after being collected? (ex: recoded, scored)
+  - Do we have all of this information documented in a data dictionary?
+  
+🔲 What tools are we using to collect this data?
 
   - Online platforms, handheld devices, paper, and so on
+
+🔲 Who is ensuring that data collection tools are compliant with rules and regulations??
+
+🔲 Are there any costs associated with our data collection tools?
   
-🔲 Who is creating the data collection instruments?
+🔲 Who is building the data collection instrument in this tool?
   
   - How will we uniquely identify participants in our instruments?
   - How will data errors be prevented in our instruments?
 
-🔲 Who is testing/reviewing the instruments?
+🔲 Who is testing/reviewing the instrument?
   
-🔲 Who is ensuring that data collection tools are compliant with rules and regulations??
   
-🔲 Are there any costs associated with our data collection tools?
+
   
 
 
