@@ -31,7 +31,7 @@ output:
   
 🔲 What dataset level documentation will we create?
 
-  - ReadMes, Changelogs
+  - ReadMes, Data Cleaning Plans, Changelogs
   - When will we create it?
   - Who will create it?
   - What tool will we use to create it?

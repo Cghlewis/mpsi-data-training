@@ -19,14 +19,7 @@ output:
 
   - Are these standards laid out in documentation?
   
-🔲 Who will write the data cleaning plan for each piece of data being collected?
-
-  - Who will review the plan?
-  
-🔲 How will participant confidentiality be maintained in our data cleaning plan?
-
-  - What direct identifiers need to be removed in clean data?
-  - What indirect identifiers need to be accounted for in clean data?
+🔲 Have our data cleaning plans been reviewed by the team?
 
 🔲 Who is in charge of cleaning data?
 

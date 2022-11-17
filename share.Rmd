@@ -35,6 +35,10 @@ output:
   - De-identified or will there be restricted use identifiable data
   - If using a repository, what are the requirements of the repository?
   
+🔲 Who will finalize public datasets for sharing?
+
+  - Who will make sure they are fully de-identified?
+  
 🔲 What data sharing agreements do we need to create?
 
 🔲 Do we want to add any licenses to our data?
