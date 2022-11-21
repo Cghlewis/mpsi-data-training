@@ -22,7 +22,7 @@ output:
 
   - Surveys, observations, assessments, measurements, interviews, focus groups, and so on
   
-For each instrument, answer the following questions
+**For each instrument, answer the following questions**
 
 🔲 What data are we collecting with that instrument?
 
@@ -30,7 +30,7 @@ For each instrument, answer the following questions
   - What items make up those scales/measures?
   - What are the value options/range of each item?
   - What are the variable types of each item? 
-  - How will these items transformed after being collected? (ex: recoded, scored)
+  - How will these items be transformed after being collected? (ex: recoded, scored)
   - Do we have all of this information documented in a data dictionary?
   
 🔲 What tools are we using to collect this data?
