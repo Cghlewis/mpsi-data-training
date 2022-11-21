@@ -42,11 +42,17 @@ output:
 🔲 Are there any costs associated with our data collection tools?
   
 🔲 Who is building the data collection instrument in this tool?
+
+  - Do they have the expertise to use this tool?
+  - Is additional training needed?
   
+🔲 What do we need to consider when building this data collection instrument in this tool?  
+
+  - How will we use this tool to collect data? (in person data collectors, email links, etc.)
   - How will we uniquely identify participants in our instruments?
   - How will data errors be prevented in our instruments?
 
-🔲 Who is testing/reviewing the instrument?
+🔲 Who is testing/reviewing the instrument before collecting data?
   
   
 
