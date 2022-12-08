@@ -175,7 +175,8 @@ General file naming conventions to follow include:
 
 - Never use spaces between words. They can often break a URL when shared.
 - Never use special characters. They can have meaning within programming languages and can cause problems.
-- Use `_` between metadata (different chunks) and `-` within metadata (different words that are part of the same chunk). This not only helps to make the name human readable but also allows your computer to read and search files easier.
+- Use `_` between metadata (different chunks) and `-` within metadata (different words that are part of the same chunk). This not only helps to make the name human readable but also allows your computer to read and search files easier.  
+  - It is worth noting that `_` can be difficult to read when file names are included in links that are underlined to denote that the path is clickable (for example when sharing a SharePoint link to a document). So it is worth considering this when choosing to use underscores in file names.
 - Choose to either only use lower case letters, or be specific where to use capital letters (ex: at the start of every new word)
 - Make names descriptive (a user should be able to understand the contents of the file without opening it)
 - Consider limiting the number of characters to prevent hitting your path limit
