@@ -36,10 +36,13 @@ output:
 🔲 What tools are we using to collect this data?
 
   - Online platforms, handheld devices, paper, and so on
+  - Have we considered all barriers associated with this tool? (ex: no internet access in data collection sites)
 
 🔲 Who is ensuring that data collection tools are compliant with rules and regulations??
 
 🔲 Are there any costs associated with our data collection tools?
+
+  - What purchases are needed? (supplies, subscriptions, etc.)
   
 🔲 Who is building the data collection instrument in this tool?
 
@@ -53,6 +56,13 @@ output:
   - How will data errors be prevented in our instruments?
 
 🔲 Who is testing/reviewing the instrument before collecting data?
+
+🔲 When are we collecting this data?
+
+  - How often are we collecting data?
+  - How long will each collection period last?
+  
+\* _Note that additional project management questions such as "who is collecting data?", "how are staff getting trained to collect data?", or "how will we schedule data collection?" are not in this checklist. Those are questions that would be added to a project management data collection checklist. While the project team and data team should plan a project collaboratively, it is helpful to delineate project coordination and data management questions to ensure everything is covered._
   
   
 

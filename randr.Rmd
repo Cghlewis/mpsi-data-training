@@ -9,10 +9,15 @@ output:
       in_header: plausible_analytics.html
 ---
 
-🔲 What are the team roles in relation to data? Who has those roles?
+🔲 What are the team roles in relation to data?
   
-  - What are the responsibilities of each role?
-  - What skills are needed for this role?
+  - What roles were laid out in your data management plan (DMP)? What additional roles are needed?
+  - Who will fill those roles?
+
+
+🔲 What are the responsibilities of each role?
+
+  - What skills are needed for each role?
   
 
 🔲 What training is needed for these roles?
