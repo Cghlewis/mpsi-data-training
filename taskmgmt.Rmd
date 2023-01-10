@@ -1,5 +1,5 @@
 ---
-title: "Roles and Responsibilities Checklist"
+title: "Task Management Checklist"
 output: 
   html_document:
     toc: TRUE
