@@ -1,0 +1,25 @@
+---
+title: "Roles and Responsibilities Checklist"
+output: 
+  html_document:
+    toc: TRUE
+    toc_float: TRUE
+    anchor_sections: FALSE
+    includes:
+      in_header: plausible_analytics.html
+---
+
+  
+🔲 How will roles (within the data team and across data and project teams) communicate? 
+  
+  - What tools will be used?  
+  - What are the expectations around response times?  
+  - How will we document communication?  
+  
+🔲 How will tasks be monitored?
+
+  - What tools, if any, will be used for task management?
+  - How will tasks be handed off?
+  - How will people know when tasks are completed?
+
+

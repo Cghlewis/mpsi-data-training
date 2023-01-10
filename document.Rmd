@@ -11,7 +11,7 @@ output:
 
 🔲 What team level documentation will we create?
 
-  - Wiki, Lab Manual, Style Guide
+  - Wiki, Lab Manual
   - When will we create it?
   - Who will create it?
   - What tool will we use to create it?

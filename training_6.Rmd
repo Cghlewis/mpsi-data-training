@@ -134,6 +134,7 @@ Planning checklists can be really useful in helping you remember the various dat
 Note that many of these checklists will occur alongside (or may overlap with) general project planning which should have their own set of checklists.
 
 - [Roles and Responsibilities](randr.html)
+- [Task Management](taskmgmt.html)
 - [Documentation](document.html)
 - [Data Collection](collection.html)
 - [Data Tracking](tracking.html)
