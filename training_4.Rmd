@@ -430,7 +430,7 @@ You will also be limited in your data transformations:
 Resources:
 
   📑 Aleata Hubbard has a [blog post](http://evalu-ate.org/blog/hubbard-sep2016/) on six data cleaning checks  
-  📑 Jeff Leek also has a great [blog post](https://simplystatistics.org/2019/05/29/research-quality-data-and-research-quality-databases/) on creating research quality datasets.  
+  📑 Jeff Leek also has a great [blog post](https://simplystatistics.org/posts/2019-05-29-research-quality-data-and-research-quality-databases/) on creating research quality datasets.  
   📑 [An Introduction to data cleaning with R](https://cran.r-project.org/doc/contrib/de_Jonge+van_der_Loo-Introduction_to_data_cleaning_with_R.pdf)  
   📑 [The Basics of Data Management](https://figshare.com/articles/preprint/The_Basics_of_Data_Management/13215350/1)
 
