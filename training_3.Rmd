@@ -238,7 +238,7 @@ Example file naming style guide:
 
 Resources:
 
-  📑 [Stanford Libraries](https://library.stanford.edu/research/data-management-services/data-best-practices/best-practices-file-naming)  
+  📑 [Stanford Libraries](https://guides.library.stanford.edu/data-best-practices)  
   📑 [Washington University in St. Louis Libraries](https://libguides.wustl.edu/c.php?g=47355&p=303442)  
   📑 [Caltech Library](https://authors.library.caltech.edu/103626/1/FileNamingConventionWorksheet_Caltech.pdf)  
   📑 [Jenny Bryan](https://speakerdeck.com/jennybc/how-to-name-files?slide=5)  
@@ -258,7 +258,7 @@ There are many best practices and considerations around variable naming.
 
 - Names should be meaningful
   + Instead of *q1* use *gender*
-- If a variable is a part of a scale, consider naming is an abbreviation of that scale plus the scale item number (add the number last to make data manipulations easier)
+- If a variable is a part of a scale, consider using an abbreviation of that scale plus the scale item number (add the number last to make data manipulations easier)
   + *toca1*
 - Don't name a variable any keywords (such as `if`,  `for`, `repeat`) or functions used in any programming language
   + See example list of all base R functions [here](https://stat.ethz.ch/R-manual/R-devel/library/base/html/00Index.html)
@@ -291,7 +291,7 @@ There are many best practices and considerations around variable naming.
 - Choose abbreviations to use for common names/phrases
   + scaled score = ss
   + percentile rank = pr
-    + Emily Rieder has a great [blog post](https://emilyriederer.netlify.app/post/column-name-contracts/) on using controlled vocabularies in variable naming and how that sets up a sort of contract between data producers and data consumers to be able to interpet data usage and lineage.
+    + Emily Riederer has a great [blog post](https://emilyriederer.netlify.app/post/column-name-contracts/) on using controlled vocabularies in variable naming and how that sets up a sort of contract between data producers and data consumers to be able to interpet data usage and lineage.
 
 In addition to best practices, here are other practices that I've noticed others implement. You can pick and choose what works best for your team. Just make sure whatever you choose, you put it in your style guide and follow those guidelines all throughout your project.
 
@@ -394,8 +394,8 @@ Sample: *s2_toca4* = student survey-winter-toca scale-item4
 Similar to variable naming, variable value protocol also needs to be documented early on and standardized within and across projects. Here are some conventions to follow:
 
 * Value codes must be unique
-  + **Do**: Assign 1=yes and 2=don't know
-    + **Don't**: Assign 1=yes and 1=don't know
+  + **Do**: Assign 1=yes and 0=no
+    + **Don't**: Assign 1=yes and 1=no
 * Keep values consistent across the project. Examples:
   + **Do**: Always use 1=yes; 0=no
     + **Don't**: For some variables use 2=yes; 1=no, for other variables 1=yes; 0=no
@@ -403,9 +403,9 @@ Similar to variable naming, variable value protocol also needs to be documented 
     + **Don't**: Switch between 'M', 'm', and 'male' to denote male
 * Make sure Likert-type scale response option ordering makes sense. Example:
   + **Do**: Strongly Disagree = 1; Disagree = 2; Agree =3; Strongly Agree = 4
-    + **Don't**: Strongly Disagree = 1; Strongly Agree = 2; Disagree = 3; Agree = 4
+    + **Don't**: Strongly Disagree = 1; Disagree = 3; Agree =4; Strongly Agree = 2
 * Define missing values
-  + I am personally okay with leaving missing values as NA or NULL
+  + I am personally okay with leaving missing values as blank, NA, or NULL
   + However, you may care about the reason for missing data and need to consider defining missing values based on their properties
   + The key is to use extreme values that do not actually occur in your data and to also not use character missing values in a numeric field
 
