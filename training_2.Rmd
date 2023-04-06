@@ -681,7 +681,7 @@ Your typical study data files are in formats such as .csv, .tsv, .xlsx, .txt, .d
   + Limit access to your data folder to only those who need to work with the data. This ensures no one intentionally or unintentionally makes changes to your data.
   + Your de-identified study data should be kept separate from any file that can link an ID to a participants true identity (ex: your participant database)
   + Backup this data regularly
-  + Extant data you acquire, such as student record data from schools and districts may have its own set of regulations such as [FERPA](https://studentprivacy.ed.gov/audience/researchers) and [HIPPA](https://studentprivacy.ed.gov/sites/default/files/resource_document/file/ferpa-hipaa-guidance.pdf) so it is worth checking that your storage meets those requirements as well.
+  + Extant data you acquire, such as student record data from schools and districts may have its own set of regulations such as [FERPA](https://studentprivacy.ed.gov/audience/researchers) and [HIPAA](https://studentprivacy.ed.gov/sites/default/files/resource_document/file/ferpa-hipaa-guidance.pdf) so it is worth checking that your storage meets those requirements as well.
   
 ### Storing detachable media
 
@@ -696,7 +696,7 @@ This includes items such as external hard drives, flash drives, or CDs.
 A newer type of data collection is occurring since the COVID-19 pandemic, and that is observations, interviews, and focus groups occurring via video conferencing. This data is especially sensitive as it may include names and faces as part of the recording. Again, you will want to refer to your specific institution guidelines, but generally:
 
   + You will want to use approved software that is licensed by your Institution
-  + You will want to make sure that software and cloud storage is HIPPA and/or FERPA-compliant if you need it to be
+  + You will want to make sure that software and cloud storage is HIPAA and/or FERPA-compliant if you need it to be
   + Conduct the the video call in a secure/private location
   + If recording the session, make sure that participants are notified that the session is being recorded
   + Sessions are stored on an Institution approved cloud service or managed service
@@ -726,7 +726,7 @@ Paper data can be one of the most difficult data types to securely manage and tr
 When sharing data, if you data includes any form of PII, choose a secure method of file sharing. 
 
   + Secure methods of file transfer
-    - Upload files to HIPPA/FERPA compliant cloud storage that is approved by your institution
+    - Upload files to HIPAA/FERPA compliant cloud storage that is approved by your institution
     - Email an encrypted file, sharing the password separately
     - Mailing encrypted files stored on an encrypted device
     - Sharing data through an institution approved survey platform with encryption features
@@ -756,7 +756,7 @@ Again, I am not an IT professional, but some general security rules to keep in m
   + Consider having staff review and sign a data responsibility agreement that discusses the ways they will work with the data ethically, responsibly, and securely
   + When deleting data, consider using data erasing software to remove sensitive data
   + Have a data security plan, in writing, for every project (who has access to what data, what happens when someone leaves the team, data retention period, data sharing plan, data training requirements)
-  + There are [data classification levels (DCL)](https://www.umsystem.edu/ums/is/infosec/classification-definitions) that help you identify the security you need based on the type of data you have. Knowing what level your data falls under can help you start conversations with your IT department to decide if you are meeting the level of security you need to meet FERPA and HIPPA requirements if applicable.
+  + There are [data classification levels (DCL)](https://www.umsystem.edu/ums/is/infosec/classification-definitions) that help you identify the security you need based on the type of data you have. Knowing what level your data falls under can help you start conversations with your IT department to decide if you are meeting the level of security you need to meet FERPA and HIPAA requirements if applicable.
   + Last, talk with your IT staff for recommendations on storage, security, and file sharing. They are the experts!
 
 Resources on data security:
